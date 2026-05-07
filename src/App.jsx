@@ -9,17 +9,17 @@ const services = [
   {
     icon: "🛠️",
     title: "Instalasi AC",
-    desc: "Pemasangan profesional, rapi, aman, dan sesuai standar teknisi.",
+    desc: "Pemasangan profesional, rapi, dan aman.",
   },
   {
     icon: "⚡",
     title: "Service AC",
-    desc: "Perbaikan cepat untuk AC kurang dingin, bocor, hingga mati total.",
+    desc: "Perbaikan cepat untuk AC kurang dingin, bocor, dan error.",
   },
   {
     icon: "🔧",
     title: "Maintenance",
-    desc: "Perawatan rutin agar AC lebih awet dan hemat listrik.",
+    desc: "Perawatan rutin agar AC tetap optimal dan hemat listrik.",
   },
 ];
 
@@ -31,66 +31,64 @@ const stats = [
 ];
 
 const brands = [
-  {
-    name: "Daikin",
-    image: "/hero-daikin.jpg",
-    desc: "Premium cooling system dengan teknologi hemat energi.",
-  },
-  {
-    name: "Gree",
-    image: "/gree-display.jpg",
-    desc: "Brand favorit market Banyumas dengan performa terbaik.",
-  },
-  {
-    name: "Midea",
-    image: "/midea-display.jpg",
-    desc: "Solusi modern untuk rumah dan kebutuhan komersial.",
-  },
+  "/daikin-logo.png",
+  "/gree-logo.png",
+  "/midea-logo.png",
+  "/sharp-logo.png",
+  "/panasonic-logo.png",
+  "/samsung-logo.png",
 ];
 
-const reasons = [
+const portfolios = [
+  "/portfolio-1.jpg",
+  "/portfolio-2.jpg",
+  "/portfolio-3.jpg",
+  "/portfolio-4.jpg",
+];
+
+const testimonials = [
   {
-    title: "Pengerjaan Rapi",
-    desc: "Instalasi lebih bersih dan profesional.",
+    name: "Budi Santoso",
+    text: "Pemasangan sangat rapi dan teknisinya profesional.",
   },
   {
-    title: "Fast Response",
-    desc: "Tim cepat merespon kebutuhan service maupun konsultasi.",
+    name: "Rina Amelia",
+    text: "Fast response, AC langsung dingin kembali.",
   },
   {
-    title: "Teknisi Berpengalaman",
-    desc: "Ditangani langsung oleh teknisi profesional.",
-  },
-  {
-    title: "Garansi Pekerjaan",
-    desc: "Memberikan rasa aman dan nyaman untuk pelanggan.",
+    name: "Andi Prasetyo",
+    text: "Harga masuk akal dan pengerjaan bersih.",
   },
 ];
 
 export default function App() {
   return (
-    <div className="bg-[#040816] text-white overflow-hidden">
+    <div className="bg-[#050816] text-white overflow-hidden">
+
       {/* BACKGROUND */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-[-200px] left-[-100px] w-[350px] h-[350px] bg-blue-500/20 blur-[120px] rounded-full" />
-        <div className="absolute bottom-[-200px] right-[-100px] w-[350px] h-[350px] bg-cyan-400/20 blur-[120px] rounded-full" />
+        <div className="absolute top-[-200px] left-[-100px] w-[350px] h-[350px] bg-blue-500/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-200px] right-[-100px] w-[350px] h-[350px] bg-cyan-400/20 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-5">
 
         {/* NAVBAR */}
         <header className="sticky top-3 z-50 py-3">
-          <div className="backdrop-blur-xl bg-black/35 border border-white/10 rounded-[28px] px-5 py-4 flex items-center justify-between shadow-2xl">
+          <div className="backdrop-blur-xl bg-black/35 border border-white/10 rounded-[28px] px-5 py-4 flex items-center justify-between">
 
             <div className="flex items-center gap-3">
               <img
                 src="/logo-radjaac.png"
                 alt="RADJA AC"
-                className="w-12 h-12 object-contain"
+                className="w-11 h-11 object-contain"
               />
 
               <div>
-                <h1 className="font-bold text-lg">RADJA AC</h1>
+                <h1 className="font-bold text-lg">
+                  RADJA AC
+                </h1>
+
                 <p className="text-xs text-white/50">
                   Purwokerto • Banyumas
                 </p>
@@ -110,54 +108,61 @@ export default function App() {
 
               WhatsApp
             </a>
+
           </div>
         </header>
 
         {/* HERO */}
         <section className="pt-12 pb-16">
 
-          <div className="grid lg:grid-cols-2 gap-14 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
 
             {/* LEFT */}
             <div>
 
-              <div className="inline-flex items-center gap-2 border border-cyan-400/20 bg-cyan-400/10 px-5 py-2 rounded-full text-cyan-300 text-sm mb-7">
+              <div className="inline-flex items-center gap-2 border border-cyan-400/20 bg-cyan-400/10 px-5 py-2 rounded-full text-cyan-300 text-sm mb-6">
                 <div className="w-2 h-2 rounded-full bg-cyan-400" />
-                PREMIUM COOLING SOLUTION
+                DEALER & SERVICE AC PROFESIONAL
               </div>
 
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                className="text-5xl md:text-7xl font-black leading-[0.95] mb-7"
+                className="text-5xl md:text-7xl font-black leading-[0.95] mb-6"
               >
-                AC Premium
+                Solusi AC
                 <br />
-                Untuk Rumah
+                Premium Untuk
                 <br />
-                Modern
+                Rumah Modern
               </motion.h1>
 
               <p className="text-white/65 text-lg leading-relaxed mb-8 max-w-xl">
-                Penjualan AC, instalasi profesional, service, dan maintenance
-                untuk rumah, cafe, kantor, hingga proyek komersial di Banyumas
-                dan sekitarnya.
+                Penjualan AC, instalasi profesional,
+                service, maintenance, hingga proyek
+                pendingin ruangan untuk rumah, cafe,
+                kantor, dan bisnis di Banyumas.
               </p>
 
-              <div className="flex flex-wrap gap-3 mb-9">
-                {["Authorized Dealer", "Daikin", "Gree", "Midea"].map(
-                  (item, i) => (
-                    <div
-                      key={i}
-                      className="px-5 py-3 rounded-full border border-white/10 bg-white/[0.03] text-sm"
-                    >
-                      {item}
-                    </div>
-                  )
-                )}
+              {/* TRUST CHIPS */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                {[
+                  "Authorized Dealer",
+                  "Garansi Resmi",
+                  "Teknisi Bersertifikat",
+                  "Fast Response",
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="px-5 py-3 rounded-full border border-white/10 bg-white/[0.03] text-sm"
+                  >
+                    {item}
+                  </div>
+                ))}
               </div>
 
+              {/* CTA */}
               <div className="flex flex-wrap gap-4">
 
                 <a
@@ -175,24 +180,25 @@ export default function App() {
                 </a>
 
                 <a
-                  href="#brand"
+                  href="#produk"
                   className="border border-white/10 hover:bg-white/[0.03] transition px-8 py-4 rounded-full font-semibold"
                 >
                   Lihat Produk
                 </a>
 
               </div>
+
             </div>
 
             {/* RIGHT */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.94 }}
+              initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
               className="relative"
             >
 
-              <div className="absolute inset-0 bg-blue-500/20 blur-[120px]" />
+              <div className="absolute inset-0 bg-blue-500/20 blur-[100px]" />
 
               <img
                 src="/hero-daikin.jpg"
@@ -200,29 +206,6 @@ export default function App() {
                 className="rounded-[34px] border border-white/10 shadow-2xl"
               />
 
-              <div className="absolute bottom-6 left-6 right-6 backdrop-blur-xl bg-black/40 border border-white/10 rounded-[24px] p-5 flex items-center justify-between">
-
-                <div>
-                  <p className="text-white/50 text-sm mb-1">
-                    Premium Service
-                  </p>
-
-                  <h3 className="font-bold text-xl">
-                    Fast • Clean • Professional
-                  </h3>
-                </div>
-
-                <div className="text-right">
-                  <p className="text-cyan-300 font-black text-2xl">
-                    7+
-                  </p>
-
-                  <p className="text-white/50 text-sm">
-                    Tahun
-                  </p>
-                </div>
-
-              </div>
             </motion.div>
 
           </div>
@@ -230,25 +213,26 @@ export default function App() {
 
         {/* STATS */}
         <section className="py-10">
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
 
             {stats.map((item, i) => (
-              <motion.div
+              <div
                 key={i}
-                whileHover={{ y: -5 }}
-                className="bg-white/[0.04] border border-white/10 rounded-[30px] p-8 text-center"
+                className="bg-white/[0.04] border border-white/10 rounded-[28px] p-7 text-center"
               >
-                <h3 className="text-cyan-300 text-4xl md:text-5xl font-black mb-3">
+                <h3 className="text-cyan-300 text-4xl font-black mb-2">
                   {item.number}
                 </h3>
 
-                <p className="text-white/60">
+                <p className="text-white/60 text-sm">
                   {item.label}
                 </p>
-              </motion.div>
+              </div>
             ))}
 
           </div>
+
         </section>
 
         {/* SERVICES */}
@@ -256,13 +240,13 @@ export default function App() {
 
           <div className="text-center mb-12">
 
-            <h2 className="text-4xl md:text-6xl font-black mb-5">
-              Layanan Premium
+            <h2 className="text-4xl md:text-6xl font-black mb-4">
+              Layanan Kami
             </h2>
 
-            <p className="text-white/60 max-w-2xl mx-auto leading-relaxed">
-              Solusi lengkap kebutuhan pendingin ruangan untuk rumah,
-              bisnis, hingga proyek komersial.
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Solusi lengkap kebutuhan pendingin ruangan
+              untuk rumah hingga proyek komersial.
             </p>
 
           </div>
@@ -272,9 +256,10 @@ export default function App() {
             {services.map((item, i) => (
               <motion.div
                 key={i}
-                whileHover={{ y: -6 }}
-                className="bg-white/[0.04] border border-white/10 rounded-[32px] p-8"
+                whileHover={{ y: -5 }}
+                className="bg-white/[0.04] border border-white/10 rounded-[30px] p-7"
               >
+
                 <div className="text-5xl mb-6">
                   {item.icon}
                 </div>
@@ -286,13 +271,49 @@ export default function App() {
                 <p className="text-white/60 leading-relaxed">
                   {item.desc}
                 </p>
+
               </motion.div>
             ))}
 
           </div>
+
         </section>
 
-        {/* WHY US */}
+        {/* BRANDS */}
+        <section id="produk" className="py-16">
+
+          <div className="text-center mb-12">
+
+            <h2 className="text-4xl md:text-6xl font-black mb-4">
+              Brand Pilihan
+            </h2>
+
+            <p className="text-white/60">
+              Dealer berbagai brand AC terpercaya.
+            </p>
+
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+
+            {brands.map((brand, i) => (
+              <div
+                key={i}
+                className="bg-white/[0.04] border border-white/10 rounded-[24px] p-6 flex items-center justify-center"
+              >
+                <img
+                  src={brand}
+                  alt="Brand AC"
+                  className="h-10 object-contain opacity-80"
+                />
+              </div>
+            ))}
+
+          </div>
+
+        </section>
+
+        {/* WHY CHOOSE US */}
         <section className="py-16">
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -305,85 +326,113 @@ export default function App() {
               </div>
 
               <h2 className="text-5xl md:text-6xl font-black leading-tight mb-7">
-                Teknisi Profesional Dengan Standar Premium
+                Teknisi Profesional
+                <br />
+                Dengan Standar Premium
               </h2>
 
               <p className="text-white/65 text-lg leading-relaxed">
                 Kami mengutamakan kualitas pengerjaan,
                 kerapihan instalasi, serta pelayanan cepat
-                untuk memastikan kenyamanan pelanggan tetap maksimal.
+                untuk memastikan kenyamanan pelanggan.
               </p>
 
             </div>
 
             <div className="grid gap-5">
 
-              {reasons.map((item, i) => (
+              {[
+                "Pengerjaan Rapi",
+                "Fast Response",
+                "Teknisi Bersertifikat",
+                "Garansi Pekerjaan",
+              ].map((item, i) => (
                 <div
                   key={i}
-                  className="bg-white/[0.04] border border-white/10 rounded-[28px] p-7"
+                  className="bg-white/[0.04] border border-white/10 rounded-[28px] p-6"
                 >
-                  <h3 className="text-2xl font-bold mb-3">
-                    {item.title}
+                  <h3 className="text-2xl font-bold">
+                    {item}
                   </h3>
-
-                  <p className="text-white/60 leading-relaxed">
-                    {item.desc}
-                  </p>
                 </div>
               ))}
 
             </div>
 
           </div>
+
         </section>
 
-        {/* BRANDS */}
-        <section id="brand" className="py-16">
+        {/* PORTFOLIO */}
+        <section className="py-16">
 
           <div className="text-center mb-12">
 
-            <h2 className="text-4xl md:text-6xl font-black mb-5">
-              Brand Pilihan
+            <h2 className="text-4xl md:text-6xl font-black mb-4">
+              Portfolio Project
             </h2>
 
-            <p className="text-white/60 max-w-2xl mx-auto">
-              Distributor dan penyedia AC berbagai brand terpercaya.
+            <p className="text-white/60">
+              Beberapa project yang telah kami kerjakan.
             </p>
 
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-5">
 
-            {brands.map((item, i) => (
-              <motion.div
+            {portfolios.map((item, i) => (
+              <div
                 key={i}
-                whileHover={{ y: -6 }}
-                className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.04]"
+                className="overflow-hidden rounded-[32px] border border-white/10"
               >
-
                 <img
-                  src={item.image}
-                  alt={item.name}
+                  src={item}
+                  alt="Portfolio"
                   className="w-full h-[260px] object-cover"
                 />
-
-                <div className="p-7">
-
-                  <h3 className="text-3xl font-bold mb-4">
-                    {item.name}
-                  </h3>
-
-                  <p className="text-white/60 leading-relaxed">
-                    {item.desc}
-                  </p>
-
-                </div>
-
-              </motion.div>
+              </div>
             ))}
 
           </div>
+
+        </section>
+
+        {/* TESTIMONIAL */}
+        <section className="py-16">
+
+          <div className="text-center mb-12">
+
+            <h2 className="text-4xl md:text-6xl font-black mb-4">
+              Testimoni Pelanggan
+            </h2>
+
+            <p className="text-white/60">
+              Review dari pelanggan RADJA AC.
+            </p>
+
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5">
+
+            {testimonials.map((item, i) => (
+              <div
+                key={i}
+                className="bg-white/[0.04] border border-white/10 rounded-[30px] p-7"
+              >
+
+                <p className="text-white/70 leading-relaxed mb-6">
+                  "{item.text}"
+                </p>
+
+                <h3 className="font-bold text-lg">
+                  {item.name}
+                </h3>
+
+              </div>
+            ))}
+
+          </div>
+
         </section>
 
         {/* CTA */}
@@ -393,19 +442,19 @@ export default function App() {
             className="rounded-[40px] overflow-hidden relative border border-white/10 p-10 md:p-16 text-center"
             style={{
               backgroundImage:
-                "linear-gradient(to right, rgba(37,99,235,0.92), rgba(34,211,238,0.82)), url('/gree-display.jpg')",
+                "linear-gradient(to right, rgba(37,99,235,0.92), rgba(34,211,238,0.82)), url('/hero-daikin.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
 
             <h2 className="text-5xl md:text-6xl font-black mb-6">
-              Butuh AC Baru?
+              Butuh Survey atau Konsultasi?
             </h2>
 
-            <p className="max-w-2xl mx-auto text-lg text-white/90 leading-relaxed mb-9">
-              Konsultasikan kebutuhan AC rumah, cafe, toko,
-              kantor maupun proyek Anda bersama RADJA AC Purwokerto.
+            <p className="max-w-2xl mx-auto text-lg text-white/90 leading-relaxed mb-8">
+              Hubungi tim RADJA AC sekarang untuk konsultasi,
+              survey lokasi, maupun penawaran harga terbaik.
             </p>
 
             <a
@@ -413,6 +462,7 @@ export default function App() {
               target="_blank"
               className="bg-white text-black hover:scale-105 transition px-8 py-5 rounded-full font-black inline-flex items-center gap-3"
             >
+
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
                 alt="WhatsApp"
@@ -420,13 +470,15 @@ export default function App() {
               />
 
               Hubungi Sekarang
+
             </a>
 
           </div>
+
         </section>
 
         {/* FOOTER */}
-        <footer className="py-10 border-t border-white/10 text-center">
+        <footer className="py-12 border-t border-white/10 text-center">
 
           <img
             src="/logo-radjaac.png"
@@ -438,15 +490,35 @@ export default function App() {
             RADJA AC
           </h3>
 
-          <p className="text-white/50 mb-5">
-            Purwokerto • Banyumas
+          <p className="text-white/50 mb-6">
+            Dealer & Service AC Profesional Banyumas
           </p>
+
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
+
+            {[
+              "Purwokerto",
+              "Banyumas",
+              "Sokaraja",
+              "Ajibarang",
+              "Cilacap",
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-sm"
+              >
+                {item}
+              </div>
+            ))}
+
+          </div>
 
           <a
             href="https://wa.me/62882008246099"
             target="_blank"
             className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 transition px-6 py-3 rounded-full font-semibold"
           >
+
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
               alt="WhatsApp"
@@ -454,13 +526,14 @@ export default function App() {
             />
 
             WhatsApp
+
           </a>
 
         </footer>
 
       </div>
 
-      {/* FLOATING WHATSAPP */}
+      {/* FLOATING BUTTON */}
       <motion.a
         href="https://wa.me/62882008246099"
         target="_blank"
@@ -473,12 +546,15 @@ export default function App() {
         }}
         className="fixed bottom-7 right-7 z-50 w-16 h-16 rounded-full bg-green-500 flex items-center justify-center shadow-[0_0_40px_rgba(34,197,94,0.7)]"
       >
+
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
           alt="WhatsApp"
           className="w-8 h-8"
         />
+
       </motion.a>
+
     </div>
   );
 }
