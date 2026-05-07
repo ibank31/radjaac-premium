@@ -456,49 +456,6 @@ export default function App() {
 
         </section>
 
-        {/* CTA */}
-        <section className="py-16">
-
-          <div
-            className="rounded-[40px] overflow-hidden relative border border-white/10 p-10 md:p-16 text-center"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, rgba(37,99,235,0.92), rgba(34,211,238,0.82)), url('/hero-daikin.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-
-            <h2 className="text-5xl md:text-6xl font-black mb-6">
-              Butuh Survey atau Konsultasi?
-            </h2>
-
-            <p className="max-w-2xl mx-auto text-lg text-white/90 leading-relaxed mb-8">
-              Hubungi tim RADJA AC sekarang untuk konsultasi,
-              survey lokasi, maupun penawaran harga terbaik.
-            </p>
-
-            <a
-              href="https://wa.me/62882008246099"
-              target="_blank"
-              className="bg-white text-black hover:scale-105 transition px-8 py-5 rounded-full font-black inline-flex items-center gap-3"
-            >
-
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                alt="WhatsApp"
-                className="w-6 h-6"
-              />
-
-              Hubungi Sekarang
-
-            </a>
-
-          </div>
-
-        </section>
-
-        
 
       {/* FLOATING BUTTON */}
       <motion.a
