@@ -457,161 +457,182 @@ export default function App() {
         </section>
 
 
-      {/* CTA CLOSING */}
-      <section className="px-6 py-20">
-        <div className="max-w-6xl mx-auto">
+        {/* CTA CLOSING */}
+        <section className="px-6 py-20">
+          <div className="max-w-6xl mx-auto">
 
-          <div className="rounded-[40px] border border-white/10 overflow-hidden relative bg-gradient-to-br from-blue-600 to-cyan-500 p-10 md:p-16 text-center">
+            <div className="rounded-[40px] border border-white/10 overflow-hidden relative bg-gradient-to-br from-blue-600 to-cyan-500 p-10 md:p-16 text-center">
 
-            <div className="absolute inset-0 opacity-10">
-              <img
-                src="/showroom-radjaac.jpg"
-                alt="RADJA AC"
-                className="w-full h-full object-cover"
-              />
+              <div className="absolute inset-0 opacity-10">
+                <img
+                  src="/showroom-radjaac.jpg"
+                  alt="RADJA AC"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div className="relative z-10">
+                <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
+                  Butuh AC Untuk Rumah,
+                  <br />
+                  Kantor, atau Bisnis?
+                </h2>
+
+                <p className="text-white/90 max-w-2xl mx-auto leading-relaxed text-base md:text-lg mb-10">
+                  Konsultasikan kebutuhan AC Anda bersama tim RADJA AC Purwokerto.
+                  Melayani penjualan, instalasi, service, maintenance,
+                  hingga proyek pendingin ruangan skala komersial.
+                </p>
+
+                <a
+                  href="https://wa.me/62882008246099"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-3 bg-white text-black font-semibold px-8 py-4 rounded-full hover:scale-105 transition"
+                >
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                    alt="WhatsApp"
+                    className="w-6 h-6"
+                  />
+                  Konsultasi via WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SEO LOCAL SECTION */}
+        <section className="px-6 py-14 border-t border-white/5">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+
+            {/* BRAND */}
+            <div>
+              <div className="flex items-center gap-4 mb-5">
+                <img
+                  src="/logo-radjaac.png"
+                  alt="RADJA AC"
+                  className="w-14"
+                />
+
+                <div>
+                  <h3 className="font-bold text-xl">RADJA AC</h3>
+                  <p className="text-white/60 text-sm">
+                    Dealer & Service AC Purwokerto
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-white/60 leading-relaxed text-sm">
+                RADJA AC Purwokerto melayani penjualan AC, instalasi AC,
+                service AC, maintenance AC, cuci AC, bongkar pasang AC,
+                hingga konsultasi kebutuhan pendingin ruangan untuk rumah,
+                kantor, cafe, toko, dan proyek komersial.
+              </p>
             </div>
 
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
-                Butuh AC Untuk Rumah,
-                <br />
-                Kantor, atau Bisnis?
-              </h2>
+            {/* AREA */}
+            <div>
+              <h3 className="font-bold text-lg mb-5">
+                Area Layanan
+              </h3>
 
-              <p className="text-white/90 max-w-2xl mx-auto leading-relaxed text-base md:text-lg mb-10">
-                Konsultasikan kebutuhan AC Anda bersama tim RADJA AC Purwokerto.
-                Melayani penjualan, instalasi, service, maintenance,
-                hingga proyek pendingin ruangan skala komersial.
-              </p>
+              <div className="grid grid-cols-2 gap-3 text-white/60 text-sm">
 
-              <a
-                href="https://wa.me/62882008246099"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-3 bg-white text-black font-semibold px-8 py-4 rounded-full hover:scale-105 transition"
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                  alt="WhatsApp"
-                  className="w-6 h-6"
-                />
-                Konsultasi via WhatsApp
+                <div>Purwokerto</div>
+                <div>Banyumas</div>
+
+                <div>Sokaraja</div>
+                <div>Ajibarang</div>
+
+                <div>Purbalingga</div>
+                <div>Cilacap</div>
+
+                <div>Banjarnegara</div>
+                <div>Baturraden</div>
+
+              </div>
+            </div>
+
+            {/* CONTACT */}
+            <div>
+              <h3 className="font-bold text-lg mb-5">
+                Kontak
+              </h3>
+
+              <div className="space-y-4 text-white/60 text-sm">
+
+                <div>
+                  WhatsApp:
+                  <br />
+                  0882-0082-46099
+                </div>
+
+                <div>
+                  Email:
+                  <br />
+                  info@radjaac.com
+                </div>
+
+                <div>
+                  Purwokerto, Banyumas
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+        {/* COPYRIGHT */}
+        <footer className="border-t border-white/5 py-6 px-6">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
+
+            <div>
+              © 2026 RADJA AC Purwokerto. All rights reserved.
+            </div>
+
+            <div className="flex items-center gap-5">
+              <a href="#" className="hover:text-white transition">
+                Home
+              </a>
+
+              <a href="#" className="hover:text-white transition">
+                Layanan
+              </a>
+
+              <a href="#" className="hover:text-white transition">
+                Produk
+              </a>
+
+              <a href="#" className="hover:text-white transition">
+                WhatsApp
               </a>
             </div>
+
           </div>
-        </div>
-      </section>
+        </footer>
+      </div>
 
-      {/* SEO LOCAL SECTION */}
-      <section className="px-6 py-14 border-t border-white/5">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
-
-          {/* BRAND */}
-          <div>
-            <div className="flex items-center gap-4 mb-5">
-              <img
-                src="/logo-radjaac.png"
-                alt="RADJA AC"
-                className="w-14"
-              />
-
-              <div>
-                <h3 className="font-bold text-xl">RADJA AC</h3>
-                <p className="text-white/60 text-sm">
-                  Dealer & Service AC Purwokerto
-                </p>
-              </div>
-            </div>
-
-            <p className="text-white/60 leading-relaxed text-sm">
-              RADJA AC Purwokerto melayani penjualan AC, instalasi AC,
-              service AC, maintenance AC, cuci AC, bongkar pasang AC,
-              hingga konsultasi kebutuhan pendingin ruangan untuk rumah,
-              kantor, cafe, toko, dan proyek komersial.
-            </p>
-          </div>
-
-          {/* AREA */}
-          <div>
-            <h3 className="font-bold text-lg mb-5">
-              Area Layanan
-            </h3>
-
-            <div className="grid grid-cols-2 gap-3 text-white/60 text-sm">
-
-              <div>Purwokerto</div>
-              <div>Banyumas</div>
-
-              <div>Sokaraja</div>
-              <div>Ajibarang</div>
-
-              <div>Purbalingga</div>
-              <div>Cilacap</div>
-
-              <div>Banjarnegara</div>
-              <div>Baturraden</div>
-
-            </div>
-          </div>
-
-          {/* CONTACT */}
-          <div>
-            <h3 className="font-bold text-lg mb-5">
-              Kontak
-            </h3>
-
-            <div className="space-y-4 text-white/60 text-sm">
-
-              <div>
-                WhatsApp:
-                <br />
-                0882-0082-46099
-              </div>
-
-              <div>
-                Email:
-                <br />
-                info@radjaac.com
-              </div>
-
-              <div>
-                Purwokerto, Banyumas
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* COPYRIGHT */}
-      <footer className="border-t border-white/5 py-6 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
-
-          <div>
-            © 2026 RADJA AC Purwokerto. All rights reserved.
-          </div>
-
-          <div className="flex items-center gap-5">
-            <a href="#" className="hover:text-white transition">
-              Home
-            </a>
-
-            <a href="#" className="hover:text-white transition">
-              Layanan
-            </a>
-
-            <a href="#" className="hover:text-white transition">
-              Produk
-            </a>
-
-            <a href="#" className="hover:text-white transition">
-              WhatsApp
-            </a>
-          </div>
-
-        </div>
-      </footer>
+      {/* FLOATING BUTTON */}
+      <motion.a
+        href="https://wa.me/62882008246099"
+        target="_blank"
+        rel="noreferrer"
+        animate={{
+          scale: [1, 1.08, 1],
+        }}
+        transition={{
+          repeat: Infinity,
+          duration: 2,
+        }}
+        className="fixed bottom-7 right-7 z-50 w-16 h-16 rounded-full bg-green-500 flex items-center justify-center shadow-[0_0_40px_rgba(34,197,94,0.7)]"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+          className="w-8 h-8"
+        />
+      </motion.a>
     </div>
   );
 }
