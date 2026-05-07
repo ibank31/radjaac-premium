@@ -1,188 +1,155 @@
 import { motion } from "framer-motion";
 
+const stats = [
+  { number: "1000+", label: "Pelanggan" },
+  { number: "500+", label: "Project" },
+  { number: "7+", label: "Tahun" },
+  { number: "<5m", label: "Response" },
+];
+
+const services = [
+  {
+    icon: "❄️",
+    title: "Penjualan AC",
+    desc: "Berbagai brand premium dengan garansi resmi.",
+  },
+  {
+    icon: "🛠️",
+    title: "Instalasi",
+    desc: "Pemasangan profesional dan rapi.",
+  },
+  {
+    icon: "⚡",
+    title: "Service AC",
+    desc: "Perbaikan AC cepat dan tepat.",
+  },
+  {
+    icon: "🔧",
+    title: "Maintenance",
+    desc: "Perawatan berkala agar AC tetap optimal.",
+  },
+];
+
+const brands = [
+  {
+    name: "Daikin",
+    desc: "Premium cooling system hemat listrik.",
+    image: "/hero-daikin.jpg",
+  },
+  {
+    name: "Gree",
+    desc: "Favorit market Banyumas.",
+    image: "/gree-display.jpg",
+  },
+  {
+    name: "Midea",
+    desc: "Solusi modern rumah & komersial.",
+    image: "/midea-display.jpg",
+  },
+];
+
+const reasons = [
+  {
+    title: "Pengerjaan Rapi",
+    desc: "Instalasi lebih bersih dan profesional.",
+  },
+  {
+    title: "Fast Response",
+    desc: "Respon cepat untuk service & konsultasi.",
+  },
+  {
+    title: "Teknisi Berpengalaman",
+    desc: "Ditangani teknisi profesional.",
+  },
+  {
+    title: "Garansi Pekerjaan",
+    desc: "Memberikan rasa aman untuk pelanggan.",
+  },
+];
+
 export default function App() {
-  const brands = [
-    {
-      title: "Daikin",
-      image: "/hero-daikin.jpg",
-      desc: "Premium cooling system dengan teknologi hemat listrik.",
-    },
-    {
-      title: "Gree",
-      image: "/gree-display.jpg",
-      desc: "Favorit market Banyumas dengan performa dan harga terbaik.",
-    },
-    {
-      title: "Midea",
-      image: "/midea-display.jpg",
-      desc: "Solusi modern untuk rumah dan kebutuhan komersial.",
-    },
-  ];
-
-  const services = [
-    {
-      icon: "❄️",
-      title: "Penjualan AC",
-      desc: "Berbagai brand premium dengan garansi resmi dan harga kompetitif.",
-    },
-    {
-      icon: "🛠️",
-      title: "Instalasi",
-      desc: "Pemasangan profesional, rapi, aman, sesuai standar teknisi.",
-    },
-    {
-      icon: "⚡",
-      title: "Service AC",
-      desc: "Perbaikan cepat untuk AC kurang dingin, bocor, mati total, dan lainnya.",
-    },
-    {
-      icon: "🔧",
-      title: "Maintenance",
-      desc: "Perawatan berkala agar AC lebih awet dan tetap optimal.",
-    },
-  ];
-
-  const advantages = [
-    {
-      title: "Pengerjaan Rapi",
-      desc: "Instalasi lebih bersih dan profesional.",
-    },
-    {
-      title: "Fast Response",
-      desc: "Tim cepat merespon kebutuhan service dan konsultasi.",
-    },
-    {
-      title: "Teknisi Berpengalaman",
-      desc: "Ditangani teknisi yang memahami berbagai jenis AC.",
-    },
-    {
-      title: "Garansi Pekerjaan",
-      desc: "Memberikan rasa aman untuk setiap pemasangan.",
-    },
-  ];
-
-  const stats = [
-    {
-      number: "1000+",
-      label: "Pelanggan",
-    },
-    {
-      number: "500+",
-      label: "Project",
-    },
-    {
-      number: "7+",
-      label: "Tahun",
-    },
-    {
-      number: "<5m",
-      label: "Response",
-    },
-  ];
-
   return (
     <div className="bg-[#050816] text-white overflow-hidden">
       {/* BACKGROUND */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-[-200px] left-[-200px] w-[350px] h-[350px] bg-blue-500/10 rounded-full blur-[100px]" />
-
-        <div className="absolute bottom-[-200px] right-[-200px] w-[350px] h-[350px] bg-cyan-400/10 rounded-full blur-[100px]" />
+        <div className="absolute top-[-200px] left-[-150px] w-[400px] h-[400px] bg-blue-500/20 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-200px] right-[-150px] w-[400px] h-[400px] bg-cyan-400/20 blur-[120px] rounded-full" />
       </div>
 
-      {/* GRID */}
-      <div className="fixed inset-0 -z-20 opacity-[0.03]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, white 1px, transparent 1px),
-              linear-gradient(to bottom, white 1px, transparent 1px)
-            `,
-            backgroundSize: "80px 80px",
-          }}
-        />
-      </div>
+      {/* CONTAINER */}
+      <div className="max-w-6xl mx-auto px-5">
 
-      {/* NAVBAR */}
-      <header className="fixed top-3 left-1/2 -translate-x-1/2 w-[94%] max-w-7xl z-50 rounded-3xl border border-white/10 bg-black/40 backdrop-blur-xl">
-        <div className="flex justify-between items-center px-4 md:px-6 py-3">
-          <div className="flex items-center gap-3">
-            <img
-              src="/logo-radjaac.png"
-              alt="RADJA AC"
-              className="w-10 h-10 object-contain"
-            />
+        {/* NAVBAR */}
+        <div className="sticky top-3 z-50 py-3">
+          <div className="backdrop-blur-xl bg-black/40 border border-white/10 rounded-[28px] px-5 py-4 flex items-center justify-between shadow-2xl">
 
-            <div>
-              <h1 className="font-black text-lg md:text-xl">
-                RADJA AC
-              </h1>
+            <div className="flex items-center gap-3">
+              <img
+                src="/logo-radjaac.png"
+                alt="RADJA AC"
+                className="w-11 h-11 object-contain"
+              />
 
-              <p className="text-xs text-gray-400">
-                Purwokerto • Banyumas
-              </p>
+              <div>
+                <h1 className="font-semibold text-lg">RADJA AC</h1>
+                <p className="text-xs text-white/50">
+                  Purwokerto • Banyumas
+                </p>
+              </div>
             </div>
+
+            <a
+              href="https://wa.me/62882008246099"
+              target="_blank"
+              className="bg-blue-600 hover:bg-blue-500 transition px-5 py-3 rounded-full font-semibold flex items-center gap-2"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp"
+                className="w-5 h-5"
+              />
+
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        {/* HERO */}
+        <section className="pt-10 pb-14">
+
+          <div className="inline-flex items-center gap-2 border border-cyan-400/20 bg-cyan-400/10 px-5 py-2 rounded-full text-cyan-300 text-sm mb-6">
+            <div className="w-2 h-2 rounded-full bg-cyan-400" />
+            PREMIUM COOLING SOLUTION
           </div>
 
-          <a
-            href="https://wa.me/62882008246099"
-            target="_blank"
-            className="bg-blue-600 hover:bg-blue-500 transition px-5 py-2.5 rounded-full text-sm font-bold"
-          >
-            WhatsApp
-          </a>
-        </div>
-      </header>
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
 
-      {/* HERO */}
-      <section className="relative min-h-[85vh] flex items-center pt-28 pb-10">
-        <div className="absolute inset-0">
-          <img
-            src="/hero-daikin.jpg"
-            alt="AC Premium"
-            className="w-full h-full object-cover opacity-20"
-          />
-
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/50 via-[#050816]/80 to-[#050816]" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-5 w-full">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            {/* LEFT */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 mb-5">
-                <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-
-                <span className="text-cyan-300 text-xs md:text-sm font-semibold tracking-wide">
-                  PREMIUM COOLING SOLUTION
-                </span>
-              </div>
-
-              <h2 className="text-4xl md:text-7xl font-black leading-[1] tracking-tight mb-5">
+            <div>
+              <motion.h1
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                className="text-5xl md:text-7xl font-black leading-[0.95] mb-6"
+              >
                 AC Premium
                 <br />
                 Untuk Rumah
                 <br />
                 Modern
-              </h2>
+              </motion.h1>
 
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl mb-6">
-                Penjualan AC, instalasi profesional,
-                servis, dan maintenance untuk rumah,
-                cafe, kantor, hingga proyek komersial
-                di Banyumas dan sekitarnya.
+              <p className="text-white/70 text-lg leading-relaxed max-w-xl mb-7">
+                Penjualan AC, instalasi profesional, servis, dan maintenance
+                untuk rumah, cafe, kantor hingga proyek komersial di Banyumas
+                dan sekitarnya.
               </p>
 
-              <div className="flex flex-wrap gap-3 mb-7">
+              <div className="flex flex-wrap gap-3 mb-8">
                 {["Authorized Dealer", "Daikin", "Gree", "Midea"].map(
-                  (item, index) => (
+                  (item, i) => (
                     <div
-                      key={index}
-                      className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm text-gray-300"
+                      key={i}
+                      className="px-5 py-3 rounded-full border border-white/10 bg-white/5 text-sm"
                     >
                       {item}
                     </div>
@@ -196,300 +163,228 @@ export default function App() {
                   target="_blank"
                   className="bg-blue-600 hover:bg-blue-500 transition px-7 py-4 rounded-full font-bold inline-flex items-center gap-2"
                 >
-                  <span>💬</span>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                    alt="WhatsApp"
+                    className="w-5 h-5"
+                  />
+
                   <span>WhatsApp</span>
                 </a>
 
                 <a
                   href="#brand"
-                  className="border border-white/15 hover:border-white/40 transition px-7 py-4 rounded-full font-semibold"
+                  className="border border-white/10 hover:bg-white/5 transition px-7 py-4 rounded-full font-semibold"
                 >
                   Lihat Produk
                 </a>
               </div>
-            </motion.div>
+            </div>
 
-            {/* RIGHT */}
             <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.9 }}
-              className="hidden lg:block"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
             >
-              <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-5">
-                <div className="flex items-center gap-4 mb-5">
-                  <div className="w-14 h-14 rounded-2xl bg-blue-500/20 flex items-center justify-center text-2xl">
-                    ❄️
-                  </div>
+              <div className="absolute inset-0 bg-blue-500/20 blur-[100px]" />
 
-                  <div>
-                    <h3 className="text-2xl font-black">
-                      Premium Service
-                    </h3>
-
-                    <p className="text-gray-400 text-sm">
-                      Fast • Clean • Professional
-                    </p>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">
-                      Teknisi
-                    </span>
-
-                    <span className="text-cyan-300 font-bold">
-                      7+ Tahun
-                    </span>
-                  </div>
-
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">
-                      Pelanggan
-                    </span>
-
-                    <span className="text-cyan-300 font-bold">
-                      1000+
-                    </span>
-                  </div>
-
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">
-                      Response
-                    </span>
-
-                    <span className="text-cyan-300 font-bold">
-                      &lt; 5 Menit
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <img
+                src="/hero-daikin.jpg"
+                alt="Hero"
+                className="rounded-[32px] border border-white/10 shadow-2xl"
+              />
             </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* STATS */}
-      <section className="px-5 pb-10">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-          {stats.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.08 }}
-              viewport={{ once: true }}
-              className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-4 text-center"
-            >
-              <h3 className="text-2xl md:text-3xl font-black text-cyan-300 mb-1">
-                {item.number}
-              </h3>
+        {/* STATS */}
+        <section className="py-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+            {stats.map((item, i) => (
+              <div
+                key={i}
+                className="bg-white/[0.04] border border-white/10 rounded-[28px] p-7 text-center"
+              >
+                <h3 className="text-cyan-300 text-4xl font-black mb-3">
+                  {item.number}
+                </h3>
 
-              <p className="text-gray-300 text-sm">
-                {item.label}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+                <p className="text-white/60">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-      {/* SERVICES */}
-      <section className="px-5 py-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-5xl font-black mb-3">
+        {/* SERVICES */}
+        <section className="py-14">
+
+          <div className="text-center mb-10">
+            <h2 className="text-4xl md:text-5xl font-black mb-4">
               Layanan Premium
             </h2>
 
-            <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
-              Solusi lengkap kebutuhan pendingin
-              ruangan untuk rumah, bisnis,
-              hingga proyek komersial.
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Solusi lengkap kebutuhan pendingin ruangan untuk rumah,
+              bisnis, hingga proyek komersial.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {services.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.08 }}
-                viewport={{ once: true }}
-                whileHover={{
-                  y: -4,
-                }}
-                className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-4"
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {services.map((item, i) => (
+              <div
+                key={i}
+                className="bg-white/[0.04] border border-white/10 rounded-[32px] p-8"
               >
-                <div className="text-4xl mb-4">
-                  {item.icon}
-                </div>
+                <div className="text-5xl mb-6">{item.icon}</div>
 
-                <h3 className="text-xl font-black mb-2">
-                  {item.title}
-                </h3>
+                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
 
-                <p className="text-gray-300 leading-relaxed text-sm">
+                <p className="text-white/60 leading-relaxed">
                   {item.desc}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* WHY US */}
-      <section className="px-5 py-10">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 items-start">
-          <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 mb-5">
-              <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+        {/* WHY US */}
+        <section className="py-14">
 
-              <span className="text-cyan-300 text-xs md:text-sm font-semibold tracking-wide">
-                WHY CHOOSE US
-              </span>
+          <div className="inline-flex items-center gap-2 border border-cyan-400/20 bg-cyan-400/10 px-5 py-2 rounded-full text-cyan-300 text-sm mb-6">
+            <div className="w-2 h-2 rounded-full bg-cyan-400" />
+            WHY CHOOSE US
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10 items-start">
+
+            <div>
+              <h2 className="text-5xl md:text-6xl font-black leading-tight mb-6">
+                Teknisi Profesional Dengan Standar Premium
+              </h2>
+
+              <p className="text-white/65 text-lg leading-relaxed">
+                Kami mengutamakan kualitas pengerjaan,
+                kerapihan instalasi, serta pelayanan cepat
+                untuk memastikan kenyamanan pelanggan.
+              </p>
             </div>
 
-            <h2 className="text-4xl md:text-6xl font-black leading-tight mb-5">
-              Teknisi Profesional
-              <br />
-              Dengan Standar
-              <br />
-              Premium
-            </h2>
+            <div className="grid gap-5">
+              {reasons.map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white/[0.04] border border-white/10 rounded-[28px] p-7"
+                >
+                  <h3 className="text-2xl font-bold mb-3">
+                    {item.title}
+                  </h3>
 
-            <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-              Kami mengutamakan kualitas pengerjaan,
-              kerapihan instalasi, serta pelayanan cepat
-              untuk memastikan kenyamanan pelanggan.
-            </p>
+                  <p className="text-white/60">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
+        </section>
 
-          <div className="grid gap-4">
-            {advantages.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.08 }}
-                viewport={{ once: true }}
-                className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-4"
-              >
-                <h3 className="text-lg font-black mb-2">
-                  {item.title}
-                </h3>
+        {/* BRANDS */}
+        <section id="brand" className="py-14">
 
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* BRANDS */}
-      <section
-        id="brand"
-        className="px-5 py-10"
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-5xl font-black mb-3">
+          <div className="text-center mb-10">
+            <h2 className="text-5xl font-black mb-4">
               Brand Pilihan
             </h2>
 
-            <p className="text-gray-400 text-sm md:text-base">
+            <p className="text-white/60">
               Distributor dan penyedia AC berbagai brand terpercaya.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4">
-            {brands.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.08 }}
-                viewport={{ once: true }}
-                whileHover={{
-                  y: -4,
-                }}
-                className="rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl"
+          <div className="grid md:grid-cols-3 gap-6">
+            {brands.map((item, i) => (
+              <div
+                key={i}
+                className="overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.04]"
               >
-                <div className="h-[160px] overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-[260px] object-cover"
+                />
 
-                <div className="p-4">
-                  <h3 className="text-xl font-black mb-2">
-                    {item.title}
+                <div className="p-7">
+                  <h3 className="text-3xl font-bold mb-4">
+                    {item.name}
                   </h3>
 
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                  <p className="text-white/60">
                     {item.desc}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA */}
-      <section className="px-5 py-10">
-        <div className="max-w-5xl mx-auto rounded-[32px] overflow-hidden relative">
-          <div className="absolute inset-0">
-            <img
-              src="/showroom-radjaac.jpeg"
-              alt="Showroom"
-              className="w-full h-full object-cover opacity-25"
-            />
+        {/* CTA */}
+        <section className="py-16">
 
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-700/80 to-cyan-500/70" />
-          </div>
-
-          <div className="relative z-10 px-6 py-10 md:px-16 text-center">
-            <h2 className="text-3xl md:text-5xl font-black mb-5">
+          <div
+            className="rounded-[40px] overflow-hidden relative border border-white/10 p-10 md:p-16 text-center"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, rgba(37,99,235,0.9), rgba(34,211,238,0.8)), url('/gree-display.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <h2 className="text-5xl font-black mb-6">
               Butuh AC Baru?
             </h2>
 
-            <p className="text-white/90 max-w-2xl mx-auto mb-7 leading-relaxed text-sm md:text-lg">
-              Konsultasikan kebutuhan AC rumah,
-              cafe, toko, kantor, maupun proyek Anda
-              bersama RADJA AC Purwokerto.
+            <p className="max-w-2xl mx-auto text-lg text-white/90 mb-8 leading-relaxed">
+              Konsultasikan kebutuhan AC rumah, cafe, toko,
+              kantor maupun proyek Anda bersama RADJA AC Purwokerto.
             </p>
 
             <a
               href="https://wa.me/62882008246099"
               target="_blank"
-              className="bg-white text-black px-7 py-4 rounded-full font-black inline-flex items-center gap-2 hover:scale-105 transition"
+              className="bg-white text-black px-8 py-5 rounded-full font-black inline-flex items-center gap-3 hover:scale-105 transition"
             >
-              <span className="text-lg">💬</span>
-              <span>WhatsApp</span>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp"
+                className="w-6 h-6"
+              />
+
+              WhatsApp
             </a>
           </div>
-        </div>
-      </section>
+        </section>
+
+      </div>
 
       {/* FLOATING BUTTON */}
       <motion.a
         href="https://wa.me/62882008246099"
         target="_blank"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1 }}
-        whileHover={{
-          scale: 1.08,
+        animate={{
+          scale: [1, 1.08, 1],
         }}
-        className="fixed bottom-5 right-5 z-50 w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-2xl shadow-[0_0_30px_rgba(34,197,94,0.5)]"
+        transition={{
+          repeat: Infinity,
+          duration: 2,
+        }}
+        className="fixed bottom-7 right-7 z-50 w-16 h-16 rounded-full bg-green-500 flex items-center justify-center shadow-[0_0_40px_rgba(34,197,94,0.7)]"
       >
-        💬
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+          className="w-8 h-8"
+        />
       </motion.a>
     </div>
   );
