@@ -498,61 +498,7 @@ export default function App() {
 
         </section>
 
-        {/* FOOTER */}
-        <footer className="py-12 border-t border-white/10 text-center">
-
-          <img
-            src="/logo-radjaac.png"
-            alt="RADJA AC"
-            className="w-16 h-16 object-contain mx-auto mb-4"
-          />
-
-          <h3 className="text-2xl font-bold mb-2">
-            RADJA AC
-          </h3>
-
-          <p className="text-white/50 mb-6">
-            Dealer & Service AC Profesional Banyumas
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
-
-            {[
-              "Purwokerto",
-              "Banyumas",
-              "Sokaraja",
-              "Ajibarang",
-              "Cilacap",
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-sm"
-              >
-                {item}
-              </div>
-            ))}
-
-          </div>
-
-          <a
-            href="https://wa.me/62882008246099"
-            target="_blank"
-            className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 transition px-6 py-3 rounded-full font-semibold"
-          >
-
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-              alt="WhatsApp"
-              className="w-5 h-5"
-            />
-
-            WhatsApp
-
-          </a>
-
-        </footer>
-
-      </div>
+        
 
       {/* FLOATING BUTTON */}
       <motion.a
