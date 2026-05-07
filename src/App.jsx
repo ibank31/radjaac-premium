@@ -463,14 +463,6 @@ export default function App() {
 
     <div className="relative overflow-hidden rounded-[38px] bg-gradient-to-br from-blue-700 via-blue-600 to-cyan-500 p-8 md:p-14 border border-white/10 shadow-[0_0_60px_rgba(0,180,255,0.18)]">
 
-      {/* background image */}
-      <div className="absolute inset-0 opacity-[0.08]">
-        <img
-          src="/showroom-radjaac.jpg"
-          alt="RADJA AC"
-          className="w-full h-full object-cover"
-        />
-      </div>
 
       {/* content */}
       <div className="relative z-10 text-center">
