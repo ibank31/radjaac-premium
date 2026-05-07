@@ -31,12 +31,30 @@ const stats = [
 ];
 
 const brands = [
-  "/daikin-logo.png",
-  "/gree-logo.png",
-  "/midea-logo.png",
-  "/sharp-logo.png",
-  "/panasonic-logo.png",
-  "/samsung-logo.png",
+  {
+    name: "Daikin",
+    logo: "/daikin-logo.png",
+  },
+  {
+    name: "Gree",
+    logo: "/gree-logo.png",
+  },
+  {
+    name: "Midea",
+    logo: "/midea-logo.png",
+  },
+  {
+    name: "Panasonic",
+    logo: "/panasonic-logo.png",
+  },
+  {
+    name: "Sharp",
+    logo: "/sharp-logo.png",
+  },
+  {
+    name: "Samsung",
+    logo: "/samsung-logo.png",
+  },
 ];
 
 const portfolios = [
@@ -297,16 +315,19 @@ export default function App() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
 
             {brands.map((brand, i) => (
-              <div
+              <motion.div
                 key={i}
-                className="bg-white/[0.04] border border-white/10 rounded-[24px] p-6 flex items-center justify-center"
+                whileHover={{ y: -5 }}
+                className="bg-white/[0.04] border border-white/10 rounded-[26px] p-6 flex items-center justify-center h-[120px]"
               >
+
                 <img
-                  src={brand}
-                  alt="Brand AC"
-                  className="h-10 object-contain opacity-80"
+                  src={brand.logo}
+                  alt={brand.name}
+                  className="max-h-10 object-contain opacity-80 hover:opacity-100 transition"
                 />
-              </div>
+
+              </motion.div>
             ))}
 
           </div>
