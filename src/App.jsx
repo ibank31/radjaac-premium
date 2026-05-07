@@ -1,19 +1,96 @@
 import { motion } from "framer-motion";
 
 export default function App() {
+  const brands = [
+    {
+      title: "Daikin",
+      image: "/hero-daikin.jpg",
+      desc: "Premium cooling system dengan teknologi hemat listrik.",
+    },
+    {
+      title: "Gree",
+      image: "/gree-display.jpg",
+      desc: "Favorit market Banyumas dengan performa dan harga terbaik.",
+    },
+    {
+      title: "Midea",
+      image: "/midea-display.jpg",
+      desc: "Solusi modern untuk rumah dan kebutuhan komersial.",
+    },
+  ];
+
+  const services = [
+    {
+      icon: "❄️",
+      title: "Penjualan AC",
+      desc: "Berbagai brand premium dengan garansi resmi dan harga kompetitif.",
+    },
+    {
+      icon: "🛠️",
+      title: "Instalasi",
+      desc: "Pemasangan profesional, rapi, aman, sesuai standar teknisi.",
+    },
+    {
+      icon: "⚡",
+      title: "Service AC",
+      desc: "Perbaikan cepat untuk AC kurang dingin, bocor, mati total, dan lainnya.",
+    },
+    {
+      icon: "🔧",
+      title: "Maintenance",
+      desc: "Perawatan berkala agar AC lebih awet dan tetap optimal.",
+    },
+  ];
+
+  const advantages = [
+    {
+      title: "Pengerjaan Rapi",
+      desc: "Instalasi lebih bersih dan profesional.",
+    },
+    {
+      title: "Fast Response",
+      desc: "Tim cepat merespon kebutuhan service dan konsultasi.",
+    },
+    {
+      title: "Teknisi Berpengalaman",
+      desc: "Ditangani teknisi yang memahami berbagai jenis AC.",
+    },
+    {
+      title: "Garansi Pekerjaan",
+      desc: "Memberikan rasa aman untuk setiap pemasangan.",
+    },
+  ];
+
+  const stats = [
+    {
+      number: "1000+",
+      label: "Pelanggan",
+    },
+    {
+      number: "500+",
+      label: "Project",
+    },
+    {
+      number: "7+",
+      label: "Tahun",
+    },
+    {
+      number: "<5m",
+      label: "Response",
+    },
+  ];
+
   return (
     <div className="bg-[#050816] text-white overflow-hidden">
-      {/* AMBIENT GLOW */}
+      {/* BACKGROUND */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[-200px] left-[-200px] w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[120px]" />
 
-        <div className="absolute top-[-200px] left-[-150px] w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[140px]" />
-
-        <div className="absolute bottom-[-200px] right-[-150px] w-[500px] h-[500px] bg-cyan-400/20 rounded-full blur-[140px]" />
-
+        <div className="absolute bottom-[-200px] right-[-200px] w-[400px] h-[400px] bg-cyan-400/10 rounded-full blur-[120px]" />
       </div>
-            {/* GRID BACKGROUND */}
-      <div className="fixed inset-0 -z-20 opacity-[0.03]">
 
+      {/* GRID */}
+      <div className="fixed inset-0 -z-20 opacity-[0.03]">
         <div
           className="absolute inset-0"
           style={{
@@ -24,25 +101,24 @@ export default function App() {
             backgroundSize: "80px 80px",
           }}
         />
-
       </div>
-      {/* NAVBAR */}
-      <header className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-2xl shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
 
-          <div className="flex items-center gap-4">
+      {/* NAVBAR */}
+      <header className="fixed top-3 left-1/2 -translate-x-1/2 w-[94%] max-w-7xl z-50 rounded-3xl border border-white/10 bg-black/40 backdrop-blur-xl">
+        <div className="flex justify-between items-center px-4 md:px-6 py-3">
+          <div className="flex items-center gap-3">
             <img
               src="/logo-radjaac.png"
               alt="RADJA AC"
-              className="w-14 h-14 object-contain"
+              className="w-10 h-10 object-contain"
             />
 
             <div>
-              <h1 className="font-black text-2xl tracking-wide">
+              <h1 className="font-black text-lg md:text-xl">
                 RADJA AC
               </h1>
 
-              <p className="text-sm text-gray-400">
+              <p className="text-xs text-gray-400">
                 Purwokerto • Banyumas
               </p>
             </div>
@@ -51,7 +127,7 @@ export default function App() {
           <a
             href="https://wa.me/62882008246099"
             target="_blank"
-            className="bg-blue-600 hover:bg-blue-500 transition px-7 py-3 rounded-full font-bold shadow-2xl"
+            className="bg-blue-600 hover:bg-blue-500 transition px-5 py-2.5 rounded-full text-sm font-bold"
           >
             WhatsApp
           </a>
@@ -59,514 +135,330 @@ export default function App() {
       </header>
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center pt-32">
-
+      <section className="relative min-h-screen flex items-center pt-28 pb-16">
         <div className="absolute inset-0">
           <img
             src="/hero-daikin.jpg"
             alt="AC Premium"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-20"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/40 via-[#050816]/80 to-[#050816]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/50 via-[#050816]/80 to-[#050816]" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-5 w-full">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            {/* LEFT */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 mb-6">
+                <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
 
-          <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="max-w-4xl"
-          >
+                <span className="text-cyan-300 text-xs md:text-sm font-semibold tracking-wide">
+                  PREMIUM COOLING SOLUTION
+                </span>
+              </div>
 
-            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 mb-8">
+              <h2 className="text-4xl md:text-7xl font-black leading-[0.95] tracking-tight mb-6">
+                AC Premium
+                <br />
+                Untuk Rumah
+                <br />
+                Modern
+              </h2>
+
+              <p className="text-gray-300 text-base md:text-xl leading-relaxed max-w-2xl mb-8">
+                Penjualan AC, instalasi profesional,
+                servis, dan maintenance untuk rumah,
+                cafe, kantor, hingga proyek komersial
+                di Banyumas dan sekitarnya.
+              </p>
+
+              <div className="flex flex-wrap gap-3 mb-8">
+                {["Authorized Dealer", "Daikin", "Gree", "Midea"].map(
+                  (item, index) => (
+                    <div
+                      key={index}
+                      className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm text-gray-300"
+                    >
+                      {item}
+                    </div>
+                  )
+                )}
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://wa.me/62882008246099"
+                  target="_blank"
+                  className="bg-blue-600 hover:bg-blue-500 transition px-7 py-4 rounded-full font-bold"
+                >
+                  Konsultasi Sekarang
+                </a>
+
+                <a
+                  href="#brand"
+                  className="border border-white/15 hover:border-white/40 transition px-7 py-4 rounded-full font-semibold"
+                >
+                  Lihat Produk
+                </a>
+              </div>
+            </motion.div>
+
+            {/* RIGHT */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.9 }}
+              className="hidden lg:block"
+            >
+              <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-blue-500/20 flex items-center justify-center text-2xl">
+                    ❄️
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-black">
+                      Premium Service
+                    </h3>
+
+                    <p className="text-gray-400 text-sm">
+                      Fast • Clean • Professional
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">
+                      Teknisi
+                    </span>
+
+                    <span className="text-cyan-300 font-bold">
+                      7+ Tahun
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">
+                      Pelanggan
+                    </span>
+
+                    <span className="text-cyan-300 font-bold">
+                      1000+
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">
+                      Response
+                    </span>
+
+                    <span className="text-cyan-300 font-bold">
+                      &lt; 5 Menit
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* STATS */}
+      <section className="px-5 pb-16">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+          {stats.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-5 text-center"
+            >
+              <h3 className="text-3xl md:text-4xl font-black text-cyan-300 mb-2">
+                {item.number}
+              </h3>
+
+              <p className="text-gray-300 text-sm md:text-base">
+                {item.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="px-5 py-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-black mb-4">
+              Layanan Premium
+            </h2>
+
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Solusi lengkap kebutuhan pendingin
+              ruangan untuk rumah, bisnis,
+              hingga proyek komersial.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {services.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{
+                  y: -5,
+                }}
+                className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-5"
+              >
+                <div className="text-4xl mb-5">
+                  {item.icon}
+                </div>
+
+                <h3 className="text-2xl font-black mb-3">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-300 leading-relaxed text-sm">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY US */}
+      <section className="px-5 py-16">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 mb-6">
               <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
 
-              <span className="text-cyan-300 text-sm font-semibold tracking-wide">
-                PREMIUM COOLING SOLUTION
+              <span className="text-cyan-300 text-xs md:text-sm font-semibold tracking-wide">
+                WHY CHOOSE US
               </span>
             </div>
 
-            <motion.h1
-  className="text-6xl md:text-[95px] font-black leading-[0.9] tracking-[-4px] mb-10"
-  animate={{
-    y: [0, -8, 0],
-  }}
-  transition={{
-    duration: 6,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
->
-  AC Premium
-  <br />
-  Untuk Rumah
-  <br />
-  Modern
-</motion.h1>
+            <h2 className="text-4xl md:text-6xl font-black leading-tight mb-6">
+              Teknisi Profesional
+              <br />
+              Dengan Standar
+              <br />
+              Premium
+            </h2>
 
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl mb-14 font-light">
-              Penjualan AC, instalasi profesional,
-              servis, dan maintenance untuk rumah,
-              cafe, kantor, hingga proyek komersial
-              di Banyumas dan sekitarnya.
+            <p className="text-gray-300 leading-relaxed text-lg">
+              Kami mengutamakan kualitas pengerjaan,
+              kerapihan instalasi, serta pelayanan cepat
+              untuk memastikan kenyamanan pelanggan.
             </p>
-            <div className="flex flex-wrap items-center gap-4 mb-10">
+          </div>
 
-              <div className="px-5 py-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-sm font-semibold text-gray-300">
-                Authorized Dealer
-              </div>
-
-              <div className="px-5 py-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-sm font-semibold text-gray-300">
-                Daikin
-              </div>
-
-              <div className="px-5 py-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-sm font-semibold text-gray-300">
-                Gree
-              </div>
-
-              <div className="px-5 py-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-sm font-semibold text-gray-300">
-                Midea
-              </div>
-
-            </div>
-            <div className="flex flex-wrap gap-5">
-
-              <a
-                href="https://wa.me/62882008246099"
-                target="_blank"
-                className="group relative overflow-hidden bg-blue-600 hover:scale-105 transition duration-300 px-10 py-5 rounded-full text-lg font-black shadow-[0_0_50px_rgba(37,99,235,0.5)]"
+          <div className="grid gap-4">
+            {advantages.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-5"
               >
-                <span className="relative z-10">
-  Konsultasi Sekarang
-</span>
+                <h3 className="text-xl font-black mb-2">
+                  {item.title}
+                </h3>
 
-<div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-white/30 to-cyan-400/0 translate-x-[-120%] group-hover:translate-x-[120%] transition duration-1000" />
-              </a>
-
-              <a
-                href="#brand"
-                className="border border-white/20 hover:border-white/50 transition px-10 py-5 rounded-full text-lg font-semibold backdrop-blur-md"
-              >
-                Lihat Produk
-              </a>
-
-            </div>
-
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2 }}
-            className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2"
-          >
-
-            <div className="w-[340px] rounded-[35px] border border-white/10 bg-white/5 backdrop-blur-2xl p-8 shadow-[0_0_60px_rgba(37,99,235,0.15)]">
-
-              <div className="flex items-center gap-4 mb-8">
-
-                <div className="w-16 h-16 rounded-2xl bg-blue-500/20 flex items-center justify-center text-3xl">
-                  ❄️
-                </div>
-
-                <div>
-                  <h3 className="text-2xl font-black">
-                    Premium Service
-                  </h3>
-
-                  <p className="text-gray-400">
-                    Fast • Clean • Professional
-                  </p>
-                </div>
-
-              </div>
-
-              <div className="space-y-5">
-
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-400">
-                    Teknisi Berpengalaman
-                  </span>
-
-                  <span className="font-bold text-cyan-300">
-                    7+ Tahun
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-400">
-                    Pelanggan
-                  </span>
-
-                  <span className="font-bold text-cyan-300">
-                    1000+
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-400">
-                    Response Time
-                  </span>
-
-                  <span className="font-bold text-cyan-300">
-                    &lt; 5 Menit
-                  </span>
-                </div>
-
-              </div>
-
-            </div>
-
-          </motion.div>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
-           <div className="max-w-7xl mx-auto px-6">
-        <div className="h-px bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent" />
-      </div> 
+
       {/* BRANDS */}
-      <motion.section
-  id="brand"
-  className="py-32 px-6"
-  initial={{ opacity: 0, y: 60 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  viewport={{ once: true }}
->
-
+      <section
+        id="brand"
+        className="px-5 py-16"
+      >
         <div className="max-w-7xl mx-auto">
-
-          <div className="mb-20 text-center">
-
-            <h2 className="text-5xl font-black mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-black mb-4">
               Brand Pilihan
             </h2>
 
-            <p className="text-gray-400 text-xl">
+            <p className="text-gray-400">
               Distributor dan penyedia AC berbagai brand terpercaya.
             </p>
-
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-
-            {[
-              {
-                title: "Daikin",
-                image: "/hero-daikin.jpg",
-                desc: "Premium cooling system dengan teknologi hemat listrik."
-              },
-              {
-                title: "Gree",
-                image: "/gree-display.jpg",
-                desc: "Favorit market Banyumas dengan performa dan harga terbaik."
-              },
-              {
-                title: "Midea",
-                image: "/midea-display.jpg",
-                desc: "Solusi modern untuk rumah dan kebutuhan komersial."
-              }
-            ].map((item, index) => (
-
+          <div className="grid md:grid-cols-3 gap-5">
+            {brands.map((item, index) => (
               <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
                 whileHover={{
-  y: -18,
-  scale: 1.02,
-}}
-                className="group rounded-[35px] overflow-hidden border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.03] backdrop-blur-2xl shadow-[0_0_50px_rgba(255,255,255,0.03)]"
+                  y: -5,
+                }}
+                className="rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl"
               >
-
-                <div className="h-[320px] overflow-hidden">
+                <div className="h-[220px] overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-1000"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
-                <div className="p-8">
-
-                  <h3 className="text-3xl font-black mb-4">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    {item.desc}
-                  </p>
-
-                </div>
-
-              </motion.div>
-
-            ))}
-
-          </div>
-
-        </div>
-      </motion.section>
-                  <div className="max-w-7xl mx-auto px-6">
-        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      </div>
-      {/* SERVICES */}
-      <section className="py-32 px-6">
-
-        <div className="max-w-7xl mx-auto">
-
-          <div className="text-center mb-20">
-
-            <motion.h2
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-6xl font-black mb-6"
-            >
-              Layanan Premium
-            </motion.h2>
-
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
-              Solusi lengkap kebutuhan pendingin ruangan
-              untuk rumah, bisnis, hingga proyek komersial.
-            </p>
-
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            {[
-              {
-                icon: "❄️",
-                title: "Penjualan AC",
-                desc: "Berbagai brand premium dengan garansi resmi dan harga kompetitif."
-              },
-              {
-                icon: "🛠️",
-                title: "Instalasi",
-                desc: "Pemasangan profesional, rapi, aman, dan sesuai standar teknisi."
-              },
-              {
-                icon: "⚡",
-                title: "Service AC",
-                desc: "Perbaikan cepat untuk AC kurang dingin, bocor, mati total, dan lainnya."
-              },
-              {
-                icon: "🔧",
-                title: "Maintenance",
-                desc: "Perawatan berkala agar AC lebih awet, hemat listrik, dan tetap optimal."
-              }
-            ].map((item, index) => (
-
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{
-                  y: -12,
-                  scale: 1.02,
-                }}
-                className="relative overflow-hidden rounded-[35px] border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.03] backdrop-blur-2xl p-8 group shadow-[0_0_50px_rgba(255,255,255,0.03)]"
-              >
-
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-br from-blue-500/20 via-cyan-400/10 to-transparent" />
-
-                <div className="relative z-10">
-
-                  <div className="text-6xl mb-8 group-hover:scale-110 transition duration-500">
-                    {item.icon}
-                  </div>
-
-                  <h3 className="text-3xl font-black mb-5">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-300 leading-relaxed text-lg">
-                    {item.desc}
-                  </p>
-
-                </div>
-
-              </motion.div>
-
-            ))}
-
-          </div>
-
-        </div>
-      </section>
-                  <div className="max-w-7xl mx-auto px-6">
-        <div className="h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent" />
-      </div>
-            {/* WHY CHOOSE US */}
-      <section className="py-32 px-6">
-
-        <div className="max-w-7xl mx-auto">
-
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-
-            <div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-
-                <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 mb-8">
-                  <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-
-                  <span className="text-cyan-300 text-sm font-semibold tracking-wide">
-                    WHY CHOOSE US
-                  </span>
-                </div>
-
-                <h2 className="text-5xl md:text-6xl font-black leading-tight mb-8">
-                  Teknisi Profesional
-                  <br />
-                  Dengan Standar
-                  <br />
-                  Premium
-                </h2>
-
-                <p className="text-xl text-gray-300 leading-relaxed mb-12">
-                  Kami mengutamakan kualitas pengerjaan,
-                  kerapihan instalasi, serta pelayanan cepat
-                  untuk memastikan kenyamanan pelanggan tetap maksimal.
-                </p>
-
-              </motion.div>
-
-            </div>
-
-            <div className="grid gap-6">
-
-              {[
-                {
-                  title: "Pengerjaan Rapi",
-                  desc: "Standar instalasi modern dengan hasil lebih bersih dan profesional."
-                },
-                {
-                  title: "Fast Response",
-                  desc: "Tim cepat merespon kebutuhan service maupun konsultasi."
-                },
-                {
-                  title: "Teknisi Berpengalaman",
-                  desc: "Ditangani langsung oleh teknisi yang memahami berbagai jenis AC."
-                },
-                {
-                  title: "Garansi Pekerjaan",
-                  desc: "Memberikan rasa aman dan kepercayaan untuk setiap pemasangan."
-                }
-              ].map((item, index) => (
-
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 80 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{
-                    x: 10,
-                  }}
-                  className="rounded-[30px] border border-white/10 bg-gradient-to-r from-white/10 to-white/[0.03] backdrop-blur-2xl p-8"
-                >
-
+                <div className="p-5">
                   <h3 className="text-2xl font-black mb-3">
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-300 text-lg leading-relaxed">
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     {item.desc}
                   </p>
-
-                </motion.div>
-
-              ))}
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-      {/* TRUST SECTION */}
-      <section className="px-6 pb-32">
-
-        <div className="max-w-7xl mx-auto">
-
-          <div className="grid md:grid-cols-4 gap-8">
-
-            {[
-              {
-                number: "1000+",
-                label: "Pelanggan"
-              },
-              {
-                number: "500+",
-                label: "Project Selesai"
-              },
-              {
-                number: "7+",
-                label: "Tahun Pengalaman"
-              },
-              {
-                number: "< 5 Menit",
-                label: "Fast Response"
-              }
-            ].map((item, index) => (
-
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{
-                  y: -10,
-                  scale: 1.03,
-                }}
-                className="rounded-[35px] border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl p-10 text-center"
-              >
-
-                <h3 className="text-5xl font-black mb-4 text-cyan-300">
-                  {item.number}
-                </h3>
-
-                <p className="text-xl text-gray-300">
-                  {item.label}
-                </p>
-
+                </div>
               </motion.div>
-
             ))}
-
           </div>
-
         </div>
       </section>
+
       {/* CTA */}
-      <section className="px-6 pb-32">
-
-        <motion.div
-          whileHover={{ scale: 1.02 }}
-          className="max-w-6xl mx-auto rounded-[40px] overflow-hidden relative"
-        >
-
+      <section className="px-5 py-16">
+        <div className="max-w-6xl mx-auto rounded-[36px] overflow-hidden relative">
           <div className="absolute inset-0">
             <img
               src="/showroom-radjaac.jpeg"
               alt="Showroom"
-              className="w-full h-full object-cover opacity-30"
+              className="w-full h-full object-cover opacity-25"
             />
 
             <div className="absolute inset-0 bg-gradient-to-r from-blue-700/80 to-cyan-500/70" />
           </div>
 
-          <div className="relative z-10 px-10 py-24 md:px-20 text-center">
-
-            <h2 className="text-5xl md:text-7xl font-black mb-8">
+          <div className="relative z-10 px-6 py-16 md:px-20 text-center">
+            <h2 className="text-4xl md:text-6xl font-black mb-6">
               Butuh AC Baru?
             </h2>
 
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed text-base md:text-xl">
               Konsultasikan kebutuhan AC rumah,
               cafe, toko, kantor, maupun proyek Anda
               bersama RADJA AC Purwokerto.
@@ -575,26 +467,25 @@ export default function App() {
             <a
               href="https://wa.me/62882008246099"
               target="_blank"
-              className="bg-white text-black px-10 py-5 rounded-full text-xl font-black inline-block hover:scale-110 transition duration-300"
+              className="bg-white text-black px-8 py-4 rounded-full font-black inline-block hover:scale-105 transition"
             >
               Hubungi Sekarang
             </a>
-
           </div>
-
-        </motion.div>
+        </div>
       </section>
-      {/* FLOATING WHATSAPP */}
+
+      {/* FLOATING BUTTON */}
       <motion.a
         href="https://wa.me/62882008246099"
         target="_blank"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1.5 }}
+        transition={{ delay: 1 }}
         whileHover={{
-          scale: 1.1,
+          scale: 1.08,
         }}
-        className="fixed bottom-8 right-8 z-50 w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-3xl shadow-[0_0_40px_rgba(34,197,94,0.6)]"
+        className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-2xl shadow-[0_0_30px_rgba(34,197,94,0.5)]"
       >
         💬
       </motion.a>
