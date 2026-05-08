@@ -13,6 +13,7 @@ import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import MiniReviewSection from "../components/MiniReviewSection"
 import PricingPreviewSection from "../components/PricingPreviewSection"
 import AboutTrustSection from "../components/AboutTrustSection"
+import BeforeAfterSection from "../components/BeforeAfterSection"
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
         <BrandsSection />
         <WhyChooseUs />
         <PortfolioSection />
+        <BeforeAfterSection />
         <MiniReviewSection />
         <PricingPreviewSection />
         <AboutTrustSection />
