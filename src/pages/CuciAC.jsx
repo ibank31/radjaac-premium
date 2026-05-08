@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar"
 import SignsAcNeedsCleaningSection from "../components/SignsAcNeedsCleaningSection"
 import CuciACPricingSection from "../components/CuciACPricingSection"
 import CuciACCTASection from "../components/CuciACCTASection"
+import CuciACFAQSection from "../components/CuciACFAQSection"
 
 export default function CuciAC() {
   return (
@@ -31,6 +32,7 @@ export default function CuciAC() {
 
       <SignsAcNeedsCleaningSection />
       <CuciACPricingSection />
+      <CuciACFAQSection />
       <CuciACCTASection />
     </div>
   )
