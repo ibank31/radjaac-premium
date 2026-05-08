@@ -14,8 +14,8 @@ import MiniReviewSection from "../components/MiniReviewSection"
 import PricingPreviewSection from "../components/PricingPreviewSection"
 import AboutTrustSection from "../components/AboutTrustSection"
 import BeforeAfterSection from "../components/BeforeAfterSection"
-import AreaCoverageSection from "../components/AreaCoverageSection"
 import InternalLinksSection from "../components/InternalLinksSection"
+import LocationSection from "../components/LocationSection"
 
 export default function Home() {
   return (
@@ -75,7 +75,22 @@ export default function Home() {
         <MiniReviewSection />
         <PricingPreviewSection />
         <AboutTrustSection />
-        <AreaCoverageSection />
+        <section className="px-6 py-16 bg-slate-950">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-cyan-300 font-medium mb-3">
+              Area Layanan
+            </p>
+
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Siap Melayani Purwokerto dan Sekitarnya
+            </h2>
+
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              Radja AC melayani service, cuci, dan instalasi AC untuk rumah, kantor, toko, dan tempat usaha di berbagai area Banyumas dan sekitarnya termasuk Sokaraja, Ajibarang, Purbalingga, dan Cilacap.
+            </p>
+          </div>
+        </section>
+        <LocationSection />
         <TestimonialsSection />
         <ClosingCTA />
       </div>

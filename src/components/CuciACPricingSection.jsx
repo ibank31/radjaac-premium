@@ -2,36 +2,32 @@ const pricing = [
   {
     title: "Cuci AC Split",
     price: "Mulai Rp75.000",
-    desc: "Pembersihan indoor dan pengecekan dasar unit AC rumah.",
+    desc: "Termasuk cuci indoor, ganti filter, dan pengecekan saluran pembuangan.",
   },
   {
     title: "Cuci AC + Outdoor",
-    price: "Mulai Rp100.000",
-    desc: "Pembersihan indoor dan outdoor agar performa AC lebih optimal.",
+    price: "Mulai Rp110.000",
+    desc: "Pembersihan lengkap indoor dan outdoor untuk unit AC split, agar performa kembali optimal.",
   },
   {
-    title: "Cuci AC Kantor",
-    price: "Custom",
-    desc: "Paket pencucian beberapa unit untuk kantor dan tempat usaha.",
+    title: "Cuci AC Kantor / Komersial",
+    price: "Estimasi Custom",
+    desc: "Paket layanan multi-unit untuk kantor, toko, cafe, dan tempat usaha dengan harga terjangkau.",
   },
 ]
 
 export default function CuciACPricingSection() {
   return (
-    <section className="px-6 py-20 bg-slate-900/40">
+    <section className="px-6 py-20 bg-slate-950">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-cyan-300 font-medium mb-3">
-            Estimasi Harga
-          </p>
-
+          <p className="text-cyan-300 font-medium mb-3">Estimasi Harga</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Harga Cuci AC Transparan
           </h2>
-
-          <p className="text-slate-400 max-w-2xl mx-auto">
-            Estimasi harga layanan cuci AC untuk rumah,
-            kantor, dan tempat usaha di Purwokerto dan sekitarnya.
+          <p className="text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            Paket harga cuci AC yang jelas untuk rumah dan usaha di Purwokerto
+            dan Banyumas. Estimasi awal diberikan sebelum teknisi mulai kerja.
           </p>
         </div>
 

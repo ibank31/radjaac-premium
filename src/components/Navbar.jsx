@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { useState } from "react"
 
 export default function Navbar() {
@@ -9,10 +9,7 @@ export default function Navbar() {
 
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
-<Link
-  to="/"
-  className="flex items-center gap-3"
->
+<NavLink to="/" end className="flex items-center gap-3">
 
   <img
     src="/logo-radjaac.png"
@@ -30,44 +27,68 @@ export default function Navbar() {
     </p>
   </div>
 
-</Link>
+</NavLink>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-8 text-white font-medium">
-
-          <Link
+        <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
+          <NavLink
             to="/"
-            className="hover:text-cyan-400 transition"
+            end
+            className={({ isActive }) =>
+              `rounded-full px-3 py-2 transition ${
+                isActive
+                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
+                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+              }`
+            }
           >
             Home
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/service-ac-purwokerto"
-            className="hover:text-cyan-400 transition"
+            className={({ isActive }) =>
+              `rounded-full px-3 py-2 transition ${
+                isActive
+                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
+                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+              }`
+            }
           >
             Service AC
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/cuci-ac-purwokerto"
-            className="hover:text-cyan-400 transition"
+            className={({ isActive }) =>
+              `rounded-full px-3 py-2 transition ${
+                isActive
+                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
+                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+              }`
+            }
           >
             Cuci AC
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/instalasi-ac-banyumas"
-            className="hover:text-cyan-400 transition"
+            className={({ isActive }) =>
+              `rounded-full px-3 py-2 transition ${
+                isActive
+                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
+                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+              }`
+            }
           >
             Instalasi AC
-          </Link>
-
+          </NavLink>
         </nav>
 
         {/* Mobile Button */}
         <button
           className="md:hidden text-3xl text-white"
+          aria-label="Toggle navigation"
           onClick={() => setIsOpen(!isOpen)}
         >
           ☰
@@ -77,37 +98,63 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-black/95 text-white border-t border-white/10">
-
-          <nav className="flex flex-col p-6 gap-5 font-medium">
-
-            <Link
+          <nav className="flex flex-col p-6 gap-4 font-medium">
+            <NavLink
               to="/"
+              end
               onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `rounded-3xl px-4 py-3 transition ${
+                  isActive
+                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
+                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+                }`
+              }
             >
               Home
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to="/service-ac-purwokerto"
               onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `rounded-3xl px-4 py-3 transition ${
+                  isActive
+                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
+                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+                }`
+              }
             >
               Service AC
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to="/cuci-ac-purwokerto"
               onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `rounded-3xl px-4 py-3 transition ${
+                  isActive
+                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
+                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+                }`
+              }
             >
               Cuci AC
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to="/instalasi-ac-banyumas"
               onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `rounded-3xl px-4 py-3 transition ${
+                  isActive
+                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
+                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+                }`
+              }
             >
               Instalasi AC
-            </Link>
-
+            </NavLink>
           </nav>
         </div>
       )}

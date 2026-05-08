@@ -1,23 +1,28 @@
 const faqs = [
   {
-    question: "Berapa bulan sekali AC perlu dicuci?",
+    question: "Berapa lama cuci AC biasanya selesai?",
     answer:
-      "Idealnya setiap 3–4 bulan sekali tergantung penggunaan dan kondisi lingkungan.",
+      "Rata-rata 30–60 menit untuk satu unit AC split, tergantung tingkat kekotoran dan kondisi unit.",
   },
   {
-    question: "Apakah AC yang jarang dipakai tetap perlu dicuci?",
+    question: "Apa saja yang termasuk dalam layanan cuci AC?",
     answer:
-      "Tetap perlu. Debu dan kelembaban bisa menumpuk di bagian indoor maupun filter AC.",
+      "Pembersihan indoor, pengecekan filter, pembersihan outdoor unit, dan verifikasi saluran drainase.",
   },
   {
-    question: "Berapa lama proses cuci AC?",
+    question: "Apakah cuci AC dapat mengurangi bau dan jamur?",
     answer:
-      "Rata-rata sekitar 30–60 menit tergantung kondisi unit dan tingkat kekotoran.",
+      "Ya. Membersihkan evaporator dan filter membantu menghilangkan sumber bau dan pertumbuhan jamur.",
   },
   {
-    question: "Apakah bisa panggilan ke rumah?",
+    question: "Apakah ada garansi setelah cuci AC?",
     answer:
-      "Ya, Radja AC melayani cuci AC panggilan untuk rumah, kantor, toko, dan tempat usaha.",
+      "Kami menjamin layanan rapi dan aman. Jika masalah muncul kembali, teknisi siap menindaklanjuti.",
+  },
+  {
+    question: "Apakah harga bisa berubah setelah inspeksi?",
+    answer:
+      "Estimasi awal diberikan terlebih dahulu. Jika ada kebutuhan tambahan, teknisi akan menjelaskan sebelum melanjutkan.",
   },
 ]
 
@@ -26,17 +31,14 @@ export default function CuciACFAQSection() {
     <section className="px-6 py-20 bg-slate-900/40">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-cyan-300 font-medium mb-3">
-            FAQ
-          </p>
+          <p className="text-cyan-300 font-medium mb-3">FAQ</p>
 
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Pertanyaan yang Sering Ditanyakan
           </h2>
 
-          <p className="text-slate-400 max-w-2xl mx-auto">
-            Beberapa pertanyaan umum mengenai layanan cuci AC
-            di Purwokerto dan Banyumas.
+          <p className="text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            Jawaban singkat untuk pertanyaan umum tentang layanan cuci AC kami.
           </p>
         </div>
 

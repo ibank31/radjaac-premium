@@ -1,108 +1,81 @@
 export default function Footer() {
   return (
-    <>
-      {/* SEO LOCAL SECTION */}
-      <section className="px-6 py-14 border-t border-white/5">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+    <footer className="border-t border-white/5 py-12 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* BRAND */}
-          <div>
-            <div className="flex items-center gap-4 mb-5">
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-4 mb-4">
               <img
                 src="/logo-radjaac.png"
                 alt="RADJA AC"
-                className="w-14"
+                className="w-12"
               />
 
               <div>
-                <h3 className="font-bold text-xl">RADJA AC</h3>
+                <h3 className="font-bold text-lg">RADJA AC</h3>
                 <p className="text-white/60 text-sm">
-                  Dealer & Service AC Purwokerto
+                  Service AC Purwokerto Terpercaya
                 </p>
               </div>
             </div>
 
-            <p className="text-white/60 leading-relaxed text-sm">
-              RADJA AC Purwokerto melayani penjualan AC, instalasi AC,
-              service AC, maintenance AC, cuci AC, bongkar pasang AC,
-              hingga konsultasi kebutuhan pendingin ruangan untuk rumah,
-              kantor, cafe, toko, dan proyek komersial.
+            <p className="text-white/60 leading-relaxed text-sm mb-4">
+              Layanan profesional untuk semua kebutuhan AC Anda di Purwokerto dan Banyumas.
             </p>
+
+            {/* AREA COVERAGE */}
+            <div>
+              <h4 className="font-semibold text-white mb-3">Area Layanan</h4>
+              <div className="grid grid-cols-2 gap-2 text-white/60 text-sm">
+                <div>Purwokerto</div>
+                <div>Banyumas</div>
+                <div>Sokaraja</div>
+                <div>Ajibarang</div>
+                <div>Purbalingga</div>
+                <div>Cilacap</div>
+              </div>
+            </div>
           </div>
 
-          {/* AREA */}
+          {/* NAVIGATION */}
           <div>
-            <h3 className="font-bold text-lg mb-5">
-              Area Layanan
-            </h3>
-
-            <div className="grid grid-cols-2 gap-3 text-white/60 text-sm">
-              <div>Purwokerto</div>
-              <div>Banyumas</div>
-
-              <div>Sokaraja</div>
-              <div>Ajibarang</div>
-
-              <div>Purbalingga</div>
-              <div>Cilacap</div>
-
-              <div>Banjarnegara</div>
-              <div>Baturraden</div>
+            <h4 className="font-semibold text-white mb-4">Layanan</h4>
+            <div className="space-y-2 text-white/60 text-sm">
+              <a href="/" className="block hover:text-white transition">Home</a>
+              <a href="/service-ac-purwokerto" className="block hover:text-white transition">Service AC</a>
+              <a href="/cuci-ac-purwokerto" className="block hover:text-white transition">Cuci AC</a>
+              <a href="/instalasi-ac-banyumas" className="block hover:text-white transition">Instalasi AC</a>
             </div>
           </div>
 
           {/* CONTACT */}
           <div>
-            <h3 className="font-bold text-lg mb-5">
-              Kontak
-            </h3>
-
-            <div className="space-y-4 text-white/60 text-sm">
+            <h4 className="font-semibold text-white mb-4">Kontak</h4>
+            <div className="space-y-3 text-white/60 text-sm">
               <div>
-                WhatsApp:
-                <br />
-                0882-0082-46099
+                <div className="font-medium text-white">WhatsApp</div>
+                <a href="https://wa.me/628820008246099" className="hover:text-cyan-300 transition">0882-0082-46099</a>
               </div>
 
               <div>
-                Email:
-                <br />
-                info@radjaac.com
+                <div className="font-medium text-white">Email</div>
+                <a href="mailto:info@radjaac.com" className="hover:text-cyan-300 transition">info@radjaac.com</a>
               </div>
 
               <div>
-                Purwokerto, Banyumas
+                <div className="font-medium text-white">Alamat</div>
+                <div>Purwokerto, Banyumas</div>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* COPYRIGHT */}
-      <footer className="border-t border-white/5 py-6 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
-          <div>
-            © 2026 RADJA AC Purwokerto. All rights reserved.
-          </div>
-
-          <div className="flex items-center gap-5">
-            <a href="#" className="hover:text-white transition">
-              Home
-            </a>
-
-            <a href="#" className="hover:text-white transition">
-              Layanan
-            </a>
-
-            <a href="#" className="hover:text-white transition">
-              Produk
-            </a>
-
-            <a href="#" className="hover:text-white transition">
-              WhatsApp
-            </a>
-          </div>
+        {/* COPYRIGHT */}
+        <div className="border-t border-white/5 pt-6 text-center text-sm text-white/40">
+          © 2026 RADJA AC Purwokerto. All rights reserved.
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }
