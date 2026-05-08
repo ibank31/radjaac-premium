@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import Navbar from "../components/Navbar"
+import FloatingWhatsapp from "../components/FloatingWhatsapp";
 
 const commonProblems = [
   "AC tidak dingin saat cuaca panas",
@@ -105,7 +106,7 @@ export default function ServiceAC() {
         </div>
       </section>
 
-      <section className="px-6 py-16 bg-red-500">
+      <section className="px-6 py-16 bg-slate-900/40">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-semibold mb-8">
             Masalah AC yang Sering Terjadi
@@ -242,6 +243,8 @@ export default function ServiceAC() {
           </p>
         </div>
       </section>
+
+      <FloatingWhatsapp />
     </div>
   )
 }
