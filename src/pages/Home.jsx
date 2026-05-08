@@ -14,6 +14,7 @@ import MiniReviewSection from "../components/MiniReviewSection"
 import PricingPreviewSection from "../components/PricingPreviewSection"
 import AboutTrustSection from "../components/AboutTrustSection"
 import BeforeAfterSection from "../components/BeforeAfterSection"
+import AreaCoverageSection from "../components/AreaCoverageSection"
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
         <MiniReviewSection />
         <PricingPreviewSection />
         <AboutTrustSection />
+        <AreaCoverageSection />
         <TestimonialsSection />
         <ClosingCTA />
       </div>
