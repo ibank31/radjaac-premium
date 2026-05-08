@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async"
 import Navbar from "../components/Navbar"
-import TestBanner from "../components/TestBanner"
 import HeroSection from "../components/HeroSection"
 import ServicesSection from "../components/ServicesSection"
 import BrandsSection from "../components/BrandsSection"
@@ -10,7 +9,6 @@ import TestimonialsSection from "../components/TestimonialsSection"
 import ClosingCTA from "../components/ClosingCTA"
 import Footer from "../components/Footer"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
-import MobileStickyCTA from "../components/MobileStickyCTA"
 
 export default function Home() {
   return (
@@ -30,7 +28,6 @@ export default function Home() {
       </div>
 
       <div className="max-w-7xl mx-auto px-5 pt-20">
-        <TestBanner />
         <HeroSection />
         <ServicesSection />
         <BrandsSection />
@@ -42,7 +39,6 @@ export default function Home() {
 
       <Footer />
       <FloatingWhatsapp />
-      <MobileStickyCTA />
     </div>
   );
 }
