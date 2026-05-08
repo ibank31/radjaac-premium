@@ -1,6 +1,7 @@
 import SeoHead from "../components/SeoHead"
+import { Helmet } from "react-helmet-async"
+import { businessSchema, createServiceSchema } from "../utils/schemaUtils"
 import Navbar from "../components/Navbar"
-import SignsAcNeedsCleaningSection from "../components/SignsAcNeedsCleaningSection"
 import CuciACPricingSection from "../components/CuciACPricingSection"
 import PrimaryCTASection from "../components/PrimaryCTASection"
 import CuciACFAQSection from "../components/CuciACFAQSection"
@@ -61,6 +62,18 @@ export default function CuciAC() {
         description="Jasa cuci AC Purwokerto untuk rumah, kost, kantor, dan toko. Pembersihan menyeluruh agar AC kembali dingin dan hemat listrik."
         canonicalPath="/cuci-ac-purwokerto"
       />
+
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(businessSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(createServiceSchema(
+            "Cuci AC",
+            "Jasa cuci AC Purwokerto untuk rumah, kost, kantor, dan toko. Pembersihan menyeluruh agar AC kembali dingin dan hemat listrik."
+          ))}
+        </script>
+      </Helmet>
 
       {/* BACKGROUND GRADIENTS */}
       <div className="fixed inset-0 -z-10 overflow-hidden">

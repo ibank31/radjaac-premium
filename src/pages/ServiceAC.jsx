@@ -1,6 +1,7 @@
 import SeoHead from "../components/SeoHead"
+import { Helmet } from "react-helmet-async"
+import { businessSchema, createServiceSchema, createFAQSchema } from "../utils/schemaUtils"
 import Navbar from "../components/Navbar"
-import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import PrimaryCTASection from "../components/PrimaryCTASection"
 
 const commonProblems = [
@@ -56,6 +57,12 @@ const faqItems = [
 ]
 
 export default function ServiceAC() {
+  const serviceSchema = createServiceSchema(
+    "Service AC",
+    "Jasa service AC panggilan di Purwokerto untuk AC tidak dingin, bocor, mati total, dan perawatan rutin. Teknisi cepat datang dan bergaransi."
+  )
+  const faqSchema = createFAQSchema(faqItems)
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <SeoHead
@@ -63,6 +70,18 @@ export default function ServiceAC() {
         description="Jasa service AC Purwokerto untuk AC tidak dingin, bocor, mati total, dan perawatan rutin. Teknisi cepat datang dan bergaransi."
         canonicalPath="/service-ac-purwokerto"
       />
+
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(businessSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
 
       <Navbar />
 

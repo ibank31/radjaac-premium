@@ -1,6 +1,7 @@
 import SeoHead from "../components/SeoHead"
+import { Helmet } from "react-helmet-async"
+import { businessSchema, createServiceSchema } from "../utils/schemaUtils"
 import Navbar from "../components/Navbar"
-import TrustStripSection from "../components/TrustStripSection"
 import MiniReviewSection from "../components/MiniReviewSection"
 import AreaCoverageSection from "../components/AreaCoverageSection"
 import InternalLinksSection from "../components/InternalLinksSection"
@@ -123,6 +124,18 @@ export default function InstalasiAC() {
         description="Jasa instalasi AC Banyumas dan Purwokerto untuk rumah dan kantor. Pemasangan rapi, aman, dan bergaransi teknisi berpengalaman."
         canonicalPath="/instalasi-ac-banyumas"
       />
+
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(businessSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(createServiceSchema(
+            "Instalasi AC",
+            "Jasa instalasi AC Banyumas dan Purwokerto untuk rumah dan kantor. Pemasangan rapi, aman, dan bergaransi teknisi berpengalaman."
+          ))}
+        </script>
+      </Helmet>
 
       {/* BACKGROUND GRADIENTS */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
