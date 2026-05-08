@@ -19,6 +19,33 @@ import AreaCoverageSection from "../components/AreaCoverageSection"
 export default function Home() {
   return (
     <div className="bg-[#050816] text-white overflow-hidden">
+
+      <Helmet>
+      <title>
+        Radja AC Purwokerto | Service, Cuci & Instalasi AC
+      </title>
+
+      <meta
+        name="description"
+        content="Jasa service AC Purwokerto dan Banyumas. Melayani cuci AC, isi freon, instalasi, dan perbaikan AC panggilan rumah maupun kantor."
+      />
+
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Berapa biaya service AC di Purwokerto?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Biaya service AC menyesuaikan jenis kerusakan dan kebutuhan unit. Estimasi umum mulai dari Rp75.000.",
+              },
+            },
+          ],
+        })}
+      </script>
       <Helmet>
         <title>RADJA AC Purwokerto | Jual, Instalasi, Service & Cuci AC Terpercaya</title>
         <meta name="description" content="Dealer AC profesional di Purwokerto Banyumas. Jual AC branded, instalasi AC, service AC, maintenance, dan cuci AC dengan teknisi bersertifikat." />
