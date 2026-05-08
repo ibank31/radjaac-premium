@@ -58,11 +58,11 @@ export default function HeroSection() {
             </div>
 
             {/* CTA */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-4">
               <a
                 href="https://wa.me/62882008246099"
                 target="_blank"
-                className="bg-blue-600 hover:bg-blue-500 transition px-8 py-4 rounded-full font-bold flex items-center gap-3"
+                className="bg-[#25D366] hover:bg-[#20BA5A] transition px-8 py-4 rounded-full font-bold flex items-center gap-3"
               >
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
@@ -79,6 +79,11 @@ export default function HeroSection() {
                 Lihat Produk
               </a>
             </div>
+
+            {/* TRUST TEXT */}
+            <p className="text-white/60 text-sm">
+              ✓ Respon cepat • Gratis konsultasi • Teknisi datang ke lokasi
+            </p>
           </div>
 
           {/* RIGHT */}

@@ -29,9 +29,9 @@ export default function ClosingCTA() {
               href="https://wa.me/62882008246099"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-4 bg-white hover:bg-green-50 text-black font-bold text-lg px-8 py-5 rounded-full transition duration-300 hover:scale-105 shadow-2xl"
+              className="inline-flex items-center justify-center gap-4 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-lg px-8 py-5 rounded-full transition duration-300 hover:scale-105 shadow-2xl"
             >
-              <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
                   alt="WhatsApp"
@@ -40,11 +40,11 @@ export default function ClosingCTA() {
               </div>
 
               <div className="text-left">
-                <div className="text-sm text-gray-500 font-medium">
+                <div className="text-sm text-white/80 font-medium">
                   Konsultasi via
                 </div>
 
-                <div className="text-xl font-black">
+                <div className="text-xl font-black text-white">
                   WhatsApp
                 </div>
               </div>

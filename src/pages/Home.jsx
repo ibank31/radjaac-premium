@@ -10,6 +10,7 @@ import TestimonialsSection from "../components/TestimonialsSection"
 import ClosingCTA from "../components/ClosingCTA"
 import Footer from "../components/Footer"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
+import MobileStickyCTA from "../components/MobileStickyCTA"
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
 
       <Footer />
       <FloatingWhatsapp />
+      <MobileStickyCTA />
     </div>
   );
 }

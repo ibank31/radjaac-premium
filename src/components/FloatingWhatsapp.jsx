@@ -13,7 +13,7 @@ export default function FloatingWhatsapp() {
         repeat: Infinity,
         duration: 2,
       }}
-      className="fixed bottom-7 right-7 z-50 w-16 h-16 rounded-full bg-green-500 flex items-center justify-center shadow-[0_0_40px_rgba(34,197,94,0.7)]"
+      className="fixed bottom-24 md:bottom-7 right-7 z-40 w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_40px_rgba(37,211,102,0.7)] hover:bg-[#20BA5A] transition"
     >
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
