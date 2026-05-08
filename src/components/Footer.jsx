@@ -46,6 +46,9 @@ export default function Footer() {
               <a href="/service-ac-purwokerto" className="block hover:text-white transition">Service AC</a>
               <a href="/cuci-ac-purwokerto" className="block hover:text-white transition">Cuci AC</a>
               <a href="/instalasi-ac-banyumas" className="block hover:text-white transition">Instalasi AC</a>
+              <a href="/tentang-kami" className="block hover:text-white transition">Tentang Kami</a>
+              <a href="/kontak" className="block hover:text-white transition">Kontak</a>
+              <a href="/portfolio" className="block hover:text-white transition">Portfolio</a>
             </div>
           </div>
 

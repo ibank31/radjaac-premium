@@ -4,6 +4,9 @@ import Home from "./pages/Home"
 import ServiceAC from "./pages/ServiceAC"
 import InstalasiAC from "./pages/InstalasiAC"
 import CuciAC from "./pages/CuciAC"
+import TentangKami from "./pages/TentangKami"
+import Kontak from "./pages/Kontak"
+import Portfolio from "./pages/Portfolio"
 
 export default function App() {
   return (
@@ -23,6 +26,21 @@ export default function App() {
       <Route
         path="/cuci-ac-purwokerto"
         element={<CuciAC />}
+      />
+
+      <Route
+        path="/tentang-kami"
+        element={<TentangKami />}
+      />
+
+      <Route
+        path="/kontak"
+        element={<Kontak />}
+      />
+
+      <Route
+        path="/portfolio"
+        element={<Portfolio />}
       />
     </Routes>
   )

@@ -83,6 +83,45 @@ export default function Navbar() {
           >
             Instalasi AC
           </NavLink>
+
+          <NavLink
+            to="/tentang-kami"
+            className={({ isActive }) =>
+              `rounded-full px-3 py-2 transition ${
+                isActive
+                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
+                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+              }`
+            }
+          >
+            Tentang Kami
+          </NavLink>
+
+          <NavLink
+            to="/kontak"
+            className={({ isActive }) =>
+              `rounded-full px-3 py-2 transition ${
+                isActive
+                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
+                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+              }`
+            }
+          >
+            Kontak
+          </NavLink>
+
+          <NavLink
+            to="/portfolio"
+            className={({ isActive }) =>
+              `rounded-full px-3 py-2 transition ${
+                isActive
+                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
+                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+              }`
+            }
+          >
+            Portfolio
+          </NavLink>
         </nav>
 
         {/* Mobile Button */}
@@ -154,6 +193,48 @@ export default function Navbar() {
               }
             >
               Instalasi AC
+            </NavLink>
+
+            <NavLink
+              to="/tentang-kami"
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `rounded-3xl px-4 py-3 transition ${
+                  isActive
+                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
+                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+                }`
+              }
+            >
+              Tentang Kami
+            </NavLink>
+
+            <NavLink
+              to="/kontak"
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `rounded-3xl px-4 py-3 transition ${
+                  isActive
+                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
+                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+                }`
+              }
+            >
+              Kontak
+            </NavLink>
+
+            <NavLink
+              to="/portfolio"
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `rounded-3xl px-4 py-3 transition ${
+                  isActive
+                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
+                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+                }`
+              }
+            >
+              Portfolio
             </NavLink>
           </nav>
         </div>
