@@ -16,6 +16,7 @@ import AboutTrustSection from "../components/AboutTrustSection"
 import BeforeAfterSection from "../components/BeforeAfterSection"
 import InternalLinksSection from "../components/InternalLinksSection"
 import LocationSection from "../components/LocationSection"
+import HomeFAQSection from "../components/HomeFAQSection"
 
 export default function Home() {
   return (
@@ -91,6 +92,7 @@ export default function Home() {
           </div>
         </section>
         <LocationSection />
+        <HomeFAQSection />
         <TestimonialsSection />
         <ClosingCTA />
       </div>
