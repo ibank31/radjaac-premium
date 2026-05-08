@@ -12,6 +12,7 @@ import Footer from "../components/Footer"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import MiniReviewSection from "../components/MiniReviewSection"
 import PricingPreviewSection from "../components/PricingPreviewSection"
+import AboutTrustSection from "../components/AboutTrustSection"
 
 export default function Home() {
   return (
@@ -39,6 +40,7 @@ export default function Home() {
         <PortfolioSection />
         <MiniReviewSection />
         <PricingPreviewSection />
+        <AboutTrustSection />
         <TestimonialsSection />
         <ClosingCTA />
       </div>
