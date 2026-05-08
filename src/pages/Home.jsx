@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async"
 import Navbar from "../components/Navbar"
 import HeroSection from "../components/HeroSection"
+import TrustStripSection from "../components/TrustStripSection"
 import ServicesSection from "../components/ServicesSection"
 import BrandsSection from "../components/BrandsSection"
 import WhyChooseUs from "../components/WhyChooseUs"
@@ -29,6 +30,7 @@ export default function Home() {
 
       <div className="max-w-7xl mx-auto px-5 pt-20">
         <HeroSection />
+        <TrustStripSection />
         <ServicesSection />
         <BrandsSection />
         <WhyChooseUs />
