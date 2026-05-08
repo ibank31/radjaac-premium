@@ -2,10 +2,11 @@ import { Helmet } from "react-helmet-async"
 import Navbar from "../components/Navbar"
 import SignsAcNeedsCleaningSection from "../components/SignsAcNeedsCleaningSection"
 import CuciACPricingSection from "../components/CuciACPricingSection"
+import CuciACCTASection from "../components/CuciACCTASection"
 
 export default function CuciAC() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#050816] text-white overflow-hidden">
       <Helmet>
         <title>Cuci AC Purwokerto | Jasa Pembersihan AC Berkala</title>
         <meta name="description" content="Layanan cuci AC rutin dan berkala di Purwokerto. AC tetap dingin, hemat listrik, dan lebih awet dengan perawatan berkala dari teknisi profesional kami." />
@@ -15,7 +16,7 @@ export default function CuciAC() {
 
       <Navbar />
 
-      <section className="bg-cyan-600 text-white py-20 px-6">
+      <section className="bg-gradient-to-b from-[#07122b] to-[#050816] text-white py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-5xl font-bold mb-6">
             Cuci AC Purwokerto
@@ -30,6 +31,7 @@ export default function CuciAC() {
 
       <SignsAcNeedsCleaningSection />
       <CuciACPricingSection />
+      <CuciACCTASection />
     </div>
   )
 }
