@@ -15,6 +15,7 @@ import PricingPreviewSection from "../components/PricingPreviewSection"
 import AboutTrustSection from "../components/AboutTrustSection"
 import BeforeAfterSection from "../components/BeforeAfterSection"
 import AreaCoverageSection from "../components/AreaCoverageSection"
+import InternalLinksSection from "../components/InternalLinksSection"
 
 export default function Home() {
   return (
@@ -46,6 +47,8 @@ export default function Home() {
           ],
         })}
       </script>
+      </Helmet>
+
       <Helmet>
         <title>RADJA AC Purwokerto | Jual, Instalasi, Service & Cuci AC Terpercaya</title>
         <meta name="description" content="Dealer AC profesional di Purwokerto Banyumas. Jual AC branded, instalasi AC, service AC, maintenance, dan cuci AC dengan teknisi bersertifikat." />
@@ -64,6 +67,7 @@ export default function Home() {
         <HeroSection />
         <TrustStripSection />
         <ServicesSection />
+        <InternalLinksSection />
         <BrandsSection />
         <WhyChooseUs />
         <PortfolioSection />
