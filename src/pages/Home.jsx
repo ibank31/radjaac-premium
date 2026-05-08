@@ -11,6 +11,7 @@ import ClosingCTA from "../components/ClosingCTA"
 import Footer from "../components/Footer"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import MiniReviewSection from "../components/MiniReviewSection"
+import PricingPreviewSection from "../components/PricingPreviewSection"
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
         <WhyChooseUs />
         <PortfolioSection />
         <MiniReviewSection />
+        <PricingPreviewSection />
         <TestimonialsSection />
         <ClosingCTA />
       </div>
