@@ -8,6 +8,7 @@ import InternalLinksSection from "../components/InternalLinksSection"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import PrimaryCTASection from "../components/PrimaryCTASection"
 import Footer from "../components/Footer"
+import TrustStripSection from "../components/TrustStripSection";
 
 const installationBenefits = [
   {

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async"
 import { businessSchema, createServiceSchema, createFAQSchema } from "../utils/schemaUtils"
 import Navbar from "../components/Navbar"
 import PrimaryCTASection from "../components/PrimaryCTASection"
+import FloatingWhatsapp from "../components/FloatingWhatsapp";
 
 const commonProblems = [
   "AC tidak dingin saat cuaca panas",
