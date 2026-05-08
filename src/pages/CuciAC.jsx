@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async"
+import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
 import SignsAcNeedsCleaningSection from "../components/SignsAcNeedsCleaningSection"
 import CuciACPricingSection from "../components/CuciACPricingSection"
@@ -56,18 +56,11 @@ const processSteps = [
 export default function CuciAC() {
   return (
     <div className="bg-[#050816] text-white overflow-hidden">
-      <Helmet>
-        <title>Cuci AC Purwokerto | Perawatan & Pembersihan AC Profesional</title>
-        <meta
-          name="description"
-          content="Layanan cuci AC panggilan di Purwokerto dan Banyumas. AC kembali dingin, hemat listrik, dan bebas bau dengan teknisi profesional Radja AC."
-        />
-        <meta property="og:title" content="Cuci AC Purwokerto - Perawatan AC Profesional" />
-        <meta
-          property="og:description"
-          content="Jasa cuci AC rutin untuk rumah, kantor, dan tempat usaha. Fast response, transparan, dan area layanan Purwokerto Banyumas."
-        />
-      </Helmet>
+      <SeoHead
+        title="Cuci AC Purwokerto Murah & Bersih | Radja AC"
+        description="Jasa cuci AC Purwokerto untuk rumah, kost, kantor, dan toko. Pembersihan menyeluruh agar AC kembali dingin dan hemat listrik."
+        canonicalPath="/cuci-ac-purwokerto"
+      />
 
       {/* BACKGROUND GRADIENTS */}
       <div className="fixed inset-0 -z-10 overflow-hidden">

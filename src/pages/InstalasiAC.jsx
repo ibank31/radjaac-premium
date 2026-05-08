@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async"
+import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
 import TrustStripSection from "../components/TrustStripSection"
 import MiniReviewSection from "../components/MiniReviewSection"
@@ -118,18 +118,11 @@ const faqItems = [
 export default function InstalasiAC() {
   return (
     <div className="bg-[#050816] text-white overflow-hidden">
-      <Helmet>
-        <title>Instalasi AC Banyumas | Pemasangan AC Profesional & Rapi</title>
-        <meta
-          name="description"
-          content="Jasa instalasi AC profesional di Banyumas. Pemasangan rapi, aman, dan cepat untuk rumah, kantor, toko, dan bangunan komersial dengan teknisi bersertifikat."
-        />
-        <meta property="og:title" content="Instalasi AC Banyumas - Pemasangan Profesional & Rapi" />
-        <meta
-          property="og:description"
-          content="Layanan instalasi AC bersertifikat untuk semua jenis bangunan. Teknisi berpengalaman, pengerjaan rapi, dan bergaransi."
-        />
-      </Helmet>
+      <SeoHead
+        title="Instalasi AC Banyumas & Purwokerto | Radja AC"
+        description="Jasa instalasi AC Banyumas dan Purwokerto untuk rumah dan kantor. Pemasangan rapi, aman, dan bergaransi teknisi berpengalaman."
+        canonicalPath="/instalasi-ac-banyumas"
+      />
 
       {/* BACKGROUND GRADIENTS */}
       <div className="fixed inset-0 -z-10 overflow-hidden">

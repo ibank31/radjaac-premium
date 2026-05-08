@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async"
+import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import PrimaryCTASection from "../components/PrimaryCTASection"
@@ -58,31 +58,11 @@ const faqItems = [
 export default function ServiceAC() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
-      <Helmet>
-        <title>
-          Service AC Purwokerto | Teknisi Profesional & Fast Response
-        </title>
-
-        <meta
-          name="description"
-          content="Service AC panggilan cepat di Purwokerto dan Banyumas: AC tidak dingin, bocor, bau, freon habis, hingga mati total. Teknisi profesional, bergaransi, dan bisa panggilan rumah atau kantor."
-        />
-
-        <meta
-          name="keywords"
-          content="service AC Purwokerto, service AC Banyumas, perbaikan AC Purwokerto, teknisi AC panggilan, AC tidak dingin"
-        />
-
-        <meta
-          property="og:title"
-          content="Service AC Purwokerto - Perbaikan AC Cepat & Profesional"
-        />
-
-        <meta
-          property="og:description"
-          content="Jasa service AC Purwokerto untuk rumah dan kantor. Fast response WhatsApp, teknisi berpengalaman, dan garansi pengerjaan."
-        />
-      </Helmet>
+      <SeoHead
+        title="Service AC Purwokerto Bergaransi | Radja AC"
+        description="Jasa service AC Purwokerto untuk AC tidak dingin, bocor, mati total, dan perawatan rutin. Teknisi cepat datang dan bergaransi."
+        canonicalPath="/service-ac-purwokerto"
+      />
 
       <Navbar />
 

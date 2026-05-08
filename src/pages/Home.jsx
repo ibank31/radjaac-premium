@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async"
+import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
 import HeroSection from "../components/HeroSection"
 import TrustStripSection from "../components/TrustStripSection"
@@ -22,39 +23,29 @@ export default function Home() {
   return (
     <div className="bg-[#050816] text-white overflow-hidden">
 
-      <Helmet>
-      <title>
-        Radja AC Purwokerto | Service, Cuci & Instalasi AC
-      </title>
-
-      <meta
-        name="description"
-        content="Jasa service AC Purwokerto dan Banyumas. Melayani cuci AC, isi freon, instalasi, dan perbaikan AC panggilan rumah maupun kantor."
+      <SeoHead
+        title="Service AC Purwokerto | Cuci, Instalasi & Bongkar Pasang AC | Radja AC"
+        description="Jasa service AC Purwokerto dan Banyumas. Cuci AC, isi freon, instalasi, bongkar pasang AC rumah dan kantor. Teknisi berpengalaman dan bergaransi."
+        canonicalPath="/"
       />
 
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: [
-            {
-              "@type": "Question",
-              name: "Berapa biaya service AC di Purwokerto?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Biaya service AC menyesuaikan jenis kerusakan dan kebutuhan unit. Estimasi umum mulai dari Rp75.000.",
-              },
-            },
-          ],
-        })}
-      </script>
-      </Helmet>
-
       <Helmet>
-        <title>RADJA AC Purwokerto | Jual, Instalasi, Service & Cuci AC Terpercaya</title>
-        <meta name="description" content="Dealer AC profesional di Purwokerto Banyumas. Jual AC branded, instalasi AC, service AC, maintenance, dan cuci AC dengan teknisi bersertifikat." />
-        <meta property="og:title" content="RADJA AC Purwokerto - Solusi AC Premium untuk Rumah & Bisnis" />
-        <meta property="og:description" content="Distributor dan jasa service AC terpercaya. Menyediakan penjualan AC, instalasi profesional, service AC panggilan, maintenance rutin, dan cuci AC." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Berapa biaya service AC di Purwokerto?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Biaya service AC menyesuaikan jenis kerusakan dan kebutuhan unit. Estimasi umum mulai dari Rp75.000.",
+                },
+              },
+            ],
+          })}
+        </script>
       </Helmet>
       <Navbar />
 
