@@ -28,10 +28,17 @@ const NAV_ITEMS = [
   { type: "link", to: "/kontak", label: "Kontak" },
 ]
 
-const activeLink = "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
-const inactiveLink = "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-const mobileActiveLink = "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
-const mobileInactiveLink = "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+const activeLink =
+  "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
+
+const inactiveLink =
+  "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+
+const mobileActiveLink =
+  "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
+
+const mobileInactiveLink =
+  "text-white/80 hover:text-cyan-300 hover:bg-white/5"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -50,11 +57,17 @@ export default function Navbar() {
           />
 
           <div>
-            <h1 className="text-white font-bold text-lg leading-none">Radja AC</h1>
-            <p className="text-white/50 text-[11px]">Purwokerto • Banyumas</p>
+            <h1 className="text-white font-bold text-lg leading-none">
+              Radja AC
+            </h1>
+
+            <p className="text-white/50 text-[11px]">
+              Purwokerto • Banyumas
+            </p>
           </div>
         </Link>
 
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
           {NAV_ITEMS.map((item) => {
             if (item.type === "link") {
@@ -64,7 +77,9 @@ export default function Navbar() {
                   to={item.to}
                   end={item.end}
                   className={({ isActive }) =>
-                    `rounded-full px-3 py-2 transition ${isActive ? activeLink : inactiveLink}`
+                    `rounded-full px-3 py-2 transition ${
+                      isActive ? activeLink : inactiveLink
+                    }`
                   }
                 >
                   {item.label}
@@ -76,34 +91,43 @@ export default function Navbar() {
               <div key={item.label} className="relative">
                 <button
                   type="button"
-                  onClick={() => setOpenDropdown(openDropdown === item.label ? "" : item.label)}
+                  onClick={() =>
+                    setOpenDropdown(
+                      openDropdown === item.label ? "" : item.label
+                    )
+                  }
                   className="rounded-full px-3 py-2 transition text-white/80 hover:text-cyan-300 hover:bg-white/5 flex items-center gap-2"
                 >
                   {item.label}
                   <span className="text-xs">▾</span>
                 </button>
+
                 <div
-                  className={`absolute top-full left-0 mt-3 min-w-[180px] rounded-3xl border border-white/10 bg-slate-950/95 py-3 shadow-[0_20px_50px_rgba(0,0,0,0.25)] backdrop-blur-xl transition ${openDropdown === item.label ? "opacity-100 visible" : "opacity-0 invisible"}`}
+                  className={`absolute top-full left-0 mt-3 min-w-[190px] rounded-3xl border border-white/10 bg-slate-950/95 py-3 shadow-[0_20px_50px_rgba(0,0,0,0.25)] backdrop-blur-xl transition ${
+                    openDropdown === item.label
+                      ? "opacity-100 visible"
+                      : "opacity-0 invisible"
+                  }`}
                 >
                   <div className="space-y-1 px-3">
                     {item.items.map((subItem) =>
-  subItem.to ? (
-    <Link
-      key={subItem.label}
-      to={subItem.to}
-      className="block rounded-3xl px-3 py-2 text-white/80 hover:text-cyan-300 hover:bg-white/5"
-    >
-      {subItem.label}
-    </Link>
-  ) : (
-    <div
-      key={subItem.label}
-      className="block rounded-3xl px-3 py-2 text-white/50 cursor-default"
-    >
-      {subItem.label}
-    </div>
-  )
-)}
+                      subItem.to ? (
+                        <Link
+                          key={subItem.label}
+                          to={subItem.to}
+                          className="block rounded-3xl px-3 py-2 text-white/80 hover:text-cyan-300 hover:bg-white/5"
+                        >
+                          {subItem.label}
+                        </Link>
+                      ) : (
+                        <div
+                          key={subItem.label}
+                          className="block rounded-3xl px-3 py-2 text-white/50 cursor-default"
+                        >
+                          {subItem.label}
+                        </div>
+                      )
+                    )}
                   </div>
                 </div>
               </div>
@@ -111,6 +135,7 @@ export default function Navbar() {
           })}
         </nav>
 
+        {/* Mobile Toggle */}
         <button
           className="md:hidden text-3xl text-white"
           aria-label="Toggle navigation"
@@ -120,6 +145,7 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden bg-black/95 text-white border-t border-white/10">
           <nav className="flex flex-col p-6 gap-4 font-medium">
@@ -131,7 +157,11 @@ export default function Navbar() {
                     end={item.end}
                     onClick={() => setIsOpen(false)}
                     className={({ isActive }) =>
-                      `rounded-3xl px-4 py-3 transition ${isActive ? mobileActiveLink : mobileInactiveLink}`
+                      `block rounded-3xl px-4 py-3 transition ${
+                        isActive
+                          ? mobileActiveLink
+                          : mobileInactiveLink
+                      }`
                     }
                   >
                     {item.label}
@@ -140,14 +170,19 @@ export default function Navbar() {
                   <div className="space-y-2">
                     <button
                       type="button"
-                      onClick={() => setOpenDropdown(openDropdown === item.label ? "" : item.label)}
+                      onClick={() =>
+                        setOpenDropdown(
+                          openDropdown === item.label ? "" : item.label
+                        )
+                      }
                       className="w-full text-left rounded-3xl px-4 py-3 transition text-white/80 hover:text-cyan-300 hover:bg-white/5 flex items-center justify-between"
                     >
                       {item.label}
                       <span className="text-sm">▾</span>
                     </button>
+
                     {openDropdown === item.label && (
-                      <div className="space-y-1 pl-4">
+                      <div className="space-y-1 pl-4 border-l border-white/10 ml-2">
                         {item.items.map((subItem) =>
                           subItem.to ? (
                             <Link
@@ -159,10 +194,14 @@ export default function Navbar() {
                               {subItem.label}
                             </Link>
                           ) : (
-                            <div key={subItem.label} className="block rounded-3xl px-4 py-3 text-white/50">
+                            <div
+                              key={subItem.label}
+                              className="block rounded-3xl px-4 py-3 text-white/50"
+                            >
                               {subItem.label}
                             </div>
-                          ))}
+                          )
+                        )}
                       </div>
                     )}
                   </div>
