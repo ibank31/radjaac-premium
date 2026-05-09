@@ -35,7 +35,7 @@ export const SITE_DATA = {
   defaultKeywords: "service AC Purwokerto, cuci AC Banyumas, instalasi AC, teknisi AC profesional, AC Purwokerto, AC Banyumas",
 
   // Social Media / External Links
-  logoUrl: "/logo-radjaac.png",
+  logoUrl: "/logo-radjaac.webp",
 
   // Business Stats (for hero section)
   businessStats: [

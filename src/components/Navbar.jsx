@@ -27,7 +27,7 @@ export default function Navbar() {
 <NavLink to="/" end className="flex items-center gap-3">
 
   <img
-    src="/logo-radjaac.png"
+    src="/logo-radjaac.webp"
     alt="Radja AC"
     loading="eager"
     decoding="async"

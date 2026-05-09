@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
 const BRAND_LOGOS = [
-  { name: "Daikin", logo: "/daikin-logo.png" },
-  { name: "Gree", logo: "/gree-logo.png" },
-  { name: "Midea", logo: "/midea-logo.png" },
-  { name: "Panasonic", logo: "/panasonic-logo.png" },
-  { name: "Sharp", logo: "/sharp-logo.png" },
-  { name: "Samsung", logo: "/samsung-logo.png" },
+  { name: "Daikin", logo: "/logo-product/daikin-logo.webp" },
+  { name: "Gree", logo: "/logo-product/gree-logo.webp" },
+  { name: "Midea", logo: "/logo-product/midea-logo.webp" },
+  { name: "Panasonic", logo: "/logo-product/panasonic-logo.webp" },
+  { name: "Sharp", logo: "/logo-product/sharp-logo.webp" },
+  { name: "Samsung", logo: "/logo-product/samsung-logo.webp" },
 ];
 
 export default function BrandsSection() {
