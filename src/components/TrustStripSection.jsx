@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { CheckCircle2, Sparkles, ShieldCheck, BadgeCheck, Clock3 } from "lucide-react";
 
 const trustItems = [
-  { icon: BadgeCheck, label: "500+ Rumah & Tempat Usaha Ditangani" },
-  { icon: Clock3, label: "Fast Response Area Purwokerto & Banyumas" },
-  { icon: ShieldCheck, label: "Teknisi Rapi & Profesional" },
-  { icon: CheckCircle2, label: "Garansi Pengerjaan" },
-  { icon: Sparkles, label: "Bisa Panggilan Hari Ini" },
+  { icon: BadgeCheck, label: "Dealer AC resmi Purwokerto & Banyumas" },
+  { icon: Clock3, label: "Ready stock AC multi-brand" },
+  { icon: ShieldCheck, label: "Instalasi profesional & rapi" },
+  { icon: CheckCircle2, label: "Konsultasi pilih AC sesuai ruangan" },
+  { icon: Sparkles, label: "Garansi pemasangan & after-sales" },
 ];
 
 export default function TrustStripSection() {

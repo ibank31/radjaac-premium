@@ -33,21 +33,21 @@ export default function ServicesSection() {
         </h2>
 
         <p className="text-white/60 max-w-2xl mx-auto text-sm md:text-base">
-          Solusi lengkap kebutuhan pendingin ruangan
-          untuk rumah hingga proyek komersial.
+          Prioritas utama kami adalah penjualan AC berkualitas, dengan layanan instalasi dan dukungan purna jual yang mendukung.
         </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
         {services.map((item, i) => {
           const IconComponent = item.icon;
+          const isPrimary = i === 0;
           return (
             <motion.div
               key={i}
               whileHover={{ y: -5 }}
-              className="bg-white/[0.04] border border-white/10 rounded-[30px] p-6 md:p-7 h-full"
+              className={`rounded-[30px] p-6 md:p-7 h-full transition ${isPrimary ? "border border-cyan-300/30 bg-gradient-to-br from-cyan-500/10 via-slate-900/70 to-slate-950 shadow-[0_20px_60px_rgba(6,182,212,0.16)]" : "bg-white/[0.04] border border-white/10"}`}
             >
-              <div className="text-5xl mb-6 text-cyan-400">
+              <div className={`text-5xl mb-6 ${isPrimary ? "text-cyan-200" : "text-cyan-400"}`}>
                 <IconComponent size={48} strokeWidth={1.5} />
               </div>
 

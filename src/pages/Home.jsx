@@ -5,6 +5,7 @@ import HeroSection from "../components/HeroSection"
 import TrustStripSection from "../components/TrustStripSection"
 import ServicesSection from "../components/ServicesSection"
 import BrandsSection from "../components/BrandsSection"
+import FeaturedProductsSection from "../components/FeaturedProductsSection"
 import WhyChooseUs from "../components/WhyChooseUs"
 import PortfolioSection from "../components/PortfolioSection"
 import TestimonialsSection from "../components/TestimonialsSection"
@@ -12,9 +13,7 @@ import ClosingCTA from "../components/ClosingCTA"
 import Footer from "../components/Footer"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import MiniReviewSection from "../components/MiniReviewSection"
-import PricingPreviewSection from "../components/PricingPreviewSection"
 import AboutTrustSection from "../components/AboutTrustSection"
-import BeforeAfterSection from "../components/BeforeAfterSection"
 import InternalLinksSection from "../components/InternalLinksSection"
 import LocationSection from "../components/LocationSection"
 import HomeFAQSection from "../components/HomeFAQSection"
@@ -24,8 +23,8 @@ export default function Home() {
     <div className="bg-[#050816] text-white overflow-hidden">
 
       <SeoHead
-        title="Service AC Purwokerto | Cuci, Instalasi & Bongkar Pasang AC | Radja AC"
-        description="Jasa service AC Purwokerto dan Banyumas. Cuci AC, isi freon, instalasi, bongkar pasang AC rumah dan kantor. Teknisi berpengalaman dan bergaransi."
+        title="Dealer AC Purwokerto & Banyumas | Jual AC Daikin, Gree, Sharp - RADJA AC"
+        description="RADJA AC menyediakan penjualan AC berbagai brand seperti Daikin, Gree, Sharp, Panasonic, LG, Midea dan lainnya di Purwokerto & Banyumas. Ready stock, instalasi profesional, dan konsultasi gratis."
         canonicalPath="/"
       />
 
@@ -37,10 +36,18 @@ export default function Home() {
             mainEntity: [
               {
                 "@type": "Question",
-                name: "Berapa biaya service AC di Purwokerto?",
+                name: "Brand AC apa saja yang tersedia di RADJA AC?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Biaya service AC menyesuaikan jenis kerusakan dan kebutuhan unit. Estimasi umum mulai dari Rp75.000.",
+                  text: "Kami menyediakan berbagai brand AC premium seperti Daikin, Gree, Sharp, Panasonic, LG, Midea, Samsung, TCL, Toshiba, Mitsubishi, Aqua, Polytron, Changhong, Hisense, Ariston, dan Sansui.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "AC berapa PK yang cocok untuk ruangan saya?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Rekomendasi PK AC tergantung luas ruangan dan jumlah penghuni. AC 1 PK untuk ruang 12-15m², 1.5 PK untuk 16-20m², 2 PK untuk 21-25m². Konsultasikan dengan tim kami untuk rekomendasi yang tepat.",
                 },
               },
             ],
@@ -58,15 +65,14 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-20">
         <HeroSection />
         <TrustStripSection />
-        <ServicesSection />
-        <InternalLinksSection />
         <BrandsSection />
+        <FeaturedProductsSection />
         <WhyChooseUs />
+        <ServicesSection />
         <PortfolioSection />
-        <BeforeAfterSection />
         <MiniReviewSection />
-        <PricingPreviewSection />
         <AboutTrustSection />
+        <InternalLinksSection />
         <section className="px-6 py-16 bg-slate-950">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-cyan-300 font-medium mb-3">
@@ -78,7 +84,7 @@ export default function Home() {
             </h2>
 
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Radja AC melayani service, cuci, dan instalasi AC untuk rumah, kantor, toko, dan tempat usaha di berbagai area Banyumas dan sekitarnya termasuk Sokaraja, Ajibarang, Purbalingga, dan Cilacap.
+              Radja AC melayani penjualan, instalasi, service, dan cuci AC untuk rumah, kantor, toko, dan tempat usaha di berbagai area Banyumas dan sekitarnya termasuk Sokaraja, Ajibarang, Purbalingga, dan Cilacap.
             </p>
           </div>
         </section>

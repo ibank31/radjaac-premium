@@ -9,21 +9,19 @@ export default function ClosingCTA() {
           <div className="relative z-10 text-center">
             {/* mini badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full border border-white/20 bg-white/10 text-sm text-white/80 mb-6 backdrop-blur-md">
-              Konsultasi Gratis • Fast Response
+              Dealer AC Modern & Terpercaya
             </div>
 
             {/* title */}
             <h2 className="text-4xl md:text-6xl font-black leading-tight mb-6 text-white">
-              Butuh AC Untuk
+              Siap Bantu Pilih
               <br />
-              Rumah atau Bisnis?
+              AC Terbaik Anda
             </h2>
 
             {/* desc */}
             <p className="max-w-2xl mx-auto text-white/90 text-base md:text-xl leading-relaxed mb-10">
-              Konsultasikan kebutuhan AC Anda bersama tim RADJA AC Purwokerto.
-              Melayani penjualan, instalasi, service, maintenance,
-              hingga proyek pendingin ruangan skala komersial.
+              Tanya harga AC, cek stok brand resmi, dan dapatkan rekomendasi AC sesuai ukuran ruangan untuk rumah atau bisnis Anda di Purwokerto & Banyumas.
             </p>
 
             {/* button */}
@@ -39,11 +37,11 @@ export default function ClosingCTA() {
 
               <div className="text-left">
                 <div className="text-sm text-white/80 font-medium">
-                  Konsultasi via
+                  Tanya Harga AC
                 </div>
 
                 <div className="text-xl font-black text-white">
-                  WhatsApp
+                  via WhatsApp
                 </div>
               </div>
             </a>

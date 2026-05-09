@@ -1,23 +1,23 @@
 const faqs = [
   {
-    question: "Berapa biaya service AC di Purwokerto?",
-    answer: "Biaya service menyesuaikan jenis kerusakan dan kebutuhan sparepart. Estimasi diberikan sebelum pengerjaan dimulai.",
+    question: "Brand AC apa saja yang tersedia di RADJA AC?",
+    answer: "Kami menyediakan berbagai brand AC premium seperti Daikin, Gree, Sharp, Panasonic, LG, Midea, Samsung, TCL, Toshiba, Mitsubishi, Aqua, Polytron, Changhong, Hisense, Ariston, dan Sansui.",
   },
   {
-    question: "Apakah melayani area Banyumas?",
-    answer: "Kami melayani Purwokerto dan berbagai area Banyumas seperti Sokaraja, Ajibarang, Patikraja, Kembaran, dan sekitarnya.",
+    question: "AC berapa PK yang cocok untuk ruangan saya?",
+    answer: "Rekomendasi PK AC tergantung luas ruangan dan jumlah penghuni. AC 1 PK untuk ruang 12-15m², 1.5 PK untuk 16-20m², 2 PK untuk 21-25m². Konsultasikan dengan tim kami untuk rekomendasi yang tepat.",
   },
   {
-    question: "Apakah bisa panggilan di hari yang sama?",
-    answer: "Selama slot teknisi tersedia, kami dapat melayani panggilan di hari yang sama untuk area tertentu.",
+    question: "Apa keunggulan AC inverter?",
+    answer: "AC inverter lebih hemat energi karena dapat mengatur kecepatan kompresor sesuai kebutuhan, sehingga suhu ruangan stabil dan tagihan listrik lebih rendah hingga 30-50%.",
   },
   {
-    question: "Berapa lama pengerjaan service AC?",
-    answer: "Rata-rata pengerjaan sekitar 30–90 menit tergantung kondisi unit dan jenis layanan.",
+    question: "Apakah ada konsultasi sebelum membeli AC?",
+    answer: "Ya, kami menyediakan konsultasi gratis untuk membantu Anda memilih AC yang sesuai dengan kebutuhan ruangan, budget, dan efisiensi energi.",
   },
   {
-    question: "Apakah tersedia layanan instalasi dan cuci AC?",
-    answer: "Ya. Kami melayani service AC, cuci AC, instalasi AC, bongkar pasang, dan maintenance AC.",
+    question: "Apakah RADJA AC melayani instalasi AC?",
+    answer: "Ya, kami menyediakan layanan instalasi profesional oleh teknisi bersertifikat untuk memastikan AC berfungsi optimal dan aman.",
   },
 ]
 
@@ -26,14 +26,14 @@ export default function HomeFAQSection() {
     <section className="px-6 py-20 bg-slate-900/40">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-cyan-300 font-medium mb-3">Pertanyaan yang Sering Ditanyakan</p>
+          <p className="text-cyan-300 font-medium mb-3">Pertanyaan tentang Produk AC</p>
 
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            FAQ Layanan AC
+            FAQ Pembelian AC
           </h2>
 
           <p className="text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Jawaban singkat untuk pertanyaan umum tentang layanan AC di Purwokerto dan Banyumas.
+            Jawaban untuk pertanyaan umum tentang brand AC, rekomendasi, dan layanan di RADJA AC Purwokerto.
           </p>
         </div>
 
