@@ -20,6 +20,12 @@ const internalLinks = [
     anchorText: "instalasi AC Banyumas",
   },
   {
+    title: "AC Inverter Purwokerto",
+    desc: "Solusi AC inverter hemat listrik untuk rumah, kantor, dan bisnis lokal di Purwokerto & Banyumas.",
+    link: "/ac-inverter-purwokerto",
+    anchorText: "AC inverter Purwokerto",
+  },
+  {
     title: "Isi Freon AC",
     desc: "Layanan isi freon AC untuk AC dingin kembali maksimal dengan freon berkualitas.",
     link: "/isi-freon-ac",

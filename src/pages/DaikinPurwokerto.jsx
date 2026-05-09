@@ -225,9 +225,9 @@ export default function DaikinPurwokerto() {
         <section className="px-6 py-10 lg:px-8">
           <div className="max-w-5xl mx-auto rounded-3xl border border-cyan-400/20 bg-slate-900/70 p-6 text-center">
             <p className="text-slate-300 text-base leading-relaxed">
-              Ingin juga melihat pilihan AC Gree value for money?{' '}
-              <Link to="/gree-purwokerto" className="font-semibold text-cyan-300 hover:text-cyan-200">
-                Lihat juga AC Gree
+              Ingin pilihan AC inverter hemat listrik?{' '}
+              <Link to="/ac-inverter-purwokerto" className="font-semibold text-cyan-300 hover:text-cyan-200">
+                Lihat juga AC Inverter Purwokerto
               </Link>
             </p>
           </div>

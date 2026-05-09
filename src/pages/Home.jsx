@@ -69,6 +69,36 @@ export default function Home() {
         <TrustStripSection />
         <BrandsSection />
         <FeaturedProductsSection />
+        <section className="px-6 py-16 lg:px-8">
+          <div className="max-w-6xl mx-auto rounded-[32px] border border-cyan-400/20 bg-slate-900/70 p-8 shadow-[0_32px_80px_rgba(6,78,122,0.16)]">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-3xl">
+                <p className="text-cyan-300 font-medium mb-3">AC Inverter Purwokerto</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                  Solusi AC inverter hemat listrik untuk rumah dan kantor.
+                </h2>
+                <p className="text-slate-400 leading-relaxed">
+                  Temukan pilihan AC inverter dari Daikin, Gree, Panasonic, dan Midea dengan instalasi profesional di Purwokerto & Banyumas.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  to="/ac-inverter-purwokerto"
+                  className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-6 py-4 text-base font-semibold text-slate-950 transition hover:bg-cyan-300"
+                >
+                  Lihat AC Inverter
+                </Link>
+                <Link
+                  to="/kontak"
+                  className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-4 text-base font-semibold text-white/90 transition hover:bg-white/10"
+                >
+                  Konsultasi Gratis
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
         <RealProjectShowcaseSection />
         <LocalReviewSection />
         <WhyChooseUs />

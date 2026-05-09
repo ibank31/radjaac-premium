@@ -6,6 +6,7 @@ import InstalasiAC from "./pages/InstalasiAC"
 import CuciAC from "./pages/CuciAC"
 import DaikinPurwokerto from "./pages/DaikinPurwokerto"
 import GreePurwokerto from "./pages/GreePurwokerto"
+import AcInverterPurwokerto from "./pages/AcInverterPurwokerto"
 import TentangKami from "./pages/TentangKami"
 import Kontak from "./pages/Kontak"
 import Portfolio from "./pages/Portfolio"
@@ -34,6 +35,11 @@ export default function App() {
           <Route
             path="/gree-purwokerto"
             element={<GreePurwokerto />}
+          />
+
+          <Route
+            path="/ac-inverter-purwokerto"
+            element={<AcInverterPurwokerto />}
           />
 
           <Route
