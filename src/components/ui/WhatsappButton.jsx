@@ -26,8 +26,8 @@ export default function WhatsappButton({
       rel="noreferrer"
       className={`inline-flex items-center justify-center gap-3 rounded-2xl sm:rounded-full font-semibold shadow-[0_24px_60px_rgba(37,211,102,0.24)] transition duration-300 hover:-translate-y-0.5 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
     >
-      <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/20">
-        <WhatsappIcon className="w-5 h-5" />
+      <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
+        <WhatsappIcon className="w-7 h-7 object-contain shrink-0" />
       </span>
       {children}
     </a>

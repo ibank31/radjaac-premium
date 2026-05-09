@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import ContactHero from "../components/kontak/ContactHero"
-import ContactCTA from "../components/kontak/ContactCTA"
 import OperationalHours from "../components/kontak/OperationalHours"
 import ServiceAreas from "../components/kontak/ServiceAreas"
 import ContactMap from "../components/kontak/ContactMap"
@@ -24,7 +23,7 @@ export default function Kontak() {
 
         <div className="grid gap-6 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-6 sm:space-y-8">
-            <ContactCTA />
+
             <OperationalHours />
             <ServiceAreas />
           </div>

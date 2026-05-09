@@ -4,6 +4,7 @@ import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import Navbar from "../components/Navbar"
 import PrimaryCTASection from "../components/PrimaryCTASection"
 import SeoHead from "../components/SeoHead"
+import WhatsappIcon from "../components/ui/WhatsappIcon";
 
 const commonProblems = [
   "AC tidak dingin saat cuaca panas",

@@ -89,7 +89,7 @@ export default function HeroSection() {
             <img
               src="/foto-product/hero-daikin.jpg"
               alt="AC Premium"
-              fetchpriority="high"
+              fetchPriority="high"
               decoding="async"
               className="relative rounded-[34px] border border-white/10 shadow-2xl"
             />

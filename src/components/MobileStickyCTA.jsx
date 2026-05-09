@@ -1,5 +1,6 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
 import { SITE_DATA } from "../constants/siteData";
+import WhatsappIcon from "./ui/WhatsappIcon";
 
 export default function MobileStickyCTA() {
   return (
@@ -21,7 +22,7 @@ export default function MobileStickyCTA() {
           rel="noreferrer"
           className="flex-1 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition"
         >
-          <MessageCircle size={20} />
+          <WhatsappIcon className="w-5 h-5" />
           <span>WhatsApp</span>
         </a>
       </div>
