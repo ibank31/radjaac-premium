@@ -1,12 +1,6 @@
 ﻿import { NavLink, Link } from "react-router-dom"
 import { useState } from "react"
 
-const PRODUCTS = [
-  { to: "/ac-inverter-purwokerto", label: "AC Inverter" },
-  { to: "/ac-low-watt-purwokerto", label: "AC Low Watt" },
-  { label: "AC Rumah" },
-  { label: "AC Kantor" },
-]
 
 const BRANDS = [
   { to: "/daikin-purwokerto", label: "Daikin" },
@@ -20,7 +14,6 @@ const SERVICES = [
 
 const NAV_ITEMS = [
   { type: "link", to: "/", label: "Home", end: true },
-  { type: "dropdown", label: "Produk AC", items: PRODUCTS },
   { type: "dropdown", label: "Brand AC", items: BRANDS },
   { type: "link", to: "/instalasi-ac-banyumas", label: "Instalasi" },
   { type: "dropdown", label: "Layanan", items: SERVICES },
