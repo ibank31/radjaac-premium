@@ -17,6 +17,8 @@ import AboutTrustSection from "../components/AboutTrustSection"
 import InternalLinksSection from "../components/InternalLinksSection"
 import LocationSection from "../components/LocationSection"
 import HomeFAQSection from "../components/HomeFAQSection"
+import RealProjectShowcaseSection from "../components/RealProjectShowcaseSection"
+import LocalReviewSection from "../components/LocalReviewSection"
 
 export default function Home() {
   return (
@@ -67,6 +69,8 @@ export default function Home() {
         <TrustStripSection />
         <BrandsSection />
         <FeaturedProductsSection />
+        <RealProjectShowcaseSection />
+        <LocalReviewSection />
         <WhyChooseUs />
         <ServicesSection />
         <PortfolioSection />
@@ -84,7 +88,7 @@ export default function Home() {
             </h2>
 
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Radja AC melayani penjualan, instalasi, service, dan cuci AC untuk rumah, kantor, toko, dan tempat usaha di berbagai area Banyumas dan sekitarnya termasuk Sokaraja, Ajibarang, Purbalingga, dan Cilacap.
+              Radja AC melayani penjualan, instalasi, service, dan cuci AC untuk rumah, kantor, toko, dan tempat usaha di area lokal seperti Purwokerto Selatan, Purwokerto Utara, Purwokerto Timur, Sokaraja, Ajibarang, Baturraden, dan Banyumas.
             </p>
           </div>
         </section>

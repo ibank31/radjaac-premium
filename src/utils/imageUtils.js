@@ -34,18 +34,22 @@ export const PORTFOLIO_IMAGES = [
   {
     src: "https://images.unsplash.com/photo-1591047139829-6f61c3a0ce94?auto=format&fit=crop&w=900&q=70",
     alt: "Teknisi AC profesional memeriksa unit indoor di rumah pelanggan Purwokerto",
+    caption: "Instalasi AC Daikin di rumah keluarga Purwokerto Selatan.",
   },
   {
     src: "https://images.unsplash.com/photo-1512149673959-0f1d44020c0b?auto=format&fit=crop&w=900&q=70",
     alt: "Pemasangan AC Daikin di ruang tamu modern oleh teknisi bersertifikat",
+    caption: "Pemasangan AC Gree di kantor Banyumas dengan pemasangan rapi.",
   },
   {
     src: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=70",
     alt: "Proses cuci AC menyeluruh oleh tim teknisi Radja AC Purwokerto",
+    caption: "Cuci AC dan service di rumah Sokaraja untuk performa lebih dingin.",
   },
   {
     src: "https://images.unsplash.com/photo-1592735817023-5ae581aa2d61?auto=format&fit=crop&w=900&q=70",
     alt: "Tim teknisi AC Radja AC menyiapkan peralatan service di lokasi pelanggan",
+    caption: "Survey kebutuhan AC untuk ruang meeting di Purwokerto Timur.",
   },
 ]
 

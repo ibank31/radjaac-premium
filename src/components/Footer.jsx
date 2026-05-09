@@ -21,7 +21,7 @@ export default function Footer() {
             </div>
 
             <p className="text-white/60 leading-relaxed text-sm mb-4">
-              Layanan profesional untuk pendinginan rumah, kantor, dan bisnis di Purwokerto & Banyumas.
+              Layanan profesional instalasi dan service AC untuk rumah, kantor, dan bisnis di Purwokerto Selatan, Banyumas, serta area sekitarnya.
             </p>
 
             <div>

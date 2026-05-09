@@ -14,12 +14,13 @@ export const SITE_DATA = {
 
   // Service Areas
   serviceAreas: [
-    "Purwokerto",
-    "Banyumas",
+    "Purwokerto Selatan",
+    "Purwokerto Utara",
+    "Purwokerto Timur",
     "Sokaraja",
     "Ajibarang",
-    "Purbalingga",
-    "Cilacap",
+    "Baturraden",
+    "Banyumas",
   ],
 
   // Operational Hours

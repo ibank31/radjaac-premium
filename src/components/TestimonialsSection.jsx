@@ -2,15 +2,15 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       name: "Budi Santoso",
-      text: "Pemasangan sangat rapi dan teknisinya profesional.",
+      text: "AC Daikin rumah saya di Purwokerto Selatan dipasang rapi, dan teknisinya teliti sampai bersih.",
     },
     {
       name: "Rina Amelia",
-      text: "Fast response, AC langsung dingin kembali.",
+      text: "Tim Radja AC cepat tanggap lewat WhatsApp dan pemasangan AC kantor Banyumas selesai sesuai janji.",
     },
     {
       name: "Andi Prasetyo",
-      text: "Harga masuk akal dan pengerjaan bersih.",
+      text: "Pilih AC low watt untuk kamar Sokaraja sangat membantu, hasilnya dingin tanpa boros listrik.",
     },
   ];
 

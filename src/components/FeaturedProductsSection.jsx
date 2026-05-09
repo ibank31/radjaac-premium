@@ -60,11 +60,13 @@ export default function FeaturedProductsSection() {
             Featured AC untuk Rumah & Bisnis
           </SectionHeading>
           <p className="text-white/70 text-lg leading-relaxed">
-            Temukan koleksi AC populer dari Daikin, Gree, Sharp, Panasonic, LG, dan Midea yang siap membantu kebutuhan pendinginan di Purwokerto & Banyumas.
+            Temukan koleksi AC populer dari Daikin, Gree, Sharp, Panasonic, LG, dan Midea yang siap membantu kebutuhan pendinginan di Purwokerto Selatan, Banyumas, dan area sekitarnya.
           </p>
-          <p className="mt-4 text-cyan-300 text-sm font-medium">
-            Ready stock berbagai brand AC untuk rumah dan bisnis.
-          </p>
+          <div className="mt-4 flex flex-wrap justify-center gap-3 text-sm text-white/70">
+            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Ready stock multi-brand</span>
+            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Instalasi rapi</span>
+            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Konsultasi PK</span>
+          </div>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
