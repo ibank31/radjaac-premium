@@ -15,7 +15,7 @@ export default function BrandsSection() {
         </h2>
 
         <p className="text-white/70 max-w-2xl mx-auto">
-          Dealer multi-brand AC modern untuk rumah dan bisnis di Purwokerto & Banyumas.
+          Dealer multi-brand AC modern untuk rumah dan bisnis di Purwokerto & Banyumas. Jelajahi halaman khusus <Link to="/daikin-purwokerto" className="text-cyan-300 hover:text-cyan-200">Daikin Purwokerto</Link> dan <Link to="/gree-purwokerto" className="text-cyan-300 hover:text-cyan-200">Gree Purwokerto</Link> untuk pilihan brand terbaik.
         </p>
 
         <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm text-white/70">

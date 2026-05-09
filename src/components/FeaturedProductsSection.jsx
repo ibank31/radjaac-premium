@@ -50,7 +50,7 @@ const featuredProducts = [
 
 export default function FeaturedProductsSection() {
   return (
-    <section className="py-16">
+    <section id="featured-products" className="py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mx-auto max-w-3xl mb-10">
           <div className="inline-flex items-center justify-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-300 mb-4">

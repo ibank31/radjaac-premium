@@ -117,6 +117,14 @@ export default function GreePurwokerto() {
                 Dealer AC Gree Purwokerto & Banyumas
               </span>
 
+              <div className="mb-6 text-sm text-slate-400">
+                <Link to="/" className="hover:text-cyan-300">
+                  Home
+                </Link>
+                <span className="mx-2">/</span>
+                <span className="text-white">Gree Purwokerto</span>
+              </div>
+
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.03em] mb-6">
                 Dealer AC Gree di Purwokerto & Banyumas
               </h1>

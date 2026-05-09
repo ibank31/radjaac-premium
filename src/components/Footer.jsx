@@ -1,11 +1,11 @@
+import { Link } from "react-router-dom";
 import { SITE_DATA } from "../constants/siteData";
 
 export default function Footer() {
   return (
     <footer className="border-t border-white/5 py-12 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-[1.6fr_1fr_1fr] gap-12 mb-8">
-          {/* BRAND */}
+        <div className="grid md:grid-cols-4 gap-12 mb-8">
           <div>
             <div className="flex items-center gap-4 mb-4">
               <img
@@ -16,17 +16,14 @@ export default function Footer() {
 
               <div>
                 <h3 className="font-bold text-lg">{SITE_DATA.businessName}</h3>
-                <p className="text-white/60 text-sm">
-                  Service AC Purwokerto Terpercaya
-                </p>
+                <p className="text-white/60 text-sm">Dealer AC multi-brand Purwokerto</p>
               </div>
             </div>
 
             <p className="text-white/60 leading-relaxed text-sm mb-4">
-              Layanan profesional untuk semua kebutuhan AC Anda di Purwokerto dan Banyumas.
+              Layanan profesional untuk pendinginan rumah, kantor, dan bisnis di Purwokerto & Banyumas.
             </p>
 
-            {/* AREA COVERAGE */}
             <div>
               <h4 className="font-semibold text-white mb-3">Area Layanan</h4>
               <div className="grid grid-cols-2 gap-2 text-white/60 text-sm">
@@ -37,21 +34,23 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* NAVIGATION */}
           <div>
-            <h4 className="font-semibold text-white mb-4">Layanan</h4>
+            <h4 className="font-semibold text-white mb-4">Brand AC Populer</h4>
             <div className="space-y-2 text-white/60 text-sm">
-              <a href="/" className="block hover:text-white transition">Home</a>
-              <a href="/service-ac-purwokerto" className="block hover:text-white transition">Service AC</a>
-              <a href="/cuci-ac-purwokerto" className="block hover:text-white transition">Cuci AC</a>
-              <a href="/instalasi-ac-banyumas" className="block hover:text-white transition">Instalasi AC</a>
-              <a href="/tentang-kami" className="block hover:text-white transition">Tentang Kami</a>
-              <a href="/kontak" className="block hover:text-white transition">Kontak</a>
-              <a href="/portfolio" className="block hover:text-white transition">Portfolio</a>
+              <Link to="/daikin-purwokerto" className="block hover:text-white transition">Daikin Purwokerto</Link>
+              <Link to="/gree-purwokerto" className="block hover:text-white transition">Gree Purwokerto</Link>
             </div>
           </div>
 
-          {/* CONTACT */}
+          <div>
+            <h4 className="font-semibold text-white mb-4">Layanan</h4>
+            <div className="space-y-2 text-white/60 text-sm">
+              <Link to="/instalasi-ac-banyumas" className="block hover:text-white transition">Instalasi AC</Link>
+              <Link to="/service-ac-purwokerto" className="block hover:text-white transition">Service AC</Link>
+              <Link to="/cuci-ac-purwokerto" className="block hover:text-white transition">Cuci AC</Link>
+            </div>
+          </div>
+
           <div>
             <h4 className="font-semibold text-white mb-4">Kontak</h4>
             <div className="space-y-3 text-white/60 text-sm">
