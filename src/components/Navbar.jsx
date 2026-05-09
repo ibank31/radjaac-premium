@@ -87,22 +87,23 @@ export default function Navbar() {
                 >
                   <div className="space-y-1 px-3">
                     {item.items.map((subItem) =>
-                      subItem.to ? (
-                        <Link
-                          key={subItem.label}
-                          to={subItem.to}
-                          className="block rounded-3xl px-3 py-2 text-white/80 hover:text-cyan-300 hover:bg-white/5"
-                        >
-                          {subItem.label}
-                        </Link>
-                      ) : (
-                        <div
-                          key={subItem.label}
-                          className="block rounded-3xl px-3 py-2 text-white/50 cursor-default"
-                        >
-                          {subItem.label}
-                        </div>
-                      )}
+  subItem.to ? (
+    <Link
+      key={subItem.label}
+      to={subItem.to}
+      className="block rounded-3xl px-3 py-2 text-white/80 hover:text-cyan-300 hover:bg-white/5"
+    >
+      {subItem.label}
+    </Link>
+  ) : (
+    <div
+      key={subItem.label}
+      className="block rounded-3xl px-3 py-2 text-white/50 cursor-default"
+    >
+      {subItem.label}
+    </div>
+  )
+)}
                   </div>
                 </div>
               </div>
