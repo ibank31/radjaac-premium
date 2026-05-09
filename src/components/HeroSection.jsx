@@ -88,7 +88,7 @@ export default function HeroSection() {
 
             <img
               src="/foto-product/hero-daikin.jpg"
-              alt="AC Premium"
+              alt="AC Daikin premium di ruang tamu modern - Service AC Purwokerto oleh Radja AC"
               fetchPriority="high"
               decoding="async"
               className="relative rounded-[34px] border border-white/10 shadow-2xl"

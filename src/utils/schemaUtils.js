@@ -1,60 +1,77 @@
+import { SITE_DATA } from "../constants/siteData"
+
 export const businessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "HVACBusiness"],
-  name: "Radja AC",
-  description: "Layanan service, cuci, dan instalasi AC profesional di Purwokerto dan Banyumas",
-  url: "https://radjaac.com",
-  telephone: "+62882008246099",
+  name: SITE_DATA.businessName,
+  description: SITE_DATA.businessDescription,
+  url: SITE_DATA.baseUrl,
+  telephone: SITE_DATA.phoneNumber,
   priceRange: "$$",
-  areaServed: [
-    {
-      "@type": "City",
-      name: "Purwokerto",
-    },
-    {
-      "@type": "City",
-      name: "Banyumas",
-    },
-    {
-      "@type": "City",
-      name: "Sokaraja",
-    },
-    {
-      "@type": "City",
-      name: "Ajibarang",
-    },
-    {
-      "@type": "City",
-      name: "Purbalingga",
-    },
-    {
-      "@type": "City",
-      name: "Cilacap",
-    },
-  ],
+  areaServed: SITE_DATA.serviceAreas.map(city => ({
+    "@type": "City",
+    name: city,
+  })),
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Customer Service",
-    telephone: "+62882008246099",
+    telephone: SITE_DATA.phoneNumber,
   },
   sameAs: [
-    "https://wa.me/62882008246099",
+    SITE_DATA.whatsappUrl,
   ],
+  openingHours: SITE_DATA.operationalHours.map(hour => {
+    if (hour.label === "Senin - Jumat") return "Mo-Fr " + hour.value.replace(" - ", "-").replace(":", "")
+    if (hour.label === "Sabtu") return "Sa " + hour.value.replace(" - ", "-").replace(":", "")
+    return null
+  }).filter(Boolean),
 }
 
-export function createServiceSchema(serviceName, serviceDescription) {
-  return {
+export function createServiceSchema(serviceName, serviceDescription, areaServed = null) {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: serviceName,
     description: serviceDescription,
     provider: {
       "@type": "LocalBusiness",
-      name: "Radja AC",
-      url: "https://radjaac.com",
-      telephone: "+62882008246099",
-      areaServed: ["Purwokerto", "Banyumas"],
+      name: SITE_DATA.businessName,
+      url: SITE_DATA.baseUrl,
+      telephone: SITE_DATA.phoneNumber,
     },
+  }
+
+  if (areaServed) {
+    schema.areaServed = {
+      "@type": "City",
+      name: areaServed,
+    }
+  } else {
+    schema.provider.areaServed = SITE_DATA.serviceAreas.map(city => ({
+      "@type": "City",
+      name: city,
+    }))
+  }
+
+  return schema
+}
+
+export function createLocationSchema(locationName, locationDescription, locationUrl, nearbyAreas = []) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: `${SITE_DATA.businessName} ${locationName}`,
+    description: locationDescription,
+    url: locationUrl,
+    telephone: SITE_DATA.phoneNumber,
+    areaServed: {
+      "@type": "City",
+      name: locationName,
+    },
+    serviceArea: nearbyAreas.map(area => ({
+      "@type": "City",
+      name: area,
+    })),
   }
 }
 
@@ -70,5 +87,24 @@ export function createFAQSchema(faqItems) {
         text: item.answer,
       },
     })),
+  }
+}
+
+export function createOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_DATA.businessName,
+    url: SITE_DATA.baseUrl,
+    logo: `${SITE_DATA.baseUrl}${SITE_DATA.logoUrl}`,
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: SITE_DATA.phoneNumber,
+      contactType: "Customer Service",
+      availableLanguage: "Indonesian",
+    },
+    sameAs: [
+      SITE_DATA.whatsappUrl,
+    ],
   }
 }

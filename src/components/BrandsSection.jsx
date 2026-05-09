@@ -1,13 +1,5 @@
 import { motion } from "framer-motion";
-
-const BRAND_LOGOS = [
-  { name: "Daikin", logo: "/logo-product/daikin-logo.webp" },
-  { name: "Gree", logo: "/logo-product/gree-logo.webp" },
-  { name: "Midea", logo: "/logo-product/midea-logo.webp" },
-  { name: "Panasonic", logo: "/logo-product/panasonic-logo.webp" },
-  { name: "Sharp", logo: "/logo-product/sharp-logo.webp" },
-  { name: "Samsung", logo: "/logo-product/samsung-logo.webp" },
-];
+import { BRAND_IMAGES } from "../utils/imageUtils";
 
 export default function BrandsSection() {
   return (
@@ -23,18 +15,20 @@ export default function BrandsSection() {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-        {BRAND_LOGOS.map((brand, i) => (
+        {BRAND_IMAGES.map((brand, i) => (
           <motion.div
             key={i}
             whileHover={{ y: -5 }}
             className="bg-white/[0.04] border border-white/10 rounded-[26px] p-6 flex items-center justify-center h-[120px]"
           >
             <img
-              src={brand.logo}
-              alt={brand.name}
+              src={brand.src}
+              alt={brand.alt}
               loading="lazy"
               decoding="async"
               className="max-h-10 object-contain opacity-80 hover:opacity-100 transition"
+              width={80}
+              height={40}
             />
           </motion.div>
         ))}
