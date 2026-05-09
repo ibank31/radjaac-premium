@@ -7,41 +7,51 @@ import CuciAC from "./pages/CuciAC"
 import TentangKami from "./pages/TentangKami"
 import Kontak from "./pages/Kontak"
 import Portfolio from "./pages/Portfolio"
+import NotFound from "./pages/NotFound"
+import ScrollToTop from "./components/ScrollToTop"
+import ErrorBoundary from "./components/ErrorBoundary"
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
+    <>
+      <ScrollToTop />
+      <ErrorBoundary>
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-      <Route
-        path="/service-ac-purwokerto"
-        element={<ServiceAC />}
-      />
+          <Route
+            path="/service-ac-purwokerto"
+            element={<ServiceAC />}
+          />
 
-      <Route
-        path="/instalasi-ac-banyumas"
-        element={<InstalasiAC />}
-      />
+          <Route
+            path="/instalasi-ac-banyumas"
+            element={<InstalasiAC />}
+          />
 
-      <Route
-        path="/cuci-ac-purwokerto"
-        element={<CuciAC />}
-      />
+          <Route
+            path="/cuci-ac-purwokerto"
+            element={<CuciAC />}
+          />
 
-      <Route
-        path="/tentang-kami"
-        element={<TentangKami />}
-      />
+          <Route
+            path="/tentang-kami"
+            element={<TentangKami />}
+          />
 
-      <Route
-        path="/kontak"
-        element={<Kontak />}
-      />
+          <Route
+            path="/kontak"
+            element={<Kontak />}
+          />
 
-      <Route
-        path="/portfolio"
-        element={<Portfolio />}
-      />
-    </Routes>
+          <Route
+            path="/portfolio"
+            element={<Portfolio />}
+          />
+
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </ErrorBoundary>
+    </>
   )
 }

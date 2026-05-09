@@ -1,4 +1,5 @@
 import { Phone, MessageCircle } from "lucide-react";
+import { SITE_DATA } from "../constants/siteData";
 
 export default function MobileStickyCTA() {
   return (
@@ -6,7 +7,7 @@ export default function MobileStickyCTA() {
       <div className="flex gap-3 p-3 max-w-7xl mx-auto">
         {/* Call Button */}
         <a
-          href="tel:+62882008246099"
+          href={`tel:${SITE_DATA.phoneNumber}`}
           className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition"
         >
           <Phone size={20} />
@@ -15,7 +16,7 @@ export default function MobileStickyCTA() {
 
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/62882008246099"
+          href={SITE_DATA.whatsappUrl}
           target="_blank"
           rel="noreferrer"
           className="flex-1 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition"

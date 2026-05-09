@@ -1,17 +1,17 @@
-import SeoHead from "../components/SeoHead"
 import { Helmet } from "react-helmet-async"
 import { businessSchema, createServiceSchema } from "../utils/schemaUtils"
-import Navbar from "../components/Navbar"
-import CuciACPricingSection from "../components/CuciACPricingSection"
-import PrimaryCTASection from "../components/PrimaryCTASection"
-import CuciACFAQSection from "../components/CuciACFAQSection"
-import TrustStripSection from "../components/TrustStripSection"
-import MiniReviewSection from "../components/MiniReviewSection"
 import AreaCoverageSection from "../components/AreaCoverageSection"
-import InternalLinksSection from "../components/InternalLinksSection"
+import CuciACFAQSection from "../components/CuciACFAQSection"
+import CuciACPricingSection from "../components/CuciACPricingSection"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import Footer from "../components/Footer"
-import SignsAcNeedsCleaningSection from "../components/SignsAcNeedsCleaningSection";
+import InternalLinksSection from "../components/InternalLinksSection"
+import MiniReviewSection from "../components/MiniReviewSection"
+import Navbar from "../components/Navbar"
+import PrimaryCTASection from "../components/PrimaryCTASection"
+import SeoHead from "../components/SeoHead"
+import SignsAcNeedsCleaningSection from "../components/SignsAcNeedsCleaningSection"
+import TrustStripSection from "../components/TrustStripSection"
 
 const benefits = [
   {

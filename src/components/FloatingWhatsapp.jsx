@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
+import { SITE_DATA } from "../constants/siteData";
 
 export default function FloatingWhatsapp() {
   return (
     <motion.a
-      href="https://wa.me/62882008246099"
+      href={SITE_DATA.whatsappUrl}
       target="_blank"
       rel="noreferrer"
-      aria-label="Chat WhatsApp RADJA AC"
+      aria-label={`Chat WhatsApp ${SITE_DATA.businessName}`}
       animate={{
         scale: [1, 1.06, 1],
       }}

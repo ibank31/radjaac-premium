@@ -2,6 +2,7 @@ import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
+import { SITE_DATA } from "../constants/siteData"
 
 export default function Kontak() {
   return (
@@ -66,11 +67,7 @@ export default function Kontak() {
                 </h2>
 
                 <div className="grid gap-4 text-slate-300 text-sm leading-relaxed">
-                  {[
-                    { label: "Senin - Jumat", value: "08:00 - 18:00" },
-                    { label: "Sabtu", value: "08:00 - 15:00" },
-                    { label: "Minggu", value: "Libur / Hanya Darurat" },
-                  ].map((item) => (
+                  {SITE_DATA.operationalHours.map((item) => (
                     <div
                       key={item.label}
                       className="rounded-2xl sm:rounded-3xl border border-white/10 bg-slate-950/70 p-4 sm:p-5"
@@ -92,14 +89,7 @@ export default function Kontak() {
                 </h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-slate-200">
-                  {[
-                    "Purwokerto",
-                    "Banyumas",
-                    "Sokaraja",
-                    "Ajibarang",
-                    "Purbalingga",
-                    "Cilacap",
-                  ].map((area) => (
+                  {SITE_DATA.serviceAreas.map((area) => (
                     <div
                       key={area}
                       className="rounded-2xl sm:rounded-3xl border border-white/10 bg-slate-950/70 px-4 py-3"

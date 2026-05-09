@@ -1,3 +1,5 @@
+import { SITE_DATA } from "../constants/siteData";
+
 export default function Footer() {
   return (
     <footer className="border-t border-white/5 py-12 px-6">
@@ -7,13 +9,13 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-4 mb-4">
               <img
-                src="/logo-radjaac.png"
-                alt="RADJA AC"
+                src={SITE_DATA.logoUrl}
+                alt={SITE_DATA.businessName}
                 className="w-12"
               />
 
               <div>
-                <h3 className="font-bold text-lg">RADJA AC</h3>
+                <h3 className="font-bold text-lg">{SITE_DATA.businessName}</h3>
                 <p className="text-white/60 text-sm">
                   Service AC Purwokerto Terpercaya
                 </p>
@@ -28,12 +30,9 @@ export default function Footer() {
             <div>
               <h4 className="font-semibold text-white mb-3">Area Layanan</h4>
               <div className="grid grid-cols-2 gap-2 text-white/60 text-sm">
-                <div>Purwokerto</div>
-                <div>Banyumas</div>
-                <div>Sokaraja</div>
-                <div>Ajibarang</div>
-                <div>Purbalingga</div>
-                <div>Cilacap</div>
+                {SITE_DATA.serviceAreas.map((area) => (
+                  <div key={area}>{area}</div>
+                ))}
               </div>
             </div>
           </div>

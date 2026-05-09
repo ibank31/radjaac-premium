@@ -1,14 +1,14 @@
-import SeoHead from "../components/SeoHead"
 import { Helmet } from "react-helmet-async"
 import { businessSchema, createServiceSchema } from "../utils/schemaUtils"
-import Navbar from "../components/Navbar"
-import MiniReviewSection from "../components/MiniReviewSection"
 import AreaCoverageSection from "../components/AreaCoverageSection"
-import InternalLinksSection from "../components/InternalLinksSection"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
-import PrimaryCTASection from "../components/PrimaryCTASection"
 import Footer from "../components/Footer"
-import TrustStripSection from "../components/TrustStripSection";
+import InternalLinksSection from "../components/InternalLinksSection"
+import MiniReviewSection from "../components/MiniReviewSection"
+import Navbar from "../components/Navbar"
+import PrimaryCTASection from "../components/PrimaryCTASection"
+import SeoHead from "../components/SeoHead"
+import TrustStripSection from "../components/TrustStripSection"
 
 const installationBenefits = [
   {

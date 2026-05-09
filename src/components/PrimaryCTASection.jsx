@@ -1,9 +1,11 @@
+import { SITE_DATA } from "../constants/siteData";
+
 export default function PrimaryCTASection({
   pretitle = "Ready to Book",
   title = "Butuh bantuan AC cepat?",
   description = "Hubungi tim kami untuk konsultasi, estimasi transparan, dan kunjungan teknisi cepat.",
   buttonLabel = "Chat WhatsApp Sekarang",
-  buttonHref = "https://wa.me/62882008246099",
+  buttonHref = SITE_DATA.whatsappUrl,
   subText = "Fast response • Area Purwokerto & Banyumas • Garansi pengerjaan",
 }) {
   return (

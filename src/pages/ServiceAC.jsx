@@ -1,9 +1,9 @@
-import SeoHead from "../components/SeoHead"
 import { Helmet } from "react-helmet-async"
 import { businessSchema, createServiceSchema, createFAQSchema } from "../utils/schemaUtils"
+import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import Navbar from "../components/Navbar"
 import PrimaryCTASection from "../components/PrimaryCTASection"
-import FloatingWhatsapp from "../components/FloatingWhatsapp";
+import SeoHead from "../components/SeoHead"
 
 const commonProblems = [
   "AC tidak dingin saat cuaca panas",
