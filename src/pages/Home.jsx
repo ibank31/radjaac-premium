@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Helmet } from "react-helmet-async"
 import SeoHead from "../components/SeoHead"
 import { Link } from "react-router-dom"
