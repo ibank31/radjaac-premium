@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import SeoHead from "../components/SeoHead"
+import { Link } from "react-router-dom"
 import Navbar from "../components/Navbar"
 import HeroSection from "../components/HeroSection"
 import TrustStripSection from "../components/TrustStripSection"

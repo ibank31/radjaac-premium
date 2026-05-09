@@ -2,8 +2,8 @@
 import { useState } from "react"
 
 const PRODUCTS = [
-  { label: "AC Inverter" },
-  { label: "AC Low Watt" },
+  { to: "/ac-inverter-purwokerto", label: "AC Inverter" },
+  { to: "/ac-low-watt-purwokerto", label: "AC Low Watt" },
   { label: "AC Rumah" },
   { label: "AC Kantor" },
 ]

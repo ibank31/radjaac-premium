@@ -7,6 +7,7 @@ import CuciAC from "./pages/CuciAC"
 import DaikinPurwokerto from "./pages/DaikinPurwokerto"
 import GreePurwokerto from "./pages/GreePurwokerto"
 import AcInverterPurwokerto from "./pages/AcInverterPurwokerto"
+import AcLowWattPurwokerto from "./pages/AcLowWattPurwokerto"
 import TentangKami from "./pages/TentangKami"
 import Kontak from "./pages/Kontak"
 import Portfolio from "./pages/Portfolio"
@@ -40,6 +41,11 @@ export default function App() {
           <Route
             path="/ac-inverter-purwokerto"
             element={<AcInverterPurwokerto />}
+          />
+
+          <Route
+            path="/ac-low-watt-purwokerto"
+            element={<AcLowWattPurwokerto />}
           />
 
           <Route
