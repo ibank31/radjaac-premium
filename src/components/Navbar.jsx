@@ -5,6 +5,12 @@ import { useState } from "react"
 const BRANDS = [
   { to: "/daikin-purwokerto", label: "Daikin" },
   { to: "/gree-purwokerto", label: "Gree" },
+  { label: "Midea" },
+  { to: "/panasonic-purwokerto", label: "Panasonic" },
+  { to: "/sharp-purwokerto", label: "Sharp" },
+  { label: "Samsung" },
+  { label: "Sansui" },
+  { label: "Ariston" },
 ]
 
 const SERVICES = [

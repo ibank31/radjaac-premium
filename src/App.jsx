@@ -6,8 +6,8 @@ import InstalasiAC from "./pages/InstalasiAC"
 import CuciAC from "./pages/CuciAC"
 import DaikinPurwokerto from "./pages/DaikinPurwokerto"
 import GreePurwokerto from "./pages/GreePurwokerto"
-import AcInverterPurwokerto from "./pages/AcInverterPurwokerto"
-import AcLowWattPurwokerto from "./pages/AcLowWattPurwokerto"
+import SharpPurwokerto from "./pages/SharpPurwokerto"
+import PanasonicPurwokerto from "./pages/PanasonicPurwokerto"
 import TentangKami from "./pages/TentangKami"
 import Kontak from "./pages/Kontak"
 import Portfolio from "./pages/Portfolio"
@@ -19,6 +19,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+
       <ErrorBoundary>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -39,13 +40,13 @@ export default function App() {
           />
 
           <Route
-            path="/ac-inverter-purwokerto"
-            element={<AcInverterPurwokerto />}
+            path="/sharp-purwokerto"
+            element={<SharpPurwokerto />}
           />
 
           <Route
-            path="/ac-low-watt-purwokerto"
-            element={<AcLowWattPurwokerto />}
+            path="/panasonic-purwokerto"
+            element={<PanasonicPurwokerto />}
           />
 
           <Route
