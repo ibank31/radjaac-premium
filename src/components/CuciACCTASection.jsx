@@ -1,3 +1,5 @@
+import WhatsappIcon from "./ui/WhatsappIcon";
+
 export default function CuciACCTASection() {
   return (
     <section className="px-6 py-20">
@@ -21,11 +23,7 @@ export default function CuciACCTASection() {
           className="inline-flex items-center justify-center gap-4 rounded-full bg-[#25D366] px-8 py-4 text-lg font-semibold text-slate-950 shadow-[0_24px_60px_rgba(37,211,102,0.24)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A]"
         >
           <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/20">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-              alt="WhatsApp"
-              className="w-5 h-5"
-            />
+            <WhatsappIcon className="w-5 h-5 text-slate-950" />
           </span>
           Chat WhatsApp Sekarang
         </a>

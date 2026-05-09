@@ -1,3 +1,5 @@
+import WhatsappIcon from "./ui/WhatsappIcon";
+
 export default function ClosingCTA() {
   return (
     <section className="px-6 py-20">
@@ -32,11 +34,7 @@ export default function ClosingCTA() {
               className="inline-flex items-center justify-center gap-4 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-lg px-8 py-5 rounded-full transition duration-300 hover:scale-105 shadow-2xl"
             >
               <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                  alt="WhatsApp"
-                  className="w-7 h-7"
-                />
+                <WhatsappIcon className="w-7 h-7 text-white" />
               </div>
 
               <div className="text-left">

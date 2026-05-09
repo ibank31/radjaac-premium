@@ -9,6 +9,7 @@ import Navbar from "../components/Navbar"
 import PrimaryCTASection from "../components/PrimaryCTASection"
 import SeoHead from "../components/SeoHead"
 import TrustStripSection from "../components/TrustStripSection"
+import WhatsappIcon from "../components/ui/WhatsappIcon"
 
 const installationBenefits = [
   {
@@ -176,11 +177,7 @@ export default function InstalasiAC() {
                   target="_blank"
                   className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-black font-bold px-7 py-4 rounded-full shadow-[0_20px_60px_rgba(37,211,102,0.18)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5"
                 >
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                    alt="WhatsApp"
-                    className="w-5 h-5"
-                  />
+                  <WhatsappIcon className="w-5 h-5" />
                   Konsultasi Pemasangan
                 </a>
 
@@ -216,10 +213,11 @@ export default function InstalasiAC() {
               <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-transparent rounded-[32px] opacity-50" />
               <div className="overflow-hidden rounded-[32px] border border-white/10 bg-slate-950 shadow-xl shadow-cyan-500/10">
                 <img
-                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80"
+                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=70"
                   alt="Teknisi AC memasang unit pendingin di ruangan"
                   className="h-full w-full object-cover aspect-square"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

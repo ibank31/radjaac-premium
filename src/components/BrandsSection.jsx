@@ -1,33 +1,15 @@
 import { motion } from "framer-motion";
 
-export default function BrandsSection() {
-  const brands = [
-    {
-      name: "Daikin",
-      logo: "/daikin-logo.png",
-    },
-    {
-      name: "Gree",
-      logo: "/gree-logo.png",
-    },
-    {
-      name: "Midea",
-      logo: "/midea-logo.png",
-    },
-    {
-      name: "Panasonic",
-      logo: "/panasonic-logo.png",
-    },
-    {
-      name: "Sharp",
-      logo: "/sharp-logo.png",
-    },
-    {
-      name: "Samsung",
-      logo: "/samsung-logo.png",
-    },
-  ];
+const BRAND_LOGOS = [
+  { name: "Daikin", logo: "/daikin-logo.png" },
+  { name: "Gree", logo: "/gree-logo.png" },
+  { name: "Midea", logo: "/midea-logo.png" },
+  { name: "Panasonic", logo: "/panasonic-logo.png" },
+  { name: "Sharp", logo: "/sharp-logo.png" },
+  { name: "Samsung", logo: "/samsung-logo.png" },
+];
 
+export default function BrandsSection() {
   return (
     <section id="produk" className="py-16">
       <div className="text-center mb-12">
@@ -41,7 +23,7 @@ export default function BrandsSection() {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-        {brands.map((brand, i) => (
+        {BRAND_LOGOS.map((brand, i) => (
           <motion.div
             key={i}
             whileHover={{ y: -5 }}
@@ -50,6 +32,8 @@ export default function BrandsSection() {
             <img
               src={brand.logo}
               alt={brand.name}
+              loading="lazy"
+              decoding="async"
               className="max-h-10 object-contain opacity-80 hover:opacity-100 transition"
             />
           </motion.div>

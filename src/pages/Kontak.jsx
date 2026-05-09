@@ -19,7 +19,7 @@ export default function Kontak() {
 
       <Navbar />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 pb-16 sm:pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16 sm:pb-20">
         <ContactHero />
 
         <div className="grid gap-6 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr]">

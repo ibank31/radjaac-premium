@@ -111,11 +111,7 @@ export default function ServiceAC() {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-7 py-4 text-base font-bold text-slate-950 shadow-[0_24px_60px_rgba(37,211,102,0.24)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A]"
               >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                  alt="WhatsApp"
-                  className="w-5 h-5"
-                />
+                <WhatsappIcon className="w-5 h-5" />
                 Konsultasi WhatsApp
               </a>
 
@@ -151,10 +147,11 @@ export default function ServiceAC() {
 
           <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-slate-900 shadow-[0_30px_80px_rgba(14,116,144,0.14)]">
             <img
-              src="https://images.unsplash.com/photo-1591047139829-6f61c3a0ce94?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.unsplash.com/photo-1591047139829-6f61c3a0ce94?auto=format&fit=crop&w=900&q=70"
               alt="Teknisi AC profesional memeriksa unit"
               className="h-full w-full object-cover aspect-[4/5]"
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

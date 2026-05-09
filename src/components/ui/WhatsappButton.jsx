@@ -1,4 +1,5 @@
 import { SITE_DATA } from "../../constants/siteData";
+import WhatsappIcon from "./WhatsappIcon";
 
 export default function WhatsappButton({
   children,
@@ -26,11 +27,7 @@ export default function WhatsappButton({
       className={`inline-flex items-center justify-center gap-3 rounded-2xl sm:rounded-full font-semibold shadow-[0_24px_60px_rgba(37,211,102,0.24)] transition duration-300 hover:-translate-y-0.5 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
     >
       <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/20">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-          alt="WhatsApp"
-          className="w-5 h-5"
-        />
+        <WhatsappIcon className="w-5 h-5" />
       </span>
       {children}
     </a>

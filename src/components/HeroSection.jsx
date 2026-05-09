@@ -1,5 +1,13 @@
 import { motion } from "framer-motion";
 import { SITE_DATA } from "../constants/siteData";
+import WhatsappIcon from "./ui/WhatsappIcon";
+
+const HERO_FEATURES = [
+  "Bergaransi",
+  "Teknisi Bersertifikat",
+  "Fast Response",
+  "Dealer & Service AC",
+];
 
 export default function HeroSection() {
   const stats = SITE_DATA.businessStats;
@@ -38,11 +46,7 @@ export default function HeroSection() {
                 target="_blank"
                 className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-black font-bold px-7 py-4 rounded-full shadow-[0_20px_60px_rgba(37,211,102,0.18)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5"
               >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                  alt="WhatsApp"
-                  className="w-5 h-5"
-                />
+                <WhatsappIcon className="w-5 h-5 text-black" />
                 Konsultasi WhatsApp
               </a>
 
@@ -59,12 +63,7 @@ export default function HeroSection() {
             </p>
 
             <div className="grid sm:grid-cols-2 gap-3 max-w-xl">
-              {[
-                "Bergaransi",
-                "Teknisi Bersertifikat",
-                "Fast Response",
-                "Dealer & Service AC",
-              ].map((item, i) => (
+              {HERO_FEATURES.map((item, i) => (
                 <div
                   key={i}
                   className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white/80"
@@ -90,6 +89,8 @@ export default function HeroSection() {
             <img
               src="/hero-daikin.jpg"
               alt="AC Premium"
+              fetchpriority="high"
+              decoding="async"
               className="relative rounded-[34px] border border-white/10 shadow-2xl"
             />
           </motion.div>

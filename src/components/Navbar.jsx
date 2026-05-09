@@ -1,6 +1,21 @@
 import { NavLink } from "react-router-dom"
 import { useState } from "react"
 
+const NAV_ITEMS = [
+  { to: "/", label: "Home", end: true },
+  { to: "/service-ac-purwokerto", label: "Service AC" },
+  { to: "/cuci-ac-purwokerto", label: "Cuci AC" },
+  { to: "/instalasi-ac-banyumas", label: "Instalasi AC" },
+  { to: "/tentang-kami", label: "Tentang Kami" },
+  { to: "/kontak", label: "Kontak" },
+  { to: "/portfolio", label: "Portfolio" },
+]
+
+const activeLink = "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
+const inactiveLink = "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+const mobileActiveLink = "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
+const mobileInactiveLink = "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -14,6 +29,8 @@ export default function Navbar() {
   <img
     src="/logo-radjaac.png"
     alt="Radja AC"
+    loading="eager"
+    decoding="async"
     className="w-10 h-10 object-contain"
   />
 
@@ -31,97 +48,18 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
-          <NavLink
-            to="/"
-            end
-            className={({ isActive }) =>
-              `rounded-full px-3 py-2 transition ${
-                isActive
-                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
-                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-              }`
-            }
-          >
-            Home
-          </NavLink>
-
-          <NavLink
-            to="/service-ac-purwokerto"
-            className={({ isActive }) =>
-              `rounded-full px-3 py-2 transition ${
-                isActive
-                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
-                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-              }`
-            }
-          >
-            Service AC
-          </NavLink>
-
-          <NavLink
-            to="/cuci-ac-purwokerto"
-            className={({ isActive }) =>
-              `rounded-full px-3 py-2 transition ${
-                isActive
-                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
-                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-              }`
-            }
-          >
-            Cuci AC
-          </NavLink>
-
-          <NavLink
-            to="/instalasi-ac-banyumas"
-            className={({ isActive }) =>
-              `rounded-full px-3 py-2 transition ${
-                isActive
-                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
-                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-              }`
-            }
-          >
-            Instalasi AC
-          </NavLink>
-
-          <NavLink
-            to="/tentang-kami"
-            className={({ isActive }) =>
-              `rounded-full px-3 py-2 transition ${
-                isActive
-                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
-                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-              }`
-            }
-          >
-            Tentang Kami
-          </NavLink>
-
-          <NavLink
-            to="/kontak"
-            className={({ isActive }) =>
-              `rounded-full px-3 py-2 transition ${
-                isActive
-                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
-                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-              }`
-            }
-          >
-            Kontak
-          </NavLink>
-
-          <NavLink
-            to="/portfolio"
-            className={({ isActive }) =>
-              `rounded-full px-3 py-2 transition ${
-                isActive
-                  ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
-                  : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-              }`
-            }
-          >
-            Portfolio
-          </NavLink>
+          {NAV_ITEMS.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.end}
+              className={({ isActive }) =>
+                `rounded-full px-3 py-2 transition ${isActive ? activeLink : inactiveLink}`
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
 
         {/* Mobile Button */}
@@ -138,104 +76,19 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-black/95 text-white border-t border-white/10">
           <nav className="flex flex-col p-6 gap-4 font-medium">
-            <NavLink
-              to="/"
-              end
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                `rounded-3xl px-4 py-3 transition ${
-                  isActive
-                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
-                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-                }`
-              }
-            >
-              Home
-            </NavLink>
-
-            <NavLink
-              to="/service-ac-purwokerto"
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                `rounded-3xl px-4 py-3 transition ${
-                  isActive
-                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
-                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-                }`
-              }
-            >
-              Service AC
-            </NavLink>
-
-            <NavLink
-              to="/cuci-ac-purwokerto"
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                `rounded-3xl px-4 py-3 transition ${
-                  isActive
-                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
-                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-                }`
-              }
-            >
-              Cuci AC
-            </NavLink>
-
-            <NavLink
-              to="/instalasi-ac-banyumas"
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                `rounded-3xl px-4 py-3 transition ${
-                  isActive
-                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
-                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-                }`
-              }
-            >
-              Instalasi AC
-            </NavLink>
-
-            <NavLink
-              to="/tentang-kami"
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                `rounded-3xl px-4 py-3 transition ${
-                  isActive
-                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
-                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-                }`
-              }
-            >
-              Tentang Kami
-            </NavLink>
-
-            <NavLink
-              to="/kontak"
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                `rounded-3xl px-4 py-3 transition ${
-                  isActive
-                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
-                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-                }`
-              }
-            >
-              Kontak
-            </NavLink>
-
-            <NavLink
-              to="/portfolio"
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                `rounded-3xl px-4 py-3 transition ${
-                  isActive
-                    ? "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.16)]"
-                    : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
-                }`
-              }
-            >
-              Portfolio
-            </NavLink>
+            {NAV_ITEMS.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                end={item.end}
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) =>
+                  `rounded-3xl px-4 py-3 transition ${isActive ? mobileActiveLink : mobileInactiveLink}`
+                }
+              >
+                {item.label}
+              </NavLink>
+            ))}
           </nav>
         </div>
       )}

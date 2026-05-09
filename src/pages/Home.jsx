@@ -55,7 +55,7 @@ export default function Home() {
         <div className="absolute bottom-[-200px] right-[-100px] w-[350px] h-[350px] bg-cyan-400/20 rounded-full blur-[120px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-5 pt-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-20">
         <HeroSection />
         <TrustStripSection />
         <ServicesSection />
