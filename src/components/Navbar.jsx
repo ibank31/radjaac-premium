@@ -21,7 +21,6 @@ const SERVICES = [
 const NAV_ITEMS = [
   { type: "link", to: "/", label: "Home", end: true },
   { type: "dropdown", label: "Produk AC", items: PRODUCTS },
-  { type: "link", to: "/ac-inverter-purwokerto", label: "AC Inverter" },
   { type: "dropdown", label: "Brand AC", items: BRANDS },
   { type: "link", to: "/instalasi-ac-banyumas", label: "Instalasi" },
   { type: "dropdown", label: "Layanan", items: SERVICES },
