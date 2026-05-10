@@ -2,30 +2,108 @@
 import { useState } from "react"
 
 
-const BRANDS = [
-  { to: "/daikin-purwokerto", label: "Daikin" },
-  { to: "/gree-purwokerto", label: "Gree" },
-  { label: "Midea" },
-  { to: "/panasonic-purwokerto", label: "Panasonic" },
-  { to: "/sharp-purwokerto", label: "Sharp" },
-  { label: "Samsung" },
-  { label: "Sansui" },
-  { label: "Ariston" },
-]
-
-const SERVICES = [
-  { to: "/service-ac-purwokerto", label: "Service AC" },
-  { to: "/cuci-ac-purwokerto", label: "Cuci AC" },
-]
-
 const NAV_ITEMS = [
-  { type: "link", to: "/", label: "Home", end: true },
-  { type: "dropdown", label: "Brand AC", items: BRANDS },
-  { type: "link", to: "/instalasi-ac-banyumas", label: "Instalasi" },
-  { type: "dropdown", label: "Layanan", items: SERVICES },
-  { type: "link", to: "/tentang-kami", label: "Tentang Kami" },
-  { type: "link", to: "/kontak", label: "Kontak" },
-]
+  {
+    label: "Beranda",
+    href: "/",
+    type: "link",
+  },
+
+  {
+    label: "Katalog AC",
+    type: "dropdown",
+    items: [
+      {
+        label: "AC Split Rumah",
+        href: "/katalog/ac-split-rumah",
+      },
+      {
+        label: "AC Inverter",
+        href: "/katalog/ac-inverter",
+      },
+      {
+        label: "AC Low Watt",
+        href: "/katalog/ac-low-watt",
+      },
+      {
+        label: "AC Kantor / Komersial",
+        href: "/katalog/ac-kantor",
+      },
+      {
+        label: "Kapasitas AC",
+        href: "/katalog/kapasitas-ac",
+      },
+    ],
+  },
+
+  {
+    label: "Brand Unggulan",
+    type: "dropdown",
+    items: [
+      {
+        label: "Daikin",
+        href: "/brand/daikin",
+      },
+      {
+        label: "Gree",
+        href: "/brand/gree",
+      },
+      {
+        label: "Panasonic",
+        href: "/brand/panasonic",
+      },
+      {
+        label: "Samsung",
+        href: "/brand/samsung",
+      },
+      {
+        label: "Brand Lain",
+        href: "/brand",
+      },
+    ],
+  },
+
+  {
+    label: "Instalasi Profesional",
+    type: "dropdown",
+    items: [
+      {
+        label: "Proses Instalasi",
+        href: "/instalasi/proses",
+      },
+      {
+        label: "Standar Instalasi Radja AC",
+        href: "/instalasi/standar",
+      },
+      {
+        label: "Paket Harga Instalasi",
+        href: "/instalasi/harga",
+      },
+      {
+        label: "FAQ Instalasi",
+        href: "/instalasi/faq",
+      },
+      {
+        label: "Wilayah Layanan",
+        href: "/instalasi/wilayah",
+      },
+    ],
+  },
+
+  {
+    label: "Solusi AC",
+    href: "/solusi-ac",
+    type: "link",
+    end: true,
+  },
+
+  {
+    label: "Tentang Kami",
+    href: "/tentang-kami",
+    type: "link",
+    end: true,
+  },
+];
 
 const activeLink =
   "bg-cyan-400/10 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.18)]"

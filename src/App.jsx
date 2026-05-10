@@ -1,9 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home"
-import ServiceAC from "./pages/ServiceAC"
 import InstalasiAC from "./pages/InstalasiAC"
-import CuciAC from "./pages/CuciAC"
 import DaikinPurwokerto from "./pages/DaikinPurwokerto"
 import GreePurwokerto from "./pages/GreePurwokerto"
 import SharpPurwokerto from "./pages/SharpPurwokerto"
@@ -24,10 +22,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
 
-          <Route
-            path="/service-ac-purwokerto"
-            element={<ServiceAC />}
-          />
 
           <Route
             path="/daikin-purwokerto"
@@ -54,10 +48,6 @@ export default function App() {
             element={<InstalasiAC />}
           />
 
-          <Route
-            path="/cuci-ac-purwokerto"
-            element={<CuciAC />}
-          />
 
           <Route
             path="/tentang-kami"
