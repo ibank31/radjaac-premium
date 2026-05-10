@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home"
 import InstalasiAC from "./pages/InstalasiAC"
+import InstalasiProfesional from "./pages/InstalasiProfesional"
+import AcSplitRumah from "./pages/AcSplitRumah"
 import DaikinPurwokerto from "./pages/DaikinPurwokerto"
 import GreePurwokerto from "./pages/GreePurwokerto"
 import SharpPurwokerto from "./pages/SharpPurwokerto"
@@ -48,6 +50,15 @@ export default function App() {
             element={<InstalasiAC />}
           />
 
+          <Route
+            path="/instalasi-profesional"
+            element={<InstalasiProfesional />}
+          />
+
+          <Route
+            path="/katalog/ac-split-rumah"
+            element={<AcSplitRumah />}
+          />
 
           <Route
             path="/tentang-kami"

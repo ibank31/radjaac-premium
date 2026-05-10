@@ -5,7 +5,7 @@ import { useState } from "react"
 const NAV_ITEMS = [
   {
     label: "Beranda",
-    href: "/",
+    to: "/",
     type: "link",
   },
 
@@ -65,41 +65,21 @@ const NAV_ITEMS = [
 
   {
     label: "Instalasi Profesional",
-    type: "dropdown",
-    items: [
-      {
-        label: "Proses Instalasi",
-        href: "/instalasi/proses",
-      },
-      {
-        label: "Standar Instalasi Radja AC",
-        href: "/instalasi/standar",
-      },
-      {
-        label: "Paket Harga Instalasi",
-        href: "/instalasi/harga",
-      },
-      {
-        label: "FAQ Instalasi",
-        href: "/instalasi/faq",
-      },
-      {
-        label: "Wilayah Layanan",
-        href: "/instalasi/wilayah",
-      },
-    ],
+    to: "/instalasi-profesional",
+    type: "link",
+    end: true,
   },
 
   {
     label: "Solusi AC",
-    href: "/solusi-ac",
+    to: "/solusi-ac",
     type: "link",
     end: true,
   },
 
   {
     label: "Tentang Kami",
-    href: "/tentang-kami",
+    to: "/tentang-kami",
     type: "link",
     end: true,
   },
@@ -188,10 +168,10 @@ export default function Navbar() {
                 >
                   <div className="space-y-1 px-3">
                     {item.items.map((subItem) =>
-                      subItem.to ? (
+                      subItem.href ? (
                         <Link
                           key={subItem.label}
-                          to={subItem.to}
+                          to={subItem.href}
                           className="block rounded-3xl px-3 py-2 text-white/80 hover:text-cyan-300 hover:bg-white/5"
                         >
                           {subItem.label}
@@ -261,10 +241,10 @@ export default function Navbar() {
                     {openDropdown === item.label && (
                       <div className="space-y-1 pl-4 border-l border-white/10 ml-2">
                         {item.items.map((subItem) =>
-                          subItem.to ? (
+                          subItem.href ? (
                             <Link
                               key={subItem.label}
-                              to={subItem.to}
+                              to={subItem.href}
                               onClick={() => setIsOpen(false)}
                               className="block rounded-3xl px-4 py-3 text-white/80 hover:text-cyan-300 hover:bg-white/5"
                             >

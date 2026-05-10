@@ -1,51 +1,63 @@
-import WhatsappIcon from "./ui/WhatsappIcon";
+import { MessageCircle, Wind, MapPin, Clock } from "lucide-react";
+import { SITE_DATA } from "../constants/siteData";
+
+const WA_LINK = SITE_DATA.whatsappUrl;
 
 export default function ClosingCTA() {
   return (
-    <section className="px-6 py-20">
-      <div className="max-w-5xl mx-auto">
-        <div className="relative overflow-hidden rounded-[38px] bg-gradient-to-br from-blue-700 via-blue-600 to-cyan-500 p-8 md:p-14 border border-white/10 shadow-[0_0_60px_rgba(0,180,255,0.18)]">
-          {/* content */}
-          <div className="relative z-10 text-center">
-            {/* mini badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full border border-white/20 bg-white/10 text-sm text-white/80 mb-6 backdrop-blur-md">
-              Dealer AC Modern & Terpercaya
-            </div>
+    <section className="cta-section">
+      <div className="cta-section__glow" />
 
-            {/* title */}
-            <h2 className="text-4xl md:text-6xl font-black leading-tight mb-6 text-white">
-              Siap Bantu Pilih
-              <br />
-              AC Terbaik Anda
-            </h2>
+      <div
+        className="container"
+        style={{
+          textAlign: "center",
+          position: "relative",
+          zIndex: 1,
+        }}
+      >
+        <div
+          className="sec-label"
+          style={{
+            justifyContent: "center",
+            display: "flex",
+            marginBottom: 12,
+          }}
+        >
+          Siap Mulai?
+        </div>
 
-            {/* desc */}
-            <p className="max-w-2xl mx-auto text-white/90 text-base md:text-xl leading-relaxed mb-10">
-              Tanya harga AC, cek stok brand resmi, dan dapatkan rekomendasi AC sesuai ukuran ruangan untuk rumah atau bisnis Anda di Purwokerto & Banyumas.
-            </p>
+        <h2 className="cta-section__title">Bingung Pilih AC?</h2>
 
-            {/* button */}
-            <a
-              href="https://wa.me/62882008246099"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center gap-4 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-lg px-8 py-5 rounded-full transition duration-300 hover:scale-105 shadow-2xl"
-            >
-              <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                <WhatsappIcon className="w-7 h-7 text-white" />
-              </div>
+        <p className="cta-section__sub">
+          Konsultasikan kebutuhan AC rumah atau bisnis Anda bersama tim Radja
+          AC.
+          <br />
+          Gratis konsultasi, tanpa tekanan.
+        </p>
 
-              <div className="text-left">
-                <div className="text-sm text-white/80 font-medium">
-                  Tanya Harga AC
-                </div>
+        <div className="cta-section__btns">
+          <a href={WA_LINK} className="btn btn--wa btn--lg">
+            <MessageCircle size={19} />
+            Chat WhatsApp
+          </a>
 
-                <div className="text-xl font-black text-white">
-                  via WhatsApp
-                </div>
-              </div>
-            </a>
-          </div>
+          <a href="#katalog" className="btn btn--ghost btn--lg">
+            <Wind size={19} />
+            Lihat Katalog
+          </a>
+        </div>
+
+        <div className="cta-section__info">
+          <span>
+            <MapPin size={13} />
+            Purwokerto, Banyumas
+          </span>
+
+          <span>
+            <Clock size={13} />
+            Buka Setiap Hari 08.00 – 20.00
+          </span>
         </div>
       </div>
     </section>

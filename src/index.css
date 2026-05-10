@@ -6,3 +6,174 @@ html {
 body {
   overflow-x: hidden;
 }
+
+/* ══════════════════════════════════════════
+   CTA PENUTUP SECTION
+══════════════════════════════════════════ */
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.cta-section__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cta-section__glow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15), transparent 70%);
+  border-radius: 9999px;
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 60px 16px;
+  }
+}
+
+/* container helper */
+.cta-section .container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+/* ══════════════════════════════════════════
+   SEC LABEL (badge "Siap Mulai?")
+══════════════════════════════════════════ */
+.sec-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ══════════════════════════════════════════
+   CTA TITLE
+══════════════════════════════════════════ */
+.cta-section__title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  background: linear-gradient(to bottom right, #ffffff, #a5f3fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 768px) {
+  .cta-section__title {
+    font-size: 1.75rem;
+  }
+}
+
+/* ══════════════════════════════════════════
+   CTA SUBTITLE
+══════════════════════════════════════════ */
+.cta-section__sub {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 640px;
+  margin: 0 auto 36px;
+}
+
+/* ══════════════════════════════════════════
+   CTA BUTTONS
+══════════════════════════════════════════ */
+.cta-section__btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* base button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn--lg {
+  padding: 14px 32px;
+  font-size: 1rem;
+}
+
+.btn--wa {
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(37, 211, 102, 0.3);
+}
+.btn--wa:hover {
+  background: #20ba5a;
+  transform: scale(1.04);
+  box-shadow: 0 6px 32px rgba(37, 211, 102, 0.4);
+}
+
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+}
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.04);
+}
+
+@media (max-width: 480px) {
+  .cta-section__btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn--lg {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ══════════════════════════════════════════
+   CTA INFO (location + hours)
+══════════════════════════════════════════ */
+.cta-section__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.cta-section__info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}

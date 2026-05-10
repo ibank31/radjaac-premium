@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
 import { SITE_DATA } from "../constants/siteData";
-
 export default function Footer() {
   return (
     <footer className="border-t border-white/5 py-12 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-8">
+        <div className="grid md:grid-cols-2 gap-12 mb-8">
           <div>
             <div className="flex items-center gap-4 mb-4">
               <img
@@ -31,23 +29,6 @@ export default function Footer() {
                   <div key={area}>{area}</div>
                 ))}
               </div>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-white mb-4">Brand AC Populer</h4>
-            <div className="space-y-2 text-white/60 text-sm">
-              <Link to="/daikin-purwokerto" className="block hover:text-white transition">Daikin Purwokerto</Link>
-              <Link to="/gree-purwokerto" className="block hover:text-white transition">Gree Purwokerto</Link>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-white mb-4">Layanan</h4>
-            <div className="space-y-2 text-white/60 text-sm">
-              <Link to="/instalasi-ac-banyumas" className="block hover:text-white transition">Instalasi AC</Link>
-              <Link to="/service-ac-purwokerto" className="block hover:text-white transition">Service AC</Link>
-              <Link to="/cuci-ac-purwokerto" className="block hover:text-white transition">Cuci AC</Link>
             </div>
           </div>
 
