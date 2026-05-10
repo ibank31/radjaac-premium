@@ -1,27 +1,5 @@
-import { ArrowRight, House, Zap, Wind, Building2 } from "lucide-react";
-
-const CATEGORY_ITEMS = [
-  {
-    title: "AC Rumah",
-    desc: "Nyaman untuk hunian",
-    Icon: House,
-  },
-  {
-    title: "AC Inverter",
-    desc: "Hemat listrik hingga 60%",
-    Icon: Zap,
-  },
-  {
-    title: "Low Watt",
-    desc: "Ideal untuk kos & kontrakan",
-    Icon: Wind,
-  },
-  {
-    title: "AC Kantor",
-    desc: "Solusi ruang komersial",
-    Icon: Building2,
-  },
-];
+import { ArrowRight } from "lucide-react";
+import { CATEGORY_ITEMS } from "../../data/home/categoryItems";
 
 export default function CategorySection() {
   return (
