@@ -4,6 +4,10 @@ import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
 import HeroSection from "../components/HeroSection"
 
+import CategorySection from "../components/home/CategorySection"
+import BrandsSection from "../components/home/BrandsSection"
+import WhyChooseSection from "../components/home/WhyChooseSection"
+
 import ClosingCTA from "../components/ClosingCTA"
 import Footer from "../components/Footer"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
@@ -56,6 +60,12 @@ export default function Home() {
       {/* MAIN CONTENT */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-20">
         <HeroSection />
+
+        <CategorySection />
+
+        <BrandsSection />
+
+        <WhyChooseSection />
 
         <ClosingCTA />
       </div>
