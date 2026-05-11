@@ -35,17 +35,26 @@ const products = [
   {
     title: "Daikin Inverter",
     badge: "Paling dicari",
+    fit: "Kamar utama, ruang keluarga, dan kantor kecil",
+    priority: "Hemat energi + suhu stabil",
     description: "Untuk pelanggan yang ingin AC lebih hemat energi, suhu lebih stabil, dan kenyamanan premium.",
+    highlights: ["Nyaman harian", "Efisiensi listrik", "Premium"],
   },
   {
     title: "Daikin Low Watt",
     badge: "Rumah",
+    fit: "Rumah dengan daya listrik terbatas",
+    priority: "Dingin tetap nyaman dengan beban listrik lebih ringan",
     description: "Solusi untuk rumah dengan daya listrik terbatas tanpa mengorbankan kenyamanan pendinginan.",
+    highlights: ["Daya ringan", "Rumah tinggal", "Praktis"],
   },
   {
     title: "Daikin Standard",
     badge: "Ekonomis",
+    fit: "Kamar tidur, toko kecil, dan ruang santai",
+    priority: "Pilihan aman untuk kebutuhan pendinginan harian",
     description: "Pilihan praktis untuk kamar, ruang keluarga, toko, dan kebutuhan pendinginan harian.",
+    highlights: ["Harga efisien", "Ready use", "Perawatan mudah"],
   },
 ]
 
@@ -252,11 +261,46 @@ export default function DaikinPurwokerto() {
 
           <div className="grid gap-5 md:grid-cols-3">
             {products.map((product) => (
-              <article key={product.title} className="rounded-[28px] border border-white/10 bg-slate-950/70 p-6 shadow-[0_18px_45px_rgba(15,23,42,0.24)] transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <span className="mb-4 inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-200">{product.badge}</span>
-                <h3 className="mb-3 text-2xl font-bold text-white">{product.title}</h3>
-                <p className="mb-6 text-sm leading-7 text-white/60">{product.description}</p>
-                <WhatsAppButton className="w-full py-3 text-sm">Cek Stok & Harga</WhatsAppButton>
+              <article key={product.title} className="group overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/70 shadow-[0_18px_45px_rgba(15,23,42,0.24)] transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]">
+                <div className="relative min-h-[150px] overflow-hidden border-b border-white/10 bg-gradient-to-br from-cyan-400/14 via-slate-900 to-blue-950/70 p-5">
+                  <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-cyan-300/20 blur-3xl" />
+                  <div className="absolute -bottom-12 left-6 h-24 w-24 rounded-full bg-blue-400/20 blur-3xl" />
+                  <div className="relative flex h-full min-h-[110px] flex-col justify-between">
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-bold text-cyan-100">{product.badge}</span>
+                      <Snowflake className="h-7 w-7 text-cyan-200/80" />
+                    </div>
+                    <div>
+                      <p className="mb-2 text-xs uppercase tracking-[0.22em] text-cyan-100/70">Rekomendasi Daikin</p>
+                      <h3 className="text-2xl font-black tracking-[-0.02em] text-white">{product.title}</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <p className="mb-4 text-sm leading-7 text-white/60">{product.description}</p>
+
+                  <div className="mb-5 space-y-3 rounded-3xl border border-white/10 bg-white/[0.035] p-4">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-200/70">Cocok untuk</p>
+                      <p className="mt-1 text-sm font-medium text-white/85">{product.fit}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-200/70">Fokus utama</p>
+                      <p className="mt-1 text-sm font-medium text-white/85">{product.priority}</p>
+                    </div>
+                  </div>
+
+                  <div className="mb-6 flex flex-wrap gap-2">
+                    {product.highlights.map((item) => (
+                      <span key={item} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/65">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  <WhatsAppButton className="w-full py-3 text-sm">Cek Stok & Harga</WhatsAppButton>
+                </div>
               </article>
             ))}
           </div>
