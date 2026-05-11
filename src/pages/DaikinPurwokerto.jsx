@@ -4,7 +4,6 @@ import { Award, BadgeCheck, ShieldCheck, Snowflake, Sparkles, Wind, Zap } from "
 
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import SeoHead from "../components/SeoHead"
 import WhatsappIcon from "../components/ui/WhatsappIcon"
 import { SITE_DATA } from "../constants/siteData"
@@ -166,9 +165,13 @@ export default function DaikinPurwokerto() {
                 </a>
               </div>
 
-              <p className="max-w-xl text-sm text-white/60">
-                Authorized dealer • Instalasi rapi • Konsultasi gratis • Area Purwokerto & Banyumas
-              </p>
+              <div className="flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65">
+                {["Daikin Resmi", "Instalasi Rapi", "Area Purwokerto & Banyumas"].map((item) => (
+                  <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
 
             <div className="relative mt-4 lg:mt-0">
@@ -251,15 +254,15 @@ export default function DaikinPurwokerto() {
           <div className="grid gap-5 md:grid-cols-3">
             {products.map((product) => (
               <article key={product.title} className="group overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/70 shadow-[0_18px_45px_rgba(15,23,42,0.24)] transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <div className="relative min-h-[118px] overflow-hidden border-b border-white/10 bg-gradient-to-br from-cyan-400/14 via-slate-900 to-blue-950/70 p-4">
+                <div className="relative min-h-[96px] overflow-hidden border-b border-white/10 bg-gradient-to-br from-cyan-400/14 via-slate-900 to-blue-950/70 p-4">
                   <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-cyan-300/20 blur-3xl" />
                   <div className="absolute -bottom-12 left-6 h-24 w-24 rounded-full bg-blue-400/20 blur-3xl" />
-                  <div className="relative flex h-full min-h-[86px] flex-col justify-between">
+                  <div className="relative flex h-full min-h-[64px] flex-col justify-between">
                     <div className="flex items-center justify-between gap-3">
                       <span className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-bold text-cyan-100">{product.badge}</span>
                       <Snowflake className="h-6 w-6 text-cyan-200/80" />
                     </div>
-                    <h3 className="text-xl font-black tracking-[-0.02em] text-white sm:text-2xl">{product.title}</h3>
+                    <h3 className="text-center text-xl font-black tracking-[-0.02em] text-white sm:text-2xl">{product.title}</h3>
                   </div>
                 </div>
 
@@ -340,7 +343,6 @@ export default function DaikinPurwokerto() {
       </main>
 
       <Footer />
-      <FloatingWhatsapp />
     </div>
   )
 }
