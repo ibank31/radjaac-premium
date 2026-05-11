@@ -63,29 +63,29 @@ export default function AboutCredentials() {
 
       <div className="mx-auto mt-10 max-w-5xl">
         <div className="mb-5 flex items-center justify-center gap-3 text-center">
-          <span className="h-px w-12 bg-cyan-300/30" />
-          <h3 className="text-xl font-black tracking-[-0.02em] text-white sm:text-2xl">
+          <span className="h-px w-10 bg-cyan-300/30 sm:w-12" />
+          <h3 className="text-lg font-black tracking-[-0.02em] text-white sm:text-2xl">
             Sertifikasi Dealer Resmi
           </h3>
-          <span className="h-px w-12 bg-cyan-300/30" />
+          <span className="h-px w-10 bg-cyan-300/30 sm:w-12" />
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
           {certificates.map((item) => (
             <article
               key={item.brand}
-              className="rounded-[28px] border border-white/10 bg-white/[0.035] p-3 text-center shadow-[0_20px_50px_rgba(2,8,23,0.24)]"
+              className="rounded-[22px] border border-white/10 bg-white/[0.035] p-2 text-center shadow-[0_18px_40px_rgba(2,8,23,0.2)] sm:rounded-[28px] sm:p-3"
             >
-              <div className="overflow-hidden rounded-[22px] border border-white/10 bg-slate-950/60">
+              <div className="overflow-hidden rounded-[18px] border border-white/10 bg-slate-950/60 sm:rounded-[22px]">
                 <img
                   src={item.image}
                   alt={item.alt}
                   loading="lazy"
                   decoding="async"
-                  className="h-[170px] w-full object-cover sm:h-[210px]"
+                  className="h-[108px] w-full object-cover sm:h-[190px]"
                 />
               </div>
-              <h4 className="mt-4 pb-1 text-xl font-black tracking-[-0.02em] text-white">
+              <h4 className="mt-3 pb-1 text-base font-black tracking-[-0.02em] text-white sm:mt-4 sm:text-xl">
                 {item.brand}
               </h4>
             </article>
