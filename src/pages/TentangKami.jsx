@@ -4,7 +4,6 @@ import Footer from "../components/Footer"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import AboutHero from "../components/tentang/AboutHero"
 import AboutProfile from "../components/tentang/AboutProfile"
-import AboutAreas from "../components/tentang/AboutAreas"
 import AboutTrust from "../components/tentang/AboutTrust"
 
 export default function TentangKami() {
@@ -24,7 +23,6 @@ export default function TentangKami() {
         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-8">
             <AboutProfile />
-            <AboutAreas />
           </div>
 
           <AboutTrust />
