@@ -234,7 +234,7 @@ export default function DaikinPurwokerto() {
           <div className="grid gap-5 md:grid-cols-3">
             {benefits.map(({ title, description, icon: Icon }) => (
               <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-300">
+                <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-300">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="mb-3 text-xl font-bold text-white">{title}</h3>
