@@ -1,0 +1,148 @@
+From a91764c2361ea9c1681777adff8634205bfb3877 Mon Sep 17 00:00:00 2001
+From: Codex <codex@openai.com>
+Date: Mon, 11 May 2026 03:58:34 +0000
+Subject: [PATCH] Revise 'Tentang Kami' content to emphasize AC sales and
+ product consultation
+
+### Motivation
+- Shift the About/Tentang pages from a service/repair focus to present Radja AC as a multibrand AC dealer and product-consultation partner.
+- Make messaging consistent across hero, profile, and trust components to highlight product recommendations, procurement, installation, and after-sales support.
+- Apply small formatting fixes such as normalizing import lines and ensuring EOF newlines.
+
+### Description
+- Update copy in `AboutHero.jsx` to promote Radja AC as a partner for multibrand AC sales and product selection.
+- Replace profile content in `AboutProfile.jsx` to emphasize dealership, product choice, procurement, coordinated installation, and after-sales support, and update the feature list accordingly.
+- Adjust `AboutTrust.jsx` items and CTA text to focus on product recommendations, brand variety, transparent purchasing, and after-sales support, including changing the WhatsApp heading to `Konsultasi produk via WhatsApp`.
+- Update page metadata in `TentangKami.jsx` `SeoHead` `description` to reflect the sales/consultation positioning and perform minor import/format newline cleanups across modified files.
+
+### Testing
+- No automated tests were added or modified for this change.
+- No automated test suite was executed as part of this content-only update.
+---
+ src/components/tentang/AboutHero.jsx    |  8 ++++----
+ src/components/tentang/AboutProfile.jsx | 16 ++++++++--------
+ src/components/tentang/AboutTrust.jsx   | 18 +++++++++---------
+ src/pages/TentangKami.jsx               |  2 +-
+ 4 files changed, 22 insertions(+), 22 deletions(-)
+
+diff --git a/src/components/tentang/AboutHero.jsx b/src/components/tentang/AboutHero.jsx
+index ae30b13..9e510a7 100644
+--- a/src/components/tentang/AboutHero.jsx
++++ b/src/components/tentang/AboutHero.jsx
+@@ -6,12 +6,12 @@ export default function AboutHero() {
+           Tentang Radja AC
+         </p>
+         <h1 className="text-4xl md:text-5xl font-black tracking-[-0.04em] mb-6 text-white">
+-          Melayani semua kebutuhan AC dengan layanan cepat, rapi, dan bergaransi.
++          Partner penjualan AC multibrand yang siap bantu Anda memilih produk paling tepat.
+         </h1>
+         <p className="text-slate-300 leading-relaxed text-lg md:text-xl">
+-          Radja AC hadir sebagai partner AC terbaik untuk rumah, kantor, dan usaha di Purwokerto serta Banyumas. Dari service, cuci, hingga instalasi, semua dikerjakan oleh teknisi berpengalaman dengan standar profesional.
++          Radja AC fokus pada penjualan unit AC untuk rumah, kantor, dan kebutuhan bisnis di Purwokerto serta Banyumas. Kami membantu dari konsultasi produk, rekomendasi kapasitas, hingga pengadaan dan instalasi agar proses pembelian lebih mudah, aman, dan efisien.
+         </p>
+       </div>
+     </section>
+-  );
+-}
+\ No newline at end of file
++  )
++}
+diff --git a/src/components/tentang/AboutProfile.jsx b/src/components/tentang/AboutProfile.jsx
+index 7723cdb..1e43419 100644
+--- a/src/components/tentang/AboutProfile.jsx
++++ b/src/components/tentang/AboutProfile.jsx
+@@ -1,18 +1,18 @@
+-import SectionHeading from "../ui/SectionHeading";
++import SectionHeading from "../ui/SectionHeading"
+ 
+ export default function AboutProfile() {
+   return (
+     <section>
+       <SectionHeading>Profil Singkat Radja AC</SectionHeading>
+       <p className="text-slate-300 leading-relaxed mb-4">
+-        Radja AC adalah layanan AC lokal yang fokus pada kualitas, ketepatan waktu, dan hasil yang dapat dirasakan. Kami melayani service AC, cuci AC, instalasi AC, dan bongkar pasang dengan pendekatan transparan serta solusi yang jelas.
++        Radja AC adalah dealer AC lokal yang berfokus pada penjualan produk berkualitas dengan proses pembelian yang jelas dan nyaman. Kami melayani kebutuhan unit AC baru untuk berbagai skala, mulai dari rumah tinggal hingga kebutuhan kantor dan usaha, dilengkapi dukungan teknis sebagai nilai tambah.
+       </p>
+       <div className="grid gap-4 sm:grid-cols-2">
+         {[
+-          { title: "Teknisi Bersertifikat", desc: "Tim terlatih dengan pengalaman menangani semua merek AC." },
+-          { title: "Garansi Layanan", desc: "Setiap pengerjaan didukung garansi demi kepercayaan pelanggan." },
+-          { title: "Respon Cepat", desc: "Fast response WhatsApp untuk kebutuhan service dan instalasi mendesak." },
+-          { title: "Cakupan Luas", desc: "Melayani Purwokerto dan sekitarnya termasuk Banyumas, Sokaraja, dan Ajibarang." },
++          { title: "Konsultasi Produk Tepat", desc: "Bantu pilih kapasitas dan tipe AC sesuai ukuran ruangan, kebutuhan, dan budget." },
++          { title: "Pilihan Brand Lengkap", desc: "Menyediakan berbagai merek AC populer dengan opsi produk yang relevan untuk tiap kebutuhan." },
++          { title: "Pengadaan & Instalasi Terkoordinasi", desc: "Dari pemesanan unit sampai pemasangan, proses ditangani rapi agar lebih praktis untuk pelanggan." },
++          { title: "Dukungan After-Sales", desc: "Tetap responsif setelah pembelian untuk kebutuhan follow-up, perawatan, dan bantuan teknis." },
+         ].map((item) => (
+           <div key={item.title} className="rounded-3xl border border-white/10 bg-slate-900/80 p-5">
+             <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+@@ -21,5 +21,5 @@ export default function AboutProfile() {
+         ))}
+       </div>
+     </section>
+-  );
+-}
+\ No newline at end of file
++  )
++}
+diff --git a/src/components/tentang/AboutTrust.jsx b/src/components/tentang/AboutTrust.jsx
+index 7c07e4e..f9a4efe 100644
+--- a/src/components/tentang/AboutTrust.jsx
++++ b/src/components/tentang/AboutTrust.jsx
+@@ -1,4 +1,4 @@
+-import WhatsappIcon from "../ui/WhatsappIcon";
++import WhatsappIcon from "../ui/WhatsappIcon"
+ 
+ export default function AboutTrust() {
+   return (
+@@ -6,10 +6,10 @@ export default function AboutTrust() {
+       <h2 className="text-2xl font-semibold mb-4">Kenapa memilih Radja AC</h2>
+       <ul className="space-y-4">
+         {[
+-          "Teknisi rapi dan profesional dengan pengalaman AC rumah dan kantor.",
+-          "Garansi pengerjaan untuk setiap layanan service, cuci, dan instalasi.",
+-          "Proses cepat dan aman, dengan komunikasi transparan dari awal sampai selesai.",
+-          "Layanan lokal yang paham kebutuhan AC di Purwokerto & Banyumas.",
++          "Fokus pada penjualan AC dengan rekomendasi produk yang sesuai kebutuhan nyata pelanggan.",
++          "Pilihan brand dan tipe AC lebih variatif untuk rumah, kantor, hingga kebutuhan komersial.",
++          "Harga dan proses pembelian transparan, didampingi tim yang komunikatif dari awal hingga unit terpasang.",
++          "Ada dukungan after-sales sehingga pelanggan tetap merasa aman setelah transaksi selesai.",
+         ].map((item) => (
+           <li key={item} className="rounded-3xl border border-white/10 bg-slate-950/60 p-4 text-slate-200">
+             <p className="font-medium">{item}</p>
+@@ -19,9 +19,9 @@ export default function AboutTrust() {
+ 
+       <div className="mt-8 rounded-[32px] border border-white/10 bg-slate-950/80 p-8 shadow-[0_0_60px_rgba(14,116,144,0.18)]">
+         <p className="text-cyan-300 uppercase tracking-[0.2em] text-xs mb-3">Hubungi Kami</p>
+-        <h3 className="text-white text-2xl font-bold mb-4">Konsultasi WhatsApp cepat</h3>
++        <h3 className="text-white text-2xl font-bold mb-4">Konsultasi produk via WhatsApp</h3>
+         <p className="text-slate-300 leading-relaxed mb-6">
+-          Dapatkan jawaban langsung untuk jadwal, estimasi, dan pengecekan AC Anda.
++          Tanyakan rekomendasi unit, ketersediaan stok, pilihan brand, dan penawaran terbaik untuk kebutuhan Anda.
+         </p>
+         <a
+           href="https://wa.me/62882008246099"
+@@ -36,5 +36,5 @@ export default function AboutTrust() {
+         </a>
+       </div>
+     </aside>
+-  );
+-}
+\ No newline at end of file
++  )
++}
+diff --git a/src/pages/TentangKami.jsx b/src/pages/TentangKami.jsx
+index 1f7b34f..6ee7342 100644
+--- a/src/pages/TentangKami.jsx
++++ b/src/pages/TentangKami.jsx
+@@ -12,7 +12,7 @@ export default function TentangKami() {
+     <div className="min-h-screen bg-[#050816] text-white overflow-hidden">
+       <SeoHead
+         title="Tentang Kami | Radja AC Purwokerto"
+-        description="Kenali Radja AC, layanan service, cuci, dan instalasi AC terbaik di Purwokerto dan Banyumas. Profesional, bergaransi, dan siap melayani kebutuhan AC Anda."
++        description="Kenali Radja AC sebagai partner penjualan AC multibrand untuk rumah, kantor, dan usaha di Purwokerto & Banyumas. Dapatkan konsultasi produk, pengadaan unit, instalasi rapi, dan dukungan after-sales yang responsif."
+         canonicalPath="/tentang-kami"
+       />
+ 
+-- 
+2.43.0

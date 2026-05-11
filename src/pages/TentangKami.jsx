@@ -12,7 +12,7 @@ export default function TentangKami() {
     <div className="min-h-screen bg-[#050816] text-white overflow-hidden">
       <SeoHead
         title="Tentang Kami | Radja AC Purwokerto"
-        description="Kenali Radja AC, layanan service, cuci, dan instalasi AC terbaik di Purwokerto dan Banyumas. Profesional, bergaransi, dan siap melayani kebutuhan AC Anda."
+        description="Kenali Radja AC sebagai partner penjualan AC multibrand untuk rumah, kantor, dan usaha di Purwokerto & Banyumas. Dapatkan konsultasi produk, pengadaan unit, instalasi rapi, dan dukungan after-sales yang responsif."
         canonicalPath="/tentang-kami"
       />
 

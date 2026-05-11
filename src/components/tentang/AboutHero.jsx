@@ -6,12 +6,12 @@ export default function AboutHero() {
           Tentang Radja AC
         </p>
         <h1 className="text-4xl md:text-5xl font-black tracking-[-0.04em] mb-6 text-white">
-          Melayani semua kebutuhan AC dengan layanan cepat, rapi, dan bergaransi.
+          Partner penjualan AC multibrand yang siap bantu Anda memilih produk paling tepat.
         </h1>
         <p className="text-slate-300 leading-relaxed text-lg md:text-xl">
-          Radja AC hadir sebagai partner AC terbaik untuk rumah, kantor, dan usaha di Purwokerto serta Banyumas. Dari service, cuci, hingga instalasi, semua dikerjakan oleh teknisi berpengalaman dengan standar profesional.
+          Radja AC fokus pada penjualan unit AC untuk rumah, kantor, dan kebutuhan bisnis di Purwokerto serta Banyumas. Kami membantu dari konsultasi produk, rekomendasi kapasitas, hingga pengadaan dan instalasi agar proses pembelian lebih mudah, aman, dan efisien.
         </p>
       </div>
     </section>
-  );
+  )
 }
