@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { Award, BadgeCheck, CheckCircle2, ShieldCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
+import { Award, BadgeCheck, ShieldCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
 
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
@@ -166,18 +166,9 @@ export default function DaikinPurwokerto() {
                 </a>
               </div>
 
-              <p className="mb-6 max-w-xl text-sm text-white/60">
+              <p className="max-w-xl text-sm text-white/60">
                 Authorized dealer • Instalasi rapi • Konsultasi gratis • Area Purwokerto & Banyumas
               </p>
-
-              <div className="grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
-                {["Daikin Original", "Garansi Resmi", "Teknisi Profesional"].map((item) => (
-                  <div key={item} className="rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
-                    <CheckCircle2 className="mb-2 h-4 w-4 text-cyan-300" />
-                    {item}
-                  </div>
-                ))}
-              </div>
             </div>
 
             <div className="relative mt-4 lg:mt-0">
@@ -210,13 +201,11 @@ export default function DaikinPurwokerto() {
                 Sertifikat Authorized Dealer Daikin membantu calon pelanggan merasa lebih yakin sebelum konsultasi dan membeli. Section ini menjadi trust signal utama untuk halaman brand Daikin.
               </p>
 
-              <div className="space-y-3">
-                {["Authorized Dealer", "Sales, installation & warranty service", "Nama RADJA AC tercantum pada sertifikat"].map((item) => (
-                  <div key={item} className="flex items-start gap-3 rounded-3xl border border-white/10 bg-white/[0.04] p-4 text-white/80">
-                    <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-cyan-300" />
-                    <span>{item}</span>
-                  </div>
-                ))}
+              <div className="flex justify-center">
+                <div className="inline-flex items-center justify-center gap-3 rounded-3xl border border-white/10 bg-white/[0.04] px-6 py-4 text-center text-white/80">
+                  <BadgeCheck className="h-5 w-5 shrink-0 text-cyan-300" />
+                  <span>Authorized Dealer</span>
+                </div>
               </div>
             </div>
 
@@ -262,18 +251,15 @@ export default function DaikinPurwokerto() {
           <div className="grid gap-5 md:grid-cols-3">
             {products.map((product) => (
               <article key={product.title} className="group overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/70 shadow-[0_18px_45px_rgba(15,23,42,0.24)] transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <div className="relative min-h-[150px] overflow-hidden border-b border-white/10 bg-gradient-to-br from-cyan-400/14 via-slate-900 to-blue-950/70 p-5">
+                <div className="relative min-h-[118px] overflow-hidden border-b border-white/10 bg-gradient-to-br from-cyan-400/14 via-slate-900 to-blue-950/70 p-4">
                   <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-cyan-300/20 blur-3xl" />
                   <div className="absolute -bottom-12 left-6 h-24 w-24 rounded-full bg-blue-400/20 blur-3xl" />
-                  <div className="relative flex h-full min-h-[110px] flex-col justify-between">
+                  <div className="relative flex h-full min-h-[86px] flex-col justify-between">
                     <div className="flex items-center justify-between gap-3">
                       <span className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-bold text-cyan-100">{product.badge}</span>
-                      <Snowflake className="h-7 w-7 text-cyan-200/80" />
+                      <Snowflake className="h-6 w-6 text-cyan-200/80" />
                     </div>
-                    <div>
-                      <p className="mb-2 text-xs uppercase tracking-[0.22em] text-cyan-100/70">Rekomendasi Daikin</p>
-                      <h3 className="text-2xl font-black tracking-[-0.02em] text-white">{product.title}</h3>
-                    </div>
+                    <h3 className="text-xl font-black tracking-[-0.02em] text-white sm:text-2xl">{product.title}</h3>
                   </div>
                 </div>
 
@@ -291,7 +277,7 @@ export default function DaikinPurwokerto() {
                     </div>
                   </div>
 
-                  <div className="mb-6 flex flex-wrap gap-2">
+                  <div className="mb-6 flex flex-wrap justify-center gap-2 text-center">
                     {product.highlights.map((item) => (
                       <span key={item} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/65">
                         {item}
