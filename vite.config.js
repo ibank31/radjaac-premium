@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     sitemap({
-      hostname: 'https://www.radjaac.com',
+      hostname: 'https://radjaac.com',
       dynamicRoutes: [
         '/service-ac-purwokerto',
         '/cuci-ac-purwokerto',
