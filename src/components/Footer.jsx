@@ -37,7 +37,7 @@ export default function Footer() {
             <div className="space-y-3 text-white/60 text-sm">
               <div>
                 <div className="font-medium text-white">WhatsApp</div>
-                <a href="https://wa.me/628820008246099" className="hover:text-cyan-300 transition">0882-0082-46099</a>
+                <a href={SITE_DATA.whatsappUrl} className="hover:text-cyan-300 transition">+62 882-0082-46099</a>
               </div>
 
               <div>
