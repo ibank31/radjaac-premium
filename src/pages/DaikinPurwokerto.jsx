@@ -9,7 +9,7 @@ import WhatsappIcon from "../components/ui/WhatsappIcon"
 import { SITE_DATA } from "../constants/siteData"
 
 const WA_LINK = SITE_DATA.whatsappUrl
-const HERO_IMAGE = "/assets/showroom/hero-daikin.jpg"
+const HERO_IMAGE = "/assets/brands/daikin/daikin-showcase.webp"
 const CERTIFICATE_IMAGE = "/assets/brands/daikin/sertificate-daikin.webp"
 
 const benefits = [
@@ -177,13 +177,15 @@ export default function DaikinPurwokerto() {
             <div className="relative mt-4 lg:mt-0">
               <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-cyan-500/10 blur-3xl" />
               <div className="absolute bottom-4 left-[-24px] h-56 w-56 rounded-full bg-sky-500/10 blur-3xl" />
-              <img
-                src={HERO_IMAGE}
-                alt="Showroom dealer AC premium RADJA AC di Purwokerto"
-                fetchPriority="high"
-                decoding="async"
-                className="relative w-full rounded-[34px] border border-white/10 object-cover shadow-2xl"
-              />
+              <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-slate-950/70 p-2 shadow-2xl">
+                <img
+                  src={HERO_IMAGE}
+                  alt="Display showroom AC Daikin di RADJA AC Purwokerto"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="h-[520px] w-full rounded-[26px] object-cover object-center sm:h-[620px] lg:h-[640px]"
+                />
+              </div>
             </div>
           </div>
         </section>
