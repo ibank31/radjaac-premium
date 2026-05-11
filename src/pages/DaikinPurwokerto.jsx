@@ -1,4 +1,4 @@
-﻿import { Helmet } from "react-helmet-async"
+import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
 import { Award, BadgeCheck, CheckCircle2, ShieldCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
 
@@ -50,11 +50,11 @@ const products = [
 ]
 
 const pkGuide = [
-  ["Â½ PK", "Â± 9â€“12 mÂ²", "Kamar tidur kecil atau ruang kerja kecil"],
-  ["Â¾ PK", "Â± 12â€“15 mÂ²", "Kamar sedang dan ruang santai"],
-  ["1 PK", "Â± 15â€“20 mÂ²", "Kamar besar atau ruang keluarga kecil"],
-  ["1.5 PK", "Â± 20â€“30 mÂ²", "Ruang keluarga, kantor, atau toko"],
-  ["2 PK", "Â± 30â€“40 mÂ²", "Ruangan besar dan kebutuhan komersial"],
+  ["½ PK", "± 9–12 m²", "Kamar tidur kecil atau ruang kerja kecil"],
+  ["¾ PK", "± 12–15 m²", "Kamar sedang dan ruang santai"],
+  ["1 PK", "± 15–20 m²", "Kamar besar atau ruang keluarga kecil"],
+  ["1.5 PK", "± 20–30 m²", "Ruang keluarga, kantor, atau toko"],
+  ["2 PK", "± 30–40 m²", "Ruangan besar dan kebutuhan komersial"],
 ]
 
 const faqItems = [
@@ -158,7 +158,7 @@ export default function DaikinPurwokerto() {
               </div>
 
               <p className="mb-6 max-w-xl text-sm text-white/60">
-                Authorized dealer â€¢ Instalasi rapi â€¢ Konsultasi gratis â€¢ Area Purwokerto & Banyumas
+                Authorized dealer • Instalasi rapi • Konsultasi gratis • Area Purwokerto & Banyumas
               </p>
 
               <div className="grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
