@@ -132,7 +132,7 @@ export default function DaikinPurwokerto() {
           <div className="absolute bottom-[-200px] right-[-100px] h-[350px] w-[350px] rounded-full bg-cyan-400/20 blur-[120px]" />
         </div>
 
-        <section className="mx-auto max-w-7xl px-6 pb-12 pt-28 lg:px-8 lg:pb-20 lg:pt-32">
+        <section className="mx-auto max-w-7xl px-6 pb-8 pt-28 lg:px-8 lg:pb-20 lg:pt-32">
           <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-300">
@@ -190,7 +190,7 @@ export default function DaikinPurwokerto() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
           <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-300/20 bg-amber-300/10 px-4 py-2 text-sm font-semibold text-amber-200">
@@ -226,7 +226,7 @@ export default function DaikinPurwokerto() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
           <div className="mb-10 max-w-3xl">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Keunggulan Daikin</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kenapa banyak pelanggan memilih AC Daikin?</h2>
@@ -246,7 +246,7 @@ export default function DaikinPurwokerto() {
           </div>
         </section>
 
-        <section id="produk-daikin" className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+        <section id="produk-daikin" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
           <div className="mb-10 text-center">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Rekomendasi Produk</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilihan AC Daikin di RADJA AC</h2>
@@ -297,7 +297,7 @@ export default function DaikinPurwokerto() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
           <div className="mb-10 max-w-3xl">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Panduan PK</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilih kapasitas AC Daikin sesuai ruangan</h2>
@@ -315,16 +315,16 @@ export default function DaikinPurwokerto() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
           <div className="rounded-[34px] border border-cyan-400/20 bg-cyan-400/5 p-6 text-center shadow-[0_35px_90px_rgba(6,78,122,0.16)] sm:p-10 lg:p-14">
             <div className="mb-4 flex justify-center text-cyan-300"><Wind className="h-10 w-10" /></div>
             <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Butuh rekomendasi AC Daikin yang paling cocok?</h2>
-            <p className="mx-auto mb-8 max-w-2xl text-white/70 leading-7">Kirim ukuran ruangan, daya listrik, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Daikin yang sesuai.</p>
+            <p className="mx-auto mb-6 max-w-2xl text-white/70 leading-7">Kirim ukuran ruangan, daya listrik, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Daikin yang sesuai.</p>
             <WhatsAppButton>Konsultasi via WhatsApp</WhatsAppButton>
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
           <div className="mb-10 text-center">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">FAQ</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pertanyaan seputar AC Daikin</h2>
