@@ -10,6 +10,9 @@ import PrimaryCTASection from "../components/PrimaryCTASection"
 import SeoHead from "../components/SeoHead"
 import TrustStripSection from "../components/TrustStripSection"
 import WhatsappIcon from "../components/ui/WhatsappIcon"
+import { SITE_DATA } from "../constants/siteData"
+
+const WA_LINK = SITE_DATA.whatsappUrl
 
 const installationBenefits = [
   {
@@ -173,7 +176,7 @@ export default function InstalasiAC() {
 
               <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-4 mb-4">
                 <a
-                  href="https://wa.me/62882008246099"
+                  href={WA_LINK}
                   target="_blank"
                   className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-black font-bold px-7 py-4 rounded-full shadow-[0_20px_60px_rgba(37,211,102,0.18)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5"
                 >

@@ -111,7 +111,7 @@ export default function SharpPurwokerto() {
             </div>
 
             <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-slate-900 shadow-[0_30px_70px_rgba(7,89,133,0.18)]">
-              <img src="/foto-product/midea-display.jpg" alt="AC Sharp untuk rumah keluarga" className="h-full w-full object-cover aspect-[4/5]" loading="lazy" decoding="async" />
+              <img src="/assets/products/midea-display.jpg" alt="AC Sharp untuk rumah keluarga" className="h-full w-full object-cover aspect-[4/5]" loading="lazy" decoding="async" />
             </div>
           </div>
         </section>

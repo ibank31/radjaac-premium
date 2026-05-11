@@ -12,8 +12,8 @@ import { SITE_DATA } from "../constants/siteData"
 
 const WA_LINK = SITE_DATA.whatsappUrl
 
-const certificateImage = "/assets/brand/daikin/IMG_20260511_131440.jpg"
-const heroImage = "/asset/display-ac-wall-mounted.webp"
+const certificateImage = "/assets/brands/daikin/sertificate-daikin.webp"
+const heroImage = "/assets/showroom/hero-daikin.jpg"
 
 const benefits = [
   {

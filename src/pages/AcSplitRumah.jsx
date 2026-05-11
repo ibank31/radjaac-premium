@@ -30,10 +30,10 @@ const FILTERS = [
 
 /* Image mapping by brand */
 const BRAND_IMGS = {
-  Daikin: "/foto-product/hero-daikin.jpg",
-  Gree: "/foto-product/gree-display.jpg",
-  Panasonic: "/asset/display-ac-wall-series.webp",
-  Samsung: "/asset/display-ac-smart-control.webp",
+  Daikin: "/assets/products/hero-daikin.jpg",
+  Gree: "/assets/products/gree-display.jpg",
+  Panasonic: "/assets/home/display-ac-wall-series.webp",
+  Samsung: "/assets/home/display-ac-smart-control.webp",
 }
 
 const PRODUCTS = [
@@ -85,7 +85,7 @@ function Badge({ children, color = "cyan" }) {
 ══════════════════════════════════════════ */
 
 function ProductCard({ p }) {
-  const imgSrc = BRAND_IMGS[p.brand] || "/asset/display-ac-wall-mounted.webp"
+  const imgSrc = BRAND_IMGS[p.brand] || "/assets/home/display-ac-wall-mounted.webp"
   const TAG_STYLES = {
     blue: "bg-gradient-to-r from-blue-500 to-blue-600 text-white",
     green: "bg-gradient-to-r from-green-500 to-green-600 text-white",
@@ -243,7 +243,7 @@ export default function AcSplitRumah() {
                   style={{ background: "radial-gradient(ellipse 60% 40% at 50% 20%,rgba(59,130,246,0.07) 0%,transparent 70%)" }}
                 />
                 <img
-                  src="/asset/display-ac-wall-mounted.webp"
+                  src="/assets/home/display-ac-wall-mounted.webp"
                   alt="AC Split Rumah"
                   className="w-full max-w-[340px] mx-auto object-contain rounded-lg opacity-90 drop-shadow-[0_0_36px_rgba(59,130,246,0.15)]"
                   style={{ aspectRatio: "340/200" }}

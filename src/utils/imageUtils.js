@@ -57,42 +57,42 @@ export const PORTFOLIO_IMAGES = [
 export const BRAND_IMAGES = [
   {
     name: "Daikin",
-    src: "/logo-product/daikin-logo.webp",
+    src: "/assets/logos/daikin-logo.webp",
     alt: "Logo AC Daikin - Merk AC premium yang didukung service Radja AC",
   },
   {
     name: "LG",
-    src: "/logo-product/lg-logo.webp",
+    src: "/assets/logos/lg-logo.webp",
     alt: "Logo AC LG - Merk AC terpercaya dengan dukungan teknisi resmi Radja AC",
   },
   {
     name: "Panasonic",
-    src: "/logo-product/panasonic-logo.webp",
+    src: "/assets/logos/panasonic-logo.webp",
     alt: "Logo AC Panasonic - Merk AC berkualitas dengan service profesional Radja AC",
   },
   {
     name: "Samsung",
-    src: "/logo-product/samsung-logo.webp",
+    src: "/assets/logos/samsung-logo.webp",
     alt: "Logo AC Samsung - Merk AC modern yang didukung perbaikan Radja AC",
   },
   {
     name: "Sharp",
-    src: "/logo-product/sharp-logo.webp",
+    src: "/assets/logos/sharp-logo.webp",
     alt: "Logo AC Sharp - Merk AC inovatif dengan dukungan teknisi Radja AC",
   },
   {
     name: "Mitsubishi",
-    src: "/logo-product/mitsubishi-logo.webp",
+    src: "/assets/logos/mitsubishi-logo.webp",
     alt: "Logo AC Mitsubishi - Merk AC premium dengan service lengkap Radja AC",
   },
   {
     name: "Gree",
-    src: "/logo-product/gree-logo.webp",
+    src: "/assets/logos/gree-logo.webp",
     alt: "Logo AC Gree - Merk AC hemat energi dengan dukungan service Radja AC",
   },
   {
     name: "Midea",
-    src: "/logo-product/midea-logo.webp",
+    src: "/assets/logos/midea-logo.webp",
     alt: "Logo AC Midea - Merk AC terjangkau dengan kualitas terjamin Radja AC",
   },
 ]

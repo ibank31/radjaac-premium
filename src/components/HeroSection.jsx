@@ -81,7 +81,7 @@ export default function HeroSection() {
             <div className="absolute bottom-4 left-[-24px] w-56 h-56 rounded-full bg-sky-500/10 blur-3xl" />
 
             <img
-              src="/asset/display-ac-wall-mounted.webp"
+              src="/assets/showroom/hero-daikin.jpg"
               alt="Showroom dealer AC premium Radja AC di Purwokerto"
               fetchPriority="high"
               decoding="async"
