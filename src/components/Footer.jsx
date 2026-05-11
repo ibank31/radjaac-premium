@@ -32,12 +32,12 @@ export default function Footer() {
 
               <div>
                 <h3 className="text-xl font-bold tracking-[-0.02em] text-white">{SITE_DATA.businessName}</h3>
-                <p className="text-sm text-white/50">Dealer AC multi-brand Purwokerto</p>
+                <p className="text-sm text-white/50">Dealer AC Resmi Purwokerto &amp; Banyumas</p>
               </div>
             </div>
 
             <p className="max-w-xl text-sm leading-7 text-white/55">
-              Layanan instalasi, service, dan penjualan AC untuk rumah, kantor, toko, dan bisnis area Purwokerto, Banyumas, dan sekitarnya.
+              Penjualan AC original berbagai brand resmi, didukung konsultasi produk, instalasi rapi, dan layanan after-sales untuk area Purwokerto &amp; Banyumas.
             </p>
           </div>
 
