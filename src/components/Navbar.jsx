@@ -17,22 +17,6 @@ const NAV_ITEMS = [
         label: "AC Split Rumah",
         href: "/katalog/ac-split-rumah",
       },
-      {
-        label: "AC Inverter",
-        href: "/katalog/ac-inverter",
-      },
-      {
-        label: "AC Low Watt",
-        href: "/katalog/ac-low-watt",
-      },
-      {
-        label: "AC Kantor / Komersial",
-        href: "/katalog/ac-kantor",
-      },
-      {
-        label: "Kapasitas AC",
-        href: "/katalog/kapasitas-ac",
-      },
     ],
   },
 
@@ -70,13 +54,6 @@ const NAV_ITEMS = [
   {
     label: "Instalasi Profesional",
     to: "/instalasi-profesional",
-    type: "link",
-    end: true,
-  },
-
-  {
-    label: "Solusi AC",
-    to: "/solusi-ac",
     type: "link",
     end: true,
   },
