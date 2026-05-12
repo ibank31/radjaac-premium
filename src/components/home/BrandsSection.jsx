@@ -9,19 +9,34 @@ const OTHER_BRAND_ROWS = [
   ["TCL", "LG"],
 ]
 
-const getLogoClassName = (brandName) => {
-  const baseClass = "object-contain opacity-95 group-hover:opacity-100 transition"
-
-  const logoSizes = {
-    Daikin: "max-h-[34px] max-w-[150px] sm:max-h-[38px] sm:max-w-[165px]",
-    Gree: "max-h-[34px] max-w-[150px] sm:max-h-[38px] sm:max-w-[165px]",
-    Midea: "max-h-[40px] max-w-[150px] sm:max-h-[44px] sm:max-w-[165px]",
-    Hisense: "max-h-[38px] max-w-[150px] sm:max-h-[42px] sm:max-w-[165px]",
-    Sansui: "max-h-[34px] max-w-[150px] sm:max-h-[38px] sm:max-w-[165px]",
-  }
-
-  return `${baseClass} ${logoSizes[brandName] || "max-h-[38px] max-w-[150px] sm:max-h-[42px] sm:max-w-[165px]"}`
+const LOGO_STYLES = {
+  Daikin: {
+    width: "148px",
+    transform: "scale(0.98)",
+  },
+  Gree: {
+    width: "148px",
+    transform: "scale(0.98)",
+  },
+  Midea: {
+    width: "142px",
+    transform: "scale(1)",
+  },
+  Hisense: {
+    width: "148px",
+    transform: "scale(0.98)",
+  },
+  Sansui: {
+    width: "142px",
+    transform: "scale(1)",
+  },
 }
+
+const getLogoStyle = (brandName) => ({
+  width: LOGO_STYLES[brandName]?.width || "144px",
+  maxWidth: "100%",
+  transform: LOGO_STYLES[brandName]?.transform || "scale(1)",
+})
 
 export default function BrandsSection() {
   return (
@@ -62,11 +77,12 @@ export default function BrandsSection() {
             }`}
             aria-label={`Lihat brand ${brand.name}`}
           >
-            <div className="h-[72px] sm:h-[78px] flex items-center justify-center mb-3 w-full">
+            <div className="h-[76px] sm:h-[82px] flex items-center justify-center mb-3 w-full">
               <img
                 src={brand.logo}
                 alt={`Logo ${brand.name}`}
-                className={getLogoClassName(brand.name)}
+                className="h-auto object-contain opacity-95 transition group-hover:opacity-100"
+                style={getLogoStyle(brand.name)}
               />
             </div>
 
