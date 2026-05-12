@@ -25,6 +25,10 @@ const NAV_ITEMS = [
         label: "AC Inverter",
         href: "/katalog/ac-inverter",
       },
+      {
+        label: "AC Low Watt",
+        href: "/katalog/ac-low-watt",
+      },
     ],
   },
 
