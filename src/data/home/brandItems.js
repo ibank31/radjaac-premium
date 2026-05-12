@@ -20,13 +20,13 @@ export const BRAND_ITEMS = [
   {
     name: "Hisense",
     tagline: "Fitur modern harian",
-    logo: "/assets/logos/hisense-logo.webp",
+    logo: "/assets/logos/hisense-logo.png",
     href: "/brand/hisense",
   },
   {
     name: "Sansui",
     tagline: "Simple & ekonomis",
-    logo: "/assets/logos/sansui-logo.webp",
+    logo: "/assets/logos/sansui-logo.png",
     href: "/brand/sansui",
   },
 ]
