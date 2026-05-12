@@ -52,13 +52,13 @@ export default function BrandsSection() {
           </h2>
         </div>
 
-        <a
-          href="#brand-lainnya"
+        <Link
+          to="/brand/lainnya"
           className="hidden sm:inline-flex items-center gap-2 text-cyan-300 text-sm font-semibold hover:text-cyan-200 transition"
         >
           Lihat Brand Lainnya
           <ArrowRight className="w-4 h-4" />
-        </a>
+        </Link>
       </div>
 
       <p className="text-white/60 max-w-2xl text-sm sm:text-base leading-7 mb-7">
