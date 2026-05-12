@@ -227,17 +227,17 @@ export default function AcSplitRumah() {
                 Halaman ini membantu Anda memilih AC rumah dari kebutuhan ruangan dulu: ukuran PK, daya listrik, pola pemakaian, tipe AC, sampai brand yang paling cocok. RADJA AC bantu rekomendasi sebelum Anda membeli.
               </p>
 
-              <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-                <WhatsAppButton />
+              <div className="mx-auto mb-5 flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:mx-0 lg:justify-start">
+                <WhatsAppButton className="w-full sm:w-auto" />
                 <a
                   href="#panduan-pk"
-                  className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05] sm:w-auto"
                 >
                   Lihat Panduan PK
                 </a>
               </div>
 
-              <div className="flex max-w-2xl flex-wrap gap-2 text-sm text-white/65">
+              <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 lg:mx-0">
                 {["Bantu hitung PK", "Cek daya listrik", "Rekomendasi brand", "Instalasi profesional"].map((item) => (
                   <span key={item} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5">
                     <CheckCircle2 className="h-3.5 w-3.5 text-cyan-300" />
@@ -317,7 +317,7 @@ export default function AcSplitRumah() {
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
                 Tabel ini adalah panduan awal. Hasil akhir tetap perlu menyesuaikan tinggi plafon, panas matahari, jumlah orang, posisi ruangan, dan kebiasaan pemakaian.
               </p>
-              <WhatsAppButton className="flex mx-auto w-fit lg:mx-0">Hitungkan PK via WhatsApp</WhatsAppButton>
+              <WhatsAppButton className="mx-auto flex w-full max-w-[432px] lg:mx-0 lg:w-fit lg:max-w-none">Hitungkan PK via WhatsApp</WhatsAppButton>
             </div>
 
             <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
@@ -414,7 +414,7 @@ export default function AcSplitRumah() {
               </p>
               <Link
                 to="/instalasi-profesional"
-                className="inline-flex items-center justify-center gap-3 rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
+                className="inline-flex w-full max-w-[432px] items-center justify-center gap-3 rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05] lg:w-fit lg:max-w-none"
               >
                 <ShieldCheck className="h-5 w-5 text-cyan-300" />
                 Lihat Instalasi Profesional
