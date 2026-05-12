@@ -5,7 +5,6 @@ import {
   BatteryCharging,
   CheckCircle2,
   ClipboardCheck,
-  Gauge,
   Home,
   MessageCircle,
   Moon,
@@ -47,7 +46,7 @@ const comparison = [
   ["Pendinginan", "Normal", "Bertahap", "Stabil setelah suhu tercapai"],
   ["Cocok untuk", "Pemakaian ringan", "Listrik terbatas", "Pemakaian rutin berjam-jam"],
   ["Budget awal", "Biasanya paling ringan", "Menengah", "Biasanya lebih tinggi"],
-  ["Catatan", "Tidak fokus hemat daya", "Tidak selalu paling cepat dingin", "Worth it kalau sering dipakai"],
+  ["Catatan", "Tidak fokus hemat daya", "Tidak selalu paling cepat dingin", "Lebih masuk akal kalau sering dipakai"],
 ]
 
 const suitableItems = [
