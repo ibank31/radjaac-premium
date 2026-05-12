@@ -21,6 +21,10 @@ const NAV_ITEMS = [
         label: "AC Split Rumah",
         href: "/katalog/ac-split-rumah",
       },
+      {
+        label: "AC Inverter",
+        href: "/katalog/ac-inverter",
+      },
     ],
   },
 
