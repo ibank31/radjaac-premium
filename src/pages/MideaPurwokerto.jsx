@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { BadgeCheck, Leaf, ShieldCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
+import { BadgeCheck, ShieldCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
 
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
@@ -304,20 +304,28 @@ export default function MideaPurwokerto() {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
-          <div className="mx-auto mb-8 max-w-3xl text-center lg:mx-0 lg:text-left">
+          <div className="mx-auto mb-6 max-w-3xl text-center lg:mx-0 lg:text-left">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Panduan PK</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilih kapasitas AC Midea sesuai ruangan</h2>
-            <p className="leading-7 text-white/65">Section edukasi ini membantu pelanggan memahami kebutuhan dasar sebelum konsultasi, sekaligus memperkuat SEO untuk pencarian AC rumah dan kantor.</p>
+            <p className="leading-7 text-white/65">Panduan cepat untuk memperkirakan kapasitas AC sebelum konsultasi. Ukuran final tetap menyesuaikan kondisi ruangan, panas matahari, dan jumlah pengguna.</p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {pkGuide.map(([pk, area, note]) => (
-              <div key={pk} className="rounded-[26px] border border-white/10 bg-white/[0.04] p-5">
-                <div className="mb-2 text-2xl font-black text-sky-300">{pk}</div>
-                <h3 className="mb-2 font-bold text-white">{area}</h3>
-                <p className="text-sm leading-6 text-white/55">{note}</p>
-              </div>
-            ))}
+          <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
+            <div className="hidden grid-cols-[0.8fr_1fr_1.4fr] border-b border-white/10 bg-sky-400/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:grid">
+              <span>Kapasitas</span>
+              <span>Estimasi Ruangan</span>
+              <span>Cocok Untuk</span>
+            </div>
+
+            <div className="divide-y divide-white/10">
+              {pkGuide.map(([pk, area, note]) => (
+                <div key={pk} className="grid gap-2 px-5 py-4 sm:grid-cols-[0.8fr_1fr_1.4fr] sm:items-center sm:gap-4">
+                  <div className="text-2xl font-black text-sky-300 sm:text-xl">{pk}</div>
+                  <div className="text-sm font-semibold text-white sm:text-base">{area}</div>
+                  <div className="text-sm leading-6 text-white/55">{note}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
