@@ -49,16 +49,14 @@ const NAV_ITEMS = [
         href: "/brand/gree",
       },
       {
-        label: "Panasonic",
-        href: "/brand/panasonic",
+        label: "Midea",
+        href: "/brand/midea",
       },
       {
-        label: "Samsung",
-        href: "/brand/samsung",
+        label: "Hisense",
       },
       {
-        label: "Brand Lain",
-        href: "/brand",
+        label: "Sansui",
       },
     ],
   },
