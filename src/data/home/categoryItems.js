@@ -11,7 +11,7 @@ export const CATEGORY_ITEMS = [
     title: "AC Inverter",
     desc: "Hemat listrik hingga 60%",
     Icon: Zap,
-    href: "/katalog",
+    href: "/katalog/ac-inverter",
   },
   {
     title: "Low Watt",
