@@ -6,14 +6,12 @@ export default function HeroSection() {
   return (
     <>
       {/* HERO */}
-      <section className="pb-10 relative overflow-hidden">
+      <section className="relative overflow-hidden pb-7 sm:pb-10">
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-cyan-400/10 to-transparent pointer-events-none" />
 
         <div className="absolute right-[-120px] top-10 w-72 h-72 rounded-full bg-cyan-500/10 blur-3xl" />
 
-        <div className="absolute left-[-120px] bottom-0 w-72 h-72 rounded-full bg-sky-500/10 blur-3xl" />
-
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* LEFT */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -57,7 +55,7 @@ export default function HeroSection() {
               </a>
             </div>
 
-            <p className="text-white/60 text-sm max-w-xl mb-6">
+            <p className="text-white/60 text-sm max-w-xl mb-4 sm:mb-6">
               Ready stock • Brand resmi • Instalasi rapi • Konsultasi produk
             </p>
           </motion.div>
@@ -65,28 +63,25 @@ export default function HeroSection() {
           {/* RIGHT */}
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.98 }}
-            animate={{ opacity: 1, y: [0, -8, 0], scale: 1 }}
-            transition={{
-              duration: 2.5,
-              repeat: Infinity,
-              repeatType: "mirror",
-              ease: "easeInOut",
-            }}
-            className="relative mt-6 lg:mt-0"
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative mt-3 lg:mt-0"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/0 via-slate-900/10 to-transparent rounded-[38px] shadow-[0_0_80px_rgba(14,116,144,0.12)]" />
+            <div className="absolute -inset-3 rounded-[38px] bg-gradient-to-br from-cyan-400/16 via-blue-500/8 to-transparent blur-2xl" />
+            <div className="absolute -right-8 -top-8 h-36 w-36 rounded-full bg-cyan-500/12 blur-3xl" />
 
-            <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-cyan-500/10 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-slate-950/70 p-2 shadow-[0_28px_80px_rgba(8,20,47,0.42)]">
+              <div className="pointer-events-none absolute inset-2 z-10 rounded-[26px] bg-gradient-to-t from-[#050816]/65 via-transparent to-white/5" />
+              <div className="pointer-events-none absolute inset-x-8 bottom-2 z-10 h-px bg-cyan-300/40" />
 
-            <div className="absolute bottom-4 left-[-24px] w-56 h-56 rounded-full bg-sky-500/10 blur-3xl" />
-
-            <img
-              src="/assets/showroom/hero-daikin.jpg"
-              alt="Showroom dealer AC premium Radja AC di Purwokerto"
-              fetchPriority="high"
-              decoding="async"
-              className="relative rounded-[34px] border border-white/10 shadow-2xl w-full max-h-[380px] object-cover"
-            />
+              <img
+                src="/assets/showroom/Showroom-utama.webp"
+                alt="Showroom dealer AC RADJA AC di Purwokerto"
+                fetchPriority="high"
+                decoding="async"
+                className="relative h-[310px] w-full rounded-[26px] object-cover object-center sm:h-[380px] lg:h-[520px]"
+              />
+            </div>
           </motion.div>
         </div>
       </section>
