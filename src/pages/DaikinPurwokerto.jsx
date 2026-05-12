@@ -298,20 +298,30 @@ export default function DaikinPurwokerto() {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
-          <div className="mb-10 max-w-3xl">
+          <div className="mb-6 max-w-3xl">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Panduan PK</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilih kapasitas AC Daikin sesuai ruangan</h2>
-            <p className="text-white/65 leading-7">Section edukasi ini membantu pelanggan memahami kebutuhan dasar sebelum konsultasi, sekaligus memperkuat SEO untuk pencarian AC rumah dan kantor.</p>
+            <p className="text-white/65 leading-7">Panduan cepat untuk memperkirakan kapasitas AC sebelum konsultasi. Ukuran final tetap menyesuaikan kondisi ruangan, panas matahari, dan jumlah pengguna.</p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {pkGuide.map(([pk, area, note]) => (
-              <div key={pk} className="rounded-[26px] border border-white/10 bg-white/[0.04] p-5">
-                <div className="mb-2 text-2xl font-black text-cyan-300">{pk}</div>
-                <h3 className="mb-2 font-bold text-white">{area}</h3>
-                <p className="text-sm leading-6 text-white/55">{note}</p>
-              </div>
-            ))}
+          <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
+            <div className="hidden grid-cols-[0.8fr_1fr_1.4fr] border-b border-white/10 bg-cyan-400/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200/80 sm:grid">
+              <span>Kapasitas</span>
+              <span>Estimasi Ruangan</span>
+              <span>Cocok Untuk</span>
+            </div>
+
+            <div className="divide-y divide-white/10">
+              {pkGuide.map(([pk, area, note]) => (
+                <div key={pk} className="px-5 py-4 sm:grid sm:grid-cols-[0.8fr_1fr_1.4fr] sm:items-center sm:gap-4">
+                  <div className="grid grid-cols-[64px_1fr] items-baseline gap-4 sm:contents">
+                    <div className="text-xl font-black text-cyan-300 sm:text-xl">{pk}</div>
+                    <div className="text-sm font-semibold text-white sm:text-base">{area}</div>
+                    <div className="col-start-2 text-sm leading-6 text-white/55 sm:col-auto">{note}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
