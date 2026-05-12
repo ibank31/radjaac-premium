@@ -3,15 +3,14 @@ import { CATEGORY_ITEMS } from "../../data/home/categoryItems";
 
 export default function CategorySection() {
   return (
-    <section className="pb-14">
+    <section className="pb-14 pt-4 sm:pt-6">
       <div className="mb-8">
         <p className="text-cyan-300 uppercase tracking-[0.3em] text-xs mb-3">
           KATEGORI PRODUK
         </p>
 
-        <h2 className="text-3xl sm:text-4xl font-black leading-tight mb-4">
-          Temukan AC
-          <span className="block">yang Tepat</span>
+        <h2 className="text-[28px] sm:text-4xl font-black leading-tight mb-4 whitespace-nowrap">
+          Temukan AC yang Tepat
         </h2>
 
         <p className="text-white/60 max-w-md leading-7">
