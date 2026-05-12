@@ -317,7 +317,7 @@ export default function AcSplitRumah() {
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
                 Tabel ini adalah panduan awal. Hasil akhir tetap perlu menyesuaikan tinggi plafon, panas matahari, jumlah orang, posisi ruangan, dan kebiasaan pemakaian.
               </p>
-              <WhatsAppButton>Hitungkan PK via WhatsApp</WhatsAppButton>
+              <WhatsAppButton className="flex mx-auto w-fit lg:mx-0">Hitungkan PK via WhatsApp</WhatsAppButton>
             </div>
 
             <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
