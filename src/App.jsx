@@ -7,6 +7,7 @@ import InstalasiProfesional from "./pages/InstalasiProfesional"
 import AcSplitRumah from "./pages/AcSplitRumah"
 import AcInverter from "./pages/AcInverter"
 import AcLowWatt from "./pages/AcLowWatt"
+import AcKantorKomersial from "./pages/AcKantorKomersial"
 import DaikinPurwokerto from "./pages/DaikinPurwokerto"
 import GreePurwokerto from "./pages/GreePurwokerto"
 import MideaPurwokerto from "./pages/MideaPurwokerto"
@@ -121,6 +122,11 @@ export default function App() {
           <Route
             path="/katalog/ac-low-watt"
             element={<AcLowWatt />}
+          />
+
+          <Route
+            path="/katalog/ac-kantor-komersial"
+            element={<AcKantorKomersial />}
           />
 
           <Route
