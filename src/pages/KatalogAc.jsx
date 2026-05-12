@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { BadgeCheck, Building2, Home, MessageCircle, Power, Ruler, Sparkles, Zap } from "lucide-react"
+import { BadgeCheck, Building2, Home, MessageCircle, Power, Ruler, Zap } from "lucide-react"
 
 import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
@@ -12,35 +12,41 @@ const WA_LINK = SITE_DATA.whatsappUrl
 const catalogItems = [
   {
     title: "AC Split Rumah",
-    description: "Pilihan paling umum untuk kamar tidur, ruang keluarga, kos, ruang kerja, dan toko kecil.",
+    description: "Untuk kamar tidur, ruang keluarga, kos, ruang kerja, dan toko kecil.",
     href: "/katalog/ac-split-rumah",
     icon: Home,
     active: true,
   },
   {
     title: "AC Inverter",
-    description: "Cocok untuk pemakaian rutin dan pelanggan yang ingin konsumsi listrik lebih efisien jangka panjang.",
+    description: "Untuk pemakaian rutin dan efisiensi listrik jangka panjang.",
     href: "#konsultasi-katalog",
     icon: Zap,
   },
   {
     title: "AC Low Watt",
-    description: "Pilihan untuk rumah dengan daya listrik terbatas atau penggunaan bersama perangkat elektronik lain.",
+    description: "Untuk rumah dengan daya listrik terbatas.",
     href: "#konsultasi-katalog",
     icon: Power,
   },
   {
     title: "AC Kantor / Komersial",
-    description: "Untuk kantor, toko, ruang usaha, ruang meeting, atau area yang membutuhkan kapasitas lebih besar.",
+    description: "Untuk kantor, toko, ruang usaha, dan area lebih besar.",
     href: "#konsultasi-katalog",
     icon: Building2,
   },
   {
     title: "Panduan Kapasitas AC",
-    description: "Bantu memperkirakan kebutuhan ½ PK, ¾ PK, 1 PK, 1.5 PK, hingga 2 PK sesuai ukuran ruangan.",
+    description: "Bantu perkirakan ½ PK sampai 2 PK sesuai ukuran ruangan.",
     href: "#panduan-pk",
     icon: Ruler,
   },
+]
+
+const heroCards = [
+  ["AC Split Rumah", "Kamar, kos, ruang keluarga"],
+  ["AC Inverter", "Pemakaian rutin"],
+  ["Low Watt", "Daya listrik terbatas"],
 ]
 
 const pkGuide = [
@@ -65,6 +71,60 @@ function WhatsAppButton({ children = "Konsultasi Pilihan AC" }) {
   )
 }
 
+function CategoryLink({ item }) {
+  const content = (
+    <>
+      <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
+        <item.icon className="h-6 w-6" />
+      </div>
+      <h3 className="mb-3 text-lg font-bold text-white">{item.title}</h3>
+      <p className="text-sm leading-6 text-white/60">{item.description}</p>
+      <div className="mt-4 text-xs font-semibold text-cyan-300">
+        {item.active ? "Lihat Detail" : "Konsultasikan"}
+      </div>
+    </>
+  )
+
+  const className = "rounded-[26px] border border-white/10 bg-white/[0.04] p-5 text-center transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]"
+
+  if (item.href.startsWith("/")) {
+    return <Link to={item.href} className={className}>{content}</Link>
+  }
+
+  return <a href={item.href} className={className}>{content}</a>
+}
+
+function HeroVisual() {
+  return (
+    <div className="relative mx-auto w-full max-w-[430px] overflow-hidden rounded-[34px] border border-cyan-300/15 bg-slate-950/70 p-4 shadow-[0_28px_80px_rgba(8,20,47,0.42)]">
+      <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-cyan-400/12 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-16 -left-16 h-44 w-44 rounded-full bg-blue-500/12 blur-3xl" />
+
+      <div className="relative rounded-[28px] border border-white/10 bg-white/[0.035] p-4">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">Mulai dari kebutuhan</p>
+        <div className="space-y-3">
+          {heroCards.map(([title, note], index) => (
+            <div key={title} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-950/60 p-4">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-cyan-300/10 text-sm font-black text-cyan-300">
+                {index + 1}
+              </span>
+              <div className="text-left">
+                <h3 className="text-sm font-bold text-white">{title}</h3>
+                <p className="mt-0.5 text-xs leading-5 text-white/50">{note}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-4 rounded-2xl border border-cyan-300/15 bg-cyan-300/10 p-4 text-left">
+          <p className="text-sm font-bold text-white">Belum tahu pilih yang mana?</p>
+          <p className="mt-1 text-xs leading-5 text-white/55">Kirim ukuran ruangan dan daya listrik, tim RADJA AC bantu arahkan.</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function KatalogAc() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
@@ -82,31 +142,35 @@ export default function KatalogAc() {
           <div className="absolute bottom-[-200px] right-[-120px] h-[360px] w-[360px] rounded-full bg-blue-500/14 blur-[120px]" />
         </div>
 
-        <section className="mx-auto max-w-7xl px-6 pb-8 pt-28 text-center lg:px-8 lg:pb-14 lg:pt-32">
-          <div className="mx-auto max-w-4xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200">
-              <span className="h-2 w-2 rounded-full bg-cyan-300" />
-              PANDUAN KATALOG AC
+        <section className="mx-auto max-w-7xl px-6 pb-8 pt-24 lg:px-8 lg:pb-14 lg:pt-32">
+          <div className="grid items-center gap-7 lg:grid-cols-2 lg:gap-16">
+            <div className="text-center lg:text-left">
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200">
+                <span className="h-2 w-2 rounded-full bg-cyan-300" />
+                PANDUAN PILIH AC
+              </div>
+
+              <h1 className="mx-auto mb-5 max-w-2xl text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl lg:mx-0">
+                Pilih AC sesuai
+                <span className="block text-cyan-300">kebutuhan ruangan</span>
+              </h1>
+
+              <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
+                Mulai dari luas ruangan, daya listrik, dan pola pemakaian. RADJA AC bantu arahkan pilihan AC Split, Inverter, Low Watt, hingga kebutuhan kantor.
+              </p>
+
+              <div className="flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
+                <WhatsAppButton />
+                <a
+                  href="#kategori-katalog"
+                  className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
+                >
+                  Lihat Kategori
+                </a>
+              </div>
             </div>
 
-            <h1 className="mb-5 text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl">
-              Pilih AC berdasarkan
-              <span className="block text-cyan-300">kebutuhan ruangan Anda</span>
-            </h1>
-
-            <p className="mx-auto mb-7 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-              Katalog RADJA AC dibuat sebagai panduan memilih jenis AC, bukan daftar stok real-time. Untuk harga, tipe terbaru, dan ketersediaan unit, tim kami akan bantu cek via WhatsApp.
-            </p>
-
-            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <WhatsAppButton />
-              <a
-                href="#kategori-katalog"
-                className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
-              >
-                Lihat Kategori
-              </a>
-            </div>
+            <HeroVisual />
           </div>
         </section>
 
@@ -120,23 +184,7 @@ export default function KatalogAc() {
           </div>
 
           <div className="grid gap-4 md:grid-cols-5">
-            {catalogItems.map(({ title, description, href, icon: Icon, active }) => (
-              <Link
-                key={title}
-                to={href.startsWith("/") ? href : undefined}
-                href={!href.startsWith("/") ? href : undefined}
-                className="rounded-[26px] border border-white/10 bg-white/[0.04] p-5 text-center transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]"
-              >
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <h3 className="mb-3 text-lg font-bold text-white">{title}</h3>
-                <p className="text-sm leading-6 text-white/60">{description}</p>
-                <div className="mt-4 text-xs font-semibold text-cyan-300">
-                  {active ? "Lihat Detail" : "Konsultasikan"}
-                </div>
-              </Link>
-            ))}
+            {catalogItems.map((item) => <CategoryLink key={item.title} item={item} />)}
           </div>
         </section>
 
