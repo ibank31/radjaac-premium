@@ -23,6 +23,6 @@ export const CATEGORY_ITEMS = [
     title: "AC Kantor",
     desc: "Solusi ruang komersial",
     Icon: Building2,
-    href: "/katalog",
+    href: "/katalog/ac-kantor-komersial",
   },
 ];
