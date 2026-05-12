@@ -55,7 +55,7 @@ export default function HeroSection() {
               </a>
             </div>
 
-            <p className="text-white/60 text-sm max-w-xl mb-3 sm:mb-6">
+            <p className="mx-auto max-w-xl text-center text-sm text-white/60 mb-3 sm:mx-0 sm:text-left sm:mb-6">
               Ready stock • Brand resmi • Instalasi rapi • Konsultasi produk
             </p>
           </motion.div>
