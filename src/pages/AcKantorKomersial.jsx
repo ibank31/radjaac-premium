@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
 import {
-  BadgeCheck,
   Building2,
   CheckCircle2,
   ClipboardCheck,
@@ -49,7 +48,7 @@ const commercialNeeds = [
 const acTypes = [
   {
     title: "AC Split Wall",
-    description: "Cocok untuk kantor kecil, ruang meeting, toko kecil, ruang admin, atau ruangan private.",
+    description: "Cocok untuk kantor kecil, ruang meeting, toko kecil, ruang admin, atau ruangan khusus.",
     icon: Home,
   },
   {
@@ -63,7 +62,7 @@ const acTypes = [
     icon: Landmark,
   },
   {
-    title: "Multi / Project Supply",
+    title: "Multi / Kebutuhan Proyek",
     description: "Cocok untuk banyak ruangan, proyek pengadaan, kantor cabang, developer, dan pembelian partai besar.",
     icon: PackageCheck,
   },
@@ -72,8 +71,29 @@ const acTypes = [
 const cassetteHighlights = [
   "Tampilan lebih rapi karena unit menyatu di plafon",
   "Sebaran udara lebih merata untuk area kantor, cafe, showroom, dan ruang tunggu",
-  "Cocok untuk ruangan komersial yang ingin terlihat clean dan profesional",
+  "Cocok untuk ruangan komersial yang ingin terlihat rapi dan profesional",
   "Perlu cek plafon, drainase, jalur pipa, dan posisi outdoor sebelum pemasangan",
+]
+
+const cassetteGallery = [
+  {
+    brand: "Midea Cassette",
+    src: "/assets/midea-cassette-display.webp",
+    alt: "Display AC cassette Midea di showroom RADJA AC",
+    note: "Foto utama display cassette",
+  },
+  {
+    brand: "Daikin Cassette",
+    src: "/assets/daikin-cassette-display.webp",
+    alt: "Display AC cassette Daikin di showroom RADJA AC",
+    note: "Pilihan brand premium",
+  },
+  {
+    brand: "Sansui Cassette",
+    src: "/assets/sansui-cassette-display.webp",
+    alt: "Display AC cassette Sansui di showroom RADJA AC",
+    note: "Alternatif multibrand",
+  },
 ]
 
 const areas = [
@@ -131,7 +151,7 @@ const faqItems = [
   },
   {
     question: "AC apa yang cocok untuk kantor?",
-    answer: "Kantor kecil bisa memakai AC split wall. Untuk ruangan lebih luas atau butuh sebaran udara merata, bisa dipertimbangkan cassette, floor standing, atau solusi project sesuai kondisi ruangan.",
+    answer: "Kantor kecil bisa memakai AC split wall. Untuk ruangan lebih luas atau butuh sebaran udara merata, bisa dipertimbangkan cassette, floor standing, atau solusi proyek sesuai kondisi ruangan.",
   },
   {
     question: "Apakah RADJA AC melayani AC cassette?",
@@ -332,25 +352,58 @@ export default function AcKantorKomersial() {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
-          <div className="overflow-hidden rounded-[34px] border border-cyan-300/20 bg-cyan-300/[0.055] p-6 shadow-[0_35px_90px_rgba(8,145,178,0.10)] sm:p-8 lg:p-10">
-            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="overflow-hidden rounded-[34px] border border-cyan-300/20 bg-cyan-300/[0.055] p-5 shadow-[0_35px_90px_rgba(8,145,178,0.10)] sm:p-8 lg:p-10">
+            <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
               <div>
                 <SectionLabel>AC Cassette</SectionLabel>
-                <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">AC cassette untuk tampilan plafon yang lebih rapi</h2>
-                <p className="mb-6 text-sm leading-7 text-white/70 sm:text-base">
-                  RADJA AC juga bisa bantu kebutuhan AC cassette untuk kantor, cafe, restoran, showroom, klinik, ruang meeting, dan ruang komersial yang membutuhkan sebaran udara lebih merata.
+                <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">AC cassette untuk plafon rapi dan sebaran udara lebih merata</h2>
+                <p className="mb-5 text-sm leading-7 text-white/70 sm:text-base">
+                  RADJA AC juga bisa bantu kebutuhan AC cassette untuk kantor, cafe, restoran, showroom, klinik, ruang meeting, dan ruang komersial yang membutuhkan tampilan lebih rapi tanpa unit AC menonjol di dinding.
+                </p>
+                <p className="mb-6 rounded-3xl border border-white/10 bg-slate-950/45 p-4 text-sm leading-6 text-white/60">
+                  Foto display unit di showroom RADJA AC. Ketersediaan tipe dan brand bisa berubah sesuai stok.
                 </p>
                 <WhatsAppButton className="mx-auto flex w-full max-w-[432px] lg:mx-0 lg:w-fit lg:max-w-none">Konsultasi AC Cassette</WhatsAppButton>
               </div>
 
-              <div className="grid gap-3 sm:grid-cols-2">
-                {cassetteHighlights.map((item) => (
-                  <div key={item} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/55 p-4 text-sm leading-6 text-white/70">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" />
-                    <span>{item}</span>
-                  </div>
-                ))}
+              <div className="space-y-4">
+                <div className="overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/60 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
+                  <img
+                    src="/assets/midea-cassette-display.webp"
+                    alt="Display AC cassette Midea di showroom RADJA AC"
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-square w-full rounded-[24px] object-cover"
+                  />
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {cassetteHighlights.map((item) => (
+                    <div key={item} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/55 p-4 text-sm leading-6 text-white/70">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
+            </div>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {cassetteGallery.map((item) => (
+                <article key={item.brand} className="overflow-hidden rounded-[26px] border border-white/10 bg-slate-950/55 p-3">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-square w-full rounded-[20px] object-cover"
+                  />
+                  <div className="p-3 text-center">
+                    <h3 className="font-black text-white">{item.brand}</h3>
+                    <p className="mt-1 text-xs text-white/55">{item.note}</p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
