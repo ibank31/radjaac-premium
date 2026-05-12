@@ -6,6 +6,7 @@ import InstalasiProfesional from "./pages/InstalasiProfesional"
 import AcSplitRumah from "./pages/AcSplitRumah"
 import DaikinPurwokerto from "./pages/DaikinPurwokerto"
 import GreePurwokerto from "./pages/GreePurwokerto"
+import MideaPurwokerto from "./pages/MideaPurwokerto"
 import SharpPurwokerto from "./pages/SharpPurwokerto"
 import PanasonicPurwokerto from "./pages/PanasonicPurwokerto"
 import TentangKami from "./pages/TentangKami"
@@ -42,6 +43,16 @@ export default function App() {
           <Route
             path="/gree-purwokerto"
             element={<GreePurwokerto />}
+          />
+
+          <Route
+            path="/brand/midea"
+            element={<MideaPurwokerto />}
+          />
+
+          <Route
+            path="/midea-purwokerto"
+            element={<MideaPurwokerto />}
           />
 
           <Route
