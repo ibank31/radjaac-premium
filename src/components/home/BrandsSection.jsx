@@ -10,11 +10,17 @@ const OTHER_BRAND_ROWS = [
 ]
 
 const getLogoClassName = (brandName) => {
-  if (brandName === "Hisense") {
-    return "max-h-[52px] sm:max-h-[58px] scale-125 object-contain opacity-95 group-hover:opacity-100 transition"
+  const baseClass = "object-contain opacity-95 group-hover:opacity-100 transition"
+
+  const logoSizes = {
+    Daikin: "max-h-[34px] max-w-[150px] sm:max-h-[38px] sm:max-w-[165px]",
+    Gree: "max-h-[34px] max-w-[150px] sm:max-h-[38px] sm:max-w-[165px]",
+    Midea: "max-h-[40px] max-w-[150px] sm:max-h-[44px] sm:max-w-[165px]",
+    Hisense: "max-h-[38px] max-w-[150px] sm:max-h-[42px] sm:max-w-[165px]",
+    Sansui: "max-h-[34px] max-w-[150px] sm:max-h-[38px] sm:max-w-[165px]",
   }
 
-  return "max-h-[42px] sm:max-h-[48px] object-contain opacity-90 group-hover:opacity-100 transition"
+  return `${baseClass} ${logoSizes[brandName] || "max-h-[38px] max-w-[150px] sm:max-h-[42px] sm:max-w-[165px]"}`
 }
 
 export default function BrandsSection() {
@@ -51,10 +57,12 @@ export default function BrandsSection() {
           <Link
             key={brand.name}
             to={brand.href}
-            className="group rounded-[24px] border border-white/10 bg-white/[0.03] hover:bg-[#0A1930] transition-all duration-300 p-4 sm:p-5 flex flex-col items-center text-center"
+            className={`group rounded-[24px] border border-white/10 bg-white/[0.03] hover:bg-[#0A1930] transition-all duration-300 p-4 sm:p-5 flex flex-col items-center text-center ${
+              brand.name === "Sansui" ? "col-span-2 mx-auto w-[calc(50%-0.5rem)] md:col-span-1 md:w-auto" : ""
+            }`}
             aria-label={`Lihat brand ${brand.name}`}
           >
-            <div className="h-[64px] sm:h-[72px] flex items-center justify-center mb-4">
+            <div className="h-[72px] sm:h-[78px] flex items-center justify-center mb-3 w-full">
               <img
                 src={brand.logo}
                 alt={`Logo ${brand.name}`}
@@ -62,7 +70,7 @@ export default function BrandsSection() {
               />
             </div>
 
-            <p className="text-white/50 text-xs sm:text-sm leading-5 mb-4">
+            <p className="text-white/50 text-xs sm:text-sm leading-5 mb-4 min-h-[40px] flex items-center justify-center">
               {brand.tagline}
             </p>
 
