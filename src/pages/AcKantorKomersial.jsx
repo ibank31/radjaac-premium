@@ -69,6 +69,13 @@ const acTypes = [
   },
 ]
 
+const cassetteHighlights = [
+  "Tampilan lebih rapi karena unit menyatu di plafon",
+  "Sebaran udara lebih merata untuk area kantor, cafe, showroom, dan ruang tunggu",
+  "Cocok untuk ruangan komersial yang ingin terlihat clean dan profesional",
+  "Perlu cek plafon, drainase, jalur pipa, dan posisi outdoor sebelum pemasangan",
+]
+
 const areas = [
   { title: "Kantor", icon: Building2 },
   { title: "Toko / Minimarket", icon: Store },
@@ -127,8 +134,12 @@ const faqItems = [
     answer: "Kantor kecil bisa memakai AC split wall. Untuk ruangan lebih luas atau butuh sebaran udara merata, bisa dipertimbangkan cassette, floor standing, atau solusi project sesuai kondisi ruangan.",
   },
   {
+    question: "Apakah RADJA AC melayani AC cassette?",
+    answer: "Ya. RADJA AC bisa membantu kebutuhan AC cassette untuk kantor, cafe, showroom, klinik, ruang meeting, dan ruang komersial lain. Kebutuhan plafon, drainase, jalur pipa, dan posisi outdoor perlu dicek lebih dulu.",
+  },
+  {
     question: "Kapan perlu AC cassette atau floor standing?",
-    answer: "Cassette cocok untuk ruangan yang butuh udara menyebar lebih merata, sedangkan floor standing cocok untuk ruangan besar, plafon tinggi, aula, toko besar, atau ruang acara.",
+    answer: "Cassette cocok untuk ruangan yang butuh udara menyebar lebih merata dan tampilan plafon lebih rapi, sedangkan floor standing cocok untuk ruangan besar, plafon tinggi, aula, toko besar, atau ruang acara.",
   },
   {
     question: "Apakah bisa bantu survey atau hitung kebutuhan unit?",
@@ -180,7 +191,7 @@ export default function AcKantorKomersial() {
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
         title="AC Kantor & Komersial Purwokerto | Partai Besar RADJA AC"
-        description="Konsultasi AC kantor, toko, cafe, showroom, ruang usaha, dan pembelian partai besar. RADJA AC bantu rekomendasi unit, brand, dan instalasi."
+        description="Konsultasi AC kantor, toko, cafe, showroom, ruang usaha, AC cassette, dan pembelian partai besar. RADJA AC bantu rekomendasi unit, brand, dan instalasi."
         canonicalPath="/katalog/ac-kantor-komersial"
       />
 
@@ -217,7 +228,7 @@ export default function AcKantorKomersial() {
               </h1>
 
               <p className="mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-                RADJA AC melayani kebutuhan AC untuk kantor, toko, cafe, showroom, ruang usaha, hingga pembelian banyak unit. Kami bantu arahkan tipe AC, kapasitas, brand, dan kebutuhan instalasi.
+                RADJA AC melayani kebutuhan AC untuk kantor, toko, cafe, showroom, ruang usaha, AC cassette, hingga pembelian banyak unit. Kami bantu arahkan tipe AC, kapasitas, brand, dan kebutuhan instalasi.
               </p>
 
               <div className="mx-auto mb-5 flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:mx-0 lg:justify-start">
@@ -231,7 +242,7 @@ export default function AcKantorKomersial() {
               </div>
 
               <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 lg:mx-0">
-                {["Kantor", "Toko", "Cafe", "Showroom", "Partai Besar"].map((item) => (
+                {["Kantor", "Toko", "Cafe", "Cassette", "Partai Besar"].map((item) => (
                   <span key={item} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5">
                     <CheckCircle2 className="h-3.5 w-3.5 text-cyan-300" />
                     {item}
@@ -317,6 +328,30 @@ export default function AcKantorKomersial() {
                 <p className="text-sm leading-7 text-white/60">{description}</p>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
+          <div className="overflow-hidden rounded-[34px] border border-cyan-300/20 bg-cyan-300/[0.055] p-6 shadow-[0_35px_90px_rgba(8,145,178,0.10)] sm:p-8 lg:p-10">
+            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div>
+                <SectionLabel>AC Cassette</SectionLabel>
+                <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">AC cassette untuk tampilan plafon yang lebih rapi</h2>
+                <p className="mb-6 text-sm leading-7 text-white/70 sm:text-base">
+                  RADJA AC juga bisa bantu kebutuhan AC cassette untuk kantor, cafe, restoran, showroom, klinik, ruang meeting, dan ruang komersial yang membutuhkan sebaran udara lebih merata.
+                </p>
+                <WhatsAppButton className="mx-auto flex w-full max-w-[432px] lg:mx-0 lg:w-fit lg:max-w-none">Konsultasi AC Cassette</WhatsAppButton>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                {cassetteHighlights.map((item) => (
+                  <div key={item} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/55 p-4 text-sm leading-6 text-white/70">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
