@@ -10,7 +10,6 @@ import {
   MessageCircle,
   Moon,
   ShieldCheck,
-  Snowflake,
   Sparkles,
   Timer,
   Wind,
@@ -208,17 +207,17 @@ export default function AcInverter() {
                 AC inverter cocok untuk ruangan yang sering dipakai berjam-jam: kamar tidur, ruang keluarga, kantor kecil, dan toko tertentu. RADJA AC bantu cek apakah inverter benar-benar worth it untuk kebutuhan Anda.
               </p>
 
-              <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-                <WhatsAppButton />
+              <div className="mx-auto mb-5 flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:mx-0 lg:justify-start">
+                <WhatsAppButton className="w-full sm:w-auto" />
                 <a
                   href="#kapan-worth-it"
-                  className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05] sm:w-auto"
                 >
                   Lihat Kapan Cocok
                 </a>
               </div>
 
-              <div className="flex max-w-2xl flex-wrap gap-2 text-sm text-white/65">
+              <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 lg:mx-0">
                 {["Suhu stabil", "Pemakaian rutin", "Konsultasi PK", "Instalasi rapi"].map((item) => (
                   <span key={item} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5">
                     <CheckCircle2 className="h-3.5 w-3.5 text-cyan-300" />
@@ -275,8 +274,8 @@ export default function AcInverter() {
 
           <div className="grid gap-5 md:grid-cols-3">
             {inverterBenefits.map(({ title, description, icon: Icon }) => (
-              <article key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
+              <article key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 text-center transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]">
+                <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="mb-3 text-xl font-bold text-white">{title}</h3>
@@ -324,8 +323,8 @@ export default function AcInverter() {
 
               <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1">
                 {worthItItems.map(({ title, description, icon: Icon }) => (
-                  <article key={title} className="rounded-[26px] border border-white/10 bg-white/[0.04] p-5">
-                    <div className="mb-4 flex items-center gap-3">
+                  <article key={title} className="rounded-[26px] border border-white/10 bg-white/[0.04] p-5 text-center lg:text-left">
+                    <div className="mb-4 flex flex-col items-center gap-3 lg:flex-row">
                       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
                         <Icon className="h-5 w-5" />
                       </div>
@@ -365,7 +364,7 @@ export default function AcInverter() {
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
                 AC inverter akan lebih optimal kalau kapasitas, durasi pemakaian, daya listrik, dan instalasinya sesuai. Jangan pilih inverter hanya karena label hemat.
               </p>
-              <WhatsAppButton>Hitungkan Kebutuhan Inverter</WhatsAppButton>
+              <WhatsAppButton className="mx-auto flex w-fit lg:mx-0">Hitungkan Kebutuhan Inverter</WhatsAppButton>
             </div>
 
             <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-5 sm:p-6">
