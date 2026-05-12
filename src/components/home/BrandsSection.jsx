@@ -72,12 +72,12 @@ export default function BrandsSection() {
           <Link
             key={brand.name}
             to={brand.href}
-            className={`group rounded-[24px] border border-white/10 bg-white/[0.03] hover:bg-[#0A1930] transition-all duration-300 p-4 sm:p-5 flex flex-col items-center text-center ${
+            className={`group rounded-[24px] border border-white/10 bg-white/[0.03] hover:bg-[#0A1930] transition-all duration-300 px-4 py-5 sm:p-5 flex flex-col items-center justify-center text-center ${
               brand.name === "Sansui" ? "col-span-2 mx-auto w-[calc(50%-0.5rem)] md:col-span-1 md:w-auto" : ""
             }`}
             aria-label={`Lihat brand ${brand.name}`}
           >
-            <div className="h-[76px] sm:h-[82px] flex items-center justify-center mb-3 w-full">
+            <div className="flex h-[58px] w-full items-center justify-center sm:h-[64px]">
               <img
                 src={brand.logo}
                 alt={`Logo ${brand.name}`}
@@ -86,7 +86,7 @@ export default function BrandsSection() {
               />
             </div>
 
-            <p className="text-white/50 text-xs sm:text-sm leading-5 mb-4 min-h-[40px] flex items-center justify-center">
+            <p className="mt-4 mb-3 flex min-h-[36px] items-center justify-center text-xs leading-5 text-white/50 sm:text-sm">
               {brand.tagline}
             </p>
 
