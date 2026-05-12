@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home"
+import KatalogAc from "./pages/KatalogAc"
 import InstalasiAC from "./pages/InstalasiAC"
 import InstalasiProfesional from "./pages/InstalasiProfesional"
 import AcSplitRumah from "./pages/AcSplitRumah"
@@ -27,6 +28,8 @@ export default function App() {
       <ErrorBoundary>
         <Routes>
           <Route path="/" element={<Home />} />
+
+          <Route path="/katalog" element={<KatalogAc />} />
 
           <Route
             path="/brand/daikin"
