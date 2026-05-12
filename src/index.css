@@ -180,7 +180,7 @@ body {
 
 /* ══════════════════════════════════════════
    BRAND HERO ALIGNMENT
-   Hero copy left, chips stay centered.
+   Hero copy left, CTA and chips stay centered.
 ══════════════════════════════════════════ */
 main > section:first-of-type:has(img[src*="/assets/brands/"]) .grid > div:first-child {
   text-align: left;
@@ -193,8 +193,8 @@ main > section:first-of-type:has(img[src*="/assets/brands/"]) .grid > div:first-
 }
 
 main > section:first-of-type:has(img[src*="/assets/brands/"]) .grid > div:first-child > div:nth-last-child(2) {
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 main > section:first-of-type:has(img[src*="/assets/brands/"]) .grid > div:first-child > div:last-child {
@@ -216,6 +216,6 @@ main > section:first-of-type > .mx-auto.max-w-4xl.text-center > p {
 }
 
 main > section:first-of-type > .mx-auto.max-w-4xl.text-center > div:last-child {
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
