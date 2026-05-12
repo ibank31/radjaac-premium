@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { Award, BadgeCheck, Leaf, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
+import { Award, BadgeCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
 
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
@@ -135,9 +135,9 @@ export default function GreePurwokerto() {
           <div className="absolute bottom-[-200px] right-[-120px] h-[360px] w-[360px] rounded-full bg-cyan-400/18 blur-[120px]" />
         </div>
 
-        <section className="mx-auto max-w-7xl px-6 pb-8 pt-28 lg:px-8 lg:pb-20 lg:pt-32">
-          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
-            <div>
+        <section className="mx-auto max-w-7xl px-6 pb-6 pt-28 lg:px-8 lg:pb-16 lg:pt-32">
+          <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-16">
+            <div className="text-center lg:text-left">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-sm text-emerald-200">
                 <span className="h-2 w-2 rounded-full bg-emerald-300" />
                 BRAND VALUE RADJA AC
@@ -149,16 +149,16 @@ export default function GreePurwokerto() {
                 <span className="text-white/80">Gree</span>
               </div>
 
-              <h1 className="mb-5 max-w-xl text-3xl font-black leading-[1.05] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl">
+              <h1 className="mx-auto mb-5 max-w-xl text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl lg:mx-0">
                 AC Gree Purwokerto & Banyumas
                 <span className="block text-emerald-300">Hemat, nyaman, dan value kuat</span>
               </h1>
 
-              <p className="mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
+              <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
                 RADJA AC menyediakan AC Gree original untuk rumah, kantor, toko, dan kebutuhan bisnis. Konsultasikan ukuran ruangan, daya listrik, dan kebutuhan penggunaan untuk mendapatkan rekomendasi unit Gree yang paling sesuai.
               </p>
 
-              <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+              <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
                 <WhatsAppButton />
                 <a
                   href="#produk-gree"
@@ -168,7 +168,7 @@ export default function GreePurwokerto() {
                 </a>
               </div>
 
-              <div className="flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65">
+              <div className="mx-auto flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 lg:mx-0 lg:justify-start">
                 {["Gree Original", "Low Watt & Inverter", "Purwokerto & Banyumas"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">
                     {item}
@@ -177,7 +177,7 @@ export default function GreePurwokerto() {
               </div>
             </div>
 
-            <div className="relative mt-4 lg:mt-0">
+            <div className="relative mt-2 lg:mt-0">
               <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-emerald-500/10 blur-3xl" />
               <div className="absolute bottom-4 left-[-24px] h-56 w-56 rounded-full bg-cyan-500/10 blur-3xl" />
               <div className="relative mx-auto w-[88%] max-w-[360px] overflow-hidden rounded-[34px] border border-white/10 bg-slate-950/70 p-2 shadow-2xl sm:max-w-[430px] lg:max-w-[480px]">
@@ -193,24 +193,24 @@ export default function GreePurwokerto() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
-          <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-            <div>
+        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
+          <div className="grid items-center gap-7 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10">
+            <div className="text-center lg:text-left">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-300/20 bg-amber-300/10 px-4 py-2 text-sm font-semibold text-amber-200">
                 <Award className="h-4 w-4" />
                 Rekor MURI bersama Gree
               </div>
 
-              <h2 className="mb-5 text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+              <h2 className="mx-auto mb-4 max-w-2xl text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:mx-0 lg:text-5xl">
                 Bukti pencapaian brand partner Gree
               </h2>
 
-              <p className="mb-6 text-sm leading-7 text-white/70 sm:text-base">
+              <p className="mx-auto mb-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
                 RADJA AC menjadi bagian dari pencapaian Rekor MURI bersama Gree melalui performa penjualan dan dukungan brand partner. Ini menjadi trust signal penting untuk pelanggan yang mencari AC Gree original.
               </p>
 
               <div className="flex justify-center lg:justify-start">
-                <div className="inline-flex items-center justify-center gap-3 rounded-3xl border border-white/10 bg-white/[0.04] px-6 py-4 text-center text-white/80">
+                <div className="inline-flex items-center justify-center gap-3 rounded-3xl border border-white/10 bg-white/[0.04] px-5 py-3 text-center text-sm text-white/80 sm:text-base">
                   <BadgeCheck className="h-5 w-5 shrink-0 text-emerald-300" />
                   <span>Bagian dari pencapaian Rekor MURI Gree</span>
                 </div>
@@ -229,8 +229,8 @@ export default function GreePurwokerto() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
-          <div className="mb-10 max-w-3xl">
+        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
+          <div className="mx-auto mb-8 max-w-3xl text-center lg:mx-0 lg:text-left">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-emerald-300">Keunggulan Gree</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kenapa banyak pelanggan memilih AC Gree?</h2>
             <p className="leading-7 text-white/65">Gree cocok untuk pelanggan yang ingin AC original dengan value kuat, pilihan hemat listrik, dan performa nyaman untuk penggunaan harian.</p>
@@ -238,7 +238,7 @@ export default function GreePurwokerto() {
 
           <div className="grid gap-5 md:grid-cols-3">
             {benefits.map(({ title, description, icon: Icon }) => (
-              <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-emerald-300/30 hover:bg-white/[0.06]">
+              <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 text-center transition hover:-translate-y-1 hover:border-emerald-300/30 hover:bg-white/[0.06]">
                 <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-emerald-400/20 bg-emerald-400/10 text-emerald-300">
                   <Icon className="h-6 w-6" />
                 </div>
@@ -249,8 +249,8 @@ export default function GreePurwokerto() {
           </div>
         </section>
 
-        <section id="produk-gree" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
-          <div className="mb-10 text-center">
+        <section id="produk-gree" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
+          <div className="mx-auto mb-8 max-w-3xl text-center">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-emerald-300">Rekomendasi Produk</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilihan AC Gree di RADJA AC</h2>
             <p className="mx-auto max-w-2xl leading-7 text-white/65">Harga dan stok Gree dapat berubah. CTA diarahkan ke WhatsApp agar pelanggan mendapat info terbaru dan rekomendasi yang sesuai.</p>
@@ -303,8 +303,8 @@ export default function GreePurwokerto() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
-          <div className="mb-10 max-w-3xl">
+        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
+          <div className="mx-auto mb-8 max-w-3xl text-center lg:mx-0 lg:text-left">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-emerald-300">Panduan PK</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilih kapasitas AC Gree sesuai ruangan</h2>
             <p className="leading-7 text-white/65">Section edukasi ini membantu pelanggan memahami kebutuhan dasar sebelum konsultasi, sekaligus memperkuat SEO untuk pencarian AC rumah dan kantor.</p>
@@ -321,7 +321,7 @@ export default function GreePurwokerto() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
+        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="rounded-[34px] border border-emerald-400/20 bg-emerald-400/5 p-6 text-center shadow-[0_35px_90px_rgba(6,95,70,0.16)] sm:p-10 lg:p-14">
             <div className="mb-4 flex justify-center text-emerald-300"><Wind className="h-10 w-10" /></div>
             <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Butuh rekomendasi AC Gree yang paling cocok?</h2>
@@ -330,8 +330,8 @@ export default function GreePurwokerto() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
-          <div className="mb-10 text-center">
+        <section className="mx-auto max-w-7xl px-6 pb-12 pt-8 lg:px-8 lg:pb-20 lg:pt-16">
+          <div className="mx-auto mb-8 max-w-3xl text-center">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-emerald-300">FAQ</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pertanyaan seputar AC Gree</h2>
           </div>
