@@ -364,7 +364,7 @@ export default function AcInverter() {
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
                 AC inverter akan lebih optimal kalau kapasitas, durasi pemakaian, daya listrik, dan instalasinya sesuai. Jangan pilih inverter hanya karena label hemat.
               </p>
-              <WhatsAppButton className="mx-auto flex w-fit lg:mx-0">Hitungkan Kebutuhan Inverter</WhatsAppButton>
+              <WhatsAppButton className="mx-auto flex w-full max-w-[432px] lg:mx-0 lg:w-fit lg:max-w-none">Hitungkan Kebutuhan Inverter</WhatsAppButton>
             </div>
 
             <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-5 sm:p-6">
