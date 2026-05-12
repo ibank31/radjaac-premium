@@ -9,6 +9,14 @@ const OTHER_BRAND_ROWS = [
   ["TCL", "LG"],
 ]
 
+const getLogoClassName = (brandName) => {
+  if (brandName === "Hisense") {
+    return "max-h-[52px] sm:max-h-[58px] scale-125 object-contain opacity-95 group-hover:opacity-100 transition"
+  }
+
+  return "max-h-[42px] sm:max-h-[48px] object-contain opacity-90 group-hover:opacity-100 transition"
+}
+
 export default function BrandsSection() {
   return (
     <section className="pb-16" id="brand-lainnya">
@@ -50,9 +58,7 @@ export default function BrandsSection() {
               <img
                 src={brand.logo}
                 alt={`Logo ${brand.name}`}
-                className={`max-h-[42px] sm:max-h-[48px] object-contain opacity-90 group-hover:opacity-100 transition ${
-                  brand.name === "Sansui" ? "brightness-0 invert" : ""
-                }`}
+                className={getLogoClassName(brand.name)}
               />
             </div>
 
