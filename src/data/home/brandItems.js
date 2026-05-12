@@ -1,26 +1,46 @@
 export const BRAND_ITEMS = [
   {
-    tagline: "Premium Cooling Solution",
-    logo: "/logo-product/daikin-logo.webp",
+    name: "Daikin",
+    tagline: "Premium & bergaransi",
+    logo: "/assets/logos/daikin-logo.webp",
+    href: "/brand/daikin",
   },
   {
-    tagline: "Reliable & Efficient",
-    logo: "/logo-product/panasonic-logo.webp",
+    name: "Gree",
+    tagline: "Value kuat & efisien",
+    logo: "/assets/logos/gree-logo.webp",
+    href: "/brand/gree",
   },
   {
-    tagline: "Plasmacluster Air Care",
-    logo: "/logo-product/sharp-logo.webp",
+    name: "Midea",
+    tagline: "Modern & praktis",
+    logo: "/assets/logos/midea-logo.webp",
+    href: "/brand/midea",
   },
   {
-    tagline: "Smart Cooling Technology",
-    logo: "/logo-product/samsung-logo.webp",
+    name: "Hisense",
+    tagline: "Fitur modern harian",
+    logo: "/assets/logos/hisense-logo.png",
+    href: "/brand/hisense",
   },
   {
-    tagline: "Best Value Performance",
-    logo: "/logo-product/gree-logo.webp",
+    name: "Sansui",
+    tagline: "Simple & ekonomis",
+    logo: "/assets/logos/sansui-logo.png",
+    href: "/brand/sansui",
   },
-  {
-    tagline: "Modern Cooling System",
-    logo: "/logo-product/midea-logo.webp",
-  },
-];
+]
+
+export const OTHER_BRAND_ITEMS = [
+  "Sharp",
+  "Panasonic",
+  "LG",
+  "Samsung",
+  "TCL",
+  "Toshiba",
+  "Mitsubishi",
+  "Aqua",
+  "Polytron",
+  "Changhong",
+  "Ariston",
+]

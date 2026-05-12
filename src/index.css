@@ -177,3 +177,60 @@ body {
   align-items: center;
   gap: 6px;
 }
+
+/* ══════════════════════════════════════════
+   BRAND HERO ALIGNMENT
+   Hero copy left, CTA and chips stay centered.
+══════════════════════════════════════════ */
+main > section:first-of-type:has(img[src*="/assets/brands/"]) .grid > div:first-child {
+  text-align: left;
+}
+
+main > section:first-of-type:has(img[src*="/assets/brands/"]) .grid > div:first-child > h1,
+main > section:first-of-type:has(img[src*="/assets/brands/"]) .grid > div:first-child > p {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+main > section:first-of-type:has(img[src*="/assets/brands/"]) .grid > div:first-child > div:nth-last-child(2) {
+  align-items: center;
+  justify-content: center;
+}
+
+main > section:first-of-type:has(img[src*="/assets/brands/"]) .grid > div:first-child > div:last-child {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+main > section:first-of-type > .mx-auto.max-w-4xl.text-center {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+main > section:first-of-type > .mx-auto.max-w-4xl.text-center > p {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+main > section:first-of-type > .mx-auto.max-w-4xl.text-center > div:last-child {
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  main > section:first-of-type:has(img[src*="/assets/brands/"]) .grid > div:first-child > div:nth-last-child(2),
+  main > section:first-of-type > .mx-auto.max-w-4xl.text-center > div:last-child {
+    width: 100%;
+  }
+
+  main > section:first-of-type:has(img[src*="/assets/brands/"]) .grid > div:first-child > div:nth-last-child(2) > a,
+  main > section:first-of-type > .mx-auto.max-w-4xl.text-center > div:last-child > a {
+    width: 100%;
+    min-height: 3.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}

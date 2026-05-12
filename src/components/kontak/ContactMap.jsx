@@ -1,4 +1,7 @@
 import WhatsappIcon from "../ui/WhatsappIcon";
+import { SITE_DATA } from "../../constants/siteData";
+
+const WA_LINK = SITE_DATA.whatsappUrl;
 
 export default function ContactMap() {
   return (
@@ -40,7 +43,7 @@ export default function ContactMap() {
         </p>
 
         <a
-          href="https://wa.me/62882008246099"
+          href={WA_LINK}
           target="_blank"
           rel="noreferrer"
           className="inline-flex w-full items-center justify-center gap-3 rounded-2xl sm:rounded-full bg-[#25D366] px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold text-slate-950 shadow-[0_24px_60px_rgba(37,211,102,0.24)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A]"

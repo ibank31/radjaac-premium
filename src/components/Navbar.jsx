@@ -14,6 +14,10 @@ const NAV_ITEMS = [
     type: "dropdown",
     items: [
       {
+        label: "Panduan Pilih AC",
+        href: "/katalog",
+      },
+      {
         label: "AC Split Rumah",
         href: "/katalog/ac-split-rumah",
       },
@@ -27,11 +31,7 @@ const NAV_ITEMS = [
       },
       {
         label: "AC Kantor / Komersial",
-        href: "/katalog/ac-kantor",
-      },
-      {
-        label: "Kapasitas AC",
-        href: "/katalog/kapasitas-ac",
+        href: "/katalog/ac-kantor-komersial",
       },
     ],
   },
@@ -49,16 +49,20 @@ const NAV_ITEMS = [
         href: "/brand/gree",
       },
       {
-        label: "Panasonic",
-        href: "/brand/panasonic",
+        label: "Midea",
+        href: "/brand/midea",
       },
       {
-        label: "Samsung",
-        href: "/brand/samsung",
+        label: "Hisense",
+        href: "/brand/hisense",
       },
       {
-        label: "Brand Lain",
-        href: "/brand",
+        label: "Sansui",
+        href: "/brand/sansui",
+      },
+      {
+        label: "Brand Lainnya",
+        href: "/brand/lainnya",
       },
     ],
   },
@@ -66,13 +70,6 @@ const NAV_ITEMS = [
   {
     label: "Instalasi Profesional",
     to: "/instalasi-profesional",
-    type: "link",
-    end: true,
-  },
-
-  {
-    label: "Solusi AC",
-    to: "/solusi-ac",
     type: "link",
     end: true,
   },

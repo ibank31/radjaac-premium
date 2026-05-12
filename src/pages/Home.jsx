@@ -5,20 +5,20 @@ import Navbar from "../components/Navbar"
 import HeroSection from "../components/HeroSection"
 
 import CategorySection from "../components/home/CategorySection"
+import TrustSection from "../components/home/TrustSection"
 import BrandsSection from "../components/home/BrandsSection"
 import WhyChooseSection from "../components/home/WhyChooseSection"
 
 import ClosingCTA from "../components/ClosingCTA"
 import Footer from "../components/Footer"
-import FloatingWhatsapp from "../components/FloatingWhatsapp"
 
 export default function Home() {
   return (
     <div className="bg-[#050816] text-white overflow-hidden">
 
       <SeoHead
-        title="Dealer AC Purwokerto & Banyumas | Jual AC Daikin, Gree, Sharp - RADJA AC"
-        description="RADJA AC menyediakan penjualan AC berbagai brand seperti Daikin, Gree, Sharp, Panasonic, LG, Midea dan lainnya di Purwokerto & Banyumas. Ready stock, instalasi profesional, dan konsultasi gratis."
+        title="Dealer AC Resmi Purwokerto & Banyumas | RADJA AC"
+        description="RADJA AC melayani penjualan AC original berbagai brand resmi seperti Daikin, Gree, Midea, Hisense, Sansui, Sharp, Panasonic, LG, Samsung dan lainnya di Purwokerto & Banyumas."
         canonicalPath="/"
       />
 
@@ -33,15 +33,15 @@ export default function Home() {
                 name: "Brand AC apa saja yang tersedia di RADJA AC?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Kami menyediakan berbagai brand AC premium seperti Daikin, Gree, Sharp, Panasonic, LG, Midea, Samsung, TCL, Toshiba, Mitsubishi, Aqua, Polytron, Changhong, Hisense, Ariston, dan Sansui.",
+                  text: "RADJA AC menyediakan AC original berbagai brand seperti Daikin, Gree, Midea, Hisense, Sansui, Sharp, Panasonic, LG, Samsung, TCL, Toshiba, Mitsubishi, Aqua, Polytron, Changhong, Ariston, dan lainnya.",
                 },
               },
               {
                 "@type": "Question",
-                name: "AC berapa PK yang cocok untuk ruangan saya?",
+                name: "Apakah bisa konsultasi ukuran PK sebelum membeli AC?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Rekomendasi PK AC tergantung luas ruangan dan jumlah penghuni. AC 1 PK untuk ruang 12-15m², 1.5 PK untuk 16-20m², 2 PK untuk 21-25m². Konsultasikan dengan tim kami untuk rekomendasi yang tepat.",
+                  text: "Bisa. Tim RADJA AC dapat membantu rekomendasi kapasitas AC berdasarkan luas ruangan, fungsi ruangan, daya listrik, dan kebutuhan penggunaan.",
                 },
               },
             ],
@@ -63,6 +63,8 @@ export default function Home() {
 
         <CategorySection />
 
+        <TrustSection />
+
         <BrandsSection />
 
         <WhyChooseSection />
@@ -71,7 +73,6 @@ export default function Home() {
       </div>
 
       <Footer />
-      <FloatingWhatsapp />
     </div>
   );
 }

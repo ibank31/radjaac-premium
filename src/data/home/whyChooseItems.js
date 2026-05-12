@@ -2,8 +2,8 @@ import { Star, Wrench, MessageCircle, Headphones } from "lucide-react";
 
 export const WHY_CHOOSE_ITEMS = [
   {
-    title: "Multi Brand",
-    desc: "Daikin, Gree, Panasonic, Samsung & pilihan lengkap lainnya",
+    title: "Dealer Multibrand",
+    desc: "Daikin, Gree, Midea, Hisense, Sansui & brand populer lainnya",
     Icon: Star,
   },
   {
@@ -12,13 +12,13 @@ export const WHY_CHOOSE_ITEMS = [
     Icon: Wrench,
   },
   {
-    title: "Konsultasi Gratis",
-    desc: "Kami bantu temukan AC yang paling tepat untuk Anda",
+    title: "Konsultasi Produk",
+    desc: "Kami bantu pilih tipe AC dan ukuran PK sesuai kebutuhan ruangan",
     Icon: MessageCircle,
   },
   {
-    title: "After Sales Support",
-    desc: "Garansi penuh dan layanan purna jual terpercaya",
+    title: "After-Sales Support",
+    desc: "Dukungan setelah pembelian untuk pemakaian AC yang lebih tenang",
     Icon: Headphones,
   },
 ];

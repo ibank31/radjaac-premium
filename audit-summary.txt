@@ -1,0 +1,43 @@
+---PAGE IMPORT USAGE---
+AcInverterPurwokerto.jsx : 0
+AcLowWattPurwokerto.jsx : 0
+AcPurwokertoSelatan.jsx : 0
+AcSplitRumah.jsx : 0
+BrandDaikin.jsx : 0
+DaikinPurwokerto.jsx : 0
+GreePurwokerto.jsx : 0
+Home.jsx : 0
+InstalasiAC.jsx : 0
+InstalasiProfesional.jsx : 0
+Kontak.jsx : 0
+LocationPage.jsx : 0
+NotFound.jsx : 0
+PanasonicPurwokerto.jsx : 0
+Portfolio.jsx : 0
+SharpPurwokerto.jsx : 0
+TentangKami.jsx : 0
+---HARDCODED WA LINKS---
+src\components\CuciACCTASection.jsx:20 => href="https://wa.me/62882008246099"
+src\components\kontak\ContactMap.jsx:43 => href="https://wa.me/62882008246099"
+src\components\tentang\AboutTrust.jsx:27 => href="https://wa.me/62882008246099"
+src\constants\siteData.js:9 => whatsappUrl: "https://wa.me/62882008246099",
+src\constants\siteData.js:10 => phoneNumber: "+62882008246099",
+src\pages\InstalasiAC.jsx:176 => href="https://wa.me/62882008246099"
+---FILES WITHOUT SeoHead OR Helmet---
+AcInverterPurwokerto.jsx: SeoHead=true Helmet=true
+AcLowWattPurwokerto.jsx: SeoHead=true Helmet=true
+AcPurwokertoSelatan.jsx: SeoHead=true Helmet=true
+AcSplitRumah.jsx: SeoHead=true Helmet=true
+BrandDaikin.jsx: SeoHead=true Helmet=true
+DaikinPurwokerto.jsx: SeoHead=true Helmet=true
+GreePurwokerto.jsx: SeoHead=true Helmet=true
+Home.jsx: SeoHead=true Helmet=true
+InstalasiAC.jsx: SeoHead=true Helmet=true
+InstalasiProfesional.jsx: SeoHead=true Helmet=true
+Kontak.jsx: SeoHead=true Helmet=false
+LocationPage.jsx: SeoHead=true Helmet=true
+NotFound.jsx: SeoHead=false Helmet=true
+PanasonicPurwokerto.jsx: SeoHead=true Helmet=true
+Portfolio.jsx: SeoHead=true Helmet=false
+SharpPurwokerto.jsx: SeoHead=true Helmet=true
+TentangKami.jsx: SeoHead=true Helmet=false

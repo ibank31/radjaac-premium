@@ -1,11 +1,19 @@
 import { Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home"
+import KatalogAc from "./pages/KatalogAc"
 import InstalasiAC from "./pages/InstalasiAC"
 import InstalasiProfesional from "./pages/InstalasiProfesional"
 import AcSplitRumah from "./pages/AcSplitRumah"
+import AcInverter from "./pages/AcInverter"
+import AcLowWatt from "./pages/AcLowWatt"
+import AcKantorKomersial from "./pages/AcKantorKomersial"
 import DaikinPurwokerto from "./pages/DaikinPurwokerto"
 import GreePurwokerto from "./pages/GreePurwokerto"
+import MideaPurwokerto from "./pages/MideaPurwokerto"
+import HisensePurwokerto from "./pages/HisensePurwokerto"
+import SansuiPurwokerto from "./pages/SansuiPurwokerto"
+import BrandLainnya from "./pages/BrandLainnya"
 import SharpPurwokerto from "./pages/SharpPurwokerto"
 import PanasonicPurwokerto from "./pages/PanasonicPurwokerto"
 import TentangKami from "./pages/TentangKami"
@@ -24,6 +32,12 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
 
+          <Route path="/katalog" element={<KatalogAc />} />
+
+          <Route
+            path="/brand/daikin"
+            element={<DaikinPurwokerto />}
+          />
 
           <Route
             path="/daikin-purwokerto"
@@ -31,8 +45,48 @@ export default function App() {
           />
 
           <Route
+            path="/brand/gree"
+            element={<GreePurwokerto />}
+          />
+
+          <Route
             path="/gree-purwokerto"
             element={<GreePurwokerto />}
+          />
+
+          <Route
+            path="/brand/midea"
+            element={<MideaPurwokerto />}
+          />
+
+          <Route
+            path="/midea-purwokerto"
+            element={<MideaPurwokerto />}
+          />
+
+          <Route
+            path="/brand/hisense"
+            element={<HisensePurwokerto />}
+          />
+
+          <Route
+            path="/hisense-purwokerto"
+            element={<HisensePurwokerto />}
+          />
+
+          <Route
+            path="/brand/sansui"
+            element={<SansuiPurwokerto />}
+          />
+
+          <Route
+            path="/sansui-purwokerto"
+            element={<SansuiPurwokerto />}
+          />
+
+          <Route
+            path="/brand/lainnya"
+            element={<BrandLainnya />}
           />
 
           <Route
@@ -58,6 +112,21 @@ export default function App() {
           <Route
             path="/katalog/ac-split-rumah"
             element={<AcSplitRumah />}
+          />
+
+          <Route
+            path="/katalog/ac-inverter"
+            element={<AcInverter />}
+          />
+
+          <Route
+            path="/katalog/ac-low-watt"
+            element={<AcLowWatt />}
+          />
+
+          <Route
+            path="/katalog/ac-kantor-komersial"
+            element={<AcKantorKomersial />}
           />
 
           <Route
