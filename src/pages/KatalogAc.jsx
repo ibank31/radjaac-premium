@@ -20,20 +20,23 @@ const catalogItems = [
   {
     title: "AC Inverter",
     description: "Untuk pemakaian rutin dan efisiensi listrik jangka panjang.",
-    href: "#konsultasi-katalog",
+    href: "/katalog/ac-inverter",
     icon: Zap,
+    active: true,
   },
   {
     title: "AC Low Watt",
     description: "Untuk rumah dengan daya listrik terbatas.",
-    href: "#konsultasi-katalog",
+    href: "/katalog/ac-low-watt",
     icon: Power,
+    active: true,
   },
   {
     title: "AC Kantor / Komersial",
-    description: "Untuk kantor, toko, ruang usaha, dan area lebih besar.",
-    href: "#konsultasi-katalog",
+    description: "Untuk kantor, toko, cassette, ruang usaha, dan pembelian banyak unit.",
+    href: "/katalog/ac-kantor-komersial",
     icon: Building2,
+    active: true,
   },
   {
     title: "Panduan Kapasitas AC",
@@ -57,13 +60,13 @@ const pkGuide = [
   ["2 PK", "± 30–40 m²", "Ruangan besar / usaha"],
 ]
 
-function WhatsAppButton({ children = "Konsultasi Pilihan AC" }) {
+function WhatsAppButton({ children = "Konsultasi Pilihan AC", className = "" }) {
   return (
     <a
       href={WA_LINK}
       target="_blank"
       rel="noreferrer"
-      className="inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-6 py-4 font-bold text-slate-950 shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A]"
+      className={`inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-6 py-4 font-bold text-slate-950 shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A] ${className}`}
     >
       <WhatsappIcon className="h-5 w-5 text-slate-950" />
       {children}
@@ -80,7 +83,7 @@ function CategoryLink({ item }) {
       <h3 className="mb-3 text-lg font-bold text-white">{item.title}</h3>
       <p className="text-sm leading-6 text-white/60">{item.description}</p>
       <div className="mt-4 text-xs font-semibold text-cyan-300">
-        {item.active ? "Lihat Detail" : "Konsultasikan"}
+        {item.active ? "Lihat Detail" : "Lihat Panduan"}
       </div>
     </>
   )
@@ -130,7 +133,7 @@ export default function KatalogAc() {
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
         title="Katalog AC Purwokerto & Banyumas | Panduan Pilih AC RADJA AC"
-        description="Panduan memilih AC berdasarkan kebutuhan: AC Split Rumah, Inverter, Low Watt, AC Kantor, dan kapasitas PK. RADJA AC bantu rekomendasi unit sesuai ruangan, daya listrik, dan budget."
+        description="Panduan memilih AC berdasarkan kebutuhan: AC Split Rumah, Inverter, Low Watt, AC Kantor, AC Cassette, partai besar, dan kapasitas PK. RADJA AC bantu rekomendasi unit sesuai ruangan, daya listrik, dan budget."
         canonicalPath="/katalog"
       />
 
@@ -156,14 +159,14 @@ export default function KatalogAc() {
               </h1>
 
               <p className="mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                Mulai dari luas ruangan, daya listrik, dan pola pemakaian. RADJA AC bantu arahkan pilihan AC Split, Inverter, Low Watt, hingga kebutuhan kantor.
+                Mulai dari luas ruangan, daya listrik, dan pola pemakaian. RADJA AC bantu arahkan pilihan AC Split, Inverter, Low Watt, AC Cassette, hingga kebutuhan kantor dan partai besar.
               </p>
 
-              <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-                <WhatsAppButton />
+              <div className="mx-auto flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:mx-0 lg:justify-start">
+                <WhatsAppButton className="w-full sm:w-auto" />
                 <a
                   href="#kategori-katalog"
-                  className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05] sm:w-auto"
                 >
                   Lihat Kategori
                 </a>
