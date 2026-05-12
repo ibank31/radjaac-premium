@@ -58,6 +58,7 @@ const NAV_ITEMS = [
       },
       {
         label: "Sansui",
+        href: "/brand/sansui",
       },
     ],
   },
