@@ -7,7 +7,6 @@ import {
   ClipboardCheck,
   MessageCircle,
   ShieldCheck,
-  Sparkles,
   Wrench,
 } from "lucide-react"
 
@@ -92,12 +91,12 @@ function WhatsAppButton({ children = "Konsultasi Instalasi" }) {
 
 function InstallationVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-[430px] overflow-hidden rounded-[34px] border border-cyan-300/15 bg-slate-950/70 p-5 shadow-[0_28px_80px_rgba(8,20,47,0.42)]">
+    <div className="relative mx-auto w-full max-w-[430px] overflow-hidden rounded-[34px] border border-cyan-300/15 bg-slate-950/70 p-4 shadow-[0_28px_80px_rgba(8,20,47,0.42)]">
       <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-cyan-400/12 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-16 -left-16 h-44 w-44 rounded-full bg-blue-500/12 blur-3xl" />
 
-      <div className="relative rounded-[28px] border border-white/10 bg-white/[0.035] p-5">
-        <div className="mb-5 flex items-center justify-between gap-4">
+      <div className="relative rounded-[28px] border border-white/10 bg-white/[0.035] p-4">
+        <div className="mb-4 flex items-center justify-between gap-4">
           <div>
             <p className="mb-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Visual Instalasi</p>
             <h3 className="text-xl font-black text-white">Foto proyek menyusul</h3>
@@ -112,8 +111,9 @@ function InstallationVisual() {
             "Indoor unit",
             "Jalur pipa & kabel",
             "Outdoor unit",
+            "Pengecekan akhir",
           ].map((item) => (
-            <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-950/60 p-4">
+            <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-950/60 p-3.5">
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-cyan-300/10 text-cyan-300">
                 <Check className="h-4 w-4" />
               </span>
@@ -122,8 +122,8 @@ function InstallationVisual() {
           ))}
         </div>
 
-        <div className="mt-5 rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm leading-6 text-white/55">
-          Area ini nanti bisa diisi foto instalasi asli RADJA AC supaya halaman terasa lebih nyata dan premium.
+        <div className="mt-4 rounded-2xl border border-cyan-300/15 bg-cyan-300/10 p-4 text-sm leading-6 text-white/65">
+          Nanti area ini bisa diganti foto instalasi asli RADJA AC.
         </div>
       </div>
     </div>
@@ -159,15 +159,15 @@ export default function InstalasiProfesional() {
           <div className="absolute bottom-[-200px] right-[-120px] h-[360px] w-[360px] rounded-full bg-blue-500/14 blur-[120px]" />
         </div>
 
-        <section className="mx-auto max-w-7xl px-6 pb-8 pt-28 lg:px-8 lg:pb-16 lg:pt-32">
-          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
+        <section className="mx-auto max-w-7xl px-6 pb-8 pt-24 lg:px-8 lg:pb-16 lg:pt-32">
+          <div className="grid items-center gap-7 lg:grid-cols-2 lg:gap-16">
             <div className="text-center lg:text-left">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200">
                 <span className="h-2 w-2 rounded-full bg-cyan-300" />
                 INSTALASI PROFESIONAL
               </div>
 
-              <div className="mb-5 text-sm text-white/50">
+              <div className="mb-4 text-sm text-white/50">
                 <Link to="/" className="transition hover:text-cyan-200">Beranda</Link>
                 <span className="mx-2">/</span>
                 <span className="text-white/80">Instalasi Profesional</span>
@@ -175,11 +175,11 @@ export default function InstalasiProfesional() {
 
               <h1 className="mx-auto mb-5 max-w-2xl text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl lg:mx-0">
                 Instalasi AC rapi
-                <span className="block text-cyan-300">untuk hasil yang lebih nyaman</span>
+                <span className="block text-cyan-300">untuk unit baru Anda</span>
               </h1>
 
               <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC membantu pemasangan AC baru dengan penentuan titik yang tepat, jalur pipa tertata, pengecekan unit, dan finishing yang rapi untuk rumah, kantor, toko, dan kebutuhan bisnis.
+                RADJA AC membantu pemasangan AC baru dengan titik indoor-outdoor yang tepat, jalur pipa tertata, dan pengecekan unit sebelum digunakan.
               </p>
 
               <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
