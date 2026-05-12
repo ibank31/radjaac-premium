@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, ChevronRight } from "lucide-react"
-import { BRAND_ITEMS, OTHER_BRAND_ITEMS } from "../../data/home/brandItems"
+import { BRAND_ITEMS } from "../../data/home/brandItems"
+
+const OTHER_BRAND_ROWS = [
+  ["Panasonic", "Mitsubishi", "Changhong"],
+  ["Samsung", "Polytron", "Toshiba"],
+  ["Sharp", "Ariston", "Aqua"],
+  ["TCL", "LG"],
+]
 
 export default function BrandsSection() {
   return (
@@ -61,7 +68,7 @@ export default function BrandsSection() {
       </div>
 
       <div className="rounded-[28px] border border-white/10 bg-white/[0.035] p-5 sm:p-6">
-        <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-cyan-300 uppercase tracking-[0.24em] text-xs mb-2">
               BRAND LAINNYA
@@ -73,14 +80,18 @@ export default function BrandsSection() {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-2">
-          {OTHER_BRAND_ITEMS.map((brand) => (
-            <span
-              key={brand}
-              className="rounded-full border border-white/10 bg-slate-950/40 px-3 py-1.5 text-sm text-white/70"
-            >
-              {brand}
-            </span>
+        <div className="space-y-2.5">
+          {OTHER_BRAND_ROWS.map((row) => (
+            <div key={row.join("-")} className="flex flex-wrap justify-center gap-2">
+              {row.map((brand) => (
+                <span
+                  key={brand}
+                  className="rounded-full border border-white/10 bg-slate-950/40 px-3.5 py-1.5 text-sm text-white/70"
+                >
+                  {brand}
+                </span>
+              ))}
+            </div>
           ))}
         </div>
       </div>
