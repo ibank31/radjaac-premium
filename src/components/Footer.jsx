@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { SITE_DATA } from "../constants/siteData";
 
 const contactItems = [
@@ -15,6 +16,17 @@ const contactItems = [
     label: "Alamat",
     value: "Purwokerto, Banyumas",
   },
+];
+
+const seoLinks = [
+  { label: "Katalog AC", to: "/katalog" },
+  { label: "AC Split Rumah", to: "/katalog/ac-split-rumah" },
+  { label: "AC Inverter", to: "/katalog/ac-inverter" },
+  { label: "AC Low Watt", to: "/katalog/ac-low-watt" },
+  { label: "AC Kantor & Komersial", to: "/katalog/ac-kantor-komersial" },
+  { label: "Daikin Purwokerto", to: "/brand/daikin" },
+  { label: "Midea Purwokerto", to: "/brand/midea" },
+  { label: "Gree Purwokerto", to: "/brand/gree" },
 ];
 
 export default function Footer() {
@@ -84,7 +96,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-white/10 pt-4 text-center text-xs text-white/30 sm:text-sm">
+        <div className="mt-8 border-t border-white/10 pt-6">
+          <h4 className="mb-4 text-center text-sm font-semibold uppercase tracking-[0.18em] text-cyan-200/75">Link Penting</h4>
+          <nav className="flex flex-wrap justify-center gap-2 text-center text-xs sm:text-sm">
+            {seoLinks.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-white/50 transition hover:border-cyan-300/30 hover:text-cyan-200"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        <div className="mt-6 border-t border-white/10 pt-4 text-center text-xs text-white/30 sm:text-sm">
           © 2026 RADJA AC Purwokerto. All rights reserved.
         </div>
       </div>
