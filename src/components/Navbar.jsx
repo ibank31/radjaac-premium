@@ -29,6 +29,10 @@ const NAV_ITEMS = [
         label: "AC Low Watt",
         href: "/katalog/ac-low-watt",
       },
+      {
+        label: "AC Kantor / Komersial",
+        href: "/katalog/ac-kantor-komersial",
+      },
     ],
   },
 
