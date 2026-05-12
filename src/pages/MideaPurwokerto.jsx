@@ -319,10 +319,12 @@ export default function MideaPurwokerto() {
 
             <div className="divide-y divide-white/10">
               {pkGuide.map(([pk, area, note]) => (
-                <div key={pk} className="grid gap-2 px-5 py-4 sm:grid-cols-[0.8fr_1fr_1.4fr] sm:items-center sm:gap-4">
-                  <div className="text-2xl font-black text-sky-300 sm:text-xl">{pk}</div>
-                  <div className="text-sm font-semibold text-white sm:text-base">{area}</div>
-                  <div className="text-sm leading-6 text-white/55">{note}</div>
+                <div key={pk} className="px-5 py-4 sm:grid sm:grid-cols-[0.8fr_1fr_1.4fr] sm:items-center sm:gap-4">
+                  <div className="grid grid-cols-[64px_1fr] items-baseline gap-4 sm:contents">
+                    <div className="text-xl font-black text-sky-300 sm:text-xl">{pk}</div>
+                    <div className="text-sm font-semibold text-white sm:text-base">{area}</div>
+                    <div className="col-start-2 text-sm leading-6 text-white/55 sm:col-auto">{note}</div>
+                  </div>
                 </div>
               ))}
             </div>
