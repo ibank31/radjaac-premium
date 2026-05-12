@@ -35,6 +35,11 @@ export default function App() {
           />
 
           <Route
+            path="/brand/gree"
+            element={<GreePurwokerto />}
+          />
+
+          <Route
             path="/gree-purwokerto"
             element={<GreePurwokerto />}
           />
