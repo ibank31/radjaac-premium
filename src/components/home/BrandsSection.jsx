@@ -44,16 +44,17 @@ export default function BrandsSection() {
             key={brand.name}
             to={brand.href}
             className="group rounded-[24px] border border-white/10 bg-white/[0.03] hover:bg-[#0A1930] transition-all duration-300 p-4 sm:p-5 flex flex-col items-center text-center"
+            aria-label={`Lihat brand ${brand.name}`}
           >
-            <div className="h-[54px] sm:h-[64px] flex items-center justify-center mb-3 sm:mb-4">
+            <div className="h-[64px] sm:h-[72px] flex items-center justify-center mb-4">
               <img
                 src={brand.logo}
                 alt={`Logo ${brand.name}`}
-                className="max-h-[34px] sm:max-h-[40px] object-contain opacity-90 group-hover:opacity-100 transition"
+                className={`max-h-[42px] sm:max-h-[48px] object-contain opacity-90 group-hover:opacity-100 transition ${
+                  brand.name === "Sansui" ? "brightness-0 invert" : ""
+                }`}
               />
             </div>
-
-            <h3 className="text-white font-bold mb-1.5">{brand.name}</h3>
 
             <p className="text-white/50 text-xs sm:text-sm leading-5 mb-4">
               {brand.tagline}
