@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar"
 import HeroSection from "../components/HeroSection"
 
 import CategorySection from "../components/home/CategorySection"
+import TrustSection from "../components/home/TrustSection"
 import BrandsSection from "../components/home/BrandsSection"
 import WhyChooseSection from "../components/home/WhyChooseSection"
 
@@ -61,6 +62,8 @@ export default function Home() {
         <HeroSection />
 
         <CategorySection />
+
+        <TrustSection />
 
         <BrandsSection />
 
