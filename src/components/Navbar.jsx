@@ -14,6 +14,10 @@ const NAV_ITEMS = [
     type: "dropdown",
     items: [
       {
+        label: "Panduan Pilih AC",
+        href: "/katalog",
+      },
+      {
         label: "AC Split Rumah",
         href: "/katalog/ac-split-rumah",
       },
