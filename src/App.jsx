@@ -8,6 +8,7 @@ import DaikinPurwokerto from "./pages/DaikinPurwokerto"
 import GreePurwokerto from "./pages/GreePurwokerto"
 import MideaPurwokerto from "./pages/MideaPurwokerto"
 import HisensePurwokerto from "./pages/HisensePurwokerto"
+import SansuiPurwokerto from "./pages/SansuiPurwokerto"
 import SharpPurwokerto from "./pages/SharpPurwokerto"
 import PanasonicPurwokerto from "./pages/PanasonicPurwokerto"
 import TentangKami from "./pages/TentangKami"
@@ -64,6 +65,16 @@ export default function App() {
           <Route
             path="/hisense-purwokerto"
             element={<HisensePurwokerto />}
+          />
+
+          <Route
+            path="/brand/sansui"
+            element={<SansuiPurwokerto />}
+          />
+
+          <Route
+            path="/sansui-purwokerto"
+            element={<SansuiPurwokerto />}
           />
 
           <Route
