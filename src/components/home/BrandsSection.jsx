@@ -25,7 +25,7 @@ export default function BrandsSection() {
         </a>
       </div>
 
-      <p className="text-white/60 max-w-2xl leading-7 mb-8">
+      <p className="text-white/60 max-w-2xl text-sm sm:text-base leading-7 mb-7">
         RADJA AC menyediakan AC original berbagai brand resmi. Brand unggulan
         berikut sudah tersedia sebagai halaman khusus untuk memudahkan Anda
         membandingkan pilihan.
@@ -36,23 +36,23 @@ export default function BrandsSection() {
           <Link
             key={brand.name}
             to={brand.href}
-            className="group rounded-[28px] border border-white/10 bg-white/[0.03] hover:bg-[#0A1930] transition-all duration-300 p-5 flex flex-col items-center text-center"
+            className="group rounded-[24px] border border-white/10 bg-white/[0.03] hover:bg-[#0A1930] transition-all duration-300 p-4 sm:p-5 flex flex-col items-center text-center"
           >
-            <div className="h-[76px] flex items-center justify-center mb-5">
+            <div className="h-[54px] sm:h-[64px] flex items-center justify-center mb-3 sm:mb-4">
               <img
                 src={brand.logo}
                 alt={`Logo ${brand.name}`}
-                className="max-h-[42px] object-contain opacity-90 group-hover:opacity-100 transition"
+                className="max-h-[34px] sm:max-h-[40px] object-contain opacity-90 group-hover:opacity-100 transition"
               />
             </div>
 
-            <h3 className="text-white font-bold mb-2">{brand.name}</h3>
+            <h3 className="text-white font-bold mb-1.5">{brand.name}</h3>
 
-            <p className="text-white/50 text-sm leading-6 mb-5">
+            <p className="text-white/50 text-xs sm:text-sm leading-5 mb-4">
               {brand.tagline}
             </p>
 
-            <div className="flex items-center justify-center gap-2 text-cyan-300 text-sm font-semibold">
+            <div className="flex items-center justify-center gap-2 text-cyan-300 text-xs sm:text-sm font-semibold">
               Lihat Brand
               <ChevronRight className="w-4 h-4" />
             </div>
