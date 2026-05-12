@@ -11,8 +11,61 @@ import WhyChooseSection from "../components/home/WhyChooseSection"
 
 import ClosingCTA from "../components/ClosingCTA"
 import Footer from "../components/Footer"
+import { SITE_DATA } from "../constants/siteData"
 
 export default function Home() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Brand AC apa saja yang tersedia di RADJA AC?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "RADJA AC menyediakan AC original berbagai brand seperti Daikin, Gree, Midea, Hisense, Sansui, Sharp, Panasonic, LG, Samsung, TCL, Toshiba, Mitsubishi, Aqua, Polytron, Changhong, Ariston, dan lainnya.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Apakah bisa konsultasi ukuran PK sebelum membeli AC?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Bisa. Tim RADJA AC dapat membantu rekomendasi kapasitas AC berdasarkan luas ruangan, fungsi ruangan, daya listrik, dan kebutuhan penggunaan.",
+        },
+      },
+    ],
+  }
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: SITE_DATA.businessName,
+    url: SITE_DATA.baseUrl,
+    image: `${SITE_DATA.baseUrl}${SITE_DATA.logoUrl}`,
+    description: SITE_DATA.businessDescription,
+    telephone: SITE_DATA.phoneNumber,
+    areaServed: SITE_DATA.serviceAreas.map((area) => ({
+      "@type": "City",
+      name: area,
+    })),
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "18:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "08:00",
+        closes: "15:00",
+      },
+    ],
+    sameAs: [SITE_DATA.baseUrl],
+  }
+
   return (
     <div className="bg-[#050816] text-white overflow-hidden">
 
@@ -23,30 +76,8 @@ export default function Home() {
       />
 
       <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Brand AC apa saja yang tersedia di RADJA AC?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "RADJA AC menyediakan AC original berbagai brand seperti Daikin, Gree, Midea, Hisense, Sansui, Sharp, Panasonic, LG, Samsung, TCL, Toshiba, Mitsubishi, Aqua, Polytron, Changhong, Ariston, dan lainnya.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Apakah bisa konsultasi ukuran PK sebelum membeli AC?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Bisa. Tim RADJA AC dapat membantu rekomendasi kapasitas AC berdasarkan luas ruangan, fungsi ruangan, daya listrik, dan kebutuhan penggunaan.",
-                },
-              },
-            ],
-          })}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <Navbar />
