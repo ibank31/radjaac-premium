@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { CATEGORY_ITEMS } from "../../data/home/categoryItems";
 
@@ -23,8 +24,9 @@ export default function CategorySection() {
           const IconComponent = item.Icon;
 
           return (
-            <div
+            <Link
               key={item.title}
+              to={item.href}
               className="rounded-[24px] border border-cyan-500/10 bg-[#071326] hover:bg-[#0A1930] transition-all duration-300 p-4 sm:p-6 flex flex-col items-center text-center"
             >
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border border-cyan-500/20 bg-cyan-500/10 flex items-center justify-center mb-4 sm:mb-5">
@@ -38,7 +40,7 @@ export default function CategorySection() {
               <div className="mt-4 text-cyan-300 flex justify-center">
                 <ArrowRight className="w-5 h-5" />
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
