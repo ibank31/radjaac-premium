@@ -9,6 +9,7 @@ import GreePurwokerto from "./pages/GreePurwokerto"
 import MideaPurwokerto from "./pages/MideaPurwokerto"
 import HisensePurwokerto from "./pages/HisensePurwokerto"
 import SansuiPurwokerto from "./pages/SansuiPurwokerto"
+import BrandLainnya from "./pages/BrandLainnya"
 import SharpPurwokerto from "./pages/SharpPurwokerto"
 import PanasonicPurwokerto from "./pages/PanasonicPurwokerto"
 import TentangKami from "./pages/TentangKami"
@@ -75,6 +76,11 @@ export default function App() {
           <Route
             path="/sansui-purwokerto"
             element={<SansuiPurwokerto />}
+          />
+
+          <Route
+            path="/brand/lainnya"
+            element={<BrandLainnya />}
           />
 
           <Route
