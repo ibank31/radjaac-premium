@@ -22,20 +22,20 @@ export default function HeroSection() {
           >
             <div className="inline-flex items-center gap-2 border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 rounded-full text-cyan-300 text-sm mb-5">
               <div className="w-2 h-2 rounded-full bg-cyan-400" />
-              DEALER AC MODERN & TERPERCAYA
+              DEALER AC RESMI & MULTIBRAND
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black leading-[1.05] sm:leading-tight tracking-[-0.03em] mb-5 max-w-xl">
-              Dealer AC Modern & Terpercaya
+              Dealer AC Resmi
               <span className="block text-cyan-300">
-                di Purwokerto & Banyumas
+                Purwokerto & Banyumas
               </span>
             </h1>
 
             <p className="text-white/70 text-sm sm:text-base leading-7 max-w-xl mb-6">
-              Jual AC Daikin, LG, Sharp, Panasonic, dan brand premium lain.
-              Ready stock, instalasi rapi, dan rekomendasi AC sesuai ukuran
-              ruangan.
+              Penjualan AC original berbagai brand resmi, mulai dari Daikin,
+              Gree, Midea, Hisense, Sansui, hingga brand populer lainnya.
+              Didukung konsultasi produk, instalasi rapi, dan layanan after-sales.
             </p>
 
             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3 mb-4">
@@ -50,15 +50,15 @@ export default function HeroSection() {
               </a>
 
               <a
-                href="#produk"
+                href="#brand-lainnya"
                 className="inline-flex items-center justify-center px-6 py-4 rounded-full border border-white/10 text-white/90 font-semibold transition hover:bg-white/[0.05]"
               >
-                Lihat Katalog AC
+                Lihat Brand AC
               </a>
             </div>
 
             <p className="text-white/60 text-sm max-w-xl mb-6">
-              Ready stock • Brand resmi • Instalasi rapi • Konsultasi gratis
+              Ready stock • Brand resmi • Instalasi rapi • Konsultasi produk
             </p>
           </motion.div>
 
