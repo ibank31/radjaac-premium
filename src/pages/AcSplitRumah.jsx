@@ -9,7 +9,6 @@ import {
   Home,
   MessageCircle,
   Moon,
-  Ruler,
   ShieldCheck,
   Snowflake,
   Sparkles,
