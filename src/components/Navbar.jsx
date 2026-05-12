@@ -62,6 +62,7 @@ const NAV_ITEMS = [
       },
       {
         label: "Brand Lainnya",
+        href: "/brand/lainnya",
       },
     ],
   },
