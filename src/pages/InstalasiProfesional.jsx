@@ -91,7 +91,7 @@ function WhatsAppButton({ children = "Konsultasi Instalasi" }) {
 
 function InstallationVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-[430px] overflow-hidden rounded-[34px] border border-cyan-300/15 bg-slate-950/70 p-4 shadow-[0_28px_80px_rgba(8,20,47,0.42)]">
+    <div className="relative mx-auto w-full max-w-[430px] overflow-hidden rounded-[34px] border border-cyan-300/15 bg-slate-950/70 p-4 shadow-[0_28px_80px_rgba(8,20,47,0.42)] lg:mr-0">
       <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-cyan-400/12 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-16 -left-16 h-44 w-44 rounded-full bg-blue-500/12 blur-3xl" />
 
@@ -161,7 +161,7 @@ export default function InstalasiProfesional() {
 
         <section className="mx-auto max-w-7xl px-6 pb-8 pt-24 lg:px-8 lg:pb-16 lg:pt-32">
           <div className="grid items-center gap-7 lg:grid-cols-2 lg:gap-16">
-            <div className="text-center lg:text-left">
+            <div className="text-left">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200">
                 <span className="h-2 w-2 rounded-full bg-cyan-300" />
                 INSTALASI PROFESIONAL
@@ -173,16 +173,16 @@ export default function InstalasiProfesional() {
                 <span className="text-white/80">Instalasi Profesional</span>
               </div>
 
-              <h1 className="mx-auto mb-5 max-w-2xl text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl lg:mx-0">
+              <h1 className="mb-5 max-w-2xl text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl">
                 Instalasi AC rapi
                 <span className="block text-cyan-300">untuk unit baru Anda</span>
               </h1>
 
-              <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
+              <p className="mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
                 RADJA AC membantu pemasangan AC baru dengan titik indoor-outdoor yang tepat, jalur pipa tertata, dan pengecekan unit sebelum digunakan.
               </p>
 
-              <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
+              <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <WhatsAppButton />
                 <a
                   href="#proses-instalasi"
@@ -192,7 +192,7 @@ export default function InstalasiProfesional() {
                 </a>
               </div>
 
-              <div className="mx-auto flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 lg:mx-0 lg:justify-start">
+              <div className="flex max-w-xl flex-wrap gap-2 text-left text-sm text-white/65">
                 {proofPoints.map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">
                     {item}
