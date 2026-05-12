@@ -17,7 +17,7 @@ export const CATEGORY_ITEMS = [
     title: "Low Watt",
     desc: "Ideal untuk kos & kontrakan",
     Icon: Wind,
-    href: "/katalog",
+    href: "/katalog/ac-low-watt",
   },
   {
     title: "AC Kantor",
