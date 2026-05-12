@@ -229,6 +229,8 @@ main > section:first-of-type > .mx-auto.max-w-4xl.text-center > div:last-child {
   main > section:first-of-type:has(img[src*="/assets/brands/"]) .grid > div:first-child > div:nth-last-child(2) > a,
   main > section:first-of-type > .mx-auto.max-w-4xl.text-center > div:last-child > a {
     width: 100%;
-    min-height: 5rem;
+    min-height: 3.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
