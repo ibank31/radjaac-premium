@@ -54,6 +54,7 @@ const NAV_ITEMS = [
       },
       {
         label: "Hisense",
+        href: "/brand/hisense",
       },
       {
         label: "Sansui",
