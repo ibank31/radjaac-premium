@@ -1,4 +1,4 @@
-import { Camera, ImagePlus, MapPin, PackageCheck, Warehouse } from "lucide-react"
+import { Camera, ImagePlus, PackageCheck, Warehouse } from "lucide-react"
 
 import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
@@ -149,7 +149,7 @@ export default function Gallery() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-14">
+        <section className="mx-auto max-w-7xl px-6 pb-16 pt-8 lg:px-8 lg:pb-24 lg:pt-14">
           <div className="mb-8 text-center">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">FOTO ASLI</p>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">
@@ -187,18 +187,6 @@ export default function Gallery() {
                 </div>
               </a>
             ))}
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-6 pb-16 pt-8 lg:px-8 lg:pb-24 lg:pt-14">
-          <div className="rounded-[34px] border border-cyan-300/20 bg-cyan-300/5 p-6 text-center sm:p-10 lg:p-14">
-            <MapPin className="mx-auto mb-5 h-10 w-10 text-cyan-300" />
-            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl">
-              Gallery ini bisa terus ditambah
-            </h2>
-            <p className="mx-auto max-w-2xl text-sm leading-7 text-white/66 sm:text-base">
-              Nanti foto pengiriman, pemasangan, proyek, dan dokumentasi pelanggan bisa ditambahkan bertahap agar halaman Gallery semakin kuat sebagai trust signal RADJA AC.
-            </p>
           </div>
         </section>
       </main>
