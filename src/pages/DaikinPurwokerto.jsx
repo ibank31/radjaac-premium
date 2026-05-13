@@ -50,6 +50,7 @@ const products = [
   {
     title: "Daikin Inverter",
     badge: "Pemakaian rutin",
+    image: "/assets/brands/daikin/ac-daikin-inventer.webp",
     fit: "Kamar utama, ruang keluarga, dan kantor kecil",
     priority: "Hemat energi dan suhu lebih stabil",
     description:
@@ -59,6 +60,7 @@ const products = [
   {
     title: "Daikin Low Watt",
     badge: "Daya terbatas",
+    image: "/assets/brands/daikin/ac-daikin-low-watt.webp",
     fit: "Rumah, kos, kontrakan, dan kamar tidur",
     priority: "Beban listrik lebih ringan",
     description:
@@ -68,6 +70,7 @@ const products = [
   {
     title: "Daikin Standard",
     badge: "Pilihan aman",
+    image: "/assets/brands/daikin/ac-daikin-standar.webp",
     fit: "Kamar tidur, toko kecil, dan ruang santai",
     priority: "Pendinginan harian yang simple",
     description:
@@ -338,19 +341,22 @@ export default function DaikinPurwokerto() {
           <div className="grid gap-5 md:grid-cols-3">
             {products.map((product) => (
               <article key={product.title} className="group overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/70 shadow-[0_18px_45px_rgba(15,23,42,0.24)] transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <div className="relative min-h-[96px] overflow-hidden border-b border-white/10 bg-gradient-to-br from-cyan-400/14 via-slate-900 to-blue-950/70 p-4">
+                <div className="relative overflow-hidden border-b border-white/10 bg-gradient-to-br from-cyan-400/14 via-slate-900 to-blue-950/70 p-3">
                   <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-cyan-300/20 blur-3xl" />
-                  <div className="absolute -bottom-12 left-6 h-24 w-24 rounded-full bg-blue-400/20 blur-3xl" />
-                  <div className="relative flex h-full min-h-[64px] flex-col justify-between">
-                    <div className="flex items-center justify-between gap-3">
-                      <span className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-bold text-cyan-100">{product.badge}</span>
-                      <Snowflake className="h-6 w-6 text-cyan-200/80" />
-                    </div>
-                    <h3 className="text-center text-xl font-black tracking-[-0.02em] text-white sm:text-2xl">{product.title}</h3>
-                  </div>
+                  <img
+                    src={product.image}
+                    alt={`${product.title} di RADJA AC`}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-[155px] w-full rounded-[22px] object-cover object-center"
+                  />
+                  <span className="absolute left-6 top-6 inline-flex rounded-full border border-cyan-300/20 bg-slate-950/70 px-3 py-1 text-xs font-bold text-cyan-100 backdrop-blur">
+                    {product.badge}
+                  </span>
                 </div>
 
                 <div className="p-6">
+                  <h3 className="mb-3 text-center text-2xl font-black tracking-[-0.02em] text-white">{product.title}</h3>
                   <p className="mb-4 text-sm leading-7 text-white/60">{product.description}</p>
 
                   <div className="mb-5 space-y-3 rounded-3xl border border-white/10 bg-white/[0.035] p-4">
