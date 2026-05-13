@@ -17,14 +17,14 @@ const galleryCategories = [
     icon: Warehouse,
   },
   {
+    title: "Display Produk",
+    description: "Dokumentasi indoor, outdoor, cassette, portable, dan unit display di showroom.",
+    icon: PackageCheck,
+  },
+  {
     title: "Material Instalasi",
     description: "Stok pipa dan perlengkapan pendukung pemasangan AC.",
     icon: ImagePlus,
-  },
-  {
-    title: "Pengiriman & Pemasangan",
-    description: "Dokumentasi aktivitas pengiriman dan instalasi pelanggan.",
-    icon: PackageCheck,
   },
 ]
 
@@ -42,6 +42,27 @@ const galleryItems = [
     description: "Area showroom Gree RADJA AC Purwokerto dengan display indoor-outdoor dan cassette AC.",
     image: "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-02.webp",
     thumbnail: "/assets/gallery/thumb/showroom-gree-radja-ac-purwokerto-02-thumb.webp",
+  },
+  {
+    title: "Showroom Multibrand RADJA AC",
+    category: "Showroom",
+    description: "Area showroom multibrand RADJA AC dengan display Gree, FLife, Ariston, Hisense, dan Modena.",
+    image: "/assets/gallery/large/showroom-multibrand-radja-ac-purwokerto-01.webp",
+    thumbnail: "/assets/gallery/thumb/showroom-multibrand-radja-ac-purwokerto-01-thumb.webp",
+  },
+  {
+    title: "Showroom Daikin dan Gree",
+    category: "Showroom",
+    description: "Tampilan showroom RADJA AC dengan display Daikin, Gree, dan stok unit siap jual.",
+    image: "/assets/gallery/large/showroom-daikin-gree-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/large/showroom-daikin-gree-radja-ac-01.webp",
+  },
+  {
+    title: "Display Daikin dan Sansui",
+    category: "Showroom",
+    description: "Area display Daikin dan Sansui di showroom RADJA AC Purwokerto.",
+    image: "/assets/gallery/large/display-daikin-sansui-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/display-daikin-sansui-radja-ac-01-thumb.webp",
   },
   {
     title: "Gudang Stok AC Gree",
@@ -72,20 +93,6 @@ const galleryItems = [
     thumbnail: "/assets/gallery/thumb/gudang-stok-ac-daikin-gree-radja-ac-01-thumb.webp",
   },
   {
-    title: "Material Instalasi AC",
-    category: "Material Instalasi",
-    description: "Stok material instalasi AC seperti pipa dan perlengkapan pemasangan.",
-    image: "/assets/gallery/large/material-instalasi-ac-radja-ac-01.webp",
-    thumbnail: "/assets/gallery/thumb/material-instalasi-ac-radja-ac-01-thumb.webp",
-  },
-  {
-    title: "Stok Pipa AC",
-    category: "Material Instalasi",
-    description: "Stok pipa AC dan material instalasi untuk pemasangan pelanggan.",
-    image: "/assets/gallery/large/stok-pipa-ac-radja-ac-purwokerto-01.webp",
-    thumbnail: "/assets/gallery/thumb/stok-pipa-ac-radja-ac-purwokerto-01-thumb.webp",
-  },
-  {
     title: "Stok AC Gree Gudang",
     category: "Gudang",
     description: "Tumpukan stok AC Gree di area gudang RADJA AC.",
@@ -98,6 +105,62 @@ const galleryItems = [
     description: "Stok AC Gree di gudang RADJA AC untuk kebutuhan rumah dan proyek.",
     image: "/assets/gallery/large/gudang-stok-ac-gree-radja-ac-03.webp",
     thumbnail: "/assets/gallery/thumb/gudang-stok-ac-gree-radja-ac-03-thumb.webp",
+  },
+  {
+    title: "Display AC Gree Low Watt",
+    category: "Display Produk",
+    description: "Display AC Gree low watt dan inverter series di showroom RADJA AC.",
+    image: "/assets/gallery/large/display-ac-gree-low-watt-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/display-ac-gree-low-watt-radja-ac-01-thumb.webp",
+  },
+  {
+    title: "Display AC FLife",
+    category: "Display Produk",
+    description: "Unit display AC FLife standard series di showroom RADJA AC.",
+    image: "/assets/gallery/large/display-ac-flife-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/display-ac-flife-radja-ac-01-thumb.webp",
+  },
+  {
+    title: "Display AC Cassette Daikin",
+    category: "Display Produk",
+    description: "Unit cassette Daikin sebagai contoh pilihan AC cassette untuk kebutuhan ruangan tertentu.",
+    image: "/assets/gallery/large/daikin-cassette-display-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/daikin-cassette-display-radja-ac-01-thumb.webp",
+  },
+  {
+    title: "Display Outdoor Daikin",
+    category: "Display Produk",
+    description: "Unit outdoor Daikin di area display showroom RADJA AC.",
+    image: "/assets/gallery/large/display-outdoor-daikin-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/display-outdoor-daikin-radja-ac-01-thumb.webp",
+  },
+  {
+    title: "Display Daikin Nusantara",
+    category: "Display Produk",
+    description: "Display AC Daikin Nusantara di showroom RADJA AC Purwokerto.",
+    image: "/assets/gallery/large/display-daikin-nusantara-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/display-daikin-nusantara-radja-ac-01-thumb.webp",
+  },
+  {
+    title: "Display AC Reiwa Portable",
+    category: "Display Produk",
+    description: "Display AC Reiwa portable dan unit window di showroom RADJA AC.",
+    image: "/assets/gallery/large/display-reiwa-portable-ac-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/display-reiwa-portable-ac-radja-ac-01-thumb.webp",
+  },
+  {
+    title: "Material Instalasi AC",
+    category: "Material Instalasi",
+    description: "Stok material instalasi AC seperti pipa dan perlengkapan pemasangan.",
+    image: "/assets/gallery/large/material-instalasi-ac-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/material-instalasi-ac-radja-ac-01-thumb.webp",
+  },
+  {
+    title: "Stok Pipa AC",
+    category: "Material Instalasi",
+    description: "Stok pipa AC dan material instalasi untuk pemasangan pelanggan.",
+    image: "/assets/gallery/large/stok-pipa-ac-radja-ac-purwokerto-01.webp",
+    thumbnail: "/assets/gallery/thumb/stok-pipa-ac-radja-ac-purwokerto-01-thumb.webp",
   },
 ]
 
