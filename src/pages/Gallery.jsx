@@ -1,4 +1,4 @@
-import { Camera, ImagePlus, PackageCheck, Warehouse } from "lucide-react"
+import { Camera, ImagePlus, PackageCheck, PlayCircle, Warehouse } from "lucide-react"
 
 import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
@@ -25,6 +25,27 @@ const galleryCategories = [
     title: "Material Instalasi",
     description: "Stok pipa dan perlengkapan pemasangan AC.",
     icon: ImagePlus,
+  },
+]
+
+const galleryVideos = [
+  {
+    title: "Pengiriman AC RADJA AC",
+    category: "Pengiriman",
+    video: "/assets/gallery/videos/pengiriman-ac-radja-ac-purwokerto-01.mp4",
+    thumbnail: "/assets/gallery/video-thumbnails/pengiriman-ac-radja-ac-purwokerto-01.webp",
+  },
+  {
+    title: "Pengiriman Stok AC",
+    category: "Pengiriman",
+    video: "/assets/gallery/videos/pengiriman-stok-ac-radja-ac-purwokerto-02.mp4",
+    thumbnail: "/assets/gallery/video-thumbnails/pengiriman-stok-ac-radja-ac-purwokerto-02.webp",
+  },
+  {
+    title: "Stok AC Siap Kirim",
+    category: "Stok & Aktivitas",
+    video: "/assets/gallery/videos/pengiriman-stok-ac-radja-ac-clean.mp4",
+    thumbnail: "/assets/gallery/video-thumbnails/pengiriman-stok-ac-radja-ac-clean.webp",
   },
 ]
 
@@ -189,6 +210,51 @@ export default function Gallery() {
                 <h2 className="mb-2 text-sm font-black text-white sm:text-base">{title}</h2>
                 <p className="text-xs leading-5 text-white/55">{description}</p>
               </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-5 py-5 lg:px-8 lg:py-8">
+          <div className="mb-6 text-center">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">VIDEO AKTIVITAS</p>
+            <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
+              Cuplikan stok dan pengiriman RADJA AC
+            </h2>
+            <p className="mx-auto max-w-2xl text-sm leading-7 text-white/60">
+              Video singkat sebagai bukti aktivitas toko, stok barang, dan proses pengiriman.
+            </p>
+          </div>
+
+          <div className="grid gap-3 md:grid-cols-3">
+            {galleryVideos.map((item) => (
+              <a
+                key={item.video}
+                href={item.video}
+                target="_blank"
+                rel="noreferrer"
+                className="group overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] shadow-[0_12px_28px_rgba(15,23,42,0.16)] transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06]"
+              >
+                <div className="relative overflow-hidden bg-slate-950/70">
+                  <img
+                    src={item.thumbnail}
+                    alt={item.title}
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-[9/12] w-full object-cover transition duration-500 group-hover:scale-[1.03] md:aspect-[4/5]"
+                  />
+                  <span className="absolute left-3 top-3 rounded-full border border-cyan-300/20 bg-slate-950/75 px-2.5 py-1 text-[10px] font-semibold text-cyan-100 backdrop-blur">
+                    {item.category}
+                  </span>
+                  <span className="absolute inset-0 flex items-center justify-center bg-slate-950/10 opacity-95 transition group-hover:bg-slate-950/20">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full border border-white/25 bg-slate-950/60 text-white backdrop-blur">
+                      <PlayCircle className="h-8 w-8" />
+                    </span>
+                  </span>
+                </div>
+                <div className="p-3">
+                  <h3 className="line-clamp-2 text-sm font-black leading-5 text-white">{item.title}</h3>
+                </div>
+              </a>
             ))}
           </div>
         </section>
