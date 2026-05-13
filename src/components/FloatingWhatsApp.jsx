@@ -1,13 +1,13 @@
+import { useLocation } from "react-router-dom"
 import WhatsappIcon from "./ui/WhatsappIcon"
-import { buildWhatsAppUrl } from "../utils/whatsapp"
-
-const FLOATING_MESSAGE =
-  "Halo RADJA AC, saya mau tanya harga dan rekomendasi AC yang cocok."
+import { buildWhatsAppUrlForPath } from "../utils/whatsapp"
 
 export default function FloatingWhatsApp() {
+  const location = useLocation()
+
   return (
     <a
-      href={buildWhatsAppUrl(FLOATING_MESSAGE)}
+      href={buildWhatsAppUrlForPath(location.pathname)}
       target="_blank"
       rel="noreferrer"
       aria-label="Chat WhatsApp RADJA AC untuk konsultasi beli AC"
