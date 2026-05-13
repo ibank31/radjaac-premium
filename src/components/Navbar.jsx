@@ -65,6 +65,14 @@ const NAV_ITEMS = [
         href: "/brand/sansui",
       },
       {
+        label: "Sharp",
+        href: "/brand/sharp",
+      },
+      {
+        label: "Panasonic",
+        href: "/brand/panasonic",
+      },
+      {
         label: "Brand Lainnya",
         href: "/brand/lainnya",
       },
