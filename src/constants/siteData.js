@@ -2,7 +2,7 @@
 export const SITE_DATA = {
   // Business Information
   businessName: "RADJA AC",
-  businessDescription: "Dealer dan penjualan AC berbagai brand terpercaya di Purwokerto dan Banyumas",
+  businessDescription: "Toko AC Purwokerto yang menjual AC original berbagai brand resmi untuk rumah, kantor, toko, dan proyek di Purwokerto dan Banyumas",
 
   // Contact Information
   whatsappNumber: "62882008246099",
@@ -14,17 +14,17 @@ export const SITE_DATA = {
 
   // Service Areas
   serviceAreas: [
-  "Purwokerto",
-  "Banyumas",
-  "Cilacap",
-  "Purbalingga",
-  "Banjarnegara",
-  "Kebumen",
-  "Semarang",
-  "Solo",
-  "Magelang",
-  "Tegal",
-],
+    "Purwokerto",
+    "Banyumas",
+    "Cilacap",
+    "Purbalingga",
+    "Banjarnegara",
+    "Kebumen",
+    "Semarang",
+    "Solo",
+    "Magelang",
+    "Tegal",
+  ],
 
   // Operational Hours
   operationalHours: [
@@ -34,9 +34,8 @@ export const SITE_DATA = {
   ],
 
   // SEO Defaults
-  defaultTitle: "Dealer AC Purwokerto & Banyumas | Jual AC Daikin, Gree, Sharp - RADJA AC",
-  defaultDescription: "RADJA AC menyediakan penjualan AC berbagai brand seperti Daikin, Gree, Sharp, Panasonic, LG, Midea dan lainnya di Purwokerto & Banyumas. Ready stock, instalasi profesional, dan konsultasi gratis.",
-  defaultKeywords: "Dealer AC Purwokerto, Jual AC Purwokerto, Dealer AC Banyumas, Toko AC Purwokerto",
+  defaultTitle: "Toko AC Purwokerto — Dealer AC Daikin, Midea, Hisense | RADJA AC",
+  defaultDescription: "RADJA AC adalah toko AC Purwokerto yang menjual AC Daikin, Midea, Hisense, Gree, Sharp, Panasonic dan brand resmi lainnya. Konsultasi gratis, stok ready, garansi resmi, dan bisa bantu instalasi.",
 
   // Social Media / External Links
   logoUrl: "/logo-radjaac.webp",
