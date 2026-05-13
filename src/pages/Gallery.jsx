@@ -221,7 +221,7 @@ export default function Gallery() {
               Cuplikan stok dan pengiriman RADJA AC
             </h2>
             <p className="mx-auto max-w-2xl text-sm leading-7 text-white/60">
-              Video singkat sebagai bukti aktivitas toko, stok barang, dan proses pengiriman.
+              Video singkat sebagai bukti aktivitas toko, stok barang, dan proses pengiriman RADJA AC.
             </p>
           </div>
 
