@@ -50,8 +50,6 @@ const products = [
   {
     title: "Daikin Inverter",
     badge: "Pemakaian rutin",
-    image: "/assets/brands/daikin/ac-daikin-inventer.webp",
-    imageAlt: "Unit AC Daikin inverter untuk rumah dan kantor kecil",
     fit: "Kamar utama, ruang keluarga, dan kantor kecil",
     priority: "Hemat energi dan suhu lebih stabil",
     description:
@@ -61,8 +59,6 @@ const products = [
   {
     title: "Daikin Low Watt",
     badge: "Daya terbatas",
-    image: "/assets/brands/daikin/ac-daikin-low-watt.webp",
-    imageAlt: "Unit AC Daikin low watt untuk rumah dengan daya listrik terbatas",
     fit: "Rumah, kos, kontrakan, dan kamar tidur",
     priority: "Beban listrik lebih ringan",
     description:
@@ -72,8 +68,6 @@ const products = [
   {
     title: "Daikin Standard",
     badge: "Pilihan aman",
-    image: "/assets/brands/daikin/ac-daikin-standar.webp",
-    imageAlt: "Unit AC Daikin standard untuk kamar tidur dan ruang santai",
     fit: "Kamar tidur, toko kecil, dan ruang santai",
     priority: "Pendinginan harian yang simple",
     description:
@@ -344,17 +338,6 @@ export default function DaikinPurwokerto() {
           <div className="grid gap-5 md:grid-cols-3">
             {products.map((product) => (
               <article key={product.title} className="group overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/70 shadow-[0_18px_45px_rgba(15,23,42,0.24)] transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <div className="relative border-b border-white/10 bg-gradient-to-br from-white via-slate-100 to-cyan-50 p-4">
-                  <div className="absolute inset-x-8 bottom-3 h-8 rounded-full bg-slate-500/10 blur-xl" />
-                  <img
-                    src={product.image}
-                    alt={product.imageAlt}
-                    loading="lazy"
-                    decoding="async"
-                    className="relative mx-auto h-40 w-full object-contain transition duration-300 group-hover:scale-[1.03] sm:h-44"
-                  />
-                </div>
-
                 <div className="relative min-h-[96px] overflow-hidden border-b border-white/10 bg-gradient-to-br from-cyan-400/14 via-slate-900 to-blue-950/70 p-4">
                   <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-cyan-300/20 blur-3xl" />
                   <div className="absolute -bottom-12 left-6 h-24 w-24 rounded-full bg-blue-400/20 blur-3xl" />
