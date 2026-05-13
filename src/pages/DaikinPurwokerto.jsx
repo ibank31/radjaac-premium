@@ -1,59 +1,122 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { Award, BadgeCheck, ShieldCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
+import {
+  ArrowRight,
+  Award,
+  BadgeCheck,
+  CheckCircle2,
+  Home,
+  ShieldCheck,
+  Snowflake,
+  Sparkles,
+  Wind,
+  Zap,
+} from "lucide-react"
 
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import SeoHead from "../components/SeoHead"
 import WhatsappIcon from "../components/ui/WhatsappIcon"
-import { SITE_DATA } from "../constants/siteData"
+import { buildWhatsAppUrl } from "../utils/whatsapp"
 
-const WA_LINK = SITE_DATA.whatsappUrl
 const HERO_IMAGE = "/assets/brands/daikin/daikin-showcase.webp"
 const CERTIFICATE_IMAGE = "/assets/brands/daikin/sertificate-daikin.webp"
+const DAIKIN_WA_MESSAGE =
+  "Halo RADJA AC, saya mau konsultasi AC Daikin. Mohon bantu rekomendasi tipe dan PK yang cocok untuk kebutuhan saya."
 
 const benefits = [
   {
-    title: "Hemat listrik untuk pemakaian harian",
-    description: "Pilihan AC Daikin inverter dan low watt cocok untuk rumah, kamar tidur, ruang keluarga, kantor, toko, hingga cafe.",
-    icon: Zap,
-  },
-  {
-    title: "Pendinginan nyaman dan stabil",
-    description: "Daikin dikenal dengan performa pendinginan yang merata, stabil, dan nyaman untuk penggunaan jangka panjang.",
-    icon: Snowflake,
-  },
-  {
-    title: "Brand premium dengan garansi resmi",
-    description: "RADJA AC membantu pembelian unit Daikin original lengkap dengan konsultasi, instalasi, dan dukungan after-sales.",
+    title: "Daikin original bergaransi resmi",
+    description:
+      "RADJA AC membantu pelanggan memilih AC Daikin original dengan dukungan garansi resmi dan konsultasi sebelum membeli.",
     icon: ShieldCheck,
+  },
+  {
+    title: "Konsultasi PK sebelum beli",
+    description:
+      "Ukuran ruangan, daya listrik, dan pola pemakaian dicek dulu agar pilihan AC Daikin lebih tepat untuk kebutuhan rumah atau usaha.",
+    icon: CheckCircle2,
+  },
+  {
+    title: "Bisa bantu instalasi profesional",
+    description:
+      "Pembelian AC Daikin dapat dilanjutkan dengan instalasi rapi agar performa pendinginan lebih optimal dan aman digunakan.",
+    icon: Snowflake,
   },
 ]
 
 const products = [
   {
     title: "Daikin Inverter",
-    badge: "Paling dicari",
+    badge: "Pemakaian rutin",
     fit: "Kamar utama, ruang keluarga, dan kantor kecil",
-    priority: "Hemat energi + suhu stabil",
-    description: "Untuk pelanggan yang ingin AC lebih hemat energi, suhu lebih stabil, dan kenyamanan premium.",
-    highlights: ["Nyaman harian", "Efisiensi listrik", "Premium"],
+    priority: "Hemat energi dan suhu lebih stabil",
+    description:
+      "Cocok untuk pelanggan yang memakai AC cukup sering dan mengutamakan kenyamanan suhu harian.",
+    highlights: ["Suhu stabil", "Nyaman harian", "Efisien"],
   },
   {
     title: "Daikin Low Watt",
-    badge: "Rumah",
-    fit: "Rumah dengan daya listrik terbatas",
-    priority: "Dingin tetap nyaman dengan beban listrik lebih ringan",
-    description: "Solusi untuk rumah dengan daya listrik terbatas tanpa mengorbankan kenyamanan pendinginan.",
+    badge: "Daya terbatas",
+    fit: "Rumah, kos, kontrakan, dan kamar tidur",
+    priority: "Beban listrik lebih ringan",
+    description:
+      "Pilihan untuk rumah dengan daya listrik terbatas atau pelanggan yang ingin beban listrik lebih aman.",
     highlights: ["Daya ringan", "Rumah tinggal", "Praktis"],
   },
   {
     title: "Daikin Standard",
-    badge: "Ekonomis",
+    badge: "Pilihan aman",
     fit: "Kamar tidur, toko kecil, dan ruang santai",
-    priority: "Pilihan aman untuk kebutuhan pendinginan harian",
-    description: "Pilihan praktis untuk kamar, ruang keluarga, toko, dan kebutuhan pendinginan harian.",
-    highlights: ["Harga efisien", "Ready use", "Perawatan mudah"],
+    priority: "Pendinginan harian yang simple",
+    description:
+      "Pilihan praktis untuk kebutuhan pendinginan harian dengan perawatan yang mudah dan penggunaan sederhana.",
+    highlights: ["Simple", "Ready use", "Perawatan mudah"],
+  },
+]
+
+const useCases = [
+  {
+    title: "Untuk kamar tidur",
+    description:
+      "Biasanya mulai dari ½ PK, ¾ PK, atau 1 PK tergantung ukuran kamar, posisi ruangan, dan paparan panas.",
+    icon: Home,
+  },
+  {
+    title: "Untuk ruang keluarga",
+    description:
+      "Butuh kapasitas lebih besar karena ruangan sering terbuka, dipakai beberapa orang, dan aktivitasnya lebih padat.",
+    icon: Wind,
+  },
+  {
+    title: "Untuk pemakaian rutin",
+    description:
+      "Daikin inverter bisa dipertimbangkan untuk penggunaan harian yang membutuhkan suhu lebih stabil dan nyaman.",
+    icon: Zap,
+  },
+]
+
+const internalLinks = [
+  {
+    title: "AC Inverter",
+    description: "Bandingkan pilihan inverter untuk pemakaian rutin.",
+    href: "/katalog/ac-inverter",
+  },
+  {
+    title: "AC Low Watt",
+    description: "Cek pilihan AC untuk daya listrik terbatas.",
+    href: "/katalog/ac-low-watt",
+  },
+  {
+    title: "AC Split Rumah",
+    description: "Rekomendasi AC untuk kamar dan rumah tinggal.",
+    href: "/katalog/ac-split-rumah",
+  },
+  {
+    title: "AC 1 PK untuk ruangan berapa?",
+    description: "Baca panduan sebelum menentukan kapasitas AC.",
+    href: "/artikel/ac-1-pk-untuk-ruangan-berapa",
   },
 ]
 
@@ -67,27 +130,36 @@ const pkGuide = [
 
 const faqItems = [
   {
-    question: "Apakah RADJA AC menjual AC Daikin original?",
-    answer: "Ya. RADJA AC menyediakan pilihan AC Daikin untuk kebutuhan rumah, kantor, toko, dan proyek area Purwokerto, Banyumas, dan sekitarnya.",
+    question: "Apakah RADJA AC menjual AC Daikin original bergaransi resmi?",
+    answer:
+      "Ya. RADJA AC menyediakan pilihan AC Daikin original untuk area Purwokerto, Banyumas, dan sekitarnya dengan dukungan garansi resmi sesuai ketentuan produk.",
   },
   {
-    question: "Apakah bisa konsultasi ukuran PK sebelum membeli?",
-    answer: "Bisa. Tim RADJA AC dapat membantu rekomendasi kapasitas AC berdasarkan luas ruangan, fungsi ruangan, dan daya listrik yang tersedia.",
+    question: "Apakah bisa konsultasi ukuran PK sebelum membeli AC Daikin?",
+    answer:
+      "Bisa. Tim RADJA AC dapat membantu rekomendasi kapasitas AC Daikin berdasarkan luas ruangan, tinggi plafon, daya listrik, dan kebutuhan penggunaan.",
   },
   {
-    question: "Apakah tersedia jasa instalasi AC Daikin?",
-    answer: "Ya. Pembelian AC Daikin dapat dilengkapi layanan instalasi profesional agar pemasangan rapi, aman, dan nyaman digunakan.",
+    question: "Apakah tersedia AC Daikin inverter?",
+    answer:
+      "Ya, tersedia pilihan Daikin inverter untuk pelanggan yang mengutamakan kenyamanan suhu stabil dan pemakaian rutin. Ketersediaan stok dapat dicek via WhatsApp.",
   },
   {
-    question: "Bagaimana cara cek harga dan stok Daikin terbaru?",
-    answer: "Klik tombol WhatsApp di halaman ini untuk mendapatkan informasi stok, harga terbaru, rekomendasi unit, dan estimasi pemasangan.",
+    question: "Apakah pembelian AC Daikin bisa dibantu pemasangan?",
+    answer:
+      "Bisa. Pembelian AC Daikin dapat dilanjutkan dengan layanan instalasi profesional agar pemasangan lebih rapi, aman, dan nyaman digunakan.",
+  },
+  {
+    question: "Bagaimana cara cek stok dan rekomendasi Daikin terbaru?",
+    answer:
+      "Klik tombol WhatsApp di halaman ini untuk cek stok Daikin, konsultasi tipe, rekomendasi kapasitas PK, dan kebutuhan instalasi.",
   },
 ]
 
-function WhatsAppButton({ children = "Tanya Harga Daikin", className = "" }) {
+function WhatsAppButton({ children = "Konsultasi AC Daikin", className = "" }) {
   return (
     <a
-      href={WA_LINK}
+      href={buildWhatsAppUrl(DAIKIN_WA_MESSAGE)}
       target="_blank"
       rel="noreferrer"
       className={`inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-6 py-4 font-bold text-slate-950 shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A] ${className}`}
@@ -115,8 +187,8 @@ export default function DaikinPurwokerto() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="Dealer AC Daikin Purwokerto & Banyumas | RADJA AC"
-        description="RADJA AC melayani penjualan AC Daikin Purwokerto dan Banyumas lengkap dengan konsultasi ukuran PK, instalasi profesional, garansi resmi, dan layanan after-sales."
+        title="Jual AC Daikin Purwokerto — Dealer Resmi Bergaransi | RADJA AC"
+        description="RADJA AC menyediakan AC Daikin original bergaransi resmi di Purwokerto & Banyumas. Konsultasi gratis pilih PK, inverter, low watt, dan kebutuhan instalasi."
         canonicalPath="/brand/daikin"
       />
 
@@ -137,22 +209,24 @@ export default function DaikinPurwokerto() {
             <div>
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-300">
                 <span className="h-2 w-2 rounded-full bg-cyan-400" />
-                BRAND UNGGULAN RADJA AC
+                DEALER AC DAIKIN PURWOKERTO
               </div>
 
               <div className="mb-5 text-sm text-white/50">
-                <Link to="/" className="transition hover:text-cyan-300">Beranda</Link>
+                <Link to="/" className="transition hover:text-cyan-300">
+                  Beranda
+                </Link>
                 <span className="mx-2">/</span>
                 <span className="text-white/80">Daikin</span>
               </div>
 
               <h1 className="mb-5 max-w-xl text-3xl font-black leading-[1.05] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl">
-                AC Daikin Purwokerto & Banyumas
-                <span className="block text-cyan-300">Original, nyaman, dan bergaransi</span>
+                Jual AC Daikin Purwokerto
+                <span className="block text-cyan-300">Dealer resmi bergaransi</span>
               </h1>
 
               <p className="mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                RADJA AC menyediakan AC Daikin untuk rumah, kantor, toko, cafe, dan kebutuhan proyek. Konsultasikan kebutuhan ruangan Anda untuk mendapatkan rekomendasi tipe dan PK yang paling tepat.
+                RADJA AC menyediakan AC Daikin original untuk rumah, kantor, toko, cafe, dan kebutuhan proyek di Purwokerto & Banyumas. Konsultasikan kebutuhan ruangan Anda untuk mendapatkan rekomendasi tipe dan PK yang paling tepat.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
@@ -161,12 +235,12 @@ export default function DaikinPurwokerto() {
                   href="#produk-daikin"
                   className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
                 >
-                  Lihat Rekomendasi
+                  Lihat Rekomendasi Daikin
                 </a>
               </div>
 
-              <div className="flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65">
-                {["Daikin Resmi", "Instalasi Rapi", "Area Purwokerto & Banyumas"].map((item) => (
+              <div className="flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 sm:justify-start">
+                {["Daikin Original", "Garansi Resmi", "Konsultasi PK", "Bisa Bantu Instalasi"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">
                     {item}
                   </span>
@@ -203,10 +277,10 @@ export default function DaikinPurwokerto() {
               </h2>
 
               <p className="mb-6 text-sm leading-7 text-white/70 sm:text-base">
-                Sertifikat Authorized Dealer Daikin membantu calon pelanggan merasa lebih yakin sebelum konsultasi dan membeli. Section ini menjadi trust signal utama untuk halaman brand Daikin.
+                Sertifikat Authorized Dealer Daikin menjadi trust signal utama halaman ini. Calon pelanggan bisa lebih yakin bahwa RADJA AC membantu pembelian AC Daikin original, bergaransi resmi, dan didukung konsultasi sebelum membeli.
               </p>
 
-              <div className="flex justify-center">
+              <div className="flex justify-center lg:justify-start">
                 <div className="inline-flex items-center justify-center gap-3 rounded-3xl border border-white/10 bg-white/[0.04] px-6 py-4 text-center text-white/80">
                   <BadgeCheck className="h-5 w-5 shrink-0 text-cyan-300" />
                   <span>Authorized Dealer</span>
@@ -229,8 +303,12 @@ export default function DaikinPurwokerto() {
         <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
           <div className="mb-10 max-w-3xl">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Keunggulan Daikin</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kenapa banyak pelanggan memilih AC Daikin?</h2>
-            <p className="text-white/65 leading-7">Konten ini memperkuat brand core bisnis RADJA AC: penjualan AC Daikin original, konsultasi kebutuhan PK, instalasi profesional, dan layanan after-sales.</p>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+              Kenapa banyak pelanggan memilih AC Daikin?
+            </h2>
+            <p className="leading-7 text-white/65">
+              Daikin dikenal sebagai brand AC premium yang nyaman untuk penggunaan harian. RADJA AC membantu pelanggan memilih tipe Daikin yang sesuai ruangan, daya listrik, dan kebutuhan pemakaian.
+            </p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
@@ -249,8 +327,12 @@ export default function DaikinPurwokerto() {
         <section id="produk-daikin" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
           <div className="mb-10 text-center">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Rekomendasi Produk</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilihan AC Daikin di RADJA AC</h2>
-            <p className="mx-auto max-w-2xl text-white/65 leading-7">Harga dan stok Daikin dapat berubah. CTA diarahkan ke WhatsApp agar pelanggan mendapat info terbaru dan rekomendasi yang sesuai.</p>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+              Pilihan AC Daikin di RADJA AC
+            </h2>
+            <p className="mx-auto max-w-2xl leading-7 text-white/65">
+              Pilih berdasarkan kebutuhan ruangan. Untuk stok dan rekomendasi tipe terbaru, klik WhatsApp agar tim RADJA AC bisa bantu cek langsung.
+            </p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
@@ -290,7 +372,7 @@ export default function DaikinPurwokerto() {
                     ))}
                   </div>
 
-                  <WhatsAppButton className="w-full py-3 text-sm">Cek Stok & Harga</WhatsAppButton>
+                  <WhatsAppButton className="w-full py-3 text-sm">Cek Stok & Rekomendasi</WhatsAppButton>
                 </div>
               </article>
             ))}
@@ -298,10 +380,36 @@ export default function DaikinPurwokerto() {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
+          <div className="mb-10 max-w-3xl">
+            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Pilih Sesuai Kebutuhan</div>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+              Daikin untuk kamar, rumah, dan usaha
+            </h2>
+            <p className="leading-7 text-white/65">
+              Belum tahu harus pilih Daikin tipe apa? Mulai dari kebutuhan ruangan dulu, lalu sesuaikan dengan kapasitas PK, daya listrik, dan intensitas pemakaian.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {useCases.map(({ title, description, icon: Icon }) => (
+              <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6">
+                <Icon className="mb-4 h-7 w-7 text-cyan-300" />
+                <h3 className="mb-3 text-xl font-bold text-white">{title}</h3>
+                <p className="text-sm leading-7 text-white/60">{description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
           <div className="mb-6 max-w-3xl">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Panduan PK</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilih kapasitas AC Daikin sesuai ruangan</h2>
-            <p className="text-white/65 leading-7">Panduan cepat untuk memperkirakan kapasitas AC sebelum konsultasi. Ukuran final tetap menyesuaikan kondisi ruangan, panas matahari, dan jumlah pengguna.</p>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+              Pilih kapasitas AC Daikin sesuai ruangan
+            </h2>
+            <p className="leading-7 text-white/65">
+              Panduan cepat untuk memperkirakan kapasitas AC sebelum konsultasi. Ukuran final tetap menyesuaikan kondisi ruangan, panas matahari, jumlah pengguna, dan titik pemasangan.
+            </p>
           </div>
 
           <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
@@ -326,18 +434,55 @@ export default function DaikinPurwokerto() {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
+          <div className="mb-8 text-center">
+            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Baca Juga</div>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+              Panduan sebelum beli AC Daikin
+            </h2>
+            <p className="mx-auto max-w-2xl leading-7 text-white/65">
+              Link berikut membantu Anda memahami tipe AC, kapasitas PK, dan kebutuhan ruangan sebelum konsultasi.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {internalLinks.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="group rounded-[26px] border border-white/10 bg-white/[0.04] p-5 transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]"
+              >
+                <h3 className="mb-2 font-bold text-white">{item.title}</h3>
+                <p className="mb-4 text-sm leading-6 text-white/55">{item.description}</p>
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 group-hover:text-cyan-200">
+                  Lihat panduan
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
           <div className="rounded-[34px] border border-cyan-400/20 bg-cyan-400/5 p-6 text-center shadow-[0_35px_90px_rgba(6,78,122,0.16)] sm:p-10 lg:p-14">
-            <div className="mb-4 flex justify-center text-cyan-300"><Wind className="h-10 w-10" /></div>
-            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Butuh rekomendasi AC Daikin yang paling cocok?</h2>
-            <p className="mx-auto mb-6 max-w-2xl text-white/70 leading-7">Kirim ukuran ruangan, daya listrik, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Daikin yang sesuai.</p>
-            <WhatsAppButton>Konsultasi via WhatsApp</WhatsAppButton>
+            <div className="mb-4 flex justify-center text-cyan-300">
+              <Wind className="h-10 w-10" />
+            </div>
+            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+              Bingung pilih AC Daikin yang cocok?
+            </h2>
+            <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">
+              Kirim ukuran ruangan, daya listrik, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Daikin yang sesuai.
+            </p>
+            <WhatsAppButton>Konsultasi Daikin via WhatsApp</WhatsAppButton>
           </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
           <div className="mb-10 text-center">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">FAQ</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pertanyaan seputar AC Daikin</h2>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+              Pertanyaan seputar AC Daikin
+            </h2>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
@@ -355,6 +500,7 @@ export default function DaikinPurwokerto() {
       </main>
 
       <Footer />
+      <FloatingWhatsapp />
     </div>
   )
 }
