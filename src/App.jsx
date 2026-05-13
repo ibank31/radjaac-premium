@@ -20,6 +20,7 @@ import SharpPurwokerto from "./pages/SharpPurwokerto"
 import PanasonicPurwokerto from "./pages/PanasonicPurwokerto"
 import Blog from "./pages/Blog"
 import BlogPost from "./pages/BlogPost"
+import Gallery from "./pages/Gallery"
 import TentangKami from "./pages/TentangKami"
 import Kontak from "./pages/Kontak"
 import Portfolio from "./pages/Portfolio"
@@ -175,6 +176,8 @@ export default function App() {
           <Route path="/artikel" element={<Blog />} />
 
           <Route path="/artikel/:slug" element={<BlogPost />} />
+
+          <Route path="/gallery" element={<Gallery />} />
 
           <Route
             path="/tentang-kami"
