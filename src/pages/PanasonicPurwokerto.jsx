@@ -17,19 +17,16 @@ const panasonicBenefits = [
 const recommendedUnits = [
   {
     title: "Panasonic Standard 1 PK",
-    price: "Mulai Rp 4 jutaan",
     description: "Pilihan seimbang untuk kamar dan ruang keluarga.",
     badge: "Rumah",
   },
   {
     title: "Panasonic Inverter 1 PK",
-    price: "Mulai Rp 5 jutaan",
     description: "Konsumsi listrik lebih efisien untuk penggunaan rutin.",
     badge: "Inverter",
   },
   {
     title: "Panasonic Inverter 1.5 PK",
-    price: "Mulai Rp 6 jutaan",
     description: "Cocok untuk ruangan lebih luas dengan kenyamanan stabil.",
     badge: "Kamar Besar",
   },
@@ -57,7 +54,7 @@ const faqItems = [
   },
   {
     question: "Bisa tanya dulu sebelum memutuskan beli?",
-    answer: "Bisa. Tim RADJA AC siap membantu rekomendasi unit dan kisaran biaya sebelum Anda chat order.",
+    answer: "Bisa. Tim RADJA AC siap membantu rekomendasi unit dan pilihan yang sesuai sebelum Anda chat order.",
   },
 ]
 
@@ -69,7 +66,7 @@ export default function PanasonicPurwokerto() {
       <SeoHead
         title="Dealer AC Panasonic Purwokerto | Jual AC Panasonic Banyumas - RADJA AC"
         description="RADJA AC menyediakan AC Panasonic di Purwokerto & Banyumas untuk rumah dan kamar, lengkap dengan opsi inverter hemat listrik serta konsultasi WhatsApp."
-        canonicalPath="/panasonic-purwokerto"
+        canonicalPath="/brand/panasonic"
       />
 
       <Helmet>
@@ -140,10 +137,9 @@ export default function PanasonicPurwokerto() {
                   <h3 className="text-2xl font-semibold text-white">{unit.title}</h3>
                   <span className="rounded-full border border-white/10 bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-200">{unit.badge}</span>
                 </div>
-                <p className="text-cyan-200 font-semibold mb-2">{unit.price}</p>
                 <p className="text-slate-300 text-sm leading-relaxed mb-5">{unit.description}</p>
                 <Link to="/kontak" className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-4 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300">
-                  Chat WhatsApp
+                  Cek Stok & Harga
                 </Link>
               </article>
             ))}
