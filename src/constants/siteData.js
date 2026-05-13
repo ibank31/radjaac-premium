@@ -10,7 +10,7 @@ export const SITE_DATA = {
   phoneNumber: "+62882008246099",
 
   // Site URLs
-  baseUrl: "https://radjaac.com",
+  baseUrl: "https://www.radjaac.com",
 
   // Service Areas
   serviceAreas: [

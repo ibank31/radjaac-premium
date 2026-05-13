@@ -34,7 +34,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     sitemap({
-      hostname: 'https://radjaac.com',
+      hostname: 'https://www.radjaac.com',
       dynamicRoutes: routes,
       changefreq: 'weekly',
       priority: {
