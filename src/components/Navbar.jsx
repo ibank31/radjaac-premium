@@ -14,6 +14,13 @@ const NAV_ITEMS = [
   },
 
   {
+    label: "Jual AC",
+    to: "/jual-ac-purwokerto",
+    type: "link",
+    end: true,
+  },
+
+  {
     label: "Katalog AC",
     type: "dropdown",
     items: [
