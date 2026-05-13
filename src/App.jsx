@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home"
 import KatalogAc from "./pages/KatalogAc"
+import KalkulatorAc from "./pages/KalkulatorAc"
 import InstalasiAC from "./pages/InstalasiAC"
 import InstalasiProfesional from "./pages/InstalasiProfesional"
 import AcSplitRumah from "./pages/AcSplitRumah"
@@ -63,6 +64,8 @@ export default function App() {
           <Route path="/" element={<Home />} />
 
           <Route path="/katalog" element={<KatalogAc />} />
+
+          <Route path="/kalkulator-pk-ac" element={<KalkulatorAc />} />
 
           <Route
             path="/brand/daikin"
