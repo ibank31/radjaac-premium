@@ -80,10 +80,10 @@ const NAV_ITEMS = [
   },
 
   {
-    label: "Instalasi Profesional",
-    to: "/instalasi-profesional",
+    label: "Artikel",
+    to: "/artikel",
     type: "link",
-    end: true,
+    end: false,
   },
 
   {
