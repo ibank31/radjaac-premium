@@ -22,10 +22,6 @@ const NAV_ITEMS = [
         href: "/katalog",
       },
       {
-        label: "Kalkulator PK AC",
-        href: "/kalkulator-pk-ac",
-      },
-      {
         label: "AC Split Rumah",
         href: "/katalog/ac-split-rumah",
       },
@@ -42,6 +38,13 @@ const NAV_ITEMS = [
         href: "/katalog/ac-kantor-komersial",
       },
     ],
+  },
+
+  {
+    label: "Kalkulator AC",
+    to: "/kalkulator-pk-ac",
+    type: "link",
+    end: true,
   },
 
   {
@@ -138,7 +141,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-3 text-sm font-medium">
           {NAV_ITEMS.map((item) => {
             if (item.type === "link") {
               return (
