@@ -10,7 +10,7 @@ import BrandsSection from "../components/home/BrandsSection"
 import WhyChooseSection from "../components/home/WhyChooseSection"
 
 import ClosingCTA from "../components/ClosingCTA"
-import FloatingWhatsApp from "../components/FloatingWhatsApp"
+import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import Footer from "../components/Footer"
 import { SITE_DATA } from "../constants/siteData"
 
@@ -104,7 +104,7 @@ export default function Home() {
         <ClosingCTA />
       </div>
 
-      <FloatingWhatsApp />
+      <FloatingWhatsapp />
       <Footer />
     </div>
   );
