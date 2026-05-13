@@ -1,4 +1,51 @@
 {
+  "redirects": [
+    {
+      "source": "/daikin-purwokerto",
+      "destination": "/brand/daikin",
+      "permanent": true
+    },
+    {
+      "source": "/gree-purwokerto",
+      "destination": "/brand/gree",
+      "permanent": true
+    },
+    {
+      "source": "/midea-purwokerto",
+      "destination": "/brand/midea",
+      "permanent": true
+    },
+    {
+      "source": "/hisense-purwokerto",
+      "destination": "/brand/hisense",
+      "permanent": true
+    },
+    {
+      "source": "/sansui-purwokerto",
+      "destination": "/brand/sansui",
+      "permanent": true
+    },
+    {
+      "source": "/sharp-purwokerto",
+      "destination": "/brand/sharp",
+      "permanent": true
+    },
+    {
+      "source": "/panasonic-purwokerto",
+      "destination": "/brand/panasonic",
+      "permanent": true
+    },
+    {
+      "source": "/service-ac-purwokerto",
+      "destination": "/instalasi-ac-banyumas",
+      "permanent": true
+    },
+    {
+      "source": "/cuci-ac-purwokerto",
+      "destination": "/instalasi-ac-banyumas",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
