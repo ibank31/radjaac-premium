@@ -1,6 +1,10 @@
 ﻿import { NavLink, Link } from "react-router-dom"
 import { useState } from "react"
+import WhatsappIcon from "./ui/WhatsappIcon"
+import { buildWhatsAppUrl } from "../utils/whatsapp"
 
+const NAV_WA_MESSAGE =
+  "Halo RADJA AC, saya mau tanya harga AC dan konsultasi produk."
 
 const NAV_ITEMS = [
   {
@@ -187,6 +191,16 @@ export default function Navbar() {
               </div>
             )
           })}
+
+          <a
+            href={buildWhatsAppUrl(NAV_WA_MESSAGE)}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 font-bold text-slate-950 transition hover:bg-[#20BA5A]"
+          >
+            <WhatsappIcon className="h-4 w-4" />
+            Tanya Harga
+          </a>
         </nav>
 
         {/* Mobile Toggle */}
@@ -262,6 +276,17 @@ export default function Navbar() {
                 )}
               </div>
             ))}
+
+            <a
+              href={buildWhatsAppUrl(NAV_WA_MESSAGE)}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-3xl bg-[#25D366] px-4 py-3 font-bold text-slate-950 transition hover:bg-[#20BA5A]"
+            >
+              <WhatsappIcon className="h-5 w-5" />
+              Tanya Harga AC
+            </a>
           </nav>
         </div>
       )}
