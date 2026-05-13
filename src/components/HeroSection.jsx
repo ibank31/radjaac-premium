@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import WhatsappIcon from "./ui/WhatsappIcon";
 import { buildWhatsAppUrl } from "../utils/whatsapp";
 
@@ -50,12 +51,12 @@ export default function HeroSection() {
                 Konsultasi Beli AC
               </a>
 
-              <a
-                href="#brand-lainnya"
+              <Link
+                to="/jual-ac-purwokerto"
                 className="inline-flex items-center justify-center px-6 py-3.5 sm:py-4 rounded-full border border-white/10 text-white/90 font-semibold transition hover:bg-white/[0.05]"
               >
-                Lihat Brand & Produk
-              </a>
+                Panduan Jual AC Purwokerto
+              </Link>
             </div>
 
             <p className="mx-auto max-w-xl text-center text-sm text-white/60 mb-3 sm:mx-0 sm:text-left sm:mb-6">
