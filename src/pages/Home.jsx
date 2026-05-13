@@ -70,8 +70,8 @@ export default function Home() {
     <div className="bg-[#050816] text-white overflow-hidden">
 
       <SeoHead
-        title="Dealer AC Resmi Purwokerto & Banyumas | RADJA AC"
-        description="RADJA AC melayani penjualan AC original berbagai brand resmi seperti Daikin, Gree, Midea, Hisense, Sansui, Sharp, Panasonic, LG, Samsung dan lainnya di Purwokerto & Banyumas."
+        title="Toko AC Purwokerto — Dealer AC Daikin, Midea, Hisense | RADJA AC"
+        description="RADJA AC adalah toko AC Purwokerto yang menjual AC Daikin, Midea, Hisense, Gree, Sharp, Panasonic dan brand resmi lainnya. Konsultasi gratis, stok ready, garansi resmi, dan bisa bantu instalasi."
         canonicalPath="/"
       />
 
