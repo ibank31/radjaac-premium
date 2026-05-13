@@ -5,26 +5,99 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
 
-const gallerySlots = [
-  {
-    title: "Foto Gudang",
-    description: "Tempat untuk menampilkan stok unit indoor, outdoor, dan display produk RADJA AC.",
-    icon: Warehouse,
-  },
+const galleryCategories = [
   {
     title: "Showroom",
-    description: "Dokumentasi display brand, area konsultasi, dan suasana toko RADJA AC Purwokerto.",
+    description: "Display brand, area konsultasi, dan suasana toko RADJA AC Purwokerto.",
     icon: Camera,
   },
   {
-    title: "Pengiriman Unit",
-    description: "Foto proses pengiriman AC ke pelanggan rumah, kantor, toko, dan proyek.",
-    icon: PackageCheck,
+    title: "Gudang",
+    description: "Stok unit indoor, outdoor, dan berbagai brand AC yang tersedia.",
+    icon: Warehouse,
   },
   {
-    title: "Pemasangan",
-    description: "Dokumentasi instalasi indoor-outdoor, jalur pipa, dan hasil pemasangan yang rapi.",
+    title: "Material Instalasi",
+    description: "Stok pipa dan perlengkapan pendukung pemasangan AC.",
     icon: ImagePlus,
+  },
+  {
+    title: "Pengiriman & Pemasangan",
+    description: "Dokumentasi aktivitas pengiriman dan instalasi pelanggan.",
+    icon: PackageCheck,
+  },
+]
+
+const galleryItems = [
+  {
+    title: "Showroom Gree RADJA AC Purwokerto",
+    category: "Showroom",
+    description: "Display showroom Gree RADJA AC Purwokerto dengan unit AC dan area konsultasi.",
+    image: "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-01.webp",
+    thumbnail: "/assets/gallery/thumb/showroom-gree-radja-ac-purwokerto-01-thumb.webp",
+  },
+  {
+    title: "Display AC Gree Showroom",
+    category: "Showroom",
+    description: "Area showroom Gree RADJA AC Purwokerto dengan display indoor-outdoor dan cassette AC.",
+    image: "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-02.webp",
+    thumbnail: "/assets/gallery/thumb/showroom-gree-radja-ac-purwokerto-02-thumb.webp",
+  },
+  {
+    title: "Gudang Stok AC Gree",
+    category: "Gudang",
+    description: "Lorong gudang stok AC Gree dan unit outdoor RADJA AC.",
+    image: "/assets/gallery/large/gudang-stok-ac-gree-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/gudang-stok-ac-gree-radja-ac-01-thumb.webp",
+  },
+  {
+    title: "Gudang Stok AC Aqua",
+    category: "Gudang",
+    description: "Stok AC Aqua dan brand lain di gudang RADJA AC.",
+    image: "/assets/gallery/large/gudang-stok-ac-aqua-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/gudang-stok-ac-aqua-radja-ac-01-thumb.webp",
+  },
+  {
+    title: "Rak Gudang Stok AC",
+    category: "Gudang",
+    description: "Rak gudang berisi stok AC berbagai brand di RADJA AC Purwokerto.",
+    image: "/assets/gallery/large/gudang-stok-ac-radja-ac-purwokerto-01.webp",
+    thumbnail: "/assets/gallery/thumb/gudang-stok-ac-radja-ac-purwokerto-01-thumb.webp",
+  },
+  {
+    title: "Stok AC Daikin dan Gree",
+    category: "Gudang",
+    description: "Stok AC Daikin dan Gree untuk kebutuhan pelanggan RADJA AC.",
+    image: "/assets/gallery/large/gudang-stok-ac-daikin-gree-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/gudang-stok-ac-daikin-gree-radja-ac-01-thumb.webp",
+  },
+  {
+    title: "Material Instalasi AC",
+    category: "Material Instalasi",
+    description: "Stok material instalasi AC seperti pipa dan perlengkapan pemasangan.",
+    image: "/assets/gallery/large/material-instalasi-ac-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/material-instalasi-ac-radja-ac-01-thumb.webp",
+  },
+  {
+    title: "Stok Pipa AC",
+    category: "Material Instalasi",
+    description: "Stok pipa AC dan material instalasi untuk pemasangan pelanggan.",
+    image: "/assets/gallery/large/stok-pipa-ac-radja-ac-purwokerto-01.webp",
+    thumbnail: "/assets/gallery/thumb/stok-pipa-ac-radja-ac-purwokerto-01-thumb.webp",
+  },
+  {
+    title: "Stok AC Gree Gudang",
+    category: "Gudang",
+    description: "Tumpukan stok AC Gree di area gudang RADJA AC.",
+    image: "/assets/gallery/large/gudang-stok-ac-gree-radja-ac-02.webp",
+    thumbnail: "/assets/gallery/thumb/gudang-stok-ac-gree-radja-ac-02-thumb.webp",
+  },
+  {
+    title: "Gudang AC Gree RADJA AC",
+    category: "Gudang",
+    description: "Stok AC Gree di gudang RADJA AC untuk kebutuhan rumah dan proyek.",
+    image: "/assets/gallery/large/gudang-stok-ac-gree-radja-ac-03.webp",
+    thumbnail: "/assets/gallery/thumb/gudang-stok-ac-gree-radja-ac-03-thumb.webp",
   },
 ]
 
@@ -57,14 +130,14 @@ export default function Gallery() {
             </h1>
 
             <p className="mx-auto max-w-2xl text-sm leading-7 text-white/68 sm:text-base">
-              Halaman ini disiapkan untuk menampilkan foto asli RADJA AC, mulai dari gudang, stok unit, display showroom, pengiriman, hingga pemasangan AC di lokasi pelanggan.
+              Foto asli RADJA AC untuk menunjukkan showroom, stok unit, gudang, material instalasi, dan aktivitas operasional agar calon pelanggan lebih percaya sebelum membeli AC.
             </p>
           </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-14">
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {gallerySlots.map(({ title, description, icon: Icon }) => (
+            {galleryCategories.map(({ title, description, icon: Icon }) => (
               <div key={title} className="rounded-[30px] border border-white/10 bg-white/[0.04] p-6 text-center transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]">
                 <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
                   <Icon className="h-7 w-7" />
@@ -76,14 +149,55 @@ export default function Gallery() {
           </div>
         </section>
 
+        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-14">
+          <div className="mb-8 text-center">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">FOTO ASLI</p>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">
+              Showroom, gudang, dan stok produk
+            </h2>
+            <p className="mx-auto max-w-2xl text-sm leading-7 text-white/62 sm:text-base">
+              Foto dioptimasi ke format WebP agar halaman tetap ringan tanpa mengorbankan tampilan utama.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {galleryItems.map((item, index) => (
+              <a
+                key={item.image}
+                href={item.image}
+                target="_blank"
+                rel="noreferrer"
+                className="group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.04] shadow-[0_18px_45px_rgba(15,23,42,0.18)] transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]"
+              >
+                <div className="relative overflow-hidden bg-slate-950/70">
+                  <img
+                    src={item.thumbnail}
+                    alt={item.title}
+                    loading={index < 3 ? "eager" : "lazy"}
+                    decoding="async"
+                    className="h-[240px] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  />
+                  <span className="absolute left-4 top-4 rounded-full border border-cyan-300/20 bg-slate-950/75 px-3 py-1 text-xs font-semibold text-cyan-100 backdrop-blur">
+                    {item.category}
+                  </span>
+                </div>
+                <div className="p-5">
+                  <h3 className="mb-2 text-lg font-black text-white">{item.title}</h3>
+                  <p className="text-sm leading-6 text-white/58">{item.description}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <section className="mx-auto max-w-7xl px-6 pb-16 pt-8 lg:px-8 lg:pb-24 lg:pt-14">
           <div className="rounded-[34px] border border-cyan-300/20 bg-cyan-300/5 p-6 text-center sm:p-10 lg:p-14">
             <MapPin className="mx-auto mb-5 h-10 w-10 text-cyan-300" />
             <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl">
-              Siap diisi foto asli RADJA AC
+              Gallery ini bisa terus ditambah
             </h2>
             <p className="mx-auto max-w-2xl text-sm leading-7 text-white/66 sm:text-base">
-              Nanti foto gudang, showroom, stok produk, dan dokumentasi pekerjaan bisa ditambahkan ke halaman ini agar calon pelanggan lebih percaya sebelum membeli AC.
+              Nanti foto pengiriman, pemasangan, proyek, dan dokumentasi pelanggan bisa ditambahkan bertahap agar halaman Gallery semakin kuat sebagai trust signal RADJA AC.
             </p>
           </div>
         </section>
