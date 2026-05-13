@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home"
@@ -23,7 +24,34 @@ import NotFound from "./pages/NotFound"
 import ScrollToTop from "./components/ScrollToTop"
 import ErrorBoundary from "./components/ErrorBoundary"
 
+function sendWhatsAppClickEvent(link) {
+  if (typeof window.gtag !== "function") return
+
+  window.gtag("event", "whatsapp_click", {
+    event_category: "lead",
+    event_label: link.href,
+    link_url: link.href,
+    page_path: window.location.pathname,
+  })
+}
+
 export default function App() {
+  useEffect(() => {
+    function handleClick(event) {
+      const link = event.target.closest("a[href]")
+
+      if (!link || !link.href.includes("wa.me/62882008246099")) return
+
+      sendWhatsAppClickEvent(link)
+    }
+
+    document.addEventListener("click", handleClick)
+
+    return () => {
+      document.removeEventListener("click", handleClick)
+    }
+  }, [])
+
   return (
     <>
       <ScrollToTop />
