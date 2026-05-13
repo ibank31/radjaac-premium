@@ -22,6 +22,10 @@ const NAV_ITEMS = [
         href: "/katalog",
       },
       {
+        label: "Kalkulator PK AC",
+        href: "/kalkulator-pk-ac",
+      },
+      {
         label: "AC Split Rumah",
         href: "/katalog/ac-split-rumah",
       },
