@@ -113,8 +113,8 @@ export default function App() {
           />
 
           <Route
-            path="/brand/lainnya"
-            element={<BrandLainnya />}
+            path="/brand/sharp"
+            element={<SharpPurwokerto />}
           />
 
           <Route
@@ -123,8 +123,18 @@ export default function App() {
           />
 
           <Route
+            path="/brand/panasonic"
+            element={<PanasonicPurwokerto />}
+          />
+
+          <Route
             path="/panasonic-purwokerto"
             element={<PanasonicPurwokerto />}
+          />
+
+          <Route
+            path="/brand/lainnya"
+            element={<BrandLainnya />}
           />
 
           <Route
