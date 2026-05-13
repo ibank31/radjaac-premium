@@ -29,11 +29,21 @@ export const BRAND_ITEMS = [
     logo: "/assets/logos/sansui-logo.png",
     href: "/brand/sansui",
   },
+  {
+    name: "Sharp",
+    tagline: "Value for money",
+    logo: "/assets/logos/sharp-logo.webp",
+    href: "/brand/sharp",
+  },
+  {
+    name: "Panasonic",
+    tagline: "Nyaman & efisien",
+    logo: "/assets/logos/panasonic-logo.webp",
+    href: "/brand/panasonic",
+  },
 ]
 
 export const OTHER_BRAND_ITEMS = [
-  "Sharp",
-  "Panasonic",
   "LG",
   "Samsung",
   "TCL",
