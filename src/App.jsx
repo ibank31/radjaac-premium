@@ -17,6 +17,8 @@ import SansuiPurwokerto from "./pages/SansuiPurwokerto"
 import BrandLainnya from "./pages/BrandLainnya"
 import SharpPurwokerto from "./pages/SharpPurwokerto"
 import PanasonicPurwokerto from "./pages/PanasonicPurwokerto"
+import Blog from "./pages/Blog"
+import BlogPost from "./pages/BlogPost"
 import TentangKami from "./pages/TentangKami"
 import Kontak from "./pages/Kontak"
 import Portfolio from "./pages/Portfolio"
@@ -166,6 +168,10 @@ export default function App() {
             path="/katalog/ac-kantor-komersial"
             element={<AcKantorKomersial />}
           />
+
+          <Route path="/artikel" element={<Blog />} />
+
+          <Route path="/artikel/:slug" element={<BlogPost />} />
 
           <Route
             path="/tentang-kami"
