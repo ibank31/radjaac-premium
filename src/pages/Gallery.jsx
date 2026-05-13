@@ -214,25 +214,25 @@ export default function Gallery() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-5 py-5 lg:px-8 lg:py-8">
-          <div className="mb-6 text-center">
+        <section className="mx-auto max-w-5xl px-5 py-4 lg:px-8 lg:py-6">
+          <div className="mb-5 text-center">
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">VIDEO AKTIVITAS</p>
-            <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
+            <h2 className="mb-2 text-2xl font-black tracking-[-0.03em] sm:text-3xl">
               Cuplikan stok dan pengiriman RADJA AC
             </h2>
-            <p className="mx-auto max-w-2xl text-sm leading-7 text-white/60">
+            <p className="mx-auto max-w-xl text-sm leading-7 text-white/60">
               Video singkat sebagai bukti aktivitas toko, stok barang, dan proses pengiriman RADJA AC.
             </p>
           </div>
 
-          <div className="grid gap-3 md:grid-cols-3">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3">
             {galleryVideos.map((item) => (
               <a
                 key={item.video}
                 href={item.video}
                 target="_blank"
                 rel="noreferrer"
-                className="group overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] shadow-[0_12px_28px_rgba(15,23,42,0.16)] transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06]"
+                className="group overflow-hidden rounded-[16px] border border-white/10 bg-white/[0.04] shadow-[0_10px_22px_rgba(15,23,42,0.14)] transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06] sm:rounded-[18px]"
               >
                 <div className="relative overflow-hidden bg-slate-950/70">
                   <img
@@ -240,19 +240,19 @@ export default function Gallery() {
                     alt={item.title}
                     loading="lazy"
                     decoding="async"
-                    className="aspect-[9/12] w-full object-cover transition duration-500 group-hover:scale-[1.03] md:aspect-[4/5]"
+                    className="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.03] sm:aspect-[3/4] lg:aspect-[4/5]"
                   />
-                  <span className="absolute left-3 top-3 rounded-full border border-cyan-300/20 bg-slate-950/75 px-2.5 py-1 text-[10px] font-semibold text-cyan-100 backdrop-blur">
+                  <span className="absolute left-1.5 top-1.5 rounded-full border border-cyan-300/20 bg-slate-950/75 px-1.5 py-0.5 text-[8px] font-semibold text-cyan-100 backdrop-blur sm:left-2 sm:top-2 sm:px-2 sm:py-1 sm:text-[10px]">
                     {item.category}
                   </span>
                   <span className="absolute inset-0 flex items-center justify-center bg-slate-950/10 opacity-95 transition group-hover:bg-slate-950/20">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-full border border-white/25 bg-slate-950/60 text-white backdrop-blur">
-                      <PlayCircle className="h-8 w-8" />
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-slate-950/60 text-white backdrop-blur sm:h-11 sm:w-11">
+                      <PlayCircle className="h-5 w-5 sm:h-6 sm:w-6" />
                     </span>
                   </span>
                 </div>
-                <div className="p-3">
-                  <h3 className="line-clamp-2 text-sm font-black leading-5 text-white">{item.title}</h3>
+                <div className="p-2 sm:p-3">
+                  <h3 className="line-clamp-2 text-[11px] font-black leading-4 text-white sm:text-sm sm:leading-5">{item.title}</h3>
                 </div>
               </a>
             ))}
