@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
-import { SITE_DATA } from "../constants/siteData";
 import WhatsappIcon from "./ui/WhatsappIcon";
+import { buildWhatsAppUrl } from "../utils/whatsapp";
+
+const CONSULTATION_MESSAGE =
+  "Halo RADJA AC, saya mau konsultasi beli AC. Mohon rekomendasi brand, PK, dan harga yang cocok untuk kebutuhan saya."
 
 export default function HeroSection() {
   return (
@@ -20,43 +23,43 @@ export default function HeroSection() {
           >
             <div className="inline-flex items-center gap-2 border border-cyan-400/20 bg-cyan-400/10 px-3.5 py-2 rounded-full text-cyan-300 text-xs sm:text-sm mb-5">
               <div className="w-2 h-2 rounded-full bg-cyan-400" />
-              DEALER AC RESMI & MULTIBRAND
+              TOKO AC MULTIBRAND DI PURWOKERTO
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black leading-[1.05] sm:leading-tight tracking-[-0.03em] mb-5 max-w-xl">
-              Dealer AC Resmi
+              Toko AC Purwokerto
               <span className="block text-cyan-300">
-                Purwokerto & Banyumas
+                Dealer AC Resmi Bergaransi
               </span>
             </h1>
 
             <p className="text-white/70 text-sm sm:text-base leading-7 max-w-xl mb-5 sm:mb-6">
-              Penjualan AC original berbagai brand resmi, mulai dari Daikin,
-              Gree, Midea, Hisense, Sansui, hingga brand populer lainnya.
-              Didukung konsultasi produk, instalasi rapi, dan layanan after-sales.
+              Jual AC original berbagai brand resmi seperti Daikin, Gree,
+              Midea, Hisense, Sansui, Sharp, Panasonic, dan brand populer lainnya
+              untuk rumah, toko, kantor, cafe, dan proyek di Purwokerto & Banyumas.
             </p>
 
             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3 mb-4">
               <a
-                href={SITE_DATA.whatsappUrl}
+                href={buildWhatsAppUrl(CONSULTATION_MESSAGE)}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-slate-950 font-bold px-6 py-3.5 sm:py-4 rounded-full shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5"
               >
                 <WhatsappIcon className="w-5 h-5 text-slate-950" />
-                Tanya Harga AC
+                Konsultasi Beli AC
               </a>
 
               <a
                 href="#brand-lainnya"
                 className="inline-flex items-center justify-center px-6 py-3.5 sm:py-4 rounded-full border border-white/10 text-white/90 font-semibold transition hover:bg-white/[0.05]"
               >
-                Lihat Brand AC
+                Lihat Brand & Produk
               </a>
             </div>
 
             <p className="mx-auto max-w-xl text-center text-sm text-white/60 mb-3 sm:mx-0 sm:text-left sm:mb-6">
-              Ready stock • Brand resmi • Instalasi rapi • Konsultasi produk
+              Ready stock • Garansi resmi • Konsultasi PK • Bisa bantu instalasi
             </p>
           </motion.div>
 
@@ -76,7 +79,7 @@ export default function HeroSection() {
 
               <img
                 src="/assets/showroom/Showroom-utama.webp"
-                alt="Showroom dealer AC RADJA AC di Purwokerto"
+                alt="Showroom toko AC RADJA AC di Purwokerto"
                 fetchPriority="high"
                 decoding="async"
                 className="relative h-[290px] w-full rounded-[26px] object-cover object-center sm:h-[380px] lg:h-[520px]"
