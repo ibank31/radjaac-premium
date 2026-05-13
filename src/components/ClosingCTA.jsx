@@ -1,7 +1,8 @@
 import { Clock, MapPin, MessageCircle } from "lucide-react"
-import { SITE_DATA } from "../constants/siteData"
+import { buildWhatsAppUrl } from "../utils/whatsapp"
 
-const WA_LINK = SITE_DATA.whatsappUrl
+const CLOSING_MESSAGE =
+  "Halo RADJA AC, saya masih bingung pilih AC. Mohon dibantu rekomendasi produk dan harga yang cocok."
 
 export default function ClosingCTA() {
   return (
@@ -12,25 +13,25 @@ export default function ClosingCTA() {
 
         <div className="relative mx-auto max-w-2xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">
-            KONSULTASI AC
+            KONSULTASI BELI AC
           </p>
 
           <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] text-white sm:text-4xl">
-            Bingung Pilih AC?
+            Bingung Pilih AC yang Cocok?
           </h2>
 
           <p className="mx-auto mb-7 max-w-xl text-sm leading-7 text-white/65 sm:text-base">
-            Kami bantu rekomendasikan tipe AC sesuai ukuran ruangan, daya listrik, dan kebutuhan penggunaan.
+            Chat RADJA AC untuk cek stok, tanya harga terbaru, dan minta rekomendasi AC sesuai luas ruangan, daya listrik, serta kebutuhan penggunaan.
           </p>
 
           <a
-            href={WA_LINK}
+            href={buildWhatsAppUrl(CLOSING_MESSAGE)}
             target="_blank"
             rel="noreferrer"
             className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#25D366] px-7 py-4 text-base font-bold text-slate-950 shadow-[0_24px_70px_rgba(37,211,102,0.22)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A] sm:w-auto sm:min-w-[280px]"
           >
             <MessageCircle className="h-5 w-5" />
-            Chat WhatsApp
+            Tanya Harga & Rekomendasi AC
           </a>
 
           <div className="mt-7 flex flex-col items-center justify-center gap-3 text-sm text-white/50 sm:flex-row sm:gap-6">
@@ -41,7 +42,7 @@ export default function ClosingCTA() {
 
             <span className="inline-flex items-center gap-2">
               <Clock className="h-4 w-4 text-cyan-300/80" />
-              Jam: 08.00 – 20.00 WIB
+              Fast response via WhatsApp
             </span>
           </div>
         </div>
