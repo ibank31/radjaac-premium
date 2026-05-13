@@ -138,7 +138,7 @@ const galleryItems = [
     title: "Display Outdoor Daikin",
     category: "Display Produk",
     image: "/assets/gallery/large/display-outdoor-daikin-radja-ac-01.webp",
-    thumbnail: "/assets/gallery/large/display-outdoor-daikin-radja-ac-01.webp",
+    thumbnail: "/assets/gallery/thumb/display-outdoor-daikin-radja-ac-01-thumb.webp",
   },
   {
     title: "Display Daikin Nusantara",
