@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 import { SITE_DATA } from "../constants/siteData";
+import { buildWhatsAppUrlForPath } from "../utils/whatsapp";
 import WhatsappIcon from "./ui/WhatsappIcon";
 
 export default function FloatingWhatsapp() {
+  const location = useLocation()
+
   return (
     <motion.a
-      href={SITE_DATA.whatsappUrl}
+      href={buildWhatsAppUrlForPath(location.pathname)}
       target="_blank"
       rel="noreferrer"
       aria-label={`Chat WhatsApp ${SITE_DATA.businessName}`}

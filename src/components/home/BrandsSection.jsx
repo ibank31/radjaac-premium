@@ -3,10 +3,9 @@ import { ArrowRight, ChevronRight } from "lucide-react"
 import { BRAND_ITEMS } from "../../data/home/brandItems"
 
 const OTHER_BRAND_ROWS = [
-  ["Panasonic", "Mitsubishi", "Changhong"],
-  ["Samsung", "Polytron", "Toshiba"],
-  ["Sharp", "Ariston", "Aqua"],
-  ["TCL", "LG"],
+  ["Mitsubishi", "Changhong", "Samsung"],
+  ["Polytron", "Toshiba", "Ariston"],
+  ["Aqua", "TCL", "LG"],
 ]
 
 const LOGO_STYLES = {
@@ -29,6 +28,14 @@ const LOGO_STYLES = {
   Sansui: {
     width: "142px",
     transform: "scale(1)",
+  },
+  Sharp: {
+    width: "148px",
+    transform: "scale(0.98)",
+  },
+  Panasonic: {
+    width: "154px",
+    transform: "scale(0.98)",
   },
 }
 
@@ -67,14 +74,12 @@ export default function BrandsSection() {
         membandingkan pilihan.
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
         {BRAND_ITEMS.map((brand) => (
           <Link
             key={brand.name}
             to={brand.href}
-            className={`group rounded-[24px] border border-white/10 bg-white/[0.03] hover:bg-[#0A1930] transition-all duration-300 px-4 py-4 sm:p-5 flex flex-col items-center justify-center text-center ${
-              brand.name === "Sansui" ? "col-span-2 mx-auto w-[calc(50%-0.5rem)] md:col-span-1 md:w-auto" : ""
-            }`}
+            className="group rounded-[24px] border border-white/10 bg-white/[0.03] hover:bg-[#0A1930] transition-all duration-300 px-4 py-4 sm:p-5 flex flex-col items-center justify-center text-center"
             aria-label={`Lihat brand ${brand.name}`}
           >
             <div className="flex h-[52px] w-full items-center justify-center sm:h-[60px]">

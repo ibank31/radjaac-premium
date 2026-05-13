@@ -17,19 +17,16 @@ const sharpBenefits = [
 const recommendedSharpUnits = [
   {
     title: "Sharp Standard 1 PK",
-    price: "Mulai Rp 3 jutaan",
     description: "Pilihan populer untuk kamar utama dan ruang tamu ukuran menengah.",
     badge: "Rumah",
   },
   {
     title: "Sharp Inverter 1 PK",
-    price: "Mulai Rp 4 jutaan",
     description: "Lebih hemat untuk pemakaian AC rutin setiap hari.",
     badge: "Inverter",
   },
   {
     title: "Sharp Low Watt",
-    price: "Mulai Rp 3 jutaan",
     description: "Solusi nyaman untuk rumah dengan fokus biaya listrik terkontrol.",
     badge: "Low Watt",
   },
@@ -49,7 +46,7 @@ const useCases = [
 const faqItems = [
   {
     question: "AC Sharp cocok untuk siapa?",
-    answer: "AC Sharp cocok untuk keluarga yang mencari pendinginan cepat dengan harga yang tetap masuk akal.",
+    answer: "AC Sharp cocok untuk keluarga yang mencari pendinginan cepat dengan pilihan unit yang tetap masuk akal.",
   },
   {
     question: "Apakah tersedia opsi inverter Sharp?",
@@ -68,8 +65,8 @@ export default function SharpPurwokerto() {
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <SeoHead
         title="Dealer AC Sharp Purwokerto | Jual AC Sharp Banyumas - RADJA AC"
-        description="RADJA AC menyediakan penjualan AC Sharp di Purwokerto & Banyumas dengan rekomendasi unit untuk rumah, harga transparan, dan konsultasi gratis via WhatsApp."
-        canonicalPath="/sharp-purwokerto"
+        description="RADJA AC menyediakan penjualan AC Sharp di Purwokerto & Banyumas dengan rekomendasi unit untuk rumah dan konsultasi gratis via WhatsApp."
+        canonicalPath="/brand/sharp"
       />
 
       <Helmet>
@@ -140,10 +137,9 @@ export default function SharpPurwokerto() {
                   <h3 className="text-2xl font-semibold text-white">{unit.title}</h3>
                   <span className="rounded-full border border-white/10 bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-200">{unit.badge}</span>
                 </div>
-                <p className="text-cyan-200 font-semibold mb-2">{unit.price}</p>
                 <p className="text-slate-300 text-sm leading-relaxed mb-5">{unit.description}</p>
                 <Link to="/kontak" className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-4 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300">
-                  Chat WhatsApp
+                  Cek Stok & Harga
                 </Link>
               </article>
             ))}
@@ -181,7 +177,7 @@ export default function SharpPurwokerto() {
         <section className="px-6 pb-20 lg:px-8">
           <div className="max-w-5xl mx-auto rounded-[32px] border border-cyan-400/30 bg-cyan-400/10 p-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-black mb-4">Butuh Rekomendasi AC Sharp yang Tepat?</h2>
-            <p className="text-slate-200 mb-6">Chat tim RADJA AC sekarang untuk konsultasi kebutuhan ruangan dan estimasi harga unit.</p>
+            <p className="text-slate-200 mb-6">Chat tim RADJA AC sekarang untuk konsultasi kebutuhan ruangan dan estimasi pilihan unit.</p>
             <Link to="/kontak" className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-base font-semibold text-slate-950 transition hover:bg-cyan-300">
               Tanya Harga
             </Link>

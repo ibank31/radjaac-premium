@@ -2,27 +2,72 @@ import { SITE_DATA } from "../constants/siteData"
 
 export const businessSchema = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "HVACBusiness"],
+  "@type": ["Store", "LocalBusiness", "HVACBusiness"],
+  "@id": `${SITE_DATA.baseUrl}/#business`,
   name: SITE_DATA.businessName,
   description: SITE_DATA.businessDescription,
   url: SITE_DATA.baseUrl,
+  image: `${SITE_DATA.baseUrl}${SITE_DATA.logoUrl}`,
+  logo: `${SITE_DATA.baseUrl}${SITE_DATA.logoUrl}`,
   telephone: SITE_DATA.phoneNumber,
-  priceRange: "$$",
-  areaServed: SITE_DATA.serviceAreas.map(city => ({
+  areaServed: SITE_DATA.serviceAreas.map((city) => ({
     "@type": "City",
     name: city,
   })),
+  makesOffer: [
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Product",
+        name: "AC Split Rumah",
+        category: "Air Conditioner",
+      },
+      availability: "https://schema.org/InStock",
+      url: `${SITE_DATA.baseUrl}/katalog/ac-split-rumah`,
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Product",
+        name: "AC Inverter",
+        category: "Air Conditioner",
+      },
+      availability: "https://schema.org/InStock",
+      url: `${SITE_DATA.baseUrl}/katalog/ac-inverter`,
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Product",
+        name: "AC Low Watt",
+        category: "Air Conditioner",
+      },
+      availability: "https://schema.org/InStock",
+      url: `${SITE_DATA.baseUrl}/katalog/ac-low-watt`,
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Product",
+        name: "AC Kantor dan Komersial",
+        category: "Air Conditioner",
+      },
+      availability: "https://schema.org/InStock",
+      url: `${SITE_DATA.baseUrl}/katalog/ac-kantor-komersial`,
+    },
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Customer Service",
     telephone: SITE_DATA.phoneNumber,
+    availableLanguage: "Indonesian",
   },
   sameAs: [
     SITE_DATA.whatsappUrl,
   ],
-  openingHours: SITE_DATA.operationalHours.map(hour => {
-    if (hour.label === "Senin - Jumat") return "Mo-Fr " + hour.value.replace(" - ", "-").replace(":", "")
-    if (hour.label === "Sabtu") return "Sa " + hour.value.replace(" - ", "-").replace(":", "")
+  openingHours: SITE_DATA.operationalHours.map((hour) => {
+    if (hour.label === "Senin - Jumat") return `Mo-Fr ${hour.value.replace(" - ", "-")}`
+    if (hour.label === "Sabtu") return `Sa ${hour.value.replace(" - ", "-")}`
     return null
   }).filter(Boolean),
 }
@@ -34,6 +79,7 @@ export function createServiceSchema(serviceName, serviceDescription, areaServed 
     name: serviceName,
     description: serviceDescription,
     provider: {
+      "@id": `${SITE_DATA.baseUrl}/#business`,
       "@type": "LocalBusiness",
       name: SITE_DATA.businessName,
       url: SITE_DATA.baseUrl,
@@ -47,7 +93,7 @@ export function createServiceSchema(serviceName, serviceDescription, areaServed 
       name: areaServed,
     }
   } else {
-    schema.provider.areaServed = SITE_DATA.serviceAreas.map(city => ({
+    schema.provider.areaServed = SITE_DATA.serviceAreas.map((city) => ({
       "@type": "City",
       name: city,
     }))
@@ -68,7 +114,7 @@ export function createLocationSchema(locationName, locationDescription, location
       "@type": "City",
       name: locationName,
     },
-    serviceArea: nearbyAreas.map(area => ({
+    serviceArea: nearbyAreas.map((area) => ({
       "@type": "City",
       name: area,
     })),
@@ -94,6 +140,7 @@ export function createOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${SITE_DATA.baseUrl}/#organization`,
     name: SITE_DATA.businessName,
     url: SITE_DATA.baseUrl,
     logo: `${SITE_DATA.baseUrl}${SITE_DATA.logoUrl}`,
