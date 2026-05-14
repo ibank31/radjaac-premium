@@ -33,6 +33,7 @@ export default function Portfolio() {
         title="Portfolio | Radja AC Purwokerto"
         description="Lihat portofolio layanan AC Radja AC. Tambahkan foto cuci AC rumah, instalasi AC split, service outdoor, teknisi bekerja, dan before-after evaporator."
         canonicalPath="/portfolio"
+        robots="noindex,follow"
       />
 
       <Navbar />
