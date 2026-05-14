@@ -9,7 +9,7 @@ import FloatingWhatsapp from "../components/FloatingWhatsapp"
 import NotFound from "./NotFound"
 import { SITE_DATA } from "../constants/siteData"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
-import { BLOG_POSTS, getBlogPostBySlug } from "../data/blogPosts"
+import { BLOG_POSTS, getBlogPostBySlug } from "../data/allBlogPosts"
 
 function createArticleSchema(post) {
   return {
