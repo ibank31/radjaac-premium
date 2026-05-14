@@ -5,12 +5,12 @@ import { SITE_DATA } from "../constants/siteData"
 import { buildWhatsAppUrlForPath } from "../utils/whatsapp"
 import WhatsappIcon from "./ui/WhatsappIcon"
 
-export default function FloatingWhatsapp() {
+export default function FloatingWhatsapp({ global = false }) {
   const location = useLocation()
   const [isHiddenNearFooter, setIsHiddenNearFooter] = useState(false)
 
   useEffect(() => {
-    if (location.pathname !== "/") return undefined
+    if (!global) return undefined
 
     function updateVisibility() {
       const footer = document.querySelector("footer")
@@ -28,9 +28,9 @@ export default function FloatingWhatsapp() {
       window.removeEventListener("scroll", updateVisibility)
       window.removeEventListener("resize", updateVisibility)
     }
-  }, [location.pathname])
+  }, [global, location.pathname])
 
-  if (location.pathname !== "/") return null
+  if (!global) return null
 
   return (
     <motion.a
