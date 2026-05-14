@@ -137,6 +137,10 @@ function isPathActive(pathname, targetPath) {
   return pathname === targetPath || pathname.startsWith(`${targetPath}/`)
 }
 
+function isExactPathActive(pathname, targetPath) {
+  return Boolean(targetPath) && pathname === targetPath
+}
+
 function isDropdownActive(pathname, item) {
   return item.items.some((subItem) => isPathActive(pathname, subItem.href)) || item.activePaths?.some((path) => isPathActive(pathname, path))
 }
@@ -217,7 +221,7 @@ export default function Navbar() {
                 >
                   <div className="space-y-1 px-3">
                     {item.items.map((subItem) => {
-                      const isActiveSubItem = isPathActive(pathname, subItem.href)
+                      const isActiveSubItem = isExactPathActive(pathname, subItem.href)
 
                       return subItem.href ? (
                         <Link
@@ -306,7 +310,7 @@ export default function Navbar() {
                     {openDropdown === item.label && (
                       <div className="space-y-1 pl-4 border-l border-white/10 ml-2">
                         {item.items.map((subItem) => {
-                          const isActiveSubItem = isPathActive(pathname, subItem.href)
+                          const isActiveSubItem = isExactPathActive(pathname, subItem.href)
 
                           return subItem.href ? (
                             <Link
