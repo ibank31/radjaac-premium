@@ -8,6 +8,27 @@ body {
 }
 
 /* ══════════════════════════════════════════
+   GLOBAL WHATSAPP CTA CLICK SAFETY
+   Keep all WhatsApp CTA links above decorative layers.
+══════════════════════════════════════════ */
+a[href*="wa.me/62882008246099"] {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+a[href*="wa.me/62882008246099"].inline-flex {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  a[href*="wa.me/62882008246099"].inline-flex {
+    width: 100%;
+    min-height: 3.5rem;
+  }
+}
+
+/* ══════════════════════════════════════════
    CTA PENUTUP SECTION
 ══════════════════════════════════════════ */
 .cta-section {
