@@ -61,6 +61,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <FloatingWhatsapp />
 
       <ErrorBoundary>
         <Routes>
@@ -201,8 +202,6 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ErrorBoundary>
-
-      <FloatingWhatsapp />
     </>
   )
 }
