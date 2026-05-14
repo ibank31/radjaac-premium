@@ -28,6 +28,7 @@ import Portfolio from "./pages/Portfolio"
 import NotFound from "./pages/NotFound"
 import ScrollToTop from "./components/ScrollToTop"
 import ErrorBoundary from "./components/ErrorBoundary"
+import FloatingWhatsapp from "./components/FloatingWhatsapp"
 
 function sendWhatsAppClickEvent(link) {
   if (typeof window.gtag !== "function") return
@@ -200,6 +201,8 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ErrorBoundary>
+
+      <FloatingWhatsapp global />
     </>
   )
 }
