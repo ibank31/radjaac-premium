@@ -2,64 +2,58 @@ import { Link } from "react-router-dom"
 
 const internalLinks = [
   {
-    title: "Service AC Purwokerto",
-    desc: "Perbaikan AC tidak dingin, bocor, mati total dengan teknisi profesional dan bergaransi.",
-    link: "/service-ac-purwokerto",
-    anchorText: "service AC Purwokerto",
+    title: "Jual AC Purwokerto",
+    desc: "Pilih AC original untuk rumah, kantor, toko, dan usaha dengan konsultasi kebutuhan ruangan sebelum membeli.",
+    link: "/jual-ac-purwokerto",
+    anchorText: "jual AC Purwokerto",
   },
   {
-    title: "Cuci AC Murah",
-    desc: "Layanan cuci AC berkala untuk performa optimal dan udara sehat di rumah Anda.",
-    link: "/cuci-ac-purwokerto",
-    anchorText: "cuci AC murah",
+    title: "Panduan Pilih AC",
+    desc: "Mulai dari ukuran ruangan, daya listrik, kapasitas PK, sampai tipe AC yang sesuai kebutuhan harian.",
+    link: "/katalog",
+    anchorText: "panduan pilih AC",
   },
   {
-    title: "Instalasi AC Banyumas",
-    desc: "Pemasangan AC baru dengan kualitas terbaik dan pengerjaan rapi oleh ahli.",
-    link: "/instalasi-ac-banyumas",
-    anchorText: "instalasi AC Banyumas",
+    title: "Panduan Instalasi AC Baru",
+    desc: "Pelajari hal penting sebelum AC dipasang: posisi indoor, outdoor, jalur pipa, drainase, dan listrik.",
+    link: "/artikel/panduan-instalasi-ac-baru",
+    anchorText: "panduan instalasi AC baru",
   },
   {
-    title: "AC Inverter Purwokerto",
-    desc: "Solusi AC inverter hemat listrik untuk rumah, kantor, dan bisnis lokal di Purwokerto & Banyumas.",
-    link: "/ac-inverter-purwokerto",
-    anchorText: "AC inverter Purwokerto",
+    title: "AC Inverter",
+    desc: "Panduan memilih AC inverter untuk pemakaian rutin, kamar tidur, ruang kerja, dan kebutuhan hemat energi.",
+    link: "/katalog/ac-inverter",
+    anchorText: "AC inverter",
   },
   {
-    title: "Isi Freon AC",
-    desc: "Layanan isi freon AC untuk AC dingin kembali maksimal dengan freon berkualitas.",
-    link: "/isi-freon-ac",
-    anchorText: "isi freon AC",
+    title: "AC Low Watt",
+    desc: "Pilihan AC untuk rumah dengan daya listrik terbatas agar pembelian lebih aman dan sesuai kebutuhan.",
+    link: "/katalog/ac-low-watt",
+    anchorText: "AC low watt",
   },
   {
-    title: "Service AC Daikin",
-    desc: "Perbaikan dan perawatan AC Daikin dengan sparepart original dan teknisi ahli.",
-    link: "/ac-daikin-tidak-dingin",
-    anchorText: "service AC Daikin",
+    title: "Daikin Purwokerto",
+    desc: "Lihat informasi AC Daikin original, pilihan tipe, dan konsultasi kapasitas PK untuk area Purwokerto.",
+    link: "/brand/daikin",
+    anchorText: "Daikin Purwokerto",
   },
   {
-    title: "Service AC LG",
-    desc: "Layanan lengkap untuk AC LG dengan garansi resmi dan teknisi bersertifikat.",
-    link: "/service-ac-lg",
-    anchorText: "service AC LG",
+    title: "AC Kantor & Komersial",
+    desc: "Pilihan AC untuk kantor, toko, cafe, ruang usaha, cassette, dan kebutuhan pembelian banyak unit.",
+    link: "/katalog/ac-kantor-komersial",
+    anchorText: "AC kantor dan komersial",
   },
   {
-    title: "Portfolio Pekerjaan",
-    desc: "Lihat hasil pekerjaan kami dalam service dan instalasi AC di berbagai lokasi.",
-    link: "/portfolio",
-    anchorText: "lihat portfolio AC",
+    title: "Gallery RADJA AC",
+    desc: "Lihat dokumentasi showroom, gudang, stok produk, pengiriman, dan aktivitas RADJA AC.",
+    link: "/gallery",
+    anchorText: "gallery RADJA AC",
   },
   {
-    title: "Kontak & Lokasi",
-    desc: "Hubungi kami untuk konsultasi gratis atau kunjungi lokasi toko di Purwokerto.",
-    link: "/kontak",
-    anchorText: "kontak Radja AC",
-  },
-  {
-    title: "Service AC Sokaraja",
-    desc: "Layanan service AC profesional di Sokaraja dengan response time cepat.",
-    link: "/service-ac-sokaraja",
-    anchorText: "service AC Sokaraja",
+    title: "Tentang RADJA AC",
+    desc: "Kenali RADJA AC sebagai partner penjualan AC multibrand untuk Purwokerto dan Banyumas.",
+    link: "/tentang-kami",
+    anchorText: "tentang RADJA AC",
   },
 ]
 
@@ -69,16 +63,15 @@ export default function InternalLinksSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-cyan-300 font-medium mb-3">
-            Layanan Lengkap AC
+            Panduan Lengkap Sebelum Beli AC
           </p>
 
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Temukan Solusi AC yang Anda Butuhkan
+            Temukan AC yang Sesuai Kebutuhan Anda
           </h2>
 
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Dari service rutin hingga perbaikan darurat, kami siap membantu
-            semua kebutuhan AC Anda di Purwokerto, Banyumas, dan sekitarnya.
+            Mulai dari rekomendasi PK, pilihan brand, tipe AC, sampai hal penting sebelum pemasangan unit baru.
           </p>
         </div>
 
@@ -104,23 +97,22 @@ export default function InternalLinksSection() {
           ))}
         </div>
 
-        {/* Additional contextual links */}
         <div className="mt-16 text-center">
           <p className="text-slate-400 mb-6">
-            Butuh bantuan segera? <Link to="/kontak" className="text-cyan-300 hover:text-cyan-200 font-medium">Hubungi teknisi kami</Link> atau
-            <Link to="/cuci-ac-purwokerto" className="text-cyan-300 hover:text-cyan-200 font-medium ml-1">jadwalkan service AC</Link> sekarang juga.
+            Butuh arahan sebelum membeli? <Link to="/jual-ac-purwokerto" className="text-cyan-300 hover:text-cyan-200 font-medium">Konsultasi kebutuhan AC</Link> atau
+            <Link to="/artikel/panduan-instalasi-ac-baru" className="text-cyan-300 hover:text-cyan-200 font-medium ml-1">baca panduan instalasi AC baru</Link>.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <Link to="/tentang-kami" className="text-slate-400 hover:text-cyan-300 transition-colors">
               Tentang Kami
             </Link>
             <span className="text-slate-600">•</span>
-            <Link to="/portfolio" className="text-slate-400 hover:text-cyan-300 transition-colors">
-              Portfolio
+            <Link to="/gallery" className="text-slate-400 hover:text-cyan-300 transition-colors">
+              Gallery
             </Link>
             <span className="text-slate-600">•</span>
-            <Link to="/service-ac-purwokerto" className="text-slate-400 hover:text-cyan-300 transition-colors">
-              Service Area
+            <Link to="/katalog" className="text-slate-400 hover:text-cyan-300 transition-colors">
+              Katalog AC
             </Link>
           </div>
         </div>
