@@ -1,31 +1,32 @@
-import { useEffect } from "react"
+import { lazy, Suspense, useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 
-import Home from "./pages/Home"
-import JualAcPurwokerto from "./pages/JualAcPurwokerto"
-import KatalogAc from "./pages/KatalogAc"
-import KalkulatorAc from "./pages/KalkulatorAc"
-import InstalasiAC from "./pages/InstalasiAC"
-import InstalasiProfesional from "./pages/InstalasiProfesional"
-import AcSplitRumah from "./pages/AcSplitRumah"
-import AcInverter from "./pages/AcInverter"
-import AcLowWatt from "./pages/AcLowWatt"
-import AcKantorKomersial from "./pages/AcKantorKomersial"
-import DaikinPurwokerto from "./pages/DaikinPurwokerto"
-import GreePurwokerto from "./pages/GreePurwokerto"
-import MideaPurwokerto from "./pages/MideaPurwokerto"
-import HisensePurwokerto from "./pages/HisensePurwokerto"
-import SansuiPurwokerto from "./pages/SansuiPurwokerto"
-import BrandLainnya from "./pages/BrandLainnya"
-import SharpPurwokerto from "./pages/SharpPurwokerto"
-import PanasonicPurwokerto from "./pages/PanasonicPurwokerto"
-import Blog from "./pages/Blog"
-import BlogPost from "./pages/BlogPost"
-import Gallery from "./pages/Gallery"
-import TentangKami from "./pages/TentangKami"
-import Kontak from "./pages/Kontak"
-import Portfolio from "./pages/Portfolio"
-import NotFound from "./pages/NotFound"
+const Home = lazy(() => import("./pages/Home"))
+const JualAcPurwokerto = lazy(() => import("./pages/JualAcPurwokerto"))
+const KatalogAc = lazy(() => import("./pages/KatalogAc"))
+const KalkulatorAc = lazy(() => import("./pages/KalkulatorAc"))
+const InstalasiAC = lazy(() => import("./pages/InstalasiAC"))
+const InstalasiProfesional = lazy(() => import("./pages/InstalasiProfesional"))
+const AcSplitRumah = lazy(() => import("./pages/AcSplitRumah"))
+const AcInverter = lazy(() => import("./pages/AcInverter"))
+const AcLowWatt = lazy(() => import("./pages/AcLowWatt"))
+const AcKantorKomersial = lazy(() => import("./pages/AcKantorKomersial"))
+const DaikinPurwokerto = lazy(() => import("./pages/DaikinPurwokerto"))
+const GreePurwokerto = lazy(() => import("./pages/GreePurwokerto"))
+const MideaPurwokerto = lazy(() => import("./pages/MideaPurwokerto"))
+const HisensePurwokerto = lazy(() => import("./pages/HisensePurwokerto"))
+const SansuiPurwokerto = lazy(() => import("./pages/SansuiPurwokerto"))
+const BrandLainnya = lazy(() => import("./pages/BrandLainnya"))
+const SharpPurwokerto = lazy(() => import("./pages/SharpPurwokerto"))
+const PanasonicPurwokerto = lazy(() => import("./pages/PanasonicPurwokerto"))
+const Blog = lazy(() => import("./pages/Blog"))
+const BlogPost = lazy(() => import("./pages/BlogPost"))
+const Gallery = lazy(() => import("./pages/Gallery"))
+const TentangKami = lazy(() => import("./pages/TentangKami"))
+const Kontak = lazy(() => import("./pages/Kontak"))
+const Portfolio = lazy(() => import("./pages/Portfolio"))
+const NotFound = lazy(() => import("./pages/NotFound"))
+
 import ScrollToTop from "./components/ScrollToTop"
 import ErrorBoundary from "./components/ErrorBoundary"
 import FloatingWhatsapp from "./components/FloatingWhatsapp"
@@ -63,143 +64,145 @@ export default function App() {
       <ScrollToTop />
 
       <ErrorBoundary>
-        <Routes>
-          <Route path="/" element={<Home />} />
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<Home />} />
 
-          <Route path="/jual-ac-purwokerto" element={<JualAcPurwokerto />} />
+            <Route path="/jual-ac-purwokerto" element={<JualAcPurwokerto />} />
 
-          <Route path="/katalog" element={<KatalogAc />} />
+            <Route path="/katalog" element={<KatalogAc />} />
 
-          <Route path="/kalkulator-pk-ac" element={<KalkulatorAc />} />
+            <Route path="/kalkulator-pk-ac" element={<KalkulatorAc />} />
 
-          <Route
-            path="/brand/daikin"
-            element={<DaikinPurwokerto />}
-          />
+            <Route
+              path="/brand/daikin"
+              element={<DaikinPurwokerto />}
+            />
 
-          <Route
-            path="/daikin-purwokerto"
-            element={<DaikinPurwokerto />}
-          />
+            <Route
+              path="/daikin-purwokerto"
+              element={<DaikinPurwokerto />}
+            />
 
-          <Route
-            path="/brand/gree"
-            element={<GreePurwokerto />}
-          />
+            <Route
+              path="/brand/gree"
+              element={<GreePurwokerto />}
+            />
 
-          <Route
-            path="/gree-purwokerto"
-            element={<GreePurwokerto />}
-          />
+            <Route
+              path="/gree-purwokerto"
+              element={<GreePurwokerto />}
+            />
 
-          <Route
-            path="/brand/midea"
-            element={<MideaPurwokerto />}
-          />
+            <Route
+              path="/brand/midea"
+              element={<MideaPurwokerto />}
+            />
 
-          <Route
-            path="/midea-purwokerto"
-            element={<MideaPurwokerto />}
-          />
+            <Route
+              path="/midea-purwokerto"
+              element={<MideaPurwokerto />}
+            />
 
-          <Route
-            path="/brand/hisense"
-            element={<HisensePurwokerto />}
-          />
+            <Route
+              path="/brand/hisense"
+              element={<HisensePurwokerto />}
+            />
 
-          <Route
-            path="/hisense-purwokerto"
-            element={<HisensePurwokerto />}
-          />
+            <Route
+              path="/hisense-purwokerto"
+              element={<HisensePurwokerto />}
+            />
 
-          <Route
-            path="/brand/sansui"
-            element={<SansuiPurwokerto />}
-          />
+            <Route
+              path="/brand/sansui"
+              element={<SansuiPurwokerto />}
+            />
 
-          <Route
-            path="/sansui-purwokerto"
-            element={<SansuiPurwokerto />}
-          />
+            <Route
+              path="/sansui-purwokerto"
+              element={<SansuiPurwokerto />}
+            />
 
-          <Route
-            path="/brand/sharp"
-            element={<SharpPurwokerto />}
-          />
+            <Route
+              path="/brand/sharp"
+              element={<SharpPurwokerto />}
+            />
 
-          <Route
-            path="/sharp-purwokerto"
-            element={<SharpPurwokerto />}
-          />
+            <Route
+              path="/sharp-purwokerto"
+              element={<SharpPurwokerto />}
+            />
 
-          <Route
-            path="/brand/panasonic"
-            element={<PanasonicPurwokerto />}
-          />
+            <Route
+              path="/brand/panasonic"
+              element={<PanasonicPurwokerto />}
+            />
 
-          <Route
-            path="/panasonic-purwokerto"
-            element={<PanasonicPurwokerto />}
-          />
+            <Route
+              path="/panasonic-purwokerto"
+              element={<PanasonicPurwokerto />}
+            />
 
-          <Route
-            path="/brand/lainnya"
-            element={<BrandLainnya />}
-          />
+            <Route
+              path="/brand/lainnya"
+              element={<BrandLainnya />}
+            />
 
-          <Route
-            path="/instalasi-ac-banyumas"
-            element={<InstalasiAC />}
-          />
+            <Route
+              path="/instalasi-ac-banyumas"
+              element={<InstalasiAC />}
+            />
 
-          <Route
-            path="/instalasi-profesional"
-            element={<InstalasiProfesional />}
-          />
+            <Route
+              path="/instalasi-profesional"
+              element={<InstalasiProfesional />}
+            />
 
-          <Route
-            path="/katalog/ac-split-rumah"
-            element={<AcSplitRumah />}
-          />
+            <Route
+              path="/katalog/ac-split-rumah"
+              element={<AcSplitRumah />}
+            />
 
-          <Route
-            path="/katalog/ac-inverter"
-            element={<AcInverter />}
-          />
+            <Route
+              path="/katalog/ac-inverter"
+              element={<AcInverter />}
+            />
 
-          <Route
-            path="/katalog/ac-low-watt"
-            element={<AcLowWatt />}
-          />
+            <Route
+              path="/katalog/ac-low-watt"
+              element={<AcLowWatt />}
+            />
 
-          <Route
-            path="/katalog/ac-kantor-komersial"
-            element={<AcKantorKomersial />}
-          />
+            <Route
+              path="/katalog/ac-kantor-komersial"
+              element={<AcKantorKomersial />}
+            />
 
-          <Route path="/artikel" element={<Blog />} />
+            <Route path="/artikel" element={<Blog />} />
 
-          <Route path="/artikel/:slug" element={<BlogPost />} />
+            <Route path="/artikel/:slug" element={<BlogPost />} />
 
-          <Route path="/gallery" element={<Gallery />} />
+            <Route path="/gallery" element={<Gallery />} />
 
-          <Route
-            path="/tentang-kami"
-            element={<TentangKami />}
-          />
+            <Route
+              path="/tentang-kami"
+              element={<TentangKami />}
+            />
 
-          <Route
-            path="/kontak"
-            element={<Kontak />}
-          />
+            <Route
+              path="/kontak"
+              element={<Kontak />}
+            />
 
-          <Route
-            path="/portfolio"
-            element={<Portfolio />}
-          />
+            <Route
+              path="/portfolio"
+              element={<Portfolio />}
+            />
 
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </ErrorBoundary>
 
       <FloatingWhatsapp global />
