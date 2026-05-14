@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { BadgeCheck, ShieldCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
+import { BadgeCheck, ShieldCheck, Snowflake, Sparkles, Wind } from "lucide-react"
 
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
