@@ -46,7 +46,7 @@ export default function SalesLandingSection() {
                 to="/jual-ac-purwokerto"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-300 px-6 py-4 font-bold text-slate-950 transition hover:bg-cyan-200"
               >
-                Buka Panduan Jual AC
+                Panduan Pilih AC
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
