@@ -8,6 +8,7 @@ export default function NotFound() {
       <Helmet>
         <title>Halaman Tidak Ditemukan | {SITE_DATA.businessName}</title>
         <meta name="description" content={`Halaman yang Anda cari tidak ditemukan. Kembali ke beranda ${SITE_DATA.businessName} untuk layanan AC profesional di Purwokerto dan Banyumas.`} />
+        <meta name="robots" content="noindex,follow" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-6">

@@ -2,8 +2,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import sitemap from 'vite-plugin-sitemap'
+import { BLOG_POSTS } from './src/data/blogPosts.js'
 
-const routes = [
+const staticRoutes = [
   '/',
   '/katalog',
   '/kalkulator-pk-ac',
@@ -20,15 +21,17 @@ const routes = [
   '/katalog/ac-low-watt',
   '/katalog/ac-kantor-komersial',
   '/artikel',
-  '/artikel/ac-1-pk-untuk-ruangan-berapa',
-  '/artikel/ac-inverter-vs-low-watt',
-  '/artikel/cara-memilih-ac-untuk-kamar-3x4',
   '/instalasi-ac-banyumas',
   '/instalasi-profesional',
   '/tentang-kami',
   '/kontak',
   '/portfolio',
 ]
+
+const routes = Array.from(new Set([
+  ...staticRoutes,
+  ...BLOG_POSTS.map((post) => `/artikel/${post.slug}`),
+]))
 
 export default defineConfig({
   plugins: [
