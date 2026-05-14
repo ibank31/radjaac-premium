@@ -63,20 +63,20 @@ export default function TrustSection() {
           ))}
         </div>
 
-        <div className="mt-3 grid grid-cols-4 gap-2">
+        <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {CERTIFICATES.map((item) => (
             <figure key={item.brand} className="text-center">
-              <div className="overflow-hidden rounded-[12px] border border-white/10 bg-slate-900/40">
+              <div className="overflow-hidden rounded-[14px] border border-white/10 bg-slate-900/40 shadow-[0_10px_24px_rgba(0,0,0,0.18)]">
                 <img
                   src={item.image}
                   alt={`Sertifikat dealer resmi ${item.brand}`}
                   loading="lazy"
                   decoding="async"
-                  className="h-[48px] w-full object-cover object-center sm:h-[86px]"
+                  className="h-[86px] w-full object-cover object-center sm:h-[96px]"
                 />
               </div>
-              <figcaption className="mt-1.5 inline-flex items-center justify-center gap-1 text-[11px] font-bold text-white sm:text-sm">
-                <BadgeCheck className="h-3 w-3 shrink-0 text-cyan-300 sm:h-4 sm:w-4" />
+              <figcaption className="mt-1.5 inline-flex items-center justify-center gap-1 text-xs font-bold text-white sm:text-sm">
+                <BadgeCheck className="h-3.5 w-3.5 shrink-0 text-cyan-300 sm:h-4 sm:w-4" />
                 {item.brand}
               </figcaption>
             </figure>
