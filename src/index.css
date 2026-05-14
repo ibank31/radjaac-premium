@@ -9,9 +9,9 @@ body {
 
 /* ══════════════════════════════════════════
    GLOBAL WHATSAPP CTA CLICK SAFETY
-   Keep all WhatsApp CTA links above decorative layers.
+   Keep WhatsApp CTA links above decorative layers, excluding floating CTA.
 ══════════════════════════════════════════ */
-a[href*="wa.me/62882008246099"] {
+a[href*="wa.me/62882008246099"]:not(.floating-whatsapp) {
   position: relative;
   z-index: 20;
   pointer-events: auto;
