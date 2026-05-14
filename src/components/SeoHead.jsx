@@ -96,7 +96,7 @@ function createWebPageSchema({ title, description, canonical }) {
   }
 }
 
-export default function SeoHead({ title, description, canonicalPath = "/" }) {
+export default function SeoHead({ title, description, canonicalPath = "/", robots }) {
   const canonical = buildCanonicalUrl(canonicalPath)
   const breadcrumbSchema = createBreadcrumbSchema(canonicalPath, title)
   const webPageSchema = createWebPageSchema({ title, description, canonical })
@@ -106,6 +106,7 @@ export default function SeoHead({ title, description, canonicalPath = "/" }) {
     <Helmet>
       <title>{title}</title>
       {description ? <meta name="description" content={description} /> : null}
+      {robots ? <meta name="robots" content={robots} /> : null}
       {canonical ? <link rel="canonical" href={canonical} /> : null}
 
       <meta property="og:type" content="website" />
