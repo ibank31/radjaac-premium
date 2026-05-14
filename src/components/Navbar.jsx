@@ -87,6 +87,13 @@ const NAV_ITEMS = [
   },
 
   {
+    label: "Gallery",
+    to: "/gallery",
+    type: "link",
+    end: true,
+  },
+
+  {
     label: "Tentang Kami",
     to: "/tentang-kami",
     type: "link",

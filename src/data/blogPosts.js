@@ -1,5 +1,113 @@
 export const BLOG_POSTS = [
   {
+    slug: "harga-ac-daikin-purwokerto",
+    title: "Harga AC Daikin Purwokerto: Cara Cek Stok, Tipe, dan Biaya Pasang",
+    shortTitle: "Harga AC Daikin Purwokerto",
+    description: "Panduan cek harga AC Daikin di Purwokerto, mulai dari pilihan tipe, kapasitas PK, stok, ongkir, sampai kebutuhan pemasangan.",
+    category: "Daikin Purwokerto",
+    readTime: "5 menit baca",
+    updatedAt: "2026-05-13",
+    keywords: ["harga AC Daikin Purwokerto", "jual AC Daikin", "dealer Daikin Purwokerto", "AC Daikin Banyumas"],
+    intro: "Saat mencari AC Daikin di Purwokerto, harga saja belum cukup untuk menentukan pilihan. Calon pembeli perlu cek tipe, kapasitas PK, stok unit, paket pemasangan, panjang pipa, bracket, ongkir, dan kondisi titik indoor-outdoor agar total biaya lebih jelas sejak awal.",
+    sections: [
+      {
+        heading: "Data yang perlu disiapkan sebelum tanya harga",
+        body: [
+          "Sebelum meminta penawaran AC Daikin, siapkan ukuran ruangan, tinggi plafon, daya listrik rumah, foto titik pemasangan indoor, foto titik outdoor, dan rencana jam pemakaian. Data ini membantu rekomendasi unit lebih tepat dan mengurangi risiko salah kapasitas.",
+          "Untuk pembelian lokal di Purwokerto dan Banyumas, cek juga apakah harga sudah termasuk jasa pasang, pipa standar, bracket, kabel, pembuangan air, ongkir, atau masih perlu biaya tambahan sesuai kondisi lokasi."
+        ]
+      },
+      {
+        heading: "Kenapa harga AC Daikin bisa berbeda antar toko?",
+        body: [
+          "Harga bisa berbeda karena tipe unit, kapasitas PK, seri standard atau inverter, kelengkapan paket pemasangan, lokasi pengiriman, dan stok yang tersedia. Karena itu, membandingkan harga sebaiknya dilakukan dengan spesifikasi yang sama, bukan hanya melihat angka termurah.",
+          "Jika ada harga yang terlihat jauh lebih murah, tanyakan dulu apakah unit original, garansi resmi, kondisi barang baru, biaya pasang, panjang pipa, dan bracket sudah termasuk. Tujuannya agar pembeli tidak kaget dengan biaya tambahan setelah transaksi."
+        ]
+      },
+      {
+        heading: "Cara cepat minta rekomendasi ke RADJA AC",
+        body: [
+          "Kirim ukuran ruangan, daya listrik, kebutuhan penggunaan, dan foto lokasi lewat WhatsApp. Tim RADJA AC bisa membantu cek pilihan Daikin yang sesuai, mulai dari kapasitas PK, tipe inverter atau non-inverter, sampai estimasi kebutuhan pemasangan.",
+          "Untuk pelanggan yang belum yakin memilih ½ PK, ¾ PK, 1 PK, atau 1.5 PK, konsultasi dulu biasanya lebih aman daripada langsung membeli berdasarkan harga termurah."
+        ]
+      }
+    ],
+    ctaLabel: "Cek Harga Daikin via WhatsApp",
+    ctaMessage: "Halo RADJA AC, saya mau cek harga AC Daikin di Purwokerto. Mohon bantu rekomendasi tipe, PK, stok, dan estimasi biaya pasang."
+  },
+  {
+    slug: "daikin-inverter-purwokerto",
+    title: "AC Daikin Inverter Purwokerto: Cocok untuk Siapa?",
+    shortTitle: "Daikin Inverter Purwokerto",
+    description: "Panduan memilih AC Daikin inverter untuk rumah, kamar, kantor kecil, dan pemakaian rutin di Purwokerto dan Banyumas.",
+    category: "Daikin Inverter",
+    readTime: "5 menit baca",
+    updatedAt: "2026-05-13",
+    keywords: ["Daikin inverter", "AC inverter Purwokerto", "AC hemat listrik", "Daikin FTKQ", "Daikin FTKF"],
+    intro: "AC Daikin inverter banyak dicari karena nyaman untuk pemakaian rutin. Namun, inverter tidak selalu otomatis paling cocok untuk semua ruangan. Pilihan terbaik tetap perlu disesuaikan dengan ukuran ruangan, daya listrik, jam pemakaian, dan budget.",
+    sections: [
+      {
+        heading: "Daikin inverter cocok untuk pemakaian rutin",
+        body: [
+          "Daikin inverter layak dipertimbangkan untuk kamar tidur, ruang kerja, ruang keluarga kecil, atau kantor yang dipakai berjam-jam setiap hari. Teknologi inverter membantu menjaga suhu lebih stabil sehingga ruangan terasa lebih nyaman untuk penggunaan lama.",
+          "Jika AC hanya dipakai sebentar-sebentar, pilihan standard atau low watt tertentu mungkin masih bisa dipertimbangkan. Karena itu, jam pemakaian harian perlu dijelaskan saat konsultasi."
+        ]
+      },
+      {
+        heading: "Perhatikan daya listrik dan kapasitas PK",
+        body: [
+          "Kenyamanan AC inverter tetap bergantung pada kapasitas yang sesuai. Jika PK terlalu kecil untuk ruangan yang panas atau luas, AC akan bekerja berat dan hasilnya kurang optimal. Jika terlalu besar, biaya awal bisa menjadi tidak efisien.",
+          "Sebelum membeli, cek ukuran ruangan, paparan panas matahari, tinggi plafon, jumlah orang, dan titik pemasangan outdoor. Data ini menentukan apakah ½ PK, ¾ PK, 1 PK, atau kapasitas lebih besar lebih cocok."
+        ]
+      },
+      {
+        heading: "Konsultasi sebelum memilih seri Daikin",
+        body: [
+          "Daikin memiliki beberapa pilihan AC single split dan inverter dengan fitur berbeda. Pembeli sebaiknya tidak hanya memilih berdasarkan nama seri, tetapi juga kebutuhan nyata di ruangan.",
+          "RADJA AC dapat membantu membandingkan kebutuhan pelanggan dengan stok yang tersedia, sehingga rekomendasi lebih praktis untuk rumah, kos, kontrakan, toko, atau kantor kecil di area Purwokerto dan Banyumas."
+        ]
+      }
+    ],
+    ctaLabel: "Konsultasi Daikin Inverter",
+    ctaMessage: "Halo RADJA AC, saya mau konsultasi AC Daikin inverter. Mohon bantu cek tipe dan PK yang cocok untuk ruangan saya."
+  },
+  {
+    slug: "toko-ac-purwokerto-yang-bisa-konsultasi-pk",
+    title: "Cari Toko AC Purwokerto? Pilih yang Bisa Konsultasi PK Sebelum Beli",
+    shortTitle: "Toko AC Purwokerto + Konsultasi PK",
+    description: "Checklist memilih toko AC di Purwokerto agar tidak salah beli: konsultasi PK, cek daya listrik, stok, garansi, dan pemasangan.",
+    category: "Toko AC Lokal",
+    readTime: "5 menit baca",
+    updatedAt: "2026-05-13",
+    keywords: ["toko AC Purwokerto", "jual AC Purwokerto", "konsultasi PK AC", "pasang AC Banyumas"],
+    intro: "Banyak orang mencari toko AC Purwokerto karena ingin membeli unit yang cocok untuk rumah, kamar, kantor, atau toko. Masalahnya, memilih AC tidak cukup hanya berdasarkan merek dan harga. Kapasitas PK, daya listrik, kondisi ruangan, dan pemasangan sangat menentukan hasil akhirnya.",
+    sections: [
+      {
+        heading: "Jangan beli AC hanya dari harga termurah",
+        body: [
+          "Harga murah memang menarik, tetapi pembeli perlu memastikan unit original, garansi jelas, stok tersedia, dan kebutuhan pemasangan dihitung sejak awal. AC yang kapasitasnya tidak sesuai bisa terasa kurang dingin atau bekerja terlalu berat.",
+          "Tanyakan juga apakah toko bisa membantu membaca kebutuhan ruangan, bukan hanya menawarkan daftar harga. Konsultasi sederhana sebelum beli bisa menghemat biaya dan mengurangi risiko salah pilih."
+        ]
+      },
+      {
+        heading: "Checklist sebelum memilih toko AC",
+        body: [
+          "Pilih toko AC yang bisa membantu cek ukuran ruangan, daya listrik, rekomendasi PK, pilihan tipe standard/inverter/low watt, stok barang, garansi, serta kebutuhan instalasi. Semakin jelas informasinya, semakin mudah membandingkan penawaran.",
+          "Untuk area Purwokerto dan Banyumas, faktor lokal seperti jarak pengiriman, ketersediaan teknisi, dan kemudahan konsultasi WhatsApp juga penting karena pembelian AC sering membutuhkan tindak lanjut setelah unit dipasang."
+        ]
+      },
+      {
+        heading: "Kenapa RADJA AC menekankan konsultasi?",
+        body: [
+          "RADJA AC ingin membantu pelanggan membeli AC yang sesuai kebutuhan, bukan sekadar menjual unit. Karena itu, calon pembeli bisa mengirim ukuran ruangan, foto lokasi, dan daya listrik untuk mendapat arahan awal sebelum menentukan merek dan tipe.",
+          "Pendekatan ini cocok untuk pembeli yang masih bingung memilih Daikin, Midea, Hisense, Sansui, Gree, Panasonic, Sharp, atau brand lain sesuai kebutuhan ruangan dan budget."
+        ]
+      }
+    ],
+    ctaLabel: "Konsultasi Pilih AC",
+    ctaMessage: "Halo RADJA AC, saya sedang cari toko AC di Purwokerto dan mau konsultasi PK sebelum beli. Mohon bantu rekomendasikan AC yang cocok."
+  },
+  {
     slug: "ac-1-pk-untuk-ruangan-berapa",
     title: "AC 1 PK Cocok untuk Ruangan Berapa?",
     shortTitle: "AC 1 PK untuk Ruangan Berapa?",

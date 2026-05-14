@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home"
+import JualAcPurwokerto from "./pages/JualAcPurwokerto"
 import KatalogAc from "./pages/KatalogAc"
 import InstalasiAC from "./pages/InstalasiAC"
 import InstalasiProfesional from "./pages/InstalasiProfesional"
@@ -19,6 +20,7 @@ import SharpPurwokerto from "./pages/SharpPurwokerto"
 import PanasonicPurwokerto from "./pages/PanasonicPurwokerto"
 import Blog from "./pages/Blog"
 import BlogPost from "./pages/BlogPost"
+import Gallery from "./pages/Gallery"
 import TentangKami from "./pages/TentangKami"
 import Kontak from "./pages/Kontak"
 import Portfolio from "./pages/Portfolio"
@@ -61,6 +63,8 @@ export default function App() {
       <ErrorBoundary>
         <Routes>
           <Route path="/" element={<Home />} />
+
+          <Route path="/jual-ac-purwokerto" element={<JualAcPurwokerto />} />
 
           <Route path="/katalog" element={<KatalogAc />} />
 
@@ -172,6 +176,8 @@ export default function App() {
           <Route path="/artikel" element={<Blog />} />
 
           <Route path="/artikel/:slug" element={<BlogPost />} />
+
+          <Route path="/gallery" element={<Gallery />} />
 
           <Route
             path="/tentang-kami"
