@@ -24,7 +24,6 @@ const staticRoutes = [
   '/instalasi-profesional',
   '/tentang-kami',
   '/kontak',
-  '/portfolio',
 ]
 
 const routes = Array.from(new Set([

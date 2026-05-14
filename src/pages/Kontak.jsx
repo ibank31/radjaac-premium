@@ -12,7 +12,7 @@ export default function Kontak() {
     <div className="min-h-screen bg-[#050816] text-white overflow-hidden">
       <SeoHead
         title="Kontak | Radja AC Purwokerto"
-        description="Hubungi Radja AC melalui WhatsApp, lihat jam operasional, area layanan, dan rencanakan kunjungan service AC Anda di Purwokerto dan Banyumas."
+        description="Hubungi Radja AC Purwokerto untuk konsultasi beli AC, cek stok, tanya harga, rekomendasi PK, dan area pengiriman di Purwokerto dan Banyumas."
         canonicalPath="/kontak"
       />
 
