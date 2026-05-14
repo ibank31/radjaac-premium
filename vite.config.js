@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import sitemap from 'vite-plugin-sitemap'
-import { BLOG_POSTS } from './src/data/blogPosts.js'
+import { BLOG_POSTS } from './src/data/allBlogPosts.js'
 
 const staticRoutes = [
   '/jual-ac-purwokerto',
@@ -21,7 +21,6 @@ const staticRoutes = [
   '/katalog/ac-low-watt',
   '/katalog/ac-kantor-komersial',
   '/artikel',
-  '/instalasi-ac-banyumas',
   '/instalasi-profesional',
   '/tentang-kami',
   '/kontak',

@@ -5,7 +5,7 @@ import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
-import { BLOG_POSTS } from "../data/blogPosts"
+import { BLOG_POSTS } from "../data/allBlogPosts"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const articleGroups = [
