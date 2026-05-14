@@ -55,7 +55,7 @@ export default function HeroSection() {
                 to="/jual-ac-purwokerto"
                 className="inline-flex items-center justify-center px-6 py-3.5 sm:py-4 rounded-full border border-white/10 text-white/90 font-semibold transition hover:bg-white/[0.05]"
               >
-                Panduan Jual AC Purwokerto
+                Lihat Rekomendasi AC
               </Link>
             </div>
 
