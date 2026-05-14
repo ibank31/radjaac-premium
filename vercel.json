@@ -36,13 +36,18 @@
       "permanent": true
     },
     {
+      "source": "/instalasi-ac-banyumas",
+      "destination": "/artikel/panduan-instalasi-ac-baru",
+      "permanent": true
+    },
+    {
       "source": "/service-ac-purwokerto",
-      "destination": "/instalasi-ac-banyumas",
+      "destination": "/artikel/panduan-instalasi-ac-baru",
       "permanent": true
     },
     {
       "source": "/cuci-ac-purwokerto",
-      "destination": "/instalasi-ac-banyumas",
+      "destination": "/artikel/panduan-instalasi-ac-baru",
       "permanent": true
     }
   ],
