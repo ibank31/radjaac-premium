@@ -40,12 +40,12 @@ export default function HeroSection() {
               untuk rumah, toko, kantor, cafe, dan proyek di Purwokerto & Banyumas.
             </p>
 
-            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3 mb-4">
+            <div className="relative z-20 flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3 mb-4">
               <a
                 href={buildWhatsAppUrl(CONSULTATION_MESSAGE)}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-slate-950 font-bold px-6 py-3.5 sm:py-4 rounded-full shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5"
+                className="relative z-20 inline-flex w-full items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-slate-950 font-bold px-6 py-3.5 sm:py-4 rounded-full shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5 sm:w-auto sm:min-w-[260px]"
               >
                 <WhatsappIcon className="w-5 h-5 text-slate-950" />
                 Konsultasi Beli AC
@@ -53,7 +53,7 @@ export default function HeroSection() {
 
               <Link
                 to="/jual-ac-purwokerto"
-                className="inline-flex items-center justify-center px-6 py-3.5 sm:py-4 rounded-full border border-white/10 text-white/90 font-semibold transition hover:bg-white/[0.05]"
+                className="relative z-20 inline-flex w-full items-center justify-center px-6 py-3.5 sm:py-4 rounded-full border border-white/10 text-white/90 font-semibold transition hover:bg-white/[0.05] sm:w-auto sm:min-w-[220px]"
               >
                 Lihat Rekomendasi AC
               </Link>

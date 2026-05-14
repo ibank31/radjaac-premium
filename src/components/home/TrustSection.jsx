@@ -1,9 +1,4 @@
-import { BadgeCheck, ShieldCheck } from "lucide-react"
-
-const MAIN_TRUST = {
-  title: "Rekor MURI bersama Gree",
-  image: "/assets/brands/gree/rekor-muri-gree.webp",
-}
+import { Award, BadgeCheck, ShieldCheck, Store, Wrench } from "lucide-react"
 
 const CERTIFICATES = [
   {
@@ -24,67 +19,75 @@ const CERTIFICATES = [
   },
 ]
 
+const TRUST_POINTS = [
+  {
+    title: "Dealer resmi",
+    icon: ShieldCheck,
+  },
+  {
+    title: "AC original bergaransi",
+    icon: BadgeCheck,
+  },
+  {
+    title: "Showroom & stok produk",
+    icon: Store,
+  },
+  {
+    title: "Bisa bantu instalasi",
+    icon: Wrench,
+  },
+]
+
 export default function TrustSection() {
   return (
-    <section className="pb-14 pt-1">
-      <div className="mx-auto mb-6 max-w-3xl text-center">
-        <p className="mb-2 text-xs uppercase tracking-[0.3em] text-cyan-300">
+    <section className="pb-8 pt-1">
+      <div className="mx-auto mb-4 max-w-3xl text-center">
+        <p className="mb-2 text-[11px] uppercase tracking-[0.28em] text-cyan-300">
           BUKTI KEPERCAYAAN
         </p>
 
-        <h2 className="text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl">
-          Sertifikasi & Pencapaian RADJA AC
+        <h2 className="text-2xl font-black leading-tight tracking-[-0.03em] sm:text-4xl">
+          Beli AC lebih tenang dari toko yang jelas & brand resmi
         </h2>
       </div>
 
-      <div className="relative overflow-hidden rounded-[32px] border border-cyan-300/15 bg-white/[0.035] p-3 shadow-[0_0_60px_rgba(34,211,238,0.09)] sm:p-5">
-        <div className="pointer-events-none absolute -left-24 -top-24 h-52 w-52 rounded-full bg-cyan-400/10 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -right-24 h-52 w-52 rounded-full bg-blue-500/10 blur-3xl" />
-
-        <div className="relative grid gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
-          <article className="overflow-hidden rounded-[26px] border border-amber-300/20 bg-slate-950/70 p-2.5 shadow-[0_20px_60px_rgba(0,0,0,0.22)]">
-            <div className="relative overflow-hidden rounded-[20px] bg-slate-900">
-              <img
-                src={MAIN_TRUST.image}
-                alt={MAIN_TRUST.title}
-                loading="lazy"
-                decoding="async"
-                className="h-[370px] w-full object-cover object-center sm:h-[440px] lg:h-full"
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/62 to-transparent p-4 pt-14">
-                <h3 className="text-xl font-black text-white sm:text-2xl">{MAIN_TRUST.title}</h3>
+      <div className="rounded-[26px] border border-cyan-300/15 bg-white/[0.035] p-3 shadow-[0_0_50px_rgba(34,211,238,0.08)] sm:p-4">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+          {TRUST_POINTS.map(({ title, icon: Icon }) => (
+            <article key={title} className="flex min-h-[92px] flex-col items-center justify-center rounded-[20px] border border-white/10 bg-slate-950/45 px-3 py-3 text-center">
+              <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
+                <Icon className="h-4.5 w-4.5" />
               </div>
-            </div>
-          </article>
+              <h3 className="text-sm font-black leading-snug text-white">{title}</h3>
+            </article>
+          ))}
+        </div>
 
-          <div className="rounded-[26px] border border-white/10 bg-slate-950/45 p-3.5 sm:p-4">
-            <div className="mb-4 flex flex-col items-center justify-center gap-2.5 text-center sm:flex-row sm:justify-start sm:text-left">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
-                <ShieldCheck className="h-5 w-5" />
+        <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {CERTIFICATES.map((item) => (
+            <figure key={item.brand} className="text-center">
+              <div className="overflow-hidden rounded-[14px] border border-white/10 bg-slate-900/40 shadow-[0_10px_24px_rgba(0,0,0,0.18)]">
+                <img
+                  src={item.image}
+                  alt={`Sertifikat dealer resmi ${item.brand}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-[86px] w-full object-cover object-center sm:h-[96px]"
+                />
               </div>
-              <h3 className="text-lg font-black text-white sm:text-xl">Sertifikat Dealer Resmi</h3>
-            </div>
+              <figcaption className="mt-1.5 inline-flex items-center justify-center gap-1 text-xs font-bold text-white sm:text-sm">
+                <BadgeCheck className="h-3.5 w-3.5 shrink-0 text-cyan-300 sm:h-4 sm:w-4" />
+                {item.brand}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
 
-            <div className="grid grid-cols-2 gap-3">
-              {CERTIFICATES.map((item) => (
-                <figure key={item.brand} className="text-center">
-                  <div className="overflow-hidden rounded-[16px] border border-white/10 bg-slate-900/40 shadow-[0_12px_28px_rgba(0,0,0,0.20)]">
-                    <img
-                      src={item.image}
-                      alt={`Sertifikat dealer resmi ${item.brand}`}
-                      loading="lazy"
-                      decoding="async"
-                      className="h-[96px] w-full object-cover object-center sm:h-[125px] lg:h-[136px]"
-                    />
-                  </div>
-                  <figcaption className="mt-2.5 inline-flex items-center justify-center gap-1.5 text-sm font-bold text-white">
-                    <BadgeCheck className="h-4 w-4 shrink-0 text-cyan-300" />
-                    {item.brand}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
+        <div className="mt-3 flex items-start gap-2 rounded-[18px] border border-amber-300/15 bg-amber-300/5 px-3 py-2 text-left">
+          <Award className="mt-0.5 h-4 w-4 shrink-0 text-amber-200" />
+          <p className="text-xs leading-5 text-white/62 sm:text-sm">
+            Termasuk dokumentasi pencapaian bersama brand seperti Gree/MURI sebagai bukti pendukung.
+          </p>
         </div>
       </div>
     </section>
