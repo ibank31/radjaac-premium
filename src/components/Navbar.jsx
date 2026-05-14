@@ -1,4 +1,4 @@
-﻿import { NavLink, Link } from "react-router-dom"
+﻿import { NavLink, Link, useLocation } from "react-router-dom"
 import { useState } from "react"
 import WhatsappIcon from "./ui/WhatsappIcon"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
@@ -16,6 +16,7 @@ const NAV_ITEMS = [
   {
     label: "Katalog AC",
     type: "dropdown",
+    activePaths: ["/katalog", "/jual-ac-purwokerto"],
     items: [
       {
         label: "Panduan Pilih AC",
@@ -50,6 +51,16 @@ const NAV_ITEMS = [
   {
     label: "Brand Unggulan",
     type: "dropdown",
+    activePaths: [
+      "/brand",
+      "/daikin-purwokerto",
+      "/gree-purwokerto",
+      "/midea-purwokerto",
+      "/hisense-purwokerto",
+      "/sansui-purwokerto",
+      "/sharp-purwokerto",
+      "/panasonic-purwokerto",
+    ],
     items: [
       {
         label: "Daikin",
@@ -120,9 +131,20 @@ const mobileActiveLink =
 const mobileInactiveLink =
   "text-white/80 hover:text-cyan-300 hover:bg-white/5"
 
+function isPathActive(pathname, targetPath) {
+  if (!targetPath) return false
+  if (targetPath === "/") return pathname === "/"
+  return pathname === targetPath || pathname.startsWith(`${targetPath}/`)
+}
+
+function isDropdownActive(pathname, item) {
+  return item.items.some((subItem) => isPathActive(pathname, subItem.href)) || item.activePaths?.some((path) => isPathActive(pathname, path))
+}
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState("")
+  const { pathname } = useLocation()
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/30 border-b border-white/10">
@@ -167,6 +189,8 @@ export default function Navbar() {
               )
             }
 
+            const isActiveDropdown = isDropdownActive(pathname, item)
+
             return (
               <div key={item.label} className="relative">
                 <button
@@ -176,7 +200,9 @@ export default function Navbar() {
                       openDropdown === item.label ? "" : item.label
                     )
                   }
-                  className="rounded-full px-3 py-2 transition text-white/80 hover:text-cyan-300 hover:bg-white/5 flex items-center gap-2"
+                  className={`rounded-full px-3 py-2 transition flex items-center gap-2 ${
+                    isActiveDropdown ? activeLink : inactiveLink
+                  }`}
                 >
                   {item.label}
                   <span className="text-xs">▾</span>
@@ -190,12 +216,16 @@ export default function Navbar() {
                   }`}
                 >
                   <div className="space-y-1 px-3">
-                    {item.items.map((subItem) =>
-                      subItem.href ? (
+                    {item.items.map((subItem) => {
+                      const isActiveSubItem = isPathActive(pathname, subItem.href)
+
+                      return subItem.href ? (
                         <Link
                           key={subItem.label}
                           to={subItem.href}
-                          className="block rounded-3xl px-3 py-2 text-white/80 hover:text-cyan-300 hover:bg-white/5"
+                          className={`block rounded-3xl px-3 py-2 transition ${
+                            isActiveSubItem ? activeLink : "text-white/80 hover:text-cyan-300 hover:bg-white/5"
+                          }`}
                         >
                           {subItem.label}
                         </Link>
@@ -207,7 +237,7 @@ export default function Navbar() {
                           {subItem.label}
                         </div>
                       )
-                    )}
+                    })}
                   </div>
                 </div>
               </div>
@@ -265,7 +295,9 @@ export default function Navbar() {
                           openDropdown === item.label ? "" : item.label
                         )
                       }
-                      className="w-full text-left rounded-3xl px-4 py-3 transition text-white/80 hover:text-cyan-300 hover:bg-white/5 flex items-center justify-between"
+                      className={`w-full text-left rounded-3xl px-4 py-3 transition flex items-center justify-between ${
+                        isDropdownActive(pathname, item) ? mobileActiveLink : mobileInactiveLink
+                      }`}
                     >
                       {item.label}
                       <span className="text-sm">▾</span>
@@ -273,13 +305,17 @@ export default function Navbar() {
 
                     {openDropdown === item.label && (
                       <div className="space-y-1 pl-4 border-l border-white/10 ml-2">
-                        {item.items.map((subItem) =>
-                          subItem.href ? (
+                        {item.items.map((subItem) => {
+                          const isActiveSubItem = isPathActive(pathname, subItem.href)
+
+                          return subItem.href ? (
                             <Link
                               key={subItem.label}
                               to={subItem.href}
                               onClick={() => setIsOpen(false)}
-                              className="block rounded-3xl px-4 py-3 text-white/80 hover:text-cyan-300 hover:bg-white/5"
+                              className={`block rounded-3xl px-4 py-3 transition ${
+                                isActiveSubItem ? mobileActiveLink : mobileInactiveLink
+                              }`}
                             >
                               {subItem.label}
                             </Link>
@@ -291,7 +327,7 @@ export default function Navbar() {
                               {subItem.label}
                             </div>
                           )
-                        )}
+                        })}
                       </div>
                     )}
                   </div>
