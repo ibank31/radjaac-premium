@@ -5,7 +5,7 @@ import sitemap from 'vite-plugin-sitemap'
 import { BLOG_POSTS } from './src/data/blogPosts.js'
 
 const staticRoutes = [
-  '/',
+  '/jual-ac-purwokerto',
   '/katalog',
   '/kalkulator-pk-ac',
   '/brand/daikin',
@@ -43,6 +43,7 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: {
         '/': 1.0,
+        '/jual-ac-purwokerto': 0.95,
         '/katalog': 0.9,
         '/kalkulator-pk-ac': 0.9,
         '/brand/daikin': 0.95,
