@@ -22,7 +22,7 @@ a[href*="wa.me/62882008246099"].inline-flex {
 }
 
 @media (max-width: 767px) {
-  a[href*="wa.me/62882008246099"].inline-flex {
+  a[href*="wa.me/62882008246099"].inline-flex:not(.floating-whatsapp) {
     width: 100%;
     min-height: 3.5rem;
   }
