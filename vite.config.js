@@ -6,6 +6,7 @@ import sitemap from 'vite-plugin-sitemap'
 const routes = [
   '/',
   '/katalog',
+  '/kalkulator-pk-ac',
   '/brand/daikin',
   '/brand/gree',
   '/brand/midea',
@@ -40,6 +41,7 @@ export default defineConfig({
       priority: {
         '/': 1.0,
         '/katalog': 0.9,
+        '/kalkulator-pk-ac': 0.9,
         '/brand/daikin': 0.95,
         '/brand/gree': 0.9,
         '/brand/midea': 0.9,

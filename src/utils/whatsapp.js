@@ -4,6 +4,8 @@ const DEFAULT_MESSAGE =
   "Halo RADJA AC, saya mau tanya harga dan rekomendasi AC yang cocok."
 
 const CATEGORY_MESSAGES = {
+  "/kalkulator-pk-ac":
+    "Halo RADJA AC, saya mau cek kebutuhan PK AC dan estimasi listrik. Mohon bantu rekomendasi produk yang cocok.",
   "/katalog/ac-split-rumah":
     "Halo RADJA AC, saya mau konsultasi beli AC split rumah. Mohon bantu rekomendasi PK dan brand yang cocok untuk ruangan saya.",
   "/katalog/ac-inverter":
