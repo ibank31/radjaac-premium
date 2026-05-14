@@ -35,13 +35,13 @@ function getRecommendation(btu) {
   return pkOptions.find((option) => btu <= option.maxBtu) || pkOptions[pkOptions.length - 1]
 }
 function inputClassName() {
-  return "w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-300/50 focus:ring-2 focus:ring-cyan-300/15"
+  return "w-full rounded-2xl border border-white/10 bg-slate-950/70 px-3 py-2.5 text-sm text-white outline-none transition focus:border-cyan-300/50 focus:ring-2 focus:ring-cyan-300/15 sm:px-4 sm:py-3"
 }
 function Field({ label, children }) {
-  return <label className="block"><span className="mb-2 block text-xs font-bold uppercase tracking-[0.14em] text-white/55">{label}</span>{children}</label>
+  return <label className="block"><span className="mb-1.5 block text-[11px] font-bold uppercase tracking-[0.13em] text-white/55">{label}</span>{children}</label>
 }
 function ResultCard({ icon: Icon, label, value, highlight = false }) {
-  return <div className={`rounded-2xl border p-4 ${highlight ? "border-[#25D366]/25 bg-[#25D366]/10" : "border-white/10 bg-slate-950/55"}`}><div className="mb-2 flex items-center gap-2 text-cyan-300"><Icon className="h-4 w-4" /><p className="text-xs font-bold uppercase tracking-[0.16em] text-white/45">{label}</p></div><p className="text-xl font-black text-white sm:text-2xl">{value}</p></div>
+  return <div className={`rounded-2xl border p-3 sm:p-4 ${highlight ? "border-[#25D366]/25 bg-[#25D366]/10" : "border-white/10 bg-slate-950/55"}`}><div className="mb-1.5 flex items-center gap-2 text-cyan-300"><Icon className="h-4 w-4" /><p className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/45">{label}</p></div><p className="text-lg font-black text-white sm:text-2xl">{value}</p></div>
 }
 
 export default function KalkulatorAc() {
@@ -80,43 +80,43 @@ export default function KalkulatorAc() {
       <Navbar />
       <main>
         <div className="fixed inset-0 -z-10 overflow-hidden"><div className="absolute left-[-120px] top-[-220px] h-[360px] w-[360px] rounded-full bg-cyan-500/18 blur-[120px]" /><div className="absolute bottom-[-200px] right-[-120px] h-[360px] w-[360px] rounded-full bg-blue-500/16 blur-[120px]" /></div>
-        <section className="mx-auto max-w-7xl px-6 pb-14 pt-28 lg:px-8 lg:pb-20 lg:pt-32">
-          <div className="mb-8 max-w-3xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200"><Calculator className="h-4 w-4" />Kalkulator AC RADJA AC</div>
-            <div className="mb-4 text-sm text-white/50"><Link to="/" className="transition hover:text-cyan-300">Beranda</Link><span className="mx-2">/</span><span className="text-white/80">Kalkulator AC</span></div>
-            <h1 className="mb-4 text-3xl font-black leading-[1.05] tracking-[-0.03em] sm:text-4xl md:text-5xl">Cek PK AC & estimasi listrik dalam 1 menit</h1>
-            <p className="max-w-2xl text-sm leading-7 text-white/68 sm:text-base">Isi ukuran ruangan, kondisi panas, dan lama pemakaian. Hasilnya bisa langsung dikirim ke WhatsApp untuk rekomendasi produk.</p>
+        <section className="mx-auto max-w-7xl px-4 pb-10 pt-24 sm:px-6 lg:px-8 lg:pb-20 lg:pt-32">
+          <div className="mb-5 max-w-3xl sm:mb-8">
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1.5 text-xs text-cyan-200 sm:px-4 sm:py-2 sm:text-sm"><Calculator className="h-4 w-4" />Kalkulator AC RADJA AC</div>
+            <div className="mb-3 text-xs text-white/50 sm:text-sm"><Link to="/" className="transition hover:text-cyan-300">Beranda</Link><span className="mx-2">/</span><span className="text-white/80">Kalkulator AC</span></div>
+            <h1 className="mb-3 text-2xl font-black leading-[1.05] tracking-[-0.03em] sm:text-4xl md:text-5xl">Cek PK AC & estimasi listrik</h1>
+            <p className="max-w-2xl text-sm leading-6 text-white/68 sm:text-base sm:leading-7">Isi ukuran ruangan, hasil rekomendasi langsung terlihat dan bisa dikirim ke WhatsApp.</p>
           </div>
-          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-            <div className="rounded-[30px] border border-white/10 bg-white/[0.04] p-5 shadow-[0_28px_80px_rgba(8,20,47,0.24)] sm:p-6">
-              <div className="mb-5 flex items-center justify-between gap-4"><div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Input</p><h2 className="mt-1 text-2xl font-black">Data ruangan</h2></div><Ruler className="h-8 w-8 text-cyan-300" /></div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <Field label="Panjang (m)"><input className={inputClassName()} type="number" min="0" step="0.1" value={length} onChange={(event) => setLength(event.target.value)} /></Field>
-                <Field label="Lebar (m)"><input className={inputClassName()} type="number" min="0" step="0.1" value={width} onChange={(event) => setWidth(event.target.value)} /></Field>
-                <Field label="Plafon (m)"><input className={inputClassName()} type="number" min="0" step="0.1" value={height} onChange={(event) => setHeight(event.target.value)} /></Field>
+          <div className="grid gap-4 lg:grid-cols-[0.86fr_1.14fr] lg:items-start lg:gap-6">
+            <div className="order-2 rounded-[26px] border border-white/10 bg-white/[0.04] p-4 shadow-[0_28px_80px_rgba(8,20,47,0.24)] sm:rounded-[30px] sm:p-6 lg:order-1">
+              <div className="mb-4 flex items-center justify-between gap-4"><div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Input</p><h2 className="mt-1 text-xl font-black sm:text-2xl">Data ruangan</h2></div><Ruler className="h-7 w-7 text-cyan-300 sm:h-8 sm:w-8" /></div>
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                <Field label="Panjang"><input className={inputClassName()} type="number" min="0" step="0.1" value={length} onChange={(event) => setLength(event.target.value)} /></Field>
+                <Field label="Lebar"><input className={inputClassName()} type="number" min="0" step="0.1" value={width} onChange={(event) => setWidth(event.target.value)} /></Field>
+                <Field label="Plafon"><input className={inputClassName()} type="number" min="0" step="0.1" value={height} onChange={(event) => setHeight(event.target.value)} /></Field>
                 <Field label="Orang"><input className={inputClassName()} type="number" min="0" step="1" value={people} onChange={(event) => setPeople(event.target.value)} /></Field>
                 <Field label="Jenis ruang"><select className={inputClassName()} value={roomType} onChange={(event) => setRoomType(event.target.value)}>{roomTypes.map((item) => <option key={item}>{item}</option>)}</select></Field>
-                <Field label="Kondisi panas"><select className={inputClassName()} value={condition} onChange={(event) => setCondition(event.target.value)}>{Object.entries(roomConditions).map(([key, item]) => <option key={key} value={key}>{item.label}</option>)}</select></Field>
-                <Field label="Jam / hari"><input className={inputClassName()} type="number" min="0" step="1" value={hoursPerDay} onChange={(event) => setHoursPerDay(event.target.value)} /></Field>
-                <Field label="Hari / bulan"><input className={inputClassName()} type="number" min="0" step="1" value={daysPerMonth} onChange={(event) => setDaysPerMonth(event.target.value)} /></Field>
+                <Field label="Kondisi"><select className={inputClassName()} value={condition} onChange={(event) => setCondition(event.target.value)}>{Object.entries(roomConditions).map(([key, item]) => <option key={key} value={key}>{item.label}</option>)}</select></Field>
+                <Field label="Jam/hari"><input className={inputClassName()} type="number" min="0" step="1" value={hoursPerDay} onChange={(event) => setHoursPerDay(event.target.value)} /></Field>
+                <Field label="Hari/bln"><input className={inputClassName()} type="number" min="0" step="1" value={daysPerMonth} onChange={(event) => setDaysPerMonth(event.target.value)} /></Field>
               </div>
-              <div className="mt-4"><Field label="Tarif listrik / kWh"><input className={inputClassName()} type="number" min="0" step="1" value={tariff} onChange={(event) => setTariff(event.target.value)} /></Field></div>
+              <div className="mt-3"><Field label="Tarif listrik/kWh"><input className={inputClassName()} type="number" min="0" step="1" value={tariff} onChange={(event) => setTariff(event.target.value)} /></Field></div>
             </div>
-            <div className="rounded-[30px] border border-cyan-300/15 bg-cyan-300/5 p-5 shadow-[0_28px_80px_rgba(8,145,178,0.16)] sm:p-6">
-              <div className="mb-5 flex items-center justify-between gap-4"><div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Hasil</p><h2 className="mt-1 text-2xl font-black">Rekomendasi awal</h2></div><Snowflake className="h-8 w-8 text-cyan-300" /></div>
-              <div className="mb-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="order-1 rounded-[26px] border border-cyan-300/15 bg-cyan-300/5 p-4 shadow-[0_28px_80px_rgba(8,145,178,0.16)] sm:rounded-[30px] sm:p-6 lg:order-2">
+              <div className="mb-4 flex items-center justify-between gap-4"><div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Hasil</p><h2 className="mt-1 text-xl font-black sm:text-2xl">Rekomendasi awal</h2></div><Snowflake className="h-7 w-7 text-cyan-300 sm:h-8 sm:w-8" /></div>
+              <div className="mb-4 grid grid-cols-2 gap-3 xl:grid-cols-4">
                 <ResultCard icon={Ruler} label="Luas" value={`${formatNumber(result.area)} m²`} />
                 <ResultCard icon={Snowflake} label="PK AC" value={result.recommendation.pk} highlight />
                 <ResultCard icon={Calculator} label="BTU" value={`±${formatNumber(result.estimatedBtu, 0)}`} />
                 <ResultCard icon={Zap} label="Listrik" value={`±${formatCurrency(result.monthlyCost)}`} highlight />
               </div>
-              <div className="mb-5 rounded-3xl border border-white/10 bg-slate-950/60 p-5"><h3 className="mb-2 text-xl font-black">AC {result.recommendation.pk} untuk ruangan ±{formatNumber(result.area)} m²</h3><p className="text-sm leading-7 text-white/65">Estimasi pendinginan ±{formatNumber(result.estimatedBtu, 0)} BTU/h. Konsumsi listrik kira-kira ±{formatNumber(result.dailyKwh)} kWh/hari atau ±{formatNumber(result.monthlyKwh)} kWh/bulan. {result.selectedCondition.note}</p></div>
-              <div className="mb-5 grid gap-3 sm:grid-cols-2"><Link to={result.recommendation.category} className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 px-5 py-3 font-bold text-white/90 transition hover:bg-white/[0.06]">Lihat produk cocok <ArrowRight className="h-4 w-4" /></Link><a href={buildWhatsAppUrl(whatsappMessage)} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 font-bold text-slate-950 transition hover:bg-[#20BA5A]"><WhatsappIcon className="h-5 w-5" />Kirim ke WhatsApp</a></div>
-              <div className="rounded-3xl border border-amber-300/15 bg-amber-300/5 p-4"><div className="mb-2 flex items-center gap-2 text-amber-200"><AlertTriangle className="h-4 w-4" /><p className="font-bold text-white">Catatan estimasi</p></div><p className="text-sm leading-7 text-white/62">Hasil final tetap perlu cek arah matahari, jumlah kaca, posisi indoor/outdoor, panjang pipa, dan daya listrik rumah.</p></div>
+              <div className="mb-4 rounded-2xl border border-white/10 bg-slate-950/60 p-4 sm:rounded-3xl sm:p-5"><h3 className="mb-2 text-lg font-black sm:text-xl">AC {result.recommendation.pk} untuk ruangan ±{formatNumber(result.area)} m²</h3><p className="text-sm leading-6 text-white/65 sm:leading-7">Estimasi ±{formatNumber(result.estimatedBtu, 0)} BTU/h. Listrik ±{formatNumber(result.dailyKwh)} kWh/hari atau ±{formatNumber(result.monthlyKwh)} kWh/bulan.</p></div>
+              <div className="mb-4 grid gap-3 sm:grid-cols-2"><Link to={result.recommendation.category} className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 px-5 py-3 font-bold text-white/90 transition hover:bg-white/[0.06]">Lihat produk <ArrowRight className="h-4 w-4" /></Link><a href={buildWhatsAppUrl(whatsappMessage)} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 font-bold text-slate-950 transition hover:bg-[#20BA5A]"><WhatsappIcon className="h-5 w-5" />Kirim WhatsApp</a></div>
+              <div className="rounded-2xl border border-amber-300/15 bg-amber-300/5 p-3 sm:rounded-3xl sm:p-4"><div className="mb-1.5 flex items-center gap-2 text-amber-200"><AlertTriangle className="h-4 w-4" /><p className="font-bold text-white">Estimasi awal</p></div><p className="text-xs leading-6 text-white/62 sm:text-sm">Hasil final tetap perlu cek arah matahari, jumlah kaca, posisi indoor/outdoor, panjang pipa, dan daya listrik rumah.</p></div>
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-7xl px-6 pb-16 lg:px-8 lg:pb-24"><div className="rounded-[30px] border border-white/10 bg-white/[0.04] p-5 sm:p-6"><div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"><div><p className="mb-2 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Tips cepat</p><h2 className="text-2xl font-black tracking-[-0.03em] sm:text-3xl">Biar tidak salah beli AC</h2></div><p className="max-w-xl text-sm leading-7 text-white/58">Setelah hasil keluar, kirim ke admin RADJA AC supaya pilihan brand dan tipe disesuaikan dengan stok terbaru.</p></div><div className="grid gap-3 md:grid-cols-4">{quickTips.map((tip) => <div key={tip} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/55 p-4 text-sm leading-6 text-white/70"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" /><span>{tip}</span></div>)}</div></div></section>
+        <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8 lg:pb-24"><div className="rounded-[26px] border border-white/10 bg-white/[0.04] p-4 sm:rounded-[30px] sm:p-6"><div className="mb-4"><p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300 sm:text-sm">Tips cepat</p><h2 className="text-xl font-black tracking-[-0.03em] sm:text-3xl">Biar tidak salah beli AC</h2></div><div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{quickTips.map((tip) => <div key={tip} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-slate-950/55 p-3 text-sm leading-6 text-white/70 sm:p-4"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" /><span>{tip}</span></div>)}</div></div></section>
       </main>
       <Footer />
     </div>
