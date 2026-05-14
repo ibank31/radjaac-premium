@@ -1,5 +1,5 @@
-import { BLOG_POSTS as CORE_BLOG_POSTS } from "./blogPosts"
-import { INSTALLATION_BLOG_POST } from "./installationBlogPost"
+import { BLOG_POSTS as CORE_BLOG_POSTS } from "./blogPosts.js"
+import { INSTALLATION_BLOG_POST } from "./installationBlogPost.js"
 
 export const BLOG_POSTS = [
   ...CORE_BLOG_POSTS,
