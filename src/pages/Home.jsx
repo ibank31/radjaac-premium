@@ -41,12 +41,20 @@ export default function Home() {
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["Store", "LocalBusiness"],
     name: SITE_DATA.businessName,
     url: SITE_DATA.baseUrl,
+    logo: `${SITE_DATA.baseUrl}${SITE_DATA.logoUrl}`,
     image: `${SITE_DATA.baseUrl}${SITE_DATA.logoUrl}`,
     description: SITE_DATA.businessDescription,
     telephone: SITE_DATA.phoneNumber,
+    priceRange: "Rp3 jutaan-Rp6 jutaan+",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Purwokerto",
+      addressRegion: "Jawa Tengah",
+      addressCountry: "ID",
+    },
     areaServed: SITE_DATA.serviceAreas.map((area) => ({
       "@type": "City",
       name: area,
@@ -65,7 +73,6 @@ export default function Home() {
         closes: "15:00",
       },
     ],
-    sameAs: [SITE_DATA.baseUrl],
   }
 
   return (
