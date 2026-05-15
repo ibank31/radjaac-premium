@@ -271,7 +271,7 @@ export default function Gallery() {
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-            {galleryItems.map((item, index) => (
+            {galleryItems.map((item) => (
               <a
                 key={item.image}
                 href={item.image}
@@ -283,7 +283,7 @@ export default function Gallery() {
                   <img
                     src={item.thumbnail}
                     alt={item.title}
-                    loading={index < 6 ? "eager" : "lazy"}
+                    loading="lazy"
                     decoding="async"
                     className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                   />
