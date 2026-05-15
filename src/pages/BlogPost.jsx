@@ -133,6 +133,18 @@ const MONEY_LINKS_BY_SLUG = {
       href: "/katalog/ac-low-watt",
     },
   ],
+  "ac-low-watt-listrik-900-1300-watt-purwokerto": [
+    {
+      title: "AC Low Watt Purwokerto",
+      description: "Lihat halaman kategori low watt untuk cek manfaat, brand, dan tips listrik aman.",
+      href: "/katalog/ac-low-watt",
+    },
+    {
+      title: "Jual AC Purwokerto",
+      description: "Konsultasi daya listrik, kapasitas PK, stok, harga, dan kebutuhan pemasangan.",
+      href: "/jual-ac-purwokerto",
+    },
+  ],
   "cara-memilih-ac-untuk-kamar-3x4": [
     {
       title: "AC Split Rumah",
