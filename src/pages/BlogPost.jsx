@@ -109,6 +109,18 @@ const MONEY_LINKS_BY_SLUG = {
       href: "/kontak",
     },
   ],
+  "jual-ac-banyumas-konsultasi-pk-stok-pasang": [
+    {
+      title: "Jual AC Purwokerto",
+      description: "Pusat konsultasi beli AC untuk Purwokerto, Banyumas, dan sekitarnya.",
+      href: "/jual-ac-purwokerto",
+    },
+    {
+      title: "Kontak RADJA AC",
+      description: "Cek alamat, WhatsApp, dan area layanan sebelum konsultasi pembelian AC.",
+      href: "/kontak",
+    },
+  ],
   "ac-1-pk-untuk-ruangan-berapa": [
     {
       title: "Jual AC Purwokerto",
