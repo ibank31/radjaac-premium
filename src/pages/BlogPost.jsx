@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link, useParams } from "react-router-dom"
-import { ArrowLeft, CalendarDays, CheckCircle2, Clock, MessageCircle } from "lucide-react"
+import { ArrowLeft, ArrowRight, CalendarDays, CheckCircle2, Clock, MessageCircle } from "lucide-react"
 
 import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
@@ -35,6 +35,106 @@ function createArticleSchema(post) {
   }
 }
 
+const DEFAULT_MONEY_LINKS = [
+  {
+    title: "Jual AC Purwokerto",
+    description: "Pusat konsultasi beli AC, cek brand, stok, harga, dan rekomendasi PK.",
+    href: "/jual-ac-purwokerto",
+  },
+  {
+    title: "Kontak RADJA AC",
+    description: "Hubungi RADJA AC untuk konsultasi pembelian AC di Purwokerto dan Banyumas.",
+    href: "/kontak",
+  },
+]
+
+const MONEY_LINKS_BY_SLUG = {
+  "harga-ac-daikin-purwokerto": [
+    {
+      title: "Jual AC Daikin Purwokerto",
+      description: "Lihat halaman utama Daikin untuk cek pilihan, garansi, dan konsultasi tipe AC.",
+      href: "/brand/daikin",
+    },
+    {
+      title: "Jual AC Purwokerto",
+      description: "Bandingkan pilihan brand AC dan konsultasi kebutuhan ruangan sebelum membeli.",
+      href: "/jual-ac-purwokerto",
+    },
+  ],
+  "daikin-inverter-purwokerto": [
+    {
+      title: "Jual AC Daikin Purwokerto",
+      description: "Cek rekomendasi Daikin original bergaransi untuk rumah, kantor, dan toko.",
+      href: "/brand/daikin",
+    },
+    {
+      title: "AC Inverter Purwokerto",
+      description: "Bandingkan pilihan AC inverter untuk pemakaian rutin dan suhu lebih stabil.",
+      href: "/katalog/ac-inverter",
+    },
+  ],
+  "toko-ac-purwokerto-yang-bisa-konsultasi-pk": [
+    {
+      title: "Jual AC Purwokerto",
+      description: "Mulai dari halaman pusat pembelian AC RADJA AC untuk cek brand, PK, dan stok.",
+      href: "/jual-ac-purwokerto",
+    },
+    {
+      title: "Kontak RADJA AC",
+      description: "Cek alamat, WhatsApp, dan area layanan RADJA AC Purwokerto.",
+      href: "/kontak",
+    },
+  ],
+  "ac-1-pk-untuk-ruangan-berapa": [
+    {
+      title: "Jual AC Purwokerto",
+      description: "Konsultasi kapasitas PK, pilihan brand, stok, dan kebutuhan pemasangan.",
+      href: "/jual-ac-purwokerto",
+    },
+    {
+      title: "AC Split Rumah",
+      description: "Lihat panduan pilihan AC untuk kamar, ruang keluarga, kos, dan toko kecil.",
+      href: "/katalog/ac-split-rumah",
+    },
+  ],
+  "ac-inverter-vs-low-watt": [
+    {
+      title: "AC Inverter Purwokerto",
+      description: "Cek pilihan AC inverter untuk pemakaian rutin dan kenyamanan suhu.",
+      href: "/katalog/ac-inverter",
+    },
+    {
+      title: "AC Low Watt Purwokerto",
+      description: "Cek pilihan AC untuk rumah dengan daya listrik terbatas.",
+      href: "/katalog/ac-low-watt",
+    },
+  ],
+  "cara-memilih-ac-untuk-kamar-3x4": [
+    {
+      title: "AC Split Rumah",
+      description: "Panduan pilihan AC untuk kamar tidur, ruang keluarga, kos, dan rumah tinggal.",
+      href: "/katalog/ac-split-rumah",
+    },
+    {
+      title: "Jual AC Purwokerto",
+      description: "Konsultasi PK dan pilihan AC sesuai ukuran ruangan sebelum membeli.",
+      href: "/jual-ac-purwokerto",
+    },
+  ],
+  "panduan-instalasi-ac-baru": [
+    {
+      title: "Instalasi Profesional",
+      description: "Lihat informasi pemasangan AC baru yang rapi dan sesuai kondisi lokasi.",
+      href: "/instalasi-profesional",
+    },
+    {
+      title: "Jual AC Purwokerto",
+      description: "Konsultasi beli AC baru sekaligus kebutuhan titik pemasangan indoor-outdoor.",
+      href: "/jual-ac-purwokerto",
+    },
+  ],
+}
+
 export default function BlogPost() {
   const { slug } = useParams()
   const post = getBlogPostBySlug(slug)
@@ -43,6 +143,7 @@ export default function BlogPost() {
 
   const relatedPosts = BLOG_POSTS.filter((item) => item.slug !== post.slug).slice(0, 2)
   const articleSchema = createArticleSchema(post)
+  const moneyLinks = MONEY_LINKS_BY_SLUG[post.slug] || DEFAULT_MONEY_LINKS
 
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
@@ -116,6 +217,31 @@ export default function BlogPost() {
               </section>
             ))}
           </div>
+
+          <section className="mt-10 rounded-[30px] border border-cyan-300/15 bg-cyan-300/[0.06] p-6 sm:p-8">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">
+              Lanjutkan ke halaman terkait
+            </p>
+            <h2 className="mb-5 text-2xl font-black tracking-[-0.02em] sm:text-3xl">
+              Pilih halaman yang paling sesuai dengan kebutuhan Anda
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {moneyLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="group rounded-[24px] border border-white/10 bg-slate-950/45 p-5 transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]"
+                >
+                  <h3 className="mb-2 text-lg font-black text-white">{item.title}</h3>
+                  <p className="mb-4 text-sm leading-6 text-white/58">{item.description}</p>
+                  <span className="inline-flex items-center gap-2 text-sm font-bold text-cyan-300 group-hover:text-cyan-200">
+                    Buka halaman
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
 
           <section className="mt-10 rounded-[34px] border border-[#25D366]/20 bg-[#25D366]/10 p-6 text-center sm:p-8">
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#25D366] text-slate-950">
