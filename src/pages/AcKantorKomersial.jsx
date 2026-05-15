@@ -24,23 +24,25 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import WhatsappIcon from "../components/ui/WhatsappIcon"
 import { SITE_DATA } from "../constants/siteData"
+import { buildWhatsAppUrl } from "../utils/whatsapp"
 
-const WA_LINK = SITE_DATA.whatsappUrl
+const WA_MESSAGE = "Halo RADJA AC, saya mau konsultasi kebutuhan AC untuk kost/kantor/proyek/banyak unit. Mohon bantu cek rekomendasi unit, jumlah AC, brand, stok, dan estimasi pemasangan."
+const WA_LINK = buildWhatsAppUrl(WA_MESSAGE)
 
 const commercialNeeds = [
   {
     title: "Jam operasional lebih lama",
-    description: "Kantor, toko, cafe, dan ruang usaha biasanya butuh AC menyala lebih lama dibanding rumah.",
+    description: "Kost, kantor, toko, cafe, dan ruang usaha biasanya butuh AC menyala lebih lama dibanding rumah biasa.",
     icon: Users,
   },
   {
     title: "Beban panas lebih besar",
-    description: "Jumlah orang, lampu, mesin, pintu sering terbuka, dan peralatan kerja bisa membuat ruangan lebih berat didinginkan.",
+    description: "Jumlah orang, lampu, mesin, pintu sering terbuka, dan aktivitas ruangan bisa membuat AC bekerja lebih berat.",
     icon: Factory,
   },
   {
-    title: "Distribusi udara harus merata",
-    description: "Untuk ruang usaha, kenyamanan pengunjung dan karyawan bergantung pada penempatan unit yang tepat.",
+    title: "Banyak titik perlu rapi",
+    description: "Untuk kost, kantor, dan proyek, penempatan indoor-outdoor perlu dipikirkan agar instalasi rapi dan mudah dirawat.",
     icon: Wind,
   },
 ]
@@ -48,7 +50,7 @@ const commercialNeeds = [
 const acTypes = [
   {
     title: "AC Split Wall",
-    description: "Cocok untuk kantor kecil, ruang meeting, toko kecil, ruang admin, atau ruangan khusus.",
+    description: "Cocok untuk kamar kost, kontrakan, kantor kecil, ruang meeting, toko kecil, ruang admin, atau ruangan khusus.",
     icon: Home,
   },
   {
@@ -63,7 +65,7 @@ const acTypes = [
   },
   {
     title: "Multi / Kebutuhan Proyek",
-    description: "Cocok untuk banyak ruangan, proyek pengadaan, kantor cabang, developer, dan pembelian partai besar.",
+    description: "Cocok untuk banyak kamar, banyak ruangan, proyek pengadaan, kantor cabang, developer, dan pembelian partai besar.",
     icon: PackageCheck,
   },
 ]
@@ -97,26 +99,27 @@ const cassetteGallery = [
 ]
 
 const areas = [
+  { title: "Kost / Kontrakan", icon: Home },
   { title: "Kantor", icon: Building2 },
   { title: "Toko / Minimarket", icon: Store },
   { title: "Cafe / Restoran", icon: Coffee },
   { title: "Klinik / Ruang Tunggu", icon: ShieldCheck },
   { title: "Showroom", icon: ShoppingBag },
-  { title: "Rumah Ibadah / Aula", icon: Landmark },
   { title: "Sekolah / Ruang Kelas", icon: School },
   { title: "Proyek / Partai Besar", icon: PackageCheck },
 ]
 
 const projectSupply = [
-  "Pembelian banyak unit untuk kantor, toko, sekolah, proyek, atau developer",
+  "Pembelian banyak unit untuk kost, kontrakan, kantor, toko, sekolah, proyek, atau developer",
   "Bantu pilih brand dan tipe sesuai kebutuhan ruangan dan budget",
   "Cek ketersediaan stok dan alternatif unit yang masuk akal",
-  "Bisa koordinasi kebutuhan pengiriman dan instalasi",
-  "Cocok untuk kontraktor, pemilik usaha, pengadaan kantor, dan proyek perumahan",
+  "Bisa koordinasi kebutuhan pengiriman dan instalasi banyak titik",
+  "Cocok untuk pemilik kost, kontraktor, pemilik usaha, pengadaan kantor, dan proyek perumahan",
 ]
 
 const quotationChecklist = [
-  "Jumlah ruangan dan ukuran tiap ruangan",
+  "Jumlah kamar atau ruangan",
+  "Ukuran tiap kamar / ruangan",
   "Estimasi jumlah unit yang dibutuhkan",
   "Daya listrik dan kondisi panel listrik",
   "Jam operasional ruangan",
@@ -138,7 +141,7 @@ const brands = [
 ]
 
 const processSteps = [
-  ["1", "Kirim kebutuhan", "Jumlah ruangan, ukuran, lokasi, dan estimasi unit."],
+  ["1", "Kirim kebutuhan", "Jumlah kamar/ruangan, ukuran, lokasi, dan estimasi unit."],
   ["2", "Cek data ruangan", "Tim bantu membaca kebutuhan PK dan tipe AC yang cocok."],
   ["3", "Rekomendasi unit", "Brand, kapasitas, dan tipe disesuaikan dengan budget."],
   ["4", "Estimasi penawaran", "Untuk unit, pengadaan, dan instalasi jika dibutuhkan."],
@@ -147,7 +150,11 @@ const processSteps = [
 const faqItems = [
   {
     question: "Apakah RADJA AC melayani pembelian AC partai besar?",
-    answer: "Ya. RADJA AC melayani kebutuhan banyak unit untuk kantor, toko, sekolah, proyek perumahan, pengadaan usaha, dan kebutuhan komersial lain sesuai stok dan kesepakatan.",
+    answer: "Ya. RADJA AC melayani kebutuhan banyak unit untuk kost, kantor, toko, sekolah, proyek perumahan, pengadaan usaha, dan kebutuhan komersial lain sesuai stok dan kesepakatan.",
+  },
+  {
+    question: "Apakah bisa konsultasi AC untuk kost atau kontrakan?",
+    answer: "Bisa. Kirim jumlah kamar, ukuran tiap kamar, daya listrik, target budget, dan lokasi pemasangan. Tim RADJA AC bantu arahkan pilihan AC yang masuk akal untuk banyak kamar.",
   },
   {
     question: "AC apa yang cocok untuk kantor?",
@@ -210,8 +217,8 @@ export default function AcKantorKomersial() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="AC Kantor & Komersial Purwokerto | Partai Besar RADJA AC"
-        description="Konsultasi AC kantor, toko, cafe, showroom, ruang usaha, AC cassette, dan pembelian partai besar. RADJA AC bantu rekomendasi unit, brand, dan instalasi."
+        title="AC Kantor, Kost & Komersial Purwokerto | Partai Besar RADJA AC"
+        description="Konsultasi AC untuk kost, kantor, toko, cafe, showroom, AC cassette, dan pembelian partai besar. RADJA AC bantu rekomendasi unit, brand, dan instalasi."
         canonicalPath="/katalog/ac-kantor-komersial"
       />
 
@@ -248,7 +255,7 @@ export default function AcKantorKomersial() {
               </h1>
 
               <p className="mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-                RADJA AC melayani kebutuhan AC untuk kantor, toko, cafe, showroom, ruang usaha, AC cassette, hingga pembelian banyak unit. Kami bantu arahkan tipe AC, kapasitas, brand, dan kebutuhan instalasi.
+                RADJA AC melayani kebutuhan AC untuk kost, kontrakan, kantor, toko, cafe, showroom, ruang usaha, AC cassette, hingga pembelian banyak unit. Kami bantu arahkan tipe AC, kapasitas, brand, dan kebutuhan instalasi.
               </p>
 
               <div className="mx-auto mb-5 flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:mx-0 lg:justify-start">
@@ -262,7 +269,7 @@ export default function AcKantorKomersial() {
               </div>
 
               <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 lg:mx-0">
-                {["Kantor", "Toko", "Cafe", "Cassette", "Partai Besar"].map((item) => (
+                {["Kost", "Kantor", "Toko", "Cafe", "Cassette", "Partai Besar"].map((item) => (
                   <span key={item} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5">
                     <CheckCircle2 className="h-3.5 w-3.5 text-cyan-300" />
                     {item}
@@ -300,7 +307,7 @@ export default function AcKantorKomersial() {
                 </div>
 
                 <div className="mt-5 rounded-3xl border border-[#25D366]/20 bg-[#25D366]/10 p-4 text-sm leading-6 text-white/70">
-                  Untuk partai besar, rekomendasi terbaik biasanya perlu cek jumlah ruangan, lokasi, timeline, dan target budget.
+                  Untuk kost, kantor, atau partai besar, rekomendasi terbaik biasanya perlu cek jumlah kamar/ruangan, lokasi, timeline, dan target budget.
                 </div>
               </div>
             </div>
@@ -312,7 +319,7 @@ export default function AcKantorKomersial() {
             <SectionLabel>Kebutuhan Komersial</SectionLabel>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kebutuhan AC usaha beda dari rumah</h2>
             <p className="text-sm leading-7 text-white/65 sm:text-base">
-              Ruang komersial biasanya punya jam operasional lebih panjang, aktivitas lebih padat, dan kebutuhan distribusi udara yang lebih serius.
+              Kost, kantor, dan ruang komersial biasanya punya jam operasional lebih panjang, aktivitas lebih padat, dan kebutuhan instalasi yang perlu direncanakan lebih rapi.
             </p>
           </div>
 
@@ -334,7 +341,7 @@ export default function AcKantorKomersial() {
             <SectionLabel>Tipe AC</SectionLabel>
             <h2 className="mx-auto mb-4 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Tipe AC yang biasa dipakai untuk usaha</h2>
             <p className="mx-auto max-w-2xl text-sm leading-7 text-white/65 sm:text-base">
-              Tidak semua ruang usaha harus memakai tipe AC yang sama. Pilihan unit tergantung ukuran ruangan, plafon, aktivitas, dan budget.
+              Tidak semua ruang usaha harus memakai tipe AC yang sama. Pilihan unit tergantung ukuran ruangan, plafon, aktivitas, jumlah titik, dan budget.
             </p>
           </div>
 
@@ -432,7 +439,7 @@ export default function AcKantorKomersial() {
               <SectionLabel>Partai Besar</SectionLabel>
               <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Melayani pembelian banyak unit dan kebutuhan proyek</h2>
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
-                Untuk kebutuhan kantor, developer, sekolah, toko, kontraktor, atau proyek pengadaan, RADJA AC bisa bantu koordinasi kebutuhan unit, rekomendasi brand, dan instalasi sesuai kondisi lapangan.
+                Untuk kebutuhan kost, kontrakan, kantor, developer, sekolah, toko, kontraktor, atau proyek pengadaan, RADJA AC bisa bantu koordinasi kebutuhan unit, rekomendasi brand, dan instalasi sesuai kondisi lapangan.
               </p>
               <WhatsAppButton className="mx-auto flex w-full max-w-[432px] lg:mx-0 lg:w-fit lg:max-w-none">Konsultasi Partai Besar</WhatsAppButton>
             </div>
@@ -526,9 +533,9 @@ export default function AcKantorKomersial() {
             <div className="pointer-events-none absolute -right-20 bottom-0 h-56 w-56 rounded-full bg-[#25D366]/10 blur-3xl" />
             <div className="relative">
               <div className="mb-4 flex justify-center text-cyan-300"><MessageCircle className="h-10 w-10" /></div>
-              <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Butuh AC untuk kantor atau pembelian banyak unit?</h2>
+              <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Butuh AC untuk kost, kantor, atau pembelian banyak unit?</h2>
               <p className="mx-auto mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-                Kirim jumlah ruangan, ukuran, lokasi, estimasi jumlah unit, dan target budget. Tim RADJA AC bantu arahkan pilihan yang paling masuk akal.
+                Kirim jumlah kamar/ruangan, ukuran, lokasi, estimasi jumlah unit, dan target budget. Tim RADJA AC bantu arahkan pilihan yang paling masuk akal.
               </p>
               <WhatsAppButton>Konsultasi via WhatsApp</WhatsAppButton>
             </div>
