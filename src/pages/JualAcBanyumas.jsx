@@ -176,7 +176,7 @@ export default function JualAcBanyumas() {
                   Lihat Katalog AC
                 </Link>
               </div>
-              <div className="flex flex-wrap gap-2 text-sm text-white/62">
+              <div className="flex flex-wrap justify-center gap-2 text-sm text-white/62">
                 {["Cek stok", "Tanya harga", "Rekomendasi PK", "Low watt & inverter", "Estimasi pemasangan"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">{item}</span>
                 ))}
