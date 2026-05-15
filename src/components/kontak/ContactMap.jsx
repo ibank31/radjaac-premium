@@ -1,13 +1,13 @@
-import WhatsappIcon from "../ui/WhatsappIcon";
-import { SITE_DATA } from "../../constants/siteData";
+import WhatsappIcon from "../ui/WhatsappIcon"
+import { buildWhatsAppUrl } from "../../utils/whatsapp"
 
-const WA_LINK = SITE_DATA.whatsappUrl;
+const WA_MESSAGE = "Halo RADJA AC, saya mau tanya harga AC, cek stok, dan rekomendasi yang cocok."
 
 const contactHighlights = [
   "Konsultasi brand AC, tipe, dan kapasitas PK",
   "Cek stok unit, estimasi harga, dan area pengiriman",
   "Bisa lanjut diskusi kebutuhan instalasi AC baru",
-];
+]
 
 export default function ContactMap() {
   return (
@@ -51,7 +51,7 @@ export default function ContactMap() {
         </p>
 
         <a
-          href={WA_LINK}
+          href={buildWhatsAppUrl(WA_MESSAGE)}
           target="_blank"
           rel="noreferrer"
           className="inline-flex w-full items-center justify-center gap-3 rounded-2xl sm:rounded-full bg-[#25D366] px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold text-slate-950 shadow-[0_24px_60px_rgba(37,211,102,0.24)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A]"
@@ -64,5 +64,5 @@ export default function ContactMap() {
         </a>
       </div>
     </aside>
-  );
+  )
 }
