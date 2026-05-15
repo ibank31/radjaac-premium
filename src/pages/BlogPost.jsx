@@ -121,6 +121,18 @@ const MONEY_LINKS_BY_SLUG = {
       href: "/kontak",
     },
   ],
+  "ac-untuk-kost-purwokerto": [
+    {
+      title: "AC Kantor & Komersial",
+      description: "Konsultasi kebutuhan AC untuk kost, kontrakan, kantor, proyek, dan pembelian banyak unit.",
+      href: "/katalog/ac-kantor-komersial",
+    },
+    {
+      title: "Jual AC Purwokerto",
+      description: "Cek pilihan brand, stok, estimasi harga, dan kebutuhan pemasangan banyak titik.",
+      href: "/jual-ac-purwokerto",
+    },
+  ],
   "ac-1-pk-untuk-ruangan-berapa": [
     {
       title: "Jual AC Purwokerto",
