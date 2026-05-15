@@ -77,38 +77,32 @@ export default function PanasonicPurwokerto() {
 
       <main>
         <section className="pt-24 pb-16 px-6 lg:px-8 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-          <div className="max-w-7xl mx-auto grid gap-10 xl:grid-cols-[1.1fr_0.9fr] items-center">
-            <div>
-              <span className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-300 mb-5">
-                Dealer AC Panasonic Purwokerto & Banyumas
-              </span>
+          <div className="max-w-5xl mx-auto text-center">
+            <span className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-300 mb-5">
+              Dealer AC Panasonic Purwokerto & Banyumas
+            </span>
 
-              <div className="mb-6 text-sm text-slate-400">
-                <Link to="/" className="hover:text-cyan-300">Home</Link>
-                <span className="mx-2">/</span>
-                <span className="text-white">Panasonic Purwokerto</span>
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.03em] mb-6">
-                AC Panasonic Hemat Listrik untuk Hunian Modern
-              </h1>
-
-              <p className="text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed mb-8">
-                Rekomendasi AC Panasonic untuk kamar dan rumah dengan fokus kenyamanan harian, inverter efisien, dan pengalaman penggunaan yang lebih tenang.
-              </p>
-
-              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-4">
-                <Link to="/kontak" className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-6 py-4 text-base font-semibold text-slate-950 transition hover:bg-cyan-300">
-                  Tanya Harga Panasonic
-                </Link>
-                <Link to="#rekomendasi" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-4 text-base font-semibold text-white/90 transition hover:bg-white/10">
-                  Lihat Rekomendasi
-                </Link>
-              </div>
+            <div className="mb-6 text-sm text-slate-400">
+              <Link to="/" className="hover:text-cyan-300">Home</Link>
+              <span className="mx-2">/</span>
+              <span className="text-white">Panasonic Purwokerto</span>
             </div>
 
-            <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-slate-900 shadow-[0_30px_70px_rgba(7,89,133,0.18)]">
-              <img src="/assets/products/ariston-display.jpg" alt="AC Panasonic inverter untuk kamar modern" className="h-full w-full object-cover aspect-[4/5]" loading="lazy" decoding="async" />
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.03em] mb-6">
+              AC Panasonic Hemat Listrik untuk Hunian Modern
+            </h1>
+
+            <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
+              Rekomendasi AC Panasonic untuk kamar dan rumah dengan fokus kenyamanan harian, inverter efisien, dan pengalaman penggunaan yang lebih tenang.
+            </p>
+
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center sm:gap-4 gap-4">
+              <Link to="/kontak" className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-6 py-4 text-base font-semibold text-slate-950 transition hover:bg-cyan-300">
+                Tanya Harga Panasonic
+              </Link>
+              <Link to="#rekomendasi" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-4 text-base font-semibold text-white/90 transition hover:bg-white/10">
+                Lihat Rekomendasi
+              </Link>
             </div>
           </div>
         </section>
