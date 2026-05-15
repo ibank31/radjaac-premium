@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { Award, BadgeCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
+import { ArrowRight, Award, BadgeCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
 
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
@@ -66,6 +66,29 @@ const pkGuide = [
   ["1 PK", "± 15–20 m²", "Kamar besar atau ruang keluarga kecil"],
   ["1.5 PK", "± 20–30 m²", "Ruang keluarga, kantor, atau toko"],
   ["2 PK", "± 30–40 m²", "Ruangan besar dan kebutuhan komersial"],
+]
+
+const internalLinks = [
+  {
+    title: "Jual AC Purwokerto",
+    description: "Mulai dari halaman pusat pembelian AC untuk cek brand, stok, harga, dan rekomendasi PK.",
+    href: "/jual-ac-purwokerto",
+  },
+  {
+    title: "AC Inverter Purwokerto",
+    description: "Bandingkan pilihan AC inverter untuk pemakaian rutin dan suhu lebih stabil.",
+    href: "/katalog/ac-inverter",
+  },
+  {
+    title: "AC Low Watt Purwokerto",
+    description: "Cek pilihan AC untuk rumah dengan daya listrik terbatas.",
+    href: "/katalog/ac-low-watt",
+  },
+  {
+    title: "AC Inverter vs Low Watt",
+    description: "Baca panduan perbedaan inverter dan low watt sebelum menentukan unit.",
+    href: "/artikel/ac-inverter-vs-low-watt",
+  },
 ]
 
 const faqItems = [
@@ -328,6 +351,31 @@ export default function GreePurwokerto() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
+          <div className="mx-auto mb-8 max-w-3xl text-center">
+            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-orange-300">Baca Juga</div>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Panduan sebelum beli AC Gree</h2>
+            <p className="mx-auto max-w-2xl leading-7 text-white/65">Link berikut membantu Anda membandingkan kebutuhan AC Gree dengan kategori dan panduan pembelian yang relevan.</p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {internalLinks.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="group rounded-[26px] border border-white/10 bg-white/[0.04] p-5 transition hover:-translate-y-1 hover:border-blue-300/30 hover:bg-white/[0.06]"
+              >
+                <h3 className="mb-2 font-bold text-white">{item.title}</h3>
+                <p className="mb-4 text-sm leading-6 text-white/55">{item.description}</p>
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-blue-300 group-hover:text-blue-200">
+                  Buka halaman
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            ))}
           </div>
         </section>
 
