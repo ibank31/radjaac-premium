@@ -45,6 +45,18 @@ export const BLOG_POSTS = [
     updatedAt: "2026-05-15",
     keywords: ["harga AC Gree Purwokerto", "jual AC Gree", "dealer Gree Purwokerto", "AC Gree Banyumas", "Gree low watt Purwokerto"],
     intro: "AC Gree banyak dipertimbangkan pembeli di Purwokerto karena pilihannya cukup lengkap untuk kebutuhan rumah, kos, toko, kantor kecil, hingga ruangan yang membutuhkan pendinginan harian. Sebelum menanyakan harga, calon pembeli sebaiknya memahami kebutuhan ruangan, kapasitas PK, daya listrik, tipe standard, low watt, atau inverter, serta kondisi pemasangan.",
+    galleryImages: [
+      {
+        src: "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-01.webp",
+        alt: "Showroom Gree RADJA AC Purwokerto",
+        caption: "Showroom Gree RADJA AC Purwokerto"
+      },
+      {
+        src: "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-02.webp",
+        alt: "Display AC Gree di showroom RADJA AC",
+        caption: "Display AC Gree di showroom RADJA AC"
+      }
+    ],
     sections: [
       {
         heading: "Kenapa harga AC Gree bisa berbeda?",
