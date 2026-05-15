@@ -73,6 +73,18 @@ const MONEY_LINKS_BY_SLUG = {
       href: "/katalog/ac-low-watt",
     },
   ],
+  "harga-ac-midea-purwokerto": [
+    {
+      title: "Jual AC Midea Purwokerto",
+      description: "Lihat halaman utama Midea untuk cek pilihan standard, low watt, inverter, dan konsultasi tipe AC.",
+      href: "/brand/midea",
+    },
+    {
+      title: "AC Inverter Purwokerto",
+      description: "Bandingkan pilihan AC inverter untuk pemakaian rutin dan suhu lebih stabil.",
+      href: "/katalog/ac-inverter",
+    },
+  ],
   "daikin-inverter-purwokerto": [
     {
       title: "Jual AC Daikin Purwokerto",
