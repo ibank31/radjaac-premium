@@ -61,6 +61,18 @@ const MONEY_LINKS_BY_SLUG = {
       href: "/jual-ac-purwokerto",
     },
   ],
+  "harga-ac-gree-purwokerto": [
+    {
+      title: "Jual AC Gree Purwokerto",
+      description: "Lihat halaman utama Gree untuk cek pilihan standard, low watt, inverter, dan konsultasi tipe AC.",
+      href: "/brand/gree",
+    },
+    {
+      title: "AC Low Watt Purwokerto",
+      description: "Bandingkan pilihan AC low watt untuk rumah dengan daya listrik terbatas.",
+      href: "/katalog/ac-low-watt",
+    },
+  ],
   "daikin-inverter-purwokerto": [
     {
       title: "Jual AC Daikin Purwokerto",
@@ -187,9 +199,28 @@ export default function BlogPost() {
             {post.title}
           </h1>
 
-          <p className="mb-10 text-lg leading-8 text-white/72">
+          <p className="mb-8 text-lg leading-8 text-white/72">
             {post.intro}
           </p>
+
+          {post.galleryImages?.length ? (
+            <div className="mb-10 grid gap-3 sm:grid-cols-2">
+              {post.galleryImages.map((image) => (
+                <figure key={image.src} className="overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.035] shadow-[0_12px_28px_rgba(15,23,42,0.16)]">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-44 w-full object-cover sm:h-52"
+                  />
+                  <figcaption className="px-4 py-3 text-xs leading-5 text-white/55">
+                    {image.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          ) : null}
 
           <div className="mb-10 flex flex-wrap gap-2">
             {post.keywords.map((keyword) => (
