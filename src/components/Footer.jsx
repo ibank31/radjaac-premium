@@ -19,14 +19,18 @@ const contactItems = [
 ];
 
 const seoLinks = [
+  { label: "Jual AC Purwokerto", to: "/jual-ac-purwokerto" },
   { label: "Katalog AC", to: "/katalog" },
   { label: "AC Split Rumah", to: "/katalog/ac-split-rumah" },
   { label: "AC Inverter", to: "/katalog/ac-inverter" },
   { label: "AC Low Watt", to: "/katalog/ac-low-watt" },
   { label: "AC Kantor & Komersial", to: "/katalog/ac-kantor-komersial" },
   { label: "Daikin Purwokerto", to: "/brand/daikin" },
-  { label: "Midea Purwokerto", to: "/brand/midea" },
   { label: "Gree Purwokerto", to: "/brand/gree" },
+  { label: "Midea Purwokerto", to: "/brand/midea" },
+  { label: "Hisense Purwokerto", to: "/brand/hisense" },
+  { label: "Sansui Purwokerto", to: "/brand/sansui" },
+  { label: "Brand AC Lainnya", to: "/brand/lainnya" },
 ];
 
 export default function Footer() {
