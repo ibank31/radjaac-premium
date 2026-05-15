@@ -10,7 +10,7 @@ import WhatsappIcon from "../components/ui/WhatsappIcon"
 import { SITE_DATA } from "../constants/siteData"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
-const WA_MESSAGE = "Halo RADJA AC, saya mau beli AC di Purwokerto. Mohon bantu rekomendasi merek, tipe, PK, stok, harga, dan estimasi pemasangan."
+const WA_MESSAGE = "Halo RADJA AC. Tolong bantu cek stok, harga, dan rekomendasi AC yang cocok."
 
 const brandLinks = [
   ["Daikin", "Brand premium untuk rumah, kantor, dan pemakaian rutin.", "/brand/daikin"],
@@ -151,9 +151,9 @@ export default function JualAcPurwokerto() {
                 <WhatsAppButton />
                 <a href="#estimasi-harga" className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]">Lihat Estimasi Harga</a>
               </div>
-              <div className="flex max-w-2xl flex-wrap gap-2 text-sm text-white/62">
-                {["Jual AC Purwokerto", "Toko AC Purwokerto", "Harga AC Purwokerto", "AC Daikin Purwokerto", "AC inverter Purwokerto"].map((item) => (
-                  <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">{item}</span>
+              <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-2 text-sm text-white/62 lg:mx-0 lg:justify-start">
+                {["Cek stok AC", "Tanya harga", "Rekomendasi PK", "Estimasi pemasangan", "Area Purwokerto & Banyumas"].map((item) => (
+                  <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1 text-center">{item}</span>
                 ))}
               </div>
             </div>
@@ -172,8 +172,8 @@ export default function JualAcPurwokerto() {
               ["Pilihan brand lengkap", "Tersedia Daikin, Midea, Gree, Hisense, Sansui, Sharp, Panasonic, dan brand resmi lainnya.", Store],
               ["Bisa bantu instalasi", "Pembelian unit bisa dilanjutkan dengan pemasangan rapi sesuai kondisi lokasi.", CheckCircle2],
             ].map(([title, description, Icon]) => (
-              <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6">
-                <Icon className="mb-5 h-8 w-8 text-cyan-300" />
+              <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 text-center">
+                <Icon className="mx-auto mb-5 h-8 w-8 text-cyan-300" />
                 <h2 className="mb-3 text-xl font-black text-white">{title}</h2>
                 <p className="text-sm leading-7 text-white/60">{description}</p>
               </div>
@@ -192,11 +192,11 @@ export default function JualAcPurwokerto() {
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
                 RADJA AC tidak mengunci harga pasti di website karena stok, tipe unit, dan kondisi pemasangan bisa berubah. Sebagai gambaran awal, AC 1/2 PK + pemasangan standar umumnya berada di kisaran berikut.
               </p>
-              <div className="mb-6 rounded-[28px] border border-[#25D366]/20 bg-[#25D366]/10 p-5">
+              <div className="mb-6 rounded-[28px] border border-[#25D366]/20 bg-[#25D366]/10 p-5 text-center">
                 <p className="mb-3 text-sm font-bold text-[#8EF0B4]">Pemasangan standar sudah termasuk:</p>
-                <div className="grid gap-2 sm:grid-cols-2">
+                <div className="mx-auto grid max-w-xl gap-2 sm:grid-cols-2">
                   {standardInstallItems.map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-sm text-white/70">
+                    <div key={item} className="flex items-center justify-center gap-2 text-sm text-white/70 sm:justify-start">
                       <CheckCircle2 className="h-4 w-4 shrink-0 text-[#25D366]" />
                       <span>{item}</span>
                     </div>
@@ -218,14 +218,14 @@ export default function JualAcPurwokerto() {
                 ))}
               </div>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                <WhatsAppButton className="flex-1 px-5 py-3 text-sm">
+                  Tanya Harga via WhatsApp
+                </WhatsAppButton>
                 <Link to="/katalog" className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-white/10 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/[0.05]">
                   Lihat Katalog <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link to="/katalog/ac-low-watt" className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-5 py-3 text-sm font-bold text-cyan-200 transition hover:bg-cyan-300/15">
                   AC Low Watt <ArrowRight className="h-4 w-4" />
-                </Link>
-                <Link to="/katalog/ac-inverter" className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-5 py-3 text-sm font-bold text-cyan-200 transition hover:bg-cyan-300/15">
-                  AC Inverter <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>
