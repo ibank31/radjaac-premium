@@ -21,8 +21,12 @@ const otherBrands = [
     description: "Pilihan premium untuk rumah, kantor, dan pemakaian jangka panjang yang mengutamakan performa stabil.",
   },
   {
-    name: "Changhong",
-    description: "Pilihan ekonomis untuk kebutuhan pendinginan harian di kamar, kos, dan ruang kecil.",
+    name: "Bestlife",
+    description: "Pilihan ekonomis untuk kamar, kos, kontrakan, dan kebutuhan pendinginan harian dengan budget ringan.",
+  },
+  {
+    name: "Akari",
+    description: "Alternatif praktis untuk kebutuhan AC rumah, kamar, dan ruang kecil dengan harga yang tetap rasional.",
   },
   {
     name: "Samsung",
@@ -56,6 +60,14 @@ const otherBrands = [
   {
     name: "LG",
     description: "Cocok untuk pelanggan yang mencari AC modern dengan fokus efisiensi, kenyamanan, dan pemakaian rutin.",
+  },
+  {
+    name: "Modena",
+    description: "Pilihan AC rumah modern untuk pelanggan yang mencari tampilan rapi dan kebutuhan pendinginan harian.",
+  },
+  {
+    name: "Flife",
+    description: "Alternatif ekonomis untuk kamar, kos, dan ruangan kecil sesuai stok dan kebutuhan budget pelanggan.",
   },
 ]
 
@@ -127,7 +139,7 @@ export default function BrandLainnya() {
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
         title="Brand AC Lainnya Purwokerto & Banyumas | RADJA AC"
-        description="RADJA AC menyediakan berbagai brand AC original lainnya seperti Panasonic, Mitsubishi, Changhong, Samsung, Polytron, Toshiba, Sharp, Ariston, Aqua, TCL, LG dan lainnya sesuai stok untuk area Purwokerto & Banyumas."
+        description="RADJA AC menyediakan berbagai brand AC original lainnya seperti Panasonic, Mitsubishi, Bestlife, Akari, Samsung, Polytron, Toshiba, Sharp, Ariston, Aqua, TCL, LG, Modena, Flife dan lainnya sesuai stok untuk area Purwokerto & Banyumas."
         canonicalPath="/brand/lainnya"
       />
 
