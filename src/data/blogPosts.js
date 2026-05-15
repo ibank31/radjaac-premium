@@ -36,6 +36,49 @@ export const BLOG_POSTS = [
     ctaMessage: "Halo RADJA AC, saya mau cek harga AC Daikin di Purwokerto. Mohon bantu rekomendasi tipe, PK, stok, dan estimasi biaya pasang."
   },
   {
+    slug: "harga-ac-gree-purwokerto",
+    title: "Harga AC Gree Purwokerto: Pilihan Standard, Low Watt, dan Inverter",
+    shortTitle: "Harga AC Gree Purwokerto",
+    description: "Panduan cek harga AC Gree di Purwokerto, mulai dari pilihan standard, low watt, inverter, kapasitas PK, stok, sampai kebutuhan pemasangan.",
+    category: "Gree Purwokerto",
+    readTime: "5 menit baca",
+    updatedAt: "2026-05-15",
+    keywords: ["harga AC Gree Purwokerto", "jual AC Gree", "dealer Gree Purwokerto", "AC Gree Banyumas", "Gree low watt Purwokerto"],
+    intro: "AC Gree banyak dipertimbangkan pembeli di Purwokerto karena pilihannya cukup lengkap untuk kebutuhan rumah, kos, toko, kantor kecil, hingga ruangan yang membutuhkan pendinginan harian. Sebelum menanyakan harga, calon pembeli sebaiknya memahami kebutuhan ruangan, kapasitas PK, daya listrik, tipe standard, low watt, atau inverter, serta kondisi pemasangan.",
+    sections: [
+      {
+        heading: "Kenapa harga AC Gree bisa berbeda?",
+        body: [
+          "Harga AC Gree bisa berbeda tergantung kapasitas PK, tipe unit, fitur, stok yang tersedia, paket pemasangan, panjang pipa, bracket, kabel, dan lokasi pengiriman. Karena itu, membandingkan harga sebaiknya dilakukan dengan spesifikasi yang sama agar hasilnya tidak menyesatkan.",
+          "Jika ada penawaran yang terlihat lebih murah, tanyakan dulu apakah unit baru, original, bergaransi resmi, dan apakah harga sudah termasuk kebutuhan instalasi standar. Dengan begitu total biaya lebih jelas sejak awal."
+        ]
+      },
+      {
+        heading: "Pilih Gree standard, low watt, atau inverter?",
+        body: [
+          "Gree standard bisa dipertimbangkan untuk kebutuhan pendinginan harian dengan budget lebih efisien. Gree low watt cocok untuk rumah dengan daya listrik terbatas, sedangkan Gree inverter lebih cocok untuk pemakaian rutin yang membutuhkan suhu lebih stabil.",
+          "Pilihan terbaik tetap bergantung pada ukuran ruangan, lama pemakaian, daya listrik, dan kebiasaan penggunaan. Untuk kamar tidur, ruang kerja, toko kecil, atau ruang keluarga, kebutuhan kapasitas dan tipe AC bisa berbeda."
+        ]
+      },
+      {
+        heading: "Data yang perlu disiapkan sebelum cek stok",
+        body: [
+          "Sebelum konsultasi harga AC Gree, siapkan ukuran ruangan, tinggi plafon, daya listrik, foto titik indoor, foto titik outdoor, dan rencana jam pemakaian. Data sederhana ini membantu tim RADJA AC memberi rekomendasi yang lebih tepat.",
+          "Jika masih bingung antara ½ PK, ¾ PK, 1 PK, atau 1.5 PK, konsultasi dulu lebih aman daripada langsung memilih berdasarkan harga termurah. Kapasitas yang tepat membantu AC bekerja lebih nyaman dan tidak terlalu berat."
+        ]
+      },
+      {
+        heading: "Cara cek harga Gree di RADJA AC",
+        body: [
+          "Hubungi RADJA AC melalui WhatsApp untuk cek stok Gree terbaru, pilihan tipe yang tersedia, rekomendasi kapasitas PK, dan estimasi kebutuhan pemasangan di area Purwokerto, Banyumas, dan sekitarnya.",
+          "Tim RADJA AC dapat membantu membandingkan kebutuhan ruangan dengan pilihan Gree yang tersedia, termasuk opsi standard, low watt, atau inverter sesuai budget dan kondisi lokasi."
+        ]
+      }
+    ],
+    ctaLabel: "Cek Harga Gree via WhatsApp",
+    ctaMessage: "Halo RADJA AC, saya mau cek harga AC Gree di Purwokerto. Mohon bantu rekomendasi tipe, PK, stok, dan estimasi biaya pasang."
+  },
+  {
     slug: "daikin-inverter-purwokerto",
     title: "AC Daikin Inverter Purwokerto: Cocok untuk Siapa?",
     shortTitle: "Daikin Inverter Purwokerto",
