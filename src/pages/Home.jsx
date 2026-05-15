@@ -25,7 +25,7 @@ export default function Home() {
         name: "Brand AC apa saja yang tersedia di RADJA AC?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "RADJA AC menyediakan AC original berbagai brand seperti Daikin, Gree, Midea, Hisense, Sansui, Sharp, Panasonic, LG, Samsung, TCL, Toshiba, Mitsubishi, Aqua, Polytron, Changhong, Ariston, dan lainnya.",
+          text: "RADJA AC menyediakan AC original berbagai brand seperti Daikin, Gree, Midea, Hisense, Sansui, Sharp, Panasonic, LG, Samsung, TCL, Toshiba, Mitsubishi, Aqua, Polytron, Bestlife, Akari, Ariston, Modena, Flife, dan lainnya.",
         },
       },
       {
