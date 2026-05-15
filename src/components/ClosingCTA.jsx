@@ -2,7 +2,7 @@ import { Clock, MapPin, MessageCircle } from "lucide-react"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const CLOSING_MESSAGE =
-  "Halo RADJA AC, saya masih bingung pilih AC. Mohon dibantu rekomendasi produk dan harga yang cocok."
+  "Halo RADJA AC, saya masih bingung pilih AC. Mohon bantu rekomendasi AC yang cocok dan kisaran harganya."
 
 export default function ClosingCTA() {
   return (
