@@ -28,6 +28,22 @@ const categoryLinks = [
   ["AC Kantor & Komersial", "Untuk kantor, toko, cafe, cassette, dan pembelian banyak unit.", "/katalog/ac-kantor-komersial", Building2],
 ]
 
+const priceRanges = [
+  ["AC 1/2 PK ekonomis", "mulai Rp3 jutaan", "Untuk kamar, kos, kontrakan, dan budget awal ringan."],
+  ["AC 1/2 PK standard populer", "Rp3,2–3,6 jutaan", "Pilihan brand umum untuk kebutuhan rumah harian."],
+  ["AC 1/2 PK premium", "Rp4–4,9 jutaan", "Untuk pembeli yang mengutamakan brand, garansi, dan kepercayaan."],
+  ["AC 1/2 PK inverter", "Rp4,2–6 jutaan+", "Untuk pemakaian rutin dan suhu ruangan lebih stabil."],
+]
+
+const standardInstallItems = [
+  "Pipa AC 2 meter",
+  "Kabel sampai 5 meter",
+  "Bracket outdoor 1 set",
+  "Duct tape 1 roll",
+  "Selang drain",
+  "Proses vacuum",
+]
+
 const pkGuide = [
   ["1/2 PK", "± 9–12 m²", "Kamar kecil, kos, ruang kerja kecil"],
   ["3/4 PK", "± 12–15 m²", "Kamar sedang atau ruang santai"],
@@ -91,7 +107,7 @@ export default function JualAcPurwokerto() {
     logo: `${SITE_DATA.baseUrl}${SITE_DATA.logoUrl}`,
     image: `${SITE_DATA.baseUrl}/assets/showroom/Showroom-utama.webp`,
     telephone: SITE_DATA.phoneNumber,
-    priceRange: "Rp",
+    priceRange: "Rp3 jutaan-Rp6 jutaan+",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Purwokerto",
@@ -131,7 +147,7 @@ export default function JualAcPurwokerto() {
               </p>
               <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <WhatsAppButton />
-                <a href="#pilih-brand" className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]">Lihat Brand & Kategori</a>
+                <a href="#estimasi-harga" className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]">Lihat Estimasi Harga</a>
               </div>
               <div className="flex max-w-2xl flex-wrap gap-2 text-sm text-white/62">
                 {["Jual AC Purwokerto", "Toko AC Purwokerto", "Harga AC Purwokerto", "AC Daikin Purwokerto", "AC inverter Purwokerto"].map((item) => (
@@ -160,6 +176,57 @@ export default function JualAcPurwokerto() {
                 <p className="text-sm leading-7 text-white/60">{description}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section id="estimasi-harga" className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div>
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-200">
+                <ShoppingBag className="h-4 w-4" />
+                ESTIMASI HARGA AC
+              </div>
+              <h2 className="mb-5 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Range harga AC 1/2 PK + pemasangan standar</h2>
+              <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
+                RADJA AC tidak mengunci harga pasti di website karena stok, tipe unit, dan kondisi pemasangan bisa berubah. Sebagai gambaran awal, AC 1/2 PK + pemasangan standar umumnya berada di kisaran berikut.
+              </p>
+              <div className="mb-6 rounded-[28px] border border-[#25D366]/20 bg-[#25D366]/10 p-5">
+                <p className="mb-3 text-sm font-bold text-[#8EF0B4]">Pemasangan standar sudah termasuk:</p>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {standardInstallItems.map((item) => (
+                    <div key={item} className="flex items-center gap-2 text-sm text-white/70">
+                      <CheckCircle2 className="h-4 w-4 shrink-0 text-[#25D366]" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <p className="text-xs leading-6 text-white/48 sm:text-sm">
+                Harga final menyesuaikan brand, tipe, stok, tambahan pipa/kabel, stop kontak, bobok tembok, bongkar AC lama, pekerjaan ketinggian, dan posisi outdoor khusus.
+              </p>
+            </div>
+            <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-5 sm:p-6">
+              <div className="grid gap-4 md:grid-cols-2">
+                {priceRanges.map(([title, price, note]) => (
+                  <div key={title} className="rounded-[26px] border border-white/10 bg-slate-950/55 p-5">
+                    <p className="mb-2 text-sm font-semibold text-cyan-300">{title}</p>
+                    <p className="mb-3 text-2xl font-black text-white">{price}</p>
+                    <p className="text-sm leading-6 text-white/55">{note}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                <Link to="/katalog" className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-white/10 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/[0.05]">
+                  Lihat Katalog <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link to="/katalog/ac-low-watt" className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-5 py-3 text-sm font-bold text-cyan-200 transition hover:bg-cyan-300/15">
+                  AC Low Watt <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link to="/katalog/ac-inverter" className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-5 py-3 text-sm font-bold text-cyan-200 transition hover:bg-cyan-300/15">
+                  AC Inverter <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
