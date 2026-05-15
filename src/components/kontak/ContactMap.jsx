@@ -3,27 +3,35 @@ import { SITE_DATA } from "../../constants/siteData";
 
 const WA_LINK = SITE_DATA.whatsappUrl;
 
+const contactHighlights = [
+  "Konsultasi brand AC, tipe, dan kapasitas PK",
+  "Cek stok unit, estimasi harga, dan area pengiriman",
+  "Bisa lanjut diskusi kebutuhan instalasi AC baru",
+];
+
 export default function ContactMap() {
   return (
     <aside className="rounded-[28px] sm:rounded-[32px] border border-cyan-400/20 bg-gradient-to-br from-slate-950/80 via-slate-900/80 to-cyan-500/10 p-5 sm:p-8 shadow-[0_30px_80px_rgba(8,20,47,0.65)] flex flex-col justify-between gap-6 sm:gap-8">
       <div>
         <h2 className="text-2xl font-semibold text-white mb-4">
-          Tempatkan Google Maps bisnis di section ini
+          Konsultasi langsung dengan RADJA AC
         </h2>
 
-        <p className="text-slate-300 leading-relaxed mb-8">
-          Placeholder untuk peta lokasi Radja AC. Ganti dengan embed Google Maps saat siap menampilkan lokasi kantor atau service area.
+        <p className="text-slate-300 leading-relaxed mb-6">
+          Sampaikan kebutuhan ruangan, daya listrik, pilihan brand, dan lokasi pemasangan. Tim RADJA AC akan bantu arahkan pilihan AC yang sesuai untuk area Purwokerto, Banyumas, dan sekitarnya.
         </p>
 
-        <div className="h-72 rounded-[24px] sm:rounded-[28px] border border-white/10 bg-slate-950/70 p-6 flex items-center justify-center text-center text-slate-400">
-          <div>
-            <p className="font-semibold text-white mb-2">
-              Peta Lokasi
-            </p>
+        <div className="rounded-[24px] sm:rounded-[28px] border border-white/10 bg-slate-950/70 p-5 sm:p-6">
+          <p className="font-semibold text-white mb-4">
+            Yang bisa dikonsultasikan
+          </p>
 
-            <p>
-              Tempatkan Google Maps bisnis di section ini
-            </p>
+          <div className="space-y-3">
+            {contactHighlights.map((item) => (
+              <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm leading-6 text-slate-300">
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -31,15 +39,15 @@ export default function ContactMap() {
       {/* CTA */}
       <div className="rounded-[24px] sm:rounded-[28px] border border-white/10 bg-slate-950/80 p-5 sm:p-8 shadow-[0_0_60px_rgba(14,116,144,0.18)]">
         <p className="text-cyan-300 uppercase tracking-[0.2em] text-xs mb-3">
-          Butuh Bantuan Segera?
+          Butuh Bantuan Cepat?
         </p>
 
         <h3 className="text-white text-2xl font-bold mb-4">
-          Konsultasi WhatsApp untuk jadwal dan estimasi
+          Chat WhatsApp untuk cek stok dan rekomendasi AC
         </h3>
 
         <p className="text-slate-300 leading-relaxed mb-6">
-          Hubungi kami melalui WhatsApp untuk konfirmasi jadwal layanan AC dan estimasi biaya yang cepat.
+          Hubungi RADJA AC untuk tanya harga, cek ketersediaan unit, rekomendasi PK, dan kebutuhan instalasi.
         </p>
 
         <a
