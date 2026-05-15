@@ -102,6 +102,16 @@ const useCases = [
 
 const internalLinks = [
   {
+    title: "Harga AC Daikin Purwokerto",
+    description: "Panduan cek harga, stok, tipe, dan estimasi pemasangan Daikin sebelum membeli.",
+    href: "/artikel/harga-ac-daikin-purwokerto",
+  },
+  {
+    title: "Daikin Inverter Purwokerto",
+    description: "Baca panduan Daikin inverter untuk pemakaian rutin dan kebutuhan ruangan.",
+    href: "/artikel/daikin-inverter-purwokerto",
+  },
+  {
     title: "AC Inverter",
     description: "Bandingkan pilihan inverter untuk pemakaian rutin.",
     href: "/katalog/ac-inverter",
