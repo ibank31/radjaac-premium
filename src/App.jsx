@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom"
 const Home = lazy(() => import("./pages/Home"))
 const JualAcPurwokerto = lazy(() => import("./pages/JualAcPurwokerto"))
 const JualAcBanyumas = lazy(() => import("./pages/JualAcBanyumas"))
+const JualAcSokaraja = lazy(() => import("./pages/JualAcSokaraja"))
 const KatalogAc = lazy(() => import("./pages/KatalogAc"))
 const KalkulatorAc = lazy(() => import("./pages/KalkulatorAc"))
 const InstalasiAC = lazy(() => import("./pages/InstalasiAC"))
@@ -72,6 +73,8 @@ export default function App() {
             <Route path="/jual-ac-purwokerto" element={<JualAcPurwokerto />} />
 
             <Route path="/jual-ac-banyumas" element={<JualAcBanyumas />} />
+
+            <Route path="/jual-ac-sokaraja" element={<JualAcSokaraja />} />
 
             <Route path="/katalog" element={<KatalogAc />} />
 
