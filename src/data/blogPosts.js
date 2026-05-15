@@ -91,6 +91,49 @@ export const BLOG_POSTS = [
     ctaMessage: "Halo RADJA AC, saya mau cek harga AC Gree di Purwokerto. Mohon bantu rekomendasi tipe, PK, stok, dan estimasi biaya pasang."
   },
   {
+    slug: "harga-ac-midea-purwokerto",
+    title: "Harga AC Midea Purwokerto: Pilihan AC Rumah, Low Watt, dan Inverter",
+    shortTitle: "Harga AC Midea Purwokerto",
+    description: "Panduan cek harga AC Midea di Purwokerto, mulai dari pilihan AC rumah, low watt, inverter, kapasitas PK, stok, sampai kebutuhan pemasangan.",
+    category: "Midea Purwokerto",
+    readTime: "5 menit baca",
+    updatedAt: "2026-05-15",
+    keywords: ["harga AC Midea Purwokerto", "jual AC Midea", "dealer Midea Purwokerto", "AC Midea Banyumas", "Midea inverter Purwokerto"],
+    intro: "AC Midea banyak dipilih untuk kebutuhan rumah, kos, kontrakan, toko kecil, dan ruang kerja karena pilihannya praktis untuk penggunaan harian. Sebelum cek harga, calon pembeli sebaiknya menyesuaikan kebutuhan dengan ukuran ruangan, daya listrik, kapasitas PK, pilihan standard, low watt, atau inverter, serta kondisi pemasangan.",
+    sections: [
+      {
+        heading: "Kenapa harga AC Midea bisa berbeda?",
+        body: [
+          "Harga AC Midea bisa berbeda karena kapasitas PK, tipe unit, fitur, stok yang tersedia, paket pemasangan, panjang pipa, bracket, kabel, dan lokasi pengiriman. Membandingkan harga akan lebih adil jika spesifikasi dan kelengkapan paketnya sama.",
+          "Sebelum memutuskan membeli, tanyakan apakah unit baru, original, bergaransi resmi, dan apakah harga sudah termasuk kebutuhan instalasi standar. Tujuannya agar total biaya lebih jelas sejak awal."
+        ]
+      },
+      {
+        heading: "Pilih Midea standard, low watt, atau inverter?",
+        body: [
+          "Midea standard cocok untuk kebutuhan pendinginan harian dengan pilihan yang praktis. Midea low watt bisa dipertimbangkan untuk rumah dengan daya listrik terbatas, sedangkan Midea inverter lebih cocok untuk pemakaian rutin yang membutuhkan suhu lebih stabil.",
+          "Pilihan terbaik tetap bergantung pada ukuran ruangan, durasi pemakaian, daya listrik, dan budget. Untuk kamar tidur, ruang keluarga kecil, kos, atau toko, kebutuhan kapasitas dan tipe AC bisa berbeda."
+        ]
+      },
+      {
+        heading: "Data yang perlu disiapkan sebelum cek stok",
+        body: [
+          "Sebelum konsultasi harga AC Midea, siapkan ukuran ruangan, tinggi plafon, daya listrik, foto titik indoor, foto titik outdoor, dan rencana jam pemakaian. Data ini membantu rekomendasi unit lebih tepat dan mengurangi risiko salah kapasitas.",
+          "Jika masih ragu antara ½ PK, ¾ PK, 1 PK, atau kapasitas lain, konsultasi dulu biasanya lebih aman daripada langsung memilih berdasarkan harga termurah. Kapasitas yang sesuai akan membantu AC bekerja lebih nyaman."
+        ]
+      },
+      {
+        heading: "Cara cek harga Midea di RADJA AC",
+        body: [
+          "Hubungi RADJA AC melalui WhatsApp untuk cek stok Midea terbaru, pilihan tipe yang tersedia, rekomendasi kapasitas PK, dan estimasi kebutuhan pemasangan di area Purwokerto, Banyumas, dan sekitarnya.",
+          "Tim RADJA AC dapat membantu membandingkan kebutuhan ruangan dengan pilihan Midea yang tersedia, termasuk opsi standard, low watt, atau inverter sesuai kebutuhan dan kondisi lokasi."
+        ]
+      }
+    ],
+    ctaLabel: "Cek Harga Midea via WhatsApp",
+    ctaMessage: "Halo RADJA AC, saya mau cek harga AC Midea di Purwokerto. Mohon bantu rekomendasi tipe, PK, stok, dan estimasi biaya pasang."
+  },
+  {
     slug: "daikin-inverter-purwokerto",
     title: "AC Daikin Inverter Purwokerto: Cocok untuk Siapa?",
     shortTitle: "Daikin Inverter Purwokerto",
