@@ -4,7 +4,7 @@ import WhatsappIcon from "./ui/WhatsappIcon"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const NAV_WA_MESSAGE =
-  "Halo RADJA AC, saya mau tanya harga AC dan konsultasi produk."
+  "Halo RADJA AC, saya mau tanya harga AC dan rekomendasi yang cocok."
 
 const NAV_ITEMS = [
   {
