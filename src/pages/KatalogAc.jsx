@@ -52,6 +52,15 @@ const heroCards = [
   ["Low Watt", "Daya listrik terbatas"],
 ]
 
+const brandLinks = [
+  { label: "Daikin", to: "/brand/daikin" },
+  { label: "Gree", to: "/brand/gree" },
+  { label: "Midea", to: "/brand/midea" },
+  { label: "Hisense", to: "/brand/hisense" },
+  { label: "Sansui", to: "/brand/sansui" },
+  { label: "Brand Lainnya", to: "/brand/lainnya" },
+]
+
 const pkGuide = [
   ["½ PK", "± 9–12 m²", "Kamar kecil / ruang kerja"],
   ["¾ PK", "± 12–15 m²", "Kamar sedang"],
@@ -223,10 +232,14 @@ export default function KatalogAc() {
               RADJA AC menyediakan brand unggulan seperti Daikin, Gree, Midea, Hisense, Sansui, serta brand populer lainnya sesuai ketersediaan stok.
             </p>
             <div className="flex flex-wrap justify-center gap-2.5">
-              {["Daikin", "Gree", "Midea", "Hisense", "Sansui", "Brand Lainnya"].map((brand) => (
-                <span key={brand} className="rounded-full border border-cyan-300/15 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-200">
-                  {brand}
-                </span>
+              {brandLinks.map((brand) => (
+                <Link
+                  key={brand.to}
+                  to={brand.to}
+                  className="rounded-full border border-cyan-300/15 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-200 transition hover:bg-cyan-300/15"
+                >
+                  {brand.label}
+                </Link>
               ))}
             </div>
           </div>
