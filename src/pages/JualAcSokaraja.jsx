@@ -23,7 +23,7 @@ import { SITE_DATA } from "../constants/siteData"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const WA_MESSAGE =
-  "Halo RADJA AC, saya dari area Sokaraja. Mohon bantu cek stok, harga, rekomendasi PK, dan estimasi pemasangan AC."
+  "Halo RADJA AC, saya dari area Sokaraja. Mau tanya AC yang bisa COD/bayar di tempat. Mohon bantu cek stok, harga, rekomendasi PK, dan estimasi pemasangan AC."
 
 const sokarajaAreas = [
   "Sokaraja",
@@ -38,6 +38,13 @@ const sokarajaAreas = [
   "Banyumas",
 ]
 
+const trustItems = [
+  ["Bisa COD / bayar di tempat", "Untuk area tertentu, pembayaran bisa dilakukan saat unit sampai atau saat pemasangan sesuai konfirmasi awal.", BadgeCheck],
+  ["Harga dicek dulu", "Stok, tipe AC, kebutuhan pipa/kabel, dan estimasi biaya dibahas lewat WhatsApp sebelum jadwal dikunci.", MessageCircle],
+  ["Pemasangan sesuai lokasi", "Tim menyesuaikan rute, jadwal, akses lokasi, dan kondisi titik indoor-outdoor agar estimasi lebih jelas.", Truck],
+  ["Konsultasi sebelum beli", "Bantu pilih PK, low watt, inverter, dan brand supaya AC tidak kekecilan, terlalu boros, atau tidak sesuai ruangan.", CheckCircle2],
+]
+
 const buyerNeeds = [
   ["Rumah & kamar tidur", "Bantu pilih AC 1/2 PK, 3/4 PK, 1 PK, low watt, atau inverter sesuai ukuran ruangan.", Home],
   ["Toko, kantor & cafe", "Cek kebutuhan AC untuk ruang usaha, area pelanggan, ruang kerja, dan tempat usaha sekitar Sokaraja.", Building2],
@@ -46,8 +53,9 @@ const buyerNeeds = [
 
 const processSteps = [
   ["Kirim lokasi & ukuran ruangan", "Sebutkan area Sokaraja, ukuran ruangan, daya listrik, dan foto titik indoor-outdoor jika ada."],
-  ["Cek rekomendasi unit", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, low watt/inverter, dan kisaran harga."],
-  ["Estimasi stok & pemasangan", "Jadwal pengiriman/pemasangan menyesuaikan rute, stok, dan kondisi lokasi di lapangan."],
+  ["Cek stok & rekomendasi unit", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, low watt/inverter, dan kisaran harga."],
+  ["Konfirmasi harga & opsi COD", "Jika lokasi dan jadwal sesuai, opsi COD/bayar di tempat bisa dikonfirmasi sebelum unit dikirim atau dipasang."],
+  ["Pengiriman & pemasangan", "Jadwal pengiriman/pemasangan menyesuaikan rute, stok, dan kondisi lokasi di lapangan."],
 ]
 
 const brandLinks = [
@@ -72,16 +80,20 @@ const faqItems = [
     "Ya. RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk area Sokaraja dan sekitarnya. Untuk pengiriman dan pemasangan, jadwal serta biaya menyesuaikan lokasi dan kondisi pekerjaan.",
   ],
   [
-    "Apakah bisa cek harga AC untuk rumah di Sokaraja?",
-    "Bisa. Harga unit mengikuti stok dan tipe AC. Untuk estimasi akhir, kebutuhan seperti kapasitas PK, pipa/kabel, akses lokasi, dan pekerjaan tambahan akan dicek dulu.",
+    "Apakah bisa beli AC area Sokaraja dengan COD?",
+    "Bisa untuk area dan kondisi tertentu setelah stok, jadwal, lokasi, dan kebutuhan pemasangan dikonfirmasi. Pembayaran dapat diarahkan saat unit sampai atau saat pemasangan sesuai kesepakatan awal.",
+  ],
+  [
+    "Apakah harga AC sudah termasuk pemasangan?",
+    "Tergantung tipe AC, paket, dan kondisi lokasi. Kebutuhan seperti kapasitas PK, pipa/kabel, akses lokasi, dan pekerjaan tambahan akan dicek dulu agar estimasinya jelas sebelum pemasangan.",
   ],
   [
     "Bisa bantu pilih AC untuk listrik 900 watt atau 1300 watt?",
     "Bisa. Kirim daya listrik, ukuran ruangan, kebiasaan pemakaian, dan budget agar RADJA AC bisa bantu arahkan pilihan low watt atau inverter yang lebih sesuai.",
   ],
   [
-    "Apakah bisa beli AC sekaligus pemasangan?",
-    "Bisa. Pembelian AC dapat dilanjutkan dengan pemasangan sesuai jadwal, stok, dan hasil cek kondisi lokasi.",
+    "Apakah bisa cek stok dulu sebelum tim datang?",
+    "Bisa. Sebaiknya cek stok, tipe, harga, dan jadwal lewat WhatsApp dulu supaya pembelian dan pemasangan lebih rapi.",
   ],
 ]
 
@@ -125,7 +137,7 @@ export default function JualAcSokaraja() {
     "@type": ["Store", "LocalBusiness"],
     name: SITE_DATA.businessName,
     description:
-      "Toko AC Purwokerto yang melayani konsultasi pembelian AC untuk area Sokaraja dan sekitarnya, termasuk cek stok, rekomendasi PK, dan estimasi pemasangan.",
+      "Toko AC Purwokerto yang melayani konsultasi pembelian AC untuk area Sokaraja dan sekitarnya, termasuk cek stok, rekomendasi PK, opsi COD, dan estimasi pemasangan.",
     url: `${SITE_DATA.baseUrl}/jual-ac-sokaraja`,
     logo: `${SITE_DATA.baseUrl}${SITE_DATA.logoUrl}`,
     image: `${SITE_DATA.baseUrl}/assets/showroom/Showroom-utama.webp`,
@@ -143,8 +155,8 @@ export default function JualAcSokaraja() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="Jual AC Sokaraja | Konsultasi, Stok & Pemasangan AC — RADJA AC"
-        description="RADJA AC melayani jual AC area Sokaraja dan sekitarnya. Konsultasi pilihan Daikin, Gree, Midea, Hisense, low watt, inverter, cek stok, harga, PK, dan estimasi pemasangan."
+        title="Jual AC Sokaraja Bisa COD | Stok & Pemasangan — RADJA AC"
+        description="RADJA AC melayani jual AC area Sokaraja dan sekitarnya. Bisa konsultasi stok, harga, rekomendasi PK, estimasi pemasangan, dan opsi COD/bayar di tempat sesuai konfirmasi."
         canonicalPath="/jual-ac-sokaraja"
       />
       <Helmet>
@@ -163,19 +175,19 @@ export default function JualAcSokaraja() {
               </div>
               <h1 className="mb-5 max-w-3xl text-3xl font-black leading-[1.05] tracking-[-0.035em] sm:text-4xl md:text-5xl xl:text-6xl">
                 Jual AC Sokaraja
-                <span className="block text-cyan-300">konsultasi PK, stok, dan pemasangan</span>
+                <span className="block text-cyan-300">bisa COD, cek stok, dan pemasangan</span>
               </h1>
               <p className="mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-                RADJA AC Purwokerto melayani konsultasi pembelian AC untuk area Sokaraja dan sekitarnya. Cocok untuk rumah, kamar, kos, toko, kantor, cafe, dan usaha yang butuh pilihan AC resmi, bantuan pilih PK, serta estimasi pemasangan sesuai lokasi.
+                RADJA AC Purwokerto melayani pembelian AC untuk area Sokaraja dan sekitarnya. Konsultasi stok, harga, rekomendasi PK, estimasi pemasangan, dan opsi COD/bayar di tempat sesuai konfirmasi lokasi, jadwal, serta kondisi pekerjaan.
               </p>
               <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <WhatsAppButton />
+                <WhatsAppButton>Tanya AC COD Sokaraja</WhatsAppButton>
                 <Link to="/katalog" className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]">
                   Lihat Katalog AC
                 </Link>
               </div>
               <div className="flex flex-wrap justify-center gap-2 text-sm text-white/62">
-                {["Cek stok", "Tanya harga", "Rekomendasi PK", "Low watt & inverter", "Estimasi pemasangan"].map((item) => (
+                {["Bisa COD", "Bayar di tempat", "Cek stok dulu", "Rekomendasi PK", "Estimasi pasang"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">{item}</span>
                 ))}
               </div>
@@ -191,6 +203,23 @@ export default function JualAcSokaraja() {
                 />
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
+          <SectionTitle
+            eyebrow="AMAN UNTUK LUAR PURWOKERTO"
+            title="Beli AC area Sokaraja bisa lebih tenang"
+            description="Untuk pembeli luar Purwokerto, RADJA AC bantu jelaskan stok, harga, jadwal, dan opsi pembayaran dari awal supaya proses pembelian AC lebih jelas."
+          />
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {trustItems.map(([title, description, Icon]) => (
+              <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 text-center">
+                <Icon className="mx-auto mb-5 h-8 w-8 text-cyan-300" />
+                <h2 className="mb-3 text-lg font-black text-white">{title}</h2>
+                <p className="text-sm leading-7 text-white/60">{description}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -218,11 +247,11 @@ export default function JualAcSokaraja() {
                 <Truck className="h-4 w-4" />
                 ALUR BELI AC
               </div>
-              <h2 className="mb-5 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Konsultasi dulu sebelum menentukan unit</h2>
+              <h2 className="mb-5 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">COD tetap diawali cek kebutuhan</h2>
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
-                Karena kebutuhan AC tiap rumah dan usaha bisa berbeda, RADJA AC mengecek kebutuhan unit dan kondisi lokasi lebih dulu. Tujuannya supaya rekomendasi AC, stok, harga, dan estimasi pemasangan lebih jelas sejak awal.
+                Supaya harga dan pemasangan tidak mengambang, RADJA AC mengecek kebutuhan unit, kondisi lokasi, dan opsi COD lebih dulu. Tujuannya agar stok, biaya, dan jadwal lebih jelas sebelum unit dikirim.
               </p>
-              <WhatsAppButton>Cek Kebutuhan AC</WhatsAppButton>
+              <WhatsAppButton>Cek Opsi COD</WhatsAppButton>
             </div>
             <div className="grid gap-4">
               {processSteps.map(([title, description], index) => (
@@ -248,7 +277,7 @@ export default function JualAcSokaraja() {
                 </div>
                 <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl">Area yang bisa konsultasi pembelian AC</h2>
                 <p className="text-sm leading-7 text-white/64 sm:text-base">
-                  Area layanan dan pemasangan menyesuaikan jadwal, stok, jarak, dan kondisi lokasi. Untuk area yang belum tertulis, tetap bisa konsultasi lewat WhatsApp.
+                  Area layanan, COD, dan pemasangan menyesuaikan jadwal, stok, jarak, dan kondisi lokasi. Untuk area yang belum tertulis, tetap bisa konsultasi lewat WhatsApp.
                 </p>
               </div>
               <div className="flex flex-wrap gap-2.5">
@@ -291,7 +320,7 @@ export default function JualAcSokaraja() {
               <ShoppingBag className="mb-5 h-8 w-8 text-cyan-300" />
               <h2 className="mb-4 text-3xl font-black tracking-[-0.03em]">Cari harga AC area Sokaraja?</h2>
               <p className="mb-6 text-sm leading-7 text-white/62 sm:text-base">
-                Untuk cek harga, kirim kebutuhan ruangan dan area pemasangan. RADJA AC akan bantu arahkan pilihan AC 1/2 PK, low watt, inverter, atau brand yang sesuai budget.
+                Untuk cek harga dan opsi COD, kirim kebutuhan ruangan dan area pemasangan. RADJA AC akan bantu arahkan pilihan AC 1/2 PK, low watt, inverter, atau brand yang sesuai budget.
               </p>
               <Link to="/jual-ac-banyumas" className="inline-flex items-center gap-2 text-sm font-bold text-cyan-300">
                 Lihat juga halaman jual AC Banyumas <ArrowRight className="h-4 w-4" />
@@ -306,6 +335,7 @@ export default function JualAcSokaraja() {
                   "Ukuran ruangan dan tinggi plafon",
                   "Daya listrik rumah atau toko",
                   "Budget dan brand yang diminati",
+                  "Tanya opsi COD/bayar di tempat",
                   "Foto titik indoor dan outdoor jika tersedia",
                 ].map((item) => (
                   <li key={item} className="flex gap-3">
@@ -332,11 +362,11 @@ export default function JualAcSokaraja() {
 
         <section className="mx-auto max-w-7xl px-6 pb-16 pt-10 lg:px-8 lg:pb-24 lg:pt-16">
           <div className="rounded-[34px] border border-[#25D366]/20 bg-[#25D366]/10 p-6 text-center sm:p-10 lg:p-14">
-            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mau beli AC area Sokaraja?</h2>
+            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mau beli AC area Sokaraja dengan COD?</h2>
             <p className="mx-auto mb-7 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-              Kirim area, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, pilihan brand, kapasitas PK, dan estimasi pemasangan.
+              Kirim area, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, pilihan brand, kapasitas PK, estimasi pemasangan, dan opsi COD sesuai konfirmasi.
             </p>
-            <WhatsAppButton>Konsultasi Sekarang</WhatsAppButton>
+            <WhatsAppButton>Tanya COD Sekarang</WhatsAppButton>
           </div>
         </section>
       </main>
