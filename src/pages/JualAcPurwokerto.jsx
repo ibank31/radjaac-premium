@@ -53,12 +53,14 @@ const pkGuide = [
 ]
 
 const articleLinks = [
+  ["AC untuk Kost Purwokerto", "/artikel/ac-untuk-kost-purwokerto"],
+  ["AC Low Watt 900–1300 Watt", "/artikel/ac-low-watt-listrik-900-1300-watt-purwokerto"],
+  ["Jual AC Banyumas", "/artikel/jual-ac-banyumas-konsultasi-pk-stok-pasang"],
+  ["Harga AC Gree Purwokerto", "/artikel/harga-ac-gree-purwokerto"],
+  ["Harga AC Midea Purwokerto", "/artikel/harga-ac-midea-purwokerto"],
   ["Harga AC Daikin Purwokerto", "/artikel/harga-ac-daikin-purwokerto"],
-  ["Daikin Inverter Purwokerto", "/artikel/daikin-inverter-purwokerto"],
-  ["Toko AC Purwokerto + Konsultasi PK", "/artikel/toko-ac-purwokerto-yang-bisa-konsultasi-pk"],
-  ["AC 1 PK untuk ruangan berapa?", "/artikel/ac-1-pk-untuk-ruangan-berapa"],
   ["AC Inverter vs Low Watt", "/artikel/ac-inverter-vs-low-watt"],
-  ["AC untuk kamar 3x4", "/artikel/cara-memilih-ac-untuk-kamar-3x4"],
+  ["AC 1 PK untuk ruangan berapa?", "/artikel/ac-1-pk-untuk-ruangan-berapa"],
 ]
 
 const faqItems = [
