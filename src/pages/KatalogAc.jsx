@@ -5,9 +5,10 @@ import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import WhatsappIcon from "../components/ui/WhatsappIcon"
-import { SITE_DATA } from "../constants/siteData"
+import { buildWhatsAppUrl } from "../utils/whatsapp"
 
-const WA_LINK = SITE_DATA.whatsappUrl
+const WA_MESSAGE =
+  "Halo RADJA AC, saya mau cari AC yang cocok. Mohon bantu cek pilihan dan kisaran harganya."
 
 const catalogItems = [
   {
@@ -72,7 +73,7 @@ const pkGuide = [
 function WhatsAppButton({ children = "Konsultasi Pilihan AC", className = "" }) {
   return (
     <a
-      href={WA_LINK}
+      href={buildWhatsAppUrl(WA_MESSAGE)}
       target="_blank"
       rel="noreferrer"
       className={`inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-6 py-4 font-bold text-slate-950 shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A] ${className}`}
