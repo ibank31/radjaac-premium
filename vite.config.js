@@ -6,6 +6,7 @@ import { BLOG_POSTS } from './src/data/allBlogPosts.js'
 
 const staticRoutes = [
   '/jual-ac-purwokerto',
+  '/jual-ac-banyumas',
   '/katalog',
   '/kalkulator-pk-ac',
   '/brand/daikin',
@@ -43,6 +44,7 @@ export default defineConfig({
       priority: {
         '/': 1.0,
         '/jual-ac-purwokerto': 0.95,
+        '/jual-ac-banyumas': 0.9,
         '/katalog': 0.9,
         '/kalkulator-pk-ac': 0.9,
         '/brand/daikin': 0.95,
