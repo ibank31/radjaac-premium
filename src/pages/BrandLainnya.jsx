@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { BadgeCheck, MessageCircle, SearchCheck, ShieldCheck, Sparkles } from "lucide-react"
+import { ArrowRight, BadgeCheck, MessageCircle, SearchCheck, ShieldCheck, Sparkles } from "lucide-react"
 
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
@@ -10,11 +10,53 @@ import { SITE_DATA } from "../constants/siteData"
 
 const WA_LINK = SITE_DATA.whatsappUrl
 
-const otherBrandRows = [
-  ["Panasonic", "Mitsubishi", "Changhong"],
-  ["Samsung", "Polytron", "Toshiba"],
-  ["Sharp", "Ariston", "Aqua"],
-  ["TCL", "LG"],
+const otherBrands = [
+  {
+    name: "Panasonic",
+    description: "Cocok untuk pelanggan yang mencari AC rumah modern dengan pilihan inverter dan kenyamanan harian.",
+    href: "/brand/panasonic",
+  },
+  {
+    name: "Mitsubishi",
+    description: "Pilihan premium untuk rumah, kantor, dan pemakaian jangka panjang yang mengutamakan performa stabil.",
+  },
+  {
+    name: "Changhong",
+    description: "Pilihan ekonomis untuk kebutuhan pendinginan harian di kamar, kos, dan ruang kecil.",
+  },
+  {
+    name: "Samsung",
+    description: "Cocok untuk rumah modern yang mengutamakan desain, kenyamanan, dan fitur pendinginan pintar.",
+  },
+  {
+    name: "Polytron",
+    description: "Brand elektronik lokal yang praktis untuk kebutuhan AC rumah tangga dengan pilihan harga rasional.",
+  },
+  {
+    name: "Toshiba",
+    description: "Cocok untuk pelanggan yang mencari AC rumah dengan performa stabil dan penggunaan harian yang nyaman.",
+  },
+  {
+    name: "Sharp",
+    description: "Pilihan populer untuk keluarga yang membutuhkan AC praktis, value for money, dan mudah dikonsultasikan.",
+    href: "/brand/sharp",
+  },
+  {
+    name: "Ariston",
+    description: "Cocok untuk pelanggan yang mencari solusi pendinginan praktis dari brand elektronik rumah tangga.",
+  },
+  {
+    name: "Aqua",
+    description: "Pilihan ekonomis-praktis untuk kamar, kos, dan kebutuhan rumah dengan budget terkontrol.",
+  },
+  {
+    name: "TCL",
+    description: "Cocok untuk rumah modern yang mencari AC praktis dengan pilihan fitur dan harga kompetitif.",
+  },
+  {
+    name: "LG",
+    description: "Cocok untuk pelanggan yang mencari AC modern dengan fokus efisiensi, kenyamanan, dan pemakaian rutin.",
+  },
 ]
 
 const featuredBrands = [
@@ -148,19 +190,43 @@ export default function BrandLainnya() {
               </p>
             </div>
 
-            <div className="relative space-y-3">
-              {otherBrandRows.map((row) => (
-                <div key={row.join("-")} className="flex flex-wrap justify-center gap-2.5">
-                  {row.map((brand) => (
-                    <span
-                      key={brand}
-                      className="rounded-full border border-white/10 bg-slate-950/45 px-4 py-2 text-sm font-medium text-white/75"
-                    >
-                      {brand}
+            <div className="relative grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {otherBrands.map((brand) => {
+                const CardContent = (
+                  <>
+                    <h3 className="mb-2 text-lg font-black text-white">{brand.name}</h3>
+                    <p className="mb-4 text-sm leading-6 text-white/58">{brand.description}</p>
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 group-hover:text-cyan-200">
+                      {brand.href ? "Lihat halaman" : "Tanya stok"}
+                      <ArrowRight className="h-4 w-4" />
                     </span>
-                  ))}
-                </div>
-              ))}
+                  </>
+                )
+
+                if (brand.href) {
+                  return (
+                    <Link
+                      key={brand.name}
+                      to={brand.href}
+                      className="group rounded-[24px] border border-white/10 bg-slate-950/45 p-5 text-left transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]"
+                    >
+                      {CardContent}
+                    </Link>
+                  )
+                }
+
+                return (
+                  <a
+                    key={brand.name}
+                    href={WA_LINK}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group rounded-[24px] border border-white/10 bg-slate-950/45 p-5 text-left transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]"
+                  >
+                    {CardContent}
+                  </a>
+                )
+              })}
             </div>
           </div>
         </section>
