@@ -1,30 +1,30 @@
 import { SITE_DATA } from "../constants/siteData"
 
 const DEFAULT_MESSAGE =
-  "Halo RADJA AC, saya mau tanya harga dan rekomendasi AC yang cocok."
+  "Halo RADJA AC, saya mau tanya harga AC dan rekomendasi yang cocok."
 
 const CATEGORY_MESSAGES = {
   "/kalkulator-pk-ac":
-    "Halo RADJA AC, saya mau cek kebutuhan PK AC dan estimasi listrik. Mohon bantu rekomendasi produk yang cocok.",
+    "Halo RADJA AC, saya mau cek kebutuhan PK AC. Mohon bantu rekomendasi AC yang cocok.",
   "/katalog/ac-split-rumah":
-    "Halo RADJA AC, saya mau konsultasi beli AC split rumah. Mohon bantu rekomendasi PK dan brand yang cocok untuk ruangan saya.",
+    "Halo RADJA AC, saya mau cari AC split rumah. Mohon bantu cek pilihan dan kisaran harganya.",
   "/katalog/ac-inverter":
-    "Halo RADJA AC, saya mau konsultasi AC inverter. Mohon bantu rekomendasi unit yang cocok untuk pemakaian harian.",
+    "Halo RADJA AC, saya mau cari AC inverter. Mohon bantu cek pilihan dan kisaran harganya.",
   "/katalog/ac-low-watt":
-    "Halo RADJA AC, saya mau konsultasi AC low watt. Mohon bantu cek pilihan yang aman untuk daya listrik rumah/kos saya.",
+    "Halo RADJA AC, saya mau cari AC low watt. Mohon bantu cek pilihan dan kisaran harganya.",
   "/katalog/ac-kantor-komersial":
-    "Halo RADJA AC, saya mau konsultasi kebutuhan AC kantor/komersial. Mohon bantu rekomendasi unit dan kebutuhan pemasangan.",
+    "Halo RADJA AC, saya mau cari AC untuk kantor/kost/proyek. Mohon bantu cek pilihan dan kisaran harganya.",
 }
 
 const BRAND_MESSAGES = {
-  "/brand/daikin": "Halo RADJA AC, saya mau tanya stok dan rekomendasi AC Daikin.",
-  "/brand/gree": "Halo RADJA AC, saya mau tanya stok dan rekomendasi AC Gree.",
-  "/brand/midea": "Halo RADJA AC, saya mau tanya stok dan rekomendasi AC Midea.",
-  "/brand/hisense": "Halo RADJA AC, saya mau tanya stok dan rekomendasi AC Hisense.",
-  "/brand/sansui": "Halo RADJA AC, saya mau tanya stok dan rekomendasi AC Sansui.",
-  "/brand/sharp": "Halo RADJA AC, saya mau tanya stok dan rekomendasi AC Sharp.",
-  "/brand/panasonic": "Halo RADJA AC, saya mau tanya stok dan rekomendasi AC Panasonic.",
-  "/brand/lainnya": "Halo RADJA AC, saya mau tanya stok AC brand lainnya. Mohon bantu rekomendasinya.",
+  "/brand/daikin": "Halo RADJA AC, saya mau tanya stok dan harga AC Daikin.",
+  "/brand/gree": "Halo RADJA AC, saya mau tanya stok dan harga AC Gree.",
+  "/brand/midea": "Halo RADJA AC, saya mau tanya stok dan harga AC Midea.",
+  "/brand/hisense": "Halo RADJA AC, saya mau tanya stok dan harga AC Hisense.",
+  "/brand/sansui": "Halo RADJA AC, saya mau tanya stok dan harga AC Sansui.",
+  "/brand/sharp": "Halo RADJA AC, saya mau tanya stok dan harga AC Sharp.",
+  "/brand/panasonic": "Halo RADJA AC, saya mau tanya stok dan harga AC Panasonic.",
+  "/brand/lainnya": "Halo RADJA AC, saya mau tanya stok dan harga AC brand lainnya.",
 }
 
 export function buildWhatsAppUrl(message = DEFAULT_MESSAGE) {
@@ -40,11 +40,11 @@ export function getWhatsAppMessageForPath(pathname = "/") {
   if (BRAND_MESSAGES[normalizedPath]) return BRAND_MESSAGES[normalizedPath]
 
   if (normalizedPath === "/kontak") {
-    return "Halo RADJA AC, saya mau konsultasi dan tanya ketersediaan AC."
+    return "Halo RADJA AC, saya mau tanya harga AC, cek stok, dan rekomendasi yang cocok."
   }
 
   if (normalizedPath === "/instalasi-profesional" || normalizedPath === "/instalasi-ac-banyumas") {
-    return "Halo RADJA AC, saya mau konsultasi pembelian AC sekaligus kebutuhan instalasi."
+    return "Halo RADJA AC, saya mau beli AC dan konsultasi kebutuhan instalasi."
   }
 
   return DEFAULT_MESSAGE
