@@ -36,6 +36,7 @@ const NotFound = lazy(() => import("./pages/NotFound"))
 import ScrollToTop from "./components/ScrollToTop"
 import ErrorBoundary from "./components/ErrorBoundary"
 import FloatingWhatsapp from "./components/FloatingWhatsapp"
+import AreaPageRefinements from "./components/area/AreaPageRefinements"
 
 function sendWhatsAppClickEvent(link) {
   if (typeof window.gtag !== "function") return
@@ -68,6 +69,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <AreaPageRefinements />
 
       <ErrorBoundary>
         <Suspense fallback={null}>
