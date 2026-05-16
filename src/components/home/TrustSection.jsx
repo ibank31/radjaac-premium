@@ -58,14 +58,6 @@ export default function TrustSection() {
             </figure>
           ))}
         </div>
-
-        <div className="mt-6 flex flex-wrap justify-center gap-2 text-sm text-white/62">
-          {["Dealer Resmi", "Rekor MURI", "AC Original Multi-Brand"].map((item) => (
-            <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-4 py-2">
-              {item}
-            </span>
-          ))}
-        </div>
       </div>
     </section>
   )
