@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { BadgeCheck, CheckCircle2, Home, MapPin, MessageCircle, Truck, Zap } from "lucide-react"
+import { BadgeCheck, CheckCircle2, Home, MapPin, MessageCircle, Ruler, Truck, Zap } from "lucide-react"
 
 import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
