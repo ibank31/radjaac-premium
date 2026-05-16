@@ -93,17 +93,18 @@ function refinePriceCard(config) {
   const heading = headings.find((node) => node.textContent?.trim() === `Cari harga AC area ${config.area}?`)
   const card = findParentByClass(heading, "rounded-[32px]")
 
-  if (!card || card.dataset.areaPriceRefined === "true") return
+  if (!card || card.dataset.areaPriceRefined === "true") return false
 
   card.innerHTML = makePriceCard(config)
   card.dataset.areaPriceRefined = "true"
+  return true
 }
 
 function refineBrandGrid() {
   const daikinLink = document.querySelector('main a[href="/brand/daikin"]')
   const brandGrid = daikinLink?.parentElement
 
-  if (!brandGrid || brandGrid.dataset.brandGridRefined === "true") return
+  if (!brandGrid || brandGrid.dataset.brandGridRefined === "true") return false
 
   brandGrid.classList.add("grid-cols-2")
   brandGrid.dataset.brandGridRefined = "true"
@@ -116,6 +117,8 @@ function refineBrandGrid() {
     title?.classList.remove("text-2xl", "mb-3")
     title?.classList.add("text-lg", "mb-2")
   })
+
+  return true
 }
 
 function refineAreaChips() {
@@ -126,7 +129,18 @@ function refineAreaChips() {
     return node.classList.contains("flex") && node.classList.contains("flex-wrap") && node.classList.contains("gap-2.5")
   })
 
-  chips?.classList.add("justify-center")
+  if (!chips || chips.classList.contains("justify-center")) return false
+
+  chips.classList.add("justify-center")
+  return true
+}
+
+function runRefinements(config) {
+  const priceDone = refinePriceCard(config)
+  const brandDone = refineBrandGrid()
+  const chipsDone = refineAreaChips()
+
+  return priceDone || brandDone || chipsDone
 }
 
 export default function AreaPageRefinements() {
@@ -136,13 +150,20 @@ export default function AreaPageRefinements() {
     const config = AREA_CONFIG[pathname]
     if (!config) return
 
-    const timer = window.setTimeout(() => {
-      refinePriceCard(config)
-      refineBrandGrid()
-      refineAreaChips()
-    }, 0)
+    let attempts = 0
+    const interval = window.setInterval(() => {
+      attempts += 1
+      runRefinements(config)
 
-    return () => window.clearTimeout(timer)
+      const priceReady = document.querySelector("[data-area-price-refined='true']")
+      const brandReady = document.querySelector("[data-brand-grid-refined='true']")
+
+      if ((priceReady && brandReady) || attempts >= 20) {
+        window.clearInterval(interval)
+      }
+    }, 150)
+
+    return () => window.clearInterval(interval)
   }, [pathname])
 
   return null
