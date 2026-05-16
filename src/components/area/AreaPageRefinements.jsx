@@ -60,6 +60,17 @@ const AREA_CONFIG = {
   },
 }
 
+function findParentByClass(node, className) {
+  let current = node?.parentElement
+
+  while (current) {
+    if (current.classList?.contains(className)) return current
+    current = current.parentElement
+  }
+
+  return null
+}
+
 function makePriceCard(config) {
   const relatedLinks = config.related
     .map(([label, href]) => `<a href="${href}" class="inline-flex items-center gap-1.5 rounded-full border border-cyan-300/15 bg-cyan-300/[0.06] px-3 py-1.5 text-xs font-bold text-cyan-200 transition hover:border-cyan-300/40 hover:bg-cyan-300/[0.1] sm:text-sm">${label}<span aria-hidden="true">→</span></a>`)
@@ -80,7 +91,7 @@ function makePriceCard(config) {
 function refinePriceCard(config) {
   const headings = Array.from(document.querySelectorAll("h2"))
   const heading = headings.find((node) => node.textContent?.trim() === `Cari harga AC area ${config.area}?`)
-  const card = heading?.closest(".rounded-\\[32px\\]")
+  const card = findParentByClass(heading, "rounded-[32px]")
 
   if (!card || card.dataset.areaPriceRefined === "true") return
 
@@ -111,7 +122,9 @@ function refineAreaChips() {
   const headings = Array.from(document.querySelectorAll("h2"))
   const heading = headings.find((node) => node.textContent?.trim() === "Area yang bisa konsultasi pembelian AC")
   const section = heading?.closest("section")
-  const chips = section?.querySelector(".flex.flex-wrap.gap-2\\.5")
+  const chips = Array.from(section?.querySelectorAll("div") ?? []).find((node) => {
+    return node.classList.contains("flex") && node.classList.contains("flex-wrap") && node.classList.contains("gap-2.5")
+  })
 
   chips?.classList.add("justify-center")
 }
