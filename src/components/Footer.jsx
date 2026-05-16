@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { SITE_DATA } from "../constants/siteData";
 
 const contactItems = [
@@ -33,10 +33,74 @@ const seoLinks = [
   { label: "Brand AC Lainnya", to: "/brand/lainnya" },
 ];
 
+const relatedAreaLinks = {
+  "/jual-ac-banyumas": [
+    { label: "Jual AC Sokaraja", to: "/jual-ac-sokaraja" },
+    { label: "Jual AC Ajibarang", to: "/jual-ac-ajibarang" },
+    { label: "Jual AC Wangon", to: "/jual-ac-wangon" },
+    { label: "Jual AC Cilongok", to: "/jual-ac-cilongok" },
+    { label: "Jual AC Jatilawang", to: "/jual-ac-jatilawang" },
+  ],
+  "/jual-ac-sokaraja": [
+    { label: "Jual AC Banyumas", to: "/jual-ac-banyumas" },
+    { label: "Jual AC Purwokerto", to: "/jual-ac-purwokerto" },
+  ],
+  "/jual-ac-ajibarang": [
+    { label: "Jual AC Banyumas", to: "/jual-ac-banyumas" },
+    { label: "Jual AC Cilongok", to: "/jual-ac-cilongok" },
+    { label: "Jual AC Wangon", to: "/jual-ac-wangon" },
+  ],
+  "/jual-ac-wangon": [
+    { label: "Jual AC Banyumas", to: "/jual-ac-banyumas" },
+    { label: "Jual AC Ajibarang", to: "/jual-ac-ajibarang" },
+    { label: "Jual AC Jatilawang", to: "/jual-ac-jatilawang" },
+  ],
+  "/jual-ac-cilongok": [
+    { label: "Jual AC Banyumas", to: "/jual-ac-banyumas" },
+    { label: "Jual AC Ajibarang", to: "/jual-ac-ajibarang" },
+    { label: "Jual AC Purwokerto", to: "/jual-ac-purwokerto" },
+  ],
+  "/jual-ac-jatilawang": [
+    { label: "Jual AC Banyumas", to: "/jual-ac-banyumas" },
+    { label: "Jual AC Wangon", to: "/jual-ac-wangon" },
+  ],
+};
+
+function AreaInternalLinks() {
+  const { pathname } = useLocation();
+  const links = relatedAreaLinks[pathname];
+
+  if (!links?.length) return null;
+
+  return (
+    <div className="mb-8 rounded-[28px] border border-cyan-300/10 bg-cyan-300/[0.035] p-5 sm:p-6">
+      <h4 className="mb-2 text-center text-sm font-semibold uppercase tracking-[0.18em] text-cyan-200/75">
+        Area Terkait
+      </h4>
+      <p className="mx-auto mb-4 max-w-2xl text-center text-sm leading-6 text-white/45">
+        RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk beberapa area sekitar Banyumas sesuai stok, rute, dan jadwal pemasangan.
+      </p>
+      <nav className="flex flex-wrap justify-center gap-2 text-center text-xs sm:text-sm">
+        {links.map((item) => (
+          <Link
+            key={item.to}
+            to={item.to}
+            className="rounded-full border border-cyan-300/15 bg-white/[0.035] px-3 py-1.5 text-white/60 transition hover:border-cyan-300/35 hover:text-cyan-200"
+          >
+            {item.label}
+          </Link>
+        ))}
+      </nav>
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="border-t border-cyan-300/10 bg-[#020511] px-6 py-8 text-white lg:py-10">
       <div className="mx-auto max-w-7xl">
+        <AreaInternalLinks />
+
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.85fr_1.1fr] lg:gap-10">
           <div>
             <div className="mb-4 flex items-center gap-4">
