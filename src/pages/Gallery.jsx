@@ -51,6 +51,12 @@ const galleryVideos = [
 
 const galleryItems = [
   {
+    title: "Pengiriman RADJA AC",
+    category: "Pengiriman",
+    image: "/assets/gallery/large/pengiriman-radjaac.webp",
+    thumbnail: "/assets/gallery/large/pengiriman-radjaac.webp",
+  },
+  {
     title: "Showroom Gree RADJA AC Purwokerto",
     category: "Showroom",
     image: "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-01.webp",
@@ -193,10 +199,6 @@ export default function Gallery() {
             <h1 className="mb-4 text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:text-5xl">
               Bukti nyata showroom, stok, dan aktivitas RADJA AC
             </h1>
-
-            <p className="mx-auto max-w-2xl text-sm leading-7 text-white/68 sm:text-base">
-              Foto asli untuk menunjukkan toko aktif, stok tersedia, display produk lengkap, dan aktivitas operasional RADJA AC Purwokerto.
-            </p>
           </div>
         </section>
 
@@ -220,9 +222,6 @@ export default function Gallery() {
             <h2 className="mb-2 text-2xl font-black tracking-[-0.03em] sm:text-3xl">
               Cuplikan stok dan pengiriman RADJA AC
             </h2>
-            <p className="mx-auto max-w-xl text-sm leading-7 text-white/60">
-              Video singkat sebagai bukti aktivitas toko, stok barang, dan proses pengiriman RADJA AC.
-            </p>
           </div>
 
           <div className="grid grid-cols-3 gap-2 sm:gap-3">
@@ -265,9 +264,6 @@ export default function Gallery() {
             <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
               Showroom, gudang, stok, dan display produk
             </h2>
-            <p className="mx-auto max-w-2xl text-sm leading-7 text-white/60">
-              Disusun padat agar pengunjung cepat melihat bukti toko, stok, dan produk RADJA AC.
-            </p>
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
