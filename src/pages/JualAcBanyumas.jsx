@@ -10,7 +10,6 @@ import {
   MessageCircle,
   Ruler,
   ShoppingBag,
-  Store,
   Truck,
   Zap,
 } from "lucide-react"
@@ -40,24 +39,24 @@ const banyumasAreas = [
   "Kalibagor",
 ]
 
-const trustItems = [
-  ["Bisa COD / bayar di tempat", "Untuk area tertentu, pembayaran bisa dilakukan saat unit sampai atau saat pemasangan sesuai konfirmasi awal.", BadgeCheck],
-  ["Harga dicek dulu", "Stok, tipe AC, kebutuhan pipa/kabel, dan estimasi biaya dibahas lewat WhatsApp sebelum jadwal dikunci.", MessageCircle],
-  ["Pemasangan sesuai lokasi", "Tim menyesuaikan rute, jadwal, akses lokasi, dan kondisi titik indoor-outdoor agar estimasi lebih jelas.", Truck],
-  ["Konsultasi sebelum beli", "Bantu pilih PK, low watt, inverter, dan brand supaya AC tidak kekecilan, terlalu boros, atau tidak sesuai ruangan.", CheckCircle2],
+const relatedAreaLinks = [
+  ["Sokaraja", "/jual-ac-sokaraja"],
+  ["Ajibarang", "/jual-ac-ajibarang"],
+  ["Wangon", "/jual-ac-wangon"],
+  ["Cilongok", "/jual-ac-cilongok"],
+  ["Jatilawang", "/jual-ac-jatilawang"],
 ]
 
-const buyerNeeds = [
-  ["Rumah & kamar tidur", "Bantu pilih AC 1/2 PK, 3/4 PK, 1 PK, low watt, atau inverter sesuai ukuran ruangan.", Home],
-  ["Toko, kantor & cafe", "Cek kebutuhan pendinginan untuk ruang usaha, ruang kerja, display, dan area pelanggan.", Building2],
-  ["Kos, kontrakan & proyek", "Bisa konsultasi pembelian beberapa unit, stok, jadwal, dan kebutuhan instalasi bertahap.", Store],
+const valueItems = [
+  ["Cek stok & harga dulu", "Tipe AC, stok unit, kebutuhan pipa/kabel, dan estimasi biaya dibahas lewat WhatsApp sebelum jadwal dikunci.", MessageCircle],
+  ["Bantu pilih PK", "Kirim ukuran ruangan dan daya listrik agar pilihan AC tidak kekecilan, terlalu boros, atau kurang sesuai kebutuhan.", BadgeCheck],
+  ["Pemasangan sesuai lokasi", "Untuk area Banyumas, jadwal dan biaya pemasangan menyesuaikan rute, akses lokasi, dan titik indoor-outdoor.", Truck],
 ]
 
 const processSteps = [
-  ["Kirim lokasi & ukuran ruangan", "Sebutkan area Banyumas, ukuran ruangan, daya listrik, dan foto titik indoor-outdoor jika ada."],
-  ["Cek stok & rekomendasi unit", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, low watt/inverter, dan kisaran harga."],
-  ["Konfirmasi harga & opsi COD", "Jika lokasi dan jadwal sesuai, opsi COD/bayar di tempat bisa dikonfirmasi sebelum unit dikirim atau dipasang."],
-  ["Pengiriman & pemasangan", "Jadwal pengiriman/pemasangan luar Purwokerto menyesuaikan rute, stok, dan kondisi lokasi."],
+  ["Kirim lokasi & ukuran ruangan", "Sebutkan area Banyumas, ukuran ruangan, daya listrik, budget, dan foto titik indoor-outdoor jika ada."],
+  ["Cek stok, brand & PK", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, low watt/inverter, dan kisaran harga."],
+  ["Konfirmasi harga & jadwal", "Estimasi pemasangan, tambahan pekerjaan, dan opsi COD/bayar di tempat dikonfirmasi sebelum unit dikirim."],
 ]
 
 const brandLinks = [
@@ -79,7 +78,7 @@ const categoryLinks = [
 const faqItems = [
   [
     "Apakah RADJA AC melayani jual AC area Banyumas?",
-    "Ya. RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk area Banyumas dan sekitarnya. Untuk pengiriman dan pemasangan, jadwal serta biaya menyesuaikan lokasi dan kondisi pekerjaan.",
+    "Ya. RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk area Banyumas dan sekitarnya, termasuk Sokaraja, Ajibarang, Wangon, Cilongok, Jatilawang, dan area terdekat sesuai rute.",
   ],
   [
     "Apakah bisa beli AC area Banyumas dengan COD?",
@@ -90,16 +89,8 @@ const faqItems = [
     "Harga unit mengikuti stok dan tipe AC. Untuk area luar Purwokerto, kebutuhan tambahan seperti jarak, pipa/kabel, akses lokasi, dan pekerjaan khusus akan dicek dulu sebelum estimasi final.",
   ],
   [
-    "Apakah harga AC sudah termasuk pemasangan?",
-    "Tergantung tipe AC, paket, dan kondisi lokasi. Kebutuhan seperti kapasitas PK, pipa/kabel, akses lokasi, dan pekerjaan tambahan akan dicek dulu agar estimasinya jelas sebelum pemasangan.",
-  ],
-  [
-    "Bisa bantu pilih AC untuk listrik 900 watt atau 1300 watt?",
-    "Bisa. Kirim daya listrik, ukuran ruangan, kebiasaan pemakaian, dan budget agar RADJA AC bisa bantu arahkan pilihan low watt atau inverter yang lebih sesuai.",
-  ],
-  [
-    "Apakah bisa cek stok dulu sebelum tim datang?",
-    "Bisa. Sebaiknya cek stok, tipe, harga, dan jadwal lewat WhatsApp dulu supaya pembelian dan pemasangan lebih rapi.",
+    "Data apa yang perlu dikirim sebelum beli AC?",
+    "Kirim lokasi pemasangan, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika tersedia agar rekomendasi dan estimasi lebih jelas.",
   ],
 ]
 
@@ -119,7 +110,7 @@ function WhatsAppButton({ children = "Konsultasi AC Area Banyumas", className = 
 
 function SectionTitle({ eyebrow, title, description }) {
   return (
-    <div className="mx-auto mb-9 max-w-3xl text-center">
+    <div className="mx-auto mb-8 max-w-3xl text-center">
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">{eyebrow}</p>
       <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">{title}</h2>
       {description ? <p className="mx-auto max-w-2xl text-sm leading-7 text-white/62 sm:text-base">{description}</p> : null}
@@ -172,7 +163,7 @@ export default function JualAcBanyumas() {
       <Navbar />
 
       <main>
-        <section className="mx-auto max-w-7xl px-6 pb-10 pt-28 lg:px-8 lg:pb-16 lg:pt-32">
+        <section className="mx-auto max-w-7xl px-6 pb-8 pt-28 lg:px-8 lg:pb-12 lg:pt-32">
           <div className="grid items-center gap-10 lg:grid-cols-[1.04fr_0.96fr] lg:gap-16">
             <div>
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200">
@@ -181,20 +172,28 @@ export default function JualAcBanyumas() {
               </div>
               <h1 className="mb-5 max-w-3xl text-3xl font-black leading-[1.05] tracking-[-0.035em] sm:text-4xl md:text-5xl xl:text-6xl">
                 Jual AC Banyumas
-                <span className="block text-cyan-300">bisa COD, cek stok, dan pemasangan</span>
+                <span className="block text-cyan-300">cek stok, rekomendasi PK, dan pemasangan</span>
               </h1>
               <p className="mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-                RADJA AC Purwokerto melayani pembelian AC untuk area Banyumas dan sekitarnya. Konsultasi stok, harga, rekomendasi PK, estimasi pemasangan, dan opsi COD/bayar di tempat sesuai konfirmasi lokasi, jadwal, serta kondisi pekerjaan.
+                RADJA AC Purwokerto melayani pembelian AC untuk area Banyumas dan sekitarnya. Konsultasi stok, harga, kapasitas PK, estimasi pemasangan, dan opsi COD/bayar di tempat sesuai konfirmasi lokasi.
               </p>
               <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <WhatsAppButton>Tanya AC COD Banyumas</WhatsAppButton>
+                <WhatsAppButton>Tanya AC Banyumas</WhatsAppButton>
                 <Link to="/katalog" className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]">
                   Lihat Katalog AC
                 </Link>
               </div>
-              <div className="flex flex-wrap justify-center gap-2 text-sm text-white/62">
-                {["Bisa COD", "Bayar di tempat", "Cek stok dulu", "Rekomendasi PK", "Estimasi pasang"].map((item) => (
+              <div className="mb-5 flex flex-wrap justify-center gap-2 text-sm text-white/62 lg:justify-start">
+                {["Cek stok dulu", "Rekomendasi PK", "Estimasi pasang", "COD sesuai konfirmasi"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">{item}</span>
+                ))}
+              </div>
+              <div className="text-center text-xs leading-6 text-white/45 sm:text-sm lg:text-left">
+                Area terkait: {relatedAreaLinks.map(([label, href], index) => (
+                  <span key={href}>
+                    <Link to={href} className="font-semibold text-cyan-200/80 hover:text-cyan-200">{label}</Link>
+                    {index < relatedAreaLinks.length - 1 ? <span>, </span> : null}
+                  </span>
                 ))}
               </div>
             </div>
@@ -205,38 +204,21 @@ export default function JualAcBanyumas() {
                   alt="Showroom RADJA AC untuk konsultasi jual AC Banyumas"
                   fetchPriority="high"
                   decoding="async"
-                  className="h-[360px] w-full rounded-[26px] object-cover object-center sm:h-[460px]"
+                  className="h-[340px] w-full rounded-[26px] object-cover object-center sm:h-[430px]"
                 />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
+        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
           <SectionTitle
-            eyebrow="AMAN UNTUK LUAR PURWOKERTO"
-            title="Beli AC area Banyumas bisa lebih tenang"
-            description="Untuk pembeli luar Purwokerto, RADJA AC bantu jelaskan stok, harga, jadwal, dan opsi pembayaran dari awal supaya proses pembelian AC lebih jelas."
-          />
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {trustItems.map(([title, description, Icon]) => (
-              <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 text-center">
-                <Icon className="mx-auto mb-5 h-8 w-8 text-cyan-300" />
-                <h2 className="mb-3 text-lg font-black text-white">{title}</h2>
-                <p className="text-sm leading-7 text-white/60">{description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
-          <SectionTitle
-            eyebrow="KEBUTUHAN PEMBELI"
-            title="Bantu pilih AC berdasarkan ruangan dan daya listrik"
-            description="Untuk area Banyumas, konsultasi awal penting agar pembelian AC tidak hanya mengejar harga, tetapi juga sesuai kapasitas ruangan, listrik, dan rencana pemasangan."
+            eyebrow="KONSULTASI PEMBELIAN"
+            title="Beli AC area Banyumas lebih jelas dari awal"
+            description="Fokusnya bukan menambah banyak pilihan, tapi membantu calon pembeli memilih AC yang sesuai ruangan, listrik, budget, dan kondisi pemasangan."
           />
           <div className="grid gap-5 md:grid-cols-3">
-            {buyerNeeds.map(([title, description, Icon]) => (
+            {valueItems.map(([title, description, Icon]) => (
               <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 text-center">
                 <Icon className="mx-auto mb-5 h-8 w-8 text-cyan-300" />
                 <h2 className="mb-3 text-xl font-black text-white">{title}</h2>
@@ -246,18 +228,18 @@ export default function JualAcBanyumas() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
+        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-200">
                 <Truck className="h-4 w-4" />
                 ALUR BELI AC
               </div>
-              <h2 className="mb-5 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">COD tetap diawali cek kebutuhan</h2>
+              <h2 className="mb-5 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Cek kebutuhan dulu, baru kunci jadwal</h2>
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
-                Karena area Banyumas cukup luas, RADJA AC mengecek kebutuhan unit, kondisi lokasi, dan opsi COD lebih dulu. Tujuannya agar stok, biaya, dan jadwal lebih jelas sebelum unit dikirim.
+                Karena area Banyumas cukup luas, estimasi harga dan pemasangan perlu menyesuaikan lokasi, stok unit, serta kondisi titik indoor-outdoor.
               </p>
-              <WhatsAppButton>Cek Opsi COD</WhatsAppButton>
+              <WhatsAppButton>Cek Harga & Jadwal</WhatsAppButton>
             </div>
             <div className="grid gap-4">
               {processSteps.map(([title, description], index) => (
@@ -273,88 +255,32 @@ export default function JualAcBanyumas() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
-          <div className="rounded-[34px] border border-cyan-300/20 bg-cyan-300/5 p-6 sm:p-8 lg:p-10">
-            <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
-              <div>
-                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-cyan-200">
-                  <MapPin className="h-4 w-4" />
-                  AREA BANYUMAS
-                </div>
-                <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl">Area yang bisa konsultasi pembelian AC</h2>
-                <p className="text-sm leading-7 text-white/64 sm:text-base">
-                  Area layanan, COD, dan pemasangan menyesuaikan jadwal, stok, jarak, dan kondisi lokasi. Untuk area yang belum tertulis, tetap bisa konsultasi lewat WhatsApp.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-2.5">
-                {banyumasAreas.map((area) => (
-                  <span key={area} className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-semibold text-white/75">{area}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
+        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
           <SectionTitle
             eyebrow="PILIHAN AC"
-            title="Mulai dari brand atau kategori kebutuhan"
+            title="Mulai dari brand atau kebutuhan"
             description="Jika belum yakin memilih merek, mulai dari ukuran ruangan, daya listrik, dan jam pemakaian."
           />
-          <div className="mb-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mb-5 grid grid-cols-2 gap-4 lg:grid-cols-3">
             {brandLinks.map(([title, href]) => (
-              <Link key={href} to={href} className="group rounded-[28px] border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-cyan-300/30">
-                <BadgeCheck className="mb-4 h-6 w-6 text-cyan-300" />
-                <h3 className="mb-3 text-2xl font-black text-white">{title}</h3>
-                <span className="inline-flex items-center gap-2 text-sm font-bold text-cyan-300">Lihat pilihan <ArrowRight className="h-4 w-4" /></span>
+              <Link key={href} to={href} className="group rounded-[22px] border border-white/10 bg-white/[0.04] p-4 transition hover:-translate-y-1 hover:border-cyan-300/30">
+                <BadgeCheck className="mb-3 h-5 w-5 text-cyan-300" />
+                <h3 className="mb-2 text-lg font-black text-white">{title}</h3>
+                <span className="inline-flex items-center gap-2 text-xs font-bold text-cyan-300 sm:text-sm">Lihat pilihan <ArrowRight className="h-4 w-4" /></span>
               </Link>
             ))}
           </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {categoryLinks.map(([title, href, Icon]) => (
-              <Link key={href} to={href} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 text-center transition hover:-translate-y-1 hover:border-cyan-300/30">
-                <Icon className="mx-auto mb-5 h-8 w-8 text-cyan-300" />
-                <h3 className="text-lg font-black text-white">{title}</h3>
+              <Link key={href} to={href} className="rounded-[24px] border border-white/10 bg-white/[0.04] p-5 text-center transition hover:-translate-y-1 hover:border-cyan-300/30">
+                <Icon className="mx-auto mb-4 h-7 w-7 text-cyan-300" />
+                <h3 className="text-base font-black text-white sm:text-lg">{title}</h3>
               </Link>
             ))}
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
-          <div className="grid gap-6 lg:grid-cols-2">
-            <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-6 sm:p-8">
-              <ShoppingBag className="mb-5 h-8 w-8 text-cyan-300" />
-              <h2 className="mb-4 text-3xl font-black tracking-[-0.03em]">Cari harga AC area Banyumas?</h2>
-              <p className="mb-6 text-sm leading-7 text-white/62 sm:text-base">
-                Untuk cek harga dan opsi COD, kirim kebutuhan ruangan dan area pemasangan. RADJA AC akan bantu arahkan pilihan AC 1/2 PK, low watt, inverter, atau brand yang sesuai budget.
-              </p>
-              <Link to="/jual-ac-sokaraja" className="inline-flex items-center gap-2 text-sm font-bold text-cyan-300">
-                Lihat juga halaman jual AC Sokaraja <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-            <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-6 sm:p-8">
-              <MessageCircle className="mb-5 h-8 w-8 text-[#25D366]" />
-              <h2 className="mb-4 text-3xl font-black tracking-[-0.03em]">Data yang sebaiknya dikirim</h2>
-              <ul className="space-y-3 text-sm leading-7 text-white/62 sm:text-base">
-                {[
-                  "Area/lokasi pemasangan di Banyumas",
-                  "Ukuran ruangan dan tinggi plafon",
-                  "Daya listrik rumah atau toko",
-                  "Budget dan brand yang diminati",
-                  "Tanya opsi COD/bayar di tempat",
-                  "Foto titik indoor dan outdoor jika tersedia",
-                ].map((item) => (
-                  <li key={item} className="flex gap-3">
-                    <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-[#25D366]" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
+        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
           <SectionTitle eyebrow="FAQ" title="Pertanyaan umum jual AC Banyumas" />
           <div className="grid gap-5 md:grid-cols-2">
             {faqItems.map(([question, answer]) => (
@@ -366,13 +292,13 @@ export default function JualAcBanyumas() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 pb-16 pt-10 lg:px-8 lg:pb-24 lg:pt-16">
-          <div className="rounded-[34px] border border-[#25D366]/20 bg-[#25D366]/10 p-6 text-center sm:p-10 lg:p-14">
-            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mau beli AC area Banyumas dengan COD?</h2>
+        <section className="mx-auto max-w-7xl px-6 pb-16 pt-8 lg:px-8 lg:pb-20 lg:pt-10">
+          <div className="rounded-[34px] border border-[#25D366]/20 bg-[#25D366]/10 p-6 text-center sm:p-10">
+            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl">Mau beli AC area Banyumas?</h2>
             <p className="mx-auto mb-7 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-              Kirim area, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, pilihan brand, kapasitas PK, estimasi pemasangan, dan opsi COD sesuai konfirmasi.
+              Kirim lokasi, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, kapasitas PK, estimasi pemasangan, dan opsi COD sesuai konfirmasi.
             </p>
-            <WhatsAppButton>Tanya COD Sekarang</WhatsAppButton>
+            <WhatsAppButton>Tanya AC Sekarang</WhatsAppButton>
           </div>
         </section>
       </main>
