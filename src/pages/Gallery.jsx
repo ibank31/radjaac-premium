@@ -199,10 +199,6 @@ export default function Gallery() {
             <h1 className="mb-4 text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:text-5xl">
               Bukti nyata showroom, stok, dan aktivitas RADJA AC
             </h1>
-
-            <p className="mx-auto max-w-2xl text-sm leading-7 text-white/68 sm:text-base">
-              Foto asli untuk menunjukkan toko aktif, stok tersedia, display produk lengkap, dan aktivitas operasional RADJA AC Purwokerto.
-            </p>
           </div>
         </section>
 
@@ -226,9 +222,6 @@ export default function Gallery() {
             <h2 className="mb-2 text-2xl font-black tracking-[-0.03em] sm:text-3xl">
               Cuplikan stok dan pengiriman RADJA AC
             </h2>
-            <p className="mx-auto max-w-xl text-sm leading-7 text-white/60">
-              Video singkat sebagai bukti aktivitas toko, stok barang, dan proses pengiriman RADJA AC.
-            </p>
           </div>
 
           <div className="grid grid-cols-3 gap-2 sm:gap-3">
