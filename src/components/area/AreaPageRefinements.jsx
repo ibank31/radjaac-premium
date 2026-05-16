@@ -71,20 +71,18 @@ function findParentByClass(node, className) {
   return null
 }
 
-function makePriceCard(config) {
-  const relatedLinks = config.related
+function makeRelatedAreaLinks(config) {
+  return config.related
     .map(([label, href]) => `<a href="${href}" class="inline-flex items-center gap-1.5 rounded-full border border-cyan-300/15 bg-cyan-300/[0.06] px-3 py-1.5 text-xs font-bold text-cyan-200 transition hover:border-cyan-300/40 hover:bg-cyan-300/[0.1] sm:text-sm">${label}<span aria-hidden="true">→</span></a>`)
     .join("")
+}
 
+function makePriceCard(config) {
   return `
     <svg class="mb-5 h-8 w-8 text-cyan-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
     <h2 class="mb-4 text-3xl font-black tracking-[-0.03em]">Cari harga AC area ${config.area}?</h2>
-    <p class="mb-5 text-sm leading-7 text-white/62 sm:text-base">Cek stok, rekomendasi PK, estimasi pemasangan, dan opsi COD/bayar di tempat lewat WhatsApp. Untuk area sekitar, pilih halaman terdekat agar informasi lokasi lebih sesuai.</p>
-    <a href="${buildWhatsAppUrl(config.message)}" target="_blank" rel="noreferrer" class="mb-6 inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-5 py-3.5 text-sm font-bold text-slate-950 transition hover:-translate-y-0.5 hover:bg-[#20BA5A] sm:text-base">Tanya Harga AC ${config.area}</a>
-    <div>
-      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/38">Area terdekat</p>
-      <div class="flex flex-wrap gap-2">${relatedLinks}</div>
-    </div>
+    <p class="mb-5 text-sm leading-7 text-white/62 sm:text-base">Cek stok, rekomendasi PK, estimasi pemasangan, dan opsi COD/bayar di tempat lewat WhatsApp. Untuk area sekitar, kirim lokasi pemasangan agar informasi harga dan jadwal lebih sesuai.</p>
+    <a href="${buildWhatsAppUrl(config.message)}" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-5 py-3.5 text-sm font-bold text-slate-950 transition hover:-translate-y-0.5 hover:bg-[#20BA5A] sm:text-base">Tanya Harga AC ${config.area}</a>
   `
 }
 
@@ -121,7 +119,7 @@ function refineBrandGrid() {
   return true
 }
 
-function refineAreaChips() {
+function refineAreaChips(config) {
   const headings = Array.from(document.querySelectorAll("h2"))
   const heading = headings.find((node) => node.textContent?.trim() === "Area yang bisa konsultasi pembelian AC")
   const section = heading?.closest("section")
@@ -129,16 +127,28 @@ function refineAreaChips() {
     return node.classList.contains("flex") && node.classList.contains("flex-wrap") && node.classList.contains("gap-2.5")
   })
 
-  if (!chips || chips.classList.contains("justify-center")) return false
+  if (!chips) return false
 
   chips.classList.add("justify-center")
+
+  if (section.dataset.areaRelatedRefined === "true") return false
+
+  const relatedWrapper = document.createElement("div")
+  relatedWrapper.className = "mx-auto mt-8 max-w-3xl text-center"
+  relatedWrapper.innerHTML = `
+    <p class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200/70">Area terdekat</p>
+    <div class="flex flex-wrap justify-center gap-2">${makeRelatedAreaLinks(config)}</div>
+  `
+
+  chips.insertAdjacentElement("afterend", relatedWrapper)
+  section.dataset.areaRelatedRefined = "true"
   return true
 }
 
 function runRefinements(config) {
   const priceDone = refinePriceCard(config)
   const brandDone = refineBrandGrid()
-  const chipsDone = refineAreaChips()
+  const chipsDone = refineAreaChips(config)
 
   return priceDone || brandDone || chipsDone
 }
@@ -157,8 +167,9 @@ export default function AreaPageRefinements() {
 
       const priceReady = document.querySelector("[data-area-price-refined='true']")
       const brandReady = document.querySelector("[data-brand-grid-refined='true']")
+      const relatedReady = document.querySelector("[data-area-related-refined='true']")
 
-      if ((priceReady && brandReady) || attempts >= 20) {
+      if ((priceReady && brandReady && relatedReady) || attempts >= 20) {
         window.clearInterval(interval)
       }
     }, 150)
