@@ -51,6 +51,12 @@ const galleryVideos = [
 
 const galleryItems = [
   {
+    title: "Pengiriman RADJA AC",
+    category: "Pengiriman",
+    image: "/assets/gallery/large/pengiriman-radjaac.webp",
+    thumbnail: "/assets/gallery/large/pengiriman-radjaac.webp",
+  },
+  {
     title: "Showroom Gree RADJA AC Purwokerto",
     category: "Showroom",
     image: "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-01.webp",
