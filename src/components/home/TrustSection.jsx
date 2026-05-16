@@ -42,13 +42,13 @@ export default function TrustSection() {
         <div className="grid grid-cols-2 gap-x-4 gap-y-7 sm:grid-cols-4">
           {CERTIFICATES.map((item) => (
             <figure key={item.brand} className="text-center">
-              <div className="overflow-hidden rounded-[16px] border border-white/10 bg-slate-900/40 shadow-[0_10px_24px_rgba(0,0,0,0.18)]">
+              <div className="rounded-[16px] border border-white/10 bg-slate-950/55 p-1.5 shadow-[0_10px_24px_rgba(0,0,0,0.18)]">
                 <img
                   src={item.image}
                   alt={`Sertifikat dealer resmi ${item.brand}`}
                   loading="lazy"
                   decoding="async"
-                  className="h-[92px] w-full object-cover object-center sm:h-[108px]"
+                  className="h-[96px] w-full rounded-[12px] object-contain object-center sm:h-[112px]"
                 />
               </div>
               <figcaption className="mt-3 inline-flex items-center justify-center gap-1.5 text-sm font-bold text-white sm:text-base">
