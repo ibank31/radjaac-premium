@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { SITE_DATA } from "../constants/siteData";
 
 const contactItems = [
@@ -33,7 +33,25 @@ const seoLinks = [
   { label: "Brand AC Lainnya", to: "/brand/lainnya" },
 ];
 
+const areaSeoLinks = [
+  { label: "Jual AC Banyumas", to: "/jual-ac-banyumas" },
+  { label: "Jual AC Sokaraja", to: "/jual-ac-sokaraja" },
+  { label: "Jual AC Ajibarang", to: "/jual-ac-ajibarang" },
+  { label: "Jual AC Wangon", to: "/jual-ac-wangon" },
+  { label: "Jual AC Cilongok", to: "/jual-ac-cilongok" },
+  { label: "Jual AC Jatilawang", to: "/jual-ac-jatilawang" },
+];
+
+function getAreaSeoLinks(pathname) {
+  if (!pathname.startsWith("/jual-ac-")) return [];
+
+  return areaSeoLinks.filter((item) => item.to !== pathname);
+}
+
 export default function Footer() {
+  const { pathname } = useLocation();
+  const contextualAreaLinks = getAreaSeoLinks(pathname);
+
   return (
     <footer className="border-t border-cyan-300/10 bg-[#020511] px-6 py-8 text-white lg:py-10">
       <div className="mx-auto max-w-7xl">
@@ -99,6 +117,23 @@ export default function Footer() {
             </div>
           </div>
         </div>
+
+        {contextualAreaLinks.length > 0 ? (
+          <div className="mt-8 border-t border-white/10 pt-6">
+            <h4 className="mb-4 text-center text-sm font-semibold uppercase tracking-[0.18em] text-cyan-200/75">Halaman Area RADJA AC</h4>
+            <nav className="flex flex-wrap justify-center gap-2 text-center text-xs sm:text-sm" aria-label="Halaman area RADJA AC">
+              {contextualAreaLinks.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className="rounded-full border border-cyan-300/15 bg-cyan-300/[0.04] px-3 py-1.5 text-cyan-100/70 transition hover:border-cyan-300/35 hover:text-cyan-100"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        ) : null}
 
         <div className="mt-8 border-t border-white/10 pt-6">
           <h4 className="mb-4 text-center text-sm font-semibold uppercase tracking-[0.18em] text-cyan-200/75">Link Penting</h4>
