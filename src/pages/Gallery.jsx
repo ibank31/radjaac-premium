@@ -264,9 +264,6 @@ export default function Gallery() {
             <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
               Showroom, gudang, stok, dan display produk
             </h2>
-            <p className="mx-auto max-w-2xl text-sm leading-7 text-white/60">
-              Disusun padat agar pengunjung cepat melihat bukti toko, stok, dan produk RADJA AC.
-            </p>
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
