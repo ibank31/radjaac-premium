@@ -193,6 +193,18 @@ const MONEY_LINKS_BY_SLUG = {
       href: "/jual-ac-purwokerto",
     },
   ],
+  "ac-kurang-dingin-belum-tentu-freon-habis": [
+    {
+      title: "Jual AC Purwokerto",
+      description: "Konsultasi AC baru kalau unit lama sudah tidak efisien atau biaya perbaikannya mulai tidak sebanding.",
+      href: "/jual-ac-purwokerto",
+    },
+    {
+      title: "Kontak RADJA AC",
+      description: "Kirim gejala AC, merek, PK, terakhir cuci, dan foto unit agar bisa diarahkan sebelum keluar biaya.",
+      href: "/kontak",
+    },
+  ],
 }
 
 export default function BlogPost() {
