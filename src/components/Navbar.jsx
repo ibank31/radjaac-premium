@@ -51,16 +51,7 @@ const NAV_ITEMS = [
   {
     label: "Brand Unggulan",
     type: "dropdown",
-    activePaths: [
-      "/brand",
-      "/daikin-purwokerto",
-      "/gree-purwokerto",
-      "/midea-purwokerto",
-      "/hisense-purwokerto",
-      "/sansui-purwokerto",
-      "/sharp-purwokerto",
-      "/panasonic-purwokerto",
-    ],
+    activePaths: ["/brand"],
     items: [
       {
         label: "Daikin",
@@ -261,95 +252,95 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-3xl text-white"
-          aria-label="Toggle navigation"
           onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-white text-2xl"
+          aria-label="Toggle menu"
         >
           ☰
         </button>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black/95 text-white border-t border-white/10">
-          <nav className="flex flex-col p-6 gap-4 font-medium">
-            {NAV_ITEMS.map((item) => (
-              <div key={item.label}>
-                {item.type === "link" ? (
-                  <NavLink
-                    to={item.to}
-                    end={item.end}
-                    onClick={() => setIsOpen(false)}
-                    className={({ isActive }) =>
-                      `block rounded-3xl px-4 py-3 transition ${
-                        isActive
-                          ? mobileActiveLink
-                          : mobileInactiveLink
-                      }`
-                    }
-                  >
-                    {item.label}
-                  </NavLink>
-                ) : (
-                  <div className="space-y-2">
-                    <button
-                      type="button"
-                      onClick={() =>
-                        setOpenDropdown(
-                          openDropdown === item.label ? "" : item.label
-                        )
-                      }
-                      className={`w-full text-left rounded-3xl px-4 py-3 transition flex items-center justify-between ${
-                        isDropdownActive(pathname, item) ? mobileActiveLink : mobileInactiveLink
-                      }`}
-                    >
-                      {item.label}
-                      <span className="text-sm">▾</span>
-                    </button>
+        <div className="md:hidden bg-black/90 backdrop-blur-xl border-t border-white/10 px-6 py-5 space-y-4 text-sm font-medium">
+          {NAV_ITEMS.map((item) => {
+            if (item.type === "link") {
+              return (
+                <NavLink
+                  key={item.label}
+                  to={item.to}
+                  end={item.end}
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    `block rounded-3xl px-4 py-3 transition ${
+                      isActive ? mobileActiveLink : mobileInactiveLink
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              )
+            }
 
-                    {openDropdown === item.label && (
-                      <div className="space-y-1 pl-4 border-l border-white/10 ml-2">
-                        {item.items.map((subItem) => {
-                          const isActiveSubItem = isExactPathActive(pathname, subItem.href)
+            const isActiveDropdown = isDropdownActive(pathname, item)
 
-                          return subItem.href ? (
-                            <Link
-                              key={subItem.label}
-                              to={subItem.href}
-                              onClick={() => setIsOpen(false)}
-                              className={`block rounded-3xl px-4 py-3 transition ${
-                                isActiveSubItem ? mobileActiveLink : mobileInactiveLink
-                              }`}
-                            >
-                              {subItem.label}
-                            </Link>
-                          ) : (
-                            <div
-                              key={subItem.label}
-                              className="block rounded-3xl px-4 py-3 text-white/50"
-                            >
-                              {subItem.label}
-                            </div>
-                          )
-                        })}
-                      </div>
-                    )}
+            return (
+              <div key={item.label} className="space-y-2">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenDropdown(
+                      openDropdown === item.label ? "" : item.label
+                    )
+                  }
+                  className={`flex w-full items-center justify-between rounded-3xl px-4 py-3 text-left transition ${
+                    isActiveDropdown ? mobileActiveLink : mobileInactiveLink
+                  }`}
+                >
+                  <span>{item.label}</span>
+                  <span>▾</span>
+                </button>
+
+                {openDropdown === item.label && (
+                  <div className="space-y-1 pl-3">
+                    {item.items.map((subItem) => {
+                      const isActiveSubItem = isExactPathActive(pathname, subItem.href)
+
+                      return subItem.href ? (
+                        <Link
+                          key={subItem.label}
+                          to={subItem.href}
+                          onClick={() => setIsOpen(false)}
+                          className={`block rounded-3xl px-4 py-2 transition ${
+                            isActiveSubItem ? mobileActiveLink : "text-white/70 hover:bg-white/5 hover:text-cyan-300"
+                          }`}
+                        >
+                          {subItem.label}
+                        </Link>
+                      ) : (
+                        <div
+                          key={subItem.label}
+                          className="block rounded-3xl px-4 py-2 text-white/45"
+                        >
+                          {subItem.label}
+                        </div>
+                      )
+                    })}
                   </div>
                 )}
               </div>
-            ))}
+            )
+          })}
 
-            <a
-              href={buildWhatsAppUrl(NAV_WA_MESSAGE)}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => setIsOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-3xl bg-[#25D366] px-4 py-3 font-bold text-slate-950 transition hover:bg-[#20BA5A]"
-            >
-              <WhatsappIcon className="h-5 w-5" />
-              Tanya Harga AC
-            </a>
-          </nav>
+          <a
+            href={buildWhatsAppUrl(NAV_WA_MESSAGE)}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 font-bold text-slate-950"
+          >
+            <WhatsappIcon className="h-5 w-5" />
+            Tanya Harga
+          </a>
         </div>
       )}
     </header>
