@@ -14,6 +14,9 @@ const AREA_MESSAGES = {
   "/jual-ac-purbalingga": "Halo RADJA AC, saya dari Purbalingga. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
   "/jual-ac-banjarnegara": "Halo RADJA AC, saya dari Banjarnegara. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
   "/jual-ac-cilacap": "Halo RADJA AC, saya dari Cilacap. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+  "/jual-ac-kebumen": "Halo RADJA AC, saya dari Kebumen. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+  "/jual-ac-tegal": "Halo RADJA AC, saya dari Tegal. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+  "/jual-ac-yogyakarta": "Halo RADJA AC, saya dari Yogyakarta. Mau tanya AC unit only / sekalian pasang untuk kebutuhan beberapa unit.",
 }
 
 const CATEGORY_MESSAGES = {
