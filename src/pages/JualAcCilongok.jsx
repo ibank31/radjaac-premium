@@ -2,27 +2,27 @@ import CompactAreaSalesPage from "../components/area/CompactAreaSalesPage"
 
 const areaConfig = {
   canonicalPath: "/jual-ac-cilongok",
-  seoTitle: "Jual AC Cilongok | Rumah, Kost, Toko & Area Barat Purwokerto — RADJA AC",
+  seoTitle: "Jual AC Cilongok | Barat Purwokerto untuk Rumah, Kost & Toko — RADJA AC",
   seoDescription:
-    "RADJA AC melayani pembelian AC area Cilongok. Konsultasi AC untuk rumah, kost, toko, ruko, kantor kecil, cek stok, rekomendasi PK, pengiriman, dan pemasangan.",
+    "RADJA AC melayani pembelian AC area Cilongok dan barat Purwokerto. Cocok untuk rumah, kost, toko, ruko, cek stok, rekomendasi PK, pengiriman, dan pemasangan by konfirmasi.",
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Cilongok dan sekitarnya, termasuk kebutuhan rumah, kost, toko, ruko, kantor kecil, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA CILONGOK",
   h1: "Jual AC Cilongok",
-  heroHighlight: "untuk rumah, kost, toko, dan area barat Purwokerto",
+  heroHighlight: "barat Purwokerto untuk rumah, kost, dan toko",
   heroDescription:
-    "RADJA AC Purwokerto melayani konsultasi pembelian AC untuk area Cilongok, Pernasidi, Panembangan, Pageraji, Karanglo, dan sekitarnya. Cocok untuk rumah, kamar kost, toko, ruko, kantor kecil, atau pembelian beberapa unit dengan cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai lokasi.",
+    "RADJA AC Purwokerto melayani konsultasi pembelian AC untuk area Cilongok, Pernasidi, Panembangan, Pageraji, Karanglo, dan sekitarnya. Cocok untuk rumah, kamar kost, toko, ruko, kantor kecil, atau beberapa unit di area barat Purwokerto dengan cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   primaryCta: "Tanya AC Cilongok",
   waMessage:
-    "Halo RADJA AC, saya dari Cilongok. Mau tanya AC untuk rumah/kost/toko/ruko, cek stok, harga, rekomendasi PK, dan estimasi pemasangan.",
-  heroChips: ["Barat Purwokerto", "Rumah & kost", "Toko/ruko", "Cek PK dulu", "Jadwal dikonfirmasi"],
-  schemaAreas: ["Cilongok", "Pernasidi", "Panembangan", "Cikidang", "Karanglo", "Kasegeran", "Pageraji", "Sambirata", "Ajibarang", "Karanglewas", "Kedungbanteng", "Purwokerto Barat"],
+    "Halo RADJA AC, saya dari Cilongok. Mau tanya AC untuk rumah/kost/toko/ruko area barat Purwokerto, cek stok, harga, rekomendasi PK, dan opsi pengiriman atau pemasangan.",
+  heroChips: ["Barat Purwokerto", "Rumah & kost", "Toko/ruko", "Cek PK dulu", "Pasang by konfirmasi"],
+  schemaAreas: ["Cilongok", "Pernasidi", "Panembangan", "Karanglo", "Kasegeran", "Pageraji", "Sambirata", "Ajibarang", "Karanglewas", "Kedungbanteng", "Purwokerto Barat"],
   relatedAreaLinks: [["Banyumas", "/jual-ac-banyumas"], ["Ajibarang", "/jual-ac-ajibarang"], ["Purwokerto", "/jual-ac-purwokerto"]],
   bulkPurchase: {
-    eyebrow: "RUMAH, KOST & TOKO",
+    eyebrow: "BARAT PURWOKERTO",
     title: "Butuh AC untuk rumah, kost, toko, atau ruko area Cilongok?",
     description:
-      "Cilongok dekat dengan jalur barat Purwokerto, jadi kebutuhan AC bisa dikonsultasikan berdasarkan alamat, ukuran ruangan, daya listrik, jumlah unit, stok, dan jadwal pemasangan.",
+      "Cilongok berada di sisi barat Purwokerto. Kebutuhan AC bisa dikonsultasikan dari alamat, ukuran ruangan, daya listrik, jumlah unit, stok, dan jadwal pemasangan. Cocok untuk rumah, kamar kost, toko, dan ruang usaha kecil.",
     cards: [
       ["Rumah & Kamar", "Bantu pilih AC untuk kamar tidur, ruang keluarga kecil, ruang kerja, atau pemakaian harian."],
       ["Kost & Kontrakan", "Cocok untuk beberapa kamar dengan pilihan brand hemat, low watt, atau inverter sesuai daya listrik."],
@@ -30,11 +30,11 @@ const areaConfig = {
     ],
     ctaLabel: "Tanya AC Area Cilongok",
     waMessage:
-      "Halo RADJA AC, saya dari Cilongok. Mau konsultasi AC untuk rumah/kost/toko/ruko. Mohon bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan pemasangan.",
+      "Halo RADJA AC, saya dari Cilongok. Mau konsultasi AC untuk rumah/kost/toko/ruko. Mohon bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan opsi pemasangan.",
   },
   valueTitle: "Beli AC area Cilongok lebih jelas dari awal",
   valueDescription:
-    "Untuk area Cilongok, data lokasi, jenis ruangan, jumlah unit, dan titik pemasangan membantu estimasi stok, harga, rute, dan jadwal lebih jelas.",
+    "Untuk area Cilongok dan barat Purwokerto, data lokasi, jenis ruangan, jumlah unit, dan titik pemasangan membantu estimasi stok, harga, rute, dan jadwal lebih jelas.",
   valueStockText:
     "Stok unit, pilihan brand, dan kisaran harga dicek dulu lewat WhatsApp sebelum pembelian dikunci.",
   valuePkText:

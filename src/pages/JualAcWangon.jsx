@@ -2,37 +2,37 @@ import CompactAreaSalesPage from "../components/area/CompactAreaSalesPage"
 
 const areaConfig = {
   canonicalPath: "/jual-ac-wangon",
-  seoTitle: "Jual AC Wangon | Rumah, Toko, Kost & Jalur Banyumas Barat — RADJA AC",
+  seoTitle: "Jual AC Wangon | Jalur Banyumas Barat, Unit & Banyak Unit — RADJA AC",
   seoDescription:
-    "RADJA AC melayani pembelian AC area Wangon. Konsultasi AC untuk rumah, toko, kost, ruko, kantor kecil, cek stok, rekomendasi PK, pengiriman, dan pemasangan.",
+    "RADJA AC melayani pembelian AC area Wangon dan jalur Banyumas barat. Cocok untuk rumah, toko, kost, ruko, banyak unit, pengiriman, dan pemasangan by konfirmasi.",
   localBusinessDescription:
-    "Toko AC Purwokerto yang melayani pembelian AC untuk area Wangon dan Banyumas barat, termasuk kebutuhan rumah, toko, kost, ruko, kantor kecil, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
+    "Toko AC Purwokerto yang melayani pembelian AC untuk area Wangon dan jalur Banyumas barat, termasuk kebutuhan rumah, toko, kost, ruko, kantor kecil, banyak unit, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA WANGON",
   h1: "Jual AC Wangon",
-  heroHighlight: "untuk rumah, toko, kost, dan area Banyumas barat",
+  heroHighlight: "jalur Banyumas barat untuk unit dan banyak unit",
   heroDescription:
-    "RADJA AC Purwokerto melayani konsultasi pembelian AC untuk area Wangon, Rawaheng, Jambu, Randegan, dan sekitar jalur Banyumas barat. Cocok untuk rumah, toko, ruko, kost, kantor kecil, atau pembelian beberapa unit dengan cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai lokasi.",
+    "RADJA AC Purwokerto melayani konsultasi pembelian AC untuk area Wangon, Rawaheng, Jambu, Randegan, dan sekitar jalur Banyumas barat. Cocok untuk rumah, toko, ruko, kost, kantor kecil, atau kebutuhan beberapa unit dengan cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai konfirmasi rute serta lokasi.",
   primaryCta: "Tanya AC Wangon",
   waMessage:
-    "Halo RADJA AC, saya dari Wangon. Mau tanya AC untuk rumah/toko/kost/ruko, cek stok, harga, rekomendasi PK, dan estimasi pemasangan.",
-  heroChips: ["Banyumas barat", "Rumah & toko", "Kost/ruko", "Bisa banyak unit", "Rute dicek dulu"],
+    "Halo RADJA AC, saya dari Wangon. Mau tanya AC untuk rumah/toko/kost/ruko atau banyak unit area Banyumas barat, cek stok, harga, rekomendasi PK, dan opsi pengiriman atau pemasangan.",
+  heroChips: ["Jalur Banyumas barat", "Rumah & toko", "Kost/ruko", "Bisa banyak unit", "Rute dicek dulu"],
   schemaAreas: ["Wangon", "Wangon Kulon", "Wangon Wetan", "Jambu", "Rawaheng", "Cikakak", "Randegan", "Ajibarang", "Lumbir", "Jatilawang", "Purwojati", "Banyumas"],
   relatedAreaLinks: [["Banyumas", "/jual-ac-banyumas"], ["Ajibarang", "/jual-ac-ajibarang"], ["Jatilawang", "/jual-ac-jatilawang"]],
   bulkPurchase: {
     eyebrow: "JALUR BANYUMAS BARAT",
     title: "Butuh AC untuk rumah, toko, kost, atau ruko area Wangon?",
     description:
-      "Untuk area Wangon dan sekitar Banyumas barat, pembelian AC sebaiknya dikonsultasikan dari awal agar stok, pilihan brand, rekomendasi PK, rute pengiriman, dan jadwal pemasangan lebih jelas.",
+      "Untuk area Wangon dan jalur Banyumas barat, pembelian AC sebaiknya dikonsultasikan dari awal agar stok, pilihan brand, rekomendasi PK, rute pengiriman, dan jadwal pemasangan lebih jelas.",
     cards: [
       ["Rumah & Kamar", "Bantu pilih AC sesuai ukuran kamar, ruang keluarga, daya listrik, dan pola pemakaian."],
       ["Toko & Ruko", "Cocok untuk area pelanggan, kasir, display produk, ruang tunggu, atau ruang usaha kecil."],
-      ["Kost & Banyak Unit", "Bisa konsultasi beberapa unit untuk kamar kost, kontrakan, atau kebutuhan usaha."],
+      ["Kost & Banyak Unit", "Bisa konsultasi beberapa unit untuk kamar kost, kontrakan, atau kebutuhan usaha di jalur barat."],
     ],
     ctaLabel: "Tanya AC Area Wangon",
     waMessage:
-      "Halo RADJA AC, saya dari Wangon. Mau konsultasi AC untuk rumah/toko/kost/ruko. Mohon bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan pemasangan.",
+      "Halo RADJA AC, saya dari Wangon. Mau konsultasi AC untuk rumah/toko/kost/ruko atau banyak unit. Mohon bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan opsi pemasangan.",
   },
-  valueTitle: "Beli AC area Wangon lebih jelas dari awal",
+  valueTitle: "Beli AC area Wangon perlu cek rute dan kebutuhan unit",
   valueDescription:
     "Karena Wangon berada di jalur Banyumas barat, data alamat, rute, jumlah unit, dan kondisi pemasangan membantu estimasi lebih akurat.",
   valueStockText:
