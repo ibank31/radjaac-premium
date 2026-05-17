@@ -4,14 +4,14 @@ const areaConfig = {
   canonicalPath: "/jual-ac-tegal",
   seoTitle: "Jual AC Tegal | Unit Only & Banyak Unit untuk Toko, Ruko, Kost — RADJA AC",
   seoDescription:
-    "RADJA AC melayani konsultasi pembelian AC area Tegal untuk unit only, banyak unit, toko, ruko, kost, kantor, kontraktor, dan opsi pemasangan sesuai lokasi.",
+    "RADJA AC melayani konsultasi pembelian AC area Tegal untuk unit only, banyak unit, toko, ruko, kost, kantor, dan opsi pemasangan sesuai lokasi.",
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani konsultasi pembelian unit AC untuk area Tegal dan sekitarnya, termasuk unit only, banyak unit untuk toko, ruko, kost, kantor, pilihan brand, pengiriman, dan opsi pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA TEGAL",
   h1: "Jual AC Tegal",
   heroHighlight: "unit only, banyak unit, dan kebutuhan usaha",
   heroDescription:
-    "RADJA AC melayani konsultasi pembelian AC untuk area Tegal, Slawi, Adiwerna, Dukuhturi, Talang, Kramat, dan sekitarnya. Fokus utama untuk unit only dan pembelian beberapa unit bagi toko, ruko, kost, kantor kecil, kontraktor, atau pengadaan usaha. Opsi pemasangan tetap bisa dikonsultasikan berdasarkan lokasi, jumlah unit, rute, dan jadwal teknisi.",
+    "RADJA AC melayani konsultasi pembelian AC untuk area Tegal, Slawi, Adiwerna, Dukuhturi, Talang, Kramat, dan sekitarnya. Fokus utama untuk unit only dan pembelian beberapa unit bagi toko, ruko, kost, kantor kecil, kontraktor, atau pengadaan usaha. Opsi pemasangan bisa dikonsultasikan berdasarkan lokasi, jumlah unit, rute, dan jadwal teknisi.",
   primaryCta: "Tanya AC Tegal",
   waMessage:
     "Halo RADJA AC, saya dari Tegal. Mau tanya AC unit only / banyak unit untuk toko/ruko/kost/kantor. Mohon bantu cek stok, harga, dan opsi pengiriman atau pemasangan.",
@@ -34,7 +34,7 @@ const areaConfig = {
   },
   valueTitle: "Beli AC area Tegal lebih tepat dimulai dari jumlah unit",
   valueDescription:
-    "Karena fokusnya bisa unit only atau banyak unit, estimasi paling aman dimulai dari jumlah unit, jenis ruangan, target brand, lokasi pengiriman, dan kebutuhan pasang atau tidak.",
+    "Karena fokusnya bisa unit only atau banyak unit, estimasi paling aman dimulai dari jumlah unit, jenis ruangan, target brand, lokasi pengiriman, dan opsi pemasangan bila diperlukan.",
   valueStockText:
     "Stok unit, pilihan brand, dan harga untuk beberapa unit dicek dulu lewat WhatsApp sebelum pembelian dikunci.",
   valuePkText:
@@ -42,9 +42,9 @@ const areaConfig = {
   valueInstallText:
     "Untuk Tegal dan sekitarnya, pengiriman dan opsi pemasangan menyesuaikan rute, jumlah unit, akses lokasi, dan jadwal teknisi.",
   processDescription:
-    "Pembelian AC area Tegal perlu dikonfirmasi dulu agar jelas sejak awal: unit only, banyak unit, pengiriman, atau pemasangan. Data lokasi dan jumlah unit membantu estimasi lebih akurat.",
+    "Pembelian AC area Tegal perlu dikonfirmasi dulu agar jelas sejak awal: unit only, banyak unit, pengiriman, atau opsi pemasangan. Data lokasi dan jumlah unit membantu estimasi lebih akurat.",
   processSteps: [
-    ["Kirim lokasi & jumlah unit", "Sebutkan area Tegal/Slawi/sekitarnya, jumlah unit, kebutuhan unit only atau pasang, jenis ruangan, ukuran ruangan, daya listrik, dan budget."],
+    ["Kirim lokasi & jumlah unit", "Sebutkan area Tegal/Slawi/sekitarnya, jumlah unit, kebutuhan unit only atau opsi pasang, jenis ruangan, ukuran ruangan, daya listrik, dan budget."],
     ["Cek stok, brand & PK", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, tipe low watt/inverter, harga beberapa unit, dan opsi pengiriman."],
     ["Konfirmasi pengiriman / pemasangan", "Harga final, tambahan material, akses titik pemasangan, rute, dan jadwal teknisi dikonfirmasi dulu sebelum unit disiapkan."],
   ],
@@ -54,11 +54,11 @@ const areaConfig = {
     ["Apakah RADJA AC melayani pembelian AC area Tegal?", "Ya. RADJA AC melayani konsultasi pembelian unit AC untuk area Tegal dan sekitarnya, terutama unit only, pembelian banyak unit, dan opsi pemasangan sesuai konfirmasi lokasi."],
     ["Bisa beli unit only tanpa pemasangan?", "Bisa. Unit only cocok untuk pembeli yang sudah punya teknisi sendiri, kontraktor, pengelola kost, toko, ruko, kantor, atau kebutuhan beberapa unit."],
     ["Apakah bisa pembelian AC banyak unit?", "Bisa. Jumlah unit akan dicek berdasarkan stok, pilihan brand, kebutuhan PK, lokasi pengiriman, dan jadwal ketersediaan."],
-    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi, jumlah unit, kebutuhan unit only atau pasang, jenis ruangan, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika perlu."],
+    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi, jumlah unit, kebutuhan unit only atau opsi pasang, jenis ruangan, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika perlu."],
   ],
   finalCtaTitle: "Mau beli AC banyak unit area Tegal?",
   finalCtaDescription:
-    "Kirim lokasi, jumlah unit, kebutuhan unit only atau sekalian pasang, jenis ruangan, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, opsi pengiriman, dan jadwal sesuai konfirmasi.",
+    "Kirim lokasi, jumlah unit, kebutuhan unit only atau opsi pasang, jenis ruangan, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, opsi pengiriman, dan jadwal sesuai konfirmasi.",
 }
 
 export default function JualAcTegal() {
