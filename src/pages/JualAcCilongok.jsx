@@ -14,7 +14,7 @@ const areaConfig = {
     "RADJA AC Purwokerto melayani pembelian AC untuk area Cilongok dan sekitarnya. Bisa bantu cek stok, harga, rekomendasi PK, pengiriman, serta kebutuhan banyak unit untuk toko, kost, ruko, atau kantor sesuai konfirmasi lokasi dan jadwal.",
   primaryCta: "Tanya AC Cilongok",
   waMessage:
-    "Halo RADJA AC, saya dari area Cilongok. Mau konsultasi pembelian AC.",
+    "Halo RADJA AC, saya dari Cilongok. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
   heroChips: ["Cek stok dulu", "Bisa banyak unit", "Rekomendasi PK", "Jadwal dikonfirmasi"],
   schemaAreas: ["Cilongok", "Pernasidi", "Panembangan", "Cikidang", "Karanglo", "Kasegeran", "Pageraji", "Sambirata", "Ajibarang", "Karanglewas", "Kedungbanteng", "Purwokerto Barat"],
   relatedAreaLinks: [["Banyumas", "/jual-ac-banyumas"], ["Ajibarang", "/jual-ac-ajibarang"], ["Purwokerto", "/jual-ac-purwokerto"]],
