@@ -229,7 +229,7 @@ export default function GreePurwokerto() {
               </h2>
 
               <p className="mx-auto mb-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC menjadi bagian dari pencapaian Rekor MURI bersama Gree melalui performa penjualan dan dukungan brand partner. Ini menjadi trust signal penting untuk pelanggan yang mencari AC Gree original.
+                RADJA AC menjadi bagian dari pencapaian Rekor MURI bersama Gree melalui performa penjualan dan dukungan brand partner.
               </p>
 
               <div className="flex justify-center lg:justify-start">
