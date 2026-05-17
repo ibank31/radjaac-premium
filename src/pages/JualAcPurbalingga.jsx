@@ -14,7 +14,7 @@ const areaConfig = {
     "RADJA AC Purwokerto melayani pembelian AC untuk area Purbalingga dan sekitarnya. Bisa bantu cek stok, harga, rekomendasi PK, pengiriman, serta kebutuhan banyak unit untuk toko, kost, ruko, kantor kecil, atau proyek sesuai konfirmasi lokasi dan jadwal.",
   primaryCta: "Tanya AC Purbalingga",
   waMessage:
-    "Halo RADJA AC, saya dari area Purbalingga. Mau konsultasi pembelian AC.",
+    "Halo RADJA AC, saya dari Purbalingga. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
   heroChips: ["Cek stok dulu", "Bisa banyak unit", "Rekomendasi PK", "Jadwal dikonfirmasi"],
   schemaAreas: ["Purbalingga", "Kalimanah", "Padamara", "Bojongsari", "Bobotsari", "Mrebet", "Bukateja", "Kutasari", "Kemangkon", "Purwokerto", "Sokaraja", "Banyumas"],
   relatedAreaLinks: [["Purwokerto", "/jual-ac-purwokerto"], ["Banyumas", "/jual-ac-banyumas"], ["Sokaraja", "/jual-ac-sokaraja"]],
@@ -30,7 +30,7 @@ const areaConfig = {
     ],
     ctaLabel: "Tanya Pembelian Banyak Unit",
     waMessage:
-      "Halo RADJA AC, saya dari area Purbalingga. Mau konsultasi pembelian AC banyak unit untuk toko/kost/ruko/kantor/proyek. Mohon bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan jadwal pemasangan.",
+      "Halo RADJA AC, saya dari Purbalingga. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
   },
   valueTitle: "Beli AC area Purbalingga lebih jelas dari awal",
   valueDescription:

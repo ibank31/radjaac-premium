@@ -10,7 +10,7 @@ import WhatsappIcon from "../components/ui/WhatsappIcon"
 import { SITE_DATA } from "../constants/siteData"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
-const WA_MESSAGE = "Halo RADJA AC. Tolong bantu cek stok, harga, dan rekomendasi AC yang cocok."
+const WA_MESSAGE = "Halo RADJA AC, saya dari Purwokerto. Mau tanya AC, cek stok, harga, dan estimasi pemasangan."
 
 const brandLinks = [
   ["Daikin", "Brand premium untuk rumah, kantor, dan pemakaian rutin.", "/brand/daikin"],

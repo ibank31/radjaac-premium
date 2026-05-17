@@ -14,7 +14,7 @@ const areaConfig = {
     "RADJA AC Purwokerto melayani pembelian AC untuk area Wangon dan sekitarnya. Bisa bantu cek stok, harga, rekomendasi PK, pengiriman, serta kebutuhan banyak unit untuk toko, kost, ruko, atau kantor sesuai konfirmasi lokasi dan jadwal.",
   primaryCta: "Tanya AC Wangon",
   waMessage:
-    "Halo RADJA AC, saya dari area Wangon. Mau konsultasi pembelian AC.",
+    "Halo RADJA AC, saya dari Wangon. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
   heroChips: ["Cek stok dulu", "Bisa banyak unit", "Rekomendasi PK", "Jadwal dikonfirmasi"],
   schemaAreas: ["Wangon", "Wangon Kulon", "Wangon Wetan", "Jambu", "Rawaheng", "Cikakak", "Randegan", "Ajibarang", "Lumbir", "Jatilawang", "Purwojati", "Banyumas"],
   relatedAreaLinks: [["Banyumas", "/jual-ac-banyumas"], ["Ajibarang", "/jual-ac-ajibarang"], ["Jatilawang", "/jual-ac-jatilawang"]],
