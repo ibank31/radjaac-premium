@@ -58,6 +58,8 @@ const heroTrustImages = [
   },
 ]
 
+const bulkIcons = [Building2, Home, Truck]
+
 function WhatsAppButton({ message, children, className = "" }) {
   return (
     <a
@@ -88,6 +90,8 @@ export default function CompactAreaSalesPage({ config }) {
     ["Bantu pilih PK", config.valuePkText, BadgeCheck],
     ["Pemasangan sesuai lokasi", config.valueInstallText, Truck],
   ]
+
+  const heroChips = config.heroChips || ["Cek stok dulu", "Rekomendasi PK", "Estimasi pasang", "COD sesuai konfirmasi"]
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -153,7 +157,7 @@ export default function CompactAreaSalesPage({ config }) {
                 </Link>
               </div>
               <div className="mb-5 flex flex-wrap justify-center gap-2 text-sm text-white/62 lg:justify-start">
-                {["Cek stok dulu", "Rekomendasi PK", "Estimasi pasang", "COD sesuai konfirmasi"].map((item) => (
+                {heroChips.map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">{item}</span>
                 ))}
               </div>
@@ -197,6 +201,34 @@ export default function CompactAreaSalesPage({ config }) {
           </div>
         </section>
 
+        {config.bulkPurchase ? (
+          <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
+            <SectionTitle
+              eyebrow={config.bulkPurchase.eyebrow}
+              title={config.bulkPurchase.title}
+              description={config.bulkPurchase.description}
+            />
+            <div className="grid gap-5 md:grid-cols-3">
+              {config.bulkPurchase.cards.map(([title, description], index) => {
+                const Icon = bulkIcons[index] || BadgeCheck
+
+                return (
+                  <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 text-center">
+                    <Icon className="mx-auto mb-5 h-8 w-8 text-cyan-300" />
+                    <h2 className="mb-3 text-xl font-black text-white">{title}</h2>
+                    <p className="text-sm leading-7 text-white/60">{description}</p>
+                  </div>
+                )
+              })}
+            </div>
+            <div className="mt-7 text-center">
+              <WhatsAppButton message={config.bulkPurchase.waMessage || config.waMessage}>
+                {config.bulkPurchase.ctaLabel || "Tanya Pembelian Banyak Unit"}
+              </WhatsAppButton>
+            </div>
+          </section>
+        ) : null}
+
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
           <SectionTitle
             eyebrow="KONSULTASI PEMBELIAN"
@@ -221,7 +253,7 @@ export default function CompactAreaSalesPage({ config }) {
                 <Truck className="h-4 w-4" />
                 ALUR BELI AC
               </div>
-              <h2 className="mb-5 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Cek kebutuhan dulu, baru kunci jadwal</h2>
+              <h2 className="mb-5 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Cek kebutuhan dulu, baru kunci stok dan jadwal</h2>
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
                 {config.processDescription}
               </p>
@@ -245,7 +277,7 @@ export default function CompactAreaSalesPage({ config }) {
           <SectionTitle
             eyebrow="PILIHAN AC"
             title="Mulai dari brand atau kebutuhan"
-            description="Jika belum yakin memilih merek, mulai dari ukuran ruangan, daya listrik, dan jam pemakaian."
+            description={config.choiceDescription || "Jika belum yakin memilih merek, mulai dari ukuran ruangan, daya listrik, dan jam pemakaian."}
           />
           <div className="mb-5 grid grid-cols-2 gap-4 lg:grid-cols-3">
             {brandLinks.map(([title, href]) => (
