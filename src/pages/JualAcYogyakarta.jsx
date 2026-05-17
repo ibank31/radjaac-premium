@@ -62,9 +62,9 @@ const deliveryTrustImages = [
     alt: "Material instalasi AC RADJA AC Purwokerto",
   },
   {
-    label: "Pengiriman Sharp",
-    src: "https://www.radjaac.com/assets/gallery/pengiriman/radja-ac-loading-ac-sharp-truk-kuning.webp",
-    alt: "Pengiriman stok AC Sharp RADJA AC dengan truk kuning",
+    label: "Pengiriman Sharp & Midea",
+    src: "/assets/gallery/pengiriman/pengiriman-sharp-midea.webp",
+    alt: "Pengiriman stok AC Sharp dan Midea RADJA AC",
   },
   {
     label: "Pengiriman Aqua",
