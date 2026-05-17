@@ -14,7 +14,7 @@ const areaConfig = {
     "RADJA AC Purwokerto melayani pembelian AC untuk area Ajibarang dan sekitarnya. Konsultasi stok, harga, kapasitas PK, estimasi pemasangan, dan opsi COD/bayar di tempat sesuai konfirmasi lokasi.",
   primaryCta: "Tanya AC Ajibarang",
   waMessage:
-    "Halo RADJA AC, saya dari area Ajibarang. Mau tanya AC yang bisa COD/bayar di tempat. Mohon bantu cek stok, harga, rekomendasi PK, dan estimasi pemasangan AC.",
+    "Halo RADJA AC, saya dari Ajibarang. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
   schemaAreas: ["Ajibarang", "Ajibarang Kulon", "Ajibarang Wetan", "Pancasan", "Lesmana", "Kracak", "Cilongok", "Pekuncen", "Wangon", "Karanglewas", "Purwojati", "Banyumas"],
   relatedAreaLinks: [["Banyumas", "/jual-ac-banyumas"], ["Cilongok", "/jual-ac-cilongok"], ["Wangon", "/jual-ac-wangon"]],
   valueTitle: "Beli AC area Ajibarang lebih jelas dari awal",
