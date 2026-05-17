@@ -48,12 +48,12 @@ const heroTrustImages = [
   },
   {
     label: "Pengiriman Sharp",
-    src: "/assets/gallery/pengiriman/radja-ac-loading-ac-sharp-truk-kuning.webp",
+    src: "https://www.radjaac.com/assets/gallery/pengiriman/radja-ac-loading-ac-sharp-truk-kuning.webp",
     alt: "Pengiriman stok AC Sharp RADJA AC dengan truk kuning",
   },
   {
     label: "Pengiriman Aqua",
-    src: "/assets/gallery/pengiriman/radja-ac-pengiriman-stok-aqua-truk-putih.webp",
+    src: "https://www.radjaac.com/assets/gallery/pengiriman/radja-ac-pengiriman-stok-aqua-truk-putih.webp",
     alt: "Pengiriman stok AC Aqua RADJA AC dengan truk putih",
   },
 ]
