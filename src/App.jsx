@@ -184,6 +184,21 @@ export default function App() {
             />
 
             <Route
+              path="/ac-inverter-purwokerto"
+              element={<Navigate to="/katalog/ac-inverter" replace />}
+            />
+
+            <Route
+              path="/ac-low-watt-purwokerto"
+              element={<Navigate to="/katalog/ac-low-watt" replace />}
+            />
+
+            <Route
+              path="/ac-purwokerto-selatan"
+              element={<Navigate to="/jual-ac-purwokerto" replace />}
+            />
+
+            <Route
               path="/instalasi-ac-banyumas"
               element={<Navigate to="/jual-ac-banyumas" replace />}
             />
