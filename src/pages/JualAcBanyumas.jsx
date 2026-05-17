@@ -14,7 +14,7 @@ const areaConfig = {
     "RADJA AC Purwokerto melayani pembelian AC untuk area Banyumas dan sekitarnya. Bisa bantu cek stok, harga, rekomendasi PK, pengiriman, serta kebutuhan banyak unit untuk toko, kost, ruko, kantor kecil, atau proyek sesuai konfirmasi lokasi dan jadwal.",
   primaryCta: "Tanya AC Banyumas",
   waMessage:
-    "Halo RADJA AC, saya dari area Banyumas. Mau konsultasi pembelian AC.",
+    "Halo RADJA AC, saya dari Banyumas. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
   heroChips: ["Cek stok dulu", "Bisa banyak unit", "Rekomendasi PK", "Jadwal dikonfirmasi"],
   schemaAreas: ["Purwokerto", "Sokaraja", "Kembaran", "Baturraden", "Karanglewas", "Kedungbanteng", "Cilongok", "Ajibarang", "Wangon", "Banyumas", "Patikraja", "Kalibagor"],
   relatedAreaLinks: [["Sokaraja", "/jual-ac-sokaraja"], ["Ajibarang", "/jual-ac-ajibarang"], ["Wangon", "/jual-ac-wangon"], ["Cilongok", "/jual-ac-cilongok"], ["Jatilawang", "/jual-ac-jatilawang"]],
