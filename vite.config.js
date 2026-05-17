@@ -34,7 +34,6 @@ const staticRoutes = [
   '/katalog/ac-kantor-komersial',
   '/artikel',
   '/gallery',
-  '/instalasi-profesional',
   '/tentang-kami',
   '/kontak',
 ]
@@ -82,7 +81,6 @@ export default defineConfig({
         '/jual-ac-yogyakarta': 0.78,
         '/brand/lainnya': 0.78,
         '/artikel': 0.75,
-        '/instalasi-profesional': 0.75,
         '/kontak': 0.75,
         '/tentang-kami': 0.7,
         '/gallery': 0.7,
