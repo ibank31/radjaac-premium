@@ -216,9 +216,6 @@ export default function JualAcYogyakarta() {
                   </div>
                 ))}
               </div>
-              <p className="mt-3 text-center text-xs leading-6 text-white/45 sm:text-sm">
-                Dokumentasi stok, material, dan pengiriman RADJA AC untuk bantu calon pembeli lebih yakin sebelum konsultasi.
-              </p>
             </div>
           </div>
         </section>
@@ -227,7 +224,6 @@ export default function JualAcYogyakarta() {
           <SectionTitle
             eyebrow="TARGET KEBUTUHAN"
             title="Cocok untuk rumah, kost, ruko, toko, kantor, dan proyek"
-            description="Halaman ini dibuat untuk calon pembeli Jogja yang ingin cek AC satuan maupun banyak unit tanpa harus scroll terlalu panjang."
           />
           <div className="grid gap-5 md:grid-cols-3">
             {targetCards.map(([title, description, Icon]) => (
@@ -242,25 +238,25 @@ export default function JualAcYogyakarta() {
 
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
           <div className="grid gap-5 lg:grid-cols-2">
-            <div className="rounded-[30px] border border-white/10 bg-white/[0.04] p-6 sm:p-8">
-              <BadgeCheck className="mb-5 h-8 w-8 text-cyan-300" />
+            <div className="rounded-[30px] border border-white/10 bg-white/[0.04] p-6 text-center sm:p-8">
+              <BadgeCheck className="mx-auto mb-5 h-8 w-8 text-cyan-300" />
               <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl">Unit only</h2>
               <p className="mb-5 text-sm leading-7 text-white/62 sm:text-base">
                 Cocok untuk pembeli yang sudah punya teknisi sendiri, kontraktor, pengelola kost, atau proyek yang hanya butuh pengadaan unit AC.
               </p>
-              <div className="flex flex-wrap gap-2 text-sm text-white/62">
+              <div className="flex flex-wrap justify-center gap-2 text-sm text-white/62">
                 {["Cek stok brand", "Harga banyak unit", "Pengiriman dikonfirmasi", "Cocok untuk proyek"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">{item}</span>
                 ))}
               </div>
             </div>
-            <div className="rounded-[30px] border border-white/10 bg-white/[0.04] p-6 sm:p-8">
-              <Truck className="mb-5 h-8 w-8 text-cyan-300" />
+            <div className="rounded-[30px] border border-white/10 bg-white/[0.04] p-6 text-center sm:p-8">
+              <Truck className="mx-auto mb-5 h-8 w-8 text-cyan-300" />
               <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl">Unit + instalasi</h2>
               <p className="mb-5 text-sm leading-7 text-white/62 sm:text-base">
                 Cocok untuk pembeli yang ingin sekalian dibantu estimasi titik indoor-outdoor, kebutuhan material, dan jadwal pemasangan.
               </p>
-              <div className="flex flex-wrap gap-2 text-sm text-white/62">
+              <div className="flex flex-wrap justify-center gap-2 text-sm text-white/62">
                 {["Pipa dicek dulu", "Kabel sesuai titik", "Jadwal teknisi", "Biaya transparan"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">{item}</span>
                 ))}
