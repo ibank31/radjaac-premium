@@ -1,4 +1,15 @@
 {
+  "headers": [
+    {
+      "source": "/jual-ac-purwokerto",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://www.radjaac.com/jual-ac-purwokerto>; rel=\"canonical\""
+        }
+      ]
+    }
+  ],
   "redirects": [
     {
       "source": "/daikin-purwokerto",
