@@ -337,32 +337,8 @@ export default function AcLowWatt() {
             </p>
           </div>
 
-          <div className="rounded-[28px] border border-white/10 bg-white/[0.04] p-3 shadow-[0_18px_45px_rgba(15,23,42,0.18)] sm:hidden">
-            <div className="grid gap-3">
-              {comparison.map(([aspect, standard, lowWatt, inverter]) => (
-                <article key={aspect} className="rounded-[22px] border border-white/10 bg-slate-950/45 p-4">
-                  <h3 className="mb-3 text-base font-black text-cyan-300">{aspect}</h3>
-                  <div className="grid gap-2">
-                    <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-3">
-                      <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.18em] text-white/45">Standard</p>
-                      <p className="text-sm leading-6 text-white/70">{standard}</p>
-                    </div>
-                    <div className="rounded-2xl border border-cyan-300/20 bg-cyan-300/10 p-3">
-                      <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.18em] text-cyan-200">Low Watt</p>
-                      <p className="text-sm font-semibold leading-6 text-white/90">{lowWatt}</p>
-                    </div>
-                    <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-3">
-                      <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.18em] text-white/45">Inverter</p>
-                      <p className="text-sm leading-6 text-white/70">{inverter}</p>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-
-          <div className="hidden overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_18px_45px_rgba(15,23,42,0.18)] sm:block">
-            <div className="grid grid-cols-[0.75fr_1fr_1fr_1fr] border-b border-white/10 bg-cyan-400/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200/80">
+          <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
+            <div className="hidden grid-cols-[0.75fr_1fr_1fr_1fr] border-b border-white/10 bg-cyan-400/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200/80 sm:grid">
               <span>Aspek</span>
               <span>Standard</span>
               <span>Low Watt</span>
@@ -370,10 +346,10 @@ export default function AcLowWatt() {
             </div>
             <div className="divide-y divide-white/10">
               {comparison.map(([aspect, standard, lowWatt, inverter]) => (
-                <div key={aspect} className="grid grid-cols-[0.75fr_1fr_1fr_1fr] gap-4 px-5 py-4">
-                  <div className="text-sm font-black text-cyan-300">{aspect}</div>
-                  <div className="text-sm leading-6 text-white/60">{standard}</div>
-                  <div className="text-sm leading-6 text-white/85">{lowWatt}</div>
+                <div key={aspect} className="px-5 py-4 sm:grid sm:grid-cols-[0.75fr_1fr_1fr_1fr] sm:gap-4">
+                  <div className="mb-1 text-sm font-black text-cyan-300 sm:mb-0">{aspect}</div>
+                  <div className="mb-1 text-sm leading-6 text-white/60 sm:mb-0">{standard}</div>
+                  <div className="mb-1 text-sm leading-6 text-white/85 sm:mb-0">{lowWatt}</div>
                   <div className="text-sm leading-6 text-white/60">{inverter}</div>
                 </div>
               ))}
