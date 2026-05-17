@@ -38,10 +38,16 @@ const staticRoutes = [
   '/kontak',
 ]
 
+const articleRoutes = BLOG_POSTS.map((post) => `/artikel/${post.slug}`)
+
 const routes = Array.from(new Set([
   ...staticRoutes,
-  ...BLOG_POSTS.map((post) => `/artikel/${post.slug}`),
+  ...articleRoutes,
 ]))
+
+const articlePriorities = Object.fromEntries(
+  articleRoutes.map((route) => [route, 0.65])
+)
 
 export default defineConfig({
   plugins: [
@@ -84,6 +90,7 @@ export default defineConfig({
         '/kontak': 0.75,
         '/tentang-kami': 0.7,
         '/gallery': 0.7,
+        ...articlePriorities,
       },
     }),
   ],
