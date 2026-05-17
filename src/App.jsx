@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from "react"
-import { Routes, Route } from "react-router-dom"
+import { Navigate, Routes, Route } from "react-router-dom"
 
 const Home = lazy(() => import("./pages/Home"))
 const JualAcPurwokerto = lazy(() => import("./pages/JualAcPurwokerto"))
@@ -17,7 +17,6 @@ const JualAcTegal = lazy(() => import("./pages/JualAcTegal"))
 const JualAcYogyakarta = lazy(() => import("./pages/JualAcYogyakarta"))
 const KatalogAc = lazy(() => import("./pages/KatalogAc"))
 const KalkulatorAc = lazy(() => import("./pages/KalkulatorAc"))
-const InstalasiAC = lazy(() => import("./pages/InstalasiAC"))
 const InstalasiProfesional = lazy(() => import("./pages/InstalasiProfesional"))
 const AcSplitRumah = lazy(() => import("./pages/AcSplitRumah"))
 const AcInverter = lazy(() => import("./pages/AcInverter"))
@@ -36,7 +35,6 @@ const BlogPost = lazy(() => import("./pages/BlogPost"))
 const Gallery = lazy(() => import("./pages/Gallery"))
 const TentangKami = lazy(() => import("./pages/TentangKami"))
 const Kontak = lazy(() => import("./pages/Kontak"))
-const Portfolio = lazy(() => import("./pages/Portfolio"))
 const NotFound = lazy(() => import("./pages/NotFound"))
 
 import ScrollToTop from "./components/ScrollToTop"
@@ -117,7 +115,7 @@ export default function App() {
 
             <Route
               path="/daikin-purwokerto"
-              element={<DaikinPurwokerto />}
+              element={<Navigate to="/brand/daikin" replace />}
             />
 
             <Route
@@ -127,7 +125,7 @@ export default function App() {
 
             <Route
               path="/gree-purwokerto"
-              element={<GreePurwokerto />}
+              element={<Navigate to="/brand/gree" replace />}
             />
 
             <Route
@@ -137,7 +135,7 @@ export default function App() {
 
             <Route
               path="/midea-purwokerto"
-              element={<MideaPurwokerto />}
+              element={<Navigate to="/brand/midea" replace />}
             />
 
             <Route
@@ -147,7 +145,7 @@ export default function App() {
 
             <Route
               path="/hisense-purwokerto"
-              element={<HisensePurwokerto />}
+              element={<Navigate to="/brand/hisense" replace />}
             />
 
             <Route
@@ -157,7 +155,7 @@ export default function App() {
 
             <Route
               path="/sansui-purwokerto"
-              element={<SansuiPurwokerto />}
+              element={<Navigate to="/brand/sansui" replace />}
             />
 
             <Route
@@ -167,7 +165,7 @@ export default function App() {
 
             <Route
               path="/sharp-purwokerto"
-              element={<SharpPurwokerto />}
+              element={<Navigate to="/brand/sharp" replace />}
             />
 
             <Route
@@ -177,7 +175,7 @@ export default function App() {
 
             <Route
               path="/panasonic-purwokerto"
-              element={<PanasonicPurwokerto />}
+              element={<Navigate to="/brand/panasonic" replace />}
             />
 
             <Route
@@ -186,8 +184,23 @@ export default function App() {
             />
 
             <Route
+              path="/ac-inverter-purwokerto"
+              element={<Navigate to="/katalog/ac-inverter" replace />}
+            />
+
+            <Route
+              path="/ac-low-watt-purwokerto"
+              element={<Navigate to="/katalog/ac-low-watt" replace />}
+            />
+
+            <Route
+              path="/ac-purwokerto-selatan"
+              element={<Navigate to="/jual-ac-purwokerto" replace />}
+            />
+
+            <Route
               path="/instalasi-ac-banyumas"
-              element={<InstalasiAC />}
+              element={<Navigate to="/jual-ac-banyumas" replace />}
             />
 
             <Route
@@ -233,7 +246,7 @@ export default function App() {
 
             <Route
               path="/portfolio"
-              element={<Portfolio />}
+              element={<Navigate to="/gallery" replace />}
             />
 
             <Route path="*" element={<NotFound />} />
