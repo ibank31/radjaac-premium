@@ -35,6 +35,31 @@ const categoryLinks = [
   ["AC Kantor & Komersial", "/katalog/ac-kantor-komersial", Building2],
 ]
 
+const heroTrustImages = [
+  {
+    label: "Stok AC",
+    src: "/assets/gallery/thumb/gudang-stok-ac-gree-radja-ac-01-thumb.webp",
+    alt: "Stok unit AC Gree RADJA AC Purwokerto",
+  },
+  {
+    label: "Material",
+    src: "/assets/gallery/thumb/material-instalasi-ac-radja-ac-01-thumb.webp",
+    alt: "Material instalasi AC RADJA AC Purwokerto",
+  },
+  {
+    label: "Pengiriman Sharp",
+    src: "https://www.radjaac.com/assets/gallery/pengiriman/radja-ac-loading-ac-sharp-truk-kuning.webp",
+    alt: "Pengiriman stok AC Sharp RADJA AC dengan truk kuning",
+  },
+  {
+    label: "Pengiriman Aqua",
+    src: "https://www.radjaac.com/assets/gallery/pengiriman/radja-ac-pengiriman-stok-aqua-truk-putih.webp",
+    alt: "Pengiriman stok AC Aqua RADJA AC dengan truk putih",
+  },
+]
+
+const bulkIcons = [Building2, Home, Truck]
+
 function WhatsAppButton({ message, children, className = "" }) {
   return (
     <a
@@ -59,12 +84,38 @@ function SectionTitle({ eyebrow, title, description }) {
   )
 }
 
+function createDefaultBulkPurchase(config) {
+  const areaName = config.h1.replace("Jual AC ", "")
+
+  return {
+    eyebrow: "KEBUTUHAN BANYAK UNIT",
+    title: "Butuh AC untuk toko, kost, ruko, atau proyek?",
+    description:
+      "Untuk pembelian banyak unit, RADJA AC bantu cek kebutuhan ruangan, stok unit, pilihan brand, estimasi harga, pengiriman, dan jadwal pemasangan. Semua dikonfirmasi dulu supaya pembelian lebih jelas dari awal.",
+    cards: [
+      ["Toko & Ruko", "AC untuk ruang usaha, kasir, display produk, ruang tunggu, atau area pelanggan."],
+      ["Kost & Kontrakan", "Bantu pilih AC sesuai jumlah kamar, ukuran ruangan, daya listrik, dan budget."],
+      ["Kantor & Proyek Ringan", "Cek kebutuhan beberapa ruangan, stok unit, estimasi pengiriman, dan jadwal pemasangan."],
+    ],
+    ctaLabel: "Tanya Pembelian Banyak Unit",
+    waMessage:
+      `Halo RADJA AC, saya dari area ${areaName}. Mau konsultasi pembelian AC banyak unit untuk toko/kost/ruko/kantor/proyek. Mohon bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan jadwal pemasangan.`,
+  }
+}
+
 export default function CompactAreaSalesPage({ config }) {
+  const isOutsidePurwokerto = config.canonicalPath !== "/jual-ac-purwokerto"
   const valueItems = [
     ["Cek stok & harga dulu", config.valueStockText, MessageCircle],
     ["Bantu pilih PK", config.valuePkText, BadgeCheck],
     ["Pemasangan sesuai lokasi", config.valueInstallText, Truck],
   ]
+
+  const heroChips = config.heroChips || (isOutsidePurwokerto
+    ? ["Cek stok dulu", "Bisa banyak unit", "Rekomendasi PK", "Jadwal dikonfirmasi"]
+    : ["Cek stok dulu", "Rekomendasi PK", "Estimasi pasang", "COD sesuai konfirmasi"])
+
+  const bulkPurchase = config.bulkPurchase || (isOutsidePurwokerto ? createDefaultBulkPurchase(config) : null)
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -130,7 +181,7 @@ export default function CompactAreaSalesPage({ config }) {
                 </Link>
               </div>
               <div className="mb-5 flex flex-wrap justify-center gap-2 text-sm text-white/62 lg:justify-start">
-                {["Cek stok dulu", "Rekomendasi PK", "Estimasi pasang", "COD sesuai konfirmasi"].map((item) => (
+                {heroChips.map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">{item}</span>
                 ))}
               </div>
@@ -155,9 +206,52 @@ export default function CompactAreaSalesPage({ config }) {
                   className="h-[340px] w-full rounded-[26px] object-cover object-center sm:h-[430px]"
                 />
               </div>
+              <div className="mt-3 grid grid-cols-2 gap-2.5 sm:gap-3">
+                {heroTrustImages.map(({ label, src, alt }) => (
+                  <div key={src} className="group relative overflow-hidden rounded-[18px] border border-white/10 bg-white/[0.04] shadow-[0_18px_45px_rgba(8,20,47,0.24)] sm:rounded-[22px]">
+                    <img
+                      src={src}
+                      alt={alt}
+                      decoding="async"
+                      className="h-[118px] w-full object-cover transition duration-300 group-hover:scale-105 sm:h-[140px] lg:h-[136px]"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/82 to-transparent px-2 pb-2 pt-7 text-center text-[11px] font-black text-white sm:text-xs">
+                      {label}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
+
+        {bulkPurchase ? (
+          <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
+            <SectionTitle
+              eyebrow={bulkPurchase.eyebrow}
+              title={bulkPurchase.title}
+              description={bulkPurchase.description}
+            />
+            <div className="grid gap-5 md:grid-cols-3">
+              {bulkPurchase.cards.map(([title, description], index) => {
+                const Icon = bulkIcons[index] || BadgeCheck
+
+                return (
+                  <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 text-center">
+                    <Icon className="mx-auto mb-5 h-8 w-8 text-cyan-300" />
+                    <h2 className="mb-3 text-xl font-black text-white">{title}</h2>
+                    <p className="text-sm leading-7 text-white/60">{description}</p>
+                  </div>
+                )
+              })}
+            </div>
+            <div className="mt-7 text-center">
+              <WhatsAppButton message={bulkPurchase.waMessage || config.waMessage}>
+                {bulkPurchase.ctaLabel || "Tanya Pembelian Banyak Unit"}
+              </WhatsAppButton>
+            </div>
+          </section>
+        ) : null}
 
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
           <SectionTitle
@@ -183,7 +277,7 @@ export default function CompactAreaSalesPage({ config }) {
                 <Truck className="h-4 w-4" />
                 ALUR BELI AC
               </div>
-              <h2 className="mb-5 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Cek kebutuhan dulu, baru kunci jadwal</h2>
+              <h2 className="mb-5 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Cek kebutuhan dulu, baru kunci stok dan jadwal</h2>
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
                 {config.processDescription}
               </p>
@@ -207,7 +301,7 @@ export default function CompactAreaSalesPage({ config }) {
           <SectionTitle
             eyebrow="PILIHAN AC"
             title="Mulai dari brand atau kebutuhan"
-            description="Jika belum yakin memilih merek, mulai dari ukuran ruangan, daya listrik, dan jam pemakaian."
+            description={config.choiceDescription || "Jika belum yakin memilih merek, mulai dari ukuran ruangan, daya listrik, dan jam pemakaian."}
           />
           <div className="mb-5 grid grid-cols-2 gap-4 lg:grid-cols-3">
             {brandLinks.map(([title, href]) => (
