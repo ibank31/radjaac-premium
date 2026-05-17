@@ -34,15 +34,20 @@ const staticRoutes = [
   '/katalog/ac-kantor-komersial',
   '/artikel',
   '/gallery',
-  '/instalasi-profesional',
   '/tentang-kami',
   '/kontak',
 ]
 
+const articleRoutes = BLOG_POSTS.map((post) => `/artikel/${post.slug}`)
+
 const routes = Array.from(new Set([
   ...staticRoutes,
-  ...BLOG_POSTS.map((post) => `/artikel/${post.slug}`),
+  ...articleRoutes,
 ]))
+
+const articlePriorities = Object.fromEntries(
+  articleRoutes.map((route) => [route, 0.65])
+)
 
 export default defineConfig({
   plugins: [
@@ -82,10 +87,10 @@ export default defineConfig({
         '/jual-ac-yogyakarta': 0.78,
         '/brand/lainnya': 0.78,
         '/artikel': 0.75,
-        '/instalasi-profesional': 0.75,
         '/kontak': 0.75,
         '/tentang-kami': 0.7,
         '/gallery': 0.7,
+        ...articlePriorities,
       },
     }),
   ],
