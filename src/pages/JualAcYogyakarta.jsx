@@ -52,6 +52,16 @@ const areaChips = [
 
 const deliveryTrustImages = [
   {
+    label: "Stok AC",
+    src: "/assets/gallery/thumb/gudang-stok-ac-gree-radja-ac-01-thumb.webp",
+    alt: "Stok unit AC Gree RADJA AC Purwokerto",
+  },
+  {
+    label: "Material",
+    src: "/assets/gallery/thumb/material-instalasi-ac-radja-ac-01-thumb.webp",
+    alt: "Material instalasi AC RADJA AC Purwokerto",
+  },
+  {
     label: "Pengiriman Sharp",
     src: "https://www.radjaac.com/assets/gallery/pengiriman/radja-ac-loading-ac-sharp-truk-kuning.webp",
     alt: "Pengiriman stok AC Sharp RADJA AC dengan truk kuning",
@@ -207,7 +217,7 @@ export default function JualAcYogyakarta() {
                 ))}
               </div>
               <p className="mt-3 text-center text-xs leading-6 text-white/45 sm:text-sm">
-                Dokumentasi stok dan pengiriman RADJA AC untuk bantu calon pembeli lebih yakin sebelum konsultasi.
+                Dokumentasi stok, material, dan pengiriman RADJA AC untuk bantu calon pembeli lebih yakin sebelum konsultasi.
               </p>
             </div>
           </div>
