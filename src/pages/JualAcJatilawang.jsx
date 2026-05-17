@@ -2,27 +2,27 @@ import CompactAreaSalesPage from "../components/area/CompactAreaSalesPage"
 
 const areaConfig = {
   canonicalPath: "/jual-ac-jatilawang",
-  seoTitle: "Jual AC Jatilawang | Rumah, Toko, Kost & Area Selatan Banyumas — RADJA AC",
+  seoTitle: "Jual AC Jatilawang | Jalur Selatan Banyumas, Rumah, Toko & Kost — RADJA AC",
   seoDescription:
-    "RADJA AC melayani pembelian AC area Jatilawang. Konsultasi AC untuk rumah, toko, kost, ruko, kantor kecil, cek stok, rekomendasi PK, pengiriman, dan pemasangan.",
+    "RADJA AC melayani pembelian AC area Jatilawang dan jalur selatan Banyumas. Cocok untuk rumah, toko, kost, ruko, banyak unit, pengiriman, dan pemasangan by konfirmasi.",
   localBusinessDescription:
-    "Toko AC Purwokerto yang melayani pembelian AC untuk area Jatilawang dan Banyumas selatan, termasuk kebutuhan rumah, toko, kost, ruko, kantor kecil, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
+    "Toko AC Purwokerto yang melayani pembelian AC untuk area Jatilawang dan jalur selatan Banyumas, termasuk kebutuhan rumah, toko, kost, ruko, kantor kecil, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA JATILAWANG",
   h1: "Jual AC Jatilawang",
-  heroHighlight: "untuk rumah, toko, kost, dan area selatan Banyumas",
+  heroHighlight: "jalur selatan Banyumas untuk rumah, toko, kost, dan banyak unit",
   heroDescription:
-    "RADJA AC Purwokerto melayani konsultasi pembelian AC untuk area Jatilawang, Tunjung, Tinggarjaya, Kedungwringin, Adisara, dan sekitar Banyumas selatan. Cocok untuk rumah, toko, ruko, kost, kantor kecil, atau pembelian beberapa unit dengan cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai lokasi.",
+    "RADJA AC Purwokerto melayani konsultasi pembelian AC untuk area Jatilawang, Tunjung, Tinggarjaya, Kedungwringin, Adisara, dan sekitar jalur selatan Banyumas. Cocok untuk rumah, toko, ruko, kost, kantor kecil, atau beberapa unit dengan cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai konfirmasi rute serta lokasi.",
   primaryCta: "Tanya AC Jatilawang",
   waMessage:
-    "Halo RADJA AC, saya dari Jatilawang. Mau tanya AC untuk rumah/toko/kost/ruko, cek stok, harga, rekomendasi PK, dan estimasi pemasangan.",
-  heroChips: ["Banyumas selatan", "Rumah & toko", "Kost/ruko", "Bisa banyak unit", "Rute dicek dulu"],
+    "Halo RADJA AC, saya dari Jatilawang. Mau tanya AC untuk rumah/toko/kost/ruko area selatan Banyumas, cek stok, harga, rekomendasi PK, dan opsi pengiriman atau pemasangan.",
+  heroChips: ["Selatan Banyumas", "Rumah & toko", "Kost/ruko", "Bisa banyak unit", "Rute dicek dulu"],
   schemaAreas: ["Jatilawang", "Tunjung", "Tinggarjaya", "Kedungwringin", "Karanglewas", "Gunung Wetan", "Adisara", "Margasana", "Wangon", "Purwojati", "Rawalo", "Banyumas"],
   relatedAreaLinks: [["Banyumas", "/jual-ac-banyumas"], ["Wangon", "/jual-ac-wangon"], ["Ajibarang", "/jual-ac-ajibarang"]],
   bulkPurchase: {
-    eyebrow: "AREA SELATAN BANYUMAS",
+    eyebrow: "JALUR SELATAN BANYUMAS",
     title: "Butuh AC untuk rumah, toko, kost, atau ruko area Jatilawang?",
     description:
-      "Untuk area Jatilawang dan sekitarnya, konsultasi awal membantu memperjelas kebutuhan unit, ukuran ruangan, daya listrik, rute pengiriman, pilihan brand, dan jadwal pemasangan.",
+      "Untuk area Jatilawang, Rawalo, Wangon, dan jalur selatan Banyumas, konsultasi awal membantu memperjelas kebutuhan unit, ukuran ruangan, daya listrik, rute pengiriman, pilihan brand, dan jadwal pemasangan.",
     cards: [
       ["Rumah & Kamar", "Bantu pilih AC untuk kamar tidur, ruang keluarga kecil, ruang kerja, atau pemakaian harian."],
       ["Toko & Ruko", "Cocok untuk ruang usaha, area pelanggan, kasir, display produk, atau ruang tunggu."],
@@ -30,9 +30,9 @@ const areaConfig = {
     ],
     ctaLabel: "Tanya AC Area Jatilawang",
     waMessage:
-      "Halo RADJA AC, saya dari Jatilawang. Mau konsultasi AC untuk rumah/toko/kost/ruko. Mohon bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan pemasangan.",
+      "Halo RADJA AC, saya dari Jatilawang. Mau konsultasi AC untuk rumah/toko/kost/ruko atau banyak unit. Mohon bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan opsi pemasangan.",
   },
-  valueTitle: "Beli AC area Jatilawang lebih jelas dari awal",
+  valueTitle: "Beli AC area Jatilawang perlu cek rute dari awal",
   valueDescription:
     "Karena Jatilawang berada di jalur selatan Banyumas, data alamat, rute, jenis ruangan, jumlah unit, dan kondisi pemasangan membantu estimasi lebih akurat.",
   valueStockText:
