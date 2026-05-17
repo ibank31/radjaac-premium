@@ -39,7 +39,7 @@ const heroTrustImages = [
   {
     label: "Stok AC",
     src: "/assets/gallery/thumb/gudang-stok-ac-gree-radja-ac-01-thumb.webp",
-    alt: "Stok unit AC RADJA AC Purwokerto",
+    alt: "Stok unit AC Gree RADJA AC Purwokerto",
   },
   {
     label: "Material",
@@ -49,7 +49,12 @@ const heroTrustImages = [
   {
     label: "Gudang",
     src: "/assets/gallery/thumb/gudang-stok-ac-gree-radja-ac-02-thumb.webp",
-    alt: "Gudang stok AC RADJA AC Purwokerto",
+    alt: "Gudang stok AC Gree RADJA AC Purwokerto",
+  },
+  {
+    label: "Daikin Gree",
+    src: "/assets/gallery/thumb/gudang-stok-ac-daikin-gree-radja-ac-01-thumb.webp",
+    alt: "Gudang stok AC Daikin dan Gree RADJA AC Purwokerto",
   },
 ]
 
@@ -173,16 +178,16 @@ export default function CompactAreaSalesPage({ config }) {
                   className="h-[340px] w-full rounded-[26px] object-cover object-center sm:h-[430px]"
                 />
               </div>
-              <div className="mt-3 grid grid-cols-3 gap-2 sm:gap-3">
+              <div className="mt-3 grid grid-cols-2 gap-2.5 sm:gap-3">
                 {heroTrustImages.map(({ label, src, alt }) => (
                   <div key={src} className="group relative overflow-hidden rounded-[18px] border border-white/10 bg-white/[0.04] shadow-[0_18px_45px_rgba(8,20,47,0.24)] sm:rounded-[22px]">
                     <img
                       src={src}
                       alt={alt}
                       decoding="async"
-                      className="h-[74px] w-full object-cover transition duration-300 group-hover:scale-105 sm:h-[88px] lg:h-[92px]"
+                      className="h-[118px] w-full object-cover transition duration-300 group-hover:scale-105 sm:h-[140px] lg:h-[136px]"
                     />
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/82 to-transparent px-2 pb-2 pt-6 text-center text-[10px] font-black text-white sm:text-xs">
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/82 to-transparent px-2 pb-2 pt-7 text-center text-[11px] font-black text-white sm:text-xs">
                       {label}
                     </div>
                   </div>
