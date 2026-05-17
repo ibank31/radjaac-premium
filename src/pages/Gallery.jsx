@@ -51,10 +51,34 @@ const galleryVideos = [
 
 const galleryItems = [
   {
-    title: "Pengiriman RADJA AC",
+    title: "Pengiriman Sharp & Midea",
     category: "Pengiriman",
-    image: "/assets/gallery/large/pengiriman-radjaac.webp",
-    thumbnail: "/assets/gallery/large/pengiriman-radjaac.webp",
+    image: "/assets/gallery/pengiriman/pengiriman-sharp-midea.webp",
+    thumbnail: "/assets/gallery/pengiriman/pengiriman-sharp-midea.webp",
+  },
+  {
+    title: "Loading AC Sharp Truk Kuning",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/radja-ac-loading-ac-sharp-truk-kuning.webp",
+    thumbnail: "/assets/gallery/pengiriman/radja-ac-loading-ac-sharp-truk-kuning.webp",
+  },
+  {
+    title: "Pengiriman Stok Aqua Truk Putih",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/radja-ac-pengiriman-stok-aqua-truk-putih.webp",
+    thumbnail: "/assets/gallery/pengiriman/radja-ac-pengiriman-stok-aqua-truk-putih.webp",
+  },
+  {
+    title: "Persiapan Pengiriman RADJA AC",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/radja-ac-persiapan-pengiriman.webp",
+    thumbnail: "/assets/gallery/pengiriman/radja-ac-persiapan-pengiriman.webp",
+  },
+  {
+    title: "Stok AC Sharp RADJA AC",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/radja-ac-stok-sharp.webp",
+    thumbnail: "/assets/gallery/pengiriman/radja-ac-stok-sharp.webp",
   },
   {
     title: "Showroom Gree RADJA AC Purwokerto",
