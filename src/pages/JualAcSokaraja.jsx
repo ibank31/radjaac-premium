@@ -14,7 +14,7 @@ const areaConfig = {
     "RADJA AC Purwokerto melayani pembelian AC untuk area Sokaraja dan sekitarnya. Konsultasi stok, harga, kapasitas PK, estimasi pemasangan, dan opsi COD/bayar di tempat sesuai konfirmasi lokasi.",
   primaryCta: "Tanya AC Sokaraja",
   waMessage:
-    "Halo RADJA AC, saya dari area Sokaraja. Mau tanya AC yang bisa COD/bayar di tempat. Mohon bantu cek stok, harga, rekomendasi PK, dan estimasi pemasangan AC.",
+    "Halo RADJA AC, saya dari Sokaraja. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
   schemaAreas: ["Sokaraja", "Sokaraja Kulon", "Sokaraja Wetan", "Karangnanas", "Kembaran", "Kalibagor", "Patikraja", "Purwokerto Timur", "Purwokerto Selatan", "Banyumas"],
   relatedAreaLinks: [["Banyumas", "/jual-ac-banyumas"], ["Purwokerto", "/jual-ac-purwokerto"], ["Ajibarang", "/jual-ac-ajibarang"]],
   valueTitle: "Beli AC area Sokaraja lebih jelas dari awal",
