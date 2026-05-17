@@ -84,14 +84,38 @@ function SectionTitle({ eyebrow, title, description }) {
   )
 }
 
+function createDefaultBulkPurchase(config) {
+  const areaName = config.h1.replace("Jual AC ", "")
+
+  return {
+    eyebrow: "KEBUTUHAN BANYAK UNIT",
+    title: "Butuh AC untuk toko, kost, ruko, atau proyek?",
+    description:
+      "Untuk pembelian banyak unit, RADJA AC bantu cek kebutuhan ruangan, stok unit, pilihan brand, estimasi harga, pengiriman, dan jadwal pemasangan. Semua dikonfirmasi dulu supaya pembelian lebih jelas dari awal.",
+    cards: [
+      ["Toko & Ruko", "AC untuk ruang usaha, kasir, display produk, ruang tunggu, atau area pelanggan."],
+      ["Kost & Kontrakan", "Bantu pilih AC sesuai jumlah kamar, ukuran ruangan, daya listrik, dan budget."],
+      ["Kantor & Proyek Ringan", "Cek kebutuhan beberapa ruangan, stok unit, estimasi pengiriman, dan jadwal pemasangan."],
+    ],
+    ctaLabel: "Tanya Pembelian Banyak Unit",
+    waMessage:
+      `Halo RADJA AC, saya dari area ${areaName}. Mau konsultasi pembelian AC banyak unit untuk toko/kost/ruko/kantor/proyek. Mohon bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan jadwal pemasangan.`,
+  }
+}
+
 export default function CompactAreaSalesPage({ config }) {
+  const isOutsidePurwokerto = config.canonicalPath !== "/jual-ac-purwokerto"
   const valueItems = [
     ["Cek stok & harga dulu", config.valueStockText, MessageCircle],
     ["Bantu pilih PK", config.valuePkText, BadgeCheck],
     ["Pemasangan sesuai lokasi", config.valueInstallText, Truck],
   ]
 
-  const heroChips = config.heroChips || ["Cek stok dulu", "Rekomendasi PK", "Estimasi pasang", "COD sesuai konfirmasi"]
+  const heroChips = config.heroChips || (isOutsidePurwokerto
+    ? ["Cek stok dulu", "Bisa banyak unit", "Rekomendasi PK", "Jadwal dikonfirmasi"]
+    : ["Cek stok dulu", "Rekomendasi PK", "Estimasi pasang", "COD sesuai konfirmasi"])
+
+  const bulkPurchase = config.bulkPurchase || (isOutsidePurwokerto ? createDefaultBulkPurchase(config) : null)
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -201,15 +225,15 @@ export default function CompactAreaSalesPage({ config }) {
           </div>
         </section>
 
-        {config.bulkPurchase ? (
+        {bulkPurchase ? (
           <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-12">
             <SectionTitle
-              eyebrow={config.bulkPurchase.eyebrow}
-              title={config.bulkPurchase.title}
-              description={config.bulkPurchase.description}
+              eyebrow={bulkPurchase.eyebrow}
+              title={bulkPurchase.title}
+              description={bulkPurchase.description}
             />
             <div className="grid gap-5 md:grid-cols-3">
-              {config.bulkPurchase.cards.map(([title, description], index) => {
+              {bulkPurchase.cards.map(([title, description], index) => {
                 const Icon = bulkIcons[index] || BadgeCheck
 
                 return (
@@ -222,8 +246,8 @@ export default function CompactAreaSalesPage({ config }) {
               })}
             </div>
             <div className="mt-7 text-center">
-              <WhatsAppButton message={config.bulkPurchase.waMessage || config.waMessage}>
-                {config.bulkPurchase.ctaLabel || "Tanya Pembelian Banyak Unit"}
+              <WhatsAppButton message={bulkPurchase.waMessage || config.waMessage}>
+                {bulkPurchase.ctaLabel || "Tanya Pembelian Banyak Unit"}
               </WhatsAppButton>
             </div>
           </section>
