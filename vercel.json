@@ -36,6 +36,21 @@
       "permanent": true
     },
     {
+      "source": "/ac-inverter-purwokerto",
+      "destination": "/katalog/ac-inverter",
+      "permanent": true
+    },
+    {
+      "source": "/ac-low-watt-purwokerto",
+      "destination": "/katalog/ac-low-watt",
+      "permanent": true
+    },
+    {
+      "source": "/ac-purwokerto-selatan",
+      "destination": "/jual-ac-purwokerto",
+      "permanent": true
+    },
+    {
       "source": "/instalasi-ac-banyumas",
       "destination": "/jual-ac-banyumas",
       "permanent": true
