@@ -14,7 +14,7 @@ const areaConfig = {
     "RADJA AC Purwokerto melayani pembelian AC untuk area Cilacap dan sekitarnya. Bisa bantu cek stok, harga, rekomendasi PK, opsi pengiriman, serta kebutuhan banyak unit untuk toko, kost, ruko, atau kantor kecil sesuai konfirmasi lokasi, rute, dan jadwal.",
   primaryCta: "Tanya AC Cilacap",
   waMessage:
-    "Halo RADJA AC, saya dari area Cilacap. Mau konsultasi pembelian AC.",
+    "Halo RADJA AC, saya dari Cilacap. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
   heroChips: ["Cek stok dulu", "Bisa banyak unit", "Rekomendasi PK", "Jadwal dikonfirmasi"],
   schemaAreas: ["Cilacap", "Maos", "Kroya", "Sampang", "Adipala", "Kesugihan", "Jeruklegi", "Majenang", "Sidareja", "Purwokerto", "Banyumas", "Wangon"],
   relatedAreaLinks: [["Wangon", "/jual-ac-wangon"], ["Banyumas", "/jual-ac-banyumas"], ["Purwokerto", "/jual-ac-purwokerto"]],
@@ -30,7 +30,7 @@ const areaConfig = {
     ],
     ctaLabel: "Tanya Pembelian Banyak Unit",
     waMessage:
-      "Halo RADJA AC, saya dari area Cilacap. Mau konsultasi pembelian AC banyak unit untuk toko/kost/ruko/kantor. Mohon bantu cek stok, rekomendasi PK, estimasi harga, opsi pengiriman, dan jadwal pemasangan.",
+      "Halo RADJA AC, saya dari Cilacap. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
   },
   valueTitle: "Beli AC area Cilacap lebih jelas dari awal",
   valueDescription:
