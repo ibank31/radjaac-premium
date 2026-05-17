@@ -4,14 +4,14 @@ const areaConfig = {
   canonicalPath: "/jual-ac-banjarnegara",
   seoTitle: "Jual AC Banjarnegara | Unit Only & Banyak Unit untuk Kost, Toko, Kantor — RADJA AC",
   seoDescription:
-    "RADJA AC melayani konsultasi pembelian AC area Banjarnegara untuk unit only, banyak unit, kost, toko, ruko, kantor, proyek kecil, dan opsi pemasangan sesuai lokasi.",
+    "RADJA AC melayani konsultasi pembelian AC area Banjarnegara untuk unit only, banyak unit, kost, toko, ruko, kantor, dan opsi pengiriman atau pemasangan sesuai lokasi.",
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani konsultasi pembelian unit AC untuk area Banjarnegara dan sekitarnya, termasuk unit only, banyak unit untuk kost, toko, ruko, kantor, pilihan brand, pengiriman, dan opsi pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA BANJARNEGARA",
   h1: "Jual AC Banjarnegara",
   heroHighlight: "unit only, banyak unit, dan rute dikonfirmasi",
   heroDescription:
-    "RADJA AC melayani konsultasi pembelian AC untuk area Banjarnegara, Bawang, Sigaluh, Madukara, Banjarmangu, Rakit, Purwareja Klampok, Mandiraja, dan sekitarnya. Fokus utama untuk unit only dan pembelian beberapa unit bagi kost, toko, ruko, kantor kecil, kontraktor, atau proyek ringan. Pengiriman atau pemasangan dikonfirmasi dulu berdasarkan rute, lokasi, jumlah unit, dan jadwal teknisi.",
+    "RADJA AC melayani konsultasi pembelian AC untuk area Banjarnegara, Bawang, Sigaluh, Madukara, Banjarmangu, Rakit, Purwareja Klampok, Mandiraja, dan sekitarnya. Fokus utama untuk unit only dan pembelian beberapa unit bagi kost, toko, ruko, kantor kecil, kontraktor, atau kebutuhan usaha. Pengiriman atau pemasangan dikonfirmasi dulu berdasarkan rute, lokasi, jumlah unit, dan jadwal teknisi.",
   primaryCta: "Tanya AC Banjarnegara",
   waMessage:
     "Halo RADJA AC, saya dari Banjarnegara. Mau tanya AC unit only / banyak unit untuk kost/toko/ruko/kantor. Mohon bantu cek stok, harga, dan opsi pengiriman atau pemasangan.",
@@ -20,9 +20,9 @@ const areaConfig = {
   relatedAreaLinks: [["Purbalingga", "/jual-ac-purbalingga"], ["Purwokerto", "/jual-ac-purwokerto"], ["Banyumas", "/jual-ac-banyumas"]],
   bulkPurchase: {
     eyebrow: "UNIT ONLY & BANYAK UNIT",
-    title: "Butuh AC untuk kost, toko, ruko, kantor, atau proyek area Banjarnegara?",
+    title: "Butuh AC untuk kost, toko, ruko, kantor, atau usaha area Banjarnegara?",
     description:
-      "Untuk Banjarnegara, konsultasi pembelian sebaiknya dimulai dari jumlah unit, area pengiriman, dan kebutuhan unit only atau pasang. RADJA AC bantu cek stok, pilihan brand, rekomendasi PK, harga untuk beberapa unit, opsi pengiriman, dan kemungkinan pemasangan bila rute serta jadwal memungkinkan.",
+      "Untuk Banjarnegara, konsultasi pembelian sebaiknya dimulai dari jumlah unit, area pengiriman, dan kebutuhan unit only atau opsi pasang. RADJA AC bantu cek stok, pilihan brand, rekomendasi PK, harga untuk beberapa unit, opsi pengiriman, dan kemungkinan pemasangan bila rute serta jadwal memungkinkan.",
     cards: [
       ["Unit Only", "Cocok untuk kontraktor, pengelola kost, toko, ruko, kantor, atau pembeli yang sudah punya teknisi sendiri."],
       ["Kost & Banyak Kamar", "Bantu hitungkan kebutuhan beberapa kamar dengan pilihan AC hemat, low watt, atau inverter."],
@@ -42,7 +42,7 @@ const areaConfig = {
   valueInstallText:
     "Untuk Banjarnegara, pengiriman dan opsi pemasangan menyesuaikan rute, alamat, jumlah unit, akses titik pemasangan, dan jadwal teknisi.",
   processDescription:
-    "Pembelian AC area Banjarnegara perlu dikonfirmasi dulu berdasarkan alamat, jumlah unit, kebutuhan unit only atau pasang, stok, rute, dan akses titik pemasangan. Ini membantu harga dan jadwal lebih transparan.",
+    "Pembelian AC area Banjarnegara perlu dikonfirmasi dulu berdasarkan alamat, jumlah unit, kebutuhan unit only atau opsi pasang, stok, rute, dan akses titik pemasangan. Ini membantu harga dan jadwal lebih transparan.",
   processSteps: [
     ["Kirim lokasi & jumlah unit", "Sebutkan area Banjarnegara/sekitarnya, jumlah unit, kebutuhan unit only atau pasang, jenis ruangan, ukuran ruangan, daya listrik, dan budget."],
     ["Cek stok, brand & PK", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, tipe low watt/inverter, harga beberapa unit, dan opsi pengiriman."],
@@ -58,7 +58,7 @@ const areaConfig = {
   ],
   finalCtaTitle: "Mau beli AC banyak unit area Banjarnegara?",
   finalCtaDescription:
-    "Kirim lokasi, jumlah unit, kebutuhan unit only atau sekalian pasang, jenis ruangan, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, opsi pengiriman, dan jadwal sesuai konfirmasi.",
+    "Kirim lokasi, jumlah unit, kebutuhan unit only atau opsi pasang, jenis ruangan, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, opsi pengiriman, dan jadwal sesuai konfirmasi.",
 }
 
 export default function JualAcBanjarnegara() {
