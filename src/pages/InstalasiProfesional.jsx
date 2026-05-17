@@ -21,28 +21,28 @@ const WA_LINK = SITE_DATA.whatsappUrl
 const processItems = [
   {
     step: "01",
-    title: "Konsultasi kebutuhan",
-    description: "Ceritakan ukuran ruangan, daya listrik, dan kebutuhan penggunaan agar rekomendasi instalasi lebih tepat.",
+    title: "Konsultasi unit & ruangan",
+    description: "Ceritakan ukuran ruangan, daya listrik, budget, dan rencana pemakaian agar pilihan AC dan kebutuhan pemasangan lebih tepat.",
   },
   {
     step: "02",
-    title: "Penentuan titik AC",
-    description: "Posisi indoor, outdoor, jalur pipa, dan kabel dipertimbangkan agar hasilnya rapi serta nyaman digunakan.",
+    title: "Cek titik pemasangan",
+    description: "Posisi indoor, outdoor, jalur pipa, kabel, dan drainase dipertimbangkan sejak awal supaya hasilnya rapi dan nyaman digunakan.",
   },
   {
     step: "03",
-    title: "Pemasangan unit",
-    description: "Unit dipasang dengan bracket yang kokoh, jalur pipa tertata, dan finishing yang dibuat bersih.",
+    title: "Pemasangan unit baru",
+    description: "Unit AC baru dipasang dengan bracket yang kokoh, jalur pipa tertata, dan finishing area kerja yang dibuat bersih.",
   },
   {
     step: "04",
-    title: "Vacuum & pengecekan",
+    title: "Vacuum & pengecekan awal",
     description: "Sistem dicek sebelum digunakan untuk membantu menjaga performa pendinginan dan mengurangi risiko masalah awal.",
   },
   {
     step: "05",
-    title: "Edukasi penggunaan",
-    description: "Teknisi membantu menjelaskan penggunaan dasar agar AC bisa dipakai dengan lebih nyaman dan efisien.",
+    title: "Arahan penggunaan",
+    description: "Teknisi membantu menjelaskan penggunaan dasar agar AC baru bisa dipakai dengan lebih nyaman dan efisien.",
   },
 ]
 
@@ -59,7 +59,7 @@ const standards = [
   },
   {
     title: "Pengecekan sebelum selesai",
-    description: "Unit diuji setelah pemasangan untuk memastikan AC menyala dan bekerja dengan normal.",
+    description: "Unit diuji setelah pemasangan untuk memastikan AC baru menyala dan bekerja dengan normal.",
     icon: ClipboardCheck,
   },
   {
@@ -70,12 +70,12 @@ const standards = [
 ]
 
 const proofPoints = [
-  "Instalasi rapi untuk AC baru",
+  "Pemasangan untuk AC baru",
   "Dibantu teknisi berpengalaman",
-  "Konsultasi posisi indoor & outdoor",
+  "Konsultasi unit, PK, dan titik pasang",
 ]
 
-function WhatsAppButton({ children = "Konsultasi Instalasi" }) {
+function WhatsAppButton({ children = "Konsultasi Pembelian & Pemasangan" }) {
   return (
     <a
       href={WA_LINK}
@@ -98,8 +98,8 @@ function InstallationVisual() {
       <div className="relative rounded-[28px] border border-white/10 bg-white/[0.035] p-4">
         <div className="mb-4 flex items-center justify-between gap-4">
           <div>
-            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Visual Instalasi</p>
-            <h3 className="text-xl font-black text-white">Foto proyek menyusul</h3>
+            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Standar Pemasangan</p>
+            <h3 className="text-xl font-black text-white">Siap dari unit sampai titik pasang</h3>
           </div>
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
             <Wrench className="h-6 w-6" />
@@ -108,10 +108,10 @@ function InstallationVisual() {
 
         <div className="space-y-3">
           {[
-            "Indoor unit",
-            "Jalur pipa & kabel",
-            "Outdoor unit",
-            "Pengecekan akhir",
+            "Rekomendasi unit & PK",
+            "Titik indoor & outdoor",
+            "Jalur pipa, kabel, dan drainase",
+            "Pengecekan awal unit",
           ].map((item) => (
             <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-950/60 p-3.5">
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-cyan-300/10 text-cyan-300">
@@ -123,7 +123,7 @@ function InstallationVisual() {
         </div>
 
         <div className="mt-4 rounded-2xl border border-cyan-300/15 bg-cyan-300/10 p-4 text-sm leading-6 text-white/65">
-          Nanti area ini bisa diganti foto instalasi asli RADJA AC.
+          Fokus halaman ini adalah membantu pembelian AC baru agar pilihan unit dan kebutuhan pemasangannya lebih jelas dari awal.
         </div>
       </div>
     </div>
@@ -134,8 +134,8 @@ export default function InstalasiProfesional() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="Instalasi AC Profesional Purwokerto & Banyumas | RADJA AC"
-        description="Layanan instalasi AC rapi untuk pembelian AC di RADJA AC. Dibantu konsultasi titik pemasangan, jalur pipa, posisi indoor-outdoor, dan pengecekan unit untuk area Purwokerto & Banyumas."
+        title="Pemasangan AC Baru Purwokerto & Banyumas | RADJA AC"
+        description="Dukungan pemasangan AC baru untuk pembelian di RADJA AC. Konsultasi pilihan unit, PK, titik indoor-outdoor, jalur pipa, dan pengecekan awal untuk area Purwokerto & Banyumas."
         canonicalPath="/instalasi-profesional"
       />
 
@@ -144,7 +144,7 @@ export default function InstalasiProfesional() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Instalasi AC Profesional",
+            name: "Pemasangan AC Baru RADJA AC",
             provider: { "@type": "LocalBusiness", name: "RADJA AC" },
             areaServed: ["Purwokerto", "Banyumas"],
           })}
@@ -164,22 +164,22 @@ export default function InstalasiProfesional() {
             <div className="text-left">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200">
                 <span className="h-2 w-2 rounded-full bg-cyan-300" />
-                INSTALASI PROFESIONAL
+                PEMASANGAN AC BARU
               </div>
 
               <div className="mb-4 text-sm text-white/50">
                 <Link to="/" className="transition hover:text-cyan-200">Beranda</Link>
                 <span className="mx-2">/</span>
-                <span className="text-white/80">Instalasi Profesional</span>
+                <span className="text-white/80">Pemasangan AC Baru</span>
               </div>
 
               <h1 className="mb-5 max-w-2xl text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl">
-                Instalasi AC rapi
-                <span className="block text-cyan-300">untuk unit baru Anda</span>
+                Pemasangan AC baru
+                <span className="block text-cyan-300">setelah pembelian unit</span>
               </h1>
 
               <p className="mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                RADJA AC membantu pemasangan AC baru dengan titik indoor-outdoor yang tepat, jalur pipa tertata, dan pengecekan unit sebelum digunakan.
+                RADJA AC membantu pembelian AC baru sekaligus mengarahkan kebutuhan pemasangannya, mulai dari pilihan PK, posisi indoor-outdoor, jalur pipa, hingga pengecekan awal unit.
               </p>
 
               <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -207,10 +207,10 @@ export default function InstalasiProfesional() {
 
         <section id="proses-instalasi" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-14">
           <div className="mx-auto mb-8 max-w-3xl text-center">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">PROSES INSTALASI</p>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Alur pemasangan dibuat jelas dari awal</h2>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">PROSES PEMBELIAN & PEMASANGAN</p>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Alur dibuat jelas dari awal</h2>
             <p className="mx-auto max-w-2xl text-sm leading-7 text-white/60 sm:text-base">
-              Proses dibuat sederhana agar pelanggan tahu apa yang dicek, dipasang, dan diselesaikan sebelum AC digunakan.
+              Proses dibuat sederhana agar pelanggan tahu apa yang perlu dicek sebelum membeli unit, saat menentukan titik pasang, dan sebelum AC baru digunakan.
             </p>
           </div>
 
@@ -229,10 +229,10 @@ export default function InstalasiProfesional() {
 
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-14">
           <div className="mx-auto mb-8 max-w-3xl text-center lg:mx-0 lg:text-left">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">STANDAR KERJA</p>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Yang diperhatikan saat instalasi</h2>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">STANDAR PEMASANGAN</p>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Yang diperhatikan saat pasang AC baru</h2>
             <p className="max-w-2xl text-sm leading-7 text-white/60 sm:text-base">
-              Pemasangan yang rapi bukan cuma soal tampilan, tapi juga kenyamanan penggunaan dan kemudahan perawatan ke depannya.
+              Pemasangan yang rapi bukan cuma soal tampilan, tapi juga kenyamanan penggunaan, keamanan posisi unit, dan kemudahan perawatan ke depannya.
             </p>
           </div>
 
@@ -256,9 +256,9 @@ export default function InstalasiProfesional() {
 
             <div className="relative">
               <div className="mb-4 flex justify-center text-cyan-300"><MessageCircle className="h-10 w-10" /></div>
-              <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mau pasang AC baru dengan rapi?</h2>
+              <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mau beli AC sekaligus pasang rapi?</h2>
               <p className="mx-auto mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-                Kirim kebutuhan ruangan, lokasi pemasangan, dan jenis AC yang ingin dipasang. Tim RADJA AC akan bantu arahkan pilihan dan proses instalasinya.
+                Kirim ukuran ruangan, daya listrik, lokasi pemasangan, dan budget AC. Tim RADJA AC bantu arahkan pilihan unit sekaligus kebutuhan pemasangannya.
               </p>
               <WhatsAppButton>Konsultasi via WhatsApp</WhatsAppButton>
             </div>
