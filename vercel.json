@@ -37,7 +37,12 @@
     },
     {
       "source": "/instalasi-ac-banyumas",
-      "destination": "/artikel/panduan-instalasi-ac-baru",
+      "destination": "/jual-ac-banyumas",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/gallery",
       "permanent": true
     },
     {
