@@ -2,63 +2,63 @@ import CompactAreaSalesPage from "../components/area/CompactAreaSalesPage"
 
 const areaConfig = {
   canonicalPath: "/jual-ac-purbalingga",
-  seoTitle: "Jual AC Purbalingga | Stok, PK & Banyak Unit — RADJA AC",
+  seoTitle: "Jual AC Purbalingga | Unit Rumah, Toko, Kost & Proyek — RADJA AC",
   seoDescription:
-    "RADJA AC melayani pembelian AC area Purbalingga. Cek stok, harga, rekomendasi PK, pengiriman, pemasangan, dan kebutuhan banyak unit untuk toko, kost, ruko, kantor, atau proyek.",
+    "RADJA AC melayani pembelian AC area Purbalingga. Konsultasi AC untuk rumah, toko, kost, ruko, kantor, proyek kecil, cek stok, rekomendasi PK, pengiriman, dan pemasangan.",
   localBusinessDescription:
-    "Toko AC Purwokerto yang melayani pembelian AC untuk area Purbalingga dan sekitarnya, termasuk cek stok, rekomendasi PK, pilihan brand, pengiriman, pemasangan, dan kebutuhan banyak unit sesuai konfirmasi lokasi.",
+    "Toko AC Purwokerto yang melayani pembelian AC untuk area Purbalingga dan sekitarnya, termasuk kebutuhan rumah, toko, kost, ruko, kantor, proyek kecil, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA PURBALINGGA",
   h1: "Jual AC Purbalingga",
-  heroHighlight: "cek stok, rekomendasi PK, dan pembelian banyak unit",
+  heroHighlight: "untuk rumah, usaha, kost, kantor, dan proyek kecil",
   heroDescription:
-    "RADJA AC Purwokerto melayani pembelian AC untuk area Purbalingga dan sekitarnya. Bisa bantu cek stok, harga, rekomendasi PK, pengiriman, serta kebutuhan banyak unit untuk toko, kost, ruko, kantor kecil, atau proyek sesuai konfirmasi lokasi dan jadwal.",
+    "RADJA AC Purwokerto melayani konsultasi pembelian AC untuk area Purbalingga, Kalimanah, Padamara, Bojongsari, Bobotsari, dan sekitarnya. Cocok untuk rumah, toko, ruko, kost, kantor kecil, atau kebutuhan beberapa unit dengan cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai lokasi.",
   primaryCta: "Tanya AC Purbalingga",
   waMessage:
-    "Halo RADJA AC, saya dari Purbalingga. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
-  heroChips: ["Cek stok dulu", "Bisa banyak unit", "Rekomendasi PK", "Jadwal dikonfirmasi"],
+    "Halo RADJA AC, saya dari Purbalingga. Mau tanya AC untuk rumah/usaha/kost/kantor, cek stok, harga, rekomendasi PK, dan estimasi pemasangan.",
+  heroChips: ["Rumah & usaha", "Kost/kantor", "Bisa banyak unit", "Cek PK dulu", "Lokasi dikonfirmasi"],
   schemaAreas: ["Purbalingga", "Kalimanah", "Padamara", "Bojongsari", "Bobotsari", "Mrebet", "Bukateja", "Kutasari", "Kemangkon", "Purwokerto", "Sokaraja", "Banyumas"],
   relatedAreaLinks: [["Purwokerto", "/jual-ac-purwokerto"], ["Banyumas", "/jual-ac-banyumas"], ["Sokaraja", "/jual-ac-sokaraja"]],
   bulkPurchase: {
-    eyebrow: "KEBUTUHAN BANYAK UNIT",
-    title: "Butuh AC untuk toko, kost, ruko, atau proyek?",
+    eyebrow: "RUMAH, USAHA & PROYEK KECIL",
+    title: "Butuh AC untuk rumah, toko, kost, kantor, atau proyek area Purbalingga?",
     description:
-      "Untuk pembelian banyak unit, RADJA AC bantu cek kebutuhan ruangan, stok unit, pilihan brand, estimasi harga, pengiriman, dan jadwal pemasangan. Semua dikonfirmasi dulu supaya pembelian lebih jelas dari awal.",
+      "Untuk area Purbalingga, pembelian AC sebaiknya dikonsultasikan dari awal agar kebutuhan PK, pilihan brand, stok unit, estimasi pengiriman, dan pemasangan lebih jelas sebelum unit disiapkan.",
     cards: [
-      ["Toko & Ruko", "AC untuk ruang usaha, kasir, display produk, ruang tunggu, atau area pelanggan."],
-      ["Kost & Kontrakan", "Bantu pilih AC sesuai jumlah kamar, ukuran ruangan, daya listrik, dan budget."],
-      ["Kantor & Proyek Ringan", "Cek kebutuhan beberapa ruangan, stok unit, estimasi pengiriman, dan jadwal pemasangan."],
+      ["Rumah & Kamar", "Bantu pilih AC sesuai ukuran kamar, ruang keluarga, daya listrik, dan pola pemakaian harian."],
+      ["Toko, Ruko & Kantor", "AC untuk area pelanggan, ruang kerja, kasir, display produk, atau kantor kecil."],
+      ["Kost & Proyek Ringan", "Cek kebutuhan beberapa ruangan, stok unit, estimasi pengiriman, dan jadwal pemasangan."],
     ],
-    ctaLabel: "Tanya Pembelian Banyak Unit",
+    ctaLabel: "Tanya AC Purbalingga",
     waMessage:
-      "Halo RADJA AC, saya dari Purbalingga. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+      "Halo RADJA AC, saya dari Purbalingga. Mau konsultasi AC untuk rumah/toko/kost/kantor/proyek kecil. Mohon bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan pemasangan.",
   },
   valueTitle: "Beli AC area Purbalingga lebih jelas dari awal",
   valueDescription:
-    "Untuk area luar Purwokerto, konsultasi awal penting supaya stok, harga, jumlah unit, pengiriman, dan estimasi pemasangan tidak mengambang.",
+    "Purbalingga berada di luar area inti Purwokerto, jadi alamat, jumlah unit, rute, dan kondisi pemasangan perlu dikonfirmasi agar estimasi lebih akurat.",
   valueStockText:
     "Stok unit, pilihan brand, dan kisaran harga dicek dulu lewat WhatsApp sebelum pembelian dikunci.",
   valuePkText:
-    "Ukuran ruangan, daya listrik, dan kebutuhan pemakaian bisa dikirim dulu agar pilihan AC tidak asal.",
+    "Ukuran ruangan, daya listrik, jenis ruangan, dan jam pemakaian bisa dikirim dulu agar pilihan AC tidak asal.",
   valueInstallText:
-    "Untuk area Purbalingga, pengiriman dan pemasangan menyesuaikan rute, lokasi, jumlah unit, dan jadwal teknisi.",
+    "Untuk area Purbalingga, pengiriman dan pemasangan menyesuaikan rute, alamat, akses lokasi, jumlah unit, kebutuhan material, dan jadwal teknisi.",
   processDescription:
-    "Karena Purbalingga berada di luar area inti Purwokerto, pembelian satu unit maupun banyak unit tetap perlu dikonfirmasi dulu berdasarkan alamat, jumlah AC, stok, dan kondisi titik pemasangan.",
+    "Pembelian satu unit maupun banyak unit area Purbalingga tetap perlu dikonfirmasi dulu berdasarkan alamat, jenis ruangan, jumlah AC, stok, rute, dan kondisi titik pemasangan.",
   processSteps: [
-    ["Kirim lokasi & kebutuhan", "Sebutkan area Purbalingga, jumlah unit, ukuran ruangan, daya listrik, budget, dan foto titik indoor-outdoor jika ada."],
-    ["Cek stok, brand & PK", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, tipe low watt/inverter, dan estimasi harga sesuai kebutuhan."],
-    ["Konfirmasi harga & jadwal", "Stok, pengiriman, tambahan pekerjaan, dan jadwal pemasangan dikonfirmasi dulu sebelum unit disiapkan."],
+    ["Kirim lokasi & kebutuhan", "Sebutkan area Purbalingga, jenis ruangan, jumlah unit, ukuran ruangan, daya listrik, budget, dan foto titik indoor-outdoor jika ada."],
+    ["Cek stok, brand & PK", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, tipe low watt/inverter, dan estimasi harga sesuai kebutuhan rumah, usaha, atau proyek kecil."],
+    ["Konfirmasi rute & jadwal", "Stok, pengiriman, tambahan material, akses lokasi, rute, dan jadwal pemasangan dikonfirmasi dulu sebelum unit disiapkan."],
   ],
   choiceDescription:
-    "Kalau belum yakin memilih merek, mulai dari ukuran ruangan, daya listrik, jumlah unit, dan jam pemakaian.",
+    "Kalau belum yakin memilih merek, mulai dari jenis ruangan, ukuran ruangan, daya listrik, jumlah unit, dan jam pemakaian.",
   faqItems: [
     ["Apakah RADJA AC melayani jual AC area Purbalingga?", "Ya. RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk area Purbalingga dan sekitarnya sesuai stok, rute, lokasi, dan jadwal."],
-    ["Apakah bisa beli AC beberapa unit sekaligus?", "Bisa. Untuk toko, kost, ruko, kantor kecil, atau proyek, jumlah unit akan dicek dulu sesuai stok, kebutuhan ruangan, pengiriman, dan jadwal pemasangan."],
-    ["Apakah bisa pemasangan AC ke Purbalingga?", "Bisa untuk area dan kondisi tertentu setelah alamat, jumlah unit, akses lokasi, dan kebutuhan pemasangan dikonfirmasi terlebih dahulu."],
-    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi pemasangan, jumlah unit, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika tersedia."],
+    ["Apakah cocok untuk rumah, toko, kost, kantor, dan proyek kecil?", "Bisa. Kebutuhan rumah, toko, kost, kantor kecil, atau proyek ringan akan dicek berdasarkan ukuran ruangan, daya listrik, jumlah unit, budget, dan kondisi lokasi."],
+    ["Apakah bisa pemasangan AC ke Purbalingga?", "Bisa untuk area dan kondisi tertentu setelah alamat, rute, jumlah unit, akses lokasi, kebutuhan material, dan jadwal teknisi dikonfirmasi terlebih dahulu."],
+    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi pemasangan, jenis ruangan, jumlah unit, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika tersedia."],
   ],
   finalCtaTitle: "Mau beli AC area Purbalingga?",
   finalCtaDescription:
-    "Kirim lokasi, jumlah unit, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan jadwal pemasangan sesuai konfirmasi.",
+    "Kirim lokasi, jenis ruangan, jumlah unit, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, rute, dan jadwal pemasangan sesuai konfirmasi.",
 }
 
 export default function JualAcPurbalingga() {
