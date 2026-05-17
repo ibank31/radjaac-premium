@@ -51,16 +51,7 @@ const NAV_ITEMS = [
   {
     label: "Brand Unggulan",
     type: "dropdown",
-    activePaths: [
-      "/brand",
-      "/daikin-purwokerto",
-      "/gree-purwokerto",
-      "/midea-purwokerto",
-      "/hisense-purwokerto",
-      "/sansui-purwokerto",
-      "/sharp-purwokerto",
-      "/panasonic-purwokerto",
-    ],
+    activePaths: ["/brand"],
     items: [
       {
         label: "Daikin",
