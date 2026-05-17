@@ -2,46 +2,49 @@ import CompactAreaSalesPage from "../components/area/CompactAreaSalesPage"
 
 const areaConfig = {
   canonicalPath: "/jual-ac-cilongok",
-  seoTitle: "Jual AC Cilongok Bisa COD | Stok & Pemasangan — RADJA AC",
+  seoTitle: "Jual AC Cilongok | Stok, PK & Banyak Unit — RADJA AC",
   seoDescription:
-    "RADJA AC melayani jual AC area Cilongok dan sekitarnya. Bisa konsultasi stok, harga, rekomendasi PK, estimasi pemasangan, dan opsi COD/bayar di tempat sesuai konfirmasi.",
+    "RADJA AC melayani pembelian AC area Cilongok. Cek stok, harga, rekomendasi PK, pengiriman, pemasangan, dan kebutuhan banyak unit untuk toko, kost, ruko, atau kantor.",
   localBusinessDescription:
-    "Toko AC Purwokerto yang melayani konsultasi pembelian AC untuk area Cilongok dan sekitarnya, termasuk cek stok, rekomendasi PK, opsi COD, dan estimasi pemasangan.",
+    "Toko AC Purwokerto yang melayani pembelian AC untuk area Cilongok dan sekitarnya, termasuk cek stok, rekomendasi PK, pilihan brand, pengiriman, pemasangan, dan kebutuhan banyak unit sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA CILONGOK",
   h1: "Jual AC Cilongok",
-  heroHighlight: "cek stok, rekomendasi PK, dan pemasangan",
+  heroHighlight: "cek stok, rekomendasi PK, dan pembelian banyak unit",
   heroDescription:
-    "RADJA AC Purwokerto melayani pembelian AC untuk area Cilongok dan sekitarnya. Konsultasi stok, harga, kapasitas PK, estimasi pemasangan, dan opsi COD/bayar di tempat sesuai konfirmasi lokasi.",
+    "RADJA AC Purwokerto melayani pembelian AC untuk area Cilongok dan sekitarnya. Bisa bantu cek stok, harga, rekomendasi PK, pengiriman, serta kebutuhan banyak unit untuk toko, kost, ruko, atau kantor sesuai konfirmasi lokasi dan jadwal.",
   primaryCta: "Tanya AC Cilongok",
   waMessage:
-    "Halo RADJA AC, saya dari area Cilongok. Mau tanya AC yang bisa COD/bayar di tempat. Mohon bantu cek stok, harga, rekomendasi PK, dan estimasi pemasangan AC.",
+    "Halo RADJA AC, saya dari area Cilongok. Mau konsultasi pembelian AC.",
+  heroChips: ["Cek stok dulu", "Bisa banyak unit", "Rekomendasi PK", "Jadwal dikonfirmasi"],
   schemaAreas: ["Cilongok", "Pernasidi", "Panembangan", "Cikidang", "Karanglo", "Kasegeran", "Pageraji", "Sambirata", "Ajibarang", "Karanglewas", "Kedungbanteng", "Purwokerto Barat"],
   relatedAreaLinks: [["Banyumas", "/jual-ac-banyumas"], ["Ajibarang", "/jual-ac-ajibarang"], ["Purwokerto", "/jual-ac-purwokerto"]],
   valueTitle: "Beli AC area Cilongok lebih jelas dari awal",
   valueDescription:
-    "Untuk Cilongok dan sekitarnya, konsultasi awal membantu menyesuaikan pilihan AC dengan ruangan, listrik, dan kondisi pemasangan.",
+    "Konsultasi awal membantu memastikan stok, harga, jumlah unit, pengiriman, dan estimasi pemasangan tidak mengambang.",
   valueStockText:
-    "Cek stok, tipe AC, dan estimasi harga lebih dulu agar pembelian tidak hanya mengejar harga termurah.",
+    "Stok unit, pilihan brand, dan kisaran harga dicek dulu lewat WhatsApp sebelum pembelian dikunci.",
   valuePkText:
-    "Kirim ukuran ruangan dan daya listrik agar rekomendasi PK, low watt, atau inverter lebih sesuai.",
+    "Ukuran ruangan, daya listrik, dan kebutuhan pemakaian bisa dikirim dulu agar pilihan AC tidak asal.",
   valueInstallText:
-    "Pemasangan area Cilongok menyesuaikan rute, akses lokasi, kebutuhan pipa/kabel, dan titik indoor-outdoor.",
+    "Untuk area Cilongok, pengiriman dan pemasangan menyesuaikan rute, lokasi, jumlah unit, dan jadwal teknisi.",
   processDescription:
-    "Estimasi harga dan jadwal area Cilongok akan lebih jelas setelah lokasi, ukuran ruangan, dan kondisi pemasangan dicek.",
+    "Pembelian satu unit maupun banyak unit area Cilongok tetap perlu dikonfirmasi dulu berdasarkan alamat, jumlah AC, stok, dan kondisi titik pemasangan.",
   processSteps: [
-    ["Kirim lokasi & ukuran ruangan", "Sebutkan area Cilongok, ukuran ruangan, daya listrik, budget, dan foto titik indoor-outdoor jika ada."],
-    ["Cek stok, brand & PK", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, low watt/inverter, dan kisaran harga."],
-    ["Konfirmasi harga & jadwal", "Estimasi pemasangan, tambahan pekerjaan, dan opsi COD/bayar di tempat dikonfirmasi sebelum unit dikirim."],
+    ["Kirim lokasi & kebutuhan", "Sebutkan area Cilongok, jumlah unit, ukuran ruangan, daya listrik, budget, dan foto titik indoor-outdoor jika ada."],
+    ["Cek stok, brand & PK", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, tipe low watt/inverter, dan estimasi harga sesuai kebutuhan."],
+    ["Konfirmasi harga & jadwal", "Stok, pengiriman, tambahan pekerjaan, dan jadwal pemasangan dikonfirmasi dulu sebelum unit disiapkan."],
   ],
+  choiceDescription:
+    "Kalau belum yakin memilih merek, mulai dari ukuran ruangan, daya listrik, jumlah unit, dan jam pemakaian.",
   faqItems: [
-    ["Apakah RADJA AC melayani jual AC area Cilongok?", "Ya. RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk area Cilongok, Pageraji, Karanglewas, Ajibarang, dan area terdekat sesuai rute."],
-    ["Apakah bisa beli AC area Cilongok dengan COD?", "Bisa untuk area dan kondisi tertentu setelah stok, jadwal, lokasi, dan kebutuhan pemasangan dikonfirmasi."],
-    ["Apakah bisa bantu pilih AC sesuai daya listrik?", "Bisa. Kirim daya listrik, ukuran ruangan, kebiasaan pemakaian, dan budget agar pilihan low watt atau inverter lebih sesuai."],
-    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi pemasangan, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika tersedia."],
+    ["Apakah RADJA AC melayani jual AC area Cilongok?", "Ya. RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk area Cilongok dan sekitarnya sesuai stok, rute, lokasi, dan jadwal."],
+    ["Apakah bisa beli AC beberapa unit sekaligus?", "Bisa. Untuk toko, kost, ruko, atau kantor, jumlah unit akan dicek dulu sesuai stok, kebutuhan ruangan, pengiriman, dan jadwal pemasangan."],
+    ["Apakah bisa pemasangan AC ke Cilongok?", "Bisa untuk area dan kondisi tertentu setelah alamat, jumlah unit, akses lokasi, dan kebutuhan pemasangan dikonfirmasi terlebih dahulu."],
+    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi pemasangan, jumlah unit, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika tersedia."],
   ],
   finalCtaTitle: "Mau beli AC area Cilongok?",
   finalCtaDescription:
-    "Kirim lokasi, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, kapasitas PK, estimasi pemasangan, dan opsi COD sesuai konfirmasi.",
+    "Kirim lokasi, jumlah unit, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan jadwal pemasangan sesuai konfirmasi.",
 }
 
 export default function JualAcCilongok() {
