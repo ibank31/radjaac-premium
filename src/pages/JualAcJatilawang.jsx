@@ -14,7 +14,7 @@ const areaConfig = {
     "RADJA AC Purwokerto melayani pembelian AC untuk area Jatilawang dan sekitarnya. Bisa bantu cek stok, harga, rekomendasi PK, pengiriman, serta kebutuhan banyak unit untuk toko, kost, ruko, atau kantor sesuai konfirmasi lokasi dan jadwal.",
   primaryCta: "Tanya AC Jatilawang",
   waMessage:
-    "Halo RADJA AC, saya dari area Jatilawang. Mau konsultasi pembelian AC.",
+    "Halo RADJA AC, saya dari Jatilawang. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
   heroChips: ["Cek stok dulu", "Bisa banyak unit", "Rekomendasi PK", "Jadwal dikonfirmasi"],
   schemaAreas: ["Jatilawang", "Tunjung", "Tinggarjaya", "Kedungwringin", "Karanglewas", "Gunung Wetan", "Adisara", "Margasana", "Wangon", "Purwojati", "Rawalo", "Banyumas"],
   relatedAreaLinks: [["Banyumas", "/jual-ac-banyumas"], ["Wangon", "/jual-ac-wangon"], ["Ajibarang", "/jual-ac-ajibarang"]],
