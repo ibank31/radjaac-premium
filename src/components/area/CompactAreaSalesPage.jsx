@@ -47,14 +47,14 @@ const heroTrustImages = [
     alt: "Material instalasi AC RADJA AC Purwokerto",
   },
   {
-    label: "Gudang",
-    src: "/assets/gallery/thumb/gudang-stok-ac-gree-radja-ac-02-thumb.webp",
-    alt: "Gudang stok AC Gree RADJA AC Purwokerto",
+    label: "Pengiriman Sharp",
+    src: "/assets/gallery/pengiriman/radja-ac-loading-ac-sharp-truk-kuning.webp",
+    alt: "Pengiriman stok AC Sharp RADJA AC dengan truk kuning",
   },
   {
-    label: "Daikin Gree",
-    src: "/assets/gallery/thumb/gudang-stok-ac-daikin-gree-radja-ac-01-thumb.webp",
-    alt: "Gudang stok AC Daikin dan Gree RADJA AC Purwokerto",
+    label: "Pengiriman Aqua",
+    src: "/assets/gallery/pengiriman/radja-ac-pengiriman-stok-aqua-truk-putih.webp",
+    alt: "Pengiriman stok AC Aqua RADJA AC dengan truk putih",
   },
 ]
 
