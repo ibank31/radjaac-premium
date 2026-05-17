@@ -3,6 +3,19 @@ import { SITE_DATA } from "../constants/siteData"
 const DEFAULT_MESSAGE =
   "Halo RADJA AC, saya mau tanya harga AC dan rekomendasi yang cocok."
 
+const AREA_MESSAGES = {
+  "/jual-ac-purwokerto": "Halo RADJA AC, saya dari Purwokerto. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+  "/jual-ac-banyumas": "Halo RADJA AC, saya dari Banyumas. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+  "/jual-ac-sokaraja": "Halo RADJA AC, saya dari Sokaraja. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+  "/jual-ac-ajibarang": "Halo RADJA AC, saya dari Ajibarang. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+  "/jual-ac-wangon": "Halo RADJA AC, saya dari Wangon. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+  "/jual-ac-cilongok": "Halo RADJA AC, saya dari Cilongok. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+  "/jual-ac-jatilawang": "Halo RADJA AC, saya dari Jatilawang. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+  "/jual-ac-purbalingga": "Halo RADJA AC, saya dari Purbalingga. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+  "/jual-ac-banjarnegara": "Halo RADJA AC, saya dari Banjarnegara. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+  "/jual-ac-cilacap": "Halo RADJA AC, saya dari Cilacap. Mau tanya AC, cek stok, harga, dan estimasi pemasangan.",
+}
+
 const CATEGORY_MESSAGES = {
   "/kalkulator-pk-ac":
     "Halo RADJA AC, saya mau cek kebutuhan PK AC. Mohon bantu rekomendasi AC yang cocok.",
@@ -34,8 +47,9 @@ export function buildWhatsAppUrl(message = DEFAULT_MESSAGE) {
 }
 
 export function getWhatsAppMessageForPath(pathname = "/") {
-  const normalizedPath = `/${String(pathname).replace(/^\/+|\/+$/g, "")}`
+  const normalizedPath = `/${String(pathname).replace(/^\/+/, "").replace(/\/+$/, "")}`
 
+  if (AREA_MESSAGES[normalizedPath]) return AREA_MESSAGES[normalizedPath]
   if (CATEGORY_MESSAGES[normalizedPath]) return CATEGORY_MESSAGES[normalizedPath]
   if (BRAND_MESSAGES[normalizedPath]) return BRAND_MESSAGES[normalizedPath]
 
