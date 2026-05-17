@@ -2,63 +2,63 @@ import CompactAreaSalesPage from "../components/area/CompactAreaSalesPage"
 
 const areaConfig = {
   canonicalPath: "/jual-ac-kebumen",
-  seoTitle: "Jual AC Kebumen | Unit Only, Pasang & Banyak Unit — RADJA AC",
+  seoTitle: "Jual AC Kebumen | Pengadaan Unit AC untuk Kost, Toko & Ruko — RADJA AC",
   seoDescription:
-    "RADJA AC melayani pembelian AC area Kebumen. Bisa unit only atau sekalian pasang sesuai konfirmasi lokasi untuk rumah, toko, kost, ruko, kantor, dan kebutuhan banyak unit.",
+    "RADJA AC melayani konsultasi pembelian AC area Kebumen untuk unit only, pengadaan banyak unit, kost, toko, ruko, kantor, dan opsi pemasangan sesuai konfirmasi lokasi.",
   localBusinessDescription:
-    "Toko AC Purwokerto yang melayani pembelian AC untuk area Kebumen dan sekitarnya, termasuk unit only, rekomendasi PK, pilihan brand, opsi pengiriman, pemasangan, dan kebutuhan banyak unit sesuai konfirmasi lokasi.",
-  heroBadge: "JUAL AC AREA KEBUMEN",
+    "Toko AC Purwokerto yang melayani konsultasi pembelian dan pengadaan unit AC untuk area Kebumen dan sekitarnya, termasuk unit only, banyak unit untuk kost, toko, ruko, kantor, pilihan brand, pengiriman, dan opsi pemasangan sesuai konfirmasi lokasi.",
+  heroBadge: "PENGADAAN AC AREA KEBUMEN",
   h1: "Jual AC Kebumen",
-  heroHighlight: "unit only, sekalian pasang, dan banyak unit",
+  heroHighlight: "fokus unit only dan pengadaan banyak unit",
   heroDescription:
-    "RADJA AC melayani konsultasi pembelian AC untuk area Kebumen, Gombong, Karanganyar, Pejagoan, Kutowinangun, Prembun, Petanahan, dan sekitarnya. Bisa unit only untuk yang sudah punya teknisi, atau sekalian pemasangan sesuai konfirmasi lokasi, rute, jumlah unit, dan jadwal teknisi.",
-  primaryCta: "Tanya AC Kebumen",
+    "RADJA AC melayani konsultasi pembelian AC untuk area Kebumen, Gombong, Karanganyar, Pejagoan, Kutowinangun, Prembun, Petanahan, dan sekitarnya. Fokus utama untuk unit only dan pengadaan beberapa unit bagi kost, toko, ruko, kantor kecil, kontraktor, atau proyek ringan. Opsi pemasangan tetap bisa dikonsultasikan sesuai lokasi, rute, jumlah unit, dan jadwal teknisi.",
+  primaryCta: "Tanya Pengadaan AC Kebumen",
   waMessage:
-    "Halo RADJA AC, saya dari Kebumen. Mau tanya AC unit only / sekalian pasang, cek stok, harga, dan estimasi pengiriman atau pemasangan.",
-  heroChips: ["Unit only bisa", "Sekalian pasang", "Bisa banyak unit", "Cek stok dulu", "Rute dikonfirmasi"],
+    "Halo RADJA AC, saya dari Kebumen. Mau tanya pengadaan AC unit only / banyak unit untuk kost/toko/ruko/kantor. Mohon bantu cek stok, harga, dan opsi pengiriman atau pemasangan.",
+  heroChips: ["Unit only", "Banyak unit", "Kost/toko/ruko", "Pengiriman dicek", "Pasang by konfirmasi"],
   schemaAreas: ["Kebumen", "Gombong", "Karanganyar", "Pejagoan", "Kutowinangun", "Prembun", "Petanahan", "Ayah", "Rowokele", "Purwokerto", "Banyumas", "Wangon"],
   relatedAreaLinks: [["Wangon", "/jual-ac-wangon"], ["Cilacap", "/jual-ac-cilacap"], ["Purwokerto", "/jual-ac-purwokerto"]],
   bulkPurchase: {
-    eyebrow: "UNIT ONLY & PASANG",
-    title: "Butuh AC untuk rumah, kost, toko, ruko, atau usaha area Kebumen?",
+    eyebrow: "UNIT ONLY & PENGADAAN",
+    title: "Butuh stok AC untuk kost, toko, ruko, kantor, atau proyek area Kebumen?",
     description:
-      "Untuk Kebumen, pembelian AC bisa disesuaikan dari awal: hanya unit saja, sekalian pasang, atau beberapa unit sekaligus. RADJA AC bantu cek stok, pilihan brand, rekomendasi PK, estimasi harga, opsi pengiriman, dan kebutuhan pemasangan sesuai lokasi.",
+      "Untuk Kebumen, fokus konsultasi diarahkan ke pembelian unit dan kebutuhan banyak unit. Pembeli bisa mulai dari jumlah unit, tipe ruangan, brand incaran, dan target budget. Setelah itu RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, opsi pengiriman, dan kemungkinan pemasangan bila lokasi memungkinkan.",
     cards: [
-      ["Rumah & Hunian", "Bantu pilih AC sesuai ukuran kamar, ruang keluarga, daya listrik, dan budget."],
-      ["Unit Only", "Cocok untuk pembeli yang sudah punya teknisi sendiri, pengelola kost, kontraktor, atau kebutuhan pengadaan."],
-      ["Toko, Kost & Ruko", "Cek kebutuhan beberapa ruangan, pilihan brand, estimasi pengiriman, dan jadwal pemasangan."],
+      ["Unit Only", "Cocok untuk pengelola kost, kontraktor, toko, ruko, atau pembeli yang sudah punya teknisi sendiri."],
+      ["Kost & Banyak Kamar", "Bantu hitungkan kebutuhan beberapa kamar dengan pilihan AC hemat, low watt, atau inverter."],
+      ["Toko, Ruko & Kantor", "Cek kebutuhan ruang usaha, area pelanggan, kasir, ruang kerja, dan pengadaan beberapa titik."],
     ],
-    ctaLabel: "Tanya Unit Only / Pasang",
+    ctaLabel: "Tanya Pengadaan Unit AC",
     waMessage:
-      "Halo RADJA AC, saya dari Kebumen. Mau tanya AC unit only / sekalian pasang. Mohon bantu cek stok, harga, dan estimasi pengiriman atau pemasangan.",
+      "Halo RADJA AC, saya dari Kebumen. Mau konsultasi pengadaan unit AC untuk kost/toko/ruko/kantor. Mohon bantu cek stok, pilihan brand, harga banyak unit, dan opsi pengiriman.",
   },
-  valueTitle: "Beli AC area Kebumen lebih jelas dari awal",
+  valueTitle: "Pengadaan AC Kebumen lebih aman dihitung dari jumlah unit",
   valueDescription:
-    "Untuk area Kebumen dan sekitarnya, konsultasi awal penting supaya kebutuhan unit, stok, harga, opsi pengiriman, dan pemasangan tidak mengambang.",
+    "Untuk area Kebumen dan sekitarnya, estimasi paling akurat dimulai dari jumlah unit, jenis ruangan, target brand, lokasi pengiriman, dan apakah butuh unit only atau sekalian pemasangan.",
   valueStockText:
-    "Stok unit, pilihan brand, dan kisaran harga dicek dulu lewat WhatsApp sebelum pembelian dikunci.",
+    "Stok unit, pilihan brand, dan harga untuk beberapa unit dicek dulu lewat WhatsApp sebelum pembelian dikunci.",
   valuePkText:
-    "Ukuran ruangan, daya listrik, jumlah unit, dan kebutuhan pemakaian bisa dikirim dulu agar pilihan AC tidak asal.",
+    "Ukuran ruangan, daya listrik, jumlah kamar atau titik AC, dan target pemakaian dikirim dulu supaya pilihan PK tidak asal.",
   valueInstallText:
-    "Untuk Kebumen, pengiriman dan pemasangan menyesuaikan rute, lokasi, jumlah unit, akses titik pemasangan, dan jadwal teknisi.",
+    "Untuk Kebumen, pengiriman dan opsi pemasangan menyesuaikan rute, jumlah unit, akses lokasi, titik indoor-outdoor, dan jadwal teknisi.",
   processDescription:
-    "Pembelian AC area Kebumen perlu dikonfirmasi dulu berdasarkan alamat, jumlah unit, kebutuhan unit only atau pasang, stok, rute, dan kondisi titik pemasangan. Ini membantu estimasi harga dan jadwal lebih jelas.",
+    "Pembelian AC area Kebumen perlu dikonfirmasi dulu berdasarkan jumlah unit, kebutuhan unit only atau pasang, stok, rute pengiriman, dan kondisi lokasi. Ini membantu estimasi harga dan jadwal lebih jelas.",
   processSteps: [
-    ["Kirim lokasi & kebutuhan", "Sebutkan area Kebumen/Gombong/sekitarnya, jumlah unit, kebutuhan unit only atau pasang, ukuran ruangan, daya listrik, dan budget."],
-    ["Cek stok, brand & PK", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, tipe low watt/inverter, estimasi harga, dan opsi pengiriman."],
-    ["Konfirmasi harga & jadwal", "Stok, rute pengiriman, tambahan material, akses titik pemasangan, dan jadwal teknisi dikonfirmasi sebelum unit disiapkan."],
+    ["Kirim jumlah unit & lokasi", "Sebutkan area Kebumen/Gombong/sekitarnya, jumlah unit, kebutuhan unit only atau pasang, jenis ruangan, ukuran ruangan, daya listrik, dan budget."],
+    ["Cek stok, brand & PK", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, tipe low watt/inverter, harga beberapa unit, dan opsi pengiriman."],
+    ["Konfirmasi pengiriman / pasang", "Stok, rute pengiriman, tambahan material, akses titik pemasangan, dan jadwal teknisi dikonfirmasi sebelum unit disiapkan."],
   ],
   choiceDescription:
-    "Kalau belum yakin memilih merek, mulai dari ukuran ruangan, daya listrik, jumlah unit, dan target pemakaian.",
+    "Kalau belum yakin memilih merek, mulai dari jumlah unit, ukuran ruangan, daya listrik, dan target budget.",
   faqItems: [
-    ["Apakah RADJA AC melayani jual AC area Kebumen?", "Ya. RADJA AC melayani konsultasi pembelian AC untuk area Kebumen dan sekitarnya, termasuk unit only, sekalian pasang sesuai konfirmasi lokasi, dan pembelian banyak unit."],
-    ["Bisa beli unit only tanpa pemasangan?", "Bisa. Unit only cocok untuk pembeli yang sudah punya teknisi sendiri, kontraktor, pengelola kost, toko, ruko, atau kebutuhan pengadaan."],
-    ["Apakah bisa pemasangan AC ke Kebumen?", "Bisa dikonsultasikan dulu. Pemasangan menyesuaikan alamat, jumlah unit, akses lokasi, kebutuhan material, rute, dan jadwal teknisi."],
-    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi, jumlah unit, kebutuhan unit only atau pasang, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika tersedia."],
+    ["Apakah RADJA AC melayani pengadaan AC area Kebumen?", "Ya. RADJA AC melayani konsultasi pembelian unit AC untuk area Kebumen dan sekitarnya, terutama unit only, pembelian banyak unit, dan opsi pemasangan sesuai konfirmasi lokasi."],
+    ["Bisa beli unit only tanpa pemasangan?", "Bisa. Unit only cocok untuk pembeli yang sudah punya teknisi sendiri, kontraktor, pengelola kost, toko, ruko, kantor, atau kebutuhan pengadaan."],
+    ["Apakah bisa pembelian AC banyak unit?", "Bisa. Jumlah unit akan dicek berdasarkan stok, pilihan brand, kebutuhan PK, lokasi pengiriman, dan jadwal ketersediaan."],
+    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi, jumlah unit, kebutuhan unit only atau pasang, jenis ruangan, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika perlu."],
   ],
-  finalCtaTitle: "Mau beli AC area Kebumen?",
+  finalCtaTitle: "Mau pengadaan AC area Kebumen?",
   finalCtaDescription:
-    "Kirim lokasi, jumlah unit, kebutuhan unit only atau sekalian pasang, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, opsi pengiriman, dan jadwal pemasangan sesuai konfirmasi.",
+    "Kirim lokasi, jumlah unit, kebutuhan unit only atau sekalian pasang, jenis ruangan, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, opsi pengiriman, dan jadwal sesuai konfirmasi.",
 }
 
 export default function JualAcKebumen() {
