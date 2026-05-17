@@ -10,6 +10,8 @@ const JualAcWangon = lazy(() => import("./pages/JualAcWangon"))
 const JualAcCilongok = lazy(() => import("./pages/JualAcCilongok"))
 const JualAcJatilawang = lazy(() => import("./pages/JualAcJatilawang"))
 const JualAcPurbalingga = lazy(() => import("./pages/JualAcPurbalingga"))
+const JualAcBanjarnegara = lazy(() => import("./pages/JualAcBanjarnegara"))
+const JualAcCilacap = lazy(() => import("./pages/JualAcCilacap"))
 const KatalogAc = lazy(() => import("./pages/KatalogAc"))
 const KalkulatorAc = lazy(() => import("./pages/KalkulatorAc"))
 const InstalasiAC = lazy(() => import("./pages/InstalasiAC"))
@@ -90,6 +92,10 @@ export default function App() {
             <Route path="/jual-ac-jatilawang" element={<JualAcJatilawang />} />
 
             <Route path="/jual-ac-purbalingga" element={<JualAcPurbalingga />} />
+
+            <Route path="/jual-ac-banjarnegara" element={<JualAcBanjarnegara />} />
+
+            <Route path="/jual-ac-cilacap" element={<JualAcCilacap />} />
 
             <Route path="/katalog" element={<KatalogAc />} />
 
