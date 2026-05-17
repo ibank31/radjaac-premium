@@ -199,12 +199,8 @@ export default function HisensePurwokerto() {
               </div>
 
               <h2 className="mx-auto mb-4 max-w-2xl text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:mx-0 lg:text-5xl">
-                Bukti kepercayaan untuk pelanggan Hisense RADJA AC
+                Sertifikat Resmi Hisense
               </h2>
-
-              <p className="mx-auto mb-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                Sertifikat ini memperkuat kepercayaan pelanggan bahwa RADJA AC menyediakan pilihan AC Hisense original dengan dukungan konsultasi produk, pengadaan unit, instalasi rapi, dan after-sales.
-              </p>
 
               <div className="flex justify-center lg:justify-start">
                 <div className="inline-flex items-center justify-center gap-3 rounded-3xl border border-white/10 bg-white/[0.04] px-5 py-3 text-center text-sm text-white/80 sm:text-base">

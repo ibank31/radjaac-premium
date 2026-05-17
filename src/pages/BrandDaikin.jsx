@@ -209,7 +209,7 @@ export default function BrandDaikin() {
               </h2>
 
               <p className="mb-6 text-sm leading-7 text-white/70 sm:text-base">
-                Sertifikat Authorized Dealer Daikin membantu calon pelanggan merasa lebih yakin sebelum konsultasi dan membeli. Section ini akan menjadi trust signal utama untuk halaman brand Daikin.
+                Sertifikat Authorized Dealer Daikin membantu pelanggan merasa lebih yakin saat memilih AC Daikin original bergaransi resmi melalui RADJA AC.
               </p>
 
               <div className="space-y-3">
@@ -277,7 +277,7 @@ export default function BrandDaikin() {
           <div className="mb-10 max-w-3xl">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Panduan PK</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilih kapasitas AC Daikin sesuai ruangan</h2>
-            <p className="text-white/65 leading-7">Section edukasi ini membantu pelanggan memahami kebutuhan dasar sebelum konsultasi, sekaligus memperkuat SEO untuk pencarian AC rumah dan kantor.</p>
+            <p className="text-white/65 leading-7">Panduan ini membantu pelanggan memahami kebutuhan dasar sebelum konsultasi, mulai dari ukuran ruangan, daya listrik, hingga pilihan AC untuk rumah dan kantor.</p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">

@@ -286,12 +286,8 @@ export default function DaikinPurwokerto() {
               </div>
 
               <h2 className="mb-5 text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:text-5xl">
-                Bukti kepercayaan untuk pelanggan Daikin RADJA AC
+                Authorized Dealer Daikin
               </h2>
-
-              <p className="mb-6 text-sm leading-7 text-white/70 sm:text-base">
-                Sertifikat Authorized Dealer Daikin menjadi trust signal utama halaman ini. Calon pelanggan bisa lebih yakin bahwa RADJA AC membantu pembelian AC Daikin original, bergaransi resmi, dan didukung konsultasi sebelum membeli.
-              </p>
 
               <div className="flex justify-center lg:justify-start">
                 <div className="inline-flex items-center justify-center gap-3 rounded-3xl border border-white/10 bg-white/[0.04] px-6 py-4 text-center text-white/80">

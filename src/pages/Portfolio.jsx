@@ -47,7 +47,7 @@ export default function Portfolio() {
             Contoh visual project layanan AC dalam gaya premium dan profesional.
           </h1>
           <p className="text-slate-300 leading-relaxed text-lg md:text-xl">
-            Gunakan halaman ini untuk menampilkan galeri layanan cuci AC, instalasi AC, service outdoor, teknisi saat bekerja, dan tutorial before-after evaporator.
+            Galeri dokumentasi RADJA AC menampilkan pekerjaan instalasi, perawatan, service outdoor, dan hasil before-after sebagai gambaran kualitas layanan di lapangan.
           </p>
         </section>
 
