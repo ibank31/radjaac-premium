@@ -97,6 +97,17 @@ const recommendationPoints = [
   },
 ]
 
+const faqItems = [
+  {
+    question: "Apakah RADJA AC menyediakan brand AC selain Daikin, Gree, Midea, Hisense, dan Sansui?",
+    answer: "Ya. RADJA AC juga melayani penjualan AC original dari berbagai brand populer lain sesuai ketersediaan stok dan kebutuhan pelanggan.",
+  },
+  {
+    question: "Bagaimana cara cek stok brand AC lainnya?",
+    answer: "Hubungi RADJA AC melalui WhatsApp untuk cek ketersediaan brand, rekomendasi tipe, harga terbaru, dan estimasi pemasangan.",
+  },
+]
+
 function WhatsAppButton({ children = "Tanya Stok Brand" }) {
   return (
     <a
@@ -115,24 +126,14 @@ export default function BrandLainnya() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Apakah RADJA AC menyediakan brand AC selain Daikin, Gree, Midea, Hisense, dan Sansui?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Ya. RADJA AC juga melayani penjualan AC original dari berbagai brand populer lain sesuai ketersediaan stok dan kebutuhan pelanggan.",
-        },
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
       },
-      {
-        "@type": "Question",
-        name: "Bagaimana cara cek stok brand AC lainnya?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Hubungi RADJA AC melalui WhatsApp untuk cek ketersediaan brand, rekomendasi tipe, harga terbaru, dan estimasi pemasangan.",
-        },
-      },
-    ],
+    })),
   }
 
   return (
@@ -275,6 +276,28 @@ export default function BrandLainnya() {
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-14">
+          <div className="mx-auto mb-8 max-w-3xl text-center">
+            <p className="mb-3 text-xs uppercase tracking-[0.3em] text-cyan-300">FAQ</p>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pertanyaan seputar brand AC lainnya</h2>
+            <p className="mx-auto max-w-2xl text-sm leading-7 text-white/60 sm:text-base">
+              Beberapa brand belum punya halaman khusus karena stok dan tipe bisa berubah. Tim RADJA AC bisa bantu cek pilihan yang tersedia.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2">
+            {faqItems.map((item) => (
+              <article key={item.question} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6">
+                <div className="mb-3 flex items-center gap-3">
+                  <Sparkles className="h-5 w-5 shrink-0 text-cyan-300" />
+                  <h3 className="font-bold text-white">{item.question}</h3>
+                </div>
+                <p className="text-sm leading-7 text-white/60">{item.answer}</p>
+              </article>
+            ))}
           </div>
         </section>
 
