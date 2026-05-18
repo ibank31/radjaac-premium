@@ -51,6 +51,18 @@ const galleryVideos = [
 
 const galleryItems = [
   {
+    title: "Pemasangan AC Cassette",
+    category: "Pemasangan",
+    image: "/assets/gallery/pemasangan/pemasangan-ac-cassete.webp",
+    thumbnail: "/assets/gallery/pemasangan/pemasangan-ac-cassete.webp",
+  },
+  {
+    title: "Outdoor AC Cassette",
+    category: "Pemasangan",
+    image: "/assets/gallery/pemasangan/outdoor-ac-cassete.webp",
+    thumbnail: "/assets/gallery/pemasangan/outdoor-ac-cassete.webp",
+  },
+  {
     title: "Pengiriman Sharp & Midea",
     category: "Pengiriman",
     image: "/assets/gallery/pengiriman/pengiriman-sharp-midea.webp",
