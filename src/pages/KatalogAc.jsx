@@ -13,35 +13,35 @@ const WA_MESSAGE =
 const catalogItems = [
   {
     title: "AC Split Rumah",
-    description: "Untuk kamar tidur, ruang keluarga, kos, ruang kerja, dan toko kecil.",
+    description: "Untuk kamar tidur, ruang keluarga, kos, atau kamar kost.",
     href: "/katalog/ac-split-rumah",
     icon: Home,
     active: true,
   },
   {
     title: "AC Inverter",
-    description: "Untuk pemakaian rutin dan efisiensi listrik jangka panjang.",
+    description: "Untuk pemakaian rutin dan efisiensi listrik harian.",
     href: "/katalog/ac-inverter",
     icon: Zap,
     active: true,
   },
   {
     title: "AC Low Watt",
-    description: "Untuk rumah dengan daya listrik terbatas.",
+    description: "Untuk rumah dengan daya listrik terbatas atau pasang di kontrakan.",
     href: "/katalog/ac-low-watt",
     icon: Power,
     active: true,
   },
   {
     title: "AC Kantor / Komersial",
-    description: "Untuk kantor, toko, cassette, ruang usaha, dan pembelian banyak unit.",
+    description: "Untuk kantor, toko, cafe, dan pembelian lebih dari satu unit.",
     href: "/katalog/ac-kantor-komersial",
     icon: Building2,
     active: true,
   },
   {
     title: "Panduan Kapasitas AC",
-    description: "Bantu perkirakan ½ PK sampai 2 PK sesuai ukuran ruangan.",
+    description: "Bantu pilih ukuran ½ PK sampai 2 PK sesuai luas ruangan.",
     href: "#panduan-pk",
     icon: Ruler,
   },
@@ -169,7 +169,7 @@ export default function KatalogAc() {
               </h1>
 
               <p className="mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                Mulai dari luas ruangan, daya listrik, dan pola pemakaian. RADJA AC membantu memilih AC untuk rumah, kos, kantor kecil, toko, dan kebutuhan usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
+                Mulai dari luas ruangan, daya listrik, dan pola pemakaian. RADJA AC bantu pilih AC yang pas untuk rumah, kos, kantor kecil, toko, atau usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
               </p>
 
               <div className="mx-auto flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:mx-0 lg:justify-start">
@@ -192,7 +192,7 @@ export default function KatalogAc() {
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">KATEGORI AC</p>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mulai dari kebutuhan, baru pilih brand</h2>
             <p className="mx-auto max-w-2xl text-sm leading-7 text-white/60 sm:text-base">
-              Jika belum tahu mau brand apa, mulai dari jenis ruangan, daya listrik, dan pola pemakaian harian.
+              Kalau belum tahu mau brand apa, mulai dari jenis ruangan, daya listrik, dan pola pemakaian harian.
             </p>
           </div>
 
@@ -230,7 +230,7 @@ export default function KatalogAc() {
             <div className="mb-4 flex justify-center text-cyan-300"><BadgeCheck className="h-10 w-10" /></div>
             <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl">Brand bisa disesuaikan setelah kebutuhan jelas</h2>
             <p className="mx-auto mb-6 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">
-              RADJA AC menyediakan brand unggulan seperti Daikin, Gree, Midea, Hisense, Sansui, Sharp, Panasonic, serta brand populer lainnya sesuai stok dan kebutuhan ruangan.
+              RADJA AC menyediakan brand unggulan seperti Daikin, Gree, Midea, Hisense, Sansui, Sharp, Panasonic, serta brand populer lainnya sesuai stok dan kebutuhan ruangan. Mau tahu kisaran harga AC yang cocok? Tanyakan via WhatsApp.
             </p>
             <div className="flex flex-wrap justify-center gap-2.5">
               {brandLinks.map((brand) => (

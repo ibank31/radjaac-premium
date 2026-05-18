@@ -182,7 +182,7 @@ export default function SansuiPurwokerto() {
               </h1>
 
               <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC membantu pembelian AC Sansui untuk rumah, kos, kontrakan, toko kecil, kantor, dan kebutuhan harian di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Konsultasikan ukuran ruangan, daya listrik, dan pola pemakaian agar pilihan unit lebih tepat.
+                RADJA AC bantu pembelian AC Sansui untuk rumah, kos, kontrakan, toko kecil, kantor, dan kebutuhan harian di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Kirim ukuran ruangan, daya listrik, dan pola pakai agar pilihan unit lebih tepat.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">

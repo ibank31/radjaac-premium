@@ -15,7 +15,7 @@ const MURI_IMAGE = "/assets/brands/gree/rekor-muri-gree.webp"
 const benefits = [
   {
     title: "Value kuat untuk kebutuhan harian",
-    description: "Gree cocok untuk pelanggan yang mencari AC original dengan performa nyaman dan pilihan harga yang tetap rasional.",
+    description: "Gree cocok untuk pelanggan yang mau AC original dengan performa nyaman dan value yang masuk akal.",
     icon: BadgeCheck,
   },
   {
@@ -178,7 +178,7 @@ export default function GreePurwokerto() {
               </h1>
 
               <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC membantu pembelian AC Gree untuk rumah, kos, kontrakan, kantor kecil, toko, dan kebutuhan usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Konsultasikan ukuran ruangan, daya listrik, dan pola pemakaian agar pilihan unit lebih tepat.
+                RADJA AC bantu pembelian AC Gree untuk rumah, kos, kontrakan, kantor kecil, toko, dan kebutuhan usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Kirim ukuran ruangan, daya listrik, dan pola pakai agar pilihan unit lebih tepat.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
