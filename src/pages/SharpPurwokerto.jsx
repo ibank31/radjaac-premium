@@ -93,7 +93,7 @@ export default function SharpPurwokerto() {
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
-              Pilihan AC Sharp populer untuk keluarga, pendinginan cepat, dan budget entry-mid market dengan konsultasi unit langsung dari tim RADJA AC.
+              RADJA AC membantu pembelian AC Sharp untuk rumah, keluarga, kamar tidur, ruang santai, dan kebutuhan harian di Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
             </p>
 
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center sm:gap-4 gap-4">
@@ -171,7 +171,7 @@ export default function SharpPurwokerto() {
         <section className="px-6 pb-20 lg:px-8">
           <div className="max-w-5xl mx-auto rounded-[32px] border border-cyan-400/30 bg-cyan-400/10 p-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-black mb-4">Butuh Rekomendasi AC Sharp yang Tepat?</h2>
-            <p className="text-slate-200 mb-6">Chat tim RADJA AC sekarang untuk konsultasi kebutuhan ruangan dan estimasi pilihan unit.</p>
+            <p className="text-slate-200 mb-6">Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Sharp yang sesuai.</p>
             <Link to="/kontak" className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-base font-semibold text-slate-950 transition hover:bg-cyan-300">
               Tanya Harga
             </Link>
