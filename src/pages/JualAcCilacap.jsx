@@ -8,13 +8,13 @@ const areaConfig = {
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani konsultasi pembelian unit AC untuk area Cilacap dan sekitarnya, termasuk unit only, banyak unit untuk toko, kost, ruko, kantor, pilihan brand, pengiriman, dan opsi pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA CILACAP",
-  h1: "Jual AC Cilacap",
+  h1: "Jual AC Cilacap — Bantu Pilih AC yang Cocok untuk Kebutuhan Anda",
   heroHighlight: "unit only, banyak unit, dan kebutuhan usaha",
   heroDescription:
-    "RADJA AC melayani konsultasi pembelian AC untuk area Cilacap, Kroya, Maos, Kesugihan, Adipala, Sampang, Jeruklegi, Sidareja, Majenang, dan sekitarnya. Fokus utama untuk unit only dan pembelian beberapa unit bagi toko, ruko, kost, kantor kecil, kontraktor, atau kebutuhan usaha. Karena area Cilacap luas, pengiriman atau pemasangan perlu dikonfirmasi berdasarkan lokasi, jumlah unit, rute, dan kondisi titik pemasangan.",
-  primaryCta: "Tanya AC Cilacap",
+    "Beli AC di Cilacap sebaiknya tidak asal pilih. Kondisi ruangan, posisi outdoor, pemakaian harian, dan daya listrik perlu dicek supaya AC yang dipilih lebih sesuai.\n\nRADJA AC bantu konsultasi lewat WhatsApp untuk kebutuhan rumah, kos, toko, kantor kecil, atau usaha lokal di Cilacap. Kirim ukuran ruangan, foto titik pemasangan, daya listrik, dan budget. Nanti kami bantu cek pilihan PK, brand, stok, kisaran harga, dan kebutuhan pemasangan.",
+  primaryCta: "Chat WhatsApp untuk AC Cilacap",
   waMessage:
-    "Halo RADJA AC, saya dari Cilacap. Mau tanya AC unit only / banyak unit untuk toko/kost/ruko/kantor. Mohon bantu cek stok, harga, dan opsi pengiriman atau pemasangan.",
+    "Halo RADJA AC, saya dari Cilacap. Mau konsultasi AC untuk rumah/toko/kos/kantor. Mohon bantu cek kondisi ruangan, posisi outdoor, daya listrik, dan pilihan unit yang cocok.",
   heroChips: ["Unit only", "Banyak unit", "Area luas dicek", "Pengiriman fleksibel", "Pasang by konfirmasi"],
   schemaAreas: ["Cilacap", "Maos", "Kroya", "Sampang", "Adipala", "Kesugihan", "Jeruklegi", "Majenang", "Sidareja", "Purwokerto", "Banyumas", "Wangon"],
   relatedAreaLinks: [["Wangon", "/jual-ac-wangon"], ["Banyumas", "/jual-ac-banyumas"], ["Purwokerto", "/jual-ac-purwokerto"]],
@@ -51,10 +51,10 @@ const areaConfig = {
   choiceDescription:
     "Kalau belum yakin memilih merek, mulai dari jumlah unit, ukuran ruangan, daya listrik, lokasi, dan target budget.",
   faqItems: [
-    ["Apakah RADJA AC melayani pembelian AC area Cilacap?", "Ya. RADJA AC melayani konsultasi pembelian unit AC untuk area Cilacap dan sekitarnya, terutama unit only, pembelian banyak unit, dan opsi pemasangan sesuai konfirmasi lokasi."],
+    ["Apakah RADJA AC melayani pembelian AC area Cilacap?", "Ya. Kami membantu konsultasi karena kondisi ruangan dan posisi outdoor di Cilacap perlu diperhatikan sebelum memilih AC."],
     ["Bisa beli unit only tanpa pemasangan?", "Bisa. Unit only cocok untuk pembeli yang sudah punya teknisi sendiri, kontraktor, pengelola kost, toko, ruko, kantor, atau kebutuhan beberapa unit."],
     ["Apakah bisa pembelian AC banyak unit?", "Bisa. Jumlah unit akan dicek berdasarkan stok, pilihan brand, kebutuhan PK, lokasi pengiriman, dan jadwal ketersediaan."],
-    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi detail, jumlah unit, kebutuhan unit only atau opsi pasang, jenis ruangan, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika perlu."],
+    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim ukuran ruangan, posisi outdoor, daya listrik, dan budget. Nanti kami bantu cek PK, brand, stok, kisaran harga, dan kebutuhan pemasangan."],
   ],
   finalCtaTitle: "Mau beli AC banyak unit area Cilacap?",
   finalCtaDescription:

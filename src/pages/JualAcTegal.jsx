@@ -8,14 +8,14 @@ const areaConfig = {
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani konsultasi pembelian unit AC untuk area Tegal dan sekitarnya, termasuk unit only, banyak unit untuk toko, ruko, kost, kantor, pilihan brand, pengiriman, dan opsi pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA TEGAL",
-  h1: "Jual AC Tegal",
+  h1: "Mau Cari AC di Tegal?\nTanya Dulu Biar Tidak Salah Pilih",
   heroHighlight: "unit only, banyak unit, dan kebutuhan usaha",
   heroDescription:
-    "RADJA AC melayani konsultasi pembelian AC untuk area Tegal, Slawi, Adiwerna, Dukuhturi, Talang, Kramat, dan sekitarnya. Fokus utama untuk unit only dan pembelian beberapa unit bagi toko, ruko, kost, kantor kecil, kontraktor, atau pengadaan usaha. Opsi pemasangan bisa dikonsultasikan berdasarkan lokasi, jumlah unit, rute, dan jadwal teknisi.",
-  primaryCta: "Tanya AC Tegal",
+    "Kebutuhan AC di Tegal bisa macam-macam. Ada yang untuk kamar rumah, kos, toko, kantor kecil, tempat usaha, atau beberapa ruangan sekaligus.\n\nDaripada langsung pilih unit hanya karena murah, lebih aman konsultasi dulu. RADJA AC bantu cek kebutuhan ruangan, daya listrik, budget, dan rencana pemakaian supaya pilihan AC lebih masuk akal.\n\nCukup chat WhatsApp. Sebutkan ukuran ruangan, lokasi, daya listrik, brand yang diminati kalau ada, dan kisaran budget. Nanti kami bantu cek pilihan PK, stok, kisaran harga, dan kebutuhan pemasangan jika diperlukan.",
+  primaryCta: "Konsultasi AC Tegal",
   waMessage:
-    "Halo RADJA AC, saya dari Tegal. Mau tanya AC unit only / banyak unit untuk toko/ruko/kost/kantor. Mohon bantu cek stok, harga, dan opsi pengiriman atau pemasangan.",
-  heroChips: ["Unit only", "Banyak unit", "Toko/ruko/kost", "Harga menyesuaikan", "Pasang by konfirmasi"],
+    "Halo RADJA AC, saya dari Tegal. Mau konsultasi AC untuk rumah/kost/toko/kantor. Sebutkan ukuran ruangan, daya listrik, brand jika ada, dan kisaran budget.",
+  heroChips: ["Unit only", "Pengadaan banyak unit", "Kost/ruko/kantor", "Cek stok dulu", "Pasang by konfirmasi"],
   schemaAreas: ["Tegal", "Slawi", "Adiwerna", "Dukuhturi", "Talang", "Kramat", "Lebaksiu", "Balapulang", "Bumijawa", "Brebes", "Purwokerto", "Banyumas"],
   relatedAreaLinks: [["Purwokerto", "/jual-ac-purwokerto"], ["Banyumas", "/jual-ac-banyumas"], ["Banjarnegara", "/jual-ac-banjarnegara"]],
   bulkPurchase: {
@@ -51,10 +51,9 @@ const areaConfig = {
   choiceDescription:
     "Kalau belum yakin memilih merek, mulai dari jumlah unit, ukuran ruangan, daya listrik, dan target budget.",
   faqItems: [
-    ["Apakah RADJA AC melayani pembelian AC area Tegal?", "Ya. RADJA AC melayani konsultasi pembelian unit AC untuk area Tegal dan sekitarnya, terutama unit only, pembelian banyak unit, dan opsi pemasangan sesuai konfirmasi lokasi."],
-    ["Bisa beli unit only tanpa pemasangan?", "Bisa. Unit only cocok untuk pembeli yang sudah punya teknisi sendiri, kontraktor, pengelola kost, toko, ruko, kantor, atau kebutuhan beberapa unit."],
-    ["Apakah bisa pembelian AC banyak unit?", "Bisa. Jumlah unit akan dicek berdasarkan stok, pilihan brand, kebutuhan PK, lokasi pengiriman, dan jadwal ketersediaan."],
-    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi, jumlah unit, kebutuhan unit only atau opsi pasang, jenis ruangan, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika perlu."],
+    ["Bisa tanya harga AC untuk area Tegal dulu?", "Bisa. Chat WhatsApp saja. Sebutkan kebutuhan ruangan, brand yang diminati, dan kisaran budget. Nanti kami bantu cek pilihan unit, stok, dan kisaran harganya."],
+    ["Kalau belum tahu harus pilih PK berapa gimana?", "Tidak masalah. Kirim ukuran ruangan, tinggi plafon kalau tahu, dan pemakaian AC kira-kira berapa jam sehari. Dari situ kami bantu arahkan kapasitas PK yang lebih sesuai."],
+    ["Kalau butuh beberapa unit untuk usaha atau kantor kecil bisa?", "Bisa dibahas. Jelaskan jumlah ruangan, ukuran tiap ruangan, daya listrik, dan budget total. Nanti kami bantu susun pilihan AC yang lebih masuk akal untuk kebutuhan Anda."],
   ],
   finalCtaTitle: "Mau beli AC banyak unit area Tegal?",
   finalCtaDescription:

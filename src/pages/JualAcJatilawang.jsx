@@ -9,10 +9,10 @@ const areaConfig = {
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Jatilawang dan jalur selatan Banyumas, termasuk kebutuhan rumah, toko, kost, ruko, kantor kecil, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA JATILAWANG",
   h1: "Jual AC Jatilawang",
-  heroHighlight: "jalur selatan Banyumas untuk rumah, toko, kost, dan banyak unit",
+  heroHighlight: "RADJA AC Layani Jatilawang",
   heroDescription:
-    "RADJA AC Purwokerto melayani konsultasi pembelian AC untuk area Jatilawang, Tunjung, Tinggarjaya, Kedungwringin, Adisara, dan sekitar jalur selatan Banyumas. Cocok untuk rumah, toko, ruko, kost, kantor kecil, atau beberapa unit dengan cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai konfirmasi rute serta lokasi.",
-  primaryCta: "Tanya AC Jatilawang",
+    "Beli AC untuk rumah, kos, toko, atau usaha di Jatilawang sebaiknya jangan asal pilih yang paling murah. Yang penting AC-nya sesuai ruangan, daya listrik aman, dan kebutuhan pemasangan jelas dari awal. RADJA AC bantu konsultasi dulu lewat WhatsApp. Anda cukup kirim ukuran ruangan, foto titik pemasangan, budget, dan lokasi. Nanti kami bantu cek pilihan unit, stok, kisaran harga, dan kebutuhan instalasinya.",
+  primaryCta: "Chat WhatsApp untuk AC Jatilawang",
   waMessage:
     "Halo RADJA AC, saya dari Jatilawang. Mau tanya AC untuk rumah/toko/kost/ruko area selatan Banyumas, cek stok, harga, rekomendasi PK, dan opsi pengiriman atau pemasangan.",
   heroChips: ["Selatan Banyumas", "Rumah & toko", "Kost/ruko", "Bisa banyak unit", "Rute dicek dulu"],
@@ -51,10 +51,9 @@ const areaConfig = {
   choiceDescription:
     "Kalau belum yakin memilih merek, mulai dari jenis ruangan, ukuran ruangan, daya listrik, jumlah unit, dan jam pemakaian.",
   faqItems: [
-    ["Apakah RADJA AC melayani jual AC area Jatilawang?", "Ya. RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk area Jatilawang dan sekitarnya sesuai stok, rute, lokasi, dan jadwal."],
-    ["Apakah cocok untuk rumah, toko, ruko, dan kost?", "Bisa. Kebutuhan rumah, toko, ruko, kost, atau kantor kecil akan dicek berdasarkan ukuran ruangan, daya listrik, jumlah unit, budget, dan kondisi lokasi."],
-    ["Apakah bisa pemasangan AC ke Jatilawang?", "Bisa untuk area dan kondisi tertentu setelah alamat, rute, jumlah unit, akses lokasi, kebutuhan material, dan jadwal teknisi dikonfirmasi terlebih dahulu."],
-    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi pemasangan, jenis ruangan, jumlah unit, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika tersedia."],
+    ["Apakah saya harus pilih AC paling murah di Jatilawang?", "Tidak. Kami sarankan pilih AC yang sesuai ruangan dan daya listrik, bukan sekadar murah."],
+    ["Bagaimana cara konsultasi AC Jatilawang?", "Chat WhatsApp, kirim ukuran ruangan, foto titik pemasangan, budget, dan lokasi. Nanti kami bantu cek pilihan unit dan instalasinya."],
+    ["Apakah pemasangan bisa direncanakan sejak awal?", "Bisa. Setelah pilihan unit cocok, kami bantu konfirmasi stok, jadwal, dan kebutuhan instalasi."],
   ],
   finalCtaTitle: "Mau beli AC area Jatilawang?",
   finalCtaDescription:

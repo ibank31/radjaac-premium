@@ -8,13 +8,13 @@ const areaConfig = {
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Purbalingga dan sekitarnya, termasuk kebutuhan rumah, toko, kost, ruko, kantor, banyak unit, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA PURBALINGGA",
-  h1: "Jual AC Purbalingga",
+  h1: "Jual AC Purbalingga — RADJA AC Siap Layani Purbalingga",
   heroHighlight: "untuk rumah, usaha, kantor, dan banyak unit",
   heroDescription:
-    "RADJA AC Purwokerto melayani konsultasi pembelian AC untuk area Purbalingga, Kalimanah, Padamara, Bojongsari, Bobotsari, dan sekitarnya. Cocok untuk rumah, toko, ruko, kost, kantor kecil, atau kebutuhan beberapa unit dengan cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
-  primaryCta: "Tanya AC Purbalingga",
+    "Butuh AC untuk rumah, kos, toko, kantor kecil, atau usaha di Purbalingga? RADJA AC bantu Anda konsultasi dulu sebelum menentukan brand, PK, dan budget.\n\nAnda tidak perlu menebak-nebak sendiri. Kirim ukuran ruangan, daya listrik, foto titik pemasangan, dan kebutuhan pemakaian lewat WhatsApp. Nanti kami bantu cek pilihan AC yang masuk akal, stok yang tersedia, kisaran harga, dan jadwal pemasangan.",
+  primaryCta: "Chat WhatsApp untuk AC Purbalingga",
   waMessage:
-    "Halo RADJA AC, saya dari Purbalingga. Mau tanya AC untuk rumah/usaha/kost/kantor, cek stok, harga, rekomendasi PK, dan opsi pengiriman atau pemasangan.",
+    "Halo RADJA AC, saya dari Purbalingga. Mau tanya AC untuk rumah/toko/kost/kantor. Mohon bantu cek pilihan brand, kapasitas PK, stok, kisaran harga, dan jadwal pemasangan.",
   heroChips: ["Rumah & usaha", "Kost/kantor", "Bisa banyak unit", "Cek PK dulu", "Lokasi dikonfirmasi"],
   schemaAreas: ["Purbalingga", "Kalimanah", "Padamara", "Bojongsari", "Bobotsari", "Mrebet", "Kutasari", "Kemangkon", "Purwokerto", "Sokaraja", "Banyumas"],
   relatedAreaLinks: [["Purwokerto", "/jual-ac-purwokerto"], ["Banyumas", "/jual-ac-banyumas"], ["Sokaraja", "/jual-ac-sokaraja"]],
@@ -51,10 +51,10 @@ const areaConfig = {
   choiceDescription:
     "Kalau belum yakin memilih merek, mulai dari jenis ruangan, ukuran ruangan, daya listrik, jumlah unit, dan jam pemakaian.",
   faqItems: [
-    ["Apakah RADJA AC melayani jual AC area Purbalingga?", "Ya. RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk area Purbalingga dan sekitarnya sesuai stok, rute, lokasi, dan jadwal."],
+    ["Apakah RADJA AC melayani jual AC area Purbalingga?", "Ya. RADJA AC siap konsultasi pembelian AC untuk Purbalingga agar brand, kapasitas PK, stok, dan pemasangan jelas sejak awal."],
     ["Apakah cocok untuk rumah, toko, kost, dan kantor?", "Bisa. Kebutuhan rumah, toko, kost, kantor kecil, atau beberapa unit akan dicek berdasarkan ukuran ruangan, daya listrik, jumlah unit, budget, dan kondisi lokasi."],
     ["Apakah bisa pemasangan AC ke Purbalingga?", "Bisa untuk area dan kondisi tertentu setelah alamat, rute, jumlah unit, akses lokasi, kebutuhan material, dan jadwal teknisi dikonfirmasi terlebih dahulu."],
-    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi pemasangan, jenis ruangan, jumlah unit, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika tersedia."],
+    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim ukuran ruangan, daya listrik, foto titik pemasangan, dan kebutuhan pemakaian. Kami bantu pilih brand, PK, stok, kisaran harga, dan jadwal pemasangan."],
   ],
   finalCtaTitle: "Mau beli AC area Purbalingga?",
   finalCtaDescription:
