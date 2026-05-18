@@ -5,12 +5,16 @@ export default function WhyChooseSection() {
     <section className="pb-20">
       <div className="text-center mb-12">
         <p className="text-cyan-300 uppercase tracking-[0.3em] text-xs mb-3">
-          KEUNGGULAN KAMI
+          KENAPA BANYAK ORANG
         </p>
 
         <h2 className="text-3xl sm:text-4xl font-black leading-tight">
-          Kenapa Pilih Radja AC?
+          Kenapa Banyak Orang Konsultasi Dulu Sebelum Beli AC?
         </h2>
+
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/70">
+          Karena salah pilih AC itu bisa bikin ruangan lama dingin, listrik terasa berat, atau pemasangan jadi ribet. RADJA AC bantu cek dari awal supaya pilihan unit lebih masuk akal.
+        </p>
       </div>
 
       <div className="grid grid-cols-2 gap-5">
