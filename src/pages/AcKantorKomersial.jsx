@@ -23,7 +23,6 @@ import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import WhatsappIcon from "../components/ui/WhatsappIcon"
-import { SITE_DATA } from "../constants/siteData"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const WA_MESSAGE = "Halo RADJA AC, saya mau konsultasi kebutuhan AC untuk kost/kantor/proyek/banyak unit. Mohon bantu cek rekomendasi unit, jumlah AC, brand, stok, dan estimasi pemasangan."
