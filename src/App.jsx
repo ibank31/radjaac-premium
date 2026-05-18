@@ -40,6 +40,7 @@ const NotFound = lazy(() => import("./pages/NotFound"))
 import ScrollToTop from "./components/ScrollToTop"
 import ErrorBoundary from "./components/ErrorBoundary"
 import FloatingWhatsapp from "./components/FloatingWhatsapp"
+import { SITE_DATA } from "./constants/siteData"
 
 function sendWhatsAppClickEvent(link) {
   if (typeof window.gtag !== "function") return
@@ -57,7 +58,7 @@ export default function App() {
     function handleClick(event) {
       const link = event.target.closest("a[href]")
 
-      if (!link || !link.href.includes("wa.me/62882008246099")) return
+      if (!link || !link.href.includes(SITE_DATA.whatsappUrl)) return
 
       sendWhatsAppClickEvent(link)
     }

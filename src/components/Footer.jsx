@@ -4,7 +4,7 @@ import { SITE_DATA } from "../constants/siteData";
 const contactItems = [
   {
     label: "WhatsApp",
-    value: "+62 882-0082-46099",
+    value: SITE_DATA.whatsappDisplay,
     href: SITE_DATA.whatsappUrl,
   },
   {

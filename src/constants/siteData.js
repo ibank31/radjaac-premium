@@ -1,13 +1,21 @@
 // Site-wide constants for RADJA AC
+const whatsappNumber = String(
+  import.meta.env.VITE_RADJAAC_WHATSAPP_NUMBER || "62882008246099"
+).replace(/\D/g, "")
+
+const whatsappDisplay =
+  import.meta.env.VITE_RADJAAC_WHATSAPP_DISPLAY || "+62 882-0082-46099"
+
 export const SITE_DATA = {
   // Business Information
   businessName: "RADJA AC",
   businessDescription: "Toko AC Purwokerto yang menjual AC original berbagai brand resmi untuk rumah, kantor, toko, dan proyek di Purwokerto dan Banyumas",
 
   // Contact Information
-  whatsappNumber: "62882008246099",
-  whatsappUrl: "https://wa.me/62882008246099",
-  phoneNumber: "+62882008246099",
+  whatsappNumber,
+  whatsappDisplay,
+  whatsappUrl: `https://wa.me/${whatsappNumber}`,
+  phoneNumber: `+${whatsappNumber}`,
 
   // Site URLs
   baseUrl: "https://www.radjaac.com",
