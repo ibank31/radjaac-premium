@@ -1,12 +1,6 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, BadgeCheck, BookOpen, MessageCircle, SearchCheck } from "lucide-react"
 
-import WhatsappIcon from "../ui/WhatsappIcon"
-import { buildWhatsAppUrl } from "../../utils/whatsapp"
-
-const WA_MESSAGE =
-  "Halo RADJA AC, saya mau beli AC di Purwokerto. Mohon bantu rekomendasi merek, tipe, PK, stok, harga, dan estimasi pemasangan."
-
 const points = [
   {
     title: "Cari AC berdasarkan kebutuhan",
@@ -49,15 +43,13 @@ export default function SalesLandingSection() {
                 Panduan Pilih AC
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              <a
-                href={buildWhatsAppUrl(WA_MESSAGE)}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 font-bold text-slate-950 transition hover:bg-[#20BA5A]"
+              <Link
+                to="/katalog"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 px-6 py-4 font-bold text-white/90 transition hover:bg-white/[0.05]"
               >
-                <WhatsappIcon className="h-5 w-5 text-slate-950" />
-                Konsultasi WhatsApp
-              </a>
+                Lihat Katalog AC
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
 
