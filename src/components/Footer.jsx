@@ -14,7 +14,7 @@ const contactItems = [
   },
   {
     label: "Alamat",
-    value: "Purwokerto, Banyumas",
+    value: "Pamijen • dekat RS Margono • Purwokerto Timur – Banyumas",
   },
 ];
 
