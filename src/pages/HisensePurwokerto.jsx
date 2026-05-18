@@ -152,7 +152,7 @@ export default function HisensePurwokerto() {
               </h1>
 
               <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC menyediakan AC Hisense original untuk rumah, kamar tidur, kos, toko kecil, kantor, dan kebutuhan harian. Konsultasikan ukuran ruangan, daya listrik, dan kebutuhan penggunaan agar pilihan unit Hisense lebih tepat.
+                RADJA AC membantu pembelian AC Hisense untuk rumah, kamar tidur, kos, kontrakan, toko kecil, kantor, dan kebutuhan harian di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Konsultasikan ukuran ruangan, daya listrik, dan pola pemakaian agar pilihan unit lebih tepat.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
@@ -246,7 +246,7 @@ export default function HisensePurwokerto() {
           <div className="mx-auto mb-8 max-w-3xl text-center">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-teal-300">Rekomendasi Produk</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilihan AC Hisense di RADJA AC</h2>
-            <p className="mx-auto max-w-2xl leading-7 text-white/65">Untuk saat ini, produk utama Hisense ditampilkan sebagai single featured product supaya halaman tetap clean dan sesuai asset yang tersedia.</p>
+            <p className="mx-auto max-w-2xl leading-7 text-white/65">Hisense Standard cocok untuk kebutuhan pendinginan harian di kamar, kos, ruang santai, dan toko kecil. Untuk stok, harga terbaru, dan rekomendasi kapasitas, tim RADJA AC bisa bantu cek pilihan yang sesuai.</p>
           </div>
 
           <article className="mx-auto grid max-w-5xl overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/70 shadow-[0_18px_45px_rgba(15,23,42,0.24)] md:grid-cols-[0.95fr_1.05fr]">
@@ -351,7 +351,7 @@ export default function HisensePurwokerto() {
           <div className="rounded-[34px] border border-teal-400/20 bg-teal-400/5 p-6 text-center shadow-[0_35px_90px_rgba(13,148,136,0.16)] sm:p-10 lg:p-14">
             <div className="mb-4 flex justify-center text-teal-300"><Wind className="h-10 w-10" /></div>
             <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Butuh rekomendasi AC Hisense yang paling cocok?</h2>
-            <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">Kirim ukuran ruangan, daya listrik, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Hisense yang sesuai.</p>
+            <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Hisense yang sesuai.</p>
             <WhatsAppButton>Konsultasi via WhatsApp</WhatsAppButton>
           </div>
         </section>
