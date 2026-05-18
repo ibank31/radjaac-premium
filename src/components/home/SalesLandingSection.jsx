@@ -14,7 +14,7 @@ const points = [
   },
   {
     title: "Baca panduan sebelum beli",
-    description: "Pahami PK, inverter, low watt, harga, dan persiapan pemasangan sebelum chat WhatsApp.",
+    description: "Pahami PK, inverter, low watt, harga, dan persiapan pemasangan sebelum menentukan pilihan.",
     icon: BookOpen,
   },
 ]
