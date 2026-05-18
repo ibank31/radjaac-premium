@@ -239,7 +239,7 @@ export default function DaikinPurwokerto() {
               </h1>
 
               <p className="mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                RADJA AC menyediakan AC Daikin original untuk rumah, kantor, toko, cafe, dan kebutuhan proyek di Purwokerto & Banyumas. Konsultasikan kebutuhan ruangan Anda untuk mendapatkan rekomendasi tipe dan PK yang paling tepat.
+                RADJA AC membantu pembelian AC Daikin untuk rumah, kos, kantor, toko, cafe, dan kebutuhan usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Konsultasikan kebutuhan ruangan Anda untuk mendapatkan rekomendasi tipe dan PK yang paling tepat.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
@@ -340,7 +340,7 @@ export default function DaikinPurwokerto() {
               Pilihan AC Daikin di RADJA AC
             </h2>
             <p className="mx-auto max-w-2xl leading-7 text-white/65">
-              Pilih berdasarkan kebutuhan ruangan. Untuk stok dan rekomendasi tipe terbaru, klik WhatsApp agar tim RADJA AC bisa bantu cek langsung.
+              Pilih berdasarkan kebutuhan ruangan. Untuk stok dan rekomendasi tipe terbaru, tim RADJA AC bisa bantu cek pilihan yang sesuai.
             </p>
           </div>
 
@@ -483,7 +483,7 @@ export default function DaikinPurwokerto() {
               Bingung pilih AC Daikin yang cocok?
             </h2>
             <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">
-              Kirim ukuran ruangan, daya listrik, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Daikin yang sesuai.
+              Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Daikin yang sesuai.
             </p>
             <WhatsAppButton>Konsultasi Daikin via WhatsApp</WhatsAppButton>
           </div>
