@@ -178,7 +178,7 @@ export default function GreePurwokerto() {
               </h1>
 
               <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC menyediakan AC Gree original untuk rumah, kantor, toko, dan kebutuhan bisnis. Konsultasikan ukuran ruangan, daya listrik, dan kebutuhan penggunaan untuk mendapatkan rekomendasi unit Gree yang paling sesuai.
+                RADJA AC membantu pembelian AC Gree untuk rumah, kos, kontrakan, kantor kecil, toko, dan kebutuhan usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Konsultasikan ukuran ruangan, daya listrik, dan pola pemakaian agar pilihan unit lebih tepat.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
@@ -276,7 +276,7 @@ export default function GreePurwokerto() {
           <div className="mx-auto mb-8 max-w-3xl text-center">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-orange-300">Rekomendasi Produk</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilihan AC Gree di RADJA AC</h2>
-            <p className="mx-auto max-w-2xl leading-7 text-white/65">Harga dan stok Gree dapat berubah. CTA diarahkan ke WhatsApp agar pelanggan mendapat info terbaru dan rekomendasi yang sesuai.</p>
+            <p className="mx-auto max-w-2xl leading-7 text-white/65">Pilih berdasarkan kebutuhan ruangan dan daya listrik. Untuk stok, harga terbaru, dan rekomendasi tipe Gree, tim RADJA AC bisa bantu cek pilihan yang sesuai.</p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
@@ -383,7 +383,7 @@ export default function GreePurwokerto() {
           <div className="rounded-[34px] border border-blue-400/20 bg-blue-500/5 p-6 text-center shadow-[0_35px_90px_rgba(30,64,175,0.16)] sm:p-10 lg:p-14">
             <div className="mb-4 flex justify-center text-orange-300"><Wind className="h-10 w-10" /></div>
             <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Butuh rekomendasi AC Gree yang paling cocok?</h2>
-            <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">Kirim ukuran ruangan, daya listrik, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Gree yang sesuai.</p>
+            <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Gree yang sesuai.</p>
             <WhatsAppButton>Konsultasi via WhatsApp</WhatsAppButton>
           </div>
         </section>
