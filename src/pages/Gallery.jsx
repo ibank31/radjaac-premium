@@ -257,20 +257,21 @@ export default function Gallery() {
                 rel="noreferrer"
                 className="group overflow-hidden rounded-[16px] border border-white/10 bg-white/[0.04] shadow-[0_10px_22px_rgba(15,23,42,0.14)] transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06] sm:rounded-[18px]"
               >
-                <div className="relative overflow-hidden bg-slate-950/70">
+                <div className="relative overflow-hidden bg-slate-900/25">
                   <img
                     src={item.thumbnail}
                     alt={item.title}
                     loading="lazy"
                     decoding="async"
-                    className="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.03] sm:aspect-[3/4] lg:aspect-[4/5]"
+                    sizes="(min-width: 1024px) 320px, 33vw"
+                    className="aspect-[4/5] w-full bg-slate-900/25 object-cover transition duration-500 group-hover:scale-[1.03] sm:aspect-[3/4] lg:aspect-[4/5]"
                   />
-                  <span className="absolute left-1.5 top-1.5 rounded-full border border-cyan-300/20 bg-slate-950/75 px-1.5 py-0.5 text-[8px] font-semibold text-cyan-100 backdrop-blur sm:left-2 sm:top-2 sm:px-2 sm:py-1 sm:text-[10px]">
+                  <span className="absolute left-1.5 top-1.5 rounded-full border border-cyan-300/20 bg-slate-950/55 px-1.5 py-0.5 text-[8px] font-semibold text-cyan-100 backdrop-blur sm:left-2 sm:top-2 sm:px-2 sm:py-1 sm:text-[10px]">
                     {item.category}
                   </span>
-                  <span className="absolute inset-0 flex items-center justify-center bg-slate-950/10 opacity-95 transition group-hover:bg-slate-950/20">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 bg-slate-950/60 text-white backdrop-blur sm:h-11 sm:w-11">
-                      <PlayCircle className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <span className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-slate-950/20 via-transparent to-transparent opacity-100 transition group-hover:from-slate-950/10">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/35 bg-white/20 text-white shadow-[0_8px_24px_rgba(15,23,42,0.28)] backdrop-blur sm:h-11 sm:w-11">
+                      <PlayCircle className="h-5 w-5 drop-shadow sm:h-6 sm:w-6" />
                     </span>
                   </span>
                 </div>
@@ -305,6 +306,7 @@ export default function Gallery() {
                     alt={item.title}
                     loading="lazy"
                     decoding="async"
+                    sizes="(min-width: 1280px) 240px, (min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                     className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                   />
                   <span className="absolute left-2 top-2 rounded-full border border-cyan-300/20 bg-slate-950/75 px-2 py-1 text-[10px] font-semibold text-cyan-100 backdrop-blur">
