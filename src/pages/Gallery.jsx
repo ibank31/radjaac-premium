@@ -87,12 +87,6 @@ const galleryItems = [
     thumbnail: "/assets/gallery/thumb/display-ac-gree-low-watt-radja-ac-01-thumb.webp",
   },
   {
-    title: "Loading AC Sharp Truk Kuning",
-    category: "Pengiriman",
-    image: "/assets/gallery/pengiriman/radja-ac-loading-ac-sharp-truk-kuning.webp",
-    thumbnail: "/assets/gallery/pengiriman/radja-ac-loading-ac-sharp-truk-kuning.webp",
-  },
-  {
     title: "Display AC Gree Showroom",
     category: "Showroom",
     image: "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-02.webp",
