@@ -30,7 +30,7 @@ export default function SalesLandingSection() {
               MULAI DARI SINI
             </div>
             <h2 className="mb-4 text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:text-5xl">
-              Bingung cari AC di Purwokerto?
+              Bingung pilih AC untuk rumah, kos, atau usaha di Purwokerto?
             </h2>
             <p className="mb-6 max-w-2xl text-sm leading-7 text-white/66 sm:text-base">
               RADJA AC menyiapkan halaman khusus untuk membantu calon pembeli memilih AC berdasarkan brand, tipe, ukuran ruangan, daya listrik, dan kebutuhan pemasangan.
