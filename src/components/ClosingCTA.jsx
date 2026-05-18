@@ -2,7 +2,7 @@ import { Clock, MapPin, MessageCircle } from "lucide-react"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const CLOSING_MESSAGE =
-  "Halo RADJA AC, saya masih bingung pilih AC. Mohon bantu rekomendasi AC yang cocok dan kisaran harganya."
+  "Halo RADJA AC, saya masih bingung pilih AC. Mohon bantu cek pilihan PK, brand, stok, kisaran harga, dan kebutuhan instalasi."
 
 export default function ClosingCTA() {
   return (
@@ -17,11 +17,12 @@ export default function ClosingCTA() {
           </p>
 
           <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] text-white sm:text-4xl">
-            Bingung Pilih AC yang Cocok?
+            Masih Bingung Pilih AC?
           </h2>
 
           <p className="mx-auto mb-7 max-w-xl text-sm leading-7 text-white/65 sm:text-base">
-            Chat RADJA AC untuk cek stok, tanya harga terbaru, dan minta rekomendasi AC sesuai luas ruangan, daya listrik, serta kebutuhan penggunaan.
+            Chat WhatsApp RADJA AC saja. Kirim ukuran ruangan, daya listrik rumah, foto titik indoor dan outdoor, budget, lokasi pemasangan, dan kapan rencana pasang.
+            Nanti kami bantu cek pilihan PK, brand, stok, kisaran harga, dan kebutuhan instalasinya.
           </p>
 
           <a

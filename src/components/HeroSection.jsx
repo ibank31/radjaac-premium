@@ -4,7 +4,7 @@ import WhatsappIcon from "./ui/WhatsappIcon";
 import { buildWhatsAppUrl } from "../utils/whatsapp";
 
 const CONSULTATION_MESSAGE =
-  "Halo RADJA AC, saya mau konsultasi beli AC. Mohon rekomendasi brand, PK, dan harga yang cocok untuk kebutuhan saya."
+  "Halo RADJA AC, saya mau konsultasi beli AC. Mohon bantu cek ukuran ruangan, kapasitas PK, daya listrik, pilihan brand, kisaran harga, dan kebutuhan pemasangan."
 
 export default function HeroSection() {
   return (
@@ -28,16 +28,15 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black leading-[1.05] sm:leading-tight tracking-[-0.03em] mb-5 max-w-xl">
-              Toko AC Purwokerto
+              Mau Beli AC di Purwokerto?
               <span className="block text-cyan-300">
-                untuk rumah, kos, kantor, dan usaha lokal
+                Konsultasi Dulu Biar Tidak Salah Pilih
               </span>
             </h1>
 
             <p className="text-white/70 text-sm sm:text-base leading-7 max-w-xl mb-5 sm:mb-6">
-              RADJA AC membantu pilih AC Daikin, Midea, Gree, Hisense,
-              Sansui, Sharp, Panasonic, dan brand resmi lainnya untuk area
-              Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
+              RADJA AC membantu Anda memilih AC yang sesuai untuk rumah, kos,
+              toko, kantor, atau usaha lokal di Purwokerto dan sekitarnya.
             </p>
 
             <div className="relative z-20 flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3 mb-4">
