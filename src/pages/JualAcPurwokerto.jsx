@@ -265,7 +265,10 @@ export default function JualAcPurwokerto() {
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-200"><Ruler className="h-4 w-4" />PANDUAN PK AC</div>
               <h2 className="mb-5 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Jangan salah kapasitas AC</h2>
               <p className="mb-6 text-sm leading-7 text-white/64 sm:text-base">Salah memilih PK bisa membuat ruangan lama dingin atau unit bekerja terlalu berat. Gunakan panduan ini sebagai perkiraan awal sebelum konsultasi.</p>
-              <WhatsAppButton>Cek PK yang Cocok</WhatsAppButton>
+              <Link to="/kalkulator-pk-ac" className="inline-flex items-center justify-center gap-3 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-6 py-4 font-bold text-cyan-100 transition hover:bg-cyan-300/15">
+                Gunakan Kalkulator PK
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
             <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04]">
               <div className="divide-y divide-white/10">
