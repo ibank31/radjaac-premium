@@ -30,14 +30,14 @@ export default function HeroSection() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black leading-[1.05] sm:leading-tight tracking-[-0.03em] mb-5 max-w-xl">
               Toko AC Purwokerto
               <span className="block text-cyan-300">
-                Dealer AC Resmi Bergaransi
+                untuk rumah, kos, kantor, dan usaha lokal
               </span>
             </h1>
 
             <p className="text-white/70 text-sm sm:text-base leading-7 max-w-xl mb-5 sm:mb-6">
-              Jual AC original berbagai brand resmi seperti Daikin, Gree,
-              Midea, Hisense, Sansui, Sharp, Panasonic, dan brand populer lainnya
-              untuk rumah, toko, kantor, cafe, dan proyek di Purwokerto & Banyumas.
+              RADJA AC membantu pilih AC Daikin, Midea, Gree, Hisense,
+              Sansui, Sharp, Panasonic, dan brand resmi lainnya untuk area
+              Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
             </p>
 
             <div className="relative z-20 flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3 mb-4">
