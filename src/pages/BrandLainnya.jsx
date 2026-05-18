@@ -175,7 +175,7 @@ export default function BrandLainnya() {
             </h1>
 
             <p className="mx-auto mb-7 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-              Selain brand unggulan, RADJA AC membantu pembelian AC dari berbagai brand populer lain untuk rumah, kos, toko, kantor kecil, dan kebutuhan usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
+              Selain brand unggulan, RADJA AC bantu pembelian AC dari berbagai brand populer lain untuk rumah, kos, toko, kantor kecil, dan kebutuhan usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">

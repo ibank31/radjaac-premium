@@ -25,7 +25,7 @@ const benefits = [
   },
   {
     title: "Original dengan dukungan dealer",
-    description: "RADJA AC membantu pembelian AC Midea original, konsultasi kapasitas, instalasi rapi, dan after-sales.",
+    description: "RADJA AC bantu pembelian AC Midea original, konsultasi kapasitas, instalasi rapi, dan support after-sales.",
     icon: ShieldCheck,
   },
 ]
@@ -37,7 +37,7 @@ const products = [
     image: "/assets/brands/midea/ac-midea-standar.webp",
     fit: "Kamar tidur, kos, ruang santai, dan toko kecil",
     priority: "Pendinginan harian dengan pilihan yang lebih ekonomis",
-    description: "Pilihan AC Midea original untuk pelanggan yang butuh pendinginan nyaman dan praktis untuk penggunaan harian.",
+    description: "Pilihan Midea original untuk pelanggan yang butuh pendinginan nyaman dan praktis setiap hari.",
     highlights: ["Harian", "Ekonomis", "Praktis"],
   },
   {
@@ -178,7 +178,7 @@ export default function MideaPurwokerto() {
               </h1>
 
               <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC membantu pembelian AC Midea untuk rumah, kos, kontrakan, kantor kecil, toko, dan kebutuhan harian di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Konsultasikan ukuran ruangan, daya listrik, dan pola pemakaian agar pilihan unit lebih tepat.
+                RADJA AC bantu pembelian AC Midea untuk rumah, kos, kontrakan, kantor kecil, toko, dan kebutuhan harian di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Kirim ukuran ruangan, daya listrik, dan pola pakai supaya pilihan unit lebih pas.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">

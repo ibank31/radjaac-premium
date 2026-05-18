@@ -93,7 +93,7 @@ export default function SharpPurwokerto() {
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
-              RADJA AC membantu pembelian AC Sharp untuk rumah, keluarga, kamar tidur, ruang santai, dan kebutuhan harian di Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
+              RADJA AC bantu pembelian AC Sharp untuk rumah, keluarga, kamar tidur, ruang santai, dan kebutuhan harian di Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
             </p>
 
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center sm:gap-4 gap-4">

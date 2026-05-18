@@ -29,19 +29,19 @@ const benefits = [
   {
     title: "Daikin original bergaransi resmi",
     description:
-      "RADJA AC membantu pelanggan memilih AC Daikin original dengan dukungan garansi resmi dan konsultasi sebelum membeli.",
+      "RADJA AC bantu pilih AC Daikin original dengan garansi resmi dan cek tipe sebelum membeli.",
     icon: ShieldCheck,
   },
   {
     title: "Konsultasi PK sebelum beli",
     description:
-      "Ukuran ruangan, daya listrik, dan pola pemakaian dicek dulu agar pilihan AC Daikin lebih tepat untuk kebutuhan rumah atau usaha.",
+      "Ukuran ruangan, daya listrik, dan pola pemakaian kami cek dulu supaya pilihan AC Daikin lebih pas untuk rumah atau usaha.",
     icon: CheckCircle2,
   },
   {
     title: "Bisa bantu instalasi profesional",
     description:
-      "Pembelian AC Daikin dapat dilanjutkan dengan instalasi rapi agar performa pendinginan lebih optimal dan aman digunakan.",
+      "Pembelian AC Daikin bisa dilanjutkan dengan instalasi rapi agar AC lebih optimal dan aman dipakai.",
     icon: Snowflake,
   },
 ]
@@ -54,7 +54,7 @@ const products = [
     fit: "Kamar utama, ruang keluarga, dan kantor kecil",
     priority: "Hemat energi dan suhu lebih stabil",
     description:
-      "Cocok untuk pelanggan yang memakai AC cukup sering dan mengutamakan kenyamanan suhu harian.",
+      "Cocok untuk pelanggan yang pakai AC rutin dan ingin suhu tetap nyaman setiap hari.",
     highlights: ["Suhu stabil", "Nyaman harian", "Efisien"],
   },
   {
@@ -239,7 +239,7 @@ export default function DaikinPurwokerto() {
               </h1>
 
               <p className="mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                RADJA AC membantu pembelian AC Daikin untuk rumah, kos, kantor, toko, cafe, dan kebutuhan usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Konsultasikan kebutuhan ruangan Anda untuk mendapatkan rekomendasi tipe dan PK yang paling tepat.
+                Butuh AC Daikin untuk rumah, kos, kantor, toko, cafe, atau usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya? RADJA AC bantu pilih tipe dan PK yang pas, plus cek garansi dan pemasangan.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
