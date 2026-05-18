@@ -143,7 +143,7 @@ export default function KatalogAc() {
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
         title="Katalog AC Purwokerto & Banyumas | Panduan Pilih AC RADJA AC"
-        description="Panduan memilih AC berdasarkan kebutuhan: AC Split Rumah, Inverter, Low Watt, AC Kantor, AC Cassette, partai besar, dan kapasitas PK. RADJA AC bantu rekomendasi unit sesuai ruangan, daya listrik, dan budget."
+        description="Panduan memilih AC untuk rumah, kos, kantor kecil, toko, dan kebutuhan usaha di Purwokerto & Banyumas. RADJA AC bantu rekomendasi unit sesuai ruangan, daya listrik, dan budget."
         canonicalPath="/katalog"
       />
 
@@ -169,7 +169,7 @@ export default function KatalogAc() {
               </h1>
 
               <p className="mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                Mulai dari luas ruangan, daya listrik, dan pola pemakaian. RADJA AC bantu arahkan pilihan AC Split, Inverter, Low Watt, AC Cassette, hingga kebutuhan kantor dan partai besar.
+                Mulai dari luas ruangan, daya listrik, dan pola pemakaian. RADJA AC membantu memilih AC untuk rumah, kos, kantor kecil, toko, dan kebutuhan usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
               </p>
 
               <div className="mx-auto flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:mx-0 lg:justify-start">
@@ -230,7 +230,7 @@ export default function KatalogAc() {
             <div className="mb-4 flex justify-center text-cyan-300"><BadgeCheck className="h-10 w-10" /></div>
             <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl">Brand bisa disesuaikan setelah kebutuhan jelas</h2>
             <p className="mx-auto mb-6 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">
-              RADJA AC menyediakan brand unggulan seperti Daikin, Gree, Midea, Hisense, Sansui, serta brand populer lainnya sesuai ketersediaan stok.
+              RADJA AC menyediakan brand unggulan seperti Daikin, Gree, Midea, Hisense, Sansui, Sharp, Panasonic, serta brand populer lainnya sesuai stok dan kebutuhan ruangan.
             </p>
             <div className="flex flex-wrap justify-center gap-2.5">
               {brandLinks.map((brand) => (
@@ -254,7 +254,7 @@ export default function KatalogAc() {
               <div className="mb-4 flex justify-center text-cyan-300"><MessageCircle className="h-10 w-10" /></div>
               <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Bingung mulai dari kategori mana?</h2>
               <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">
-                Kirim ukuran ruangan, daya listrik, dan budget. Tim RADJA AC akan bantu arahkan kategori AC dan brand yang paling sesuai.
+                Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan budget. Tim RADJA AC akan bantu arahkan kategori AC dan brand yang paling sesuai.
               </p>
               <WhatsAppButton>Konsultasi via WhatsApp</WhatsAppButton>
             </div>
