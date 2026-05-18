@@ -365,7 +365,12 @@ export default function AcLowWatt() {
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
                 Low watt akan lebih aman kalau daya listrik, kapasitas PK, dan kondisi ruangan dicek dari awal. Jangan sampai unitnya hemat daya tapi kurang dingin.
               </p>
-              <WhatsAppButton className="mx-auto flex w-full max-w-[432px] lg:mx-0 lg:w-fit lg:max-w-none">Hitungkan Kebutuhan Low Watt</WhatsAppButton>
+              <Link
+                to="/kalkulator-pk-ac"
+                className="mx-auto flex w-full max-w-[432px] items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-300/10 px-6 py-4 font-bold text-cyan-100 transition hover:bg-cyan-300/15 lg:mx-0 lg:w-fit lg:max-w-none"
+              >
+                Cek Kebutuhan PK AC
+              </Link>
             </div>
 
             <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-5 sm:p-6">
