@@ -51,7 +51,7 @@ export default function Home() {
     priceRange: "Rp3 jutaan-Rp6 jutaan+",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Purwokerto",
+      addressLocality: "Pamijen, Purwokerto Timur",
       addressRegion: "Jawa Tengah",
       addressCountry: "ID",
     },

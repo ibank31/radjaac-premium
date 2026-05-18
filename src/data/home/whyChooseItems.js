@@ -1,4 +1,4 @@
-import { Star, Wrench, MessageCircle, Headphones } from "lucide-react";
+import { Star, Wrench, MapPin, MessageCircle, Headphones } from "lucide-react";
 
 export const WHY_CHOOSE_ITEMS = [
   {
@@ -10,6 +10,11 @@ export const WHY_CHOOSE_ITEMS = [
     title: "Instalasi Rapi",
     desc: "Teknisi berpengalaman dengan pengerjaan bersih & presisi",
     Icon: Wrench,
+  },
+  {
+    title: "Lokasi Area Banyumas",
+    desc: "RADJA AC berlokasi di area Pamijen, dekat RS Margono, Purwokerto Timur – Banyumas, dan melayani pembelian AC untuk Purwokerto, Sokaraja, Banyumas, dan sekitarnya.",
+    Icon: MapPin,
   },
   {
     title: "Konsultasi Produk",
