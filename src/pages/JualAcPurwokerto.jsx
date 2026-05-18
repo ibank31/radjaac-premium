@@ -112,7 +112,7 @@ export default function JualAcPurwokerto() {
     priceRange: "Rp3 jutaan-Rp6 jutaan+",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Purwokerto",
+      addressLocality: "Pamijen, Purwokerto Timur",
       addressRegion: "Jawa Tengah",
       addressCountry: "ID",
     },
@@ -290,7 +290,7 @@ export default function JualAcPurwokerto() {
               <div>
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-cyan-200"><MapPin className="h-4 w-4" />AREA LAYANAN</div>
                 <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl">Melayani Purwokerto, Banyumas, dan sekitar</h2>
-                <p className="text-sm leading-7 text-white/64 sm:text-base">Fokus utama RADJA AC adalah membantu pembeli AC lokal mendapatkan unit yang sesuai kebutuhan, mudah konsultasi, dan jelas tindak lanjutnya.</p>
+                <p className="text-sm leading-7 text-white/64 sm:text-base">RADJA AC melayani pembelian AC untuk area Purwokerto, Sokaraja, Banyumas, dan sekitarnya.\n\nShowroom & stok unit berada di area Pamijen, dekat RS Margono, Purwokerto Timur – Banyumas. Untuk cek stok, harga terbaru, dan arahan kunjungan, hubungi admin RADJA AC via WhatsApp terlebih dahulu.</p>
               </div>
               <div className="flex flex-wrap gap-2.5">
                 {SITE_DATA.serviceAreas.slice(0, 10).map((area) => <span key={area} className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-semibold text-white/75">{area}</span>)}
