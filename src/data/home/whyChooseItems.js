@@ -13,7 +13,7 @@ export const WHY_CHOOSE_ITEMS = [
   },
   {
     title: "Lokasi Area Banyumas",
-    desc: "RADJA AC berlokasi di area Pamijen, dekat RS Margono, Purwokerto Timur – Banyumas, dan melayani pembelian AC untuk Purwokerto, Sokaraja, Banyumas, dan sekitarnya.",
+    desc: "Berlokasi di area Pamijen, dekat RS Margono, dan melayani pembelian AC untuk Purwokerto, Sokaraja, Banyumas, dan sekitarnya.",
     Icon: MapPin,
   },
   {
