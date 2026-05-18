@@ -174,7 +174,7 @@ export default function BrandLainnya() {
             </h1>
 
             <p className="mx-auto mb-7 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-              Selain brand unggulan, RADJA AC juga melayani penjualan AC original dari berbagai brand populer lain sesuai ketersediaan stok, kebutuhan ruangan, dan budget pelanggan.
+              Selain brand unggulan, RADJA AC membantu pembelian AC dari berbagai brand populer lain untuk rumah, kos, toko, kantor kecil, dan kebutuhan usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -198,7 +198,7 @@ export default function BrandLainnya() {
               <p className="mb-3 text-xs uppercase tracking-[0.3em] text-cyan-300">BRAND POPULER</p>
               <h2 className="mb-4 text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl">Tersedia juga brand populer lainnya</h2>
               <p className="mx-auto max-w-2xl text-sm leading-7 text-white/60 sm:text-base">
-                Ketersediaan brand dan tipe dapat berubah. Hubungi RADJA AC untuk cek stok dan rekomendasi unit terbaru.
+                Ketersediaan brand dan tipe bisa berubah mengikuti stok. Hubungi RADJA AC untuk cek pilihan unit, harga terbaru, dan rekomendasi AC yang sesuai kebutuhan ruangan.
               </p>
             </div>
 
@@ -286,7 +286,7 @@ export default function BrandLainnya() {
               <div className="mb-4 flex justify-center text-cyan-300"><MessageCircle className="h-10 w-10" /></div>
               <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Cari brand AC tertentu?</h2>
               <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">
-                Kirim nama brand, ukuran ruangan, dan kebutuhan penggunaan. Tim RADJA AC akan bantu cek stok serta rekomendasi unit yang sesuai.
+                Kirim nama brand, ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan kebutuhan penggunaan. Tim RADJA AC akan bantu cek stok serta rekomendasi unit yang sesuai.
               </p>
               <WhatsAppButton>Konsultasi Brand via WhatsApp</WhatsAppButton>
             </div>
