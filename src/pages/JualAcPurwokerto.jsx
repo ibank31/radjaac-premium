@@ -64,10 +64,10 @@ const articleLinks = [
 ]
 
 const faqItems = [
-  ["Apakah RADJA AC menjual AC untuk Purwokerto dan Banyumas?", "Ya. RADJA AC melayani pembelian AC untuk Purwokerto, Banyumas, dan area sekitar dengan pilihan brand resmi sesuai stok yang tersedia."],
-  ["Apakah bisa tanya harga AC sebelum datang ke toko?", "Bisa. Calon pembeli dapat menghubungi WhatsApp RADJA AC untuk cek stok, rekomendasi PK, pilihan brand, dan estimasi kebutuhan pemasangan."],
-  ["Apakah bisa dibantu memilih AC berdasarkan ukuran ruangan?", "Bisa. Kirim ukuran ruangan, tinggi plafon, daya listrik, foto titik indoor-outdoor, dan kebutuhan pemakaian agar rekomendasi lebih akurat."],
-  ["Apakah pembelian AC bisa sekaligus pemasangan?", "Bisa. Pembelian unit dapat dilanjutkan dengan layanan pemasangan sesuai kondisi lokasi dan kebutuhan instalasi."],
+  ["Apakah RADJA AC menjual AC untuk Purwokerto dan Banyumas?", "Ya. RADJA AC melayani pembelian AC untuk Purwokerto, Banyumas, dan area sekitar. Cek stok dan rekomendasi lewat WhatsApp."],
+  ["Apakah bisa tanya harga AC sebelum datang ke toko?", "Bisa. Anda cukup chat WhatsApp RADJA AC untuk cek stok, rekomendasi PK, pilihan brand, dan estimasi pemasangan."],
+  ["Apakah bisa dibantu memilih AC berdasarkan ukuran ruangan?", "Bisa. Kirim ukuran ruangan, tinggi plafon, daya listrik, dan foto titik indoor-outdoor agar rekomendasi lebih tepat."],
+  ["Apakah pembelian AC bisa sekaligus pemasangan?", "Bisa. Pembelian unit bisa dilanjutkan dengan pemasangan sesuai kondisi lokasi dan kebutuhan instalasi."],
 ]
 
 function WhatsAppButton({ children = "Konsultasi Beli AC", className = "" }) {
@@ -145,7 +145,7 @@ export default function JualAcPurwokerto() {
                 <span className="block text-cyan-300">konsultasi dulu, baru pilih unit</span>
               </h1>
               <p className="mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-                RADJA AC membantu calon pembeli memilih AC yang sesuai untuk rumah, kamar, kos, kantor, toko, cafe, dan kebutuhan proyek. Cek pilihan Daikin, Midea, Gree, Hisense, Sansui, Sharp, Panasonic, stok unit, harga, kapasitas PK, dan kebutuhan pemasangan lewat WhatsApp.
+                Bisa chat dulu lewat WhatsApp. RADJA AC bantu pilih AC yang pas untuk rumah, kamar, kos, kantor, toko, cafe, atau proyek kecil. Nanti kami cek stok, kapasitas PK, brand, harga, dan kebutuhan pemasangan.
               </p>
               <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <WhatsAppButton />

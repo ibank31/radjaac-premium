@@ -9,9 +9,9 @@ const areaConfig = {
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Banyumas dan banyak kecamatan sekitarnya, termasuk konsultasi AC rumah, toko, kost, ruko, kantor, kebutuhan banyak unit, cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA BANYUMAS",
   h1: "Jual AC Banyumas",
-  heroHighlight: "halaman payung untuk banyak kecamatan dan kebutuhan unit AC",
+  heroHighlight: "Dari Purwokerto, Kami Siap Layani",
   heroDescription:
-    "RADJA AC Purwokerto melayani konsultasi pembelian AC untuk area Banyumas dan kecamatan sekitarnya. Halaman ini cocok sebagai titik awal untuk cek kebutuhan rumah tinggal, kamar kost, ruko, toko, kantor kecil, hingga kebutuhan beberapa unit dengan cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai alamat serta jadwal.",
+    "Beli AC di Banyumas tidak harus datang ke toko. RADJA AC bantu konsultasi pilihan AC, cek kebutuhan ruangan, sampai jadwal pemasangan. Cukup chat WhatsApp, sebutkan ukuran ruangan, daya listrik, foto titik indoor-outdoor, dan budget. Nanti kami bantu rekomendasikan AC yang sesuai untuk rumah, kos, toko, kantor kecil, atau usaha lokal di Banyumas.",
   primaryCta: "Tanya AC Banyumas",
   waMessage:
     "Halo RADJA AC, saya dari Banyumas. Mau tanya AC untuk rumah/usaha/kost, cek stok, harga, rekomendasi PK, dan opsi pengiriman atau pemasangan.",
@@ -51,14 +51,14 @@ const areaConfig = {
   choiceDescription:
     "Kalau belum yakin memilih merek, mulai dari jenis ruangan, ukuran ruangan, daya listrik, jumlah unit, dan jam pemakaian.",
   faqItems: [
-    ["Apakah RADJA AC melayani jual AC area Banyumas?", "Ya. RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk area Banyumas dan banyak kecamatan sekitarnya sesuai stok, rute, lokasi, dan jadwal."],
-    ["Apakah cocok untuk rumah, toko, kost, dan ruko?", "Bisa. Kebutuhan rumah, kamar kost, toko, ruko, kantor kecil, sampai beberapa unit akan dicek berdasarkan ukuran ruangan, daya listrik, budget, dan jumlah titik pemasangan."],
-    ["Apakah bisa beli AC beberapa unit sekaligus?", "Bisa. Untuk kost, toko, ruko, kantor kecil, atau kebutuhan usaha, jumlah unit akan dicek dulu sesuai stok, kebutuhan ruangan, pengiriman, dan jadwal pemasangan."],
-    ["Apakah bisa pemasangan AC ke Banyumas?", "Bisa untuk area dan kondisi tertentu setelah alamat, jumlah unit, akses lokasi, kebutuhan material, dan jadwal teknisi dikonfirmasi terlebih dahulu."],
+    ["Apakah RADJA AC melayani jual AC area Banyumas?", "Ya. RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk Banyumas dan kecamatan sekitar sesuai stok, rute, lokasi, dan jadwal."],
+    ["Apakah cocok untuk rumah, toko, kost, dan ruko?", "Bisa. Kebutuhan rumah, kost, toko, ruko, kantor kecil, atau beberapa unit akan dicek berdasarkan ukuran ruangan, daya listrik, budget, dan titik pemasangan."],
+    ["Apakah bisa beli AC beberapa unit sekaligus?", "Bisa. Untuk kost, toko, ruko, kantor kecil, atau usaha, jumlah unit akan dicek dulu sesuai stok, kebutuhan ruangan, pengiriman, dan jadwal pemasangan."],
+    ["Apakah bisa pemasangan AC ke Banyumas?", "Bisa untuk area tertentu setelah alamat, jumlah unit, akses lokasi, dan jadwal teknisi dikonfirmasi."],
   ],
   finalCtaTitle: "Mau beli AC area Banyumas?",
   finalCtaDescription:
-    "Kirim lokasi, kecamatan, jumlah unit, jenis ruangan, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan jadwal pemasangan sesuai konfirmasi.",
+    "Kirim lokasi, kecamatan, jumlah unit, jenis ruangan, ukuran ruangan, daya listrik, dan budget. Nanti kami bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan jadwal pemasangan sesuai konfirmasi.",
 }
 
 export default function JualAcBanyumas() {
