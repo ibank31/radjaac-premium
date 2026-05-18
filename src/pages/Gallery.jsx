@@ -263,6 +263,7 @@ export default function Gallery() {
                     alt={item.title}
                     loading="lazy"
                     decoding="async"
+                    sizes="(min-width: 1024px) 320px, 33vw"
                     className="aspect-[4/5] w-full bg-slate-900/25 object-cover transition duration-500 group-hover:scale-[1.03] sm:aspect-[3/4] lg:aspect-[4/5]"
                   />
                   <span className="absolute left-1.5 top-1.5 rounded-full border border-cyan-300/20 bg-slate-950/55 px-1.5 py-0.5 text-[8px] font-semibold text-cyan-100 backdrop-blur sm:left-2 sm:top-2 sm:px-2 sm:py-1 sm:text-[10px]">
@@ -305,6 +306,7 @@ export default function Gallery() {
                     alt={item.title}
                     loading="lazy"
                     decoding="async"
+                    sizes="(min-width: 1280px) 240px, (min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                     className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                   />
                   <span className="absolute left-2 top-2 rounded-full border border-cyan-300/20 bg-slate-950/75 px-2 py-1 text-[10px] font-semibold text-cyan-100 backdrop-blur">
