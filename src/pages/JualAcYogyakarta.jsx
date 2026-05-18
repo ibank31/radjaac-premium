@@ -86,10 +86,9 @@ const processSteps = [
 ]
 
 const faqItems = [
-  ["Apakah RADJA AC melayani jual AC area Yogyakarta?", "Ya. RADJA AC melayani konsultasi pembelian AC untuk area Yogyakarta dan sekitarnya, terutama untuk unit only dan pengadaan banyak unit. Pengiriman dan opsi pemasangan dibahas sesuai lokasi, jumlah unit, dan jadwal."],
-  ["Bisa beli unit only tanpa pemasangan?", "Bisa. Unit only cocok untuk pembeli yang sudah punya teknisi sendiri, kontraktor, pengelola kost, toko, ruko, kantor, atau kebutuhan proyek."],
-  ["Bisa sekalian instalasi di Jogja?", "Bisa dikonsultasikan dulu, tetapi bukan janji utama. Pemasangan menyesuaikan lokasi, jumlah unit, akses titik pemasangan, material tambahan, dan jadwal teknisi."],
-  ["Apakah bisa pembelian banyak unit?", "Bisa. Untuk kost, ruko, toko, kantor, atau proyek, harga bisa dibuatkan penawaran khusus sesuai jumlah unit, brand, stok, lokasi, dan kebutuhan pengiriman."],
+  ["Bisa bantu kebutuhan AC untuk kos atau guest house di Jogja?", "Bisa. Anda tinggal kirim jumlah ruangan, ukuran tiap kamar, daya listrik, dan budget. Nanti kami bantu arahkan pilihan AC yang lebih masuk akal, terutama kalau kebutuhannya lebih dari satu unit."],
+  ["Kalau cuma mau tanya harga AC dulu bisa?", "Bisa. Chat WhatsApp saja. Sebutkan brand yang diminati, ukuran ruangan, dan lokasi di Jogja. Kami bantu cek pilihan unit, stok, dan kisaran harga."],
+  ["Kalau butuh pemasangan di Jogja gimana?", "Bisa dibahas dulu. Kami perlu cek foto titik indoor-outdoor, akses lokasi, panjang pipa, dan kondisi listrik. Dari situ baru kebutuhan pemasangan bisa dihitung lebih jelas."],
 ]
 
 function WhatsAppButton({ children, message = waMessage, className = "" }) {
@@ -172,16 +171,24 @@ export default function JualAcYogyakarta() {
                 JUAL AC AREA YOGYAKARTA
               </div>
               <h1 className="mb-5 max-w-3xl text-3xl font-black leading-[1.05] tracking-[-0.035em] sm:text-4xl md:text-5xl xl:text-6xl">
-                Jual AC Yogyakarta
-                <span className="block text-cyan-300">unit only, pengadaan, dan banyak unit</span>
+                Mau Beli AC di Jogja?
+                <span className="block text-cyan-300">Bisa Konsultasi Dulu, Apalagi Kalau Butuh Beberapa Unit</span>
               </h1>
-              <p className="mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-                RADJA AC melayani konsultasi pembelian AC untuk area Yogyakarta dan sekitarnya. Fokus utama untuk unit only, pengadaan banyak unit, kost, ruko, toko, kantor kecil, kontraktor, atau proyek. Opsi pengiriman dan pemasangan dibahas sesuai lokasi, jumlah unit, rute, dan jadwal.
-              </p>
+              <div className="mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
+                <p className="mb-4">
+                  Di Jogja, kebutuhan AC macam-macam. Ada yang buat kamar kos, rumah tinggal, kontrakan, guest house, toko, kantor kecil, sampai usaha yang butuh beberapa unit sekaligus.
+                </p>
+                <p className="mb-4">
+                  Daripada langsung pilih AC asal murah, lebih aman konsultasi dulu. Ceritakan kebutuhan Anda: ruangannya berapa, dipakai berapa lama tiap hari, daya listriknya berapa, dan budget-nya di kisaran berapa.
+                </p>
+                <p>
+                  Nanti RADJA AC bantu cek pilihan brand, kapasitas PK, stok, dan kisaran harga yang masuk akal. Kalau butuh pemasangan di Jogja, detail teknis seperti titik indoor-outdoor, akses lokasi, panjang pipa, dan jadwal bisa dibahas setelah kondisi ruangan lebih jelas.
+                </p>
+              </div>
               <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <WhatsAppButton>Tanya Stok AC Jogja</WhatsAppButton>
+                <WhatsAppButton>Konsultasi AC Jogja</WhatsAppButton>
                 <Link to="/katalog" className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]">
-                  Lihat Katalog AC
+                  Lihat Pilihan AC
                 </Link>
               </div>
               <div className="flex flex-wrap justify-center gap-2 text-sm text-white/62 lg:justify-start">

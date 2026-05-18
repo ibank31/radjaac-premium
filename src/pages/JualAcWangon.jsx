@@ -9,10 +9,10 @@ const areaConfig = {
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Wangon dan jalur Banyumas barat, termasuk kebutuhan rumah, toko, kost, ruko, kantor kecil, banyak unit, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA WANGON",
   h1: "Jual AC Wangon",
-  heroHighlight: "jalur Banyumas barat untuk unit dan banyak unit",
+  heroHighlight: "RADJA AC Layani Wangon",
   heroDescription:
-    "RADJA AC Purwokerto melayani konsultasi pembelian AC untuk area Wangon, Rawaheng, Jambu, Randegan, dan sekitar jalur Banyumas barat. Cocok untuk rumah, toko, ruko, kost, kantor kecil, atau kebutuhan beberapa unit dengan cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai konfirmasi rute serta lokasi.",
-  primaryCta: "Tanya AC Wangon",
+    "Wangon agak jauh dari Purwokerto pusat, jadi kami paham kalau Anda ingin proses yang praktis. Tidak harus datang ke toko dulu hanya untuk tanya harga atau pilihan AC. Lewat WhatsApp, Anda bisa konsultasi kebutuhan AC untuk rumah, kos, toko, atau usaha di Wangon. Kirim ukuran ruangan, daya listrik, foto lokasi, dan budget. Nanti kami bantu arahkan pilihan AC yang masuk akal sebelum jadwal pengiriman dan pemasangan dibahas.",
+  primaryCta: "Chat WhatsApp untuk AC Wangon",
   waMessage:
     "Halo RADJA AC, saya dari Wangon. Mau tanya AC untuk rumah/toko/kost/ruko atau banyak unit area Banyumas barat, cek stok, harga, rekomendasi PK, dan opsi pengiriman atau pemasangan.",
   heroChips: ["Jalur Banyumas barat", "Rumah & toko", "Kost/ruko", "Bisa banyak unit", "Rute dicek dulu"],
@@ -51,10 +51,9 @@ const areaConfig = {
   choiceDescription:
     "Kalau belum yakin memilih merek, mulai dari jenis ruangan, ukuran ruangan, daya listrik, jumlah unit, dan jam pemakaian.",
   faqItems: [
-    ["Apakah RADJA AC melayani jual AC area Wangon?", "Ya. RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk area Wangon dan sekitarnya sesuai stok, rute, lokasi, dan jadwal."],
-    ["Apakah cocok untuk rumah, toko, ruko, dan kost?", "Bisa. Kebutuhan rumah, toko, ruko, kost, atau kantor kecil akan dicek berdasarkan ukuran ruangan, daya listrik, jumlah unit, budget, dan kondisi lokasi."],
-    ["Apakah bisa pemasangan AC ke Wangon?", "Bisa untuk area dan kondisi tertentu setelah alamat, rute, jumlah unit, akses lokasi, kebutuhan material, dan jadwal teknisi dikonfirmasi terlebih dahulu."],
-    ["Data apa yang perlu dikirim sebelum beli AC?", "Kirim lokasi pemasangan, jenis ruangan, jumlah unit, ukuran ruangan, daya listrik, budget, brand yang diminati, dan foto titik indoor-outdoor jika tersedia."],
+    ["Apakah saya harus ke Purwokerto dulu untuk tanya AC?", "Tidak perlu. Cukup chat WhatsApp, RADJA AC bisa bantu pilih AC dan atur pengiriman ke Wangon."],
+    ["Bisa cek stok dan harga dulu sebelum deal?", "Bisa. Kirim data kebutuhan AC, lalu kami cek stok, brand, dan kisaran harga lebih dulu."],
+    ["Apakah pemasangan bisa lanjut ke Wangon?", "Bisa, setelah lokasi dan kebutuhan unit dikonfirmasi lewat WhatsApp."],
   ],
   finalCtaTitle: "Mau beli AC area Wangon?",
   finalCtaDescription:
