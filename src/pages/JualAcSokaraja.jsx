@@ -8,8 +8,8 @@ const areaConfig = {
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Sokaraja dan sekitarnya, termasuk kebutuhan rumah dekat kota, toko, kost, ruko, kantor, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA SOKARAJA",
-  h1: "Jual AC Sokaraja",
-  heroHighlight: "Dekat Purwokerto, Konsultasi Lebih Praktis",
+  h1: "Sokaraja Dekat, Urusan AC Harusnya Lebih Praktis",
+  heroHighlight: "Cek Stok, PK, dan Jadwal Pasang Tanpa Ribet dari Awal",
   heroDescription:
     "Sokaraja dekat dengan Purwokerto, jadi pembelian AC bisa dibuat lebih praktis: cek stok, tanya kapasitas PK, dan bahas pemasangan tanpa harus datang dulu. Cocok untuk rumah, toko, ruko, kost, kantor, atau usaha lokal di sekitar Sokaraja. RADJA AC bantu arahkan pilihan AC berdasarkan ukuran ruangan, daya listrik, foto titik indoor-outdoor, dan budget supaya pilihan unit lebih tepat sejak awal.",
   primaryCta: "Tanya AC Sokaraja",
