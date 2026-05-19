@@ -6,10 +6,10 @@ const areaConfig = {
   seoDescription:
     "Jual AC Ajibarang untuk rumah, toko, ruko, kost, dan usaha sekitar Banyumas barat. Konsultasi PK, stok, harga, pengiriman, dan jadwal pemasangan.",
   localBusinessDescription:
-    "Toko AC Purwokerto yang melayani pembelian AC untuk area Ajibarang dan sekitarnya, termasuk kebutuhan rumah, toko, ruko, kost, usaha lokal, banyak unit area Banyumas barat, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
+    "Toko AC Purwokerto yang melayani pembelian AC untuk area Ajibarang dan sekitarnya, termasuk kebutuhan rumah, toko, ruko, kost, usaha, banyak unit area Banyumas barat, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA AJIBARANG",
-  h1: "Jual AC Ajibarang",
-  heroHighlight: "Banyumas Barat, Konsultasi Dulu Sebelum Beli",
+  h1: "Ajibarang Jadi Jalur Barat, AC Jangan Pilih Asal Murah",
+  heroHighlight: "Cek Ruangan, Daya, dan Kebutuhan Unit Sebelum Deal",
   heroDescription:
     "Ajibarang sering jadi titik rujukan untuk kebutuhan rumah, toko, ruko, kost, dan usaha di sisi barat Banyumas. Kalau butuh AC, lebih aman cek dulu ukuran ruangan, daya listrik, jumlah unit, dan rencana pemasangannya. RADJA AC bantu konsultasi lewat WhatsApp supaya pilihan AC tetap sesuai untuk pemakaian harian di Ajibarang dan sekitarnya.",
   primaryCta: "Tanya AC Ajibarang",
@@ -22,10 +22,10 @@ const areaConfig = {
     eyebrow: "BANYUMAS BARAT",
     title: "Butuh AC untuk rumah, toko, kost, atau ruko sekitar Ajibarang?",
     description:
-      "Kebutuhan AC di Ajibarang biasanya beragam: kamar rumah, toko pinggir jalan, ruko, kost, sampai ruang usaha kecil. Konsultasi awal membantu menentukan PK, pilihan brand, jumlah unit, dan kebutuhan pengiriman atau pemasangan sebelum unit disiapkan.",
+      "Kebutuhan AC di Ajibarang biasanya beragam: kamar rumah, toko pinggir jalan, ruko, kost, sampai ruang usaha. Konsultasi awal membantu menentukan PK, pilihan brand, jumlah unit, dan kebutuhan pengiriman atau pemasangan sebelum unit disiapkan.",
     cards: [
-      ["Rumah & Kamar", "Bantu pilih AC untuk kamar tidur, ruang keluarga kecil, ruang kerja, atau hunian harian di sekitar Ajibarang."],
-      ["Toko & Ruko", "Cocok untuk area pelanggan, kasir, display produk, ruang tunggu, atau usaha kecil di jalur Banyumas barat."],
+      ["Rumah & Kamar", "Bantu pilih AC untuk kamar tidur, ruang keluarga, ruang kerja, atau hunian harian di sekitar Ajibarang."],
+      ["Toko & Ruko", "Cocok untuk area pelanggan, kasir, display produk, ruang tunggu, atau usaha di jalur Banyumas barat."],
       ["Kost & Banyak Unit", "Bisa diskusi kebutuhan beberapa kamar dengan pilihan brand hemat, low watt, atau inverter sesuai daya listrik."],
     ],
     ctaLabel: "Tanya AC Ajibarang",

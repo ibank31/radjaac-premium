@@ -22,7 +22,7 @@ const brandLinks = [
 ]
 
 const categoryLinks = [
-  ["AC Split Rumah", "Untuk kamar tidur, ruang keluarga, kos, kontrakan, dan toko kecil.", "/katalog/ac-split-rumah", Home],
+  ["AC Split Rumah", "Untuk kamar tidur, ruang keluarga, kos, kontrakan, dan toko.", "/katalog/ac-split-rumah", Home],
   ["AC Inverter", "Untuk pemakaian rutin yang butuh suhu stabil dan nyaman.", "/katalog/ac-inverter", Zap],
   ["AC Low Watt", "Untuk rumah dengan daya listrik terbatas.", "/katalog/ac-low-watt", Ruler],
   ["AC Kantor & Komersial", "Untuk kantor, toko, cafe, cassette, dan pembelian banyak unit.", "/katalog/ac-kantor-komersial", Building2],
@@ -45,10 +45,10 @@ const standardInstallItems = [
 ]
 
 const pkGuide = [
-  ["1/2 PK", "± 9–12 m²", "Kamar kecil, kos, ruang kerja kecil"],
+  ["1/2 PK", "± 9–12 m²", "Kamar kecil, kos, ruang kerja"],
   ["3/4 PK", "± 12–15 m²", "Kamar sedang atau ruang santai"],
-  ["1 PK", "± 15–20 m²", "Kamar besar atau ruang keluarga kecil"],
-  ["1.5 PK", "± 20–30 m²", "Ruang keluarga, kantor kecil, toko"],
+  ["1 PK", "± 15–20 m²", "Kamar besar atau ruang keluarga"],
+  ["1.5 PK", "± 20–30 m²", "Ruang keluarga, kantor, toko"],
   ["2 PK", "± 30–40 m²", "Ruangan besar dan kebutuhan usaha"],
 ]
 
@@ -145,7 +145,7 @@ export default function JualAcPurwokerto() {
                 <span className="block text-cyan-300">konsultasi dulu, baru pilih unit</span>
               </h1>
               <p className="mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-                Bisa chat dulu lewat WhatsApp. RADJA AC bantu pilih AC yang pas untuk rumah, kamar, kos, kantor, toko, cafe, atau proyek kecil. Nanti kami cek stok, kapasitas PK, brand, harga, dan kebutuhan pemasangan.
+                Bisa chat dulu lewat WhatsApp. RADJA AC bantu pilih AC yang pas untuk rumah, kamar, kos, kantor, toko, cafe, atau kebutuhan proyek. Nanti kami cek stok, kapasitas PK, brand, harga, dan kebutuhan pemasangan.
               </p>
               <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <WhatsAppButton />

@@ -20,7 +20,7 @@ import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const canonicalPath = "/jual-ac-yogyakarta"
 const waMessage =
-  "Halo RADJA AC, saya dari Yogyakarta. Mau tanya AC unit only / pengadaan banyak unit untuk kost, ruko, toko, kantor, atau proyek. Mohon bantu cek stok, harga, dan opsi pengiriman."
+  "Halo RADJA AC, saya dari Yogyakarta. Mau tanya AC unit saja / pengadaan banyak unit untuk kost, ruko, toko, kantor, atau proyek. Mohon bantu cek stok, harga, dan opsi pengiriman."
 
 const brandChips = [
   "Daikin",
@@ -76,13 +76,13 @@ const deliveryTrustImages = [
 const targetCards = [
   ["Rumah & Hunian", "Bantu pilih AC sesuai ukuran kamar, ruang keluarga, daya listrik, dan budget.", Home],
   ["Kost & Kontrakan", "Cocok untuk pembelian beberapa unit sekaligus dengan opsi brand hemat dan mudah perawatan.", Building2],
-  ["Ruko, Toko & Kantor", "AC untuk area pelanggan, kasir, display produk, ruang kerja, dan kebutuhan proyek kecil.", ShoppingBag],
+  ["Ruko, Toko & Kantor", "AC untuk area pelanggan, kasir, display produk, ruang kerja, dan kebutuhan proyek.", ShoppingBag],
 ]
 
 const processSteps = [
-  ["Kirim lokasi & jumlah unit", "Sebutkan area Jogja, jumlah unit, kebutuhan unit only atau pengiriman, dan target budget."],
+  ["Kirim lokasi & jumlah unit", "Sebutkan area Jogja, jumlah unit, kebutuhan unit saja atau pengiriman, dan target budget."],
   ["Cek brand, PK & stok", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, tipe low watt/inverter, dan estimasi harga."],
-  ["Konfirmasi pengiriman / opsi pasang", "Harga final, rute, jadwal pengiriman, dan kemungkinan pemasangan dikonfirmasi dulu sesuai lokasi, jumlah unit, dan kesiapan teknisi."],
+  ["Konfirmasi pengiriman / opsi pasang", "Harga final, rute, jadwal pengiriman, dan opsi pemasangan dikonfirmasi dulu sesuai lokasi, jumlah unit, dan kesiapan teknisi."],
 ]
 
 const faqItems = [
@@ -121,7 +121,7 @@ export default function JualAcYogyakarta() {
     "@type": ["Store", "LocalBusiness"],
     name: SITE_DATA.businessName,
     description:
-      "Toko AC Purwokerto yang melayani konsultasi pembelian AC untuk area Yogyakarta dan sekitarnya, terutama unit only, pengadaan banyak unit, opsi pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
+      "Toko AC Purwokerto yang melayani konsultasi pembelian AC untuk area Yogyakarta dan sekitarnya, terutama unit saja, pengadaan banyak unit, opsi pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
     url: `${SITE_DATA.baseUrl}${canonicalPath}`,
     logo: `${SITE_DATA.baseUrl}${SITE_DATA.logoUrl}`,
     image: `${SITE_DATA.baseUrl}/assets/showroom/Showroom-utama.webp`,
@@ -152,8 +152,8 @@ export default function JualAcYogyakarta() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="Jual AC Yogyakarta | Unit Only & Pengadaan Banyak Unit — RADJA AC"
-        description="RADJA AC melayani pembelian AC area Yogyakarta untuk unit only, pengadaan banyak unit, kost, ruko, toko, kantor, proyek, dan opsi pengiriman sesuai konfirmasi."
+        title="Jual AC Yogyakarta | Unit Saja & Pengadaan Banyak Unit — RADJA AC"
+        description="RADJA AC melayani pembelian AC area Yogyakarta untuk unit saja, pengadaan banyak unit, kost, ruko, toko, kantor, proyek, dan opsi pengiriman sesuai konfirmasi."
         canonicalPath={canonicalPath}
       />
       <Helmet>
@@ -176,7 +176,7 @@ export default function JualAcYogyakarta() {
               </h1>
               <div className="mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
                 <p className="mb-4">
-                  Di Jogja, kebutuhan AC macam-macam. Ada yang buat kamar kos, rumah tinggal, kontrakan, guest house, toko, kantor kecil, sampai usaha yang butuh beberapa unit sekaligus.
+                  Di Jogja, kebutuhan AC macam-macam. Ada yang buat kamar kos, rumah tinggal, kontrakan, guest house, toko, kantor, sampai usaha yang butuh beberapa unit sekaligus.
                 </p>
                 <p className="mb-4">
                   Daripada langsung pilih AC asal murah, lebih aman konsultasi dulu. Ceritakan kebutuhan Anda: ruangannya berapa, dipakai berapa lama tiap hari, daya listriknya berapa, dan budget-nya di kisaran berapa.
@@ -192,7 +192,7 @@ export default function JualAcYogyakarta() {
                 </Link>
               </div>
               <div className="flex flex-wrap justify-center gap-2 text-sm text-white/62 lg:justify-start">
-                {["Unit only", "Pengadaan banyak unit", "Kost/ruko/proyek", "Cek stok dulu", "Pasang by konfirmasi"].map((item) => (
+                {["Unit saja", "Pengadaan banyak unit", "Kost/ruko/proyek", "Cek stok dulu", "Pasang by konfirmasi"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">{item}</span>
                 ))}
               </div>
@@ -247,7 +247,7 @@ export default function JualAcYogyakarta() {
           <div className="grid gap-5 lg:grid-cols-2">
             <div className="rounded-[30px] border border-white/10 bg-white/[0.04] p-6 text-center sm:p-8">
               <BadgeCheck className="mx-auto mb-5 h-8 w-8 text-cyan-300" />
-              <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl">Unit only</h2>
+              <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl">Unit saja</h2>
               <p className="mb-5 text-sm leading-7 text-white/62 sm:text-base">
                 Cocok untuk pembeli yang sudah punya teknisi sendiri, kontraktor, pengelola kost, toko, ruko, kantor, atau proyek yang hanya butuh pengadaan unit AC.
               </p>
@@ -261,7 +261,7 @@ export default function JualAcYogyakarta() {
               <Truck className="mx-auto mb-5 h-8 w-8 text-cyan-300" />
               <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl">Pengiriman & opsi pasang</h2>
               <p className="mb-5 text-sm leading-7 text-white/62 sm:text-base">
-                Pengiriman dan kemungkinan pemasangan dibahas sesuai lokasi, jumlah unit, akses titik pemasangan, kebutuhan material, dan jadwal teknisi.
+                Pengiriman dan opsi pemasangan dibahas sesuai lokasi, jumlah unit, akses titik pemasangan, kebutuhan material, dan jadwal teknisi.
               </p>
               <div className="flex flex-wrap justify-center gap-2 text-sm text-white/62">
                 {["Rute dicek dulu", "Jumlah unit dihitung", "Pasang by konfirmasi", "Estimasi transparan"].map((item) => (
@@ -276,13 +276,13 @@ export default function JualAcYogyakarta() {
           <SectionTitle
             eyebrow="ESTIMASI HARGA"
             title="Harga awal dibuat fleksibel sesuai jumlah unit"
-            description="Untuk Jogja, harga final sebaiknya dikonfirmasi dulu karena tergantung stok, brand, jumlah unit, lokasi, pengiriman, dan opsi pemasangan bila memungkinkan."
+            description="Untuk Jogja, harga final sebaiknya dikonfirmasi dulu karena tergantung stok, brand, jumlah unit, lokasi, pengiriman, dan opsi pemasangan sesuai konfirmasi."
           />
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {[
-              ["AC basic", "Unit only mulai 2 jutaan", "Pengiriman/pasang by konfirmasi"],
-              ["Low watt", "Unit only mulai 3 jutaan", "Pengiriman/pasang by konfirmasi"],
-              ["Inverter", "Unit only mulai 3 jutaan", "Pengiriman/pasang by konfirmasi"],
+              ["AC basic", "Unit saja mulai 2 jutaan", "Pengiriman/pasang by konfirmasi"],
+              ["Low watt", "Unit saja mulai 3 jutaan", "Pengiriman/pasang by konfirmasi"],
+              ["Inverter", "Unit saja mulai 3 jutaan", "Pengiriman/pasang by konfirmasi"],
               ["Banyak unit", "Bisa penawaran khusus", "Survey/konsultasi dulu"],
             ].map(([title, unit, install]) => (
               <div key={title} className="rounded-[24px] border border-white/10 bg-white/[0.04] p-5 text-center">
@@ -336,7 +336,7 @@ export default function JualAcYogyakarta() {
               </div>
               <h2 className="mb-5 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kirim data singkat, nanti kami bantu arahkan</h2>
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
-                Untuk banyak unit, jangan buru-buru kunci harga. Kirim lokasi, jumlah unit, ukuran ruangan, dan kebutuhan unit only atau pengiriman supaya estimasi lebih masuk.
+                Untuk banyak unit, jangan buru-buru kunci harga. Kirim lokasi, jumlah unit, ukuran ruangan, dan kebutuhan unit saja atau pengiriman supaya estimasi lebih masuk.
               </p>
               <WhatsAppButton>Cek Stok & Harga Jogja</WhatsAppButton>
             </div>
@@ -371,7 +371,7 @@ export default function JualAcYogyakarta() {
             <Ruler className="mx-auto mb-4 h-8 w-8 text-[#25D366]" />
             <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl">Mau cari AC area Jogja?</h2>
             <p className="mx-auto mb-7 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-              Kirim lokasi, jumlah unit, kebutuhan unit only atau pengadaan, ukuran ruangan, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, opsi pengiriman, dan pemasangan bila memungkinkan.
+              Kirim lokasi, jumlah unit, kebutuhan unit saja atau pengadaan, ukuran ruangan, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, opsi pengiriman, dan pemasangan sesuai konfirmasi.
             </p>
             <WhatsAppButton>Chat WhatsApp Sekarang</WhatsAppButton>
           </div>
