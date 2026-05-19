@@ -6,12 +6,12 @@ const areaConfig = {
   seoDescription:
     "Jual AC Wangon untuk rumah, toko, ruko, kost, dan beberapa unit di jalur barat-selatan Banyumas. Cek rute, stok, pengiriman, dan jadwal pasang lebih awal.",
   localBusinessDescription:
-    "Toko AC Purwokerto yang melayani pembelian AC untuk area Wangon dan jalur Banyumas barat-selatan, termasuk kebutuhan rumah, toko, kost, ruko, kantor kecil, banyak unit, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
+    "Toko AC Purwokerto yang melayani pembelian AC untuk area Wangon dan jalur Banyumas barat-selatan, termasuk kebutuhan rumah, toko, kost, ruko, kantor, banyak unit, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA WANGON",
   h1: "Jual AC Wangon",
   heroHighlight: "Cek Rute, Stok, dan Jadwal dari Awal",
   heroDescription:
-    "Wangon berada di jalur penting Banyumas barat-selatan, jadi pembelian AC lebih enak dibahas jelas dari awal. Kalau butuh AC untuk rumah, toko, ruko, kost, atau usaha, RADJA AC bantu cek kebutuhan ruangan, jumlah unit, stok, dan kemungkinan pengiriman atau pemasangan. Tujuannya supaya Anda tidak perlu bolak-balik tanya harga tanpa gambaran rute, material, dan jadwal.",
+    "Wangon berada di jalur penting Banyumas barat-selatan, jadi pembelian AC lebih enak dibahas jelas dari awal. Kalau butuh AC untuk rumah, toko, ruko, kost, atau usaha, RADJA AC bantu cek kebutuhan ruangan, jumlah unit, stok, dan opsi pengiriman atau pemasangan. Tujuannya supaya Anda tidak perlu bolak-balik tanya harga tanpa gambaran rute, material, dan jadwal.",
   primaryCta: "Chat WhatsApp untuk AC Wangon",
   waMessage:
     "Halo RADJA AC, saya dari Wangon. Mau tanya AC untuk rumah/toko/kost/ruko atau banyak unit area Banyumas barat, cek stok, harga, rekomendasi PK, dan opsi pengiriman atau pemasangan.",
@@ -42,7 +42,7 @@ const areaConfig = {
   valueInstallText:
     "Pengiriman dan pemasangan Wangon menyesuaikan rute, akses outdoor, tambahan pipa/kabel, jumlah unit, dan kesiapan jadwal teknisi.",
   processDescription:
-    "Untuk Wangon, proses paling aman adalah cek kebutuhan unit dan rute terlebih dahulu. Setelah itu baru stok, harga, pengiriman, dan kemungkinan pemasangan dikonfirmasi.",
+    "Untuk Wangon, proses paling aman adalah cek kebutuhan unit dan rute terlebih dahulu. Setelah itu baru stok, harga, pengiriman, dan opsi pemasangan dikonfirmasi.",
   processSteps: [
     ["Kirim alamat dan patokan lokasi", "Sebutkan area Wangon atau desa sekitar, patokan jalan, jumlah unit, jenis ruangan, ukuran ruangan, daya listrik, dan budget."],
     ["Jelaskan kebutuhan pengiriman atau pasang", "Kalau perlu pemasangan, kirim foto titik indoor-outdoor agar jalur pipa, posisi outdoor, dan akses lokasi bisa diperkirakan lebih awal."],
