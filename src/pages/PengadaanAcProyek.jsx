@@ -30,6 +30,8 @@ const WA_MESSAGE =
   "Halo RADJA AC, saya mau konsultasi pengadaan AC untuk proyek/banyak unit. Lokasi: Jumlah ruangan/unit: Kebutuhan: unit saja / dengan pemasangan. Mohon dibantu rekomendasinya."
 const WA_LINK = buildWhatsAppUrl(WA_MESSAGE)
 
+const HERO_IMAGE = "/assets/gallery/pengiriman/restock-ac-daikin.webp"
+
 const projectNeeds = [
   {
     title: "Kos-kosan & kontrakan",
@@ -68,7 +70,7 @@ const trustItems = [
     title: "Dokumentasi pengiriman AC",
     description: "Dokumentasi pengiriman unit AC untuk pelanggan rumah, usaha, dan kebutuhan pembelian banyak unit.",
     caption: "Unit AC dikirim sesuai kebutuhan dan ketersediaan stok.",
-    image: "/assets/gallery/pengiriman/pengiriman-sharp-midea.webp",
+    image: "/assets/gallery/pengiriman/pengiriman-ac-ariston.webp",
     alt: "Dokumentasi pengiriman unit AC RADJA AC untuk pelanggan dan kebutuhan banyak unit",
     icon: Truck,
   },
@@ -76,8 +78,8 @@ const trustItems = [
     title: "Stok gudang & showroom",
     description: "Beberapa unit tersedia melalui stok gudang/showroom. Ketersediaan tipe dan jumlah unit dapat dikonsultasikan terlebih dahulu.",
     caption: "Stok dapat berubah, konsultasikan kebutuhan unit terlebih dahulu.",
-    image: "/assets/gallery/large/gudang-stok-ac-daikin-gree-radja-ac-01.webp",
-    alt: "Stok unit AC di gudang dan showroom RADJA AC",
+    image: "/assets/gallery/stok-gudang/stok-gudang-ac-gree.webp",
+    alt: "Stok unit AC di gudang RADJA AC",
     icon: Warehouse,
   },
   {
@@ -87,6 +89,45 @@ const trustItems = [
     image: "/assets/brands/daikin/sertificate-daikin.webp",
     alt: "Sertifikat dealer resmi Daikin RADJA AC",
     icon: BadgeCheck,
+  },
+]
+
+const documentationItems = [
+  {
+    title: "Restock AC Daikin",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/restock-ac-daikin.webp",
+    alt: "Restock unit AC Daikin RADJA AC",
+  },
+  {
+    title: "Outdoor AC Daikin",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/outdoor-ac-daikin-restock.webp",
+    alt: "Outdoor AC Daikin untuk restock RADJA AC",
+  },
+  {
+    title: "Loading AC Ariston",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/loading-ac-ariston.webp",
+    alt: "Loading pengiriman AC Ariston RADJA AC",
+  },
+  {
+    title: "Stok Gudang Gree",
+    category: "Stok Gudang",
+    image: "/assets/gallery/stok-gudang/stok-gudang-ac-gree.webp",
+    alt: "Stok gudang AC Gree RADJA AC",
+  },
+  {
+    title: "Display Daikin",
+    category: "Display",
+    image: "/assets/gallery/display/display-daikin-radja-ac.webp",
+    alt: "Display AC Daikin RADJA AC",
+  },
+  {
+    title: "Display Gree Inverter",
+    category: "Display",
+    image: "/assets/gallery/display/display-gree-inverter-radja-ac.webp",
+    alt: "Display AC Gree inverter RADJA AC",
   },
 ]
 
@@ -275,8 +316,8 @@ export default function PengadaanAcProyek() {
 
             <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-4 shadow-[0_20px_80px_rgba(15,23,42,0.32)]">
               <img
-                src="/assets/gallery/pengiriman/radja-ac-persiapan-pengiriman.webp"
-                alt="Persiapan pengiriman unit AC RADJA AC untuk kebutuhan pelanggan dan proyek"
+                src={HERO_IMAGE}
+                alt="Restock unit AC RADJA AC untuk kebutuhan pelanggan dan proyek"
                 className="aspect-[4/3] w-full rounded-[24px] object-cover"
                 fetchPriority="high"
               />
@@ -350,6 +391,47 @@ export default function PengadaanAcProyek() {
                   </p>
                 </div>
               </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
+          <div className="mb-8 max-w-3xl">
+            <SectionLabel>Foto aktivitas</SectionLabel>
+            <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
+              Pengiriman, stok gudang, dan display produk
+            </h2>
+            <p className="text-sm leading-7 text-white/65 sm:text-base">
+              Beberapa foto pendukung dari aktivitas pengadaan, restock, dan display unit yang bisa menjadi gambaran awal sebelum konsultasi kebutuhan AC.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+            {documentationItems.map((item) => (
+              <a
+                key={item.image}
+                href={item.image}
+                target="_blank"
+                rel="noreferrer"
+                className="group overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.04] transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06]"
+              >
+                <div className="relative overflow-hidden bg-slate-900">
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    loading="lazy"
+                    decoding="async"
+                    sizes="(min-width: 1024px) 16vw, (min-width: 640px) 33vw, 50vw"
+                    className="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  />
+                  <span className="absolute left-2 top-2 rounded-full border border-cyan-300/20 bg-slate-950/70 px-2 py-1 text-[10px] font-semibold text-cyan-100 backdrop-blur">
+                    {item.category}
+                  </span>
+                </div>
+                <div className="p-3">
+                  <h3 className="line-clamp-2 text-xs font-black leading-4 text-white sm:text-sm sm:leading-5">{item.title}</h3>
+                </div>
+              </a>
             ))}
           </div>
         </section>
