@@ -71,24 +71,48 @@ const trustItems = [
     title: "Dokumentasi pengiriman AC",
     description: "Dokumentasi pengiriman unit AC untuk pelanggan rumah, usaha, dan kebutuhan pembelian banyak unit.",
     caption: "Unit AC dikirim sesuai kebutuhan dan ketersediaan stok.",
-    image: "/assets/gallery/pengiriman/pengiriman-ac-ariston.webp",
-    alt: "Dokumentasi pengiriman unit AC RADJA AC untuk pelanggan dan kebutuhan banyak unit",
+    images: [
+      {
+        src: "/assets/gallery/pengiriman/restock-ac-daikin.webp",
+        alt: "Restock unit AC Daikin RADJA AC untuk kebutuhan banyak unit",
+      },
+      {
+        src: "/assets/gallery/pengiriman/radja-ac-pengiriman-stok-aqua-truk-putih.webp",
+        alt: "Pengiriman stok AC RADJA AC dengan banyak unit",
+      },
+    ],
     icon: Truck,
   },
   {
-    title: "Stok gudang & showroom",
-    description: "Beberapa unit tersedia melalui stok gudang/showroom. Ketersediaan tipe dan jumlah unit dapat dikonsultasikan terlebih dahulu.",
+    title: "Stok gudang",
+    description: "Beberapa unit tersedia melalui stok gudang. Ketersediaan tipe dan jumlah unit dapat dikonsultasikan terlebih dahulu.",
     caption: "Stok dapat berubah, konsultasikan kebutuhan unit terlebih dahulu.",
-    image: "/assets/gallery/stok-gudang/stok-gudang-ac-gree.webp",
-    alt: "Stok unit AC di gudang RADJA AC",
+    images: [
+      {
+        src: "/assets/gallery/large/gudang-stok-ac-radja-ac-purwokerto-01.webp",
+        alt: "Rak gudang stok AC RADJA AC dengan banyak unit",
+      },
+      {
+        src: "/assets/gallery/large/gudang-stok-ac-daikin-gree-radja-ac-01.webp",
+        alt: "Stok gudang AC Daikin dan Gree RADJA AC",
+      },
+    ],
     icon: Warehouse,
   },
   {
-    title: "Display produk AC",
-    description: "Beberapa unit display membantu calon pembeli melihat gambaran brand dan tipe AC yang bisa dikonsultasikan.",
+    title: "Showroom multibrand",
+    description: "Dokumentasi showroom membantu calon pembeli melihat gambaran pilihan brand AC yang dapat dikonsultasikan.",
     caption: "Pilihan brand dan tipe unit menyesuaikan stok serta kebutuhan ruangan.",
-    image: "/assets/gallery/display/display-daikin-radja-ac.webp",
-    alt: "Display produk AC Daikin RADJA AC",
+    images: [
+      {
+        src: "/assets/gallery/large/showroom-multibrand-radja-ac-purwokerto-01.webp",
+        alt: "Showroom multibrand RADJA AC dengan banyak merek AC",
+      },
+      {
+        src: "/assets/gallery/large/showroom-daikin-gree-radja-ac-01.webp",
+        alt: "Showroom Daikin dan Gree RADJA AC",
+      },
+    ],
     icon: BadgeCheck,
   },
 ]
@@ -101,34 +125,34 @@ const documentationItems = [
     alt: "Restock unit AC Daikin RADJA AC",
   },
   {
-    title: "Outdoor AC Daikin",
+    title: "Pengiriman Stok Aqua",
     category: "Pengiriman",
-    image: "/assets/gallery/pengiriman/outdoor-ac-daikin-restock.webp",
-    alt: "Outdoor AC Daikin untuk restock RADJA AC",
+    image: "/assets/gallery/pengiriman/radja-ac-pengiriman-stok-aqua-truk-putih.webp",
+    alt: "Pengiriman stok AC Aqua RADJA AC dengan banyak unit",
   },
   {
-    title: "Loading AC Ariston",
-    category: "Pengiriman",
-    image: "/assets/gallery/pengiriman/loading-ac-ariston.webp",
-    alt: "Loading pengiriman AC Ariston RADJA AC",
-  },
-  {
-    title: "Stok Gudang Gree",
+    title: "Rak Gudang Stok AC",
     category: "Stok Gudang",
-    image: "/assets/gallery/stok-gudang/stok-gudang-ac-gree.webp",
-    alt: "Stok gudang AC Gree RADJA AC",
+    image: "/assets/gallery/large/gudang-stok-ac-radja-ac-purwokerto-01.webp",
+    alt: "Rak gudang stok AC RADJA AC",
   },
   {
-    title: "Display Daikin",
-    category: "Display",
-    image: "/assets/gallery/display/display-daikin-radja-ac.webp",
-    alt: "Display AC Daikin RADJA AC",
+    title: "Stok Daikin dan Gree",
+    category: "Stok Gudang",
+    image: "/assets/gallery/large/gudang-stok-ac-daikin-gree-radja-ac-01.webp",
+    alt: "Stok AC Daikin dan Gree RADJA AC",
   },
   {
-    title: "Display Gree Inverter",
-    category: "Display",
-    image: "/assets/gallery/display/display-gree-inverter-radja-ac.webp",
-    alt: "Display AC Gree inverter RADJA AC",
+    title: "Showroom Multibrand",
+    category: "Showroom",
+    image: "/assets/gallery/large/showroom-multibrand-radja-ac-purwokerto-01.webp",
+    alt: "Showroom multibrand RADJA AC Purwokerto",
+  },
+  {
+    title: "Showroom Daikin dan Gree",
+    category: "Showroom",
+    image: "/assets/gallery/large/showroom-daikin-gree-radja-ac-01.webp",
+    alt: "Showroom Daikin dan Gree RADJA AC",
   },
 ]
 
@@ -313,6 +337,26 @@ export default function PengadaanAcProyek() {
               <p className="max-w-xl text-xs leading-6 text-white/45">
                 Cocok untuk pembelian unit satuan, banyak unit, maupun kebutuhan proyek bertahap. Untuk area luar kota, pengiriman dan pemasangan menyesuaikan lokasi serta kondisi kebutuhan.
               </p>
+
+              <div className="mt-5 rounded-[26px] border border-cyan-300/20 bg-white/[0.04] p-4 shadow-[0_16px_50px_rgba(15,23,42,0.24)] lg:max-w-xl">
+                <div className="mb-3 flex justify-center">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-cyan-200">
+                    <BadgeCheck className="h-3.5 w-3.5" />
+                    Dealer resmi
+                  </div>
+                </div>
+                <h2 className="mb-3 text-center text-lg font-black text-white">Sertifikat dealer resmi</h2>
+                <p className="mb-4 text-left text-xs leading-6 text-white/58">
+                  Sertifikat dealer resmi menjadi dokumen pendukung dalam penyediaan produk AC original dan bergaransi resmi sesuai ketentuan brand.
+                </p>
+                <img
+                  src={CERTIFICATE_IMAGE}
+                  alt="Sertifikat dealer resmi Daikin RADJA AC"
+                  loading="eager"
+                  decoding="async"
+                  className="aspect-[4/3] w-full rounded-[20px] bg-white object-contain p-2"
+                />
+              </div>
             </div>
 
             <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-4 shadow-[0_20px_80px_rgba(15,23,42,0.32)]">
@@ -328,23 +372,6 @@ export default function PengadaanAcProyek() {
                     {item}
                   </div>
                 ))}
-              </div>
-              <div className="mt-3 grid gap-3 rounded-[24px] border border-cyan-300/20 bg-slate-950/45 p-3 sm:grid-cols-[0.9fr_1.1fr] sm:items-center">
-                <img
-                  src={CERTIFICATE_IMAGE}
-                  alt="Sertifikat dealer resmi Daikin RADJA AC"
-                  loading="eager"
-                  decoding="async"
-                  className="aspect-[4/3] w-full rounded-[18px] bg-white object-contain p-2"
-                />
-                <div>
-                  <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-cyan-200">
-                    <BadgeCheck className="h-3.5 w-3.5" />
-                    Dealer resmi
-                  </div>
-                  <p className="text-sm font-black leading-5 text-white">Sertifikat dealer resmi</p>
-                  <p className="mt-1 text-xs leading-5 text-white/55">Dokumen pendukung untuk produk original dan garansi resmi sesuai ketentuan brand.</p>
-                </div>
               </div>
             </div>
           </div>
@@ -363,12 +390,12 @@ export default function PengadaanAcProyek() {
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {projectNeeds.map(({ title, description, icon: Icon }) => (
-              <div key={title} className="rounded-[26px] border border-white/10 bg-white/[0.04] p-5 transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
+              <div key={title} className="rounded-[26px] border border-white/10 bg-white/[0.04] p-5 text-left transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06]">
+                <div className="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="mb-2 text-lg font-black text-white">{title}</h3>
-                <p className="text-sm leading-6 text-white/60">{description}</p>
+                <h3 className="mb-3 text-center text-lg font-black text-white">{title}</h3>
+                <p className="text-left text-sm leading-6 text-white/60">{description}</p>
               </div>
             ))}
           </div>
@@ -378,33 +405,37 @@ export default function PengadaanAcProyek() {
           <div className="mb-8 max-w-3xl">
             <SectionLabel>Dokumentasi</SectionLabel>
             <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-              Dokumentasi pengiriman, stok, dan display produk
+              Dokumentasi pengiriman, stok gudang, dan showroom
             </h2>
             <p className="text-sm leading-7 text-white/65 sm:text-base">
-              Beberapa dokumentasi aktivitas RADJA AC, mulai dari pengiriman unit, stok gudang/showroom, hingga display produk sebagai gambaran awal sebelum konsultasi kebutuhan AC.
+              Beberapa dokumentasi aktivitas RADJA AC, mulai dari pengiriman unit, stok gudang, hingga showroom sebagai gambaran awal sebelum konsultasi kebutuhan AC.
             </p>
           </div>
 
           <div className="grid gap-5 lg:grid-cols-3">
-            {trustItems.map(({ title, description, caption, image, alt, icon: Icon }) => (
+            {trustItems.map(({ title, description, caption, images, icon: Icon }) => (
               <article key={title} className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_18px_60px_rgba(15,23,42,0.22)]">
-                <div className="relative">
-                  <img
-                    src={image}
-                    alt={alt}
-                    loading="lazy"
-                    decoding="async"
-                    sizes="(min-width: 1024px) 33vw, 100vw"
-                    className="aspect-[4/3] w-full bg-slate-900 object-cover"
-                  />
-                  <div className="absolute left-4 top-4 flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-300/20 bg-slate-950/70 text-cyan-300 backdrop-blur">
+                <div className="grid grid-cols-2 gap-2 bg-slate-950/45 p-2">
+                  {images.map((image) => (
+                    <a key={image.src} href={image.src} target="_blank" rel="noreferrer" className="overflow-hidden rounded-[20px] bg-slate-900">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        decoding="async"
+                        sizes="(min-width: 1024px) 16vw, 50vw"
+                        className="aspect-[4/5] w-full object-cover transition duration-500 hover:scale-[1.03]"
+                      />
+                    </a>
+                  ))}
+                </div>
+                <div className="p-5 text-left">
+                  <div className="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
                     <Icon className="h-5 w-5" />
                   </div>
-                </div>
-                <div className="p-5">
-                  <h3 className="mb-2 text-lg font-black text-white">{title}</h3>
-                  <p className="mb-4 text-sm leading-6 text-white/62">{description}</p>
-                  <p className="rounded-2xl border border-white/10 bg-slate-950/45 px-3 py-3 text-xs leading-5 text-white/50">
+                  <h3 className="mb-3 text-center text-lg font-black text-white">{title}</h3>
+                  <p className="mb-4 text-left text-sm leading-6 text-white/62">{description}</p>
+                  <p className="rounded-2xl border border-white/10 bg-slate-950/45 px-3 py-3 text-left text-xs leading-5 text-white/50">
                     {caption}
                   </p>
                 </div>
@@ -417,10 +448,10 @@ export default function PengadaanAcProyek() {
           <div className="mb-8 max-w-3xl">
             <SectionLabel>Foto aktivitas</SectionLabel>
             <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-              Pengiriman, stok gudang, dan display produk
+              Pengiriman, stok gudang, dan showroom
             </h2>
             <p className="text-sm leading-7 text-white/65 sm:text-base">
-              Beberapa foto pendukung dari aktivitas pengadaan, restock, dan display unit yang bisa menjadi gambaran awal sebelum konsultasi kebutuhan AC.
+              Beberapa foto pendukung dari aktivitas pengadaan, restock, stok gudang, dan showroom multibrand.
             </p>
           </div>
 
