@@ -225,10 +225,6 @@ export default function Gallery() {
               <Camera className="h-4 w-4" />
               GALLERY RADJA AC
             </div>
-
-            <h1 className="mb-4 text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:text-5xl">
-              Bukti nyata showroom, stok, dan aktivitas RADJA AC
-            </h1>
           </div>
         </section>
 
