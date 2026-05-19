@@ -6,7 +6,7 @@ const areaConfig = {
   seoDescription:
     "Jual AC Jatilawang untuk rumah, toko, ruko, kost, dan usaha selatan Banyumas. Konsultasi ukuran ruangan, daya listrik, stok, pengiriman, dan pemasangan.",
   localBusinessDescription:
-    "Toko AC Purwokerto yang melayani pembelian AC untuk area Jatilawang dan selatan Banyumas, termasuk kebutuhan rumah, toko, kost, ruko, kantor kecil, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
+    "Toko AC Purwokerto yang melayani pembelian AC untuk area Jatilawang dan selatan Banyumas, termasuk kebutuhan rumah, toko, kost, ruko, kantor, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA JATILAWANG",
   h1: "Jual AC Jatilawang",
   heroHighlight: "Selatan Banyumas, Pilih AC Sesuai Ruangan",
@@ -24,9 +24,9 @@ const areaConfig = {
     description:
       "Untuk Jatilawang, konsultasi awal membantu menentukan kebutuhan AC berdasarkan jenis ruangan, daya listrik, jumlah unit, dan titik pemasangan. Ini penting untuk rumah harian, toko, ruko, kost, atau usaha yang butuh suhu nyaman dan kapasitas yang sesuai.",
     cards: [
-      ["Rumah & Kamar", "Bantu pilih AC untuk kamar tidur, ruang keluarga kecil, ruang kerja, atau pemakaian harian di sekitar Jatilawang."],
+      ["Rumah & Kamar", "Bantu pilih AC untuk kamar tidur, ruang keluarga, ruang kerja, atau pemakaian harian di sekitar Jatilawang."],
       ["Toko & Ruko", "Cocok untuk ruang usaha, area pelanggan, kasir, display produk, atau ruang tunggu yang dipakai rutin."],
-      ["Kost & Beberapa Unit", "Bisa diskusi beberapa unit untuk kamar kost, kontrakan, kantor kecil, atau kebutuhan usaha lokal."],
+      ["Kost & Beberapa Unit", "Bisa diskusi beberapa unit untuk kamar kost, kontrakan, kantor, atau kebutuhan usaha."],
     ],
     ctaLabel: "Tanya AC Area Jatilawang",
     waMessage:
@@ -42,7 +42,7 @@ const areaConfig = {
   valueInstallText:
     "Pengiriman atau pemasangan Jatilawang menyesuaikan alamat, akses outdoor, jalur pipa, kebutuhan material, jumlah unit, dan jadwal teknisi.",
   processDescription:
-    "Untuk Jatilawang, prosesnya dimulai dari cek ruangan dan daya listrik, lalu lanjut cek stok, harga, rute pengiriman, dan kemungkinan pemasangan.",
+    "Untuk Jatilawang, prosesnya dimulai dari cek ruangan dan daya listrik, lalu lanjut cek stok, harga, rute pengiriman, dan opsi pemasangan.",
   processSteps: [
     ["Kirim detail ruangan", "Sebutkan area Jatilawang atau desa sekitar, jenis ruangan, ukuran ruangan, daya listrik, jumlah unit, dan budget awal."],
     ["Kirim foto titik pemasangan", "Foto indoor-outdoor membantu memperkirakan jalur pipa, posisi outdoor, akses lokasi, dan kebutuhan material tambahan."],
