@@ -8,8 +8,8 @@ const areaConfig = {
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Banyumas dan banyak kecamatan sekitarnya, termasuk konsultasi AC rumah, toko, kost, ruko, kantor, kebutuhan banyak unit, cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA BANYUMAS",
-  h1: "Jual AC Banyumas",
-  heroHighlight: "Banyak Kecamatan, Konsultasi dari Purwokerto",
+  h1: "Solusi AC untuk Banyak Kecamatan di Banyumas",
+  heroHighlight: "Dari Rumah, Usaha, Kost, Kantor, sampai Banyak Unit",
   heroDescription:
     "Banyumas mencakup banyak kecamatan dengan kebutuhan AC yang berbeda-beda: rumah, kost, toko, ruko, kantor, sampai usaha lokal. RADJA AC bantu konsultasi dari Purwokerto agar pembeli bisa cek pilihan unit, kapasitas PK, stok, budget, dan kebutuhan pengiriman atau pemasangan berdasarkan lokasi. Cukup chat WhatsApp, sebutkan kecamatan, ukuran ruangan, daya listrik, jumlah unit, dan foto titik indoor-outdoor jika ada.",
   primaryCta: "Tanya AC Banyumas",
