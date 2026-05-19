@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react"
 import { Camera, ImagePlus, PackageCheck, PlayCircle, Warehouse } from "lucide-react"
 
 import SeoHead from "../components/SeoHead"
@@ -27,6 +28,8 @@ const galleryCategories = [
     icon: ImagePlus,
   },
 ]
+
+const galleryFilters = ["Semua", "Pengiriman", "Gudang", "Showroom", "Display Produk", "Material Instalasi", "Pemasangan"]
 
 const galleryVideos = [
   {
@@ -200,9 +203,52 @@ const galleryItems = [
     image: "/assets/gallery/large/stok-pipa-ac-radja-ac-purwokerto-01.webp",
     thumbnail: "/assets/gallery/thumb/stok-pipa-ac-radja-ac-purwokerto-01-thumb.webp",
   },
+  {
+    title: "Pengiriman Ariston dan Daikin",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/pengiriman-ariston-daikin.webp",
+    thumbnail: "/assets/gallery/pengiriman/pengiriman-ariston-daikin.webp",
+  },
+  {
+    title: "Pengiriman AC Ariston",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/pengiriman-ac-ariston.webp",
+    thumbnail: "/assets/gallery/pengiriman/pengiriman-ac-ariston.webp",
+  },
+  {
+    title: "Restock Outdoor Daikin",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/outdoor-ac-daikin-restock.webp",
+    thumbnail: "/assets/gallery/pengiriman/outdoor-ac-daikin-restock.webp",
+  },
+  {
+    title: "Loading AC Ariston",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/loading-ac-ariston.webp",
+    thumbnail: "/assets/gallery/pengiriman/loading-ac-ariston.webp",
+  },
+  {
+    title: "Display Gree Residential AC",
+    category: "Display Produk",
+    image: "/assets/gallery/display/display-gree-residential-ac-radja-ac.webp",
+    thumbnail: "/assets/gallery/display/display-gree-residential-ac-radja-ac.webp",
+  },
+  {
+    title: "Display Midea Cassette Floor Standing",
+    category: "Display Produk",
+    image: "/assets/gallery/display/display-midea-cassette-floor-standing-radja-ac.webp",
+    thumbnail: "/assets/gallery/display/display-midea-cassette-floor-standing-radja-ac.webp",
+  },
 ]
 
 export default function Gallery() {
+  const [activeFilter, setActiveFilter] = useState("Semua")
+
+  const filteredGalleryItems = useMemo(() => {
+    if (activeFilter === "Semua") return galleryItems
+    return galleryItems.filter((item) => item.category === activeFilter)
+  }, [activeFilter])
+
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
@@ -286,15 +332,37 @@ export default function Gallery() {
         </section>
 
         <section className="mx-auto max-w-7xl px-5 pb-12 pt-5 lg:px-8 lg:pb-16 lg:pt-8">
-          <div className="mb-6 text-center">
+          <div className="mb-5 text-center">
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">FOTO ASLI</p>
             <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
               Showroom, gudang, stok, dan display produk
             </h2>
           </div>
 
+          <div className="mb-6 overflow-x-auto pb-1">
+            <div className="flex min-w-max justify-center gap-2 px-1 sm:min-w-0 sm:flex-wrap">
+              {galleryFilters.map((filter) => {
+                const isActive = activeFilter === filter
+                return (
+                  <button
+                    key={filter}
+                    type="button"
+                    onClick={() => setActiveFilter(filter)}
+                    className={`rounded-full border px-4 py-2 text-xs font-bold transition sm:text-sm ${
+                      isActive
+                        ? "border-cyan-300/40 bg-cyan-300 text-slate-950 shadow-[0_12px_30px_rgba(34,211,238,0.18)]"
+                        : "border-white/10 bg-white/[0.04] text-white/68 hover:border-cyan-300/25 hover:bg-cyan-300/10 hover:text-cyan-100"
+                    }`}
+                  >
+                    {filter}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-            {galleryItems.map((item) => (
+            {filteredGalleryItems.map((item) => (
               <a
                 key={item.image}
                 href={item.image}
