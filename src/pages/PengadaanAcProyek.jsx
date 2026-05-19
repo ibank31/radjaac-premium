@@ -29,7 +29,25 @@ import { buildWhatsAppUrl } from "../utils/whatsapp"
 const WA_MESSAGE =
   "Halo RADJA AC, saya mau konsultasi pengadaan AC banyak unit/proyek. Lokasi: Jumlah unit: Kebutuhan: unit saja / pengiriman / pemasangan. Mohon dibantu rekomendasi dan cek stoknya."
 const WA_LINK = buildWhatsAppUrl(WA_MESSAGE)
-const CERTIFICATE_IMAGE = "/assets/brands/daikin/sertificate-daikin.webp"
+
+const certificates = [
+  {
+    image: "/assets/brands/daikin/sertificate-daikin.webp",
+    alt: "Sertifikat dealer resmi Daikin RADJA AC",
+  },
+  {
+    image: "/assets/brands/midea/sertificate-midea.webp",
+    alt: "Sertifikat dealer resmi Midea RADJA AC",
+  },
+  {
+    image: "/assets/brands/hisense/sertifikat-hisense.webp",
+    alt: "Sertifikat dealer resmi Hisense RADJA AC",
+  },
+  {
+    image: "/assets/brands/sansui/sertificate-sansui.webp",
+    alt: "Sertifikat dealer resmi Sansui RADJA AC",
+  },
+]
 
 const projectNeeds = [
   {
@@ -314,7 +332,13 @@ export default function PengadaanAcProyek() {
               <p className="mb-3 text-left text-xs leading-6 text-white/58">
                 RADJA AC menyediakan pilihan AC original dan bergaransi resmi. Untuk kebutuhan banyak unit, calon pembeli bisa konsultasi stok, pilihan brand, dan ketersediaan tipe sebelum menentukan pembelian.
               </p>
-              <img src={CERTIFICATE_IMAGE} alt="Sertifikat dealer resmi Daikin RADJA AC" loading="eager" decoding="async" className="aspect-[4/3] w-full rounded-[18px] bg-white object-contain p-2" />
+              <div className="grid grid-cols-2 gap-2">
+                {certificates.map((item) => (
+                  <a key={item.image} href={item.image} target="_blank" rel="noreferrer" className="overflow-hidden rounded-[14px] border border-white/10 bg-white p-1.5 transition hover:-translate-y-0.5 hover:border-cyan-300/40">
+                    <img src={item.image} alt={item.alt} loading="eager" decoding="async" className="aspect-[4/3] w-full rounded-[10px] object-contain" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </section>
