@@ -31,6 +31,7 @@ const WA_MESSAGE =
 const WA_LINK = buildWhatsAppUrl(WA_MESSAGE)
 
 const HERO_IMAGE = "/assets/gallery/pengiriman/restock-ac-daikin.webp"
+const CERTIFICATE_IMAGE = "/assets/brands/daikin/sertificate-daikin.webp"
 
 const projectNeeds = [
   {
@@ -83,11 +84,11 @@ const trustItems = [
     icon: Warehouse,
   },
   {
-    title: "Sertifikat dealer resmi",
-    description: "Sertifikat dealer resmi menjadi salah satu dokumen pendukung dalam penyediaan produk AC original dan bergaransi resmi.",
-    caption: "Dokumen pendukung untuk kebutuhan produk original dan garansi resmi.",
-    image: "/assets/brands/daikin/sertificate-daikin.webp",
-    alt: "Sertifikat dealer resmi Daikin RADJA AC",
+    title: "Display produk AC",
+    description: "Beberapa unit display membantu calon pembeli melihat gambaran brand dan tipe AC yang bisa dikonsultasikan.",
+    caption: "Pilihan brand dan tipe unit menyesuaikan stok serta kebutuhan ruangan.",
+    image: "/assets/gallery/display/display-daikin-radja-ac.webp",
+    alt: "Display produk AC Daikin RADJA AC",
     icon: BadgeCheck,
   },
 ]
@@ -328,6 +329,23 @@ export default function PengadaanAcProyek() {
                   </div>
                 ))}
               </div>
+              <div className="mt-3 grid gap-3 rounded-[24px] border border-cyan-300/20 bg-slate-950/45 p-3 sm:grid-cols-[0.9fr_1.1fr] sm:items-center">
+                <img
+                  src={CERTIFICATE_IMAGE}
+                  alt="Sertifikat dealer resmi Daikin RADJA AC"
+                  loading="eager"
+                  decoding="async"
+                  className="aspect-[4/3] w-full rounded-[18px] bg-white object-contain p-2"
+                />
+                <div>
+                  <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-cyan-200">
+                    <BadgeCheck className="h-3.5 w-3.5" />
+                    Dealer resmi
+                  </div>
+                  <p className="text-sm font-black leading-5 text-white">Sertifikat dealer resmi</p>
+                  <p className="mt-1 text-xs leading-5 text-white/55">Dokumen pendukung untuk produk original dan garansi resmi sesuai ketentuan brand.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -360,10 +378,10 @@ export default function PengadaanAcProyek() {
           <div className="mb-8 max-w-3xl">
             <SectionLabel>Dokumentasi</SectionLabel>
             <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-              Dokumentasi pengiriman, stok, dan dealer resmi
+              Dokumentasi pengiriman, stok, dan display produk
             </h2>
             <p className="text-sm leading-7 text-white/65 sm:text-base">
-              Beberapa dokumentasi aktivitas RADJA AC, mulai dari pengiriman unit, stok gudang/showroom, hingga sertifikat dealer resmi sebagai bagian dari proses penyediaan AC untuk pelanggan dan kebutuhan proyek.
+              Beberapa dokumentasi aktivitas RADJA AC, mulai dari pengiriman unit, stok gudang/showroom, hingga display produk sebagai gambaran awal sebelum konsultasi kebutuhan AC.
             </p>
           </div>
 
