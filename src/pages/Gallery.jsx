@@ -228,10 +228,40 @@ const galleryItems = [
     thumbnail: "/assets/gallery/pengiriman/loading-ac-ariston.webp",
   },
   {
+    title: "Display AC Ariston",
+    category: "Display Produk",
+    image: "/assets/gallery/display/display-ariston-radja-ac.webp",
+    thumbnail: "/assets/gallery/display/display-ariston-radja-ac.webp",
+  },
+  {
+    title: "Display AC Daikin",
+    category: "Display Produk",
+    image: "/assets/gallery/display/display-daikin-radja-ac.webp",
+    thumbnail: "/assets/gallery/display/display-daikin-radja-ac.webp",
+  },
+  {
+    title: "Display AC Gree FLife",
+    category: "Display Produk",
+    image: "/assets/gallery/display/display-gree-flife-radja-ac.webp",
+    thumbnail: "/assets/gallery/display/display-gree-flife-radja-ac.webp",
+  },
+  {
+    title: "Display AC Gree Inverter",
+    category: "Display Produk",
+    image: "/assets/gallery/display/display-gree-inverter-radja-ac.webp",
+    thumbnail: "/assets/gallery/display/display-gree-inverter-radja-ac.webp",
+  },
+  {
     title: "Display Gree Residential AC",
     category: "Display Produk",
     image: "/assets/gallery/display/display-gree-residential-ac-radja-ac.webp",
     thumbnail: "/assets/gallery/display/display-gree-residential-ac-radja-ac.webp",
+  },
+  {
+    title: "Display Sansui dan Gree",
+    category: "Display Produk",
+    image: "/assets/gallery/display/display-sansui-gree-radja-ac.webp",
+    thumbnail: "/assets/gallery/display/display-sansui-gree-radja-ac.webp",
   },
 ]
 
