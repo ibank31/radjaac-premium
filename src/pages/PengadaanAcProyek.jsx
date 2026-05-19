@@ -170,7 +170,22 @@ const brands = [
   { title: "Brand lainnya", href: "/brand/lainnya", note: "Sansui, Panasonic, LG, Samsung, dan pilihan lain." },
 ]
 
-const areas = ["Purwokerto", "Banyumas", "Sokaraja", "Purbalingga", "Banjarnegara", "Cilacap", "Kebumen", "Tegal", "Yogyakarta", "Luar kota / proyek khusus"]
+const areas = [
+  { title: "Purwokerto", href: "/jual-ac-purwokerto" },
+  { title: "Banyumas", href: "/jual-ac-banyumas" },
+  { title: "Sokaraja", href: "/jual-ac-sokaraja" },
+  { title: "Ajibarang", href: "/jual-ac-ajibarang" },
+  { title: "Wangon", href: "/jual-ac-wangon" },
+  { title: "Cilongok", href: "/jual-ac-cilongok" },
+  { title: "Jatilawang", href: "/jual-ac-jatilawang" },
+  { title: "Purbalingga", href: "/jual-ac-purbalingga" },
+  { title: "Banjarnegara", href: "/jual-ac-banjarnegara" },
+  { title: "Cilacap", href: "/jual-ac-cilacap" },
+  { title: "Kebumen", href: "/jual-ac-kebumen" },
+  { title: "Tegal", href: "/jual-ac-tegal" },
+  { title: "Yogyakarta", href: "/jual-ac-yogyakarta" },
+  { title: "Luar kota / proyek khusus" },
+]
 
 const internalLinks = [
   { title: "Katalog AC", href: "/katalog", description: "Lihat kategori AC rumah, inverter, low watt, dan komersial." },
@@ -467,11 +482,18 @@ export default function PengadaanAcProyek() {
               <p className="text-sm leading-7 text-white/65 sm:text-base">RADJA AC berbasis di Purwokerto dan melayani kebutuhan pengadaan AC untuk area sekitar Banyumas hingga luar kota. Untuk jumlah unit besar, skema pengiriman dibahas berdasarkan lokasi, jumlah unit, dan kesiapan stok.</p>
             </div>
             <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
-              {areas.map((area) => (
-                <div key={area} className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-2.5 text-xs font-bold text-white/75 sm:text-sm">
-                  <MapPin className="h-4 w-4 shrink-0 text-cyan-300" />{area}
-                </div>
-              ))}
+              {areas.map((area) => {
+                const className = "flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-2.5 text-xs font-bold text-white/75 transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.07] sm:text-sm"
+                const content = <><MapPin className="h-4 w-4 shrink-0 text-cyan-300" />{area.title}</>
+
+                return area.href ? (
+                  <Link key={area.title} to={area.href} className={className}>{content}</Link>
+                ) : (
+                  <div key={area.title} className="flex items-center gap-2 rounded-2xl border border-cyan-300/20 bg-cyan-300/[0.08] px-3 py-2.5 text-xs font-bold text-cyan-100 sm:text-sm">
+                    <MapPin className="h-4 w-4 shrink-0 text-cyan-300" />{area.title}
+                  </div>
+                )
+              })}
             </div>
           </div>
         </Section>
