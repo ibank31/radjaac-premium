@@ -8,8 +8,8 @@ const areaConfig = {
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Ajibarang dan sekitarnya, termasuk kebutuhan rumah, toko, ruko, kost, usaha, banyak unit area Banyumas barat, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA AJIBARANG",
-  h1: "Jual AC Ajibarang",
-  heroHighlight: "Banyumas Barat, Konsultasi Dulu Sebelum Beli",
+  h1: "Ajibarang Jadi Jalur Barat, AC Jangan Pilih Asal Murah",
+  heroHighlight: "Cek Ruangan, Daya, dan Kebutuhan Unit Sebelum Deal",
   heroDescription:
     "Ajibarang sering jadi titik rujukan untuk kebutuhan rumah, toko, ruko, kost, dan usaha di sisi barat Banyumas. Kalau butuh AC, lebih aman cek dulu ukuran ruangan, daya listrik, jumlah unit, dan rencana pemasangannya. RADJA AC bantu konsultasi lewat WhatsApp supaya pilihan AC tetap sesuai untuk pemakaian harian di Ajibarang dan sekitarnya.",
   primaryCta: "Tanya AC Ajibarang",
