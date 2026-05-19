@@ -228,10 +228,46 @@ const galleryItems = [
     thumbnail: "/assets/gallery/pengiriman/loading-ac-ariston.webp",
   },
   {
+    title: "Display AC Ariston",
+    category: "Display Produk",
+    image: "/assets/showroom/display-ariston-radja-ac.webp",
+    thumbnail: "/assets/showroom/display-ariston-radja-ac.webp",
+  },
+  {
+    title: "Display AC Daikin",
+    category: "Display Produk",
+    image: "/assets/showroom/display-daikin-radja-ac.webp",
+    thumbnail: "/assets/showroom/display-daikin-radja-ac.webp",
+  },
+  {
+    title: "Display AC Gree FLife",
+    category: "Display Produk",
+    image: "/assets/showroom/display-gree-flife-radja-ac.webp",
+    thumbnail: "/assets/showroom/display-gree-flife-radja-ac.webp",
+  },
+  {
+    title: "Display AC Gree Inverter",
+    category: "Display Produk",
+    image: "/assets/showroom/display-gree-inverter-radja-ac.webp",
+    thumbnail: "/assets/showroom/display-gree-inverter-radja-ac.webp",
+  },
+  {
     title: "Display Gree Residential AC",
     category: "Display Produk",
-    image: "/assets/gallery/display/display-gree-residential-ac-radja-ac.webp",
-    thumbnail: "/assets/gallery/display/display-gree-residential-ac-radja-ac.webp",
+    image: "/assets/showroom/display-gree-residential-ac-radja-ac.webp",
+    thumbnail: "/assets/showroom/display-gree-residential-ac-radja-ac.webp",
+  },
+  {
+    title: "Display Midea Cassette & Floor Standing",
+    category: "Display Produk",
+    image: "/assets/showroom/display-midea-cassette-floor-standing-radja-ac.webp",
+    thumbnail: "/assets/showroom/display-midea-cassette-floor-standing-radja-ac.webp",
+  },
+  {
+    title: "Display Sansui dan Gree",
+    category: "Display Produk",
+    image: "/assets/showroom/display-sansui-gree-radja-ac.webp",
+    thumbnail: "/assets/showroom/display-sansui-gree-radja-ac.webp",
   },
 ]
 
