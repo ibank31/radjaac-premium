@@ -53,8 +53,10 @@ export default function Home() {
     priceRange: "Rp3 jutaan-Rp6 jutaan+",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Pamijen, Purwokerto Timur",
+      streetAddress: "Pamijen",
+      addressLocality: "Sokaraja",
       addressRegion: "Jawa Tengah",
+      postalCode: "53112",
       addressCountry: "ID",
     },
     areaServed: SITE_DATA.serviceAreas.map((area) => ({
