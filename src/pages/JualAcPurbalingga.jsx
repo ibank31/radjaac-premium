@@ -8,8 +8,8 @@ const areaConfig = {
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Purbalingga dan sekitarnya, termasuk kebutuhan rumah, toko, kost, ruko, kantor, usaha, banyak unit, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA PURBALINGGA",
-  h1: "Jual AC Purbalingga",
-  heroHighlight: "Untuk Rumah, Usaha, Kantor, dan Banyak Unit",
+  h1: "Purbalingga Butuh AC Rumah, Usaha, atau Banyak Unit?",
+  heroHighlight: "Cek Stok, PK, Harga, dan Rute Sebelum Pengiriman",
   heroDescription:
     "Purbalingga punya kebutuhan AC yang cukup beragam: rumah tinggal, toko, kantor, kost, usaha kuliner, sampai pembelian beberapa unit untuk ruang kerja atau ruang usaha. RADJA AC bantu konsultasi dulu lewat WhatsApp agar pilihan AC sesuai ukuran ruangan, daya listrik, jumlah unit, dan kebutuhan pemakaian. Untuk area Purbalingga, stok, rute pengiriman, dan jadwal pemasangan tetap dikonfirmasi dari awal supaya estimasi lebih jelas.",
   primaryCta: "Chat WhatsApp untuk AC Purbalingga",
