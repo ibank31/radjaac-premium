@@ -38,7 +38,7 @@ const areaConfig = {
   valueStockText:
     "Stok dan pilihan brand dicek sesuai kebutuhan rumah, toko, kost, atau ruko di sekitar Sokaraja.",
   valuePkText:
-    "Ukuran kamar, ruang usaha, daya listrik, dan jam pemakaian dikirim dulu agar pilihan AC tidak asal." ,
+    "Ukuran kamar, ruang usaha, daya listrik, dan jam pemakaian dikirim dulu agar pilihan AC tidak asal.",
   valueInstallText:
     "Pemasangan area Sokaraja menyesuaikan alamat, akses indoor-outdoor, kebutuhan material, jumlah unit, dan jadwal teknisi.",
   processDescription:
