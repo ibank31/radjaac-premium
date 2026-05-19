@@ -296,3 +296,45 @@ main > section:first-of-type > .mx-auto.max-w-4xl.text-center > div:last-child {
     content: "Inverter";
   }
 }
+
+/* ══════════════════════════════════════════
+   BRAND CERTIFICATE SECTION CLEANUP
+   Keep only one brand-specific dealer chip above certificate images.
+══════════════════════════════════════════ */
+section:has(img[alt="Sertifikat resmi Daikin Authorized Dealer untuk RADJA AC"]) > div > div:first-child > div.mb-4,
+section:has(img[alt="Sertifikat resmi Midea untuk RADJA AC"]) > div > div:first-child > div.mb-4,
+section:has(img[alt="Sertifikat resmi Hisense untuk RADJA AC"]) > div > div:first-child > div.mb-4,
+section:has(img[alt="Sertifikat resmi Sansui untuk RADJA AC"]) > div > div:first-child > div.mb-4,
+section:has(img[alt="Sertifikat resmi Daikin Authorized Dealer untuk RADJA AC"]) > div > div:first-child > h2,
+section:has(img[alt="Sertifikat resmi Midea untuk RADJA AC"]) > div > div:first-child > h2,
+section:has(img[alt="Sertifikat resmi Hisense untuk RADJA AC"]) > div > div:first-child > h2,
+section:has(img[alt="Sertifikat resmi Sansui untuk RADJA AC"]) > div > div:first-child > h2 {
+  display: none;
+}
+
+section:has(img[alt="Sertifikat resmi Daikin Authorized Dealer untuk RADJA AC"]) > div > div:first-child > div:last-child span,
+section:has(img[alt="Sertifikat resmi Midea untuk RADJA AC"]) > div > div:first-child > div:last-child span,
+section:has(img[alt="Sertifikat resmi Hisense untuk RADJA AC"]) > div > div:first-child > div:last-child span,
+section:has(img[alt="Sertifikat resmi Sansui untuk RADJA AC"]) > div > div:first-child > div:last-child span {
+  font-size: 0;
+}
+
+section:has(img[alt="Sertifikat resmi Daikin Authorized Dealer untuk RADJA AC"]) > div > div:first-child > div:last-child span::after {
+  content: "Authorized Dealer Daikin";
+  font-size: 1rem;
+}
+
+section:has(img[alt="Sertifikat resmi Midea untuk RADJA AC"]) > div > div:first-child > div:last-child span::after {
+  content: "Authorized Dealer Midea";
+  font-size: 1rem;
+}
+
+section:has(img[alt="Sertifikat resmi Hisense untuk RADJA AC"]) > div > div:first-child > div:last-child span::after {
+  content: "Authorized Dealer Hisense";
+  font-size: 1rem;
+}
+
+section:has(img[alt="Sertifikat resmi Sansui untuk RADJA AC"]) > div > div:first-child > div:last-child span::after {
+  content: "Authorized Dealer Sansui";
+  font-size: 1rem;
+}
