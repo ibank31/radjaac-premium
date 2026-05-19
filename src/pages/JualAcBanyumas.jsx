@@ -4,14 +4,14 @@ const areaConfig = {
   canonicalPath: "/jual-ac-banyumas",
   seoTitle: "Jual AC Banyumas | Konsultasi Unit AC untuk Banyak Kecamatan — RADJA AC",
   seoDescription:
-    "Jual AC Banyumas untuk banyak kecamatan: rumah, kost, toko, ruko, kantor kecil, dan kebutuhan beberapa unit. Konsultasi PK, stok, pengiriman, dan pemasangan sesuai alamat.",
+    "Jual AC Banyumas untuk banyak kecamatan: rumah, kost, toko, ruko, kantor, dan kebutuhan beberapa unit. Konsultasi PK, stok, pengiriman, dan pemasangan sesuai alamat.",
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Banyumas dan banyak kecamatan sekitarnya, termasuk konsultasi AC rumah, toko, kost, ruko, kantor, kebutuhan banyak unit, cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA BANYUMAS",
   h1: "Jual AC Banyumas",
   heroHighlight: "Banyak Kecamatan, Konsultasi dari Purwokerto",
   heroDescription:
-    "Banyumas mencakup banyak kecamatan dengan kebutuhan AC yang berbeda-beda: rumah, kost, toko, ruko, kantor kecil, sampai usaha lokal. RADJA AC bantu konsultasi dari Purwokerto agar pembeli bisa cek pilihan unit, kapasitas PK, stok, budget, dan kebutuhan pengiriman atau pemasangan berdasarkan lokasi. Cukup chat WhatsApp, sebutkan kecamatan, ukuran ruangan, daya listrik, jumlah unit, dan foto titik indoor-outdoor jika ada.",
+    "Banyumas mencakup banyak kecamatan dengan kebutuhan AC yang berbeda-beda: rumah, kost, toko, ruko, kantor, sampai usaha lokal. RADJA AC bantu konsultasi dari Purwokerto agar pembeli bisa cek pilihan unit, kapasitas PK, stok, budget, dan kebutuhan pengiriman atau pemasangan berdasarkan lokasi. Cukup chat WhatsApp, sebutkan kecamatan, ukuran ruangan, daya listrik, jumlah unit, dan foto titik indoor-outdoor jika ada.",
   primaryCta: "Tanya AC Banyumas",
   waMessage:
     "Halo RADJA AC, saya dari Banyumas. Mau tanya AC untuk rumah/usaha/kost, cek stok, harga, rekomendasi PK, dan opsi pengiriman atau pemasangan.",
@@ -54,7 +54,7 @@ const areaConfig = {
     ["Apakah RADJA AC melayani jual AC area Banyumas?", "Ya. RADJA AC berbasis di Purwokerto dan melayani konsultasi pembelian AC untuk Banyumas dan banyak kecamatan sekitar sesuai stok, rute, lokasi, dan jadwal."],
     ["Apa yang perlu dikirim kalau saya dari kecamatan luar Purwokerto?", "Kirim kecamatan, patokan alamat, ukuran ruangan, daya listrik, jumlah unit, budget, dan foto titik indoor-outdoor jika perlu."],
     ["Apakah tiap kecamatan di Banyumas estimasinya sama?", "Belum tentu. Estimasi bisa berbeda tergantung alamat, jumlah unit, akses lokasi, rute teknisi, dan kebutuhan material pemasangan."],
-    ["Apakah bisa beli AC beberapa unit sekaligus?", "Bisa. Untuk kost, toko, ruko, kantor kecil, atau usaha, jumlah unit akan dicek dulu sesuai stok, kebutuhan ruangan, pengiriman, dan jadwal pemasangan."],
+    ["Apakah bisa beli AC beberapa unit sekaligus?", "Bisa. Untuk kost, toko, ruko, kantor, atau usaha, jumlah unit akan dicek dulu sesuai stok, kebutuhan ruangan, pengiriman, dan jadwal pemasangan."],
   ],
   finalCtaTitle: "Mau beli AC area Banyumas?",
   finalCtaDescription:
