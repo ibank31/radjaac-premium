@@ -11,7 +11,7 @@ const areaConfig = {
   h1: "Jual AC Cilongok",
   heroHighlight: "Barat Purwokerto, Cek PK Dulu Biar Pas",
   heroDescription:
-    "Cilongok lebih dekat ke sisi barat Purwokerto, dengan kebutuhan AC yang sering datang dari rumah, kamar kost, toko kecil, ruko, dan ruang usaha harian. Fokusnya bukan sekadar rute jauh seperti Wangon, tapi memastikan kapasitas PK, daya listrik, dan posisi indoor-outdoor sesuai kondisi ruangan. RADJA AC bantu cek dulu lewat WhatsApp agar AC yang dipilih tidak kekecilan, tidak terlalu boros, dan tetap sesuai budget.",
+    "Cilongok lebih dekat ke sisi barat Purwokerto, dengan kebutuhan AC yang sering datang dari rumah, kamar kost, toko kecil, ruko, dan ruang usaha harian. Fokusnya bukan sekadar rute jauh seperti Wangon, tapi memastikan kapasitas PK, daya listrik, dan posisi indoor-outdoor sesuai kondisi ruangan. RADJA AC bantu cek dulu lewat WhatsApp agar pilihan AC lebih sesuai dengan pemakaian dan budget.",
   primaryCta: "Chat WhatsApp untuk AC Cilongok",
   waMessage:
     "Halo RADJA AC, saya dari Cilongok. Mau tanya AC untuk rumah/kost/toko/ruko area barat Purwokerto, cek stok, harga, rekomendasi PK, dan opsi pengiriman atau pemasangan.",
@@ -34,11 +34,11 @@ const areaConfig = {
   },
   valueTitle: "Beli AC area Cilongok sebaiknya mulai dari ukuran ruangan",
   valueDescription:
-    "Untuk Cilongok dan barat Purwokerto, ukuran ruangan, daya listrik, posisi indoor-outdoor, dan pola pemakaian harian lebih menentukan daripada langsung memilih merek paling murah.",
+    "Untuk Cilongok dan barat Purwokerto, ukuran ruangan, daya listrik, posisi indoor-outdoor, dan pola pemakaian harian membantu menentukan pilihan unit yang sesuai.",
   valueStockText:
     "Stok dan pilihan brand dicek setelah kebutuhan ruangan jelas, supaya unit yang disarankan lebih sesuai dengan budget dan pemakaian.",
   valuePkText:
-    "Ukuran kamar, toko kecil, atau ruko bisa dikirim dulu agar rekomendasi PK pas dan tidak membuat listrik terasa berat.",
+    "Ukuran kamar, toko kecil, atau ruko bisa dikirim dulu agar rekomendasi PK pas dan sesuai kebutuhan ruangan.",
   valueInstallText:
     "Pemasangan Cilongok menyesuaikan titik indoor-outdoor, panjang pipa, akses outdoor, tambahan material, dan jadwal teknisi.",
   processDescription:
