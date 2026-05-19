@@ -8,8 +8,8 @@ const areaConfig = {
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Cilongok dan sekitarnya, termasuk kebutuhan rumah, kost, toko, ruko, kantor, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA CILONGOK",
-  h1: "Jual AC Cilongok",
-  heroHighlight: "Barat Purwokerto, Cek PK Dulu Biar Pas",
+  h1: "Cilongok Banyak Rumah dan Kost, PK AC Harus Pas",
+  heroHighlight: "Cek Daya Listrik, Ukuran Ruangan, dan Pilihan Unit dari Awal",
   heroDescription:
     "Cilongok lebih dekat ke sisi barat Purwokerto, dengan kebutuhan AC yang sering datang dari rumah, kamar kost, toko, ruko, dan ruang usaha harian. Fokusnya bukan sekadar rute jauh seperti Wangon, tapi memastikan kapasitas PK, daya listrik, dan posisi indoor-outdoor sesuai kondisi ruangan. RADJA AC bantu cek dulu lewat WhatsApp agar pilihan AC lebih sesuai dengan pemakaian dan budget.",
   primaryCta: "Chat WhatsApp untuk AC Cilongok",
