@@ -14,7 +14,7 @@ const contactItems = [
   },
   {
     label: "Alamat",
-    value: "Pamijen • dekat RS Margono • Purwokerto Timur – Banyumas",
+    value: "Pamijen, Sokaraja – Banyumas • Dekat RS Margono Purwokerto",
   },
 ];
 
