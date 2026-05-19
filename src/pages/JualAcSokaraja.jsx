@@ -4,14 +4,14 @@ const areaConfig = {
   canonicalPath: "/jual-ac-sokaraja",
   seoTitle: "Jual AC Sokaraja | Dekat Purwokerto untuk Rumah, Toko & Kost — RADJA AC",
   seoDescription:
-    "RADJA AC melayani pembelian AC area Sokaraja yang dekat Purwokerto. Cocok untuk rumah, toko, ruko, kost, kantor kecil, cek stok, rekomendasi PK, pengiriman, dan pemasangan by konfirmasi.",
+    "RADJA AC melayani pembelian AC area Sokaraja dekat Purwokerto. Cocok untuk rumah, toko, ruko, kost, kantor kecil, cek stok, rekomendasi PK, dan pemasangan sesuai konfirmasi.",
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Sokaraja dan sekitarnya, termasuk kebutuhan rumah dekat kota, toko, kost, ruko, kantor kecil, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA SOKARAJA",
   h1: "Jual AC Sokaraja",
-  heroHighlight: "Dekat Purwokerto, Lebih Mudah Konsultasi",
+  heroHighlight: "Dekat Purwokerto, Konsultasi Lebih Praktis",
   heroDescription:
-    "Beli AC di Sokaraja tidak perlu bingung pilih sendiri. RADJA AC bantu konsultasi pilihan AC untuk rumah, kos, toko, kantor kecil, atau usaha lokal. Cukup chat WhatsApp, kirim ukuran ruangan, daya listrik, foto titik indoor-outdoor, dan budget. Nanti kami bantu cek pilihan PK, brand, stok, kisaran harga, dan jadwal pemasangan.",
+    "Sokaraja dekat dengan Purwokerto, jadi pembelian AC bisa dibuat lebih praktis: cek stok, tanya kapasitas PK, dan bahas pemasangan tanpa harus datang dulu. Cocok untuk rumah, toko, ruko, kost, kantor kecil, atau usaha lokal di sekitar Sokaraja. RADJA AC bantu arahkan pilihan AC berdasarkan ukuran ruangan, daya listrik, foto titik indoor-outdoor, dan budget supaya pilihan unit lebih tepat sejak awal.",
   primaryCta: "Tanya AC Sokaraja",
   waMessage:
     "Halo RADJA AC, saya dari Sokaraja. Mau tanya AC untuk rumah/toko/kost/ruko dekat Purwokerto, cek stok, harga, rekomendasi PK, dan estimasi pemasangan.",
@@ -19,45 +19,46 @@ const areaConfig = {
   schemaAreas: ["Sokaraja", "Sokaraja Kulon", "Sokaraja Wetan", "Karangnanas", "Kembaran", "Kalibagor", "Patikraja", "Purwokerto Timur", "Purwokerto Selatan", "Banyumas"],
   relatedAreaLinks: [["Banyumas", "/jual-ac-banyumas"], ["Purwokerto", "/jual-ac-purwokerto"], ["Ajibarang", "/jual-ac-ajibarang"]],
   bulkPurchase: {
-    eyebrow: "AREA DEKAT PURWOKERTO",
+    eyebrow: "DEKAT PURWOKERTO",
     title: "Butuh AC untuk rumah, toko, kost, atau ruko area Sokaraja?",
     description:
-      "Sokaraja termasuk area dekat Purwokerto, jadi pembelian AC bisa dikonsultasikan lebih praktis. RADJA AC bantu cek stok, rekomendasi PK, pilihan brand, estimasi kebutuhan pasang, dan jadwal teknisi sesuai alamat.",
+      "Karena Sokaraja dekat dengan Purwokerto, konsultasi bisa fokus ke kebutuhan ruangan dan ketersediaan unit. Pembeli bisa mulai dari satu unit rumah, beberapa kamar kost, toko kecil, ruko, atau kantor kecil yang perlu pemasangan lebih praktis.",
     cards: [
       ["Rumah & Kamar", "Bantu pilih AC untuk kamar, ruang keluarga, ruang kerja, atau hunian harian sekitar Sokaraja."],
       ["Toko & Ruko", "Cocok untuk area pelanggan, kasir, display produk, ruang tunggu, atau usaha kecil dekat Purwokerto."],
-      ["Kost & Banyak Unit", "Bisa diskusi kebutuhan beberapa kamar dengan pilihan brand hemat, low watt, atau inverter."],
+      ["Kost & Banyak Unit", "Bisa diskusi kebutuhan beberapa kamar dengan pilihan brand hemat, low watt, atau inverter sesuai daya listrik."],
     ],
     ctaLabel: "Tanya AC Area Sokaraja",
     waMessage:
       "Halo RADJA AC, saya dari Sokaraja. Mau konsultasi AC untuk rumah/toko/kost/ruko. Mohon bantu cek stok, rekomendasi PK, estimasi harga, dan jadwal pemasangan sesuai lokasi.",
   },
-  valueTitle: "Beli AC area Sokaraja lebih praktis dari awal",
+  valueTitle: "Beli AC area Sokaraja lebih praktis kalau data ruangan jelas",
   valueDescription:
-    "Karena Sokaraja dekat dengan Purwokerto, konsultasi bisa fokus ke kebutuhan unit, ukuran ruangan, daya listrik, stok, dan jadwal pemasangan yang realistis.",
+    "Untuk Sokaraja, jarak yang dekat membantu proses konsultasi, tapi ukuran ruangan, daya listrik, stok, dan titik pemasangan tetap perlu dicek agar estimasi lebih tepat.",
   valueStockText:
-    "Stok unit, pilihan brand, dan kisaran harga dicek dulu lewat WhatsApp sebelum pembelian dikunci.",
+    "Stok dan pilihan brand dicek sesuai kebutuhan rumah, toko, kost, atau ruko di sekitar Sokaraja.",
   valuePkText:
-    "Ukuran kamar, ruang usaha, daya listrik, dan jam pemakaian bisa dikirim dulu agar pilihan AC tidak asal.",
+    "Ukuran kamar, ruang usaha, daya listrik, dan jam pemakaian dikirim dulu agar pilihan AC tidak asal." ,
   valueInstallText:
-    "Untuk area Sokaraja, pemasangan menyesuaikan alamat, akses titik indoor-outdoor, kebutuhan material, jumlah unit, dan jadwal teknisi.",
+    "Pemasangan area Sokaraja menyesuaikan alamat, akses indoor-outdoor, kebutuhan material, jumlah unit, dan jadwal teknisi.",
   processDescription:
-    "Pembelian AC area Sokaraja tetap perlu dikonfirmasi dulu supaya jelas sejak awal: stok unit, kebutuhan PK, estimasi pemasangan, dan jadwal teknisi.",
+    "Untuk Sokaraja, prosesnya bisa dibuat ringkas: kirim kebutuhan ruangan, cek pilihan unit, lalu konfirmasi stok, harga, dan jadwal pemasangan.",
   processSteps: [
-    ["Kirim lokasi & kebutuhan", "Sebutkan area Sokaraja, jenis ruangan, jumlah unit, ukuran ruangan, daya listrik, budget, dan foto titik indoor-outdoor jika ada."],
-    ["Cek stok, brand & PK", "RADJA AC bantu arahkan pilihan brand, kapasitas PK, tipe low watt/inverter, dan estimasi harga sesuai kebutuhan rumah atau usaha."],
-    ["Konfirmasi harga & jadwal", "Stok, biaya tambahan material, akses lokasi, dan jadwal pemasangan dikonfirmasi dulu sebelum unit disiapkan."],
+    ["Kirim kebutuhan ruangan", "Sebutkan area Sokaraja atau sekitar, jenis ruangan, ukuran ruangan, daya listrik, jumlah unit, dan budget awal."],
+    ["Kirim foto titik pemasangan", "Foto indoor-outdoor membantu memperkirakan posisi unit, jalur pipa, akses outdoor, dan kebutuhan material tambahan."],
+    ["Konfirmasi unit & jadwal", "RADJA AC bantu cek stok, kapasitas PK, pilihan brand, estimasi harga, dan jadwal pemasangan sebelum unit disiapkan."],
   ],
   choiceDescription:
-    "Kalau belum yakin memilih merek, mulai dari ukuran ruangan, daya listrik, jenis ruangan, dan target pemakaian.",
+    "Kalau belum yakin memilih merek, mulai dari ukuran ruangan, daya listrik, jenis ruangan, jumlah unit, dan target pemakaian.",
   faqItems: [
-    ["Apakah RADJA AC melayani jual AC area Sokaraja?", "Ya. RADJA AC dari Purwokerto melayani konsultasi dan pembelian AC untuk area Sokaraja dan sekitarnya."],
-    ["Apakah bisa konsultasi dulu sebelum beli AC?", "Bisa. Cukup chat WhatsApp, lalu kirim ukuran ruangan, daya listrik, dan foto titik indoor-outdoor supaya pilihan AC lebih tepat."],
-    ["Apa yang perlu dikirim saat chat WhatsApp?", "Sebutkan lokasi, ukuran ruangan, daya listrik, foto titik pemasangan indoor-outdoor, dan budget. Nanti kami bantu cek pilihan unit, stok, dan jadwal pemasangan."],
+    ["Apakah RADJA AC melayani jual AC area Sokaraja?", "Ya. RADJA AC dari Purwokerto melayani konsultasi dan pembelian AC untuk area Sokaraja dan sekitarnya sesuai stok, alamat, dan jadwal."],
+    ["Apakah karena dekat Purwokerto prosesnya lebih praktis?", "Konsultasi bisa lebih praktis, tapi stok, pilihan unit, dan pemasangan tetap dikonfirmasi berdasarkan alamat, titik indoor-outdoor, dan jadwal teknisi."],
+    ["Bisa bantu pilih AC untuk toko atau ruko di Sokaraja?", "Bisa. Kirim ukuran ruangan, posisi pintu, aktivitas ruangan, daya listrik, dan budget supaya pilihan PK lebih tepat."],
+    ["Apa yang perlu dikirim saat chat WhatsApp?", "Sebutkan lokasi, ukuran ruangan, daya listrik, foto titik pemasangan indoor-outdoor, jumlah unit, dan budget. Nanti kami bantu cek pilihan unit, stok, dan jadwal pemasangan."],
   ],
   finalCtaTitle: "Mau beli AC area Sokaraja?",
   finalCtaDescription:
-    "Kirim lokasi, jenis ruangan, jumlah unit, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, dan jadwal pemasangan sesuai konfirmasi.",
+    "Kirim lokasi Sokaraja atau sekitar, jenis ruangan, jumlah unit, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, dan jadwal pemasangan sesuai konfirmasi.",
 }
 
 export default function JualAcSokaraja() {
