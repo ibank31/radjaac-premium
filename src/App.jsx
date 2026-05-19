@@ -17,6 +17,7 @@ const JualAcTegal = lazy(() => import("./pages/JualAcTegal"))
 const JualAcYogyakarta = lazy(() => import("./pages/JualAcYogyakarta"))
 const KatalogAc = lazy(() => import("./pages/KatalogAc"))
 const KalkulatorAc = lazy(() => import("./pages/KalkulatorAc"))
+const PengadaanAcProyek = lazy(() => import("./pages/PengadaanAcProyek"))
 const InstalasiProfesional = lazy(() => import("./pages/InstalasiProfesional"))
 const AcSplitRumah = lazy(() => import("./pages/AcSplitRumah"))
 const AcInverter = lazy(() => import("./pages/AcInverter"))
@@ -108,6 +109,8 @@ export default function App() {
             <Route path="/katalog" element={<KatalogAc />} />
 
             <Route path="/kalkulator-pk-ac" element={<KalkulatorAc />} />
+
+            <Route path="/pengadaan-ac-proyek" element={<PengadaanAcProyek />} />
 
             <Route
               path="/brand/daikin"
