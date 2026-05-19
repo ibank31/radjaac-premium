@@ -233,12 +233,6 @@ const galleryItems = [
     image: "/assets/gallery/display/display-gree-residential-ac-radja-ac.webp",
     thumbnail: "/assets/gallery/display/display-gree-residential-ac-radja-ac.webp",
   },
-  {
-    title: "Display Midea Cassette Floor Standing",
-    category: "Display Produk",
-    image: "/assets/gallery/display/display-midea-cassette-floor-standing-radja-ac.webp",
-    thumbnail: "/assets/gallery/display/display-midea-cassette-floor-standing-radja-ac.webp",
-  },
 ]
 
 export default function Gallery() {
