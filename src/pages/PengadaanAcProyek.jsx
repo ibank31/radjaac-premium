@@ -118,40 +118,58 @@ const trustItems = [
 
 const documentationItems = [
   {
-    title: "Restock AC Daikin",
+    title: "Pengiriman Sharp & Midea",
     category: "Pengiriman",
-    image: "/assets/gallery/pengiriman/restock-ac-daikin.webp",
-    alt: "Restock unit AC Daikin RADJA AC",
+    image: "/assets/gallery/pengiriman/pengiriman-sharp-midea.webp",
+    alt: "Pengiriman AC Sharp dan Midea RADJA AC",
   },
   {
-    title: "Pengiriman Stok Aqua",
+    title: "Persiapan Pengiriman",
     category: "Pengiriman",
-    image: "/assets/gallery/pengiriman/radja-ac-pengiriman-stok-aqua-truk-putih.webp",
-    alt: "Pengiriman stok AC Aqua RADJA AC dengan banyak unit",
+    image: "/assets/gallery/pengiriman/radja-ac-persiapan-pengiriman.webp",
+    alt: "Persiapan pengiriman unit AC RADJA AC",
   },
   {
-    title: "Stok Gudang Gree Aqua",
+    title: "Stok AC Sharp",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/radja-ac-stok-sharp.webp",
+    alt: "Stok AC Sharp RADJA AC",
+  },
+  {
+    title: "Gudang Stok AC Gree",
     category: "Stok Gudang",
-    image: "/assets/gallery/stok-gudang/stock-gudang-gree-aqva.webp",
-    alt: "Stok gudang AC Gree dan Aqua RADJA AC",
+    image: "/assets/gallery/large/gudang-stok-ac-gree-radja-ac-01.webp",
+    alt: "Gudang stok AC Gree RADJA AC",
   },
   {
-    title: "Stok Outdoor Gree",
+    title: "Gudang Stok AC Aqua",
     category: "Stok Gudang",
-    image: "/assets/gallery/stok-gudang/stok-gudang-outdoor-gree.webp",
-    alt: "Stok gudang outdoor AC Gree RADJA AC",
+    image: "/assets/gallery/large/gudang-stok-ac-aqua-radja-ac-01.webp",
+    alt: "Gudang stok AC Aqua RADJA AC",
   },
   {
-    title: "Showroom Multibrand",
-    category: "Showroom",
-    image: "/assets/gallery/large/showroom-multibrand-radja-ac-purwokerto-01.webp",
-    alt: "Showroom multibrand RADJA AC Purwokerto",
+    title: "Stok AC Gree Gudang",
+    category: "Stok Gudang",
+    image: "/assets/gallery/large/gudang-stok-ac-gree-radja-ac-02.webp",
+    alt: "Stok AC Gree di gudang RADJA AC",
   },
   {
-    title: "Showroom Daikin dan Gree",
+    title: "Showroom Gree",
     category: "Showroom",
-    image: "/assets/gallery/large/showroom-daikin-gree-radja-ac-01.webp",
-    alt: "Showroom Daikin dan Gree RADJA AC",
+    image: "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-01.webp",
+    alt: "Showroom Gree RADJA AC Purwokerto",
+  },
+  {
+    title: "Showroom Gree RADJA AC",
+    category: "Showroom",
+    image: "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-02.webp",
+    alt: "Showroom Gree RADJA AC",
+  },
+  {
+    title: "Display Daikin dan Sansui",
+    category: "Showroom",
+    image: "/assets/gallery/large/display-daikin-sansui-radja-ac-01.webp",
+    alt: "Showroom display Daikin dan Sansui RADJA AC",
   },
 ]
 
@@ -434,18 +452,18 @@ export default function PengadaanAcProyek() {
               Pengiriman, stok gudang, dan showroom
             </h2>
             <p className="text-sm leading-7 text-white/65 sm:text-base">
-              Beberapa foto pendukung dari aktivitas pengadaan, restock, stok gudang, dan showroom multibrand.
+              Foto pendukung lain dari aktivitas pengiriman, stok gudang, dan showroom yang tidak mengulang dokumentasi utama di atas.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 lg:grid-cols-3">
             {documentationItems.map((item) => (
               <a
                 key={item.image}
                 href={item.image}
                 target="_blank"
                 rel="noreferrer"
-                className="group overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.04] transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06]"
+                className="group overflow-hidden rounded-[16px] border border-white/10 bg-white/[0.04] transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06] sm:rounded-[20px]"
               >
                 <div className="relative overflow-hidden bg-slate-900">
                   <img
@@ -453,15 +471,15 @@ export default function PengadaanAcProyek() {
                     alt={item.alt}
                     loading="lazy"
                     decoding="async"
-                    sizes="(min-width: 1024px) 16vw, (min-width: 640px) 33vw, 50vw"
-                    className="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                    sizes="(min-width: 1024px) 33vw, 33vw"
+                    className="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                   />
-                  <span className="absolute left-2 top-2 rounded-full border border-cyan-300/20 bg-slate-950/70 px-2 py-1 text-[10px] font-semibold text-cyan-100 backdrop-blur">
+                  <span className="absolute left-1.5 top-1.5 rounded-full border border-cyan-300/20 bg-slate-950/70 px-1.5 py-0.5 text-[8px] font-semibold text-cyan-100 backdrop-blur sm:left-2 sm:top-2 sm:px-2 sm:py-1 sm:text-[10px]">
                     {item.category}
                   </span>
                 </div>
-                <div className="p-3">
-                  <h3 className="line-clamp-2 text-xs font-black leading-4 text-white sm:text-sm sm:leading-5">{item.title}</h3>
+                <div className="p-2 sm:p-3">
+                  <h3 className="line-clamp-2 text-[10px] font-black leading-3 text-white sm:text-sm sm:leading-5">{item.title}</h3>
                 </div>
               </a>
             ))}
