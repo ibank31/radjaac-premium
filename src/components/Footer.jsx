@@ -14,8 +14,24 @@ const contactItems = [
   },
   {
     label: "Alamat",
-    value: "Pamijen • dekat RS Margono • Purwokerto Timur – Banyumas",
+    value: "Pamijen, Sokaraja – Banyumas • Dekat RS Margono Purwokerto",
   },
+];
+
+const footerAreaLinks = [
+  { label: "Purwokerto", to: "/jual-ac-purwokerto" },
+  { label: "Banyumas", to: "/jual-ac-banyumas" },
+  { label: "Sokaraja", to: "/jual-ac-sokaraja" },
+  { label: "Ajibarang", to: "/jual-ac-ajibarang" },
+  { label: "Wangon", to: "/jual-ac-wangon" },
+  { label: "Cilongok", to: "/jual-ac-cilongok" },
+  { label: "Jatilawang", to: "/jual-ac-jatilawang" },
+  { label: "Purbalingga", to: "/jual-ac-purbalingga" },
+  { label: "Banjarnegara", to: "/jual-ac-banjarnegara" },
+  { label: "Cilacap", to: "/jual-ac-cilacap" },
+  { label: "Kebumen", to: "/jual-ac-kebumen" },
+  { label: "Tegal", to: "/jual-ac-tegal" },
+  { label: "Yogyakarta", to: "/jual-ac-yogyakarta" },
 ];
 
 const seoLinks = [
@@ -87,16 +103,17 @@ export default function Footer() {
 
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-200/75">Area Layanan</h4>
-            <div className="flex flex-wrap gap-2">
-              {SITE_DATA.serviceAreas.map((area) => (
-                <span
-                  key={area}
-                  className="rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-xs font-medium text-white/55"
+            <nav className="flex flex-wrap gap-2" aria-label="Area layanan RADJA AC">
+              {footerAreaLinks.map((area) => (
+                <Link
+                  key={area.to}
+                  to={area.to}
+                  className="rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-xs font-medium text-white/55 transition hover:border-cyan-300/30 hover:text-cyan-200"
                 >
-                  {area}
-                </span>
+                  {area.label}
+                </Link>
               ))}
-            </div>
+            </nav>
           </div>
         </div>
 

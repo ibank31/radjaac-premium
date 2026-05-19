@@ -36,9 +36,7 @@ export const SITE_DATA = {
 
   // Operational Hours
   operationalHours: [
-    { label: "Senin - Jumat", value: "08:00 - 18:00" },
-    { label: "Sabtu", value: "08:00 - 15:00" },
-    { label: "Minggu", value: "Libur / Hanya Darurat" },
+    { label: "Setiap hari", value: "09:00 - 20:00" },
   ],
 
   // SEO Defaults

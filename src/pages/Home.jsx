@@ -41,8 +41,10 @@ export default function Home() {
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": ["Store", "LocalBusiness"],
+    "@type": ["Store", "LocalBusiness", "HVACBusiness"],
+    "@id": `${SITE_DATA.baseUrl}/#localbusiness`,
     name: SITE_DATA.businessName,
+    alternateName: "RADJA AC Purwokerto",
     url: SITE_DATA.baseUrl,
     logo: `${SITE_DATA.baseUrl}${SITE_DATA.logoUrl}`,
     image: `${SITE_DATA.baseUrl}${SITE_DATA.logoUrl}`,
@@ -51,26 +53,80 @@ export default function Home() {
     priceRange: "Rp3 jutaan-Rp6 jutaan+",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Pamijen, Purwokerto Timur",
+      streetAddress: "Pamijen",
+      addressLocality: "Sokaraja",
       addressRegion: "Jawa Tengah",
+      postalCode: "53112",
       addressCountry: "ID",
     },
     areaServed: SITE_DATA.serviceAreas.map((area) => ({
       "@type": "City",
       name: area,
     })),
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Sales",
+      telephone: SITE_DATA.phoneNumber,
+      areaServed: "ID",
+      availableLanguage: "Indonesian",
+    },
+    sameAs: [SITE_DATA.whatsappUrl],
+    makesOffer: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "AC Split Rumah",
+          category: "Air Conditioner",
+        },
+        availability: "https://schema.org/InStock",
+        url: `${SITE_DATA.baseUrl}/katalog/ac-split-rumah`,
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "AC Inverter",
+          category: "Air Conditioner",
+        },
+        availability: "https://schema.org/InStock",
+        url: `${SITE_DATA.baseUrl}/katalog/ac-inverter`,
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "AC Low Watt",
+          category: "Air Conditioner",
+        },
+        availability: "https://schema.org/InStock",
+        url: `${SITE_DATA.baseUrl}/katalog/ac-low-watt`,
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: "AC Kantor dan Komersial",
+          category: "Air Conditioner",
+        },
+        availability: "https://schema.org/InStock",
+        url: `${SITE_DATA.baseUrl}/katalog/ac-kantor-komersial`,
+      },
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "08:00",
-        closes: "18:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: "08:00",
-        closes: "15:00",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "09:00",
+        closes: "20:00",
       },
     ],
   }

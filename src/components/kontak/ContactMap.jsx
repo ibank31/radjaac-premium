@@ -22,7 +22,7 @@ export default function ContactMap() {
         </p>
 
         <div className="mb-5 rounded-[24px] border border-cyan-300/15 bg-cyan-300/10 p-5 text-sm leading-7 text-cyan-50/80">
-          Area showroom &amp; stok RADJA AC berada di Pamijen, dekat RS Margono, Purwokerto Timur – Banyumas.
+          Area showroom &amp; stok RADJA AC berada di Pamijen, Sokaraja – Banyumas • Dekat RS Margono Purwokerto.
         </div>
 
         <div className="rounded-[24px] sm:rounded-[28px] border border-white/10 bg-slate-950/70 p-5 sm:p-6">
