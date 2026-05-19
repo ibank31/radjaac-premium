@@ -52,12 +52,12 @@ const certificates = [
 const projectNeeds = [
   {
     title: "Kos-kosan & kontrakan",
-    description: "Pengadaan beberapa kamar sampai banyak unit, dengan pilihan AC yang disesuaikan budget dan daya listrik.",
+    description: "Pengadaan AC untuk kos-kosan, kontrakan, atau beberapa kamar sekaligus dengan pilihan unit yang menyesuaikan budget dan daya listrik.",
     icon: Home,
   },
   {
     title: "Kantor & ruang kerja",
-    description: "AC untuk ruang kerja, meeting room, lobby, admin, dan area operasional yang dipakai rutin.",
+    description: "Pengadaan AC untuk kantor, meeting room, lobby, admin, dan area operasional yang dipakai rutin.",
     icon: Building2,
   },
   {
@@ -77,7 +77,7 @@ const projectNeeds = [
   },
   {
     title: "Kontraktor & developer",
-    description: "Bisa dibahas untuk proyek bangunan, kebutuhan banyak unit, pengiriman luar kota, atau pembelian bertahap.",
+    description: "AC untuk kontraktor bangunan, developer, proyek banyak unit, pengiriman luar kota, atau pembelian bertahap.",
     icon: PackageCheck,
   },
 ]
@@ -152,7 +152,8 @@ const supportItems = [
   "Cek stok untuk pembelian satuan sampai banyak unit",
   "Pengiriman unit ke area dalam kota dan luar kota",
   "Opsi unit saja atau dengan pemasangan sesuai lokasi",
-  "Bantu susun kebutuhan awal untuk proyek, usaha, atau pembelian bertahap",
+  "Kebutuhan pembelian AC partai besar untuk proyek, kantor, kos-kosan, dan tempat usaha",
+  "Cocok untuk kebutuhan kontraktor bangunan, developer, dan proyek pengadaan bertahap",
 ]
 
 const acTypes = [
@@ -164,7 +165,7 @@ const acTypes = [
 const processSteps = [
   ["1", "Kirim kebutuhan", "Lokasi, jumlah ruangan, jumlah unit, dan target pemakaian."],
   ["2", "Cek rekomendasi", "RADJA AC bantu arahkan kapasitas PK, tipe AC, dan brand yang sesuai."],
-  ["3", "Cek stok & estimasi", "Stok, alternatif tipe, jumlah unit, dan estimasi biaya dibahas lebih lanjut."],
+  ["3", "Cek stok & estimasi", "Stok, alternatif tipe, jumlah unit, dan estimasi harga AC proyek dibahas lebih lanjut."],
   ["4", "Atur pembelian & pengiriman", "Unit saja, pengiriman, atau pemasangan dibahas sesuai area dan jumlah unit."],
 ]
 
@@ -220,6 +221,18 @@ const faqItems = [
     answer: "Ya. RADJA AC dapat membantu kebutuhan AC dari beberapa unit sampai pembelian banyak unit untuk rumah, kos, kantor, ruko, sekolah, kontraktor, dan proyek luar kota.",
   },
   {
+    question: "Apakah bisa melayani pembelian AC partai besar?",
+    answer: "Bisa. RADJA AC dapat membantu pembelian AC partai besar untuk proyek, kantor, kos-kosan, kontraktor bangunan, developer, dan kebutuhan luar kota sesuai stok serta skema pengiriman.",
+  },
+  {
+    question: "Apakah bisa minta estimasi harga AC proyek?",
+    answer: "Bisa. Estimasi harga AC proyek dapat dibahas berdasarkan jumlah unit, brand, tipe AC, lokasi pengiriman, dan kebutuhan unit saja atau dengan pemasangan.",
+  },
+  {
+    question: "Apakah RADJA AC bisa jadi pilihan supplier atau dealer AC proyek?",
+    answer: "Bisa dikonsultasikan untuk kebutuhan pengadaan AC proyek, pembelian banyak unit, atau kebutuhan dealer dan supplier AC proyek sesuai area, jumlah unit, ketersediaan stok, serta skema pengiriman.",
+  },
+  {
     question: "Apakah bisa kirim AC ke luar kota?",
     answer: "Bisa dikonsultasikan. Skema pengiriman menyesuaikan lokasi, jumlah unit, tipe AC, dan ketersediaan stok.",
   },
@@ -234,10 +247,6 @@ const faqItems = [
   {
     question: "Apakah bisa cek stok untuk banyak unit?",
     answer: "Bisa. Calon pembeli dapat mengirim jumlah unit dan pilihan brand agar stok serta alternatif tipe bisa dicek terlebih dahulu.",
-  },
-  {
-    question: "Apakah bisa minta estimasi awal sebelum membeli?",
-    answer: "Bisa. Estimasi awal dapat dibahas berdasarkan jumlah unit, brand, lokasi, dan kebutuhan unit saja atau dengan pemasangan.",
   },
 ]
 
@@ -277,8 +286,8 @@ export default function PengadaanAcProyek() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="Pengadaan AC Banyak Unit & Proyek | RADJA AC Purwokerto"
-        description="Pengadaan AC banyak unit untuk kos, kantor, ruko, sekolah, kontraktor, developer, dan proyek luar kota. Konsultasi stok, brand, pengiriman, dan pemasangan."
+        title="Supplier AC Proyek & Pengadaan AC Partai Besar | RADJA AC"
+        description="Supplier AC proyek, dealer AC proyek, pembelian AC partai besar, dan pengadaan AC untuk kantor, kos-kosan, developer, kontraktor bangunan, serta luar kota."
         canonicalPath="/pengadaan-ac-proyek"
       />
       <Helmet><script type="application/ld+json">{JSON.stringify(faqSchema)}</script></Helmet>
@@ -294,7 +303,7 @@ export default function PengadaanAcProyek() {
           <div className="mx-auto max-w-3xl">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-xs font-bold text-cyan-200 sm:text-sm">
               <PackageCheck className="h-4 w-4" />
-              PENGADAAN AC PROYEK & BANYAK UNIT
+              SUPPLIER AC PROYEK & PARTAI BESAR
             </div>
 
             <div className="mb-4 text-sm text-white/50">
@@ -304,10 +313,10 @@ export default function PengadaanAcProyek() {
             </div>
 
             <h1 className="mb-4 text-3xl font-black leading-[1.05] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl">
-              Pengadaan AC banyak unit untuk proyek, usaha, dan luar kota
+              Supplier AC proyek untuk pembelian banyak unit dan partai besar
             </h1>
             <p className="mb-5 text-sm leading-7 text-white/72 sm:text-base">
-              RADJA AC melayani kebutuhan AC dari beberapa unit sampai pengadaan skala besar untuk kos, kantor, ruko, sekolah, kontraktor, developer, dan proyek luar kota. Bantu cek kebutuhan, rekomendasi PK, pilihan brand, stok unit, pengiriman, sampai opsi pemasangan sesuai lokasi.
+              RADJA AC melayani kebutuhan AC dari beberapa unit sampai pembelian AC partai besar untuk kantor, kos-kosan, kontraktor bangunan, developer, dan proyek luar kota. Cocok untuk kebutuhan dealer AC proyek, distributor AC proyek, cek stok unit, rekomendasi PK, harga AC proyek, pengiriman, sampai opsi pemasangan sesuai lokasi.
             </p>
 
             <div className="mb-4 flex w-full flex-col items-center gap-3 sm:flex-row">
@@ -318,7 +327,7 @@ export default function PengadaanAcProyek() {
             </div>
 
             <p className="text-xs leading-6 text-white/48">
-              Cocok untuk pembelian unit satuan, banyak unit, pengiriman luar kota, maupun kebutuhan proyek bertahap.
+              Cocok untuk pembelian unit satuan, banyak unit, jual AC partai besar, pengiriman luar kota, maupun kebutuhan proyek bertahap.
             </p>
 
             <div className="mt-4 rounded-[24px] border border-cyan-300/20 bg-white/[0.04] p-4 shadow-[0_14px_42px_rgba(15,23,42,0.22)] lg:max-w-xl">
@@ -346,8 +355,8 @@ export default function PengadaanAcProyek() {
         <Section>
           <div className="mx-auto mb-5 max-w-3xl text-center">
             <SectionLabel>Kebutuhan proyek</SectionLabel>
-            <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Siap bantu kebutuhan AC untuk berbagai skala proyek</h2>
-            <p className="text-sm leading-7 text-white/65 sm:text-base">Mulai dari beberapa unit sampai banyak ruangan, RADJA AC bantu arahkan pilihan AC yang efisien dari sisi kapasitas, brand, daya listrik, stok, dan budget.</p>
+            <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Siap bantu pengadaan AC untuk kantor, kos-kosan, developer, dan kontraktor</h2>
+            <p className="text-sm leading-7 text-white/65 sm:text-base">Mulai dari beberapa unit sampai pembelian partai besar, RADJA AC bantu arahkan pilihan AC yang efisien dari sisi kapasitas, brand, daya listrik, stok, dan budget.</p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {projectNeeds.map(({ title, description, icon: Icon }) => (
@@ -411,7 +420,7 @@ export default function PengadaanAcProyek() {
             <div>
               <SectionLabel>Dukungan pengadaan</SectionLabel>
               <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Yang bisa RADJA AC bantu untuk pengadaan AC</h2>
-              <p className="mb-5 text-sm leading-7 text-white/65 sm:text-base">Kebutuhan proyek bisa langsung dibahas dari jumlah unit, lokasi, brand, budget, stok, sampai opsi unit saja atau pemasangan.</p>
+              <p className="mb-5 text-sm leading-7 text-white/65 sm:text-base">Kebutuhan proyek bisa langsung dibahas dari jumlah unit, lokasi, brand, budget, stok, harga AC proyek, sampai opsi unit saja atau pemasangan.</p>
               <WhatsAppButton className="w-full sm:w-auto">Kirim kebutuhan proyek</WhatsAppButton>
             </div>
             <div className="grid gap-2.5 sm:grid-cols-2">
@@ -467,7 +476,7 @@ export default function PengadaanAcProyek() {
               <div>
                 <SectionLabel>Data awal</SectionLabel>
                 <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl">Kirim data ini agar estimasi lebih cepat</h2>
-                <p className="mb-5 text-sm leading-7 text-white/65 sm:text-base">Data sederhana ini membantu mempercepat cek stok, estimasi, dan skema pengiriman.</p>
+                <p className="mb-5 text-sm leading-7 text-white/65 sm:text-base">Data sederhana ini membantu mempercepat cek stok, estimasi harga AC proyek, dan skema pengiriman.</p>
                 <WhatsAppButton className="w-full sm:w-auto">Kirim data via WhatsApp</WhatsAppButton>
               </div>
               <div className="grid gap-2.5 sm:grid-cols-2">
@@ -502,8 +511,8 @@ export default function PengadaanAcProyek() {
           <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
             <div>
               <SectionLabel>Area & pengiriman</SectionLabel>
-              <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Pengadaan AC untuk Purwokerto, luar kota, dan kebutuhan proyek</h2>
-              <p className="text-sm leading-7 text-white/65 sm:text-base">RADJA AC berbasis di Purwokerto dan melayani kebutuhan pengadaan AC untuk area sekitar Banyumas hingga luar kota. Untuk jumlah unit besar, skema pengiriman dibahas berdasarkan lokasi, jumlah unit, dan kesiapan stok.</p>
+              <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Pengadaan AC proyek, partai besar, dan luar kota</h2>
+              <p className="text-sm leading-7 text-white/65 sm:text-base">RADJA AC berbasis di Purwokerto dan melayani kebutuhan pengadaan AC untuk area sekitar Banyumas hingga luar kota. Untuk jual AC partai besar atau jumlah unit besar, skema pengiriman dibahas berdasarkan lokasi, jumlah unit, dan kesiapan stok.</p>
             </div>
             <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
               {areas.map((area) => {
@@ -540,7 +549,7 @@ export default function PengadaanAcProyek() {
         <Section className="max-w-4xl">
           <div className="mb-5 text-center">
             <SectionLabel>FAQ</SectionLabel>
-            <h2 className="text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Pertanyaan seputar pengadaan AC proyek</h2>
+            <h2 className="text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Pertanyaan seputar supplier AC proyek dan partai besar</h2>
           </div>
           <div className="space-y-2.5">
             {faqItems.map((item) => (
@@ -555,8 +564,8 @@ export default function PengadaanAcProyek() {
         <section className="mx-auto max-w-5xl px-6 pb-14 pt-7 lg:px-8 lg:pb-20 lg:pt-10">
           <div className="rounded-[30px] border border-cyan-300/20 bg-gradient-to-br from-cyan-300/12 via-white/[0.05] to-blue-500/10 p-6 text-center shadow-[0_18px_70px_rgba(15,23,42,0.32)] lg:p-9">
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-3xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300"><Send className="h-6 w-6" /></div>
-            <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Siapkan kebutuhan AC proyek Anda sekarang</h2>
-            <p className="mx-auto mb-5 max-w-2xl text-sm leading-7 text-white/68 sm:text-base">Kirim jumlah unit, lokasi, pilihan brand, dan kebutuhan ruangan. RADJA AC akan bantu arahkan pilihan AC untuk pembelian banyak unit, pengiriman luar kota, atau kebutuhan proyek bertahap.</p>
+            <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Siapkan pembelian AC partai besar untuk proyek Anda</h2>
+            <p className="mx-auto mb-5 max-w-2xl text-sm leading-7 text-white/68 sm:text-base">Kirim jumlah unit, lokasi, pilihan brand, dan kebutuhan ruangan. RADJA AC akan bantu arahkan pilihan AC untuk supplier AC proyek, dealer AC proyek, pembelian banyak unit, pengiriman luar kota, atau kebutuhan proyek bertahap.</p>
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
               <WhatsAppButton className="w-full sm:w-auto">Konsultasi pengadaan via WhatsApp</WhatsAppButton>
               <Link to="/kontak" className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 px-5 py-3.5 text-sm font-black text-white/90 transition hover:border-cyan-300/40 hover:bg-white/10 sm:w-auto sm:px-6 sm:py-4">
