@@ -8,8 +8,8 @@ const areaConfig = {
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Wangon dan jalur Banyumas barat-selatan, termasuk kebutuhan rumah, toko, kost, ruko, kantor, banyak unit, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA WANGON",
-  h1: "Jual AC Wangon",
-  heroHighlight: "Cek Rute, Stok, dan Jadwal dari Awal",
+  h1: "Wangon Butuh AC? Rute dan Jadwal Jangan Belakangan",
+  heroHighlight: "Cek Unit, Pengiriman, dan Opsi Pasang dari Awal",
   heroDescription:
     "Wangon berada di jalur penting Banyumas barat-selatan, jadi pembelian AC lebih enak dibahas jelas dari awal. Kalau butuh AC untuk rumah, toko, ruko, kost, atau usaha, RADJA AC bantu cek kebutuhan ruangan, jumlah unit, stok, dan opsi pengiriman atau pemasangan. Tujuannya supaya Anda tidak perlu bolak-balik tanya harga tanpa gambaran rute, material, dan jadwal.",
   primaryCta: "Chat WhatsApp untuk AC Wangon",
