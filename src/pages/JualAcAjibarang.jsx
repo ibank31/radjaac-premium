@@ -4,14 +4,14 @@ const areaConfig = {
   canonicalPath: "/jual-ac-ajibarang",
   seoTitle: "Jual AC Ajibarang | Banyumas Barat untuk Rumah, Toko & Kost — RADJA AC",
   seoDescription:
-    "RADJA AC melayani pembelian AC area Ajibarang dan Banyumas barat. Cocok untuk rumah, toko, ruko, kost, usaha lokal, cek stok, rekomendasi PK, pengiriman, dan pemasangan sesuai konfirmasi.",
+    "Jual AC Ajibarang untuk rumah, toko, ruko, kost, dan usaha sekitar Banyumas barat. Konsultasi PK, stok, harga, pengiriman, dan jadwal pemasangan.",
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Ajibarang dan sekitarnya, termasuk kebutuhan rumah, toko, ruko, kost, usaha lokal, banyak unit area Banyumas barat, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA AJIBARANG",
   h1: "Jual AC Ajibarang",
   heroHighlight: "Banyumas Barat, Konsultasi Dulu Sebelum Beli",
   heroDescription:
-    "Ajibarang sering jadi titik rujukan untuk kebutuhan rumah, toko, ruko, kost, dan usaha di sisi barat Banyumas. Kalau butuh AC, lebih aman cek dulu ukuran ruangan, daya listrik, jumlah unit, dan rencana pemasangannya. RADJA AC bantu konsultasi lewat WhatsApp supaya pilihan AC tidak cuma terlihat murah, tapi tetap masuk akal untuk pemakaian harian di Ajibarang dan sekitarnya.",
+    "Ajibarang sering jadi titik rujukan untuk kebutuhan rumah, toko, ruko, kost, dan usaha di sisi barat Banyumas. Kalau butuh AC, lebih aman cek dulu ukuran ruangan, daya listrik, jumlah unit, dan rencana pemasangannya. RADJA AC bantu konsultasi lewat WhatsApp supaya pilihan AC tetap sesuai untuk pemakaian harian di Ajibarang dan sekitarnya.",
   primaryCta: "Tanya AC Ajibarang",
   waMessage:
     "Halo RADJA AC, saya dari Ajibarang. Mau tanya AC untuk rumah/toko/kost/ruko area Banyumas barat, cek stok, harga, rekomendasi PK, dan opsi pengiriman atau pemasangan.",
@@ -38,7 +38,7 @@ const areaConfig = {
   valueStockText:
     "Pilihan unit dan brand dicek dulu sesuai stok terbaru, kebutuhan ruangan, dan target budget pembeli Ajibarang.",
   valuePkText:
-    "Ukuran kamar, toko, ruko, atau ruang usaha bisa dikirim lebih dulu supaya rekomendasi PK tidak asal besar atau asal murah.",
+    "Ukuran kamar, toko, ruko, atau ruang usaha bisa dikirim lebih dulu supaya rekomendasi PK lebih sesuai.",
   valueInstallText:
     "Pengiriman dan pemasangan area Ajibarang menyesuaikan alamat, akses indoor-outdoor, tambahan material, jumlah unit, dan jadwal teknisi.",
   processDescription:
@@ -53,12 +53,12 @@ const areaConfig = {
   faqItems: [
     ["Apakah RADJA AC melayani jual AC area Ajibarang?", "Ya. RADJA AC dari Purwokerto melayani konsultasi AC untuk Ajibarang dan area Banyumas barat sesuai stok, alamat, dan jadwal."],
     ["Kalau untuk toko atau ruko di Ajibarang bisa dibantu pilih AC?", "Bisa. Kirim ukuran ruangan, posisi pintu, perkiraan aktivitas pelanggan, dan daya listrik agar pilihan PK lebih sesuai."],
-    ["Apakah bisa konsultasi AC untuk kost atau beberapa kamar?", "Bisa. Jumlah kamar, ukuran tiap ruangan, dan daya listrik akan dicek dulu supaya pilihan unit tidak boros dan tetap realistis secara budget."],
+    ["Apakah bisa konsultasi AC untuk kost atau beberapa kamar?", "Bisa. Jumlah kamar, ukuran tiap ruangan, dan daya listrik akan dicek dulu supaya pilihan unit tetap realistis secara budget."],
     ["Apa yang perlu dikirim saat chat WhatsApp?", "Kirim lokasi Ajibarang atau sekitar, foto titik pemasangan, ukuran ruangan, daya listrik, jumlah unit, dan budget. Nanti kami bantu cek pilihan unit, stok, harga, dan jadwal."],
   ],
-  finalCtaTitle: "Mau beli AC area Ajibarang?",
+  finalCtaTitle: "Mau beli AC sekitar Ajibarang?",
   finalCtaDescription:
-    "Kirim lokasi Ajibarang atau sekitar Banyumas barat, jenis ruangan, jumlah unit, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, dan jadwal pemasangan sesuai konfirmasi.",
+    "Ceritakan kebutuhan AC Anda di Ajibarang atau Banyumas barat: untuk kamar, toko, ruko, kost, atau usaha. RADJA AC bantu cek pilihan unit, PK, stok, dan jadwal sesuai lokasi.",
 }
 
 export default function JualAcAjibarang() {
