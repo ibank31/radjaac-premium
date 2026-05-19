@@ -200,6 +200,60 @@ const galleryItems = [
     image: "/assets/gallery/large/stok-pipa-ac-radja-ac-purwokerto-01.webp",
     thumbnail: "/assets/gallery/thumb/stok-pipa-ac-radja-ac-purwokerto-01-thumb.webp",
   },
+  {
+    title: "Pengiriman Ariston dan Daikin",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/pengiriman-ariston-daikin.webp",
+    thumbnail: "/assets/gallery/pengiriman/pengiriman-ariston-daikin.webp",
+  },
+  {
+    title: "Pengiriman AC Ariston",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/pengiriman-ac-ariston.webp",
+    thumbnail: "/assets/gallery/pengiriman/pengiriman-ac-ariston.webp",
+  },
+  {
+    title: "Restock Outdoor Daikin",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/outdoor-ac-daikin-restock.webp",
+    thumbnail: "/assets/gallery/pengiriman/outdoor-ac-daikin-restock.webp",
+  },
+  {
+    title: "Loading AC Ariston",
+    category: "Pengiriman",
+    image: "/assets/gallery/pengiriman/loading-ac-ariston.webp",
+    thumbnail: "/assets/gallery/pengiriman/loading-ac-ariston.webp",
+  },
+  {
+    title: "Stok Gudang AC Gree",
+    category: "Gudang",
+    image: "/assets/gallery/stok-gudang/stok-gudang-ac-gree.webp",
+    thumbnail: "/assets/gallery/stok-gudang/stok-gudang-ac-gree.webp",
+  },
+  {
+    title: "Stok Gudang AC Aqua",
+    category: "Gudang",
+    image: "/assets/gallery/stok-gudang/stok-gudang-aqva.webp",
+    thumbnail: "/assets/gallery/stok-gudang/stok-gudang-aqva.webp",
+  },
+  {
+    title: "Stok Material Pipa AC",
+    category: "Material Instalasi",
+    image: "/assets/gallery/stok-gudang/stok-gudang-material-pipa.webp",
+    thumbnail: "/assets/gallery/stok-gudang/stok-gudang-material-pipa.webp",
+  },
+  {
+    title: "Display Gree Residential AC",
+    category: "Display Produk",
+    image: "/assets/gallery/display/display-gree-residential-ac-radja-ac.webp",
+    thumbnail: "/assets/gallery/display/display-gree-residential-ac-radja-ac.webp",
+  },
+  {
+    title: "Display Midea Cassette Floor Standing",
+    category: "Display Produk",
+    image: "/assets/gallery/display/display-midea-cassette-floor-standing-radja-ac.webp",
+    thumbnail: "/assets/gallery/display/display-midea-cassette-floor-standing-radja-ac.webp",
+  },
 ]
 
 export default function Gallery() {
