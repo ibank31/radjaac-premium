@@ -27,49 +27,48 @@ import WhatsappIcon from "../components/ui/WhatsappIcon"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const WA_MESSAGE =
-  "Halo RADJA AC, saya mau konsultasi pengadaan AC untuk proyek/banyak unit. Lokasi: Jumlah ruangan/unit: Kebutuhan: unit saja / dengan pemasangan. Mohon dibantu rekomendasinya."
+  "Halo RADJA AC, saya mau konsultasi pengadaan AC banyak unit/proyek. Lokasi: Jumlah unit: Kebutuhan: unit saja / pengiriman / pemasangan. Mohon dibantu rekomendasi dan cek stoknya."
 const WA_LINK = buildWhatsAppUrl(WA_MESSAGE)
-
 const CERTIFICATE_IMAGE = "/assets/brands/daikin/sertificate-daikin.webp"
 
 const projectNeeds = [
   {
     title: "Kos-kosan & kontrakan",
-    description: "Kebutuhan AC beberapa kamar dengan pilihan unit yang menyesuaikan budget, daya listrik, dan target pemakaian.",
+    description: "Pengadaan beberapa kamar sampai banyak unit, dengan pilihan AC yang disesuaikan budget dan daya listrik.",
     icon: Home,
   },
   {
     title: "Kantor & ruang kerja",
-    description: "Rekomendasi AC untuk ruang kerja, meeting room, lobby, ruang admin, dan area operasional.",
+    description: "AC untuk ruang kerja, meeting room, lobby, admin, dan area operasional yang dipakai rutin.",
     icon: Building2,
   },
   {
     title: "Ruko & tempat usaha",
-    description: "Cocok untuk toko, salon, klinik kecil, ruang tunggu, showroom, dan usaha lokal lain.",
+    description: "Untuk toko, salon, klinik, showroom, ruang tunggu, dan tempat usaha yang butuh AC siap pakai.",
     icon: Store,
   },
   {
     title: "Sekolah & lembaga",
-    description: "Bisa konsultasi kebutuhan AC untuk ruang kelas, ruang guru, kantor, atau ruang administrasi.",
+    description: "Kebutuhan ruang kelas, kantor, ruang guru, ruang administrasi, atau pengadaan bertahap.",
     icon: School,
   },
   {
     title: "Rumah banyak ruangan",
-    description: "Untuk rumah baru, renovasi, atau kebutuhan beberapa kamar sekaligus agar pemilihan PK lebih rapi.",
+    description: "Cocok untuk rumah baru, renovasi, atau pembelian beberapa unit sekaligus agar pilihan PK lebih rapi.",
     icon: Users,
   },
   {
     title: "Kontraktor & developer",
-    description: "Bisa dibahas untuk proyek bangunan, renovasi, pengadaan bertahap, atau pembelian banyak unit.",
+    description: "Bisa dibahas untuk proyek bangunan, kebutuhan banyak unit, pengiriman luar kota, atau pembelian bertahap.",
     icon: PackageCheck,
   },
 ]
 
 const trustItems = [
   {
-    title: "Dokumentasi pengiriman AC",
-    description: "Dokumentasi pengiriman unit AC untuk pelanggan rumah, usaha, dan kebutuhan pembelian banyak unit.",
-    caption: "Unit AC dikirim sesuai kebutuhan dan ketersediaan stok.",
+    title: "Pengiriman AC banyak unit",
+    description: "Dokumentasi pengiriman unit AC untuk pelanggan rumah, usaha, dan kebutuhan proyek. Jumlah unit, area pengiriman, dan teknis pengiriman bisa dibahas sesuai kebutuhan.",
+    caption: "Pengiriman menyesuaikan jumlah unit, area, stok, dan kesiapan proyek.",
     images: [
       {
         src: "/assets/gallery/pengiriman/restock-ac-daikin.webp",
@@ -84,8 +83,8 @@ const trustItems = [
   },
   {
     title: "Stok gudang",
-    description: "Beberapa unit tersedia melalui stok gudang. Ketersediaan tipe dan jumlah unit dapat dikonsultasikan terlebih dahulu.",
-    caption: "Stok dapat berubah, konsultasikan kebutuhan unit terlebih dahulu.",
+    description: "Stok unit dapat dicek berdasarkan brand, tipe, dan jumlah kebutuhan. Untuk pengadaan banyak unit, RADJA AC bantu arahkan opsi yang realistis dari sisi stok dan budget.",
+    caption: "Cek stok dulu sebelum menentukan brand, tipe, dan jumlah unit final.",
     images: [
       {
         src: "/assets/gallery/stok-gudang/stock-gudang-gree-aqva.webp",
@@ -100,8 +99,8 @@ const trustItems = [
   },
   {
     title: "Showroom multibrand",
-    description: "Dokumentasi showroom membantu calon pembeli melihat gambaran pilihan brand AC yang dapat dikonsultasikan.",
-    caption: "Pilihan brand dan tipe unit menyesuaikan stok serta kebutuhan ruangan.",
+    description: "Pilihan brand bisa dibandingkan lebih mudah, mulai dari Daikin, Gree, Midea, Hisense, Sharp, Panasonic, Sansui, dan brand lain sesuai kebutuhan proyek.",
+    caption: "Brand dan tipe unit dipilih menyesuaikan budget, stok, dan karakter ruangan.",
     images: [
       {
         src: "/assets/gallery/large/showroom-multibrand-radja-ac-purwokerto-01.webp",
@@ -117,114 +116,61 @@ const trustItems = [
 ]
 
 const documentationItems = [
-  {
-    title: "Pengiriman Sharp & Midea",
-    category: "Pengiriman",
-    image: "/assets/gallery/pengiriman/pengiriman-sharp-midea.webp",
-    alt: "Pengiriman AC Sharp dan Midea RADJA AC",
-  },
-  {
-    title: "Persiapan Pengiriman",
-    category: "Pengiriman",
-    image: "/assets/gallery/pengiriman/radja-ac-persiapan-pengiriman.webp",
-    alt: "Persiapan pengiriman unit AC RADJA AC",
-  },
-  {
-    title: "Stok AC Sharp",
-    category: "Pengiriman",
-    image: "/assets/gallery/pengiriman/radja-ac-stok-sharp.webp",
-    alt: "Stok AC Sharp RADJA AC",
-  },
-  {
-    title: "Gudang Stok AC Gree",
-    category: "Stok Gudang",
-    image: "/assets/gallery/large/gudang-stok-ac-gree-radja-ac-01.webp",
-    alt: "Gudang stok AC Gree RADJA AC",
-  },
-  {
-    title: "Gudang Stok AC Aqua",
-    category: "Stok Gudang",
-    image: "/assets/gallery/large/gudang-stok-ac-aqua-radja-ac-01.webp",
-    alt: "Gudang stok AC Aqua RADJA AC",
-  },
-  {
-    title: "Stok AC Gree Gudang",
-    category: "Stok Gudang",
-    image: "/assets/gallery/large/gudang-stok-ac-gree-radja-ac-02.webp",
-    alt: "Stok AC Gree di gudang RADJA AC",
-  },
-  {
-    title: "Showroom Gree",
-    category: "Showroom",
-    image: "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-01.webp",
-    alt: "Showroom Gree RADJA AC Purwokerto",
-  },
-  {
-    title: "Showroom Gree RADJA AC",
-    category: "Showroom",
-    image: "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-02.webp",
-    alt: "Showroom Gree RADJA AC",
-  },
-  {
-    title: "Display Daikin dan Sansui",
-    category: "Showroom",
-    image: "/assets/gallery/large/display-daikin-sansui-radja-ac-01.webp",
-    alt: "Showroom display Daikin dan Sansui RADJA AC",
-  },
+  ["Pengiriman Sharp & Midea", "Pengiriman", "/assets/gallery/pengiriman/pengiriman-sharp-midea.webp", "Pengiriman AC Sharp dan Midea RADJA AC"],
+  ["Persiapan Pengiriman", "Pengiriman", "/assets/gallery/pengiriman/radja-ac-persiapan-pengiriman.webp", "Persiapan pengiriman unit AC RADJA AC"],
+  ["Stok AC Sharp", "Pengiriman", "/assets/gallery/pengiriman/radja-ac-stok-sharp.webp", "Stok AC Sharp RADJA AC"],
+  ["Gudang Stok AC Gree", "Stok Gudang", "/assets/gallery/large/gudang-stok-ac-gree-radja-ac-01.webp", "Gudang stok AC Gree RADJA AC"],
+  ["Gudang Stok AC Aqua", "Stok Gudang", "/assets/gallery/large/gudang-stok-ac-aqua-radja-ac-01.webp", "Gudang stok AC Aqua RADJA AC"],
+  ["Stok AC Gree Gudang", "Stok Gudang", "/assets/gallery/large/gudang-stok-ac-gree-radja-ac-02.webp", "Stok AC Gree di gudang RADJA AC"],
+  ["Showroom Gree", "Showroom", "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-01.webp", "Showroom Gree RADJA AC Purwokerto"],
+  ["Showroom Gree RADJA AC", "Showroom", "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-02.webp", "Showroom Gree RADJA AC"],
+  ["Display Daikin dan Sansui", "Showroom", "/assets/gallery/large/display-daikin-sansui-radja-ac-01.webp", "Showroom display Daikin dan Sansui RADJA AC"],
 ]
 
 const supportItems = [
-  "Konsultasi kebutuhan AC berdasarkan jumlah dan ukuran ruangan",
-  "Bantu estimasi kapasitas PK dan jenis AC yang lebih sesuai",
-  "Rekomendasi brand sesuai budget, stok, dan target pemakaian",
-  "Pembelian unit AC satuan, banyak unit, atau kebutuhan bertahap",
-  "Pengiriman menyesuaikan area dan kondisi kebutuhan proyek",
-  "Pemasangan dapat dibahas sesuai lokasi, jumlah unit, dan kondisi lapangan",
+  "Hitung kebutuhan AC berdasarkan jumlah dan ukuran ruangan",
+  "Rekomendasi kapasitas PK untuk tiap ruangan",
+  "Pilihan brand sesuai budget, stok, dan target pemakaian",
+  "Cek stok untuk pembelian satuan sampai banyak unit",
+  "Pengiriman unit ke area dalam kota dan luar kota",
+  "Opsi unit saja atau dengan pemasangan sesuai lokasi",
+  "Bantu susun kebutuhan awal untuk proyek, usaha, atau pembelian bertahap",
 ]
 
 const acTypes = [
-  ["Standard", "Budget awal lebih hemat", "Cocok untuk penggunaan normal dan kebutuhan banyak unit dengan biaya awal lebih ringan."],
+  ["Standard", "Biaya awal hemat", "Cocok untuk kebutuhan banyak unit dengan budget awal lebih ringan."],
   ["Low watt", "Daya listrik terbatas", "Cocok untuk rumah, kos, atau ruangan dengan kapasitas listrik yang perlu dijaga."],
-  ["Inverter", "Pemakaian rutin harian", "Cocok untuk ruangan yang dipakai lama karena suhu lebih stabil dan nyaman."],
+  ["Inverter", "Pemakaian rutin", "Cocok untuk ruangan yang dipakai lama karena suhu lebih stabil dan nyaman."],
 ]
 
 const processSteps = [
-  ["1", "Kirim kebutuhan", "Sampaikan lokasi, jumlah ruangan, ukuran ruangan, dan perkiraan jumlah unit."],
-  ["2", "Cek rekomendasi", "Kami bantu arahkan kapasitas PK, jenis AC, dan pilihan brand yang masuk akal."],
-  ["3", "Cek stok & estimasi", "Kebutuhan unit, alternatif brand, harga, dan pengiriman dapat dibahas lebih lanjut."],
-  ["4", "Atur pembelian", "Skema unit saja, pengiriman, atau pemasangan dibahas sesuai area dan kondisi proyek."],
+  ["1", "Kirim kebutuhan", "Lokasi, jumlah ruangan, jumlah unit, dan target pemakaian."],
+  ["2", "Cek rekomendasi", "RADJA AC bantu arahkan kapasitas PK, tipe AC, dan brand yang sesuai."],
+  ["3", "Cek stok & estimasi", "Stok, alternatif tipe, jumlah unit, dan estimasi biaya dibahas lebih lanjut."],
+  ["4", "Atur pembelian & pengiriman", "Unit saja, pengiriman, atau pemasangan dibahas sesuai area dan jumlah unit."],
 ]
 
 const checklist = [
-  "Lokasi proyek atau area pengiriman",
-  "Jumlah ruangan dan perkiraan jumlah unit",
-  "Ukuran tiap ruangan jika sudah ada",
-  "Fungsi ruangan: kamar, kantor, toko, kelas, atau ruang usaha",
-  "Budget perkiraan dan preferensi brand jika ada",
-  "Kebutuhan unit saja atau sekalian pemasangan",
-  "Target waktu pembelian atau kebutuhan unit",
+  "Lokasi proyek / area pengiriman",
+  "Jumlah unit yang dibutuhkan",
+  "Jumlah dan ukuran ruangan",
+  "Fungsi ruangan",
+  "Preferensi brand",
+  "Budget perkiraan",
+  "Unit saja atau dengan pemasangan",
+  "Target waktu pengiriman / pemasangan",
 ]
 
 const brands = [
-  { title: "Daikin", href: "/brand/daikin", note: "Pilihan premium untuk kebutuhan rumah, kantor, dan proyek tertentu." },
-  { title: "Gree", href: "/brand/gree", note: "Value menarik untuk kebutuhan usaha dan pembelian beberapa unit." },
-  { title: "Midea", href: "/brand/midea", note: "Pilihan kompetitif untuk rumah, kos, kantor, dan ruang usaha." },
-  { title: "Hisense", href: "/brand/hisense", note: "Alternatif budget yang bisa dicek sesuai stok dan kebutuhan ruangan." },
+  { title: "Daikin", href: "/brand/daikin", note: "Pilihan premium untuk rumah, kantor, dan proyek tertentu." },
+  { title: "Gree", href: "/brand/gree", note: "Value menarik untuk usaha dan pembelian banyak unit." },
+  { title: "Midea", href: "/brand/midea", note: "Kompetitif untuk rumah, kos, kantor, dan ruang usaha." },
+  { title: "Hisense", href: "/brand/hisense", note: "Alternatif budget yang bisa dicek sesuai stok dan kebutuhan." },
   { title: "Sharp", href: "/brand/sharp", note: "Brand familiar untuk rumah dan kebutuhan usaha tertentu." },
-  { title: "Brand lainnya", href: "/brand/lainnya", note: "Sansui, Panasonic, LG, Samsung, dan pilihan lain dapat dikonsultasikan." },
+  { title: "Brand lainnya", href: "/brand/lainnya", note: "Sansui, Panasonic, LG, Samsung, dan pilihan lain." },
 ]
 
-const areas = [
-  "Purwokerto",
-  "Banyumas",
-  "Sokaraja",
-  "Purbalingga",
-  "Banjarnegara",
-  "Cilacap",
-  "Kebumen",
-  "Tegal",
-  "Yogyakarta",
-]
+const areas = ["Purwokerto", "Banyumas", "Sokaraja", "Purbalingga", "Banjarnegara", "Cilacap", "Kebumen", "Tegal", "Yogyakarta", "Luar kota / proyek khusus"]
 
 const internalLinks = [
   { title: "Katalog AC", href: "/katalog", description: "Lihat kategori AC rumah, inverter, low watt, dan komersial." },
@@ -237,28 +183,28 @@ const internalLinks = [
 
 const faqItems = [
   {
-    question: "Apakah RADJA AC melayani pengadaan AC banyak unit?",
-    answer: "Ya. RADJA AC dapat membantu konsultasi pembelian AC banyak unit untuk rumah, kos, kantor, ruko, tempat usaha, sekolah, dan kebutuhan proyek tertentu sesuai stok dan kesepakatan.",
+    question: "Apakah RADJA AC melayani pembelian AC banyak unit?",
+    answer: "Ya. RADJA AC dapat membantu kebutuhan AC dari beberapa unit sampai pembelian banyak unit untuk rumah, kos, kantor, ruko, sekolah, kontraktor, dan proyek luar kota.",
   },
   {
-    question: "Apakah bisa konsultasi dulu sebelum menentukan merek AC?",
-    answer: "Bisa. Calon pembeli dapat mengirim jumlah ruangan, ukuran ruangan, lokasi, budget, dan preferensi brand agar pilihan AC bisa diarahkan lebih sesuai.",
+    question: "Apakah bisa kirim AC ke luar kota?",
+    answer: "Bisa dikonsultasikan. Skema pengiriman menyesuaikan lokasi, jumlah unit, tipe AC, dan ketersediaan stok.",
   },
   {
-    question: "Apakah bisa untuk proyek luar Purwokerto?",
-    answer: "Bisa dikonsultasikan. Untuk area luar Purwokerto, skema pengiriman dan pemasangan akan menyesuaikan lokasi, jumlah unit, ketersediaan stok, dan kondisi proyek.",
-  },
-  {
-    question: "Apakah bisa beli unit AC saja tanpa pemasangan?",
-    answer: "Bisa. Untuk beberapa kebutuhan proyek atau area luar kota, pembelian unit saja dapat menjadi opsi yang lebih fleksibel. Pemasangan dapat dibahas terpisah jika dibutuhkan.",
-  },
-  {
-    question: "Brand AC apa saja yang bisa dikonsultasikan?",
-    answer: "Pilihan brand dapat menyesuaikan stok dan kebutuhan, seperti Daikin, Gree, Midea, Hisense, Sharp, Panasonic, Sansui, dan brand lainnya.",
+    question: "Apakah bisa beli unit saja tanpa pemasangan?",
+    answer: "Bisa. Untuk kebutuhan luar kota atau proyek tertentu, pembelian unit saja dapat menjadi opsi yang lebih fleksibel.",
   },
   {
     question: "Apakah bisa bantu hitungkan kebutuhan PK?",
-    answer: "Bisa. Estimasi kapasitas PK dapat dibantu berdasarkan ukuran ruangan, fungsi ruangan, paparan panas, jumlah orang, dan pola pemakaian.",
+    answer: "Bisa. RADJA AC dapat membantu estimasi kapasitas PK berdasarkan ukuran ruangan, fungsi ruangan, jumlah orang, dan pola pemakaian.",
+  },
+  {
+    question: "Apakah bisa cek stok untuk banyak unit?",
+    answer: "Bisa. Calon pembeli dapat mengirim jumlah unit dan pilihan brand agar stok serta alternatif tipe bisa dicek terlebih dahulu.",
+  },
+  {
+    question: "Apakah bisa minta estimasi awal sebelum membeli?",
+    answer: "Bisa. Estimasi awal dapat dibahas berdasarkan jumlah unit, brand, lokasi, dan kebutuhan unit saja atau dengan pemasangan.",
   },
 ]
 
@@ -268,7 +214,7 @@ function WhatsAppButton({ children = "Konsultasi Pengadaan AC", className = "" }
       href={WA_LINK}
       target="_blank"
       rel="noreferrer"
-      className={`inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-6 py-4 font-bold text-slate-950 shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A] ${className}`}
+      className={`inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-5 py-3.5 text-sm font-black text-slate-950 shadow-[0_14px_38px_rgba(37,211,102,0.18)] ring-1 ring-[#25D366]/30 transition hover:-translate-y-0.5 hover:bg-[#20BA5A] sm:px-6 sm:py-4 ${className}`}
     >
       <WhatsappIcon className="h-5 w-5 text-slate-950" />
       {children}
@@ -277,11 +223,11 @@ function WhatsAppButton({ children = "Konsultasi Pengadaan AC", className = "" }
 }
 
 function SectionLabel({ children }) {
-  return (
-    <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">
-      {children}
-    </div>
-  )
+  return <div className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300 sm:text-sm">{children}</div>
+}
+
+function Section({ children, className = "" }) {
+  return <section className={`mx-auto max-w-7xl px-6 py-7 lg:px-8 lg:py-10 ${className}`}>{children}</section>
 }
 
 export default function PengadaanAcProyek() {
@@ -291,25 +237,18 @@ export default function PengadaanAcProyek() {
     mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
     })),
   }
 
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="Pengadaan AC Proyek & Banyak Unit | RADJA AC Purwokerto"
-        description="Konsultasi pengadaan AC proyek dan pembelian banyak unit untuk kos, kantor, ruko, rumah, kontraktor, dan area luar Purwokerto."
+        title="Pengadaan AC Banyak Unit & Proyek | RADJA AC Purwokerto"
+        description="Pengadaan AC banyak unit untuk kos, kantor, ruko, sekolah, kontraktor, developer, dan proyek luar kota. Konsultasi stok, brand, pengiriman, dan pemasangan."
         canonicalPath="/pengadaan-ac-proyek"
       />
-
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
-
+      <Helmet><script type="application/ld+json">{JSON.stringify(faqSchema)}</script></Helmet>
       <Navbar />
 
       <main>
@@ -318,266 +257,181 @@ export default function PengadaanAcProyek() {
           <div className="absolute bottom-[-200px] right-[-120px] h-[360px] w-[360px] rounded-full bg-blue-500/16 blur-[120px]" />
         </div>
 
-        <section className="mx-auto max-w-7xl px-6 pb-8 pt-28 lg:px-8 lg:pb-16 lg:pt-32">
+        <section className="mx-auto max-w-7xl px-6 pb-6 pt-24 lg:px-8 lg:pb-10 lg:pt-30">
           <div className="mx-auto max-w-3xl">
-            <div>
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200">
-                <PackageCheck className="h-4 w-4" />
-                PENGADAAN AC PROYEK
-              </div>
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-xs font-bold text-cyan-200 sm:text-sm">
+              <PackageCheck className="h-4 w-4" />
+              PENGADAAN AC PROYEK & BANYAK UNIT
+            </div>
 
-              <div className="mb-5 text-sm text-white/50">
-                <Link to="/" className="transition hover:text-cyan-300">Beranda</Link>
-                <span className="mx-2">/</span>
-                <span className="text-white/80">Pengadaan AC Proyek</span>
-              </div>
+            <div className="mb-4 text-sm text-white/50">
+              <Link to="/" className="transition hover:text-cyan-300">Beranda</Link>
+              <span className="mx-2">/</span>
+              <span className="text-white/80">Pengadaan AC Proyek</span>
+            </div>
 
-              <h1 className="mb-5 max-w-3xl text-3xl font-black leading-[1.05] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl">
-                Pengadaan AC proyek & pembelian banyak unit
-              </h1>
+            <h1 className="mb-4 text-3xl font-black leading-[1.05] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl">
+              Pengadaan AC banyak unit untuk proyek, usaha, dan luar kota
+            </h1>
+            <p className="mb-5 text-sm leading-7 text-white/72 sm:text-base">
+              RADJA AC melayani kebutuhan AC dari beberapa unit sampai pengadaan skala besar untuk kos, kantor, ruko, sekolah, kontraktor, developer, dan proyek luar kota. Bantu cek kebutuhan, rekomendasi PK, pilihan brand, stok unit, pengiriman, sampai opsi pemasangan sesuai lokasi.
+            </p>
 
-              <p className="mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-                RADJA AC membantu konsultasi kebutuhan AC untuk kos-kosan, kantor, ruko, sekolah, klinik, rumah banyak ruangan, kontraktor, hingga kebutuhan luar kota. Pilihan unit bisa dibahas dari jumlah ruangan, kapasitas PK, brand, stok, dan skema pengiriman.
-              </p>
+            <div className="mb-4 flex w-full flex-col items-center gap-3 sm:flex-row">
+              <WhatsAppButton className="w-full sm:w-auto" />
+              <Link to="/katalog/ac-kantor-komersial" className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 px-5 py-3.5 text-sm font-black text-white/90 transition hover:-translate-y-0.5 hover:border-cyan-300/40 hover:bg-white/10 sm:w-auto sm:px-6 sm:py-4">
+                Minta rekomendasi unit <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
 
-              <div className="mx-auto mb-5 flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:mx-0 lg:justify-start">
-                <WhatsAppButton className="w-full sm:w-auto" />
-                <Link
-                  to="/katalog/ac-kantor-komersial"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-4 font-bold text-white/90 transition hover:-translate-y-0.5 hover:border-cyan-300/40 hover:bg-white/10 sm:w-auto"
-                >
-                  Lihat AC komersial
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
+            <p className="text-xs leading-6 text-white/48">
+              Cocok untuk pembelian unit satuan, banyak unit, pengiriman luar kota, maupun kebutuhan proyek bertahap.
+            </p>
 
-              <p className="max-w-xl text-xs leading-6 text-white/45">
-                Cocok untuk pembelian unit satuan, banyak unit, maupun kebutuhan proyek bertahap. Untuk area luar kota, pengiriman dan pemasangan menyesuaikan lokasi serta kondisi kebutuhan.
-              </p>
-
-              <div className="mt-5 rounded-[26px] border border-cyan-300/20 bg-white/[0.04] p-4 shadow-[0_16px_50px_rgba(15,23,42,0.24)] lg:max-w-xl">
-                <div className="mb-3 flex justify-center">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-cyan-200">
-                    <BadgeCheck className="h-3.5 w-3.5" />
-                    Dealer resmi
-                  </div>
+            <div className="mt-4 rounded-[24px] border border-cyan-300/20 bg-white/[0.04] p-4 shadow-[0_14px_42px_rgba(15,23,42,0.22)] lg:max-w-xl">
+              <div className="mb-2 flex justify-center">
+                <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-cyan-200">
+                  <BadgeCheck className="h-3.5 w-3.5" />
+                  Dealer resmi
                 </div>
-                <h2 className="mb-3 text-center text-lg font-black text-white">Sertifikat dealer resmi</h2>
-                <p className="mb-4 text-left text-xs leading-6 text-white/58">
-                  Sertifikat dealer resmi menjadi dokumen pendukung dalam penyediaan produk AC original dan bergaransi resmi sesuai ketentuan brand.
-                </p>
-                <img
-                  src={CERTIFICATE_IMAGE}
-                  alt="Sertifikat dealer resmi Daikin RADJA AC"
-                  loading="eager"
-                  decoding="async"
-                  className="aspect-[4/3] w-full rounded-[20px] bg-white object-contain p-2"
-                />
               </div>
+              <h2 className="mb-2 text-center text-lg font-black text-white">Produk original dari jalur dealer resmi</h2>
+              <p className="mb-3 text-left text-xs leading-6 text-white/58">
+                RADJA AC menyediakan pilihan AC original dan bergaransi resmi. Untuk kebutuhan banyak unit, calon pembeli bisa konsultasi stok, pilihan brand, dan ketersediaan tipe sebelum menentukan pembelian.
+              </p>
+              <img src={CERTIFICATE_IMAGE} alt="Sertifikat dealer resmi Daikin RADJA AC" loading="eager" decoding="async" className="aspect-[4/3] w-full rounded-[18px] bg-white object-contain p-2" />
             </div>
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
-          <div className="mx-auto mb-8 max-w-3xl text-center">
+        <Section>
+          <div className="mx-auto mb-5 max-w-3xl text-center">
             <SectionLabel>Kebutuhan proyek</SectionLabel>
-            <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-              Bisa dikonsultasikan untuk berbagai kebutuhan AC
-            </h2>
-            <p className="text-sm leading-7 text-white/65 sm:text-base">
-              Untuk banyak ruangan, pilihan AC sebaiknya tidak hanya dilihat dari harga. Kapasitas PK, daya listrik, durasi pemakaian, dan lokasi proyek juga perlu dipertimbangkan.
-            </p>
+            <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Siap bantu kebutuhan AC untuk berbagai skala proyek</h2>
+            <p className="text-sm leading-7 text-white/65 sm:text-base">Mulai dari beberapa unit sampai banyak ruangan, RADJA AC bantu arahkan pilihan AC yang efisien dari sisi kapasitas, brand, daya listrik, stok, dan budget.</p>
           </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {projectNeeds.map(({ title, description, icon: Icon }) => (
-              <div key={title} className="rounded-[26px] border border-white/10 bg-white/[0.04] p-5 text-left transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <div className="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h3 className="mb-3 text-center text-lg font-black text-white">{title}</h3>
+              <div key={title} className="rounded-[24px] border border-white/10 bg-white/[0.04] p-4 text-left transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06] sm:p-5">
+                <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300"><Icon className="h-5 w-5" /></div>
+                <h3 className="mb-2 text-center text-base font-black text-white sm:text-lg">{title}</h3>
                 <p className="text-left text-sm leading-6 text-white/60">{description}</p>
               </div>
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
-          <div className="mb-8 max-w-3xl">
+        <Section>
+          <div className="mb-5 max-w-3xl">
             <SectionLabel>Dokumentasi</SectionLabel>
-            <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-              Dokumentasi pengiriman, stok gudang, dan showroom
-            </h2>
-            <p className="text-sm leading-7 text-white/65 sm:text-base">
-              Beberapa dokumentasi aktivitas RADJA AC, mulai dari pengiriman unit, stok gudang, hingga showroom sebagai gambaran awal sebelum konsultasi kebutuhan AC.
-            </p>
+            <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Stok, pengiriman, dan showroom untuk kebutuhan banyak unit</h2>
+            <p className="text-sm leading-7 text-white/65 sm:text-base">Dokumentasi aktivitas RADJA AC untuk memberi gambaran stok, pengiriman, dan pilihan brand sebelum konsultasi kebutuhan proyek.</p>
           </div>
-
-          <div className="grid gap-5 lg:grid-cols-3">
+          <div className="grid gap-4 lg:grid-cols-3">
             {trustItems.map(({ title, description, caption, images, icon: Icon }) => (
-              <article key={title} className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_18px_60px_rgba(15,23,42,0.22)]">
+              <article key={title} className="overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.04] shadow-[0_16px_50px_rgba(15,23,42,0.2)]">
                 <div className="grid grid-cols-2 gap-2 bg-slate-950/45 p-2">
                   {images.map((image) => (
-                    <a key={image.src} href={image.src} target="_blank" rel="noreferrer" className="overflow-hidden rounded-[20px] bg-slate-900">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        loading="lazy"
-                        decoding="async"
-                        sizes="(min-width: 1024px) 16vw, 50vw"
-                        className="aspect-[4/5] w-full object-cover transition duration-500 hover:scale-[1.03]"
-                      />
+                    <a key={image.src} href={image.src} target="_blank" rel="noreferrer" className="overflow-hidden rounded-[18px] bg-slate-900">
+                      <img src={image.src} alt={image.alt} loading="lazy" decoding="async" sizes="(min-width: 1024px) 16vw, 50vw" className="aspect-[4/5] w-full object-cover transition duration-500 hover:scale-[1.03]" />
                     </a>
                   ))}
                 </div>
-                <div className="p-5 text-left">
-                  <div className="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="mb-3 text-center text-lg font-black text-white">{title}</h3>
-                  <p className="mb-4 text-left text-sm leading-6 text-white/62">{description}</p>
-                  <p className="rounded-2xl border border-white/10 bg-slate-950/45 px-3 py-3 text-left text-xs leading-5 text-white/50">
-                    {caption}
-                  </p>
+                <div className="p-4 text-left sm:p-5">
+                  <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300"><Icon className="h-5 w-5" /></div>
+                  <h3 className="mb-2 text-center text-lg font-black text-white">{title}</h3>
+                  <p className="mb-3 text-left text-sm leading-6 text-white/62">{description}</p>
+                  <p className="rounded-2xl border border-white/10 bg-slate-950/45 px-3 py-2.5 text-left text-xs leading-5 text-white/50">{caption}</p>
                 </div>
               </article>
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
-          <div className="mb-8 max-w-3xl">
+        <Section>
+          <div className="mb-5 max-w-3xl">
             <SectionLabel>Foto aktivitas</SectionLabel>
-            <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-              Pengiriman, stok gudang, dan showroom
-            </h2>
-            <p className="text-sm leading-7 text-white/65 sm:text-base">
-              Foto pendukung lain dari aktivitas pengiriman, stok gudang, dan showroom yang tidak mengulang dokumentasi utama di atas.
-            </p>
+            <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Aktivitas stok, pengiriman, dan showroom RADJA AC</h2>
+            <p className="text-sm leading-7 text-white/65 sm:text-base">Foto pendukung lain dari aktivitas pengiriman, stok gudang, dan showroom yang tidak mengulang dokumentasi utama di atas.</p>
           </div>
-
           <div className="grid grid-cols-3 gap-2 sm:gap-3 lg:grid-cols-3">
-            {documentationItems.map((item) => (
-              <a
-                key={item.image}
-                href={item.image}
-                target="_blank"
-                rel="noreferrer"
-                className="group overflow-hidden rounded-[16px] border border-white/10 bg-white/[0.04] transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06] sm:rounded-[20px]"
-              >
+            {documentationItems.map(([title, category, image, alt]) => (
+              <a key={image} href={image} target="_blank" rel="noreferrer" className="group overflow-hidden rounded-[16px] border border-white/10 bg-white/[0.04] transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06] sm:rounded-[20px]">
                 <div className="relative overflow-hidden bg-slate-900">
-                  <img
-                    src={item.image}
-                    alt={item.alt}
-                    loading="lazy"
-                    decoding="async"
-                    sizes="(min-width: 1024px) 33vw, 33vw"
-                    className="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-                  />
-                  <span className="absolute left-1.5 top-1.5 rounded-full border border-cyan-300/20 bg-slate-950/70 px-1.5 py-0.5 text-[8px] font-semibold text-cyan-100 backdrop-blur sm:left-2 sm:top-2 sm:px-2 sm:py-1 sm:text-[10px]">
-                    {item.category}
-                  </span>
+                  <img src={image} alt={alt} loading="lazy" decoding="async" sizes="33vw" className="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+                  <span className="absolute left-1.5 top-1.5 rounded-full border border-cyan-300/20 bg-slate-950/70 px-1.5 py-0.5 text-[8px] font-semibold text-cyan-100 backdrop-blur sm:left-2 sm:top-2 sm:px-2 sm:py-1 sm:text-[10px]">{category}</span>
                 </div>
-                <div className="p-2 sm:p-3">
-                  <h3 className="line-clamp-2 text-[10px] font-black leading-3 text-white sm:text-sm sm:leading-5">{item.title}</h3>
-                </div>
+                <div className="p-2 sm:p-3"><h3 className="line-clamp-2 text-[10px] font-black leading-3 text-white sm:text-sm sm:leading-5">{title}</h3></div>
               </a>
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
-          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <Section>
+          <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div>
               <SectionLabel>Dukungan pengadaan</SectionLabel>
-              <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-                Yang bisa dibantu sebelum membeli banyak unit
-              </h2>
-              <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
-                Setiap proyek bisa memiliki kebutuhan berbeda. Karena itu, pembahasan awal dibuat fleksibel: bisa mulai dari data ruangan, budget, pilihan brand, sampai opsi unit saja atau dengan pemasangan.
-              </p>
+              <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Yang bisa RADJA AC bantu untuk pengadaan AC</h2>
+              <p className="mb-5 text-sm leading-7 text-white/65 sm:text-base">Kebutuhan proyek bisa langsung dibahas dari jumlah unit, lokasi, brand, budget, stok, sampai opsi unit saja atau pemasangan.</p>
               <WhatsAppButton className="w-full sm:w-auto">Kirim kebutuhan proyek</WhatsAppButton>
             </div>
-
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-2.5 sm:grid-cols-2">
               {supportItems.map((item) => (
-                <div key={item} className="flex gap-3 rounded-[22px] border border-white/10 bg-white/[0.04] p-4">
+                <div key={item} className="flex gap-3 rounded-[20px] border border-white/10 bg-white/[0.04] p-3.5">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cyan-300" />
                   <p className="text-sm leading-6 text-white/65">{item}</p>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </Section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
-          <div className="mx-auto mb-8 max-w-3xl text-center">
+        <Section>
+          <div className="mx-auto mb-5 max-w-3xl text-center">
             <SectionLabel>Pilihan jenis AC</SectionLabel>
-            <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-              Standard, low watt, atau inverter?
-            </h2>
-            <p className="text-sm leading-7 text-white/65 sm:text-base">
-              Untuk banyak unit, jenis AC berpengaruh ke biaya awal, konsumsi listrik, dan kenyamanan pemakaian harian.
-            </p>
+            <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Pilih tipe AC sesuai pemakaian dan budget proyek</h2>
+            <p className="text-sm leading-7 text-white/65 sm:text-base">Untuk banyak unit, tipe AC berpengaruh ke biaya awal, listrik, dan kenyamanan pemakaian harian.</p>
           </div>
-
-          <div className="grid gap-4 lg:grid-cols-3">
+          <div className="grid gap-3 lg:grid-cols-3">
             {acTypes.map(([type, fit, note]) => (
-              <div key={type} className="rounded-[26px] border border-white/10 bg-white/[0.04] p-5">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
-                  <Calculator className="h-5 w-5" />
-                </div>
+              <div key={type} className="rounded-[24px] border border-white/10 bg-white/[0.04] p-4 sm:p-5">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300"><Calculator className="h-5 w-5" /></div>
                 <h3 className="mb-1 text-xl font-black text-white">{type}</h3>
-                <p className="mb-3 text-sm font-semibold text-cyan-200">{fit}</p>
+                <p className="mb-2 text-sm font-semibold text-cyan-200">{fit}</p>
                 <p className="text-sm leading-6 text-white/60">{note}</p>
               </div>
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
-          <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-start">
+        <Section>
+          <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div>
-              <SectionLabel>Alur konsultasi</SectionLabel>
-              <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-                Alur pengadaan dibuat sederhana
-              </h2>
-              <p className="text-sm leading-7 text-white/65 sm:text-base">
-                Tidak harus langsung punya data lengkap. Calon pembeli bisa mulai dari jumlah ruangan, lokasi, dan gambaran kebutuhan unit.
-              </p>
+              <SectionLabel>Alur pengadaan</SectionLabel>
+              <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Alur pengadaan dibuat jelas dari awal</h2>
+              <p className="text-sm leading-7 text-white/65 sm:text-base">Tidak harus langsung punya data lengkap. Mulai dari jumlah unit, lokasi, dan gambaran kebutuhan.</p>
             </div>
-
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               {processSteps.map(([number, title, description]) => (
-                <div key={number} className="flex gap-4 rounded-[24px] border border-white/10 bg-white/[0.04] p-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-cyan-300 font-black text-slate-950">
-                    {number}
-                  </div>
-                  <div>
-                    <h3 className="mb-1 font-black text-white">{title}</h3>
-                    <p className="text-sm leading-6 text-white/60">{description}</p>
-                  </div>
+                <div key={number} className="flex gap-3 rounded-[22px] border border-white/10 bg-white/[0.04] p-3.5">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-cyan-300 font-black text-slate-950">{number}</div>
+                  <div><h3 className="mb-1 font-black text-white">{title}</h3><p className="text-sm leading-6 text-white/60">{description}</p></div>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </Section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
-          <div className="rounded-[32px] border border-cyan-300/20 bg-cyan-300/[0.06] p-6 lg:p-8">
-            <div className="grid gap-7 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <Section>
+          <div className="rounded-[28px] border border-cyan-300/20 bg-cyan-300/[0.06] p-5 lg:p-7">
+            <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
               <div>
                 <SectionLabel>Data awal</SectionLabel>
-                <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl">
-                  Agar estimasi lebih mudah, siapkan data ini
-                </h2>
-                <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
-                  Data sederhana ini membantu mempercepat rekomendasi awal sebelum cek stok, harga, dan skema pengiriman.
-                </p>
+                <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl">Kirim data ini agar estimasi lebih cepat</h2>
+                <p className="mb-5 text-sm leading-7 text-white/65 sm:text-base">Data sederhana ini membantu mempercepat cek stok, estimasi, dan skema pengiriman.</p>
                 <WhatsAppButton className="w-full sm:w-auto">Kirim data via WhatsApp</WhatsAppButton>
               </div>
-
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid gap-2.5 sm:grid-cols-2">
                 {checklist.map((item) => (
                   <div key={item} className="flex gap-3 rounded-2xl border border-white/10 bg-slate-950/35 p-3">
                     <ClipboardList className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" />
@@ -587,115 +441,80 @@ export default function PengadaanAcProyek() {
               </div>
             </div>
           </div>
-        </section>
+        </Section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
-          <div className="mx-auto mb-8 max-w-3xl text-center">
+        <Section>
+          <div className="mx-auto mb-5 max-w-3xl text-center">
             <SectionLabel>Brand AC</SectionLabel>
-            <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-              Pilihan brand dapat disesuaikan dengan kebutuhan
-            </h2>
-            <p className="text-sm leading-7 text-white/65 sm:text-base">
-              Pemilihan brand untuk proyek biasanya disesuaikan dengan budget, stok, target pemakaian, dan karakter ruangan.
-            </p>
+            <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Pilihan brand untuk kebutuhan banyak unit</h2>
+            <p className="text-sm leading-7 text-white/65 sm:text-base">Brand dipilih berdasarkan budget, stok, kapasitas ruangan, dan target penggunaan.</p>
           </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {brands.map((brand) => (
-              <Link key={brand.title} to={brand.href} className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-5 transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <h3 className="mb-2 flex items-center justify-between text-lg font-black text-white">
-                  {brand.title}
-                  <ArrowRight className="h-4 w-4 text-cyan-300 transition group-hover:translate-x-1" />
-                </h3>
+              <Link key={brand.title} to={brand.href} className="group rounded-[22px] border border-white/10 bg-white/[0.04] p-4 transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06]">
+                <h3 className="mb-2 flex items-center justify-between text-lg font-black text-white">{brand.title}<ArrowRight className="h-4 w-4 text-cyan-300 transition group-hover:translate-x-1" /></h3>
                 <p className="text-sm leading-6 text-white/60">{brand.note}</p>
               </Link>
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <Section>
+          <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
             <div>
-              <SectionLabel>Area</SectionLabel>
-              <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-                Konsultasi pengadaan untuk Purwokerto dan luar kota
-              </h2>
-              <p className="text-sm leading-7 text-white/65 sm:text-base">
-                RADJA AC berfokus dari Purwokerto dan Banyumas, serta dapat membantu konsultasi kebutuhan AC untuk beberapa area luar kota sesuai skema pengiriman dan kebutuhan proyek.
-              </p>
+              <SectionLabel>Area & pengiriman</SectionLabel>
+              <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Pengadaan AC untuk Purwokerto, luar kota, dan kebutuhan proyek</h2>
+              <p className="text-sm leading-7 text-white/65 sm:text-base">RADJA AC berbasis di Purwokerto dan melayani kebutuhan pengadaan AC untuk area sekitar Banyumas hingga luar kota. Untuk jumlah unit besar, skema pengiriman dibahas berdasarkan lokasi, jumlah unit, dan kesiapan stok.</p>
             </div>
-
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
               {areas.map((area) => (
-                <div key={area} className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-bold text-white/75">
-                  <MapPin className="h-4 w-4 text-cyan-300" />
-                  {area}
+                <div key={area} className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-2.5 text-xs font-bold text-white/75 sm:text-sm">
+                  <MapPin className="h-4 w-4 shrink-0 text-cyan-300" />{area}
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </Section>
 
-        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
-          <div className="mx-auto mb-8 max-w-3xl text-center">
+        <Section>
+          <div className="mx-auto mb-5 max-w-3xl text-center">
             <SectionLabel>Panduan terkait</SectionLabel>
-            <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-              Lihat juga katalog dan halaman pendukung
-            </h2>
+            <h2 className="text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Lihat juga katalog dan halaman pendukung</h2>
           </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {internalLinks.map((item) => (
-              <Link key={item.href} to={item.href} className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-5 transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <h3 className="mb-2 flex items-center justify-between font-black text-white">
-                  {item.title}
-                  <ArrowRight className="h-4 w-4 text-cyan-300 transition group-hover:translate-x-1" />
-                </h3>
+              <Link key={item.href} to={item.href} className="group rounded-[22px] border border-white/10 bg-white/[0.04] p-4 transition hover:-translate-y-0.5 hover:border-cyan-300/30 hover:bg-white/[0.06]">
+                <h3 className="mb-2 flex items-center justify-between font-black text-white">{item.title}<ArrowRight className="h-4 w-4 text-cyan-300 transition group-hover:translate-x-1" /></h3>
                 <p className="text-sm leading-6 text-white/60">{item.description}</p>
               </Link>
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="mx-auto max-w-4xl px-6 py-10 lg:px-8 lg:py-14">
-          <div className="mb-8 text-center">
+        <Section className="max-w-4xl">
+          <div className="mb-5 text-center">
             <SectionLabel>FAQ</SectionLabel>
-            <h2 className="text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-              Pertanyaan seputar pengadaan AC proyek
-            </h2>
+            <h2 className="text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Pertanyaan seputar pengadaan AC proyek</h2>
           </div>
-
-          <div className="space-y-3">
+          <div className="space-y-2.5">
             {faqItems.map((item) => (
-              <details key={item.question} className="group rounded-[22px] border border-white/10 bg-white/[0.04] p-5">
-                <summary className="cursor-pointer list-none font-black text-white marker:hidden">
-                  <span className="flex items-start justify-between gap-4">
-                    {item.question}
-                    <span className="text-cyan-300 transition group-open:rotate-45">+</span>
-                  </span>
-                </summary>
-                <p className="mt-4 text-sm leading-7 text-white/62">{item.answer}</p>
+              <details key={item.question} className="group rounded-[20px] border border-white/10 bg-white/[0.04] p-4">
+                <summary className="cursor-pointer list-none font-black text-white marker:hidden"><span className="flex items-start justify-between gap-4">{item.question}<span className="text-cyan-300 transition group-open:rotate-45">+</span></span></summary>
+                <p className="mt-3 text-sm leading-7 text-white/62">{item.answer}</p>
               </details>
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="mx-auto max-w-5xl px-6 pb-16 pt-10 lg:px-8 lg:pb-24">
-          <div className="rounded-[34px] border border-cyan-300/20 bg-gradient-to-br from-cyan-300/12 via-white/[0.05] to-blue-500/10 p-7 text-center shadow-[0_22px_90px_rgba(15,23,42,0.35)] lg:p-10">
-            <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-3xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300">
-              <Send className="h-6 w-6" />
-            </div>
-            <h2 className="mb-4 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
-              Butuh AC banyak unit untuk proyek?
-            </h2>
-            <p className="mx-auto mb-6 max-w-2xl text-sm leading-7 text-white/68 sm:text-base">
-              Kirim kebutuhan ruangan, lokasi proyek, jumlah unit, dan perkiraan budget. RADJA AC akan bantu arahkan pilihan AC yang lebih sesuai sebelum membeli.
-            </p>
+        <section className="mx-auto max-w-5xl px-6 pb-14 pt-7 lg:px-8 lg:pb-20 lg:pt-10">
+          <div className="rounded-[30px] border border-cyan-300/20 bg-gradient-to-br from-cyan-300/12 via-white/[0.05] to-blue-500/10 p-6 text-center shadow-[0_18px_70px_rgba(15,23,42,0.32)] lg:p-9">
+            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-3xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-300"><Send className="h-6 w-6" /></div>
+            <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">Siapkan kebutuhan AC proyek Anda sekarang</h2>
+            <p className="mx-auto mb-5 max-w-2xl text-sm leading-7 text-white/68 sm:text-base">Kirim jumlah unit, lokasi, pilihan brand, dan kebutuhan ruangan. RADJA AC akan bantu arahkan pilihan AC untuk pembelian banyak unit, pengiriman luar kota, atau kebutuhan proyek bertahap.</p>
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <WhatsAppButton className="w-full sm:w-auto">Konsultasi proyek via WhatsApp</WhatsAppButton>
-              <Link to="/kontak" className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-4 font-bold text-white/90 transition hover:border-cyan-300/40 hover:bg-white/10 sm:w-auto">
-                <MessageCircle className="h-5 w-5" />
-                Kontak RADJA AC
+              <WhatsAppButton className="w-full sm:w-auto">Konsultasi pengadaan via WhatsApp</WhatsAppButton>
+              <Link to="/kontak" className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 px-5 py-3.5 text-sm font-black text-white/90 transition hover:border-cyan-300/40 hover:bg-white/10 sm:w-auto sm:px-6 sm:py-4">
+                <MessageCircle className="h-5 w-5" /> Kontak RADJA AC
               </Link>
             </div>
           </div>
