@@ -327,7 +327,7 @@ export default function Gallery() {
 
         <section className="mx-auto max-w-7xl px-5 pb-12 pt-5 lg:px-8 lg:pb-16 lg:pt-8">
           <div className="mb-5 text-center">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">FOTO ASLI</p>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">FOTO AKTIVITAS</p>
             <h2 className="mb-3 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
               Showroom, gudang, stok, dan display produk
             </h2>
