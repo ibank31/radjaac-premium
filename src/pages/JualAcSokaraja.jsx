@@ -4,7 +4,7 @@ const areaConfig = {
   canonicalPath: "/jual-ac-sokaraja",
   seoTitle: "Jual AC Sokaraja | Dekat Purwokerto untuk Rumah, Toko & Kost — RADJA AC",
   seoDescription:
-    "RADJA AC melayani pembelian AC area Sokaraja dekat Purwokerto. Cocok untuk rumah, toko, ruko, kost, kantor kecil, cek stok, rekomendasi PK, dan pemasangan sesuai konfirmasi.",
+    "Jual AC Sokaraja dekat Purwokerto untuk rumah, toko, ruko, kost, dan kantor kecil. Konsultasi PK, stok, pilihan unit, dan jadwal pemasangan.",
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Sokaraja dan sekitarnya, termasuk kebutuhan rumah dekat kota, toko, kost, ruko, kantor kecil, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA SOKARAJA",
@@ -58,7 +58,7 @@ const areaConfig = {
   ],
   finalCtaTitle: "Mau beli AC area Sokaraja?",
   finalCtaDescription:
-    "Kirim lokasi Sokaraja atau sekitar, jenis ruangan, jumlah unit, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, dan jadwal pemasangan sesuai konfirmasi.",
+    "Ceritakan kebutuhan AC Anda di Sokaraja atau area dekat Purwokerto: rumah, toko, ruko, kost, atau kantor kecil. RADJA AC bantu cek PK, stok, dan jadwal pemasangan secara praktis.",
 }
 
 export default function JualAcSokaraja() {
