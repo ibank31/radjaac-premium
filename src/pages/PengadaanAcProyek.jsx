@@ -88,12 +88,12 @@ const trustItems = [
     caption: "Stok dapat berubah, konsultasikan kebutuhan unit terlebih dahulu.",
     images: [
       {
-        src: "/assets/gallery/large/gudang-stok-ac-radja-ac-purwokerto-01.webp",
-        alt: "Rak gudang stok AC RADJA AC dengan banyak unit",
+        src: "/assets/gallery/stok-gudang/stock-gudang-gree-aqva.webp",
+        alt: "Stok gudang AC Gree dan Aqua RADJA AC",
       },
       {
-        src: "/assets/gallery/large/gudang-stok-ac-daikin-gree-radja-ac-01.webp",
-        alt: "Stok gudang AC Daikin dan Gree RADJA AC",
+        src: "/assets/gallery/stok-gudang/stok-gudang-outdoor-gree.webp",
+        alt: "Stok gudang outdoor AC Gree RADJA AC",
       },
     ],
     icon: Warehouse,
@@ -130,16 +130,16 @@ const documentationItems = [
     alt: "Pengiriman stok AC Aqua RADJA AC dengan banyak unit",
   },
   {
-    title: "Rak Gudang Stok AC",
+    title: "Stok Gudang Gree Aqua",
     category: "Stok Gudang",
-    image: "/assets/gallery/large/gudang-stok-ac-radja-ac-purwokerto-01.webp",
-    alt: "Rak gudang stok AC RADJA AC",
+    image: "/assets/gallery/stok-gudang/stock-gudang-gree-aqva.webp",
+    alt: "Stok gudang AC Gree dan Aqua RADJA AC",
   },
   {
-    title: "Stok Daikin dan Gree",
+    title: "Stok Outdoor Gree",
     category: "Stok Gudang",
-    image: "/assets/gallery/large/gudang-stok-ac-daikin-gree-radja-ac-01.webp",
-    alt: "Stok AC Daikin dan Gree RADJA AC",
+    image: "/assets/gallery/stok-gudang/stok-gudang-outdoor-gree.webp",
+    alt: "Stok gudang outdoor AC Gree RADJA AC",
   },
   {
     title: "Showroom Multibrand",
