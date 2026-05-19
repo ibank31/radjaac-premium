@@ -4,7 +4,7 @@ const areaConfig = {
   canonicalPath: "/jual-ac-purbalingga",
   seoTitle: "Jual AC Purbalingga | Rumah, Usaha, Kantor & Banyak Unit — RADJA AC",
   seoDescription:
-    "RADJA AC melayani pembelian AC area Purbalingga. Cocok untuk rumah, usaha, kost, kantor, toko, banyak unit, pengiriman, dan pemasangan sesuai konfirmasi.",
+    "Jual AC Purbalingga untuk rumah, toko, kantor kecil, kost, usaha, dan beberapa unit. Konsultasi jumlah titik, PK, stok, pengiriman, dan jadwal pasang.",
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Purbalingga dan sekitarnya, termasuk kebutuhan rumah, toko, kost, ruko, kantor, usaha lokal, banyak unit, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA PURBALINGGA",
@@ -54,11 +54,11 @@ const areaConfig = {
     ["Apakah RADJA AC melayani jual AC area Purbalingga?", "Ya. RADJA AC melayani konsultasi pembelian AC untuk Purbalingga sesuai stok, alamat, jumlah unit, rute, dan jadwal."],
     ["Apakah cocok untuk rumah, toko, kost, dan kantor?", "Bisa. Kebutuhan rumah, toko, kost, kantor kecil, usaha lokal, atau beberapa unit akan dicek berdasarkan ukuran ruangan, daya listrik, jumlah unit, dan budget."],
     ["Kalau butuh beberapa unit untuk kantor atau usaha bisa?", "Bisa. Jumlah titik AC, ukuran tiap ruangan, dan target budget akan dihitung dulu agar pilihan unit lebih rapi."],
-    ["Apakah bisa pemasangan AC ke Purbalingga?", "Bisa dibahas setelah alamat, rute, jumlah unit, akses lokasi, kebutuhan material, dan jadwal teknisi dikonfirmasi terlebih dahulu."],
+    ["Apakah area Kalimanah, Padamara, atau Bobotsari bisa dikonsultasikan?", "Bisa. Sebutkan lokasi dan jumlah titik AC agar stok, rute, dan jadwal bisa dicek lebih jelas."],
   ],
   finalCtaTitle: "Mau beli AC area Purbalingga?",
   finalCtaDescription:
-    "Kirim lokasi Purbalingga atau sekitar, jenis ruangan, jumlah unit, ukuran ruangan, daya listrik, dan budget. RADJA AC bantu cek stok, rekomendasi PK, estimasi harga, pengiriman, rute, dan jadwal pemasangan sesuai konfirmasi.",
+    "Kirim kebutuhan AC untuk rumah, toko, kantor, kost, atau usaha di Purbalingga. RADJA AC bantu cek jumlah titik, kapasitas PK, stok unit, rute pengiriman, dan jadwal pemasangan sesuai lokasi.",
 }
 
 export default function JualAcPurbalingga() {
