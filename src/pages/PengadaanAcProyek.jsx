@@ -30,7 +30,6 @@ const WA_MESSAGE =
   "Halo RADJA AC, saya mau konsultasi pengadaan AC untuk proyek/banyak unit. Lokasi: Jumlah ruangan/unit: Kebutuhan: unit saja / dengan pemasangan. Mohon dibantu rekomendasinya."
 const WA_LINK = buildWhatsAppUrl(WA_MESSAGE)
 
-const HERO_IMAGE = "/assets/gallery/pengiriman/restock-ac-daikin.webp"
 const CERTIFICATE_IMAGE = "/assets/brands/daikin/sertificate-daikin.webp"
 
 const projectNeeds = [
@@ -302,7 +301,7 @@ export default function PengadaanAcProyek() {
         </div>
 
         <section className="mx-auto max-w-7xl px-6 pb-8 pt-28 lg:px-8 lg:pb-16 lg:pt-32">
-          <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+          <div className="mx-auto max-w-3xl">
             <div>
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200">
                 <PackageCheck className="h-4 w-4" />
@@ -356,22 +355,6 @@ export default function PengadaanAcProyek() {
                   decoding="async"
                   className="aspect-[4/3] w-full rounded-[20px] bg-white object-contain p-2"
                 />
-              </div>
-            </div>
-
-            <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-4 shadow-[0_20px_80px_rgba(15,23,42,0.32)]">
-              <img
-                src={HERO_IMAGE}
-                alt="Restock unit AC RADJA AC untuk kebutuhan pelanggan dan proyek"
-                className="aspect-[4/3] w-full rounded-[24px] object-cover"
-                fetchPriority="high"
-              />
-              <div className="grid grid-cols-3 gap-2 pt-3 text-center">
-                {["Banyak unit", "Stok", "Pengiriman"].map((item) => (
-                  <div key={item} className="rounded-2xl border border-white/10 bg-slate-950/50 px-2 py-3 text-xs font-bold text-white/75">
-                    {item}
-                  </div>
-                ))}
               </div>
             </div>
           </div>
