@@ -8,8 +8,8 @@ const areaConfig = {
   localBusinessDescription:
     "Toko AC Purwokerto yang melayani pembelian AC untuk area Jatilawang dan selatan Banyumas, termasuk kebutuhan rumah, toko, kost, ruko, kantor, cek stok, rekomendasi PK, pilihan brand, pengiriman, dan pemasangan sesuai konfirmasi lokasi.",
   heroBadge: "JUAL AC AREA JATILAWANG",
-  h1: "Jual AC Jatilawang",
-  heroHighlight: "Selatan Banyumas, Pilih AC Sesuai Ruangan",
+  h1: "Jatilawang Selatan Banyumas, AC Harus Cocok untuk Pemakaian Harian",
+  heroHighlight: "Cek Ruangan, Daya, dan Jadwal Pengiriman Sebelum Pilih Unit",
   heroDescription:
     "Kebutuhan AC di Jatilawang biasanya datang dari rumah, toko, ruko, kost, dan usaha di jalur selatan Banyumas. Berbeda dari Wangon yang lebih kuat di rute barat-selatan, Jatilawang perlu dilihat dari kebutuhan ruang dan rencana pemakaian harian. RADJA AC bantu konsultasi lewat WhatsApp agar pilihan AC sesuai ukuran ruangan, daya listrik, dan kondisi pemasangan.",
   primaryCta: "Chat WhatsApp untuk AC Jatilawang",
