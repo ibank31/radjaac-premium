@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from "react"
-import { Navigate, Routes, Route } from "react-router-dom"
+import { Navigate, Routes, Route, useLocation } from "react-router-dom"
 
 const Home = lazy(() => import("./pages/Home"))
 const JualAcPurwokerto = lazy(() => import("./pages/JualAcPurwokerto"))
@@ -42,6 +42,49 @@ import ErrorBoundary from "./components/ErrorBoundary"
 import FloatingWhatsapp from "./components/FloatingWhatsapp"
 import { SITE_DATA } from "./constants/siteData"
 
+const CERTIFICATE_BRANDS = {
+  "/brand/daikin": "Daikin",
+  "/daikin-purwokerto": "Daikin",
+  "/brand/midea": "Midea",
+  "/midea-purwokerto": "Midea",
+  "/brand/hisense": "Hisense",
+  "/hisense-purwokerto": "Hisense",
+  "/brand/sansui": "Sansui",
+  "/sansui-purwokerto": "Sansui",
+}
+
+function simplifyCertificateCopy(pathname) {
+  const brand = CERTIFICATE_BRANDS[pathname]
+  if (!brand) return
+
+  const labelsToRemove = new Set([
+    `Sertifikat Resmi ${brand}`,
+    `Authorized Dealer ${brand}`,
+  ])
+
+  document.querySelectorAll("h2, div").forEach((element) => {
+    const text = element.textContent?.trim()
+
+    if (!labelsToRemove.has(text)) return
+    if (element.querySelector("img")) return
+
+    const isLargeTitle = element.tagName.toLowerCase() === "h2"
+    const isCertificateChip = element.className?.includes?.("inline-flex")
+
+    if (isLargeTitle || isCertificateChip) {
+      element.remove()
+    }
+  })
+
+  document.querySelectorAll("span").forEach((element) => {
+    const text = element.textContent?.trim()
+
+    if (text === "Authorized Dealer" || text === "Dealer Certificate") {
+      element.textContent = `Authorized Dealer ${brand}`
+    }
+  })
+}
+
 function sendWhatsAppClickEvent(link) {
   if (typeof window.gtag !== "function") return
 
@@ -54,6 +97,8 @@ function sendWhatsAppClickEvent(link) {
 }
 
 export default function App() {
+  const location = useLocation()
+
   useEffect(() => {
     function handleClick(event) {
       const link = event.target.closest("a[href]")
@@ -69,6 +114,23 @@ export default function App() {
       document.removeEventListener("click", handleClick)
     }
   }, [])
+
+  useEffect(() => {
+    simplifyCertificateCopy(location.pathname)
+
+    const observer = new MutationObserver(() => {
+      simplifyCertificateCopy(location.pathname)
+    })
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    })
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [location.pathname])
 
   return (
     <>
