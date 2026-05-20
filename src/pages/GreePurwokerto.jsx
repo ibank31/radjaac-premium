@@ -6,11 +6,12 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import SeoHead from "../components/SeoHead"
 import WhatsappIcon from "../components/ui/WhatsappIcon"
-import { SITE_DATA } from "../constants/siteData"
+import { buildWhatsAppUrl } from "../utils/whatsapp"
 
-const WA_LINK = SITE_DATA.whatsappUrl
 const HERO_IMAGE = "/assets/brands/gree/gree-showcase.webp"
-const MURI_IMAGE = "/assets/brands/gree/rekor-muri-gree.webp"
+const PROSHOP_IMAGE = "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-01.webp"
+const GREE_WA_MESSAGE =
+  "Halo RADJA AC, saya mau cek stok AC Gree. Mohon bantu info tipe yang ready, harga terbaru, rekomendasi PK, dan kebutuhan pemasangan di area saya."
 
 const benefits = [
   {
@@ -70,6 +71,11 @@ const pkGuide = [
 
 const internalLinks = [
   {
+    title: "Toko AC Terdekat Purwokerto",
+    description: "Sebelum OTW, cek stok, harga, brand yang ready, dan kebutuhan pemasangan di RADJA AC.",
+    href: "/toko-ac-terdekat-purwokerto",
+  },
+  {
     title: "Jual AC Purwokerto",
     description: "Mulai dari halaman pusat pembelian AC untuk cek brand, stok, harga, dan rekomendasi PK.",
     href: "/jual-ac-purwokerto",
@@ -83,11 +89,6 @@ const internalLinks = [
     title: "AC Low Watt Purwokerto",
     description: "Cek pilihan AC untuk rumah dengan daya listrik terbatas.",
     href: "/katalog/ac-low-watt",
-  },
-  {
-    title: "AC Inverter vs Low Watt",
-    description: "Baca panduan perbedaan inverter dan low watt sebelum menentukan unit.",
-    href: "/artikel/ac-inverter-vs-low-watt",
   },
 ]
 
@@ -110,10 +111,10 @@ const faqItems = [
   },
 ]
 
-function WhatsAppButton({ children = "Tanya Harga Gree", className = "" }) {
+function WhatsAppButton({ children = "Cek Stok AC Gree", className = "", message = GREE_WA_MESSAGE }) {
   return (
     <a
-      href={WA_LINK}
+      href={buildWhatsAppUrl(message)}
       target="_blank"
       rel="noreferrer"
       className={`inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-6 py-4 font-bold text-slate-950 shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A] ${className}`}
@@ -141,8 +142,8 @@ export default function GreePurwokerto() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="Dealer AC Gree Purwokerto & Banyumas | RADJA AC"
-        description="RADJA AC melayani penjualan AC Gree Purwokerto dan Banyumas lengkap dengan konsultasi ukuran PK, pilihan low watt dan inverter, instalasi rapi, serta layanan after-sales."
+        title="AC Gree Purwokerto | Cek Stok, Harga & Proshop RADJA AC"
+        description="Cari AC Gree Purwokerto? RADJA AC bantu cek stok Gree standard, low watt, inverter, harga terbaru, rekomendasi PK, dan pemasangan area Purwokerto-Banyumas."
         canonicalPath="/brand/gree"
       />
 
@@ -163,7 +164,7 @@ export default function GreePurwokerto() {
             <div className="text-center lg:text-left">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-200">
                 <span className="h-2 w-2 rounded-full bg-orange-400" />
-                BRAND VALUE RADJA AC
+                PROSHOP GREE RADJA AC
               </div>
 
               <div className="mb-5 text-sm text-white/50">
@@ -173,12 +174,12 @@ export default function GreePurwokerto() {
               </div>
 
               <h1 className="mx-auto mb-5 max-w-xl text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl lg:mx-0">
-                AC Gree Purwokerto & Banyumas
-                <span className="block text-blue-300">Hemat, nyaman, dan value kuat</span>
+                Cari AC Gree di Purwokerto?
+                <span className="block text-blue-300">Cek Proshop RADJA AC dulu</span>
               </h1>
 
               <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC bantu pembelian AC Gree untuk rumah, kos, kontrakan, kantor kecil, toko, dan kebutuhan usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Kirim ukuran ruangan, daya listrik, dan pola pakai agar pilihan unit lebih tepat.
+                Mau Gree standard, low watt, atau inverter? Chat RADJA AC untuk cek unit yang ready, harga terbaru, rekomendasi PK, dan kebutuhan pemasangan di area Purwokerto-Banyumas.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
@@ -187,12 +188,12 @@ export default function GreePurwokerto() {
                   href="#produk-gree"
                   className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:border-orange-300/30 hover:bg-white/[0.05]"
                 >
-                  Lihat Rekomendasi
+                  Lihat Pilihan Tipe
                 </a>
               </div>
 
               <div className="mx-auto flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 lg:mx-0 lg:justify-start">
-                {["Gree Original", "Low Watt & Inverter", "Purwokerto & Banyumas"].map((item) => (
+                {["Proshop Gree", "Standard • Low Watt • Inverter", "Cek stok & harga"].map((item) => (
                   <span key={item} className="rounded-full border border-blue-300/10 bg-white/[0.035] px-3 py-1">
                     {item}
                   </span>
@@ -221,29 +222,29 @@ export default function GreePurwokerto() {
             <div className="text-center lg:text-left">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-300/20 bg-orange-300/10 px-4 py-2 text-sm font-semibold text-orange-200">
                 <Award className="h-4 w-4" />
-                Rekor MURI bersama Gree
+                Proshop Gree RADJA AC
               </div>
 
               <h2 className="mx-auto mb-4 max-w-2xl text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:mx-0 lg:text-5xl">
-                Bukti pencapaian brand partner Gree
+                Cek stok, harga, tipe, PK, dan pemasangan AC Gree
               </h2>
 
               <p className="mx-auto mb-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC menjadi bagian dari pencapaian Rekor MURI bersama Gree melalui performa penjualan dan dukungan brand partner.
+                RADJA AC membantu calon pembeli cek pilihan AC Gree yang ready, mulai dari standard, low watt, sampai inverter, termasuk rekomendasi PK dan kebutuhan pemasangan area Purwokerto-Banyumas.
               </p>
 
               <div className="flex justify-center lg:justify-start">
                 <div className="inline-flex items-center justify-center gap-3 rounded-3xl border border-white/10 bg-white/[0.04] px-5 py-3 text-center text-sm text-white/80 sm:text-base">
                   <BadgeCheck className="h-5 w-5 shrink-0 text-orange-300" />
-                  <span>Bagian dari pencapaian Rekor MURI Gree</span>
+                  <span>Proshop Gree RADJA AC</span>
                 </div>
               </div>
             </div>
 
             <div className="overflow-hidden rounded-[34px] border border-blue-300/20 bg-slate-950/70 p-3 shadow-[0_0_55px_rgba(59,130,246,0.12),0_30px_90px_rgba(8,20,47,0.45)]">
               <img
-                src={MURI_IMAGE}
-                alt="Rekor MURI bersama Gree"
+                src={PROSHOP_IMAGE}
+                alt="Showroom Proshop Gree RADJA AC Purwokerto"
                 loading="lazy"
                 decoding="async"
                 className="w-full rounded-[26px] object-cover"
@@ -275,8 +276,8 @@ export default function GreePurwokerto() {
         <section id="produk-gree" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="mx-auto mb-8 max-w-3xl text-center">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-orange-300">Rekomendasi Produk</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilihan AC Gree di RADJA AC</h2>
-            <p className="mx-auto max-w-2xl leading-7 text-white/65">Pilih berdasarkan kebutuhan ruangan dan daya listrik. Untuk stok, harga terbaru, dan rekomendasi tipe Gree, tim RADJA AC bisa bantu cek pilihan yang sesuai.</p>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilih Gree berdasarkan kebutuhan, bukan asal tipe</h2>
+            <p className="mx-auto max-w-2xl leading-7 text-white/65">Mulai dari Gree standard untuk kebutuhan harian, low watt untuk daya terbatas, sampai inverter untuk pemakaian rutin. Untuk stok, harga terbaru, dan rekomendasi tipe Gree, tim RADJA AC bisa bantu cek pilihan yang sesuai.</p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">

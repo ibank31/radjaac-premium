@@ -1,62 +1,69 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { ArrowRight, BadgeCheck, ShieldCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
+import { ArrowRight, BadgeCheck, Home, ShieldCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
 
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import SeoHead from "../components/SeoHead"
 import WhatsappIcon from "../components/ui/WhatsappIcon"
-import { SITE_DATA } from "../constants/siteData"
+import { buildWhatsAppUrl } from "../utils/whatsapp"
 
-const WA_LINK = SITE_DATA.whatsappUrl
 const HERO_IMAGE = "/assets/brands/midea/midea-showcase.webp"
 const CERTIFICATE_IMAGE = "/assets/brands/midea/sertificate-midea.webp"
+const MIDEA_WA_MESSAGE =
+  "Halo RADJA AC, saya mau cek stok AC Midea. Mohon bantu info unit standard, low watt, atau inverter yang ready, harga terbaru, rekomendasi PK, dan kebutuhan pemasangan di area saya."
 
 const benefits = [
   {
-    title: "Pilihan praktis untuk rumah modern",
-    description: "Midea cocok untuk kamar tidur, ruang keluarga kecil, kos, toko kecil, dan kebutuhan pendinginan harian.",
-    icon: Snowflake,
+    title: "Harga masuk untuk kebutuhan harian",
+    description: "Midea cocok untuk pembeli yang ingin AC original dengan budget lebih terukur untuk kamar, kos, kontrakan, dan rumah harian.",
+    icon: BadgeCheck,
   },
   {
-    title: "Fokus hemat daya",
-    description: "Pilihan low watt dan inverter membantu pelanggan menyesuaikan AC dengan daya listrik dan kebiasaan pemakaian.",
+    title: "Ada pilihan low watt",
+    description: "Untuk rumah dengan daya listrik terbatas, Midea low watt bisa jadi opsi yang lebih aman sebelum naik ke pilihan inverter.",
     icon: Zap,
   },
   {
-    title: "Original dengan dukungan dealer",
-    description: "RADJA AC bantu pembelian AC Midea original, konsultasi kapasitas, instalasi rapi, dan support after-sales.",
-    icon: ShieldCheck,
+    title: "Bisa dibantu pilih PK",
+    description: "RADJA AC bantu cek ukuran ruangan, daya listrik, tipe AC, dan kebutuhan pemasangan supaya pilihan Midea lebih pas.",
+    icon: Snowflake,
   },
 ]
 
 const products = [
   {
     title: "Midea Standard",
-    badge: "Praktis",
+    badge: "Harian",
     image: "/assets/brands/midea/ac-midea-standar.webp",
-    fit: "Kamar tidur, kos, ruang santai, dan toko kecil",
-    priority: "Pendinginan harian dengan pilihan yang lebih ekonomis",
-    description: "Pilihan Midea original untuk pelanggan yang butuh pendinginan nyaman dan praktis setiap hari.",
-    highlights: ["Harian", "Ekonomis", "Praktis"],
+    fit: "Kamar tidur, kos, kontrakan, ruang santai, dan toko kecil",
+    priority: "Pendinginan harian dengan harga lebih masuk akal",
+    description: "Pilihan praktis untuk pembeli yang butuh AC Midea original tanpa fitur berlebihan untuk penggunaan sehari-hari.",
+    highlights: ["Standard", "Rumah", "Kos"],
+    cta: "Cek Stok Midea Standard",
+    message: "Halo RADJA AC, saya mau cek stok dan harga Midea Standard. Mohon bantu rekomendasi PK, estimasi pemasangan, dan tipe yang cocok untuk ruangan saya.",
   },
   {
     title: "Midea Low Watt",
     badge: "Daya ringan",
     image: "/assets/brands/midea/ac-midea-low-wat.webp",
-    fit: "Rumah dengan daya listrik terbatas",
-    priority: "Nyaman digunakan dengan beban listrik lebih ringan",
-    description: "Solusi untuk rumah yang ingin tetap memakai AC nyaman tanpa membuat beban listrik terasa terlalu berat.",
-    highlights: ["Low watt", "Rumah", "Efisien"],
+    fit: "Rumah dengan daya listrik terbatas atau pemakaian kamar harian",
+    priority: "Beban listrik lebih ringan untuk kebutuhan rumah",
+    description: "Opsi Midea untuk pelanggan yang ingin AC nyaman, tapi tetap memperhatikan daya listrik rumah.",
+    highlights: ["Low watt", "Daya ringan", "Efisien"],
+    cta: "Cek Stok Midea Low Watt",
+    message: "Halo RADJA AC, saya mau cek stok dan harga Midea Low Watt. Mohon bantu rekomendasi PK, estimasi pemasangan, dan pilihan yang aman untuk daya listrik rumah saya.",
   },
   {
     title: "Midea Inverter",
-    badge: "Pemakaian rutin",
+    badge: "Rutin",
     image: HERO_IMAGE,
-    fit: "Kamar utama, ruang keluarga, dan penggunaan rutin",
-    priority: "Suhu lebih stabil dan efisiensi untuk pemakaian harian",
-    description: "Pilihan untuk pelanggan yang mengutamakan kenyamanan suhu stabil dan efisiensi pada pemakaian AC harian.",
-    highlights: ["Inverter", "Stabil", "Hemat energi"],
+    fit: "Kamar utama, ruang keluarga, dan pemakaian rutin",
+    priority: "Suhu lebih stabil untuk penggunaan harian yang lebih lama",
+    description: "Pilihan untuk pelanggan yang memakai AC lebih sering dan ingin kenyamanan suhu lebih stabil.",
+    highlights: ["Inverter", "Stabil", "Rutin"],
+    cta: "Cek Stok Midea Inverter",
+    message: "Halo RADJA AC, saya mau cek stok dan harga Midea Inverter. Mohon bantu rekomendasi PK, estimasi pemasangan, dan tipe yang cocok untuk pemakaian rutin.",
   },
 ]
 
@@ -70,14 +77,14 @@ const pkGuide = [
 
 const internalLinks = [
   {
-    title: "Jual AC Purwokerto",
-    description: "Mulai dari halaman pusat pembelian AC untuk cek brand, stok, harga, dan rekomendasi PK.",
-    href: "/jual-ac-purwokerto",
+    title: "Toko AC Terdekat Purwokerto",
+    description: "Sebelum OTW, cek stok, harga, brand yang ready, dan kebutuhan pemasangan di RADJA AC.",
+    href: "/toko-ac-terdekat-purwokerto",
   },
   {
-    title: "AC Inverter Purwokerto",
-    description: "Bandingkan pilihan AC inverter untuk pemakaian rutin dan suhu lebih stabil.",
-    href: "/katalog/ac-inverter",
+    title: "AC Split Rumah",
+    description: "Lihat pilihan AC untuk kamar, kos, kontrakan, dan rumah tinggal.",
+    href: "/katalog/ac-split-rumah",
   },
   {
     title: "AC Low Watt Purwokerto",
@@ -85,9 +92,9 @@ const internalLinks = [
     href: "/katalog/ac-low-watt",
   },
   {
-    title: "AC Inverter vs Low Watt",
-    description: "Baca panduan perbedaan inverter dan low watt sebelum menentukan unit.",
-    href: "/artikel/ac-inverter-vs-low-watt",
+    title: "AC Inverter Purwokerto",
+    description: "Bandingkan pilihan AC inverter untuk pemakaian rutin dan suhu lebih stabil.",
+    href: "/katalog/ac-inverter",
   },
 ]
 
@@ -97,12 +104,12 @@ const faqItems = [
     answer: "Ya. RADJA AC menyediakan pilihan AC Midea original untuk kebutuhan rumah, kos, kantor, toko, dan bisnis area Purwokerto, Banyumas, dan sekitarnya.",
   },
   {
-    question: "Apakah Midea cocok untuk rumah dengan daya listrik terbatas?",
-    answer: "Bisa. Pilihan Midea low watt dapat menjadi opsi untuk rumah yang membutuhkan AC nyaman dengan beban daya lebih ringan.",
+    question: "Apakah Midea tersedia standard, low watt, dan inverter?",
+    answer: "Tersedia pilihan Midea standard, low watt, dan inverter sesuai stok terbaru. Chat RADJA AC untuk cek unit yang ready sebelum membeli.",
   },
   {
-    question: "Apakah bisa konsultasi ukuran PK sebelum membeli?",
-    answer: "Bisa. Kirim ukuran ruangan, daya listrik, dan kebutuhan penggunaan melalui WhatsApp agar tim RADJA AC bisa bantu rekomendasi kapasitas yang tepat.",
+    question: "Apakah Midea cocok untuk kamar kos atau kontrakan?",
+    answer: "Cocok. Midea bisa menjadi pilihan untuk kamar, kos, kontrakan, dan rumah harian karena pilihannya cukup fleksibel dari sisi tipe dan budget.",
   },
   {
     question: "Bagaimana cara cek stok dan harga Midea terbaru?",
@@ -110,10 +117,10 @@ const faqItems = [
   },
 ]
 
-function WhatsAppButton({ children = "Tanya Harga Midea", className = "" }) {
+function WhatsAppButton({ children = "Cek Stok AC Midea", className = "", message = MIDEA_WA_MESSAGE }) {
   return (
     <a
-      href={WA_LINK}
+      href={buildWhatsAppUrl(message)}
       target="_blank"
       rel="noreferrer"
       className={`inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-6 py-4 font-bold text-slate-950 shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A] ${className}`}
@@ -141,8 +148,8 @@ export default function MideaPurwokerto() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="Dealer AC Midea Purwokerto & Banyumas | RADJA AC"
-        description="RADJA AC melayani penjualan AC Midea Purwokerto dan Banyumas lengkap dengan konsultasi ukuran PK, pilihan standard dan low watt, instalasi rapi, serta layanan after-sales."
+        title="AC Midea Purwokerto | Standard, Low Watt & Inverter RADJA AC"
+        description="Cari AC Midea Purwokerto? RADJA AC bantu cek stok Midea standard, low watt, inverter, harga terbaru, rekomendasi PK, dan pemasangan area Purwokerto-Banyumas."
         canonicalPath="/brand/midea"
       />
 
@@ -163,7 +170,7 @@ export default function MideaPurwokerto() {
             <div className="text-center lg:text-left">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-sm text-sky-200">
                 <span className="h-2 w-2 rounded-full bg-sky-300" />
-                BRAND PILIHAN RADJA AC
+                AC MIDEA PURWOKERTO
               </div>
 
               <div className="mb-5 text-sm text-white/50">
@@ -173,12 +180,12 @@ export default function MideaPurwokerto() {
               </div>
 
               <h1 className="mx-auto mb-5 max-w-xl text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl lg:mx-0">
-                AC Midea Purwokerto & Banyumas
-                <span className="block text-sky-300">Modern, hemat, dan praktis</span>
+                Cari AC Midea yang harganya masuk akal?
+                <span className="block text-sky-300">Cek RADJA AC dulu</span>
               </h1>
 
               <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC bantu pembelian AC Midea untuk rumah, kos, kontrakan, kantor kecil, toko, dan kebutuhan harian di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Kirim ukuran ruangan, daya listrik, dan pola pakai supaya pilihan unit lebih pas.
+                Midea cocok untuk kamar, kos, kontrakan, rumah harian, sampai toko kecil. Chat RADJA AC untuk cek unit standard, low watt, atau inverter yang ready, harga terbaru, rekomendasi PK, dan kebutuhan pemasangan di area Purwokerto-Banyumas.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
@@ -187,12 +194,12 @@ export default function MideaPurwokerto() {
                   href="#produk-midea"
                   className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
                 >
-                  Lihat Rekomendasi
+                  Lihat Pilihan Midea
                 </a>
               </div>
 
               <div className="mx-auto flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 lg:mx-0 lg:justify-start">
-                {["Midea Original", "Standard & Low Watt", "Purwokerto & Banyumas"].map((item) => (
+                {["Harga masuk akal", "Cocok rumah & kos", "Cek stok & harga", "Standard • Low Watt • Inverter"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">
                     {item}
                   </span>
@@ -220,17 +227,21 @@ export default function MideaPurwokerto() {
           <div className="grid items-center gap-7 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10">
             <div className="text-center lg:text-left">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-300/20 bg-sky-300/10 px-4 py-2 text-sm font-semibold text-sky-200">
-                <BadgeCheck className="h-4 w-4" />
-                Sertifikat Resmi Midea
+                <ShieldCheck className="h-4 w-4" />
+                Authorized Dealer Midea
               </div>
 
               <h2 className="mx-auto mb-4 max-w-2xl text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:mx-0 lg:text-5xl">
-                Sertifikat Resmi Midea
+                Midea lebih enak dicek dari kebutuhan dan budget
               </h2>
+
+              <p className="mx-auto mb-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
+                Untuk pembeli rumahan, yang penting bukan cuma merek. Cek dulu ukuran ruangan, daya listrik, budget, dan tipe Midea yang paling pas: standard, low watt, atau inverter.
+              </p>
 
               <div className="flex justify-center lg:justify-start">
                 <div className="inline-flex items-center justify-center gap-3 rounded-3xl border border-white/10 bg-white/[0.04] px-5 py-3 text-center text-sm text-white/80 sm:text-base">
-                  <ShieldCheck className="h-5 w-5 shrink-0 text-sky-300" />
+                  <BadgeCheck className="h-5 w-5 shrink-0 text-sky-300" />
                   <span>Authorized Dealer Certificate</span>
                 </div>
               </div>
@@ -251,8 +262,8 @@ export default function MideaPurwokerto() {
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="mx-auto mb-8 max-w-3xl text-center lg:mx-0 lg:text-left">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Keunggulan Midea</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kenapa banyak pelanggan memilih AC Midea?</h2>
-            <p className="leading-7 text-white/65">Midea cocok untuk pelanggan yang ingin AC original, praktis, dan mudah disesuaikan dengan kebutuhan rumah modern.</p>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kenapa Midea banyak dicari untuk kebutuhan harian?</h2>
+            <p className="leading-7 text-white/65">Midea cocok untuk calon pembeli yang ingin AC original, pilihan tipe lengkap, dan harga yang tetap masuk untuk kebutuhan rumah, kamar, kos, atau toko kecil.</p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
@@ -270,9 +281,9 @@ export default function MideaPurwokerto() {
 
         <section id="produk-midea" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="mx-auto mb-8 max-w-3xl text-center">
-            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Rekomendasi Produk</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilihan AC Midea di RADJA AC</h2>
-            <p className="mx-auto max-w-2xl leading-7 text-white/65">Pilih berdasarkan kebutuhan ruangan dan daya listrik. Untuk stok, harga terbaru, dan rekomendasi tipe Midea, tim RADJA AC bisa bantu cek pilihan yang sesuai.</p>
+            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Pilihan Tipe</div>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilih Midea berdasarkan kebutuhan ruangan</h2>
+            <p className="mx-auto max-w-2xl leading-7 text-white/65">Midea standard untuk kebutuhan harian, low watt untuk daya terbatas, dan inverter untuk pemakaian rutin. Untuk stok, harga terbaru, dan rekomendasi PK, tim RADJA AC bisa bantu cek pilihan yang sesuai.</p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
@@ -315,7 +326,7 @@ export default function MideaPurwokerto() {
                     ))}
                   </div>
 
-                  <WhatsAppButton className="w-full py-3 text-sm">Cek Stok & Harga</WhatsAppButton>
+                  <WhatsAppButton className="w-full py-3 text-sm" message={product.message}>{product.cta}</WhatsAppButton>
                 </div>
               </article>
             ))}
@@ -378,9 +389,9 @@ export default function MideaPurwokerto() {
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="rounded-[34px] border border-sky-400/20 bg-sky-400/5 p-6 text-center shadow-[0_35px_90px_rgba(14,116,144,0.16)] sm:p-10 lg:p-14">
             <div className="mb-4 flex justify-center text-sky-300"><Wind className="h-10 w-10" /></div>
-            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Butuh rekomendasi AC Midea yang paling cocok?</h2>
-            <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Midea yang sesuai.</p>
-            <WhatsAppButton>Konsultasi via WhatsApp</WhatsAppButton>
+            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mau Midea tapi bingung pilih tipe?</h2>
+            <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">Chat dulu untuk cek stok standard, low watt, atau inverter. Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan budget agar rekomendasi Midea lebih pas.</p>
+            <WhatsAppButton>Chat Cek Midea Sekarang</WhatsAppButton>
           </div>
         </section>
 

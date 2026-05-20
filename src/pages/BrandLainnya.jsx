@@ -13,7 +13,7 @@ const WA_LINK = SITE_DATA.whatsappUrl
 const otherBrands = [
   {
     name: "Panasonic",
-    description: "Cocok untuk pelanggan yang mencari AC rumah modern dengan pilihan inverter dan kenyamanan harian.",
+    description: "Cocok untuk pelanggan yang mencari AC rumah modern dengan kenyamanan harian. Detail tipe mengikuti stok supplier terbaru.",
     href: "/brand/panasonic",
   },
   {
@@ -30,7 +30,8 @@ const otherBrands = [
   },
   {
     name: "Samsung",
-    description: "Cocok untuk rumah modern yang mengutamakan desain, kenyamanan, dan fitur pendinginan pintar.",
+    description: "Pilihan Samsung inverter untuk kamar, rumah harian, dan pembeli yang mencari AC inverter dari brand besar.",
+    href: "/brand/samsung",
   },
   {
     name: "Polytron",
@@ -42,7 +43,7 @@ const otherBrands = [
   },
   {
     name: "Sharp",
-    description: "Pilihan populer untuk keluarga yang membutuhkan AC praktis, value for money, dan mudah dikonsultasikan.",
+    description: "Sharp BEY cocok untuk pelanggan yang membutuhkan AC praktis, brand familiar, dan mudah dikonsultasikan.",
     href: "/brand/sharp",
   },
   {
@@ -76,6 +77,8 @@ const featuredBrands = [
   { name: "Gree", href: "/brand/gree" },
   { name: "Midea", href: "/brand/midea" },
   { name: "Hisense", href: "/brand/hisense" },
+  { name: "Sharp", href: "/brand/sharp" },
+  { name: "Samsung", href: "/brand/samsung" },
   { name: "Sansui", href: "/brand/sansui" },
 ]
 

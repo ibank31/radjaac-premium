@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { ArrowRight, BadgeCheck, Home, ShieldCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
+import { ArrowRight, BadgeCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
 
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
@@ -9,61 +9,61 @@ import WhatsappIcon from "../components/ui/WhatsappIcon"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const HERO_IMAGE = "/assets/showroom/Showroom-utama.webp"
-const PRODUCT_IMAGE = "/assets/brands/sharp/ac-sharp-bey.webp"
-const SHARP_WA_MESSAGE =
-  "Halo RADJA AC, saya mau cek stok AC Sharp BEY. Mohon bantu info harga terbaru, rekomendasi PK, dan kebutuhan pemasangan di area saya."
+const PRODUCT_IMAGE = "/assets/brands/samsung/samsung-inverter.webp"
+const SAMSUNG_WA_MESSAGE =
+  "Halo RADJA AC, saya mau cek stok AC Samsung inverter. Mohon bantu info harga terbaru, rekomendasi PK, dan kebutuhan pemasangan di area saya."
 
 const benefits = [
   {
-    title: "Brand familiar untuk rumah",
-    description: "Sharp cocok untuk pembeli yang mencari brand AC yang sudah familiar untuk kamar, rumah harian, kos, atau toko kecil.",
+    title: "Brand besar dengan pilihan inverter",
+    description: "Samsung cocok untuk pembeli yang ingin AC inverter dari brand familiar untuk kebutuhan rumah, kamar, atau pemakaian harian.",
     icon: BadgeCheck,
   },
   {
-    title: "Pilihan praktis untuk kebutuhan harian",
-    description: "Sharp BEY bisa dipertimbangkan untuk pelanggan yang ingin AC split rumah dengan fungsi pendinginan harian yang jelas dan mudah dikonsultasikan.",
+    title: "Nyaman untuk pemakaian rutin",
+    description: "AC inverter bisa dipertimbangkan untuk ruangan yang dipakai lebih sering karena suhu lebih stabil dan pemakaian terasa lebih nyaman.",
     icon: Snowflake,
   },
   {
-    title: "Bisa cek PK sebelum beli",
-    description: "RADJA AC bantu cek ukuran ruangan, daya listrik, harga terbaru, dan kebutuhan pemasangan supaya pilihan AC Sharp lebih pas.",
+    title: "Cek dulu PK dan kebutuhan pasang",
+    description: "RADJA AC bantu cek ukuran ruangan, daya listrik, stok unit, harga terbaru, dan kebutuhan pemasangan sebelum pembelian.",
     icon: Zap,
   },
 ]
 
 const products = [
   {
-    title: "Sharp BEY 1/2 PK",
-    badge: "Ready check",
+    title: "Samsung Inverter 1/2 PK",
+    badge: "Inverter",
     image: PRODUCT_IMAGE,
-    fit: "Kamar tidur, kos, kontrakan, ruang santai, dan toko kecil",
-    priority: "AC Sharp standard untuk kebutuhan rumah harian",
-    description: "Pilihan Sharp yang masuk di daftar supplier RADJA AC untuk paket 1/2 PK + pemasangan standard sesuai stok terbaru.",
-    highlights: ["Sharp BEY", "1/2 PK", "Rumah harian"],
-    cta: "Cek Stok Sharp BEY",
-    message: "Halo RADJA AC, saya mau cek stok dan harga Sharp BEY 1/2 PK. Mohon bantu rekomendasi PK, estimasi pemasangan, dan kecocokan untuk ruangan saya.",
+    fit: "Kamar tidur, kos, kontrakan, ruang santai, dan rumah harian",
+    priority: "AC inverter untuk pemakaian harian yang lebih stabil",
+    description: "Pilihan Samsung inverter yang masuk daftar supplier RADJA AC untuk kebutuhan 1/2 PK + pemasangan standard sesuai stok terbaru.",
+    highlights: ["Samsung", "Inverter", "1/2 PK"],
+    cta: "Cek Stok Samsung Inverter",
+    message: "Halo RADJA AC, saya mau cek stok dan harga Samsung inverter 1/2 PK. Mohon bantu rekomendasi PK, estimasi pemasangan, dan kecocokan untuk ruangan saya.",
   },
   {
-    title: "Sharp untuk Kamar",
+    title: "Samsung untuk Kamar",
     badge: "Kamar",
     image: PRODUCT_IMAGE,
     fit: "Kamar tidur, kamar anak, kos, dan ruangan kecil",
     priority: "Cek ukuran ruangan sebelum memilih kapasitas",
-    description: "Untuk kamar, yang paling penting adalah cek luas ruangan, panas matahari, daya listrik, dan kebutuhan pemakaian harian.",
+    description: "Untuk kamar, yang paling penting adalah cek luas ruangan, panas matahari, daya listrik, dan kebiasaan pemakaian AC harian.",
     highlights: ["Kamar", "Kos", "Cek PK"],
-    cta: "Konsultasi Sharp untuk Kamar",
-    message: "Halo RADJA AC, saya mau konsultasi AC Sharp untuk kamar. Mohon bantu cek PK yang cocok, harga terbaru, dan kebutuhan pemasangan.",
+    cta: "Konsultasi Samsung untuk Kamar",
+    message: "Halo RADJA AC, saya mau konsultasi AC Samsung inverter untuk kamar. Mohon bantu cek PK yang cocok, harga terbaru, dan kebutuhan pemasangan.",
   },
   {
-    title: "Sharp untuk Rumah/Toko Kecil",
+    title: "Samsung untuk Rumah Harian",
     badge: "Harian",
     image: PRODUCT_IMAGE,
-    fit: "Rumah harian, ruang santai, toko kecil, dan usaha rumahan",
-    priority: "Pendinginan praktis untuk penggunaan harian",
-    description: "Sharp bisa dipertimbangkan untuk kebutuhan harian yang mengutamakan brand familiar dan unit yang mudah dicek stoknya.",
-    highlights: ["Rumah", "Toko kecil", "Praktis"],
-    cta: "Cek Sharp untuk Rumah/Toko",
-    message: "Halo RADJA AC, saya mau cek AC Sharp untuk rumah atau toko kecil. Mohon bantu rekomendasi PK, harga terbaru, dan estimasi pemasangan.",
+    fit: "Rumah harian, ruang santai, kamar utama, dan usaha rumahan kecil",
+    priority: "Pilihan inverter dari brand familiar untuk penggunaan rutin",
+    description: "Samsung bisa dipertimbangkan untuk pembeli yang ingin AC inverter dengan brand besar, tampilan modern, dan penggunaan harian yang nyaman.",
+    highlights: ["Rumah", "Modern", "Rutin"],
+    cta: "Cek Samsung untuk Rumah",
+    message: "Halo RADJA AC, saya mau cek AC Samsung inverter untuk rumah. Mohon bantu rekomendasi PK, harga terbaru, dan estimasi pemasangan.",
   },
 ]
 
@@ -76,9 +76,9 @@ const pkGuide = [
 
 const internalLinks = [
   {
-    title: "Toko AC Terdekat Purwokerto",
-    description: "Sebelum OTW, cek stok, harga, brand yang ready, dan kebutuhan pemasangan di RADJA AC.",
-    href: "/toko-ac-terdekat-purwokerto",
+    title: "AC Inverter Purwokerto",
+    description: "Bandingkan pilihan AC inverter untuk pemakaian rutin dan suhu lebih stabil.",
+    href: "/katalog/ac-inverter",
   },
   {
     title: "AC Split Rumah",
@@ -86,37 +86,37 @@ const internalLinks = [
     href: "/katalog/ac-split-rumah",
   },
   {
+    title: "Toko AC Terdekat Purwokerto",
+    description: "Sebelum OTW, cek stok, harga, brand yang ready, dan kebutuhan pemasangan di RADJA AC.",
+    href: "/toko-ac-terdekat-purwokerto",
+  },
+  {
     title: "Jual AC Purwokerto",
     description: "Mulai dari halaman pusat pembelian AC untuk cek brand, stok, harga, dan rekomendasi PK.",
     href: "/jual-ac-purwokerto",
-  },
-  {
-    title: "Katalog AC RADJA AC",
-    description: "Bandingkan pilihan brand dan kategori AC yang tersedia sesuai kebutuhan ruangan.",
-    href: "/katalog",
   },
 ]
 
 const faqItems = [
   {
-    question: "Apakah RADJA AC menjual AC Sharp BEY?",
-    answer: "Ya. Sharp BEY masuk dalam daftar unit supplier RADJA AC untuk paket 1/2 PK + pemasangan standard sesuai stok terbaru.",
+    question: "Apakah RADJA AC menjual AC Samsung inverter?",
+    answer: "Ya. Samsung inverter masuk dalam daftar unit supplier RADJA AC untuk paket 1/2 PK + pemasangan standard sesuai stok terbaru.",
   },
   {
-    question: "Apakah Sharp cocok untuk kamar atau kos?",
-    answer: "Cocok untuk dipertimbangkan. Tim RADJA AC tetap perlu cek ukuran ruangan, daya listrik, dan kebutuhan pemakaian agar rekomendasi kapasitasnya lebih pas.",
+    question: "Apakah Samsung inverter cocok untuk kamar?",
+    answer: "Cocok untuk dipertimbangkan, terutama untuk kamar atau ruangan yang dipakai rutin. Tim RADJA AC tetap perlu cek ukuran ruangan dan daya listrik agar rekomendasi kapasitasnya lebih pas.",
   },
   {
-    question: "Apakah tersedia Sharp inverter atau low watt?",
-    answer: "Stok Sharp mengikuti ketersediaan supplier. Untuk saat ini, cek langsung via WhatsApp agar tim RADJA AC bisa memastikan tipe yang ready dan harga terbaru.",
+    question: "Apakah harga Samsung inverter ditampilkan di website?",
+    answer: "Harga tidak ditampilkan karena stok, promo, dan kebutuhan pemasangan bisa berubah. Pelanggan bisa chat RADJA AC untuk cek harga terbaru dan estimasi paket pemasangan.",
   },
   {
-    question: "Bagaimana cara cek stok dan harga Sharp terbaru?",
-    answer: "Klik tombol WhatsApp di halaman ini untuk cek stok Sharp BEY, harga terbaru, rekomendasi PK, dan estimasi pemasangan.",
+    question: "Bagaimana cara cek stok Samsung inverter terbaru?",
+    answer: "Klik tombol WhatsApp di halaman ini untuk cek stok Samsung inverter, harga terbaru, rekomendasi PK, dan estimasi pemasangan.",
   },
 ]
 
-function WhatsAppButton({ children = "Cek Stok Sharp BEY", className = "", message = SHARP_WA_MESSAGE }) {
+function WhatsAppButton({ children = "Cek Stok Samsung Inverter", className = "", message = SAMSUNG_WA_MESSAGE }) {
   return (
     <a
       href={buildWhatsAppUrl(message)}
@@ -130,7 +130,7 @@ function WhatsAppButton({ children = "Cek Stok Sharp BEY", className = "", messa
   )
 }
 
-export default function SharpPurwokerto() {
+export default function SamsungPurwokerto() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -147,9 +147,9 @@ export default function SharpPurwokerto() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="AC Sharp BEY Purwokerto | Cek Stok & Harga RADJA AC"
-        description="Cari AC Sharp BEY Purwokerto? RADJA AC bantu cek stok Sharp BEY 1/2 PK, harga terbaru, rekomendasi PK, dan pemasangan area Purwokerto-Banyumas."
-        canonicalPath="/brand/sharp"
+        title="AC Samsung Inverter Purwokerto | Cek Stok & Harga RADJA AC"
+        description="Cari AC Samsung inverter Purwokerto? RADJA AC bantu cek stok Samsung inverter 1/2 PK, harga terbaru, rekomendasi PK, dan pemasangan area Purwokerto-Banyumas."
+        canonicalPath="/brand/samsung"
       />
 
       <Helmet>
@@ -160,45 +160,45 @@ export default function SharpPurwokerto() {
 
       <main>
         <div className="fixed inset-0 -z-10 overflow-hidden">
-          <div className="absolute left-[-120px] top-[-220px] h-[360px] w-[360px] rounded-full bg-cyan-500/18 blur-[120px]" />
+          <div className="absolute left-[-120px] top-[-220px] h-[360px] w-[360px] rounded-full bg-sky-500/18 blur-[120px]" />
           <div className="absolute bottom-[-200px] right-[-120px] h-[360px] w-[360px] rounded-full bg-blue-500/14 blur-[120px]" />
         </div>
 
         <section className="mx-auto max-w-7xl px-6 pb-6 pt-28 lg:px-8 lg:pb-16 lg:pt-32">
           <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="text-center lg:text-left">
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200">
-                <span className="h-2 w-2 rounded-full bg-cyan-300" />
-                AC SHARP BEY PURWOKERTO
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-sm text-sky-200">
+                <span className="h-2 w-2 rounded-full bg-sky-300" />
+                AC SAMSUNG INVERTER PURWOKERTO
               </div>
 
               <div className="mb-5 text-sm text-white/50">
-                <Link to="/" className="transition hover:text-cyan-300">Beranda</Link>
+                <Link to="/" className="transition hover:text-sky-300">Beranda</Link>
                 <span className="mx-2">/</span>
-                <span className="text-white/80">Sharp</span>
+                <span className="text-white/80">Samsung</span>
               </div>
 
               <h1 className="mx-auto mb-5 max-w-xl text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl lg:mx-0">
-                Cari AC Sharp BEY di Purwokerto?
-                <span className="block text-cyan-300">Cek RADJA AC dulu</span>
+                Cari AC Samsung inverter di Purwokerto?
+                <span className="block text-sky-300">Cek RADJA AC dulu</span>
               </h1>
 
               <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                Sharp BEY cocok untuk pembeli yang mencari AC brand familiar untuk kamar, kos, kontrakan, rumah harian, atau toko kecil. Chat RADJA AC untuk cek stok, harga terbaru, rekomendasi PK, dan kebutuhan pemasangan area Purwokerto-Banyumas.
+                Samsung inverter cocok untuk pembeli yang mencari AC brand besar dengan tampilan modern dan pemakaian harian yang nyaman. Chat RADJA AC untuk cek stok, harga terbaru, rekomendasi PK, dan kebutuhan pemasangan area Purwokerto-Banyumas.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
                 <WhatsAppButton />
                 <a
-                  href="#produk-sharp"
+                  href="#produk-samsung"
                   className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
                 >
-                  Lihat Pilihan Sharp
+                  Lihat Pilihan Samsung
                 </a>
               </div>
 
               <div className="mx-auto flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 lg:mx-0 lg:justify-start">
-                {["Sharp BEY", "Brand familiar", "Cek stok & harga", "Standard • 1/2 PK • Rumah Harian"].map((item) => (
+                {["Samsung Inverter", "Brand besar", "Cek stok & harga", "Inverter • 1/2 PK • Rumah Harian"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">
                     {item}
                   </span>
@@ -207,12 +207,12 @@ export default function SharpPurwokerto() {
             </div>
 
             <div className="relative mt-2 lg:mt-0">
-              <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-cyan-500/10 blur-3xl" />
+              <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-sky-500/10 blur-3xl" />
               <div className="absolute bottom-4 left-[-24px] h-56 w-56 rounded-full bg-blue-500/10 blur-3xl" />
               <div className="relative mx-auto w-[88%] max-w-[360px] overflow-hidden rounded-[34px] border border-white/10 bg-slate-950/70 p-2 shadow-2xl sm:max-w-[430px] lg:max-w-[480px]">
                 <img
                   src={HERO_IMAGE}
-                  alt="Showroom utama RADJA AC untuk halaman AC Sharp BEY Purwokerto"
+                  alt="Showroom utama RADJA AC untuk halaman AC Samsung inverter Purwokerto"
                   fetchPriority="high"
                   decoding="async"
                   className="h-[390px] w-full rounded-[26px] object-cover object-center sm:h-[520px] lg:h-[600px]"
@@ -224,15 +224,15 @@ export default function SharpPurwokerto() {
 
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="mx-auto mb-8 max-w-3xl text-center lg:mx-0 lg:text-left">
-            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Keunggulan Sharp</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kenapa Sharp BEY cocok dicek untuk kebutuhan rumah?</h2>
-            <p className="leading-7 text-white/65">Sharp BEY masuk sebagai opsi AC standard yang mudah dipahami pembeli: brand familiar, cocok untuk kebutuhan harian, dan bisa dicek stok serta pemasangannya sebelum membeli.</p>
+            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Keunggulan Samsung</div>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kenapa Samsung inverter layak dicek sebelum beli AC?</h2>
+            <p className="leading-7 text-white/65">Samsung inverter bisa jadi opsi untuk pembeli yang menginginkan brand besar, tampilan modern, dan AC inverter untuk pemakaian rumah harian.</p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
             {benefits.map(({ title, description, icon: Icon }) => (
-              <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 text-center transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-300">
+              <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 text-center transition hover:-translate-y-1 hover:border-sky-300/30 hover:bg-white/[0.06]">
+                <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 text-sky-300">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="mb-3 text-xl font-bold text-white">{title}</h3>
@@ -242,18 +242,18 @@ export default function SharpPurwokerto() {
           </div>
         </section>
 
-        <section id="produk-sharp" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
+        <section id="produk-samsung" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="mx-auto mb-8 max-w-3xl text-center">
-            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Pilihan Sharp</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mulai dari Sharp BEY sesuai stok supplier</h2>
-            <p className="mx-auto max-w-2xl leading-7 text-white/65">Untuk Sharp, jangan asal pilih dari nama brand saja. Cek dulu stok Sharp BEY, ukuran PK, kondisi ruangan, dan kebutuhan pemasangan agar pembelian lebih pas.</p>
+            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Pilihan Samsung</div>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mulai dari Samsung inverter sesuai stok supplier</h2>
+            <p className="mx-auto max-w-2xl leading-7 text-white/65">Untuk Samsung, fokus utamanya adalah pilihan inverter. Cek dulu stok, ukuran PK, daya listrik, dan kebutuhan pemasangan agar unit yang dipilih lebih tepat.</p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
             {products.map((product) => (
-              <article key={product.title} className="group overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/70 shadow-[0_18px_45px_rgba(15,23,42,0.24)] transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]">
-                <div className="relative overflow-hidden border-b border-white/10 bg-gradient-to-br from-cyan-400/14 via-slate-900 to-blue-950/70 p-3">
-                  <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-cyan-300/20 blur-3xl" />
+              <article key={product.title} className="group overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/70 shadow-[0_18px_45px_rgba(15,23,42,0.24)] transition hover:-translate-y-1 hover:border-sky-300/30 hover:bg-white/[0.06]">
+                <div className="relative overflow-hidden border-b border-white/10 bg-gradient-to-br from-sky-400/14 via-slate-900 to-blue-950/70 p-3">
+                  <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-sky-300/20 blur-3xl" />
                   <img
                     src={product.image}
                     alt={`${product.title} di RADJA AC`}
@@ -261,7 +261,7 @@ export default function SharpPurwokerto() {
                     decoding="async"
                     className="h-[155px] w-full rounded-[22px] object-cover object-center"
                   />
-                  <span className="absolute left-6 top-6 inline-flex rounded-full border border-cyan-300/20 bg-slate-950/70 px-3 py-1 text-xs font-bold text-cyan-100 backdrop-blur">
+                  <span className="absolute left-6 top-6 inline-flex rounded-full border border-sky-300/20 bg-slate-950/70 px-3 py-1 text-xs font-bold text-sky-100 backdrop-blur">
                     {product.badge}
                   </span>
                 </div>
@@ -272,11 +272,11 @@ export default function SharpPurwokerto() {
 
                   <div className="mb-5 space-y-3 rounded-3xl border border-white/10 bg-white/[0.035] p-4">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-200/70">Cocok untuk</p>
+                      <p className="text-xs uppercase tracking-[0.18em] text-sky-200/70">Cocok untuk</p>
                       <p className="mt-1 text-sm font-medium text-white/85">{product.fit}</p>
                     </div>
                     <div>
-                      <p className="text-xs uppercase tracking-[0.18em] text-cyan-200/70">Fokus utama</p>
+                      <p className="text-xs uppercase tracking-[0.18em] text-sky-200/70">Fokus utama</p>
                       <p className="mt-1 text-sm font-medium text-white/85">{product.priority}</p>
                     </div>
                   </div>
@@ -298,13 +298,13 @@ export default function SharpPurwokerto() {
 
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="mx-auto mb-6 max-w-3xl text-center lg:mx-0 lg:text-left">
-            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Panduan PK</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Cek kapasitas AC Sharp sesuai ruangan</h2>
+            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Panduan PK</div>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Cek kapasitas Samsung inverter sesuai ruangan</h2>
             <p className="leading-7 text-white/65">Panduan cepat untuk memperkirakan kapasitas AC sebelum konsultasi. Ukuran final tetap menyesuaikan kondisi ruangan, panas matahari, jumlah pengguna, dan daya listrik.</p>
           </div>
 
           <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
-            <div className="hidden grid-cols-[0.8fr_1fr_1.4fr] border-b border-white/10 bg-cyan-400/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200/80 sm:grid">
+            <div className="hidden grid-cols-[0.8fr_1fr_1.4fr] border-b border-white/10 bg-sky-400/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-sky-200/80 sm:grid">
               <span>Kapasitas</span>
               <span>Estimasi Ruangan</span>
               <span>Cocok Untuk</span>
@@ -314,7 +314,7 @@ export default function SharpPurwokerto() {
               {pkGuide.map(([pk, area, note]) => (
                 <div key={pk} className="px-5 py-4 sm:grid sm:grid-cols-[0.8fr_1fr_1.4fr] sm:items-center sm:gap-4">
                   <div className="grid grid-cols-[64px_1fr] items-baseline gap-4 sm:contents">
-                    <div className="text-xl font-black text-cyan-300 sm:text-xl">{pk}</div>
+                    <div className="text-xl font-black text-sky-300 sm:text-xl">{pk}</div>
                     <div className="text-sm font-semibold text-white sm:text-base">{area}</div>
                     <div className="col-start-2 text-sm leading-6 text-white/55 sm:col-auto">{note}</div>
                   </div>
@@ -326,9 +326,9 @@ export default function SharpPurwokerto() {
 
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="mx-auto mb-8 max-w-3xl text-center">
-            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Baca Juga</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Panduan sebelum beli AC Sharp</h2>
-            <p className="mx-auto max-w-2xl leading-7 text-white/65">Link berikut membantu Anda membandingkan kebutuhan AC Sharp dengan kategori dan panduan pembelian yang relevan.</p>
+            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Baca Juga</div>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Panduan sebelum beli AC Samsung</h2>
+            <p className="mx-auto max-w-2xl leading-7 text-white/65">Link berikut membantu Anda membandingkan kebutuhan Samsung inverter dengan kategori dan panduan pembelian yang relevan.</p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -336,11 +336,11 @@ export default function SharpPurwokerto() {
               <Link
                 key={item.href}
                 to={item.href}
-                className="group rounded-[26px] border border-white/10 bg-white/[0.04] p-5 transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/[0.06]"
+                className="group rounded-[26px] border border-white/10 bg-white/[0.04] p-5 transition hover:-translate-y-1 hover:border-sky-300/30 hover:bg-white/[0.06]"
               >
                 <h3 className="mb-2 font-bold text-white">{item.title}</h3>
                 <p className="mb-4 text-sm leading-6 text-white/55">{item.description}</p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 group-hover:text-cyan-200">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-sky-300 group-hover:text-sky-200">
                   Buka halaman
                   <ArrowRight className="h-4 w-4" />
                 </span>
@@ -350,25 +350,25 @@ export default function SharpPurwokerto() {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
-          <div className="rounded-[34px] border border-cyan-400/20 bg-cyan-400/5 p-6 text-center shadow-[0_35px_90px_rgba(14,116,144,0.16)] sm:p-10 lg:p-14">
-            <div className="mb-4 flex justify-center text-cyan-300"><Wind className="h-10 w-10" /></div>
-            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mau Sharp BEY tapi belum yakin cocok?</h2>
+          <div className="rounded-[34px] border border-sky-400/20 bg-sky-400/5 p-6 text-center shadow-[0_35px_90px_rgba(14,116,144,0.16)] sm:p-10 lg:p-14">
+            <div className="mb-4 flex justify-center text-sky-300"><Wind className="h-10 w-10" /></div>
+            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mau Samsung inverter tapi belum yakin cocok?</h2>
             <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">Chat dulu untuk cek stok, harga terbaru, ukuran PK, dan kebutuhan pemasangan. Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan budget agar rekomendasi lebih pas.</p>
-            <WhatsAppButton>Chat Cek Sharp Sekarang</WhatsAppButton>
+            <WhatsAppButton>Chat Cek Samsung Sekarang</WhatsAppButton>
           </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-6 pb-12 pt-8 lg:px-8 lg:pb-20 lg:pt-16">
           <div className="mx-auto mb-8 max-w-3xl text-center">
-            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">FAQ</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pertanyaan seputar AC Sharp</h2>
+            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">FAQ</div>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pertanyaan seputar AC Samsung</h2>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
             {faqItems.map((item) => (
               <div key={item.question} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6">
                 <div className="mb-3 flex items-center gap-3">
-                  <Sparkles className="h-5 w-5 shrink-0 text-cyan-300" />
+                  <Sparkles className="h-5 w-5 shrink-0 text-sky-300" />
                   <h3 className="font-bold text-white">{item.question}</h3>
                 </div>
                 <p className="text-sm leading-7 text-white/60">{item.answer}</p>

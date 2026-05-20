@@ -1,32 +1,69 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { ArrowRight, BadgeCheck, Fan, ShieldCheck, Snowflake, Sparkles, Wind } from "lucide-react"
+import { ArrowRight, BadgeCheck, Fan, Home, ShieldCheck, Snowflake, Sparkles, Wind, Zap } from "lucide-react"
 
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import SeoHead from "../components/SeoHead"
 import WhatsappIcon from "../components/ui/WhatsappIcon"
-import { SITE_DATA } from "../constants/siteData"
+import { buildWhatsAppUrl } from "../utils/whatsapp"
 
-const WA_LINK = SITE_DATA.whatsappUrl
 const HERO_IMAGE = "/assets/brands/hisense/showcase-hisense.webp"
 const CERTIFICATE_IMAGE = "/assets/brands/hisense/sertifikat-hisense.webp"
+const HISENSE_WA_MESSAGE =
+  "Halo RADJA AC, saya mau cek stok AC Hisense. Mohon bantu info tipe yang ready, harga terbaru, rekomendasi PK, dan kebutuhan pemasangan di area saya."
 
 const benefits = [
   {
-    title: "Pendinginan praktis untuk harian",
-    description: "AC Hisense cocok untuk kamar, kos, ruang santai, dan toko kecil dengan pilihan kapasitas yang bisa disesuaikan.",
-    icon: Snowflake,
+    title: "Modern dengan budget terukur",
+    description: "Hisense cocok untuk pembeli yang ingin AC modern dan nyaman tanpa membuat budget pembelian terasa terlalu berat.",
+    icon: BadgeCheck,
   },
   {
-    title: "Fitur perawatan lebih mudah",
-    description: "Beberapa lini AC Hisense dilengkapi fitur seperti Self-Cleaning, Anti Mildew, dan 4 in 1 Filter untuk membantu menjaga kenyamanan pemakaian.",
+    title: "Fitur praktis untuk harian",
+    description: "Beberapa lini Hisense membawa fitur seperti Self-Cleaning, Anti Mildew, mode pintar, dan filter untuk membantu kenyamanan pemakaian.",
     icon: Fan,
   },
   {
-    title: "Perlindungan unit lebih tahan lama",
-    description: "Fitur seperti Gold Fin dan perlindungan anti-korosi membantu mendukung ketahanan unit untuk penggunaan jangka panjang.",
-    icon: ShieldCheck,
+    title: "Cocok rumah sampai toko kecil",
+    description: "Bisa dipertimbangkan untuk kamar, ruang keluarga kecil, kos, kontrakan, toko kecil, atau usaha yang butuh pendinginan harian.",
+    icon: Snowflake,
+  },
+]
+
+const products = [
+  {
+    title: "Hisense Standard",
+    badge: "Harian",
+    image: "/assets/brands/hisense/ac-hisense-standar.webp",
+    fit: "Kamar tidur, kos, ruang santai, dan toko kecil",
+    priority: "Pendinginan harian yang praktis dan ekonomis",
+    description: "Pilihan praktis untuk pembeli yang mencari AC split original dengan fitur pendinginan harian dan budget tetap terukur.",
+    highlights: ["Standard", "Harian", "Value"],
+    cta: "Cek Stok Hisense Standard",
+    message: "Halo RADJA AC, saya mau cek stok dan harga Hisense Standard. Mohon bantu rekomendasi PK, estimasi pemasangan, dan tipe yang cocok untuk ruangan saya.",
+  },
+  {
+    title: "Hisense Inverter",
+    badge: "Rutin",
+    image: HERO_IMAGE,
+    fit: "Kamar utama, ruang keluarga, kantor kecil, dan pemakaian rutin",
+    priority: "Suhu lebih stabil untuk penggunaan lebih lama",
+    description: "Opsi Hisense untuk pelanggan yang ingin AC modern dengan suhu lebih stabil dan pemakaian harian yang lebih nyaman.",
+    highlights: ["Inverter", "Stabil", "Modern"],
+    cta: "Cek Stok Hisense Inverter",
+    message: "Halo RADJA AC, saya mau cek stok dan harga Hisense Inverter. Mohon bantu rekomendasi PK, estimasi pemasangan, dan tipe yang cocok untuk pemakaian rutin.",
+  },
+  {
+    title: "Hisense untuk Usaha Kecil",
+    badge: "Usaha",
+    image: "/assets/brands/hisense/ac-hisense-standar.webp",
+    fit: "Toko kecil, ruang kerja, usaha rumahan, dan kantor kecil",
+    priority: "Pilihan value untuk ruangan usaha yang dipakai harian",
+    description: "Cocok untuk kebutuhan pendinginan di ruangan usaha kecil yang butuh AC nyaman, stok bisa dicek, dan budget tetap rasional.",
+    highlights: ["Toko", "Kantor", "Usaha"],
+    cta: "Cek Hisense untuk Usaha",
+    message: "Halo RADJA AC, saya mau cek stok dan harga Hisense untuk toko/kantor kecil. Mohon bantu rekomendasi PK, estimasi pemasangan, dan pilihan yang cocok untuk ruangan usaha saya.",
   },
 ]
 
@@ -40,9 +77,9 @@ const pkGuide = [
 
 const internalLinks = [
   {
-    title: "Jual AC Purwokerto",
-    description: "Mulai dari halaman pusat pembelian AC untuk cek brand, stok, harga, dan rekomendasi PK.",
-    href: "/jual-ac-purwokerto",
+    title: "Toko AC Terdekat Purwokerto",
+    description: "Sebelum OTW, cek stok, harga, brand yang ready, dan kebutuhan pemasangan di RADJA AC.",
+    href: "/toko-ac-terdekat-purwokerto",
   },
   {
     title: "AC Split Rumah",
@@ -55,9 +92,9 @@ const internalLinks = [
     href: "/katalog/ac-inverter",
   },
   {
-    title: "AC Inverter vs Low Watt",
-    description: "Baca panduan perbedaan inverter dan low watt sebelum menentukan unit.",
-    href: "/artikel/ac-inverter-vs-low-watt",
+    title: "Jual AC Purwokerto",
+    description: "Mulai dari halaman pusat pembelian AC untuk cek brand, stok, harga, dan rekomendasi PK.",
+    href: "/jual-ac-purwokerto",
   },
 ]
 
@@ -71,12 +108,8 @@ const faqItems = [
     answer: "Hisense memiliki pilihan AC standard dan inverter. Untuk stok unit yang tersedia di RADJA AC, pelanggan bisa cek langsung melalui WhatsApp.",
   },
   {
-    question: "Apakah Hisense cocok untuk kamar tidur atau kos?",
-    answer: "Cocok. AC Hisense dapat menjadi pilihan praktis untuk kamar tidur, kos, ruang santai, dan toko kecil dengan kapasitas yang disesuaikan luas ruangan.",
-  },
-  {
-    question: "Apakah bisa konsultasi ukuran PK sebelum membeli?",
-    answer: "Bisa. Kirim ukuran ruangan, daya listrik, dan kebutuhan penggunaan agar tim RADJA AC bisa bantu rekomendasi kapasitas yang tepat.",
+    question: "Apakah Hisense cocok untuk toko kecil atau usaha?",
+    answer: "Cocok. Hisense bisa dipertimbangkan untuk kamar, kos, ruang santai, toko kecil, kantor kecil, dan usaha rumahan dengan kapasitas yang disesuaikan luas ruangan.",
   },
   {
     question: "Bagaimana cara cek stok dan harga Hisense terbaru?",
@@ -84,10 +117,10 @@ const faqItems = [
   },
 ]
 
-function WhatsAppButton({ children = "Tanya Harga Hisense", className = "" }) {
+function WhatsAppButton({ children = "Cek Stok AC Hisense", className = "", message = HISENSE_WA_MESSAGE }) {
   return (
     <a
-      href={WA_LINK}
+      href={buildWhatsAppUrl(message)}
       target="_blank"
       rel="noreferrer"
       className={`inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-6 py-4 font-bold text-slate-950 shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A] ${className}`}
@@ -115,8 +148,8 @@ export default function HisensePurwokerto() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="Dealer AC Hisense Purwokerto & Banyumas | RADJA AC"
-        description="RADJA AC melayani penjualan AC Hisense Purwokerto dan Banyumas lengkap dengan konsultasi ukuran PK, pilihan AC standard dan inverter, instalasi rapi, serta layanan after-sales."
+        title="AC Hisense Purwokerto | Modern, Value & Budget Terukur"
+        description="Cari AC Hisense Purwokerto? RADJA AC bantu cek stok Hisense standard, inverter, harga terbaru, rekomendasi PK, dan pemasangan area Purwokerto-Banyumas."
         canonicalPath="/brand/hisense"
       />
 
@@ -137,7 +170,7 @@ export default function HisensePurwokerto() {
             <div className="text-center lg:text-left">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-teal-400/20 bg-teal-400/10 px-4 py-2 text-sm text-teal-200">
                 <span className="h-2 w-2 rounded-full bg-teal-300" />
-                BRAND PILIHAN RADJA AC
+                AC HISENSE PURWOKERTO
               </div>
 
               <div className="mb-5 text-sm text-white/50">
@@ -147,12 +180,12 @@ export default function HisensePurwokerto() {
               </div>
 
               <h1 className="mx-auto mb-5 max-w-xl text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl lg:mx-0">
-                AC Hisense Purwokerto & Banyumas
-                <span className="block text-teal-300">Modern, praktis, dan nyaman</span>
+                Butuh AC modern dengan budget tetap terukur?
+                <span className="block text-teal-300">Cek Hisense di RADJA AC</span>
               </h1>
 
               <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC bantu pembelian AC Hisense untuk rumah, kamar tidur, kos, kontrakan, toko kecil, kantor, dan kebutuhan harian di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Kirim ukuran ruangan, daya listrik, dan pola pakai supaya pilihan unit lebih pas.
+                Hisense bisa jadi pilihan untuk kamar, ruang keluarga, toko kecil, atau usaha yang butuh AC nyaman dengan harga kompetitif. Chat RADJA AC untuk cek stok, tipe standard atau inverter, harga terbaru, rekomendasi PK, dan kebutuhan pemasangan.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
@@ -161,12 +194,12 @@ export default function HisensePurwokerto() {
                   href="#produk-hisense"
                   className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
                 >
-                  Lihat Rekomendasi
+                  Lihat Pilihan Hisense
                 </a>
               </div>
 
               <div className="mx-auto flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 lg:mx-0 lg:justify-start">
-                {["Hisense Original", "Standard & Inverter", "Purwokerto & Banyumas"].map((item) => (
+                {["Modern & value", "Cocok rumah/usaha", "Cek stok & harga", "Standard • Inverter • Hemat Daya"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">
                     {item}
                   </span>
@@ -194,17 +227,21 @@ export default function HisensePurwokerto() {
           <div className="grid items-center gap-7 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10">
             <div className="text-center lg:text-left">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-teal-300/20 bg-teal-300/10 px-4 py-2 text-sm font-semibold text-teal-200">
-                <BadgeCheck className="h-4 w-4" />
-                Sertifikat Resmi Hisense
+                <ShieldCheck className="h-4 w-4" />
+                Dealer Certificate Hisense
               </div>
 
               <h2 className="mx-auto mb-4 max-w-2xl text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:mx-0 lg:text-5xl">
-                Sertifikat Resmi Hisense
+                Hisense kuat di value, fitur, dan kebutuhan harian
               </h2>
+
+              <p className="mx-auto mb-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
+                Hisense cocok dicek kalau Anda ingin AC modern dengan budget tetap terukur. Mulai dari kebutuhan ruangan dulu, lalu cocokkan kapasitas PK, tipe unit, dan estimasi pemasangan.
+              </p>
 
               <div className="flex justify-center lg:justify-start">
                 <div className="inline-flex items-center justify-center gap-3 rounded-3xl border border-white/10 bg-white/[0.04] px-5 py-3 text-center text-sm text-white/80 sm:text-base">
-                  <ShieldCheck className="h-5 w-5 shrink-0 text-teal-300" />
+                  <BadgeCheck className="h-5 w-5 shrink-0 text-teal-300" />
                   <span>Dealer Certificate</span>
                 </div>
               </div>
@@ -225,8 +262,8 @@ export default function HisensePurwokerto() {
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="mx-auto mb-8 max-w-3xl text-center lg:mx-0 lg:text-left">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-teal-300">Keunggulan Hisense</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kenapa banyak pelanggan memilih AC Hisense?</h2>
-            <p className="leading-7 text-white/65">Hisense cocok untuk pelanggan yang mencari AC original dengan fitur modern, penggunaan praktis, dan pilihan kapasitas untuk kebutuhan harian.</p>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kenapa Hisense layak dicek sebelum beli AC?</h2>
+            <p className="leading-7 text-white/65">Hisense cocok untuk pelanggan yang mencari AC original dengan fitur modern, budget terukur, dan pilihan kapasitas untuk kebutuhan harian.</p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
@@ -244,54 +281,56 @@ export default function HisensePurwokerto() {
 
         <section id="produk-hisense" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="mx-auto mb-8 max-w-3xl text-center">
-            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-teal-300">Rekomendasi Produk</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilihan AC Hisense di RADJA AC</h2>
-            <p className="mx-auto max-w-2xl leading-7 text-white/65">Hisense Standard cocok untuk kebutuhan pendinginan harian di kamar, kos, ruang santai, dan toko kecil. Untuk stok, harga terbaru, dan rekomendasi kapasitas, tim RADJA AC bisa bantu cek pilihan yang sesuai.</p>
+            <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-teal-300">Pilihan Tipe</div>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilih Hisense sesuai pola pemakaian</h2>
+            <p className="mx-auto max-w-2xl leading-7 text-white/65">Hisense standard untuk kebutuhan harian, inverter untuk pemakaian rutin, dan opsi usaha kecil untuk toko atau kantor kecil. Untuk stok dan harga terbaru, tim RADJA AC bisa bantu cek pilihan yang sesuai.</p>
           </div>
 
-          <article className="mx-auto grid max-w-5xl overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/70 shadow-[0_18px_45px_rgba(15,23,42,0.24)] md:grid-cols-[0.95fr_1.05fr]">
-            <div className="relative overflow-hidden border-b border-white/10 bg-gradient-to-br from-teal-400/14 via-slate-900 to-cyan-950/70 p-3 md:border-b-0 md:border-r">
-              <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-teal-300/20 blur-3xl" />
-              <img
-                src="/assets/brands/hisense/ac-hisense-standar.webp"
-                alt="AC Hisense Standard di RADJA AC"
-                loading="lazy"
-                decoding="async"
-                className="h-[220px] w-full rounded-[22px] object-cover object-center sm:h-[280px] md:h-full"
-              />
-              <span className="absolute left-6 top-6 inline-flex rounded-full border border-teal-300/20 bg-slate-950/70 px-3 py-1 text-xs font-bold text-teal-100 backdrop-blur">
-                Standard
-              </span>
-            </div>
-
-            <div className="p-6 sm:p-8">
-              <h3 className="mb-4 text-center text-3xl font-black tracking-[-0.03em] text-white md:text-left">Hisense Standard</h3>
-              <p className="mb-5 text-sm leading-7 text-white/60 sm:text-base">
-                Pilihan praktis untuk kamar tidur, ruang keluarga kecil, kos, dan toko kecil. Cocok untuk pelanggan yang mencari AC split original dengan fitur pendinginan harian, mode pintar, self-cleaning, tampilan LED, dan perlindungan anti-korosi.
-              </p>
-
-              <div className="mb-5 space-y-3 rounded-3xl border border-white/10 bg-white/[0.035] p-4">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.18em] text-teal-200/70">Cocok untuk</p>
-                  <p className="mt-1 text-sm font-medium text-white/85">Kamar tidur, kos, ruang santai, dan toko kecil</p>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.18em] text-teal-200/70">Fokus utama</p>
-                  <p className="mt-1 text-sm font-medium text-white/85">Pendinginan harian yang praktis dan ekonomis</p>
-                </div>
-              </div>
-
-              <div className="mb-6 flex flex-wrap justify-center gap-2 text-center md:justify-start">
-                {["R32", "Smart Mode", "Self-Cleaning", "Gold Fin", "4 in 1 Filter"].map((item) => (
-                  <span key={item} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/65">
-                    {item}
+          <div className="grid gap-5 md:grid-cols-3">
+            {products.map((product) => (
+              <article key={product.title} className="group overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/70 shadow-[0_18px_45px_rgba(15,23,42,0.24)] transition hover:-translate-y-1 hover:border-teal-300/30 hover:bg-white/[0.06]">
+                <div className="relative overflow-hidden border-b border-white/10 bg-gradient-to-br from-teal-400/14 via-slate-900 to-cyan-950/70 p-3">
+                  <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-teal-300/20 blur-3xl" />
+                  <img
+                    src={product.image}
+                    alt={`${product.title} di RADJA AC`}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-[155px] w-full rounded-[22px] object-cover object-center"
+                  />
+                  <span className="absolute left-6 top-6 inline-flex rounded-full border border-teal-300/20 bg-slate-950/70 px-3 py-1 text-xs font-bold text-teal-100 backdrop-blur">
+                    {product.badge}
                   </span>
-                ))}
-              </div>
+                </div>
 
-              <WhatsAppButton className="w-full py-3 text-sm md:w-auto">Cek Stok & Harga</WhatsAppButton>
-            </div>
-          </article>
+                <div className="p-6">
+                  <h3 className="mb-3 text-center text-2xl font-black tracking-[-0.02em] text-white">{product.title}</h3>
+                  <p className="mb-4 text-sm leading-7 text-white/60">{product.description}</p>
+
+                  <div className="mb-5 space-y-3 rounded-3xl border border-white/10 bg-white/[0.035] p-4">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.18em] text-teal-200/70">Cocok untuk</p>
+                      <p className="mt-1 text-sm font-medium text-white/85">{product.fit}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.18em] text-teal-200/70">Fokus utama</p>
+                      <p className="mt-1 text-sm font-medium text-white/85">{product.priority}</p>
+                    </div>
+                  </div>
+
+                  <div className="mb-6 flex flex-wrap justify-center gap-2 text-center">
+                    {product.highlights.map((item) => (
+                      <span key={item} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-white/65">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  <WhatsAppButton className="w-full py-3 text-sm" message={product.message}>{product.cta}</WhatsAppButton>
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
@@ -350,9 +389,9 @@ export default function HisensePurwokerto() {
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="rounded-[34px] border border-teal-400/20 bg-teal-400/5 p-6 text-center shadow-[0_35px_90px_rgba(13,148,136,0.16)] sm:p-10 lg:p-14">
             <div className="mb-4 flex justify-center text-teal-300"><Wind className="h-10 w-10" /></div>
-            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Butuh rekomendasi AC Hisense yang paling cocok?</h2>
-            <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Hisense yang sesuai.</p>
-            <WhatsAppButton>Konsultasi via WhatsApp</WhatsAppButton>
+            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Jangan cuma bandingkan harga Hisense</h2>
+            <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">Cek dulu ukuran ruangan, daya listrik, tipe unit, dan kebutuhan pemasangan. RADJA AC bantu arahkan pilihan Hisense yang paling masuk akal untuk rumah atau usaha Anda.</p>
+            <WhatsAppButton>Chat Cek Hisense Sekarang</WhatsAppButton>
           </div>
         </section>
 

@@ -78,8 +78,8 @@ const NAV_ITEMS = [
         href: "/brand/sharp",
       },
       {
-        label: "Panasonic",
-        href: "/brand/panasonic",
+        label: "Samsung",
+        href: "/brand/samsung",
       },
       {
         label: "Brand Lainnya",
