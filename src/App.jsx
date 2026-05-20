@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect } from "react"
 import { Navigate, Routes, Route } from "react-router-dom"
 
 const Home = lazy(() => import("./pages/Home"))
+const TokoAcTerdekatPurwokerto = lazy(() => import("./pages/TokoAcTerdekatPurwokerto"))
 const JualAcPurwokerto = lazy(() => import("./pages/JualAcPurwokerto"))
 const JualAcBanyumas = lazy(() => import("./pages/JualAcBanyumas"))
 const JualAcSokaraja = lazy(() => import("./pages/JualAcSokaraja"))
@@ -79,6 +80,10 @@ export default function App() {
         <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<Home />} />
+
+            <Route path="/toko-ac-terdekat-purwokerto" element={<TokoAcTerdekatPurwokerto />} />
+
+            <Route path="/toko-ac-terdekat" element={<Navigate to="/toko-ac-terdekat-purwokerto" replace />} />
 
             <Route path="/jual-ac-purwokerto" element={<JualAcPurwokerto />} />
 
