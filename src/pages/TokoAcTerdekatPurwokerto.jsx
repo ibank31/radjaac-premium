@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
-import { ArrowRight, BadgeCheck, Building2, CheckCircle2, Home, MapPin, MessageCircle, ShoppingBag, Store, Zap } from "lucide-react"
+import { ArrowRight, BadgeCheck, Building2, CheckCircle2, Home, MapPin, MessageCircle, ShieldCheck, ShoppingBag, Store, Zap } from "lucide-react"
 
 import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
@@ -10,7 +10,7 @@ import { SITE_DATA } from "../constants/siteData"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const WA_MESSAGE =
-  "Halo RADJA AC, saya cari toko AC terdekat di Purwokerto/Banyumas. Saya mau cek stok, harga terbaru, rekomendasi PK, dan kebutuhan pemasangan."
+  "Halo RADJA AC, saya cari toko AC terdekat di Purwokerto/Banyumas. Saya mau cek stok, harga terbaru, rekomendasi PK, brand yang ready, dan kebutuhan pemasangan."
 
 const areaLinks = [
   ["Purwokerto", "/jual-ac-purwokerto"],
@@ -21,6 +21,19 @@ const areaLinks = [
   ["Purbalingga", "/jual-ac-purbalingga"],
   ["Banjarnegara", "/jual-ac-banjarnegara"],
   ["Cilacap", "/jual-ac-cilacap"],
+]
+
+const trustCards = [
+  ["Spesialis AC, bukan toko serba asal", "RADJA AC fokus pada penjualan AC untuk rumah, kos, kantor, toko, usaha, sampai proyek. Calon pembeli bisa konsultasi dulu sebelum menentukan unit.", ShieldCheck],
+  ["Banyak pilihan brand", "Cek Daikin, Gree, Midea, Hisense, Sharp, Panasonic, Sansui, LG, Samsung, Aqua, Polytron, TCL, Ariston, Mitsubishi, Toshiba, Modena, FLife, Reiwa, dan opsi lain sesuai stok.", Store],
+  ["Ada showroom dan dokumentasi asli", "Website menampilkan dokumentasi showroom, stok, pengiriman, dan aktivitas RADJA AC agar pembeli lebih yakin sebelum chat atau datang.", BadgeCheck],
+  ["Dibantu sampai arah pemasangan", "Bukan cuma tanya harga. Anda bisa cek PK, daya listrik, titik indoor-outdoor, dan kebutuhan pemasangan agar pembelian lebih siap.", CheckCircle2],
+]
+
+const compareCards = [
+  ["Kalau asal keliling toko", "Belum tentu stok cocok, harga belum jelas, brand bisa berubah, dan Anda tetap harus menghitung kebutuhan PK sendiri."],
+  ["Kalau asal pilih harga murah", "Risikonya salah kapasitas, listrik terasa berat, ruangan kurang dingin, atau biaya pemasangan tambahan baru ketahuan belakangan."],
+  ["Kalau cek RADJA AC dulu", "Anda bisa mulai dari stok, harga, PK, brand, budget, dan area pemasangan. Lebih cepat, lebih terarah, dan lebih siap membeli."],
 ]
 
 const needCards = [
@@ -59,7 +72,7 @@ const faqItems = [
   ],
 ]
 
-function WhatsAppButton({ children = "Cek Stok & Harga via WhatsApp", className = "" }) {
+function WhatsAppButton({ children = "Cek Stok & Harga Sekarang", className = "" }) {
   return (
     <a
       href={buildWhatsAppUrl(WA_MESSAGE)}
@@ -144,10 +157,10 @@ export default function TokoAcTerdekatPurwokerto() {
               </div>
               <h1 className="mb-5 max-w-3xl text-3xl font-black leading-[1.05] tracking-[-0.035em] sm:text-4xl md:text-5xl xl:text-6xl">
                 Cari toko AC terdekat?
-                <span className="block text-cyan-300">Cek stok & harga di RADJA AC</span>
+                <span className="block text-cyan-300">Jangan keliling dulu. Cek RADJA AC.</span>
               </h1>
               <p className="mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-                Mau beli AC di Purwokerto, Sokaraja, Banyumas, atau area sekitar? Chat RADJA AC dulu untuk cek unit ready, harga terbaru, rekomendasi PK, pilihan brand, dan kebutuhan pemasangan sebelum datang atau membeli.
+                Jangan buang waktu datang ke toko tanpa tahu stok, harga, dan pilihan unit. Chat RADJA AC dulu untuk cek AC yang ready, harga terbaru, rekomendasi PK, brand yang cocok, dan kebutuhan pemasangan di area Purwokerto-Banyumas.
               </p>
               <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <WhatsAppButton />
@@ -156,7 +169,7 @@ export default function TokoAcTerdekatPurwokerto() {
                 </Link>
               </div>
               <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-2 text-sm text-white/62 lg:mx-0 lg:justify-start">
-                {["Cek stok", "Tanya harga", "Pilih PK", "Cek brand", "Bisa bantu pemasangan"].map((item) => (
+                {["Spesialis AC", "Cek stok dulu", "Harga terbaru", "Rekomendasi PK", "Bisa bantu pemasangan"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1 text-center">{item}</span>
                 ))}
               </div>
@@ -176,6 +189,23 @@ export default function TokoAcTerdekatPurwokerto() {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
+          <SectionTitle
+            eyebrow="KENAPA CEK RADJA AC DULU"
+            title="Bukan cuma dekat. Yang penting stok, harga, brand, dan pemasangan jelas dari awal."
+            description="Cari toko AC terdekat itu boleh. Tapi sebelum keluar uang, pastikan pilihan AC-nya cocok dengan ruangan, daya listrik, budget, dan kondisi pemasangan."
+          />
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {trustCards.map(([title, description, Icon]) => (
+              <div key={title} className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6">
+                <Icon className="mb-5 h-8 w-8 text-cyan-300" />
+                <h2 className="mb-3 text-lg font-black text-white">{title}</h2>
+                <p className="text-sm leading-7 text-white/60">{description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
           <div className="grid gap-5 md:grid-cols-3">
             {[
               ["Mulai dari WhatsApp", "Tidak perlu bingung dulu. Kirim kebutuhan ruangan, daya listrik, area pemasangan, dan budget.", MessageCircle],
@@ -188,6 +218,26 @@ export default function TokoAcTerdekatPurwokerto() {
                 <p className="text-sm leading-7 text-white/60">{description}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-16">
+          <SectionTitle
+            eyebrow="JANGAN ASAL BELI"
+            title="Daripada nebak-nebak, cek dulu sebelum beli AC"
+            description="Harga murah belum tentu cocok. Lokasi dekat belum tentu stoknya pas. Cek kebutuhan lebih dulu supaya keputusan belinya lebih aman."
+          />
+          <div className="grid gap-5 md:grid-cols-3">
+            {compareCards.map(([title, description]) => (
+              <div key={title} className="rounded-[28px] border border-white/10 bg-slate-950/55 p-6">
+                <CheckCircle2 className="mb-5 h-7 w-7 text-cyan-300" />
+                <h3 className="mb-3 text-xl font-black text-white">{title}</h3>
+                <p className="text-sm leading-7 text-white/60">{description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-7 text-center">
+            <WhatsAppButton>Chat, Saya Mau Cek AC yang Cocok</WhatsAppButton>
           </div>
         </section>
 
@@ -220,7 +270,7 @@ export default function TokoAcTerdekatPurwokerto() {
               </div>
               <h2 className="mb-5 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Cek brand AC yang ready sebelum datang</h2>
               <p className="mb-6 text-sm leading-7 text-white/65 sm:text-base">
-                RADJA AC menyediakan pilihan AC dari brand populer dan opsi ekonomis sesuai stok terbaru. Kalau masih bingung pilih brand, mulai dari kebutuhan ruangan dan budget dulu.
+                Mau AC murah, low watt, inverter, atau brand premium? Mulai dari kebutuhan ruangan dulu. RADJA AC bantu cek pilihan yang paling masuk akal sesuai stok dan budget terbaru.
               </p>
               <WhatsAppButton>Tanya Brand yang Ready</WhatsAppButton>
             </div>
