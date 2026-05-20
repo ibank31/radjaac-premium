@@ -35,6 +35,7 @@ const footerAreaLinks = [
 ];
 
 const seoLinks = [
+  { label: "Toko AC Terdekat", to: "/toko-ac-terdekat-purwokerto" },
   { label: "Jual AC Purwokerto", to: "/jual-ac-purwokerto" },
   { label: "Katalog AC", to: "/katalog" },
   { label: "AC Split Rumah", to: "/katalog/ac-split-rumah" },
