@@ -60,6 +60,7 @@ const brandLinks = [
   { label: "Hisense", to: "/brand/hisense" },
   { label: "Sansui", to: "/brand/sansui" },
   { label: "Sharp", to: "/brand/sharp" },
+  { label: "Samsung", to: "/brand/samsung" },
   { label: "Panasonic", to: "/brand/panasonic" },
   { label: "Brand Lainnya", to: "/brand/lainnya" },
 ]
