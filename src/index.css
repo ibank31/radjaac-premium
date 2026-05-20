@@ -262,7 +262,7 @@ main > section:first-of-type > .mx-auto.max-w-4xl.text-center > div:last-child {
 ══════════════════════════════════════════ */
 main > section:first-of-type:has(img[src*="/assets/brands/daikin/"]) .grid > div:first-child > div:last-child,
 main > section:first-of-type:has(img[src*="/assets/brands/gree/"]) .grid > div:first-child > div:last-child {
-  row-gap: 0.75rem;
+  row-gap: 0.35rem;
 }
 
 main > section:first-of-type:has(img[src*="/assets/brands/daikin/"]) .grid > div:first-child > div:last-child > span:not(:nth-child(3)),
@@ -275,7 +275,7 @@ main > section:first-of-type:has(img[src*="/assets/brands/gree/"]) .grid > div:f
 main > section:first-of-type:has(img[src*="/assets/brands/daikin/"]) .grid > div:first-child > div:last-child > span:nth-child(3),
 main > section:first-of-type:has(img[src*="/assets/brands/gree/"]) .grid > div:first-child > div:last-child > span:nth-child(2) {
   order: 2;
-  margin: 0.05rem auto 0;
+  margin: -0.1rem auto 0;
   color: rgba(255, 255, 255, 0.65);
   font-size: 0.78rem;
 }
