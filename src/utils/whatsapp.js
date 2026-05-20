@@ -30,9 +30,12 @@ export function getWhatsAppMessageForPath(pathname = "/") {
   return BRAND_MESSAGES[pathname] || DEFAULT_MESSAGE
 }
 
-export function buildWhatsAppUrl(_message = DEFAULT_MESSAGE) {
-  const message = getWhatsAppMessageForPath(getCurrentPathname())
-  return `${SITE_DATA.whatsappUrl}?text=${encodeURIComponent(message)}`
+export function buildWhatsAppUrl(message = DEFAULT_MESSAGE) {
+  const pathname = getCurrentPathname()
+  const contextualMessage = getWhatsAppMessageForPath(pathname)
+  const resolvedMessage = contextualMessage !== DEFAULT_MESSAGE ? contextualMessage : message || DEFAULT_MESSAGE
+
+  return `${SITE_DATA.whatsappUrl}?text=${encodeURIComponent(resolvedMessage)}`
 }
 
 export function buildWhatsAppUrlForPath(pathname) {
