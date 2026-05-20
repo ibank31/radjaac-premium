@@ -8,40 +8,40 @@ import WhatsappIcon from "../components/ui/WhatsappIcon"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const WA_MESSAGE =
-  "Halo RADJA AC, saya mau cari AC yang cocok. Mohon bantu cek pilihan dan kisaran harganya."
+  "Halo RADJA AC, saya mau cek stok dan harga AC. Kebutuhan saya untuk rumah/kamar/toko/kantor/proyek. Mohon bantu rekomendasikan AC yang cocok sesuai ukuran ruangan, daya listrik, area pemasangan, dan budget."
 
 const catalogItems = [
   {
     title: "AC Split Rumah",
-    description: "Untuk kamar tidur, ruang keluarga, kos, atau kamar kost.",
+    description: "Pilihan utama untuk kamar tidur, ruang keluarga, kos, kontrakan, dan rumah harian.",
     href: "/katalog/ac-split-rumah",
     icon: Home,
     active: true,
   },
   {
     title: "AC Inverter",
-    description: "Untuk pemakaian rutin dan efisiensi listrik harian.",
+    description: "Cocok untuk pemakaian rutin, kamar sering dipakai, dan target hemat listrik jangka panjang.",
     href: "/katalog/ac-inverter",
     icon: Zap,
     active: true,
   },
   {
     title: "AC Low Watt",
-    description: "Untuk rumah dengan daya listrik terbatas atau pasang di kontrakan.",
+    description: "Opsi aman untuk listrik terbatas, rumah kontrakan, kamar kos, atau daya 900–1300 watt.",
     href: "/katalog/ac-low-watt",
     icon: Power,
     active: true,
   },
   {
     title: "AC Kantor / Komersial",
-    description: "Untuk kantor, toko, cafe, dan pembelian lebih dari satu unit.",
+    description: "Untuk toko, kantor, cafe, ruang usaha, dan pembelian beberapa unit sekaligus.",
     href: "/katalog/ac-kantor-komersial",
     icon: Building2,
     active: true,
   },
   {
     title: "Panduan Kapasitas AC",
-    description: "Bantu pilih ukuran ½ PK sampai 2 PK sesuai luas ruangan.",
+    description: "Cek perkiraan ½ PK sampai 2 PK sebelum chat stok, harga, dan pemasangan.",
     href: "#panduan-pk",
     icon: Ruler,
   },
@@ -49,7 +49,7 @@ const catalogItems = [
 
 const heroCards = [
   ["AC Split Rumah", "Kamar, kos, ruang keluarga"],
-  ["AC Inverter", "Pemakaian rutin"],
+  ["AC Inverter", "Pemakaian rutin & hemat listrik"],
   ["Low Watt", "Daya listrik terbatas"],
 ]
 
@@ -59,6 +59,8 @@ const brandLinks = [
   { label: "Midea", to: "/brand/midea" },
   { label: "Hisense", to: "/brand/hisense" },
   { label: "Sansui", to: "/brand/sansui" },
+  { label: "Sharp", to: "/brand/sharp" },
+  { label: "Panasonic", to: "/brand/panasonic" },
   { label: "Brand Lainnya", to: "/brand/lainnya" },
 ]
 
@@ -70,7 +72,7 @@ const pkGuide = [
   ["2 PK", "± 30–40 m²", "Ruangan besar / usaha"],
 ]
 
-function WhatsAppButton({ children = "Konsultasi Pilihan AC", className = "" }) {
+function WhatsAppButton({ children = "Cek Stok & Harga AC", className = "" }) {
   return (
     <a
       href={buildWhatsAppUrl(WA_MESSAGE)}
@@ -93,7 +95,7 @@ function CategoryLink({ item }) {
       <h3 className="mb-3 text-lg font-bold text-white">{item.title}</h3>
       <p className="text-sm leading-6 text-white/60">{item.description}</p>
       <div className="mt-4 text-xs font-semibold text-cyan-300">
-        {item.active ? "Lihat Detail" : "Lihat Panduan"}
+        {item.active ? "Cek Pilihan" : "Lihat Panduan"}
       </div>
     </>
   )
@@ -130,8 +132,8 @@ function HeroVisual() {
         </div>
 
         <div className="mt-4 rounded-2xl border border-cyan-300/15 bg-cyan-300/10 p-4 text-left">
-          <p className="text-sm font-bold text-white">Belum tahu pilih yang mana?</p>
-          <p className="mt-1 text-xs leading-5 text-white/55">Kirim ukuran ruangan dan daya listrik, tim RADJA AC bantu arahkan.</p>
+          <p className="text-sm font-bold text-white">Mau cepat tahu harga?</p>
+          <p className="mt-1 text-xs leading-5 text-white/55">Kirim ukuran ruangan, daya listrik, dan area pemasangan. RADJA AC bantu arahkan pilihan yang masuk akal.</p>
         </div>
       </div>
     </div>
@@ -142,8 +144,8 @@ export default function KatalogAc() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="Katalog AC Purwokerto & Banyumas | Panduan Pilih AC RADJA AC"
-        description="Panduan memilih AC untuk rumah, kos, kantor kecil, toko, dan kebutuhan usaha di Purwokerto & Banyumas. RADJA AC bantu rekomendasi unit sesuai ruangan, daya listrik, dan budget."
+        title="Katalog AC Purwokerto | Cek Stok, Harga & Rekomendasi RADJA AC"
+        description="Katalog AC Purwokerto untuk cek pilihan AC split, inverter, low watt, dan AC komersial. RADJA AC bantu rekomendasi unit sesuai ruangan, daya listrik, budget, dan pemasangan."
         canonicalPath="/katalog"
       />
 
@@ -160,16 +162,16 @@ export default function KatalogAc() {
             <div className="text-left">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200">
                 <span className="h-2 w-2 rounded-full bg-cyan-300" />
-                PANDUAN PILIH AC
+                KATALOG AC PURWOKERTO
               </div>
 
               <h1 className="mb-5 max-w-2xl text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl">
-                Pilih AC sesuai
-                <span className="block text-cyan-300">kebutuhan ruangan</span>
+                Cari AC yang cocok?
+                <span className="block text-cyan-300">Cek pilihan sebelum beli</span>
               </h1>
 
               <p className="mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                Mulai dari luas ruangan, daya listrik, dan pola pemakaian. RADJA AC bantu pilih AC yang pas untuk rumah, kos, kantor kecil, toko, atau usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
+                Jangan asal pilih AC. Mulai dari ukuran ruangan, daya listrik, budget, dan kebutuhan pemasangan. RADJA AC bantu cek stok, harga terbaru, dan rekomendasi unit untuk area Purwokerto, Sokaraja, Banyumas, dan sekitarnya.
               </p>
 
               <div className="mx-auto flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:mx-0 lg:justify-start">
@@ -178,7 +180,7 @@ export default function KatalogAc() {
                   href="#kategori-katalog"
                   className="inline-flex w-full items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05] sm:w-auto"
                 >
-                  Lihat Kategori
+                  Pilih Kategori AC
                 </a>
               </div>
             </div>
@@ -190,9 +192,9 @@ export default function KatalogAc() {
         <section id="kategori-katalog" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-14">
           <div className="mx-auto mb-8 max-w-3xl text-center">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">KATEGORI AC</p>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mulai dari kebutuhan, baru pilih brand</h2>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilih berdasarkan kebutuhan, bukan sekadar merek</h2>
             <p className="mx-auto max-w-2xl text-sm leading-7 text-white/60 sm:text-base">
-              Kalau belum tahu mau brand apa, mulai dari jenis ruangan, daya listrik, dan pola pemakaian harian.
+              Brand bagus tetap harus cocok dengan ruangan, daya listrik, dan cara pemakaian. Mulai dari kategori yang paling dekat dengan kebutuhan Anda.
             </p>
           </div>
 
@@ -207,7 +209,7 @@ export default function KatalogAc() {
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">PANDUAN PK</p>
               <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Estimasi kapasitas AC untuk ruangan</h2>
               <p className="text-sm leading-7 text-white/60 sm:text-base">
-                Panduan ini hanya estimasi awal. Kondisi ruangan, jumlah orang, paparan matahari, dan tinggi plafon tetap perlu dipertimbangkan sebelum membeli.
+                Panduan ini membantu Anda lebih cepat menentukan arah pilihan. Untuk hasil final, tetap cek kondisi ruangan, jumlah orang, paparan matahari, tinggi plafon, dan titik pemasangan.
               </p>
             </div>
 
@@ -228,9 +230,9 @@ export default function KatalogAc() {
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-14">
           <div className="rounded-[34px] border border-white/10 bg-white/[0.035] p-6 text-center sm:p-8 lg:p-10">
             <div className="mb-4 flex justify-center text-cyan-300"><BadgeCheck className="h-10 w-10" /></div>
-            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl">Brand bisa disesuaikan setelah kebutuhan jelas</h2>
+            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl">Brand tinggal disesuaikan dengan kebutuhan dan budget</h2>
             <p className="mx-auto mb-6 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">
-              RADJA AC menyediakan brand unggulan seperti Daikin, Gree, Midea, Hisense, Sansui, Sharp, Panasonic, serta brand populer lainnya sesuai stok dan kebutuhan ruangan. Mau tahu kisaran harga AC yang cocok? Tanyakan via WhatsApp.
+              RADJA AC menyediakan pilihan brand seperti Daikin, Gree, Midea, Hisense, Sansui, Sharp, Panasonic, LG, Samsung, Aqua, Polytron, TCL, Ariston, Mitsubishi, Toshiba, Modena, FLife, Reiwa, dan opsi lain sesuai stok terbaru. Chat dulu untuk cek unit yang ready dan harga yang paling masuk akal.
             </p>
             <div className="flex flex-wrap justify-center gap-2.5">
               {brandLinks.map((brand) => (
@@ -252,11 +254,11 @@ export default function KatalogAc() {
             <div className="pointer-events-none absolute -right-20 bottom-0 h-56 w-56 rounded-full bg-[#25D366]/10 blur-3xl" />
             <div className="relative">
               <div className="mb-4 flex justify-center text-cyan-300"><MessageCircle className="h-10 w-10" /></div>
-              <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Bingung mulai dari kategori mana?</h2>
+              <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mau cepat dapat rekomendasi?</h2>
               <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">
-                Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan budget. Tim RADJA AC akan bantu arahkan kategori AC dan brand yang paling sesuai.
+                Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan budget. RADJA AC bantu arahkan kategori, brand, stok, dan estimasi kebutuhan pemasangan.
               </p>
-              <WhatsAppButton>Konsultasi via WhatsApp</WhatsAppButton>
+              <WhatsAppButton>Chat RADJA AC Sekarang</WhatsAppButton>
             </div>
           </div>
         </section>
