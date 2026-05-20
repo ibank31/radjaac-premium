@@ -28,7 +28,7 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black leading-[1.05] sm:leading-tight tracking-[-0.03em] mb-5 max-w-xl">
-              Mau Beli AC di Purwokerto?
+              Mau beli AC di Purwokerto?
               <span className="block text-cyan-300">
                 Konsultasi Dulu Biar Tidak Salah Pilih
               </span>
