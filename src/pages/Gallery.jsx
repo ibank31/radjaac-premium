@@ -1,10 +1,11 @@
 import { useMemo, useState } from "react"
-import { Camera, ImagePlus, PackageCheck, PlayCircle, Warehouse } from "lucide-react"
+import { Camera, ImagePlus, MessageCircle, PackageCheck, PlayCircle, Warehouse } from "lucide-react"
 
 import SeoHead from "../components/SeoHead"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import FloatingWhatsapp from "../components/FloatingWhatsapp"
+import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const galleryCategories = [
   {
@@ -30,6 +31,9 @@ const galleryCategories = [
 ]
 
 const galleryFilters = ["Semua", "Pengiriman", "Gudang", "Showroom", "Display Produk", "Material Instalasi", "Pemasangan"]
+
+const GALLERY_STOCK_MESSAGE =
+  "Halo RADJA AC, saya lihat gallery stok dan display di website. Saya mau tanya AC yang ready, kisaran harga, dan rekomendasi yang cocok untuk ruangan saya."
 
 const galleryVideos = [
   {
@@ -418,6 +422,27 @@ export default function Gallery() {
                 </div>
               </a>
             ))}
+          </div>
+
+          <div className="mt-10 overflow-hidden rounded-[30px] border border-[#25D366]/25 bg-gradient-to-br from-[#25D366]/16 via-cyan-300/10 to-white/[0.04] p-5 text-center shadow-[0_24px_70px_rgba(37,211,102,0.14)] sm:mt-12 sm:p-8">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#8DF3B0]">
+              STOK BISA BERUBAH
+            </p>
+            <h2 className="mx-auto mb-3 max-w-2xl text-2xl font-black tracking-[-0.03em] text-white sm:text-3xl">
+              Jangan Sampai Unit yang Cocok Keburu Habis
+            </h2>
+            <p className="mx-auto mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
+              Kalau sudah lihat stok, display, atau brand yang menarik, langsung chat RADJA AC untuk cek ketersediaan, kisaran harga terbaru, dan rekomendasi AC yang pas dengan ruangan Anda.
+            </p>
+            <a
+              href={buildWhatsAppUrl(GALLERY_STOCK_MESSAGE)}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#25D366] px-7 py-4 text-base font-black text-slate-950 shadow-[0_22px_60px_rgba(37,211,102,0.22)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A] sm:w-auto sm:min-w-[280px]"
+            >
+              <MessageCircle className="h-5 w-5" />
+              Cek Stok & Harga Sekarang
+            </a>
           </div>
         </section>
       </main>
