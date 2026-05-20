@@ -223,21 +223,21 @@ export default function GreePurwokerto() {
             <div className="text-center lg:text-left">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-300/20 bg-orange-300/10 px-4 py-2 text-sm font-semibold text-orange-200">
                 <Award className="h-4 w-4" />
-                Trust Gree RADJA AC
+                Rekor MURI Gree
               </div>
 
               <h2 className="mx-auto mb-4 max-w-2xl text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:mx-0 lg:text-5xl">
-                Pilihan Gree lebih enak dicek dari stok dan kebutuhan ruangan
+                Perusahaan air conditioner dengan garansi purnajual terlama
               </h2>
 
               <p className="mx-auto mb-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC menjadi bagian dari pencapaian Rekor MURI bersama Gree melalui performa penjualan dan dukungan brand partner. Untuk pembeli, yang paling penting adalah cek tipe yang ready, ukuran PK, dan kebutuhan pemasangan sebelum memilih unit.
+                Gree meraih Rekor MURI sebagai perusahaan air conditioner dengan garansi purnajual terlama: 5 tahun sparepart & servis, 10 tahun kompresor, dan 1 tahun ganti baru sesuai ketentuan produk.
               </p>
 
               <div className="flex justify-center lg:justify-start">
                 <div className="inline-flex items-center justify-center gap-3 rounded-3xl border border-white/10 bg-white/[0.04] px-5 py-3 text-center text-sm text-white/80 sm:text-base">
                   <BadgeCheck className="h-5 w-5 shrink-0 text-orange-300" />
-                  <span>Bagian dari pencapaian Rekor MURI Gree</span>
+                  <span>Garansi purnajual terlama</span>
                 </div>
               </div>
             </div>
@@ -245,7 +245,7 @@ export default function GreePurwokerto() {
             <div className="overflow-hidden rounded-[34px] border border-blue-300/20 bg-slate-950/70 p-3 shadow-[0_0_55px_rgba(59,130,246,0.12),0_30px_90px_rgba(8,20,47,0.45)]">
               <img
                 src={MURI_IMAGE}
-                alt="Rekor MURI bersama Gree"
+                alt="Rekor MURI Gree untuk garansi purnajual terlama"
                 loading="lazy"
                 decoding="async"
                 className="w-full rounded-[26px] object-cover"
