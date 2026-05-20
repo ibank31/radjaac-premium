@@ -4,7 +4,7 @@ import WhatsappIcon from "./ui/WhatsappIcon";
 import { buildWhatsAppUrl } from "../utils/whatsapp";
 
 const CONSULTATION_MESSAGE =
-  "Halo RADJA AC, saya mau konsultasi beli AC. Mohon bantu cek ukuran ruangan, kapasitas PK, daya listrik, pilihan brand, kisaran harga, dan kebutuhan pemasangan."
+  "Halo RADJA AC, saya mau cek stok dan harga AC. Mohon bantu rekomendasikan AC yang cocok sesuai kebutuhan ruangan, daya listrik, area pemasangan, dan budget saya."
 
 export default function HeroSection() {
   return (
@@ -24,19 +24,20 @@ export default function HeroSection() {
           >
             <div className="inline-flex items-center gap-2 border border-cyan-400/20 bg-cyan-400/10 px-3.5 py-2 rounded-full text-cyan-300 text-xs sm:text-sm mb-5">
               <div className="w-2 h-2 rounded-full bg-cyan-400" />
-              TOKO AC MULTIBRAND DI PURWOKERTO
+              SPESIALIS JUAL AC PURWOKERTO
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black leading-[1.05] sm:leading-tight tracking-[-0.03em] mb-5 max-w-xl">
-              Mau beli AC di Purwokerto?
+              Cari AC Original Bergaransi?
               <span className="block text-cyan-300">
-                Konsultasi Dulu Biar Tidak Salah Pilih
+                Cek Stok & Harga di RADJA AC
               </span>
             </h1>
 
             <p className="text-white/70 text-sm sm:text-base leading-7 max-w-xl mb-5 sm:mb-6">
-              RADJA AC membantu Anda memilih AC yang sesuai untuk rumah, kos,
-              toko, kantor, atau usaha lokal di Purwokerto dan sekitarnya.
+              RADJA AC menyediakan pilihan AC untuk rumah, kos, kantor, toko,
+              usaha, hingga proyek. Chat dulu untuk cek stok, harga terbaru,
+              rekomendasi PK, dan kebutuhan pemasangan sebelum beli.
             </p>
 
             <div className="relative z-20 flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3 mb-4">
@@ -47,19 +48,19 @@ export default function HeroSection() {
                 className="relative z-20 inline-flex w-full items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-slate-950 font-bold px-6 py-3.5 sm:py-4 rounded-full shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5 sm:w-auto sm:min-w-[260px]"
               >
                 <WhatsappIcon className="w-5 h-5 text-slate-950" />
-                Konsultasi Beli AC
+                Cek Stok & Harga AC
               </a>
 
               <Link
-                to="/jual-ac-purwokerto"
+                to="/katalog"
                 className="relative z-20 inline-flex w-full items-center justify-center px-6 py-3.5 sm:py-4 rounded-full border border-white/10 text-white/90 font-semibold transition hover:bg-white/[0.05] sm:w-auto sm:min-w-[220px]"
               >
-                Lihat Rekomendasi AC
+                Lihat Katalog AC
               </Link>
             </div>
 
             <p className="mx-auto max-w-xl text-center text-sm text-white/60 mb-3 sm:mx-0 sm:text-left sm:mb-6">
-              Ready stock • Garansi resmi • Konsultasi PK • Bisa bantu instalasi
+              Original • Garansi resmi • Banyak pilihan brand • Bisa bantu pemasangan
             </p>
           </motion.div>
 
