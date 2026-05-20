@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import SeoHead from "../components/SeoHead"
 import WhatsappIcon from "../components/ui/WhatsappIcon"
-import { SITE_DATA } from "../constants/siteData"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const HERO_IMAGE = "/assets/brands/gree/gree-showcase.webp"
