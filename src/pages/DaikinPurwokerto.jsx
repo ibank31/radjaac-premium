@@ -23,7 +23,7 @@ import { buildWhatsAppUrl } from "../utils/whatsapp"
 const HERO_IMAGE = "/assets/brands/daikin/daikin-showcase.webp"
 const CERTIFICATE_IMAGE = "/assets/brands/daikin/sertificate-daikin.webp"
 const DAIKIN_WA_MESSAGE =
-  "Halo RADJA AC, saya mau cek stok AC Daikin hari ini. Tolong bantu kirim rekomendasi tipe, kisaran harga paket pemasangan, dan pilihan yang cocok untuk ruangan saya."
+  "Halo RADJA AC, saya mau cek stok AC Daikin. Mohon bantu info tipe yang ready, harga terbaru, rekomendasi PK, dan kebutuhan pemasangan di area saya."
 
 const benefits = [
   {
@@ -56,7 +56,7 @@ const products = [
     description:
       "Cocok untuk pelanggan yang pakai AC rutin dan ingin suhu tetap nyaman setiap hari.",
     highlights: ["Suhu stabil", "Nyaman harian", "Efisien"],
-    cta: "Cek Harga Daikin Inverter",
+    cta: "Cek Stok Daikin Inverter",
     message:
       "Halo RADJA AC, saya mau cek stok dan harga Daikin Inverter. Mohon bantu rekomendasi PK, estimasi paket pemasangan, dan tipe yang cocok untuk ruangan saya.",
   },
@@ -69,7 +69,7 @@ const products = [
     description:
       "Pilihan untuk rumah dengan daya listrik terbatas atau pelanggan yang ingin beban listrik lebih aman.",
     highlights: ["Daya ringan", "Rumah tinggal", "Praktis"],
-    cta: "Cek Harga Daikin Low Watt",
+    cta: "Cek Stok Daikin Low Watt",
     message:
       "Halo RADJA AC, saya mau cek stok dan harga Daikin Low Watt. Mohon bantu rekomendasi PK, estimasi paket pemasangan, dan pilihan yang aman untuk daya listrik rumah saya.",
   },
@@ -82,7 +82,7 @@ const products = [
     description:
       "Pilihan praktis untuk kebutuhan pendinginan harian dengan perawatan yang mudah dan penggunaan sederhana.",
     highlights: ["Simple", "Ready use", "Perawatan mudah"],
-    cta: "Cek Harga Daikin Standard",
+    cta: "Cek Stok Daikin Standard",
     message:
       "Halo RADJA AC, saya mau cek stok dan harga Daikin Standard. Mohon bantu rekomendasi PK, estimasi paket pemasangan, dan tipe yang cocok untuk kebutuhan harian saya.",
   },
@@ -111,6 +111,11 @@ const useCases = [
 
 const internalLinks = [
   {
+    title: "Toko AC Terdekat Purwokerto",
+    description: "Sebelum OTW, cek stok, harga, brand yang ready, dan kebutuhan pemasangan di RADJA AC.",
+    href: "/toko-ac-terdekat-purwokerto",
+  },
+  {
     title: "Harga AC Daikin Purwokerto",
     description: "Panduan cek harga, stok, tipe, dan estimasi pemasangan Daikin sebelum membeli.",
     href: "/artikel/harga-ac-daikin-purwokerto",
@@ -134,11 +139,6 @@ const internalLinks = [
     title: "AC Split Rumah",
     description: "Rekomendasi AC untuk kamar dan rumah tinggal.",
     href: "/katalog/ac-split-rumah",
-  },
-  {
-    title: "AC 1 PK untuk ruangan berapa?",
-    description: "Baca panduan sebelum menentukan kapasitas AC.",
-    href: "/artikel/ac-1-pk-untuk-ruangan-berapa",
   },
 ]
 
@@ -178,7 +178,7 @@ const faqItems = [
   },
 ]
 
-function WhatsAppButton({ children = "Cek Stok & Harga Daikin", className = "", message = DAIKIN_WA_MESSAGE }) {
+function WhatsAppButton({ children = "Cek Stok AC Daikin", className = "", message = DAIKIN_WA_MESSAGE }) {
   return (
     <a
       href={buildWhatsAppUrl(message)}
@@ -209,8 +209,8 @@ export default function DaikinPurwokerto() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="Jual AC Daikin Purwokerto — Dealer Resmi Bergaransi | RADJA AC"
-        description="RADJA AC menyediakan AC Daikin original bergaransi resmi di Purwokerto & Banyumas. Konsultasi gratis pilih PK, inverter, low watt, dan kebutuhan instalasi."
+        title="AC Daikin Purwokerto | Original Bergaransi RADJA AC"
+        description="Cari AC Daikin Purwokerto? RADJA AC bantu cek stok Daikin inverter, low watt, standard, harga terbaru, rekomendasi PK, dan pemasangan area Purwokerto-Banyumas."
         canonicalPath="/brand/daikin"
       />
 
@@ -231,7 +231,7 @@ export default function DaikinPurwokerto() {
             <div>
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-300">
                 <span className="h-2 w-2 rounded-full bg-cyan-400" />
-                DEALER AC DAIKIN PURWOKERTO
+                AC DAIKIN ORIGINAL PURWOKERTO
               </div>
 
               <div className="mb-5 text-sm text-white/50">
@@ -243,26 +243,26 @@ export default function DaikinPurwokerto() {
               </div>
 
               <h1 className="mb-5 max-w-xl text-3xl font-black leading-[1.05] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl">
-                Jual AC Daikin Purwokerto
-                <span className="block text-cyan-300">Dealer resmi bergaransi</span>
+                Mau AC Daikin yang aman buat jangka panjang?
+                <span className="block text-cyan-300">Cek stok di RADJA AC.</span>
               </h1>
 
               <p className="mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                Butuh AC Daikin untuk rumah, kos, kantor, toko, cafe, atau usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya? RADJA AC bantu pilih tipe dan PK yang pas, plus cek stok, harga terbaru, garansi, dan estimasi pemasangan.
+                Daikin cocok untuk pembeli yang mengutamakan brand, kenyamanan, dan pemakaian jangka panjang. Chat RADJA AC untuk cek tipe Daikin yang ready, harga terbaru, rekomendasi PK, dan pemasangan di Purwokerto-Banyumas.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-                <WhatsAppButton>Cek Stok & Harga Daikin</WhatsAppButton>
+                <WhatsAppButton>Cek Stok AC Daikin</WhatsAppButton>
                 <a
                   href="#produk-daikin"
                   className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
                 >
-                  Lihat Rekomendasi Daikin
+                  Lihat Pilihan Daikin
                 </a>
               </div>
 
               <div className="flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 sm:justify-start">
-                {["Daikin Original", "Garansi Resmi", "Cek Stok Hari Ini", "Bisa Paket Pasang"].map((item) => (
+                {["Daikin Original", "Garansi Resmi", "Inverter • Low Watt • Standard", "Bisa Paket Pasang"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">
                     {item}
                   </span>
@@ -292,7 +292,7 @@ export default function DaikinPurwokerto() {
               <div>
                 <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#8DF3B0]">STOK & HARGA BISA BERUBAH</p>
                 <h2 className="mb-2 text-2xl font-black tracking-[-0.03em] text-white sm:text-3xl">
-                  Mau Daikin? Cek unit ready sebelum keburu habis.
+                  Mau Daikin? Cek unit ready sebelum OTW.
                 </h2>
                 <p className="max-w-3xl text-sm leading-7 text-white/70 sm:text-base">
                   Chat sekarang untuk cek stok Daikin, harga paket pemasangan, dan rekomendasi PK yang paling aman sesuai ukuran ruangan dan daya listrik.
@@ -363,10 +363,10 @@ export default function DaikinPurwokerto() {
           <div className="mb-10 text-center">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Rekomendasi Produk</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">
-              Pilihan AC Daikin yang bisa langsung dicek
+              Pilih Daikin berdasarkan pola pemakaian
             </h2>
             <p className="mx-auto max-w-2xl leading-7 text-white/65">
-              Pilih tipe yang paling mendekati kebutuhan Anda, lalu chat RADJA AC untuk cek stok, harga terbaru, dan estimasi paket pemasangan.
+              Mulai dari inverter untuk pemakaian rutin, low watt untuk daya terbatas, atau standard untuk kebutuhan harian. Chat RADJA AC untuk cek stok, harga terbaru, dan estimasi paket pemasangan.
             </p>
           </div>
 
