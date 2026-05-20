@@ -3,9 +3,9 @@ import { ArrowRight, ChevronRight } from "lucide-react"
 import { BRAND_ITEMS } from "../../data/home/brandItems"
 
 const OTHER_BRAND_ROWS = [
-  ["Mitsubishi", "Changhong", "Samsung"],
-  ["Polytron", "Toshiba", "Ariston"],
-  ["Aqua", "TCL", "LG"],
+  ["LG", "Samsung", "Aqua", "Polytron"],
+  ["TCL", "Ariston", "Mitsubishi", "Toshiba"],
+  ["Modena", "Bestlife", "Akari", "FLife", "Reiwa"],
 ]
 
 const LOGO_STYLES = {
@@ -55,7 +55,7 @@ export default function BrandsSection() {
           </p>
 
           <h2 className="text-3xl sm:text-4xl font-black leading-tight">
-            Brand AC Pilihan RADJA AC
+            Pilihan Brand AC untuk Berbagai Budget
           </h2>
         </div>
 
@@ -68,10 +68,11 @@ export default function BrandsSection() {
         </Link>
       </div>
 
-      <p className="text-white/60 max-w-2xl text-sm sm:text-base leading-7 mb-7">
-        RADJA AC menyediakan AC original berbagai brand resmi. Brand unggulan
-        berikut sudah tersedia sebagai halaman khusus untuk memudahkan Anda
-        membandingkan pilihan.
+      <p className="text-white/60 max-w-3xl text-sm sm:text-base leading-7 mb-7">
+        Cari Daikin, Gree, Midea, Hisense, Sharp, Panasonic, Sansui, atau brand
+        AC lain di Purwokerto? RADJA AC bantu cek stok, harga terbaru, pilihan
+        tipe, dan rekomendasi unit yang paling masuk akal sesuai ruangan,
+        daya listrik, dan budget.
       </p>
 
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
@@ -96,7 +97,7 @@ export default function BrandsSection() {
             </p>
 
             <div className="flex items-center justify-center gap-2 text-cyan-300 text-xs sm:text-sm font-semibold">
-              Lihat Brand
+              Cek Brand
               <ChevronRight className="w-4 h-4" />
             </div>
           </Link>
@@ -109,10 +110,10 @@ export default function BrandsSection() {
             <p className="text-cyan-300 uppercase tracking-[0.24em] text-xs mb-2">
               BRAND LAINNYA
             </p>
-            <h3 className="text-xl font-black text-white">Tersedia juga brand populer lainnya</h3>
+            <h3 className="text-xl font-black text-white">Opsi brand lain sesuai stok terbaru</h3>
           </div>
           <p className="text-sm text-white/55 sm:text-right">
-            Cek stok dan rekomendasi via WhatsApp.
+            Chat dulu untuk cek unit yang ready.
           </p>
         </div>
 
