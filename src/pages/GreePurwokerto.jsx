@@ -10,7 +10,7 @@ import { SITE_DATA } from "../constants/siteData"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
 const HERO_IMAGE = "/assets/brands/gree/gree-showcase.webp"
-const MURI_IMAGE = "/assets/brands/gree/rekor-muri-gree.webp"
+const PROSHOP_IMAGE = "/assets/gallery/large/showroom-gree-radja-ac-purwokerto-01.webp"
 const GREE_WA_MESSAGE =
   "Halo RADJA AC, saya mau cek stok AC Gree. Mohon bantu info tipe yang ready, harga terbaru, rekomendasi PK, dan kebutuhan pemasangan di area saya."
 
@@ -223,29 +223,29 @@ export default function GreePurwokerto() {
             <div className="text-center lg:text-left">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-300/20 bg-orange-300/10 px-4 py-2 text-sm font-semibold text-orange-200">
                 <Award className="h-4 w-4" />
-                Rekor MURI Gree
+                Proshop Gree RADJA AC
               </div>
 
               <h2 className="mx-auto mb-4 max-w-2xl text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:mx-0 lg:text-5xl">
-                Perusahaan air conditioner dengan garansi purnajual terlama
+                Cek stok, harga, tipe, PK, dan pemasangan AC Gree
               </h2>
 
               <p className="mx-auto mb-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                Gree meraih Rekor MURI sebagai perusahaan air conditioner dengan garansi purnajual terlama: 5 tahun sparepart & servis, 10 tahun kompresor, dan 1 tahun ganti baru sesuai ketentuan produk.
+                RADJA AC membantu calon pembeli cek pilihan AC Gree yang ready, mulai dari standard, low watt, sampai inverter, termasuk rekomendasi PK dan kebutuhan pemasangan area Purwokerto-Banyumas.
               </p>
 
               <div className="flex justify-center lg:justify-start">
                 <div className="inline-flex items-center justify-center gap-3 rounded-3xl border border-white/10 bg-white/[0.04] px-5 py-3 text-center text-sm text-white/80 sm:text-base">
                   <BadgeCheck className="h-5 w-5 shrink-0 text-orange-300" />
-                  <span>Garansi purnajual terlama</span>
+                  <span>Proshop Gree RADJA AC</span>
                 </div>
               </div>
             </div>
 
             <div className="overflow-hidden rounded-[34px] border border-blue-300/20 bg-slate-950/70 p-3 shadow-[0_0_55px_rgba(59,130,246,0.12),0_30px_90px_rgba(8,20,47,0.45)]">
               <img
-                src={MURI_IMAGE}
-                alt="Rekor MURI Gree untuk garansi purnajual terlama"
+                src={PROSHOP_IMAGE}
+                alt="Showroom Proshop Gree RADJA AC Purwokerto"
                 loading="lazy"
                 decoding="async"
                 className="w-full rounded-[26px] object-cover"
