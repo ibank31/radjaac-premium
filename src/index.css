@@ -258,7 +258,7 @@ main > section:first-of-type > .mx-auto.max-w-4xl.text-center > div:last-child {
 
 /* ══════════════════════════════════════════
    BRAND HERO PRODUCT-TYPE CHIP
-   Trust chips stay first, product types get their own clean row below.
+   Trust chips stay first, product types get their own compact chip below.
 ══════════════════════════════════════════ */
 main > section:first-of-type:has(img[src*="/assets/brands/daikin/"]) .grid > div:first-child > div:last-child,
 main > section:first-of-type:has(img[src*="/assets/brands/gree/"]) .grid > div:first-child > div:last-child {
@@ -275,30 +275,25 @@ main > section:first-of-type:has(img[src*="/assets/brands/gree/"]) .grid > div:f
 main > section:first-of-type:has(img[src*="/assets/brands/daikin/"]) .grid > div:first-child > div:last-child > span:nth-child(3),
 main > section:first-of-type:has(img[src*="/assets/brands/gree/"]) .grid > div:first-child > div:last-child > span:nth-child(2) {
   order: 2;
-  flex-basis: 100%;
-  width: min(100%, 420px);
   margin: 0.05rem auto 0;
-  justify-content: center;
-  border-color: rgba(103, 232, 249, 0.26);
-  background: linear-gradient(135deg, rgba(103, 232, 249, 0.16), rgba(255, 255, 255, 0.045));
-  box-shadow: 0 14px 35px rgba(8, 145, 178, 0.12);
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 0;
-  font-weight: 800;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.78rem;
 }
 
-main > section:first-of-type:has(img[src*="/assets/brands/daikin/"]) .grid > div:first-child > div:last-child > span:nth-child(3)::after,
+main > section:first-of-type:has(img[src*="/assets/brands/gree/"]) .grid > div:first-child > div:last-child > span:nth-child(2) {
+  font-size: 0;
+}
+
 main > section:first-of-type:has(img[src*="/assets/brands/gree/"]) .grid > div:first-child > div:last-child > span:nth-child(2)::after {
   content: "Inverter • Low Watt • Standard";
-  font-size: 0.9rem;
-  letter-spacing: 0.01em;
+  font-size: 0.78rem;
 }
 
-@media (max-width: 480px) {
-  main > section:first-of-type:has(img[src*="/assets/brands/daikin/"]) .grid > div:first-child > div:last-child > span:nth-child(3)::after,
-  main > section:first-of-type:has(img[src*="/assets/brands/gree/"]) .grid > div:first-child > div:last-child > span:nth-child(2)::after {
-    font-size: 0.84rem;
-  }
+main > section:first-of-type:has(img[src*="/assets/brands/daikin/"]) .grid > div:first-child > div:last-child::after,
+main > section:first-of-type:has(img[src*="/assets/brands/gree/"]) .grid > div:first-child > div:last-child::after {
+  content: "";
+  flex-basis: 100%;
+  order: 1;
 }
 
 /* ══════════════════════════════════════════
