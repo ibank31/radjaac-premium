@@ -160,7 +160,7 @@ export default function TokoAcTerdekatPurwokerto() {
                 <span className="block text-cyan-300">Jangan keliling dulu. Cek RADJA AC.</span>
               </h1>
               <p className="mb-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-                Jangan buang waktu datang ke toko tanpa tahu stok, harga, dan pilihan unit. Chat RADJA AC dulu untuk cek AC yang ready, harga terbaru, rekomendasi PK, brand yang cocok, dan kebutuhan pemasangan di area Purwokerto-Banyumas.
+                Sebelum OTW, chat RADJA AC untuk cek unit yang ready, harga terbaru, rekomendasi PK, brand yang cocok, dan kebutuhan pemasangan di area Purwokerto-Banyumas.
               </p>
               <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <WhatsAppButton />
