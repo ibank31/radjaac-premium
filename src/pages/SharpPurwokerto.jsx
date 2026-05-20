@@ -8,7 +8,8 @@ import SeoHead from "../components/SeoHead"
 import WhatsappIcon from "../components/ui/WhatsappIcon"
 import { buildWhatsAppUrl } from "../utils/whatsapp"
 
-const HERO_IMAGE = "/assets/brands/sharp/ac-sharp-bey.webp"
+const HERO_IMAGE = "/assets/showroom/Showroom-utama.webp"
+const PRODUCT_IMAGE = "/assets/brands/sharp/ac-sharp-bey.webp"
 const SHARP_WA_MESSAGE =
   "Halo RADJA AC, saya mau cek stok AC Sharp BEY. Mohon bantu info harga terbaru, rekomendasi PK, dan kebutuhan pemasangan di area saya."
 
@@ -34,7 +35,7 @@ const products = [
   {
     title: "Sharp BEY 1/2 PK",
     badge: "Ready check",
-    image: HERO_IMAGE,
+    image: PRODUCT_IMAGE,
     fit: "Kamar tidur, kos, kontrakan, ruang santai, dan toko kecil",
     priority: "AC Sharp standard untuk kebutuhan rumah harian",
     description: "Pilihan Sharp yang masuk di daftar supplier RADJA AC untuk paket 1/2 PK + pemasangan standard sesuai stok terbaru.",
@@ -45,7 +46,7 @@ const products = [
   {
     title: "Sharp untuk Kamar",
     badge: "Kamar",
-    image: HERO_IMAGE,
+    image: PRODUCT_IMAGE,
     fit: "Kamar tidur, kamar anak, kos, dan ruangan kecil",
     priority: "Cek ukuran ruangan sebelum memilih kapasitas",
     description: "Untuk kamar, yang paling penting adalah cek luas ruangan, panas matahari, daya listrik, dan kebutuhan pemakaian harian.",
@@ -56,7 +57,7 @@ const products = [
   {
     title: "Sharp untuk Rumah/Toko Kecil",
     badge: "Harian",
-    image: HERO_IMAGE,
+    image: PRODUCT_IMAGE,
     fit: "Rumah harian, ruang santai, toko kecil, dan usaha rumahan",
     priority: "Pendinginan praktis untuk penggunaan harian",
     description: "Sharp bisa dipertimbangkan untuk kebutuhan harian yang mengutamakan brand familiar dan unit yang mudah dicek stoknya.",
@@ -211,7 +212,7 @@ export default function SharpPurwokerto() {
               <div className="relative mx-auto w-[88%] max-w-[360px] overflow-hidden rounded-[34px] border border-white/10 bg-slate-950/70 p-2 shadow-2xl sm:max-w-[430px] lg:max-w-[480px]">
                 <img
                   src={HERO_IMAGE}
-                  alt="AC Sharp BEY di RADJA AC Purwokerto"
+                  alt="Showroom utama RADJA AC untuk halaman AC Sharp BEY Purwokerto"
                   fetchPriority="high"
                   decoding="async"
                   className="h-[390px] w-full rounded-[26px] object-cover object-center sm:h-[520px] lg:h-[600px]"
