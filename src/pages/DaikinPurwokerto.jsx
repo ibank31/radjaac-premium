@@ -23,7 +23,7 @@ import { buildWhatsAppUrl } from "../utils/whatsapp"
 const HERO_IMAGE = "/assets/brands/daikin/daikin-showcase.webp"
 const CERTIFICATE_IMAGE = "/assets/brands/daikin/sertificate-daikin.webp"
 const DAIKIN_WA_MESSAGE =
-  "Halo RADJA AC, saya mau konsultasi AC Daikin. Mohon bantu rekomendasi tipe dan PK yang cocok untuk kebutuhan saya."
+  "Halo RADJA AC, saya mau cek stok AC Daikin hari ini. Tolong bantu kirim rekomendasi tipe, kisaran harga paket pemasangan, dan pilihan yang cocok untuk ruangan saya."
 
 const benefits = [
   {
@@ -56,6 +56,9 @@ const products = [
     description:
       "Cocok untuk pelanggan yang pakai AC rutin dan ingin suhu tetap nyaman setiap hari.",
     highlights: ["Suhu stabil", "Nyaman harian", "Efisien"],
+    cta: "Cek Harga Daikin Inverter",
+    message:
+      "Halo RADJA AC, saya mau cek stok dan harga Daikin Inverter. Mohon bantu rekomendasi PK, estimasi paket pemasangan, dan tipe yang cocok untuk ruangan saya.",
   },
   {
     title: "Daikin Low Watt",
@@ -66,6 +69,9 @@ const products = [
     description:
       "Pilihan untuk rumah dengan daya listrik terbatas atau pelanggan yang ingin beban listrik lebih aman.",
     highlights: ["Daya ringan", "Rumah tinggal", "Praktis"],
+    cta: "Cek Harga Daikin Low Watt",
+    message:
+      "Halo RADJA AC, saya mau cek stok dan harga Daikin Low Watt. Mohon bantu rekomendasi PK, estimasi paket pemasangan, dan pilihan yang aman untuk daya listrik rumah saya.",
   },
   {
     title: "Daikin Standard",
@@ -76,6 +82,9 @@ const products = [
     description:
       "Pilihan praktis untuk kebutuhan pendinginan harian dengan perawatan yang mudah dan penggunaan sederhana.",
     highlights: ["Simple", "Ready use", "Perawatan mudah"],
+    cta: "Cek Harga Daikin Standard",
+    message:
+      "Halo RADJA AC, saya mau cek stok dan harga Daikin Standard. Mohon bantu rekomendasi PK, estimasi paket pemasangan, dan tipe yang cocok untuk kebutuhan harian saya.",
   },
 ]
 
@@ -169,10 +178,10 @@ const faqItems = [
   },
 ]
 
-function WhatsAppButton({ children = "Konsultasi AC Daikin", className = "" }) {
+function WhatsAppButton({ children = "Cek Stok & Harga Daikin", className = "", message = DAIKIN_WA_MESSAGE }) {
   return (
     <a
-      href={buildWhatsAppUrl(DAIKIN_WA_MESSAGE)}
+      href={buildWhatsAppUrl(message)}
       target="_blank"
       rel="noreferrer"
       className={`inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-6 py-4 font-bold text-slate-950 shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A] ${className}`}
@@ -239,11 +248,11 @@ export default function DaikinPurwokerto() {
               </h1>
 
               <p className="mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                Butuh AC Daikin untuk rumah, kos, kantor, toko, cafe, atau usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya? RADJA AC bantu pilih tipe dan PK yang pas, plus cek garansi dan pemasangan.
+                Butuh AC Daikin untuk rumah, kos, kantor, toko, cafe, atau usaha di Purwokerto, Sokaraja, Banyumas, dan sekitarnya? RADJA AC bantu pilih tipe dan PK yang pas, plus cek stok, harga terbaru, garansi, dan estimasi pemasangan.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-                <WhatsAppButton />
+                <WhatsAppButton>Cek Stok & Harga Daikin</WhatsAppButton>
                 <a
                   href="#produk-daikin"
                   className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
@@ -253,7 +262,7 @@ export default function DaikinPurwokerto() {
               </div>
 
               <div className="flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 sm:justify-start">
-                {["Daikin Original", "Garansi Resmi", "Konsultasi PK", "Bisa Bantu Instalasi"].map((item) => (
+                {["Daikin Original", "Garansi Resmi", "Cek Stok Hari Ini", "Bisa Paket Pasang"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">
                     {item}
                   </span>
@@ -273,6 +282,23 @@ export default function DaikinPurwokerto() {
                   className="h-[390px] w-full rounded-[26px] object-cover object-center sm:h-[520px] lg:h-[600px]"
                 />
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 pb-10 lg:px-8 lg:pb-16">
+          <div className="rounded-[30px] border border-[#25D366]/25 bg-gradient-to-br from-[#25D366]/14 via-cyan-300/10 to-white/[0.04] p-5 shadow-[0_24px_70px_rgba(37,211,102,0.12)] sm:p-7">
+            <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#8DF3B0]">STOK & HARGA BISA BERUBAH</p>
+                <h2 className="mb-2 text-2xl font-black tracking-[-0.03em] text-white sm:text-3xl">
+                  Mau Daikin? Cek unit ready sebelum keburu habis.
+                </h2>
+                <p className="max-w-3xl text-sm leading-7 text-white/70 sm:text-base">
+                  Chat sekarang untuk cek stok Daikin, harga paket pemasangan, dan rekomendasi PK yang paling aman sesuai ukuran ruangan dan daya listrik.
+                </p>
+              </div>
+              <WhatsAppButton className="w-full shrink-0 sm:w-auto">Minta Harga Paket Daikin</WhatsAppButton>
             </div>
           </div>
         </section>
@@ -337,10 +363,10 @@ export default function DaikinPurwokerto() {
           <div className="mb-10 text-center">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Rekomendasi Produk</div>
             <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">
-              Pilihan AC Daikin di RADJA AC
+              Pilihan AC Daikin yang bisa langsung dicek
             </h2>
             <p className="mx-auto max-w-2xl leading-7 text-white/65">
-              Pilih berdasarkan kebutuhan ruangan. Untuk stok dan rekomendasi tipe terbaru, tim RADJA AC bisa bantu cek pilihan yang sesuai.
+              Pilih tipe yang paling mendekati kebutuhan Anda, lalu chat RADJA AC untuk cek stok, harga terbaru, dan estimasi paket pemasangan.
             </p>
           </div>
 
@@ -384,7 +410,7 @@ export default function DaikinPurwokerto() {
                     ))}
                   </div>
 
-                  <WhatsAppButton className="w-full py-3 text-sm">Cek Stok & Rekomendasi</WhatsAppButton>
+                  <WhatsAppButton className="w-full py-3 text-sm" message={product.message}>{product.cta}</WhatsAppButton>
                 </div>
               </article>
             ))}
@@ -443,6 +469,14 @@ export default function DaikinPurwokerto() {
               ))}
             </div>
           </div>
+
+          <div className="mt-6 rounded-[26px] border border-cyan-300/20 bg-cyan-300/8 p-5 text-center sm:p-6">
+            <h3 className="mb-2 text-xl font-black text-white">Sudah tahu ukuran ruangan?</h3>
+            <p className="mx-auto mb-5 max-w-2xl text-sm leading-7 text-white/65">
+              Kirim ukuran ruangan dan daya listrik. RADJA AC bantu cek PK Daikin yang masuk akal sebelum Anda beli.
+            </p>
+            <WhatsAppButton className="w-full sm:w-auto">Cek PK Daikin Sekarang</WhatsAppButton>
+          </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-20">
@@ -480,12 +514,12 @@ export default function DaikinPurwokerto() {
               <Wind className="h-10 w-10" />
             </div>
             <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">
-              Bingung pilih AC Daikin yang cocok?
+              Mau beli Daikin? Jangan tebak PK sendiri.
             </h2>
             <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">
-              Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Daikin yang sesuai.
+              Salah pilih PK bisa bikin ruangan kurang dingin atau listrik terasa berat. Kirim ukuran ruangan, daya listrik, dan lokasi Anda. RADJA AC bantu cek pilihan Daikin yang paling masuk akal sebelum dibeli.
             </p>
-            <WhatsAppButton>Konsultasi Daikin via WhatsApp</WhatsAppButton>
+            <WhatsAppButton>Minta Rekomendasi Daikin Sekarang</WhatsAppButton>
           </div>
         </section>
 
