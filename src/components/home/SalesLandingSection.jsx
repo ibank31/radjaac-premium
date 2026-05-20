@@ -1,20 +1,25 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, BadgeCheck, BookOpen, MessageCircle, SearchCheck } from "lucide-react"
+import WhatsappIcon from "../ui/WhatsappIcon"
+import { buildWhatsAppUrl } from "../../utils/whatsapp"
+
+const CHECK_AC_MESSAGE =
+  "Halo RADJA AC, saya mau dicekkan pilihan AC yang cocok. Mohon bantu cek rekomendasi PK, brand yang ready, harga terbaru, dan kebutuhan pemasangan berdasarkan ukuran ruangan, daya listrik, lokasi, dan budget saya."
 
 const points = [
   {
-    title: "Cari AC berdasarkan kebutuhan",
-    description: "Mulai dari kamar, rumah, kantor, toko, cafe, daya listrik, dan jam pemakaian.",
+    title: "Jangan asal pilih PK",
+    description: "Salah kapasitas bisa bikin ruangan lama dingin, listrik berat, dan biaya pasang tidak efisien.",
     icon: SearchCheck,
   },
   {
-    title: "Bandingkan brand utama",
-    description: "Masuk ke pilihan Daikin, Midea, Gree, Hisense, Sansui, Sharp, Panasonic, dan lainnya.",
+    title: "Cek brand yang benar-benar ready",
+    description: "Daikin, Midea, Gree, Hisense, Sansui, Sharp, Samsung, Panasonic, dan brand lain dicek sesuai stok terbaru.",
     icon: BadgeCheck,
   },
   {
-    title: "Baca panduan sebelum beli",
-    description: "Pahami PK, inverter, low watt, harga, dan persiapan pemasangan sebelum menentukan pilihan.",
+    title: "Harga dan pemasangan dihitung dari kondisi real",
+    description: "Kirim ukuran ruangan, daya listrik, lokasi, dan titik pasang agar rekomendasi tidak asal murah.",
     icon: BookOpen,
   },
 ]
@@ -27,27 +32,29 @@ export default function SalesLandingSection() {
           <div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-semibold text-cyan-200">
               <MessageCircle className="h-4 w-4" />
-              MULAI DARI SINI
+              CEK SEBELUM BELI
             </div>
             <h2 className="mb-4 text-3xl font-black leading-tight tracking-[-0.03em] sm:text-4xl lg:text-5xl">
-              Bingung pilih AC untuk rumah, kos, atau usaha di Purwokerto?
+              Jangan beli AC sebelum tahu PK, daya listrik, dan biaya pasangnya
             </h2>
             <p className="mb-6 max-w-2xl text-sm leading-7 text-white/66 sm:text-base">
-              RADJA AC menyiapkan halaman khusus untuk membantu calon pembeli memilih AC berdasarkan brand, tipe, ukuran ruangan, daya listrik, dan kebutuhan pemasangan.
+              Banyak pembeli hanya lihat harga unit, lalu kecewa karena AC kurang dingin, listrik berat, atau kebutuhan pasang ternyata lebih panjang. RADJA AC bantu cek pilihan AC yang masuk akal sebelum Anda keluar uang.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link
-                to="/jual-ac-purwokerto"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-300 px-6 py-4 font-bold text-slate-950 transition hover:bg-cyan-200"
+              <a
+                href={buildWhatsAppUrl(CHECK_AC_MESSAGE)}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 font-bold text-slate-950 transition hover:bg-[#20BA5A]"
               >
-                Panduan Pilih AC
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+                <WhatsappIcon className="h-5 w-5 text-slate-950" />
+                Chat, Saya Mau Dicekkan AC
+              </a>
               <Link
                 to="/katalog"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 px-6 py-4 font-bold text-white/90 transition hover:bg-white/[0.05]"
               >
-                Lihat Katalog AC
+                Bandingkan Pilihan AC
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

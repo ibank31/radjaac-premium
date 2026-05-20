@@ -6,26 +6,27 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import SeoHead from "../components/SeoHead"
 import WhatsappIcon from "../components/ui/WhatsappIcon"
-import { SITE_DATA } from "../constants/siteData"
+import { buildWhatsAppUrl } from "../utils/whatsapp"
 
-const WA_LINK = SITE_DATA.whatsappUrl
 const HERO_IMAGE = "/assets/brands/sansui/sansui-showcase.webp"
 const CERTIFICATE_IMAGE = "/assets/brands/sansui/sertificate-sansui.webp"
+const SANSUI_WA_MESSAGE =
+  "Halo RADJA AC, saya mau cek stok AC Sansui. Mohon bantu info tipe yang ready, harga terbaru, rekomendasi PK, dan estimasi pemasangan untuk ruangan saya."
 
 const benefits = [
   {
-    title: "Pilihan ekonomis untuk kebutuhan harian",
-    description: "Sansui cocok untuk pelanggan yang mencari AC original dengan fungsi pendinginan praktis untuk rumah, kos, dan toko kecil.",
+    title: "Budget lebih efisien, tetap harus tepat pilih",
+    description: "Sansui cocok untuk pelanggan yang ingin AC original dengan budget lebih rasional, tapi pilihan PK dan kebutuhan pasang tetap harus dicek dulu.",
     icon: BadgeCheck,
   },
   {
-    title: "Varian produk mudah dipilih",
-    description: "Tersedia pilihan Sansui Deluxe, Standard, dan Standard Basic agar pelanggan bisa menyesuaikan kebutuhan dan budget.",
+    title: "Cocok untuk kamar, kos, dan rumah harian",
+    description: "Pilihan Sansui bisa diarahkan untuk kamar tidur, kos, kontrakan, ruang santai, dan toko kecil sesuai ukuran ruangan.",
     icon: Snowflake,
   },
   {
-    title: "Dibantu konsultasi sebelum membeli",
-    description: "RADJA AC membantu memilih kapasitas, tipe unit, dan kebutuhan pemasangan supaya pembelian AC lebih tepat.",
+    title: "Cek stok sebelum ambil keputusan",
+    description: "RADJA AC bantu cek tipe Sansui yang ready, harga terbaru, kapasitas yang pas, dan kebutuhan pemasangan agar tidak asal beli AC murah.",
     icon: ShieldCheck,
   },
 ]
@@ -70,6 +71,11 @@ const pkGuide = [
 
 const internalLinks = [
   {
+    title: "Toko AC Terdekat Purwokerto",
+    description: "Sebelum OTW, cek stok, harga, brand yang ready, dan kebutuhan pemasangan di RADJA AC.",
+    href: "/toko-ac-terdekat-purwokerto",
+  },
+  {
     title: "Jual AC Purwokerto",
     description: "Mulai dari halaman pusat pembelian AC untuk cek brand, stok, harga, dan rekomendasi PK.",
     href: "/jual-ac-purwokerto",
@@ -83,11 +89,6 @@ const internalLinks = [
     title: "AC Low Watt Purwokerto",
     description: "Cek pilihan AC untuk rumah dengan daya listrik terbatas dan kebutuhan ekonomis.",
     href: "/katalog/ac-low-watt",
-  },
-  {
-    title: "AC 1 PK untuk ruangan berapa?",
-    description: "Baca panduan kapasitas AC sebelum menentukan unit untuk ruangan Anda.",
-    href: "/artikel/ac-1-pk-untuk-ruangan-berapa",
   },
 ]
 
@@ -114,10 +115,10 @@ const faqItems = [
   },
 ]
 
-function WhatsAppButton({ children = "Tanya Harga Sansui", className = "" }) {
+function WhatsAppButton({ children = "Cek Stok Sansui Hari Ini", className = "", message = SANSUI_WA_MESSAGE }) {
   return (
     <a
-      href={WA_LINK}
+      href={buildWhatsAppUrl(message)}
       target="_blank"
       rel="noreferrer"
       className={`inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-6 py-4 font-bold text-slate-950 shadow-[0_18px_50px_rgba(37,211,102,0.2)] ring-1 ring-[#25D366]/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20BA5A] ${className}`}
@@ -145,8 +146,8 @@ export default function SansuiPurwokerto() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050816] text-white">
       <SeoHead
-        title="Dealer AC Sansui Purwokerto & Banyumas | RADJA AC"
-        description="RADJA AC melayani penjualan AC Sansui Purwokerto dan Banyumas lengkap dengan konsultasi ukuran PK, pilihan Deluxe, Standard, dan Standard Basic, instalasi rapi, serta layanan after-sales."
+        title="AC Sansui Purwokerto | Cek Stok Sansui di RADJA AC"
+        description="Cari AC Sansui Purwokerto? RADJA AC bantu cek stok Sansui Deluxe, Standard, Standard Basic, harga terbaru, rekomendasi PK, dan kebutuhan pemasangan."
         canonicalPath="/brand/sansui"
       />
 
@@ -167,7 +168,7 @@ export default function SansuiPurwokerto() {
             <div className="text-center lg:text-left">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-red-300/20 bg-red-300/10 px-4 py-2 text-sm text-red-100">
                 <span className="h-2 w-2 rounded-full bg-red-300" />
-                BRAND VALUE RADJA AC
+                AC SANSUI VALUE RADJA AC
               </div>
 
               <div className="mb-5 text-sm text-white/50">
@@ -177,12 +178,12 @@ export default function SansuiPurwokerto() {
               </div>
 
               <h1 className="mx-auto mb-5 max-w-xl text-3xl font-black leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-5xl xl:text-6xl lg:mx-0">
-                AC Sansui Purwokerto & Banyumas
-                <span className="block text-red-200">Simple, ekonomis, dan praktis</span>
+                Mau AC ekonomis yang tetap masuk akal?
+                <span className="block text-red-200">Cek Sansui di RADJA AC.</span>
               </h1>
 
               <p className="mx-auto mb-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base lg:mx-0">
-                RADJA AC bantu pembelian AC Sansui untuk rumah, kos, kontrakan, toko kecil, kantor, dan kebutuhan harian di Purwokerto, Sokaraja, Banyumas, dan sekitarnya. Kirim ukuran ruangan, daya listrik, dan pola pakai agar pilihan unit lebih tepat.
+                Sansui cocok untuk kamar, kos, kontrakan, dan kebutuhan harian yang butuh AC original dengan budget lebih efisien. Jangan asal ambil AC murah — cek dulu stok, tipe, PK, dan kebutuhan pemasangannya.
               </p>
 
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:justify-start">
@@ -191,12 +192,12 @@ export default function SansuiPurwokerto() {
                   href="#produk-sansui"
                   className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-4 font-semibold text-white/90 transition hover:bg-white/[0.05]"
                 >
-                  Lihat Rekomendasi
+                  Lihat Pilihan Sansui
                 </a>
               </div>
 
               <div className="mx-auto flex max-w-xl flex-wrap justify-center gap-2 text-center text-sm text-white/65 lg:mx-0 lg:justify-start">
-                {["Sansui Original", "Deluxe & Standard", "Purwokerto & Banyumas"].map((item) => (
+                {["Sansui Original", "Deluxe & Standard", "Cek Stok Hari Ini", "Bisa Paket Pasang"].map((item) => (
                   <span key={item} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1">
                     {item}
                   </span>
@@ -255,8 +256,8 @@ export default function SansuiPurwokerto() {
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="mx-auto mb-8 max-w-3xl text-center lg:mx-0 lg:text-left">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-red-200">Keunggulan Sansui</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kenapa banyak pelanggan memilih AC Sansui?</h2>
-            <p className="leading-7 text-white/65">Sansui cocok untuk pelanggan yang mengutamakan AC original, simple, ekonomis, dan praktis untuk kebutuhan pendinginan harian.</p>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Kenapa Sansui layak dicek kalau budget ingin lebih efisien?</h2>
+            <p className="leading-7 text-white/65">Sansui cocok untuk pelanggan yang mengutamakan AC original, simple, ekonomis, dan praktis untuk kebutuhan pendinginan harian tanpa asal memilih unit murah.</p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
@@ -275,8 +276,8 @@ export default function SansuiPurwokerto() {
         <section id="produk-sansui" className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="mx-auto mb-8 max-w-3xl text-center">
             <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-red-200">Rekomendasi Produk</div>
-            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilihan AC Sansui di RADJA AC</h2>
-            <p className="mx-auto max-w-2xl leading-7 text-white/65">Pilih berdasarkan kebutuhan ruangan, budget, dan daya listrik. Untuk stok, harga terbaru, dan rekomendasi tipe Sansui, tim RADJA AC bisa bantu cek pilihan yang sesuai.</p>
+            <h2 className="mb-4 text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Pilih Sansui berdasarkan kebutuhan, bukan asal harga murah</h2>
+            <p className="mx-auto max-w-2xl leading-7 text-white/65">Mulai dari Deluxe, Standard, sampai Standard Basic. Untuk stok, harga terbaru, dan rekomendasi tipe Sansui, tim RADJA AC bisa bantu cek pilihan yang sesuai dengan ruangan dan budget.</p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
@@ -319,7 +320,7 @@ export default function SansuiPurwokerto() {
                     ))}
                   </div>
 
-                  <WhatsAppButton className="w-full py-3 text-sm">Cek Stok & Harga</WhatsAppButton>
+                  <WhatsAppButton className="w-full py-3 text-sm">Cek Stok Sansui</WhatsAppButton>
                 </div>
               </article>
             ))}
@@ -382,9 +383,9 @@ export default function SansuiPurwokerto() {
         <section className="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-16">
           <div className="rounded-[34px] border border-red-300/20 bg-red-300/5 p-6 text-center shadow-[0_35px_90px_rgba(127,29,29,0.14)] sm:p-10 lg:p-14">
             <div className="mb-4 flex justify-center text-red-200"><Wind className="h-10 w-10" /></div>
-            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Butuh rekomendasi AC Sansui yang paling cocok?</h2>
-            <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan kebutuhan penggunaan. Tim RADJA AC akan bantu rekomendasi unit Sansui yang sesuai.</p>
-            <WhatsAppButton>Konsultasi via WhatsApp</WhatsAppButton>
+            <h2 className="mx-auto mb-5 max-w-3xl text-3xl font-black tracking-[-0.03em] sm:text-4xl lg:text-5xl">Mau Sansui tapi takut salah pilih tipe?</h2>
+            <p className="mx-auto mb-6 max-w-2xl leading-7 text-white/70">Kirim ukuran ruangan, daya listrik, lokasi area Purwokerto/Banyumas, dan kebutuhan penggunaan. Tim RADJA AC bantu cek Sansui yang ready dan paling masuk akal untuk budget Anda.</p>
+            <WhatsAppButton>Cek Sansui via WhatsApp</WhatsAppButton>
           </div>
         </section>
 
